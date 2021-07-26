@@ -1,0 +1,39 @@
+{
+  "name": "@tablecheck/tablekit-theme",
+  "description": "Components and requirements for maintaining consistent styling across all our applications",
+  "license": "MIT",
+  "author": "TableCheck Inc.",
+  "repository": "github:tablecheck/tablekit",
+  "bugs": {
+    "url": "https://github.com/tablecheck/tablekit/issues"
+  },
+  "version": "0.0.0",
+  "main": "lib/es5/index.js",
+  "module": "lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": [
+    "fonts",
+    "lib"
+  ],
+  "dependencies": {
+    "@tablecheck/tablekit-package-namespace": "^0.0.0",
+    "@tablecheck/tablekit-utils": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11.4 <12",
+    "@emotion/styled": ">=11.3 <12",
+    "@emotion/utils": ">=1 <2",
+    "@tablecheck/locales": ">=1.0.0 <2",
+    "lodash": ">=4.17.21 <5",
+    "react": ">=16.8.0 <18",
+    "react-dom": ">=16.2.0 <18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "entries": [
+    "src/index.ts",
+    "src/ThemeProvider.tsx"
+  ],
+  "gitHead": "d288d66162c89470081c3c17b12dbae1fa63c13c"
+}

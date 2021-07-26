@@ -1,0 +1,9 @@
+package-lock.json
+lib
+node_modules
+dist
+docs
+build
+coverage
+assets
+CHANGELOG.md

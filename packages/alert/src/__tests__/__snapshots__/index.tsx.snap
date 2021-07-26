@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert should allow passing of custom className 1`] = `
+<Alert
+  className="test-class"
+/>
+`;
+
+exports[`Alert should correctly apply styling 1`] = `<Alert />`;

@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should allow passing of custom className 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.emotion-2:after {
+  content: '';
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+<Tabs
+  className="test-class"
+  currentTab=""
+  setCurrentTab={[Function]}
+  tabs={Array []}
+>
+  <TabsWrapper
+    className="test-class"
+  >
+    <div
+      className="test-class emotion-0 emotion-1"
+    >
+      <TabsNavigation
+        align="left"
+      >
+        <div
+          className="emotion-2 emotion-3"
+        />
+      </TabsNavigation>
+    </div>
+  </TabsWrapper>
+</Tabs>
+`;
+
+exports[`Tabs should correctly apply styling 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+.emotion-2 {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.emotion-2:after {
+  content: '';
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+<Tabs
+  currentTab=""
+  setCurrentTab={[Function]}
+  tabs={Array []}
+>
+  <TabsWrapper>
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <TabsNavigation
+        align="left"
+      >
+        <div
+          className="emotion-2 emotion-3"
+        />
+      </TabsNavigation>
+    </div>
+  </TabsWrapper>
+</Tabs>
+`;

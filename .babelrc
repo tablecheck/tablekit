@@ -1,0 +1,3 @@
+{
+  "presets": ["module:@tablecheck/babel-preset"]
+}

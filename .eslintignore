@@ -1,0 +1,7 @@
+coverage
+lib
+build
+dist
+docs
+oldDocs
+node_modules

@@ -1,0 +1,260 @@
+import { Canvas, Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { Size } from '@tablecheck/tablekit-theme';
+
+import { Badge, BadgeType } from './index';
+
+# Badge
+
+Badge component displays numeric values. To display badge-like text use `BadgeContainer` instead.
+
+<Meta
+  title="Components/Badge"
+  component={Badge}
+  parameters={{
+    options: { isToolshown: true },
+    controls: {
+      exclude: ['children', 'data-testid'],
+      sort: 'alpha'
+    }
+  }}
+/>
+
+export const NumericTemplate = (args) => {
+  return <Badge {...args} />;
+};
+
+export const TextTemplate = (args) => {
+  return <BadgeContainer {...args} />;
+};
+
+<Canvas>
+  <Story
+    name="solid-small"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Solid,
+      value: 9
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-small-flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Solid,
+      isFlexible: true,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-small-not_flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Solid,
+      isFlexible: false,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-small-max_value-flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Solid,
+      isFlexible: true,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-small-max_value-not_flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Solid,
+      isFlexible: false,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-regular"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Solid,
+      value: 9
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-regular-flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Solid,
+      isFlexible: true,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-regular-not_flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Solid,
+      isFlexible: false,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-regular-max_value-flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Solid,
+      isFlexible: true,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="solid-regular-max_value-not_flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Solid,
+      isFlexible: false,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="outline-small"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Outline,
+      value: 9
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-small-flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Outline,
+      isFlexible: true,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-small-not_flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Outline,
+      isFlexible: false,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-small-max_value-flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Outline,
+      isFlexible: true,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-small-max_value-not_flexible"
+    args={{
+      size: Size.Small,
+      type: BadgeType.Outline,
+      isFlexible: false,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-regular"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Outline,
+      value: 9
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-regular-flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Outline,
+      isFlexible: true,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-regular-not_flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Outline,
+      isFlexible: false,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-regular-max_value-flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Outline,
+      isFlexible: true,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+  <Story
+    name="outline-regular-max_value-not_flexible"
+    args={{
+      size: Size.Regular,
+      type: BadgeType.Outline,
+      isFlexible: false,
+      maxValue: 10,
+      value: 999
+    }}
+  >
+    {NumericTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<Props of={Badge} sort="alpha" />

@@ -1,0 +1,12 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Toggle, config } from './index';
+
+<Meta title="Components/Toggle" component={Toggle} parameters={{}} />
+
+export const Template = ({}) => {
+  return <Toggle isChecked />;
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>

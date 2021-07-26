@@ -1,0 +1,16 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { SideNav, SideNavProvider } from './index';
+
+<Meta title="Components/SideNav" component={SideNav} parameters={{}} />
+
+export const Template = ({}) => {
+  return (
+    <SideNavProvider>
+      <SideNav />
+    </SideNavProvider>
+  );
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>

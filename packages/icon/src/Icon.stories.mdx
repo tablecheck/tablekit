@@ -1,0 +1,26 @@
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons/faCheckCircle';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons/faExclamationCircle';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons/faExclamationTriangle';
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Icon, WarningIcon, SuccessIcon, DangerIcon, config } from './index';
+
+<Meta title="Components/Icon" component={Icon} parameters={{}} />
+
+export const Template = ({}) => {
+  config({
+    danger: faExclamationCircle,
+    success: faCheckCircle,
+    warning: faExclamationTriangle
+  });
+  return (
+    <>
+      <WarningIcon />
+      <DangerIcon />
+      <SuccessIcon />
+    </>
+  );
+};
+
+<Canvas>
+  <Story name="Common Icons">{Template.bind({})}</Story>
+</Canvas>

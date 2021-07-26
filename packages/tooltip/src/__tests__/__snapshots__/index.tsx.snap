@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip should allow passing of custom className 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+<Tooltip
+  className="test-class"
+  content={
+    <div>
+      Test
+    </div>
+  }
+  delay={300}
+  popperProps={
+    Object {
+      "placement": "bottom",
+    }
+  }
+>
+  <Container
+    className="test-class"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <div
+      className="test-class emotion-0 emotion-1"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <Manager>
+        <Reference>
+          <div>
+            Target
+          </div>
+        </Reference>
+      </Manager>
+    </div>
+  </Container>
+</Tooltip>
+`;
+
+exports[`Tooltip should correctly apply styling 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
+<Tooltip
+  content={
+    <div>
+      Test
+    </div>
+  }
+  delay={300}
+  popperProps={
+    Object {
+      "placement": "bottom",
+    }
+  }
+>
+  <Container
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+  >
+    <div
+      className="emotion-0 emotion-1"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+    >
+      <Manager>
+        <Reference>
+          <div>
+            Target
+          </div>
+        </Reference>
+      </Manager>
+    </div>
+  </Container>
+</Tooltip>
+`;

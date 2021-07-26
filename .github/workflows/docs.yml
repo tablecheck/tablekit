@@ -1,0 +1,34 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.nvmrc }}
+          cache: npm
+
+      - name: Install and Build 🔧
+        run: |
+          npm ci --legacy-peer-deps
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: docs
+          folder: storybook-static

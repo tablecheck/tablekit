@@ -1,0 +1,12 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { PhoneInput, defaultI18nCountries } from './index';
+
+<Meta title="Components/PhoneInput" component={PhoneInput} parameters={{}} />
+
+export const Template = ({}) => {
+  return <PhoneInput i18nCountries={defaultI18nCountries} shouldFitContainer />;
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>

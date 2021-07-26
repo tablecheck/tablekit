@@ -1,0 +1,23 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Tag } from './index';
+
+<Meta title="Components/Tag" component={Tag} parameters={{}} />
+
+export const Template = ({}) => {
+  const tags = [
+    { label: 'Breakfast', key: 'breakfast' },
+    { label: 'Lunch', key: 'lunch' },
+    { label: 'Tea', key: 'tea' },
+    { label: 'Dinner', key: 'dinner' },
+    { label: 'Night', key: 'night' }
+  ];
+  return tags.map(({ label, key }) => (
+    <Tag key={label} name={key}>
+      {label}
+    </Tag>
+  ));
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>

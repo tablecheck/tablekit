@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should allow passing of custom className 1`] = `
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  background-color: #7935D2;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.emotion-0 svg {
+  width: 14px;
+  height: 14px;
+}
+
+<Avatar
+  className="test-class"
+>
+  <Container
+    className="test-class"
+    size="regular"
+  >
+    <div
+      className="test-class emotion-0 emotion-1"
+      size="regular"
+    >
+      <Icon
+        icon="fas-user"
+      >
+        icon-user
+      </Icon>
+    </div>
+  </Container>
+</Avatar>
+`;
+
+exports[`Avatar should correctly apply styling 1`] = `
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  background-color: #7935D2;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.emotion-0 svg {
+  width: 14px;
+  height: 14px;
+}
+
+<Avatar>
+  <Container
+    size="regular"
+  >
+    <div
+      className="emotion-0 emotion-1"
+      size="regular"
+    >
+      <Icon
+        icon="fas-user"
+      >
+        icon-user
+      </Icon>
+    </div>
+  </Container>
+</Avatar>
+`;

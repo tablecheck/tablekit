@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="118px" viewBox="0 0 176 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Card-GDrive</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="160" height="102"></rect>
+        <filter x="-8.1%" y="-10.8%" width="116.2%" height="125.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="160" height="102"></rect>
+        <filter x="-41.7%" y="-47.6%" width="183.3%" height="195.2%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="0%" y1="-0.630494952%" x2="100%" y2="100.630495%" id="linearGradient-6">
+            <stop stop-color="#F6C338" offset="0%"></stop>
+            <stop stop-color="#FFD351" offset="52.2782398%"></stop>
+            <stop stop-color="#F6C338" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="0.628630144%" x2="0%" y2="99.3713699%" id="linearGradient-7">
+            <stop stop-color="#286EE6" offset="0%"></stop>
+            <stop stop-color="#4286FB" offset="52.1046125%"></stop>
+            <stop stop-color="#286EE6" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="64.9364361%" y1="0%" x2="36.3187015%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#069B5A" offset="0%"></stop>
+            <stop stop-color="#11AA62" offset="53.1031222%"></stop>
+            <stop stop-color="#069B5A" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="r" transform="translate(-569.000000, -73.000000)">
+            <g id="Card-GDrive" transform="translate(577.000000, 79.000000)">
+                <g id="Rectangle-Copy-2" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Rectangle-Copy-3" fill="#FFFFFF" xlink:href="#path-3"></use>
+                <g id="google-drive-seeklogo.com" filter="url(#filter-5)" mask="url(#mask-4)" fill-rule="nonzero">
+                    <g transform="translate(104.000000, 49.000000)" id="Path">
+                        <polygon fill="url(#linearGradient-6)" points="15.2727273 0 32.1385482 0 48 27.5172414 31.0962784 27.5172414"></polygon>
+                        <polygon fill="url(#linearGradient-7)" points="48 27.5172414 39.5689981 42 8 42 16.4499055 27.5172414"></polygon>
+                        <polygon fill="url(#linearGradient-8)" points="8.325 42 0 27.3739837 15.61875 0 24 14.6639566"></polygon>
+                        <polygon fill="#000000" opacity="0.1" points="8.72727273 42 24 27.5172414 16.9425665 27.5172414"></polygon>
+                        <polygon fill="#000000" opacity="0.1" points="48 27.5172414 31.3081877 27.5172414 27.6363636 21"></polygon>
+                        <polygon fill="#000000" opacity="0.1" points="15.2727273 0 20.290421 21 24 14.7572727"></polygon>
+                    </g>
+                </g>
+                <text id="Google-Drive-Sync" mask="url(#mask-4)" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="24" fill="#000000" fill-opacity="0.87">
+                    <tspan x="12" y="28">Google Drive </tspan>
+                    <tspan x="12" y="52">Sync</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
