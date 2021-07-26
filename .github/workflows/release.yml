@@ -1,0 +1,41 @@
+name: Auto Release
+
+on:
+  workflow_dispatch:
+    # this allows us to manually run the release on other branches for canary and pre-releases
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.nvmrc }}
+          cache: npm
+
+      - name: Install 🔧
+        run: npm ci --legacy-peer-deps
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Create Release ✨
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        run: npx auto shipit

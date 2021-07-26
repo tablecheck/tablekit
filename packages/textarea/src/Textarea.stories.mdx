@@ -1,0 +1,12 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Textarea } from './index';
+
+<Meta title="Components/Textarea" component={Textarea} parameters={{}} />
+
+export const Template = ({}) => {
+  return <Textarea label="Default Textarea" placeholder="Default Settings" />;
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>

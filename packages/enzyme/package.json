@@ -1,0 +1,29 @@
+{
+  "name": "@tablecheck/tablekit-enzyme",
+  "description": "Utility for dealing with ThemeProvider defaults in enzyme tests",
+  "license": "MIT",
+  "author": "TableCheck Inc.",
+  "repository": "github:tablecheck/tablekit",
+  "bugs": {
+    "url": "https://github.com/tablecheck/tablekit/issues"
+  },
+  "version": "0.0.0",
+  "main": "lib/es5/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@tablecheck/tablekit-theme": "^0.0.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11.4 <12",
+    "enzyme": ">=3.10 <4",
+    "react": ">=17 <18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d288d66162c89470081c3c17b12dbae1fa63c13c"
+}

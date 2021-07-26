@@ -1,0 +1,23 @@
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+
+import { Gallery } from './index';
+
+<Meta title="Components/Gallery" component={Gallery} parameters={{}} />
+
+export const Template = ({}) => {
+  const array = Array.from({ length: 5 });
+  const images = array.map((o, i) => ({
+    large: `https://loremflickr.com/g/1980/1020/food?random=${i}`,
+    medium: `https://loremflickr.com/g/1024/768/food?random=${i}`,
+    small: `https://loremflickr.com/g/640/480/food?random=${i}`,
+    caption: 'Food'
+  }));
+  let isOpen = true;
+  return (
+    <Gallery images={images} isOpen={isOpen} onClose={() => (isOpen = false)} />
+  );
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>

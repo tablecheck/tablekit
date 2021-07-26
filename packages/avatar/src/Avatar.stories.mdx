@@ -1,0 +1,166 @@
+import { styled } from '@storybook/theming';
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Avatar } from './Avatar';
+
+export const AvatarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const john = 'https://i.pravatar.cc/200?img=14';
+export const airi = 'https://i.pravatar.cc/200?img=31';
+
+export const decorator = (storyFn) => (
+  <AvatarWrapper>{storyFn()}</AvatarWrapper>
+);
+
+<Meta
+  title="Components/Avatar"
+  component={Avatar}
+  parameters={{ options: { isToolshown: true } }}
+/>
+
+export const Template = (args) => {
+  const name = 'John Smith';
+  const initials = 'JS';
+  return <Avatar {...args} name={name} initials={initials} />;
+};
+
+export const Template2 = (args) => {
+  return <Avatar {...args} />;
+};
+
+# Avatar
+
+Avatars represent users that are using the application.
+
+- If the image is passed, then the image will be shown
+- If the initials are passed, then the initials will be shown
+- If no image or initials are passed, then the user icon will be shown
+
+### Default Theme
+
+<Canvas decorators={[decorator]}>
+  <Story name="xsmall" args={{ size: 'xsmall' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="small" args={{ size: 'small' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="small-image" args={{ size: 'small', imageUrl: john }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="regular" args={{ size: 'regular' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="regular-image" args={{ size: 'regular', imageUrl: john }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="regular2" args={{ size: 'regular2' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="regular2-image" args={{ size: 'regular2', imageUrl: john }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="large" args={{ size: 'large' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="large-image" args={{ size: 'large', imageUrl: john }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="xlarge" args={{ size: 'xlarge' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="xxlarge" args={{ size: 'xxlarge', imageUrl: john }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Custom Theme
+
+<Canvas>
+  <Story name="custom-xsmall" args={{ size: 'xsmall' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-small" args={{ size: 'small' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-small-image" args={{ size: 'small', imageUrl: airi }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-regular" args={{ size: 'regular' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-regular-image" args={{ size: 'regular', imageUrl: airi }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-regular2" args={{ size: 'regular2' }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="custom-regular2-image"
+    args={{ size: 'regular2', imageUrl: airi }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-large" args={{ size: 'large' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-large-image" args={{ size: 'large', imageUrl: airi }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-xlarge" args={{ size: 'xlarge' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="custom-xxlarge" args={{ size: 'xxlarge', imageUrl: airi }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### When image and initials are missing
+
+<Canvas>
+  <Story name="only-icon-xsmall" args={{ size: 'xsmall' }}>
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-small" args={{ size: 'small' }}>
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-small-image" args={{ size: 'small', imageUrl: airi }}>
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-regular" args={{ size: 'regular' }}>
+    {Template2.bind({})}
+  </Story>
+  <Story
+    name="only-icon-regular-image"
+    args={{ size: 'regular', imageUrl: airi }}
+  >
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-regular2" args={{ size: 'regular2' }}>
+    {Template2.bind({})}
+  </Story>
+  <Story
+    name="only-icon-regular2-image"
+    args={{ size: 'regular2', imageUrl: airi }}
+  >
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-large" args={{ size: 'large' }}>
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-large-image" args={{ size: 'large', imageUrl: airi }}>
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-xlarge" args={{ size: 'xlarge' }}>
+    {Template2.bind({})}
+  </Story>
+  <Story name="only-icon-xxlarge" args={{ size: 'xxlarge', imageUrl: airi }}>
+    {Template2.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<Props of={Avatar} />

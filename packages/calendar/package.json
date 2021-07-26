@@ -1,0 +1,43 @@
+{
+  "name": "@tablecheck/tablekit-calendar",
+  "description": "Calendar",
+  "license": "MIT",
+  "author": "TableCheck Inc.",
+  "repository": "github:tablecheck/tablekit",
+  "bugs": {
+    "url": "https://github.com/tablecheck/tablekit/issues"
+  },
+  "version": "0.0.0",
+  "main": "lib/es5/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@tablecheck/tablekit-button": "^0.0.0",
+    "@tablecheck/tablekit-icon": "^0.0.0",
+    "@tablecheck/tablekit-package-namespace": "^0.0.0",
+    "@tablecheck/tablekit-select": "^0.0.0",
+    "@tablecheck/tablekit-theme": "^0.0.0",
+    "@tablecheck/tablekit-typography": "^0.0.0",
+    "@tablecheck/tablekit-utils": "^0.0.0",
+    "date-fns": "2.22.1",
+    "dayzed": "3.2.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": ">=11.4 <12",
+    "@emotion/styled": ">=11.3 <12",
+    "@radix-ui/react-id": ">=0.0.6 <0.1",
+    "react": ">=16.8.0 <18",
+    "react-dom": ">=16.2.0 <18"
+  },
+  "devDependencies": {
+    "@tablecheck/tablekit-enzyme": "^0.0.0",
+    "@tablecheck/tablekit-table": "^0.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "d288d66162c89470081c3c17b12dbae1fa63c13c"
+}

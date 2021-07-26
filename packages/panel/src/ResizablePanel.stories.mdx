@@ -1,0 +1,182 @@
+import { useState } from 'react';
+import faker from 'faker';
+import { Canvas, Meta, Story, Props } from '@storybook/addon-docs/blocks';
+import { Button } from '../../button';
+import { ItemGroup, ItemGroupOrientation } from '../../item';
+
+import { ResizablePanel, PanelPosition } from './index';
+
+# Resizable Panel
+
+An animated slide-in panel component that can be resized. This type of component is useful for side nav or panels that need to be opened from the side of the screen.
+
+<Meta
+  title="Components/ResizablePanel"
+  component={ResizablePanel}
+  parameters={{
+    options: { isToolshown: true },
+    controls: {
+      exclude: ['children', 'data-testid'],
+      sort: 'alpha'
+    }
+  }}
+/>
+
+export const ScrollableContent = ({ children }) => (
+  <div
+    style={{
+      display: 'flex',
+      flexDirection: 'column',
+      height: '50vh',
+      overflowY: 'auto'
+    }}
+  >
+    {children}
+  </div>
+);
+
+export const Template = (args) => {
+  const [isOpen, setOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setOpen(true)}>{args.position} panel</Button>
+      <ResizablePanel
+        {...args}
+        isOpen={isOpen}
+        onClickOutside={() => setOpen(false)}
+      >
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: '100%',
+            width: '100%'
+          }}
+        >
+          <Button onClick={() => setOpen(false)}>Close Panel</Button>
+        </div>
+      </ResizablePanel>
+    </>
+  );
+};
+
+export const TemplateBodyLock = (args) => {
+  const [state, setState] = useState({
+    isOpenRight: false,
+    isOpenLeft: false
+  });
+  const [isAddText, setIsAddText] = useState(false);
+  const toggleRight = () => {
+    setState({
+      ...state,
+      isOpenRight: !state.isOpenRight
+    });
+  };
+  const toggleLeft = () => {
+    setState({
+      ...state,
+      isOpenLeft: !state.isOpenLeft
+    });
+  };
+  return (
+    <>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'center',
+          height: '150vh'
+        }}
+      >
+        <ItemGroup hasIndent orientation={ItemGroupOrientation.Horizontal}>
+          <Button onClick={toggleLeft}>Toggle Left Panel</Button>
+          <Button onClick={toggleRight}>Toggle Right Panel</Button>
+        </ItemGroup>
+        <ResizablePanel
+          {...args}
+          position={PanelPosition.Left}
+          isOpen={state.isOpenLeft}
+        >
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              height: '100%',
+              width: '100%'
+            }}
+          >
+            <ScrollableContent>
+              <Button onClick={toggleLeft}>Close Panel</Button>
+              <p>{faker.lorem.paragraph(30)}</p>
+            </ScrollableContent>
+          </div>
+        </ResizablePanel>
+        {state.isOpenRight && (
+          <ResizablePanel
+            {...args}
+            position={PanelPosition.Right}
+            isOpen={state.isOpenRight}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: '100%',
+                width: '100%'
+              }}
+            >
+              <ScrollableContent>
+                <Button onClick={toggleRight}>Close Panel</Button>
+                <p>{faker.lorem.paragraph(30)}</p>
+              </ScrollableContent>
+            </div>
+          </ResizablePanel>
+        )}
+      </div>
+    </>
+  );
+};
+
+<Canvas>
+  <Story
+    name="left-panel"
+    args={{
+      position: PanelPosition.Left,
+      width: '400px'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="bottom-panel"
+    args={{
+      position: PanelPosition.Bottom,
+      height: '400px'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="right-panel"
+    args={{
+      position: PanelPosition.Right,
+      width: '400px'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="body-scroll-lock"
+    args={{
+      shouldDisableBodyScroll: true,
+      width: '400px'
+    }}
+  >
+    {TemplateBodyLock.bind({})}
+  </Story>
+</Canvas>
+
+<Props of={ResizablePanel} sort="alpha" />

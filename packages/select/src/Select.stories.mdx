@@ -1,0 +1,34 @@
+import { faCity } from '@fortawesome/free-solid-svg-icons/faCity';
+import { Meta, Story, Canvas, Props } from '@storybook/addon-docs/blocks';
+import { Icon } from '@tablecheck/tablekit-icon';
+import { Select } from './index';
+
+<Meta title="Components/Select" component={Select} parameters={{}} />
+
+export const Template = ({}) => {
+  const options = [
+    { label: 'Adelaide', value: 'adelaide' },
+    { label: 'Brisbane', value: 'brisbane' },
+    { label: 'Canberra', value: 'canberra' },
+    { label: 'Darwin', value: 'darwin' },
+    { label: 'Hobart', value: 'hobart' },
+    { label: 'Melbourne', value: 'melbourne' },
+    { label: 'Perth', value: 'perth' },
+    { label: 'Sydney', value: 'sydney' },
+    { label: 'Maine', value: 'Maine' },
+    { label: 'Detroit', value: 'detroit' },
+    { label: 'Lansing', value: 'lansing' }
+  ];
+  return (
+    <Select
+      options={options}
+      iconBefore={<Icon icon={faCity} />}
+      placeholder="Choose a City"
+      menuPortalTarget={document.body}
+    />
+  );
+};
+
+<Canvas>
+  <Story name="Normal">{Template.bind({})}</Story>
+</Canvas>
