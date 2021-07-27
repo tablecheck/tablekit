@@ -24,10 +24,7 @@ Note the precommit script that will change your commit files according to pretti
 
 ## Publishing Packages
 
-When you need to release a new version of a package:
-
-- Run `npm i` from the root of the tablekit folder (to make sure all packages have the node_modules folder)
-- Run `lerna publish` from the root of the tablekit folder (this should ideally be handled by a CI)
+Publishing packages is handled automatically via GitHub Actions
 
 ## Building a package manually
 
