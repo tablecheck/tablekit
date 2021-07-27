@@ -4,7 +4,8 @@
   "command": {
     "publish": {
       "message": "chore: publish release",
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "verifyAccess": false
     },
     "bootstrap": {
       "hoist": true
