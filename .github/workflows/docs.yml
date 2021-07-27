@@ -25,10 +25,10 @@ jobs:
       - name: Install and Build 🔧
         run: |
           npm ci --legacy-peer-deps
-          npm run build
+          npm run build:storybook
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: docs
-          folder: storybook-static
+          folder: docs
