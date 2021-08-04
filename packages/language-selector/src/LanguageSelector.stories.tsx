@@ -5,6 +5,7 @@ import { faLanguage } from '@fortawesome/free-solid-svg-icons/faLanguage';
 import { Meta } from '@storybook/react';
 import { ordered } from '@tablecheck/locales';
 import { Icon } from '@tablecheck/tablekit-icon';
+import '@tablecheck/tablekit-free-icon-config';
 import { Item, ItemBorderPosition } from '@tablecheck/tablekit-item';
 import { Size, Spacing } from '@tablecheck/tablekit-theme';
 import { useState } from 'react';

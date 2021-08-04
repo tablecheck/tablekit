@@ -4,7 +4,6 @@ import {
   CLASSIC_COLORS,
   DARK_COLORS
 } from '@tablecheck/tablekit-theme';
-import '@tablecheck/tablekit-free-icon-config';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 
