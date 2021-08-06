@@ -15,6 +15,7 @@
     "lib"
   ],
   "dependencies": {
+    "@tablecheck/tablekit-free-icon-config": "^1.0.0",
     "@tablecheck/tablekit-icon": "^1.0.0",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
     "@tablecheck/tablekit-theme": "^1.0.0",
@@ -28,8 +29,8 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
-    "@tablecheck/tablekit-enzyme": "^1.0.0",
-    "@tablecheck/tablekit-free-icon-config": "^1.0.0"
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"

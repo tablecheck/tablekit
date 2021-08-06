@@ -28,6 +28,12 @@
     "react": ">=16.8.0 <18",
     "react-dom": ">=16.2.0 <18"
   },
+  "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "storybook-dark-mode": "1.0.8"
+  },
   "publishConfig": {
     "access": "public"
   },

@@ -31,8 +31,12 @@
     "uuid": ">=8.0.0 <9"
   },
   "devDependencies": {
+    "@storybook/react": "6.3.7",
     "@tablecheck/tablekit-enzyme": "^1.0.0",
-    "@tablecheck/tablekit-free-icon-config": "^1.0.0"
+    "@tablecheck/tablekit-free-icon-config": "^0.1.0",
+    "@tablecheck/tablekit-input": "^0.1.0",
+    "@types/uuid": "^8.3.0",
+    "storybook-dark-mode": "1.0.8"
   },
   "publishConfig": {
     "access": "public"

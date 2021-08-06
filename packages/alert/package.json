@@ -29,7 +29,12 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
-    "@tablecheck/tablekit-enzyme": "^1.0.0"
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "@tablecheck/tablekit-item": "^0.1.0",
+    "@tablecheck/tablekit-select": "^0.1.0",
+    "storybook-dark-mode": "1.0.8",
+    "uuid": "8.3.2"
   },
   "publishConfig": {
     "access": "public"

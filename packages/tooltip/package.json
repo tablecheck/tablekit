@@ -36,8 +36,17 @@
     "react-transition-group": ">=4.2.1 <5"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-button": "^1.0.0",
+    "@tablecheck/tablekit-checkbox": "^1.0.0",
     "@tablecheck/tablekit-enzyme": "^1.0.0",
-    "@tablecheck/tablekit-free-icon-config": "^1.0.0"
+    "@tablecheck/tablekit-free-icon-config": "^1.0.0",
+    "@tablecheck/tablekit-icon": "^1.0.0",
+    "@tablecheck/tablekit-item": "^1.0.0",
+    "@types/flushable": "1.0.1",
+    "@types/react-transition-group": "4.4.0",
+    "storybook-dark-mode": "1.0.8"
   },
   "publishConfig": {
     "access": "public"
