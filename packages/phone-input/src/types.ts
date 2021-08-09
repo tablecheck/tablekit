@@ -25,6 +25,7 @@ export type SelectType = ComponentType<SelectProps<I18nCountry>>;
 
 type FlagSelectOptionsProps = {
   styles: SerializedStyles;
+  menuPortalTarget?: HTMLElement;
 };
 
 export type PhoneFieldProps = InputProps & {

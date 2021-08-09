@@ -29,6 +29,10 @@
     "react": ">=16.8.0 <18",
     "react-dom": ">=16.2.0 <18"
   },
+  "devDependencies": {
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0"
+  },
   "publishConfig": {
     "access": "public"
   },

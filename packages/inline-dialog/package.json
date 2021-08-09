@@ -30,7 +30,10 @@
     "react-popper": ">=2.2.1 <3"
   },
   "devDependencies": {
-    "@tablecheck/tablekit-enzyme": "^1.0.0"
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "@tablecheck/tablekit-icon": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"

@@ -1,6 +1,7 @@
 import { ButtonAppearance, ButtonSize } from '@tablecheck/tablekit-button';
 import { Icon, getIcon } from '@tablecheck/tablekit-icon';
 import { Size } from '@tablecheck/tablekit-theme';
+import { MutableRefObject, useRef, useState, useEffect } from 'react';
 
 import {
   adjustedIconSizes,
@@ -21,15 +22,21 @@ export const Banner = ({
   size = Size.Regular,
   ...restProps
 }: BannerProps): JSX.Element => {
+  const [height, setHeight] = useState(0);
+  const ref = useRef() as MutableRefObject<HTMLDivElement>;
+  useEffect(() => {
+    setHeight(ref.current.clientHeight);
+  }, []);
   const displayedIcon = customIcon || getIcon(appearance);
   return (
     <BannerContainer
+      ref={ref}
       {...restProps}
       className={className}
       appearance={appearance}
       size={size}
     >
-      <BannerMessageContainer>
+      <BannerMessageContainer height={height && height} size={size}>
         {displayedIcon && (
           <AlertIcon
             className="bannerIcon"

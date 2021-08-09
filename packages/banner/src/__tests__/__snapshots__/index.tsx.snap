@@ -35,9 +35,13 @@ exports[`Banner should allow passing of custom className 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   padding: 6px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-2:only-child {
+0 .emotion-2:only-child {
   padding: 6px 8px 6px 0;
 }
 
@@ -58,9 +62,14 @@ exports[`Banner should allow passing of custom className 1`] = `
       className="test-class emotion-0 emotion-1"
       size="regular"
     >
-      <BannerMessageContainer>
+      <BannerMessageContainer
+        height={0}
+        size="regular"
+      >
         <div
           className="emotion-2 emotion-3"
+          height={0}
+          size="regular"
         >
           <AlertIcon
             className="bannerIcon"
@@ -120,9 +129,13 @@ exports[`Banner should correctly apply styling 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   padding: 6px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.emotion-2:only-child {
+0 .emotion-2:only-child {
   padding: 6px 8px 6px 0;
 }
 
@@ -141,9 +154,14 @@ exports[`Banner should correctly apply styling 1`] = `
       className="emotion-0 emotion-1"
       size="regular"
     >
-      <BannerMessageContainer>
+      <BannerMessageContainer
+        height={0}
+        size="regular"
+      >
         <div
           className="emotion-2 emotion-3"
+          height={0}
+          size="regular"
         >
           <AlertIcon
             className="bannerIcon"

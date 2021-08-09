@@ -30,6 +30,13 @@
     "react-dom": ">=16.2.0 <18",
     "react-spring": ">=9.0.0-rc.3 <10"
   },
+  "devDependencies": {
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "@types/raf-schd": "4.0.0",
+    "@types/rc-progress": "^2.4.3",
+    "faker": "5.5.3"
+  },
   "publishConfig": {
     "access": "public"
   },

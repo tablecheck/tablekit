@@ -33,6 +33,14 @@
     "react": ">=16.8.0 <18",
     "react-dom": ">=16.2.0 <18"
   },
+  "devDependencies": {
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-button": "^0.1.0",
+    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "@tablecheck/tablekit-modal-dialog": "^0.1.0",
+    "@tablecheck/tablekit-toggle": "^0.1.0",
+    "storybook-dark-mode": "1.0.8"
+  },
   "publishConfig": {
     "access": "public"
   },
