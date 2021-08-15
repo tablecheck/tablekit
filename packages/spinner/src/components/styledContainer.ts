@@ -2,8 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Spacing } from '@tablecheck/tablekit-theme';
 import { variant, MediaQuery, VariantProps } from '@tablecheck/tablekit-utils';
-import { ElementType } from 'react';
-import { animated } from 'react-spring';
 
 import { SpinnerSize } from '../types';
 
@@ -14,7 +12,7 @@ const SPINNER_SIZE = {
 
 type SizeProps = VariantProps<{ size?: MediaQuery<SpinnerSize> }>;
 
-export const SpinnerContainer = animated<ElementType>(styled.span<SizeProps>`
+export const SpinnerContainer = styled.span<SizeProps>`
   display: inline-flex;
   ${variant<SpinnerSize, SerializedStyles, SizeProps>({
     prop: 'size',
@@ -31,13 +29,7 @@ export const SpinnerContainer = animated<ElementType>(styled.span<SizeProps>`
     }
   })};
   border-radius: 10px;
-  /* Rapidly creating and removing spinners will result in multiple spinners being visible while
-   * they complete their exit animations. This rules hides the spinner if another one has been
-   * added. */
-  div + & {
-    display: none;
-  }
-`);
+`;
 
 export const SpinnerOuter = styled.span<SizeProps>`
   display: inline-flex;

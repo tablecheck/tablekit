@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
 import { Story, Meta } from '@storybook/react';
-import { useState } from 'react';
-
-import { Button } from '../../button';
 
 import { PropsType } from './Spinner';
 
@@ -37,7 +34,6 @@ large.args = {
 };
 
 const AnimatedSpinnerTemplate: Story<PropsType> = (args) => {
-  const [isCompleting, setIsCompleting] = useState(true);
   const SpinnerWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -48,15 +44,8 @@ const AnimatedSpinnerTemplate: Story<PropsType> = (args) => {
   return (
     <SpinnerWrapper>
       <div>
-        <Spinner {...args} isCompleting={isCompleting} />
-        <Spinner {...args} isCompleting={isCompleting} delay={1000} />
-      </div>
-      <div>
-        <Button
-          onClick={() => setIsCompleting((previousValue) => !previousValue)}
-        >
-          Toggle Spinners
-        </Button>
+        <Spinner {...args} />
+        <Spinner {...args} />
       </div>
     </SpinnerWrapper>
   );

@@ -5,8 +5,8 @@ import { getThemeValue } from '@tablecheck/tablekit-utils';
 import { spinnerClassicTheme, spinnerThemeNamespace } from '../themes';
 
 const rotationKeyframe = keyframes`
-    to { transform: rotate(360deg); }
-  `;
+  to { transform: rotate(360deg); }
+`;
 
 export const SpinnerSvg = styled.svg`
   fill: none;
