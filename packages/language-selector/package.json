@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@storybook/react": "6.3.6",
+    "@storybook/react": "6.3.7",
     "@tablecheck/locales": "1.0.3",
     "@tablecheck/tablekit-enzyme": "^0.1.0",
     "@tablecheck/tablekit-free-icon-config": "^0.1.0",

@@ -116,6 +116,36 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/a49aa690-87d8-404f-b41a-202b88cb0674?component-type=npm&component-name=gitlog&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/glob-parent@2.0.0",
+      "description": "Extract the non-magic parent path from a glob string.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/glob-parent@2.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/64cd5f21-8af4-4eae-ac7d-a53241ea693a?component-type=npm&component-name=glob-parent&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/glob-parent@3.1.0",
+      "description": "Extract the non-magic parent path from a glob string.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/glob-parent@3.1.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/64cd5f21-8af4-4eae-ac7d-a53241ea693a?component-type=npm&component-name=glob-parent&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -142,6 +172,9 @@
     },
     {
       "id": "a49aa690-87d8-404f-b41a-202b88cb0674"
+    },
+    {
+      "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a"
     }
   ]
 }
