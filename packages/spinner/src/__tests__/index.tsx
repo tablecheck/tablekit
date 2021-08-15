@@ -18,38 +18,6 @@ describe('Spinner', () => {
       const wrapper = mount(<Spinner />);
       expect(wrapper.find(SpinnerContainer)).toHaveLength(1);
     });
-
-    test('should remove the spinner container when set to true', () => {
-      const wrapper = mount(<Spinner isCompleting />);
-      expect(wrapper.find(SpinnerContainer)).toHaveLength(0);
-    });
-  });
-
-  // there are issues with making the tests work with react-spring
-  // see https://github.com/react-spring/react-spring/issues/680
-  describe.skip('onComplete prop', () => {
-    test('should be called after isCompleting prop is set', () => {
-      const spy = jest.fn();
-      const wrapper = mount(<Spinner delay={0} onComplete={spy} />);
-      wrapper.setProps({ isCompleting: true });
-
-      wrapper.update();
-      jest.runAllTimers();
-
-      expect(spy).toHaveBeenCalledTimes(1);
-    });
-
-    test('should not be called if isCompleting is not set', () => {
-      const spy = jest.fn();
-      const wrapper = mount(<Spinner delay={0} onComplete={spy} />);
-      const transitionContainerNode = wrapper
-        .find(SpinnerContainer)
-        .getDOMNode();
-
-      transitionContainerNode.dispatchEvent(new Event('animationend'));
-
-      expect(spy).not.toHaveBeenCalled();
-    });
   });
 
   test('should be styled', () => {
