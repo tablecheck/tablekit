@@ -1,23 +1,15 @@
-# v0.1.1 (Mon Aug 16 2021)
-
-:tada: This release contains work from a new contributor! :tada:
-
-Thank you, Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy)), for all your work!
-
-#### 🏠 Internal
-
-- docs: fix storybook icon config [#6](https://github.com/tablecheck/tablekit/pull/6) ([@wahidmagdy](https://github.com/wahidmagdy))
-
-#### Authors: 1
-
-- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-sidenav@0.1.0...@tablecheck/tablekit-sidenav@0.1.1) (2021-08-16)
+
+**Note:** Version bump only for package @tablecheck/tablekit-sidenav
+
+
+
+
 
 # 0.1.0 (2021-07-27)
 

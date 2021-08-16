@@ -1,23 +1,18 @@
-# v0.1.1 (Mon Aug 16 2021)
-
-:tada: This release contains work from a new contributor! :tada:
-
-Thank you, Dmitriy ([@Findmitrey](https://github.com/Findmitrey)), for all your work!
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-phone-input): update dependencies [#22](https://github.com/tablecheck/tablekit/pull/22) ([@Findmitrey](https://github.com/Findmitrey))
-
-#### Authors: 1
-
-- Dmitriy ([@Findmitrey](https://github.com/Findmitrey))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-phone-input@0.1.0...@tablecheck/tablekit-phone-input@0.1.1) (2021-08-16)
+
+
+### Bug Fixes
+
+* **tablekit-phone-input:** update dependencies ([8511e1a](https://github.com/tablecheck/tablekit/commit/8511e1aee0c54afb6bfea66c256e8870111b8939)), closes [#21](https://github.com/tablecheck/tablekit/issues/21)
+
+
+
+
 
 # 0.1.0 (2021-07-27)
 
