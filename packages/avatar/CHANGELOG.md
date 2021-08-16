@@ -1,3 +1,19 @@
+# v0.1.1 (Mon Aug 16 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy)), for all your work!
+
+#### 🏠 Internal
+
+- docs: fix storybook icon config [#6](https://github.com/tablecheck/tablekit/pull/6) ([@wahidmagdy](https://github.com/wahidmagdy))
+
+#### Authors: 1
+
+- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

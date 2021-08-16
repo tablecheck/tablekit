@@ -1,3 +1,32 @@
+# (Mon Aug 16 2021)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: Dmitriy ([@Findmitrey](https://github.com/Findmitrey))
+
+:heart: Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-phone-input@0.1.1`
+  - fix(tablekit-phone-input): update dependencies [#22](https://github.com/tablecheck/tablekit/pull/22) ([@Findmitrey](https://github.com/Findmitrey))
+
+#### 🏠 Internal
+
+- chore: fix all contributors setup [skip-ci] [#19](https://github.com/tablecheck/tablekit/pull/19) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-avatar@0.1.1`, `@tablecheck/tablekit-footer@0.1.1`, `@tablecheck/tablekit-gallery@0.1.1`, `@tablecheck/tablekit-language-selector@0.1.1`, `@tablecheck/tablekit-password-field@0.1.1`, `@tablecheck/tablekit-sidenav@0.1.1`, `@tablecheck/tablekit-tag@0.1.1`, `@tablecheck/tablekit-toggle@0.1.1`
+  - docs: fix storybook icon config [#6](https://github.com/tablecheck/tablekit/pull/6) ([@wahidmagdy](https://github.com/wahidmagdy))
+
+#### Authors: 3
+
+- Dmitriy ([@Findmitrey](https://github.com/Findmitrey))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
+
+---
+
 # (Tue Jul 27 2021)
 
 :tada: This release contains work from a new contributor! :tada:
