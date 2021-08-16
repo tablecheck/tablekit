@@ -50,6 +50,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/wahidmagdy"><img src="https://avatars.githubusercontent.com/u/3442546?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Wahid Magdy</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=wahidmagdy" title="Documentation">📖</a> <a href="#example-wahidmagdy" title="Examples">💡</a></td>
+  </tr>
+</table>
+
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
