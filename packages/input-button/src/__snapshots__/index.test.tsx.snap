@@ -43,12 +43,13 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
 
 .emotion-2:checked+div {
   box-shadow: 0 0 0 1px #5C11A6;
-  border: 1px solid #5C11A6;
-  font-weight: 600;
+  background: #5C11A6;
+  color: white;
 }
 
 .emotion-2:checked:hover+div {
-  background: rgba(121,53,210,0.1);
+  background: #5C11A6;
+  color: white;
 }
 
 .emotion-2:disabled+div,
@@ -84,6 +85,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
   text-align: center;
   -webkit-transition: all 120ms ease-in-out;
   transition: all 120ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 .emotion-4:not([data-is-clicked="true"]):after {
@@ -104,6 +106,10 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-weight: 600;
 }
 
 .emotion-6::after {
@@ -217,12 +223,13 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
 
 .emotion-2:checked+div {
   box-shadow: 0 0 0 1px #5C11A6;
-  border: 1px solid #5C11A6;
-  font-weight: 600;
+  background: #5C11A6;
+  color: white;
 }
 
 .emotion-2:checked:hover+div {
-  background: rgba(121,53,210,0.1);
+  background: #5C11A6;
+  color: white;
 }
 
 .emotion-2:disabled+div,
@@ -258,6 +265,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
   text-align: center;
   -webkit-transition: all 120ms ease-in-out;
   transition: all 120ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.03);
 }
 
 .emotion-4:not([data-is-clicked="true"]):after {
@@ -278,6 +286,10 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-weight: 600;
 }
 
 .emotion-6::after {
