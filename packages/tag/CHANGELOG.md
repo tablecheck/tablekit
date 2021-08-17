@@ -1,3 +1,15 @@
+# v1.0.0 (Tue Aug 17 2021)
+
+#### 💥 Breaking Change
+
+- fix(tablekit-spinner): remove react-spring [#28](https://github.com/tablecheck/tablekit/pull/28) (joan@tablecheck.com)
+
+#### Authors: 1
+
+- Joan Mira (joan@tablecheck.com)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

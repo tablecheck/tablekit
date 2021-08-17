@@ -1,3 +1,16 @@
+# (Tue Aug 17 2021)
+
+#### 💥 Breaking Change
+
+- `@tablecheck/tablekit-language-selector@1.0.0`, `@tablecheck/tablekit-package-namespace@1.0.0`, `@tablecheck/tablekit-spinner@1.0.0`, `@tablecheck/tablekit-tag@1.0.0`
+  - fix(tablekit-spinner): remove react-spring [#28](https://github.com/tablecheck/tablekit/pull/28) (joan@tablecheck.com)
+
+#### Authors: 1
+
+- Joan Mira (joan@tablecheck.com)
+
+---
+
 # (Mon Aug 16 2021)
 
 :tada: This release contains work from new contributors! :tada:
