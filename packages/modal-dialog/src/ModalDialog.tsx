@@ -11,6 +11,8 @@ export const ModalDialog = (props: BaseModalProps): JSX.Element => {
     headerContent,
     height,
     width,
+    maxWidth,
+    maxHeight,
     footerContent,
     headerAppearance,
     hasCloseIcon,
@@ -49,6 +51,8 @@ export const ModalDialog = (props: BaseModalProps): JSX.Element => {
         isOpen={isModalOpen}
         height={height}
         width={width}
+        maxWidth={maxWidth}
+        maxHeight={maxHeight}
         onOpenAutoFocus={onOpenAutoFocus}
         onEscapeKeyDown={onEscapeKeyDown}
         onCloseAutoFocus={onCloseAutoFocus}

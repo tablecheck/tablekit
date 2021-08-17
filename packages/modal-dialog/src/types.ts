@@ -1,4 +1,5 @@
 import { Size } from '@tablecheck/tablekit-theme';
+import { MediaQuery } from '@tablecheck/tablekit-utils';
 import { ReactChild } from 'react';
 
 export type AllowedModalWidth =
@@ -40,6 +41,8 @@ export type BaseModalProps = ControlledModalProps & {
   shouldHideGutters?: boolean;
   shouldPreventCloseOutside?: boolean;
   width?: number | string | AllowedModalWidth;
+  maxWidth?: MediaQuery<string | number>;
+  maxHeight?: MediaQuery<string | number>;
 };
 
 export interface ModalBodyProps {
