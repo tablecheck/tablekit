@@ -4,7 +4,8 @@ import { InputFieldProps, InputSize } from '@tablecheck/tablekit-input';
 import {
   FieldHeight,
   Spacing,
-  BORDER_RADIUS
+  BORDER_RADIUS,
+  FontWeight
 } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
 import { variant } from '@tablecheck/tablekit-utils';
@@ -72,6 +73,7 @@ export const ButtonDisplay = styled.div<{
   align-items: center;
   text-align: center;
   ${transition};
+  background-color: rgba(255, 255, 255, 0.03);
 
   &:not(${IS_CLICKED_SELECTOR}):after {
     content: '';
@@ -91,6 +93,8 @@ export const TextWrapper = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  ${Typography.Body1};
+  font-weight: ${FontWeight.SemiBold};
 
   &::after {
     content: attr(data-text);
@@ -118,12 +122,13 @@ export const HiddenInput = styled.input`
 
   &:checked + div {
     box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.primary};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
-    font-weight: 600;
+    background: ${({ theme }) => theme.colors.primary};
+    color: white;
   }
 
   &:checked:hover + div {
-    background: ${({ theme }) => theme.colors.hoverPrimaryBackground};
+    background: ${({ theme }) => theme.colors.primary};
+    color: white;
   }
 
   &:disabled + div,
