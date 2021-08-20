@@ -1,8 +1,6 @@
 name: Auto Release
 
 on:
-  workflow_dispatch:
-    # this allows us to manually run the release on other branches for canary and pre-releases
   push:
     branches:
       - main
@@ -14,8 +12,13 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+
+      - name: Prepare repository
+        run: git fetch --unshallow --prune --tags
+
+      - name: Unset header
+        # checkout@v2 adds a header that makes branch protection report errors ):
+        run: git config --local --unset http.https://github.com/.extraheader
 
       - name: Read .nvmrc
         id: nvm
@@ -35,7 +38,7 @@ jobs:
 
       - name: Create Release ✨
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SIMEON_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
         run: npx auto shipit
