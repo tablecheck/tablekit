@@ -29,6 +29,9 @@
     "react": ">=16.8.0 <18",
     "react-dom": ">=16.2.0 <18"
   },
+  "devDependencies": {
+    "@storybook/react": "6.3.7"
+  },
   "publishConfig": {
     "access": "public"
   },

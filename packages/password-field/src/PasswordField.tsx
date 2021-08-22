@@ -3,7 +3,7 @@ import { forwardRef, useState, useCallback } from 'react';
 import { PasswordFieldStateless } from './PasswordFieldStateless';
 import { StatefullProps } from './types';
 
-type PasswordFieldProps = StatefullProps & {
+export type PasswordFieldProps = StatefullProps & {
   /** Function that is called whenever the state of the input field changes. It will
    be called with input value and metadata */
   onChangeValue?: (value: string, metadata: { invalidKey?: string }) => void;
