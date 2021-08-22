@@ -29,7 +29,11 @@
     "react-transition-group": ">=4.2.1 <5"
   },
   "devDependencies": {
-    "@types/faker": "5.5.7"
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
+    "@storybook/react": "6.3.7",
+    "@types/faker": "5.5.7",
+    "@types/react-table": "7.7.0",
+    "react-table": "7.7.0"
   },
   "publishConfig": {
     "access": "public"
