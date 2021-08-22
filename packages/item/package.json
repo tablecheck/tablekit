@@ -28,7 +28,12 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
-    "@tablecheck/tablekit-enzyme": "^1.0.0"
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
+    "@storybook/react": "6.3.7",
+    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "@tablecheck/tablekit-icon": "^1.0.0",
+    "@types/lodash": "4.14.171",
+    "@types/react-router-dom": "5.1.8"
   },
   "publishConfig": {
     "access": "public"

@@ -7,6 +7,7 @@ module.exports = {
     '../pages/**/*.stories.mdx',
     '../packages/**/src/*.stories.mdx',
     '../pages/**/*.stories.@(js|jsx|ts|tsx)',
-    '../packages/**/src/*.stories.@(js|jsx|ts|tsx)'
+    '../packages/**/src/*.stories.@(js|jsx|ts|tsx)',
+    '../packages/**/src/**/*.stories.@(js|jsx|ts|tsx)'
   ]
 };
