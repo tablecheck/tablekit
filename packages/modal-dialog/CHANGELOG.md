@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@1.0.0...@tablecheck/tablekit-modal-dialog@1.0.1) (2021-08-23)
+
+
+### Features
+
+* **tablekit-modal-dialog:** add maxWidth and maxHeight props ([7d06e79](https://github.com/tablecheck/tablekit/commit/7d06e792d43ca8bca858e890ed3d7e9a587a9670)), closes [#31](https://github.com/tablecheck/tablekit/issues/31)
+
+
+
+
+
 # [1.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@0.1.0...@tablecheck/tablekit-modal-dialog@1.0.0) (2021-08-17)
 
 **Note:** Version bump only for package @tablecheck/tablekit-modal-dialog
