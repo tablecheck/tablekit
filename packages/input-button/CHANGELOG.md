@@ -1,3 +1,19 @@
+# v1.0.1 (Mon Aug 23 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@irmir](https://github.com/irmir), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-input-button): changed appearance [#32](https://github.com/tablecheck/tablekit/pull/32) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
