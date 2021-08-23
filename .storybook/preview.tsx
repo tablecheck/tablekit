@@ -68,19 +68,19 @@ export const parameters = {
 
 export const decorators = [
   (story: () => JSX.Element): JSX.Element => {
-    let theme = {
-      colors: {
-        ...CLASSIC_COLORS,
-        canvas: 'white'
-      },
-      isDark: false
+    const isDark = useDarkMode();
+    const theme = {
+      colors: isDark
+        ? DARK_COLORS
+        : {
+            ...CLASSIC_COLORS,
+            canvas: 'white'
+          }
     };
-    if (useDarkMode()) {
-      theme = {
-        colors: DARK_COLORS,
-        isDark: true
-      };
-    }
-    return <ThemeProvider theme={theme}>{story()}</ThemeProvider>;
+    return (
+      <ThemeProvider theme={theme} isDark={isDark}>
+        {story()}
+      </ThemeProvider>
+    );
   }
 ];
