@@ -53,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/wahidmagdy"><img src="https://avatars.githubusercontent.com/u/3442546?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Wahid Magdy</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=wahidmagdy" title="Documentation">📖</a> <a href="#example-wahidmagdy" title="Examples">💡</a></td>
+    <td align="center"><a href="https://github.com/SimeonC"><img src="https://avatars.githubusercontent.com/u/1085899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Simeon Cheeseman</b></sub></a><br /><a href="#infra-SimeonC" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
