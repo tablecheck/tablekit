@@ -16,7 +16,8 @@ import { Typography } from '@tablecheck/tablekit-typography';
 import {
   getThemeValue,
   padding,
-  ThemeOnlyProps
+  ThemeOnlyProps,
+  mediaQuery
 } from '@tablecheck/tablekit-utils';
 import { ElementType } from 'react';
 import { animated } from 'react-spring';
@@ -66,7 +67,10 @@ export const ModalContent = animated<ElementType>(styled(RxContent, {
       prop
     ) === -1
 })<
-  Pick<BaseModalProps, 'height' | 'width' | 'isChromeless'> & {
+  Pick<
+    BaseModalProps,
+    'height' | 'width' | 'isChromeless' | 'maxWidth' | 'maxHeight'
+  > & {
     shouldPreventOverflow?: boolean;
   }
 >`
@@ -82,8 +86,16 @@ export const ModalContent = animated<ElementType>(styled(RxContent, {
   top: calc(${Spacing.L6} / 2);
   left: 50%;
   transform: translateX(-50%);
-  max-width: calc(100% - ${Spacing.L6});
-  max-height: calc(100% - ${Spacing.L5});
+  ${mediaQuery('maxWidth', (currentSize = `calc(100% - ${Spacing.L6})`) =>
+    typeof currentSize === 'string'
+      ? `max-width: ${currentSize};`
+      : `max-width: ${currentSize}px;`
+  )}
+  ${mediaQuery('maxHeight', (currentSize = `calc(100% - ${Spacing.L5})`) =>
+    typeof currentSize === 'string'
+      ? `max-height: ${currentSize};`
+      : `max-height: ${currentSize}px;`
+  )}
   height: ${({ height }) =>
     typeof height === 'number' ? `${height}px` : height || 'auto'};
   width: ${({ width }) => {

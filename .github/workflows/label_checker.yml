@@ -9,6 +9,13 @@ on:
       - labeled
       - unlabeled
 
+concurrency:
+  # Here the group is defined by the head_ref of the PR
+  group: ${{ github.head_ref }}-label
+  # Here we specify that we'll cancel any "in progress" workflow of the same group. Thus if we push, ammend a commit and push
+  # again the previous workflow will be cancelled, thus saving us github action build minutes and avoid any conflicts
+  cancel-in-progress: true
+
 jobs:
   check_labels:
     name: Check labels
@@ -16,6 +23,6 @@ jobs:
     steps:
       - uses: agilepathway/label-checker@v1.0.91
         with:
-          one_of: major,minor,patch,internal
+          one_of: major,minor,patch,skip-release,internal,documentation,tests,dependencies,performance
           none_of: invalid,wontfix,duplicate,question
           repo_token: ${{ secrets.GITHUB_TOKEN }}

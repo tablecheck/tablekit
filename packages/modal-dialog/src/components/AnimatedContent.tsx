@@ -17,12 +17,16 @@ export const AnimatedContent = (
     | 'onEscapeKeyDown'
     | 'onPointerDownOutside'
     | 'shouldPreventCloseOutside'
+    | 'maxWidth'
+    | 'maxHeight'
   >
 ): JSX.Element => {
   const {
     children,
     height,
     width,
+    maxHeight,
+    maxWidth,
     isChromeless,
     isOpen,
     onEscapeKeyDown,
@@ -54,6 +58,8 @@ export const AnimatedContent = (
               forceMount
               height={height}
               width={width}
+              maxWidth={maxWidth}
+              maxHeight={maxHeight}
               style={{
                 opacity: styles.opacity,
                 top: styles.top
