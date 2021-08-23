@@ -1,3 +1,36 @@
+# (Mon Aug 23 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-modal-dialog@1.0.1`
+  - feat(tablekit-modal-dialog): add maxWidth and maxHeight props [#33](https://github.com/tablecheck/tablekit/pull/33) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
+# (Mon Aug 23 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@irmir](https://github.com/irmir), for all your work!
+
+#### 🐛 Bug Fix
+
+- ci: update token config for security [#35](https://github.com/tablecheck/tablekit/pull/35) ([@SimeonC](https://github.com/SimeonC))
+- chore: setup temporary release process [#34](https://github.com/tablecheck/tablekit/pull/34) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-input-button@1.0.1`
+  - fix(tablekit-input-button): changed appearance [#32](https://github.com/tablecheck/tablekit/pull/32) ([@irmir](https://github.com/irmir))
+
+#### Authors: 2
+
+- [@irmir](https://github.com/irmir)
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Tue Aug 17 2021)
 
 #### 💥 Breaking Change
