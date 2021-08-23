@@ -1,3 +1,15 @@
+# v1.0.1 (Mon Aug 23 2021)
+
+#### 🐛 Bug Fix
+
+- feat(tablekit-modal-dialog): add maxWidth and maxHeight props [#33](https://github.com/tablecheck/tablekit/pull/33) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
