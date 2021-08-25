@@ -4,6 +4,7 @@ import { Size } from '@tablecheck/tablekit-theme';
 
 import {
   adjustedIconSizes,
+  AlertIconWrapper,
   AlertIcon,
   BannerContainer,
   BannerMessageContainer,
@@ -31,11 +32,13 @@ export const Banner = ({
     >
       <BannerMessageContainer>
         {displayedIcon && (
-          <AlertIcon
-            className="bannerIcon"
-            icon={displayedIcon}
-            size={adjustedIconSizes[size]}
-          />
+          <AlertIconWrapper size={size}>
+            <AlertIcon
+              className="bannerIcon"
+              icon={displayedIcon}
+              size={adjustedIconSizes[size]}
+            />
+          </AlertIconWrapper>
         )}
         <div>{message}</div>
       </BannerMessageContainer>

@@ -42,6 +42,18 @@ exports[`Banner should allow passing of custom className 1`] = `
 }
 
 .emotion-4 {
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
   margin-right: 8px;
 }
 
@@ -64,20 +76,30 @@ exports[`Banner should allow passing of custom className 1`] = `
         <div
           className="emotion-2 emotion-3"
         >
-          <AlertIcon
-            className="bannerIcon"
-            icon="fas-info-circle"
-            size="regular2"
+          <AlertIconWrapper
+            size="regular"
           >
             <Noop />
-            <Icon
-              className="bannerIcon emotion-4 emotion-5"
-              icon="fas-info-circle"
-              size="regular2"
+            <span
+              className="emotion-4 emotion-5"
+              size="regular"
             >
-              icon-info-circle
-            </Icon>
-          </AlertIcon>
+              <AlertIcon
+                className="bannerIcon"
+                icon="fas-info-circle"
+                size="regular2"
+              >
+                <Noop />
+                <Icon
+                  className="bannerIcon emotion-6 emotion-7"
+                  icon="fas-info-circle"
+                  size="regular2"
+                >
+                  icon-info-circle
+                </Icon>
+              </AlertIcon>
+            </span>
+          </AlertIconWrapper>
           <div>
             Test
           </div>
@@ -130,6 +152,18 @@ exports[`Banner should correctly apply styling 1`] = `
 }
 
 .emotion-4 {
+  height: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-6 {
   margin-right: 8px;
 }
 
@@ -150,20 +184,30 @@ exports[`Banner should correctly apply styling 1`] = `
         <div
           className="emotion-2 emotion-3"
         >
-          <AlertIcon
-            className="bannerIcon"
-            icon="fas-info-circle"
-            size="regular2"
+          <AlertIconWrapper
+            size="regular"
           >
             <Noop />
-            <Icon
-              className="bannerIcon emotion-4 emotion-5"
-              icon="fas-info-circle"
-              size="regular2"
+            <span
+              className="emotion-4 emotion-5"
+              size="regular"
             >
-              icon-info-circle
-            </Icon>
-          </AlertIcon>
+              <AlertIcon
+                className="bannerIcon"
+                icon="fas-info-circle"
+                size="regular2"
+              >
+                <Noop />
+                <Icon
+                  className="bannerIcon emotion-6 emotion-7"
+                  icon="fas-info-circle"
+                  size="regular2"
+                >
+                  icon-info-circle
+                </Icon>
+              </AlertIcon>
+            </span>
+          </AlertIconWrapper>
           <div>
             Test
           </div>
