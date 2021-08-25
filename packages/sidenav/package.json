@@ -32,8 +32,11 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
+    "@storybook/react": "6.3.7",
     "@tablecheck/tablekit-enzyme": "^1.0.1",
-    "@tablecheck/tablekit-free-icon-config": "^1.0.2"
+    "@tablecheck/tablekit-free-icon-config": "^1.0.2",
+    "@types/react-router-dom": "5.1.8",
+    "storybook-dark-mode": "1.0.8"
   },
   "publishConfig": {
     "access": "public"
