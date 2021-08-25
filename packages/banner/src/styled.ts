@@ -11,7 +11,7 @@ import { getThemeValue } from '@tablecheck/tablekit-utils';
 import type { ThemeOnlyProps } from '@tablecheck/tablekit-utils';
 
 import { bannerClassicTheme, bannerThemeNamespace } from './themes';
-import { Appearance, BannerProps } from './types';
+import { Appearance, BannerProps, BannerSizes } from './types';
 
 const sizedTypography = {
   [Size.Small]: Typography.Heading4,
@@ -71,6 +71,14 @@ export const BannerMessageContainer = styled.div`
   &:only-child {
     padding: 6px ${Spacing.L2} 6px 0;
   }
+`;
+
+export const AlertIconWrapper = styled.span<{
+  size: BannerSizes;
+}>`
+  height: ${({ size }) => `${sizedTypography[size].lineHeight}`};
+  display: flex;
+  align-items: center;
 `;
 
 export const AlertIcon = styled(Icon)`
