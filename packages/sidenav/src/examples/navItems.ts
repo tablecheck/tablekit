@@ -1,4 +1,14 @@
-import { getIcon } from '@tablecheck/tablekit-icon';
+import { getIcon, IconDefinition } from '@tablecheck/tablekit-icon';
+
+export type NavItem = {
+  type: string;
+  label: string;
+  icon?: IconDefinition;
+  isDisabled?: boolean;
+  children?: NavItem[];
+  to?: string;
+  isNested?: boolean;
+};
 
 export const NavItems = [
   {
