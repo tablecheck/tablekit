@@ -1,4 +1,3 @@
-import { SerializedStyles } from '@emotion/react';
 import { InputProps, InputSize } from '@tablecheck/tablekit-input';
 import { SelectProps } from '@tablecheck/tablekit-select';
 import { MediaQuery } from '@tablecheck/tablekit-utils';
@@ -23,9 +22,21 @@ export interface I18nCountry {
 
 export type SelectType = ComponentType<SelectProps<I18nCountry>>;
 
-type FlagSelectOptionsProps = {
-  styles: SerializedStyles;
-};
+type FlagSelectOptionsProps = Omit<
+  SelectProps<I18nCountry>,
+  | 'placeholder'
+  | 'formatOptionLabel'
+  | 'getOptionLabel'
+  | 'getOptionValue'
+  | 'filterOption'
+  | 'onChange'
+  | 'isInvalid'
+  | 'isDisabled'
+  | 'options'
+  | 'value'
+  | 'shouldNotChangeDropdownIcon'
+  | 'isRtl'
+>;
 
 export type PhoneFieldProps = InputProps & {
   /** selected country code by default. */
