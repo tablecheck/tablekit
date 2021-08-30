@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
@@ -16,7 +16,7 @@
   ],
   "scripts": {},
   "dependencies": {
-    "@tablecheck/tablekit-input": "^1.0.0",
+    "@tablecheck/tablekit-input": "^1.0.1",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
     "@tablecheck/tablekit-theme": "^1.0.0",
     "@tablecheck/tablekit-typography": "^1.0.0",

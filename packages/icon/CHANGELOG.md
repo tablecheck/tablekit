@@ -1,24 +1,18 @@
-# v1.0.1 (Mon Aug 30 2021)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-icon): improve icon config error [#48](https://github.com/tablecheck/tablekit/pull/48) ([@SimeonC](https://github.com/SimeonC))
-
-#### 🏠 Internal
-
-- chore: migrate approved stories [#37](https://github.com/tablecheck/tablekit/pull/37) ([@irmir](https://github.com/irmir))
-
-#### Authors: 2
-
-- [@irmir](https://github.com/irmir)
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-icon@1.0.0...@tablecheck/tablekit-icon@1.0.1) (2021-08-30)
+
+
+### Bug Fixes
+
+* **tablekit-icon:** improve icon config error ([58f1568](https://github.com/tablecheck/tablekit/commit/58f1568bb75ce46014fe13c4d066e6dabaa24cea))
+
+
+
+
 
 # [1.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-icon@0.1.0...@tablecheck/tablekit-icon@1.0.0) (2021-08-17)
 
