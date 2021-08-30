@@ -1,3 +1,15 @@
+# v1.0.1 (Mon Aug 30 2021)
+
+#### 🏠 Internal
+
+- chore: migrate approved stories [#37](https://github.com/tablecheck/tablekit/pull/37) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

@@ -1,3 +1,15 @@
+# v1.0.2 (Mon Aug 30 2021)
+
+#### 📝 Documentation
+
+- docs: migrate unapproved stories [#36](https://github.com/tablecheck/tablekit/pull/36) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
