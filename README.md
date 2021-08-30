@@ -55,6 +55,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/wahidmagdy"><img src="https://avatars.githubusercontent.com/u/3442546?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Wahid Magdy</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=wahidmagdy" title="Documentation">📖</a> <a href="#example-wahidmagdy" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/SimeonC"><img src="https://avatars.githubusercontent.com/u/1085899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Simeon Cheeseman</b></sub></a><br /><a href="#infra-SimeonC" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://github.com/irmir"><img src="https://avatars.githubusercontent.com/u/59263605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>irmir</b></sub></a><br /><a href="#example-irmir" title="Examples">💡</a> <a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=irmir" title="Code">💻</a></td>
+    <td align="center"><a href="http://joanmira.com/"><img src="https://avatars.githubusercontent.com/u/1721288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joan Mira</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=gazpachu" title="Documentation">📖</a></td>
   </tr>
 </table>
 
