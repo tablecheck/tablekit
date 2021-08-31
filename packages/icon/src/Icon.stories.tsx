@@ -7,7 +7,7 @@ import { tciSunriseO } from 'tablecheck-icons/tciSunriseO';
 import { Icon, IconProps } from './index';
 
 export default {
-  title: 'Components/Icon',
+  title: 'Icon System/Icon',
   component: Icon,
   argTypes: {
     size: {
