@@ -16,7 +16,7 @@
   ],
   "scripts": {},
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@tablecheck/tablekit-icon": "^2.1.0",
     "@tablecheck/tablekit-package-namespace": "^1.1.0",
     "@tablecheck/tablekit-theme": "^2.1.0",
