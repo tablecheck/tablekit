@@ -5,7 +5,8 @@ import { HTMLAttributes, ReactNode } from 'react';
 export enum PanelPosition {
   Right = 'right',
   Left = 'left',
-  Bottom = 'bottom'
+  Bottom = 'bottom',
+  Top = 'top'
 }
 
 interface CommonPanelProps {

@@ -146,6 +146,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/64cd5f21-8af4-4eae-ac7d-a53241ea693a?component-type=npm&component-name=glob-parent&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/xmldom@0.5.0",
+      "description": "A pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and XMLSerializer module.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/xmldom@0.5.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "20b5c393-1a87-4f20-84c9-801c323489ca",
+          "title": "[CVE-2021-32796] xmldom is an open source pure JavaScript W3C standard-based (XML DOM Level 2 Cor...",
+          "description": "xmldom is an open source pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and XMLSerializer module. xmldom versions 0.6.0 and older do not correctly escape special characters when serializing elements removed from their ancestor. This may lead to unexpected syntactic changes during XML processing in some downstream applications. This issue has been resolved in version 0.7.0. As a workaround downstream applications can validate the input and reject the maliciously crafted documents.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cve": "CVE-2021-32796",
+          "reference": "https://ossindex.sonatype.org/vulnerability/20b5c393-1a87-4f20-84c9-801c323489ca?component-type=npm&component-name=xmldom&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -175,6 +191,9 @@
     },
     {
       "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a"
+    },
+    {
+      "id": "20b5c393-1a87-4f20-84c9-801c323489ca"
     }
   ]
 }
