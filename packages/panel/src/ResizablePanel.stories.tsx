@@ -69,13 +69,13 @@ const Template: Story<ResizablePanelProps> = ({ ...args }) => {
     <Wrapper>
       <div>
         <p>
-          An animated slide-in panel component that can be horizontally resized.
-          This type of component is useful for side nav or panels that need to
-          be opened from the side of the scren.
+          An animated slide-in panel component that can be resized. This type of
+          component is useful for side nav or panels that need to be opened from
+          one side of the screen.
         </p>
         <ul>
           <li>Width only applies to the left/right panel</li>
-          <li>Height only applies to the bottom panel</li>
+          <li>Height only applies to the top/bottom panel</li>
         </ul>
       </div>
       <Button onClick={() => setOpen(true)}>{args.position} panel</Button>
@@ -111,6 +111,14 @@ RightPanel.args = {
 export const BottomPanel = Template.bind({});
 BottomPanel.args = {
   position: PanelPosition.Bottom,
+  defaultHeight: 100,
+  maxHeight: 200,
+  minHeight: 50
+};
+
+export const TopPanel = Template.bind({});
+TopPanel.args = {
+  position: PanelPosition.Top,
   defaultHeight: 100,
   maxHeight: 200,
   minHeight: 50

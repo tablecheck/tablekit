@@ -71,13 +71,13 @@ const Template: Story<PanelProps> = ({ ...args }) => {
       <div>
         <p>
           An animated slide-in panel component. This type of component is useful
-          for side nav or panels that need to be opened from the side of the
-          scren.
+          for side nav or panels that need to be opened from one side of the
+          screen.
         </p>
         <ul>
           <li>Width only applies to the left/right panel</li>
-          <li>Height only applies to the bottom panel</li>
-          <li>Bottom panel changes to 100% height in mobile view.</li>
+          <li>Height only applies to the top/bottom panel</li>
+          <li>Bottom and top panels change to 100% height in mobile view.</li>
         </ul>
       </div>
       <Button onClick={() => setOpen(true)}>{args.position} panel</Button>
@@ -105,6 +105,12 @@ RightPanel.args = {
 export const BottomPanel = Template.bind({});
 BottomPanel.args = {
   position: PanelPosition.Bottom,
+  height: '100px'
+};
+
+export const TopPanel = Template.bind({});
+TopPanel.args = {
+  position: PanelPosition.Top,
   height: '100px'
 };
 

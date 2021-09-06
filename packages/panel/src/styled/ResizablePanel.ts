@@ -29,6 +29,10 @@ export const ResizablePanelContainer = styled(
         [PanelPosition.Bottom]: css`
           border-top: 2px solid transparent;
           top: 0 !important;
+        `,
+        [PanelPosition.Top]: css`
+          border-bottom: 2px solid transparent;
+          bottom: 0 !important;
         `
       }
     })}
@@ -59,6 +63,10 @@ export const ResizablePanelContainer = styled(
             left: 5px;
           `,
           [PanelPosition.Bottom]: css`
+            left: 50%;
+            transform: translateX(-50%) rotate(90deg);
+          `,
+          [PanelPosition.Top]: css`
             left: 50%;
             transform: translateX(-50%) rotate(90deg);
           `

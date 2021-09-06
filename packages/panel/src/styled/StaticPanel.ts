@@ -17,10 +17,14 @@ export const StaticContainer = styled('div', {
   transition: transform ${slideIn};
   ${({ position }) => `${position}: 0;`};
   ${({ isOpen, position }) => {
-    if (position === PanelPosition.Bottom) {
+    if (position === PanelPosition.Top || position === PanelPosition.Bottom) {
       return `
       left: 0;
-      transform: ${isOpen ? 'translateY(0)' : 'translateY(110%)'}`;
+      transform: ${
+        isOpen
+          ? 'translateY(0)'
+          : `translateY(${position === PanelPosition.Top ? '-' : ''}110%)`
+      }`;
     }
     return `
     top: 0;
