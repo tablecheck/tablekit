@@ -1,3 +1,16 @@
+# (Mon Sep 06 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-panel@1.0.2`
+  - feat(tablekit-panel): added top position variant [#50](https://github.com/tablecheck/tablekit/pull/50) (joan@tablecheck.com)
+
+#### Authors: 1
+
+- Joan Mira (joan@tablecheck.com)
+
+---
+
 # (Mon Aug 30 2021)
 
 :tada: This release contains work from a new contributor! :tada:
