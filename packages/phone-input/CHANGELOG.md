@@ -1,19 +1,18 @@
-# v1.0.2 (Mon Sep 13 2021)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-phone-input): create stories, fix types [#44](https://github.com/tablecheck/tablekit/pull/44) ([@irmir](https://github.com/irmir))
-
-#### Authors: 1
-
-- [@irmir](https://github.com/irmir)
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-phone-input@1.0.1...@tablecheck/tablekit-phone-input@1.0.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* **tablekit-phone-input:** create stories, fix types ([047d114](https://github.com/tablecheck/tablekit/commit/047d114893e7f53672c4714877a883f0f07c6293)), closes [#42](https://github.com/tablecheck/tablekit/issues/42)
+
+
+
+
 
 ## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-phone-input@1.0.0...@tablecheck/tablekit-phone-input@1.0.1) (2021-08-30)
 
