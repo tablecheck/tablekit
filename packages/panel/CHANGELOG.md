@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-panel@1.0.1...@tablecheck/tablekit-panel@1.0.2) (2021-09-06)
+
+
+### Features
+
+* **tablekit-panel:** added top position variant ([7e2639e](https://github.com/tablecheck/tablekit/commit/7e2639e5485b4e5135afa7b048d3890a1576c391))
+
+
+
+
+
+## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-panel@1.0.0...@tablecheck/tablekit-panel@1.0.1) (2021-08-30)
+
+**Note:** Version bump only for package @tablecheck/tablekit-panel
+
+
+
+
+
 # [1.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-panel@0.1.0...@tablecheck/tablekit-panel@1.0.0) (2021-08-17)
 
 **Note:** Version bump only for package @tablecheck/tablekit-panel

@@ -1,3 +1,47 @@
+# (Mon Sep 06 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-panel@1.0.2`
+  - feat(tablekit-panel): added top position variant [#50](https://github.com/tablecheck/tablekit/pull/50) (joan@tablecheck.com)
+
+#### Authors: 1
+
+- Joan Mira (joan@tablecheck.com)
+
+---
+
+# (Mon Aug 30 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Joan Mira ([@gazpachu](https://github.com/gazpachu)), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-icon@1.0.1`
+  - fix(tablekit-icon): improve icon config error [#48](https://github.com/tablecheck/tablekit/pull/48) ([@SimeonC](https://github.com/SimeonC))
+
+#### 🏠 Internal
+
+- docs: intro page [#29](https://github.com/tablecheck/tablekit/pull/29) ([@gazpachu](https://github.com/gazpachu))
+- build: add possibility to load from assets [#24](https://github.com/tablecheck/tablekit/pull/24) ([@irmir](https://github.com/irmir))
+- `@tablecheck/tablekit-alert@1.0.1`, `@tablecheck/tablekit-avatar@1.0.1`, `@tablecheck/tablekit-badge@1.0.1`, `@tablecheck/tablekit-checkbox@1.0.1`, `@tablecheck/tablekit-icon@1.0.1`, `@tablecheck/tablekit-input-button@1.0.2`, `@tablecheck/tablekit-input@1.0.1`, `@tablecheck/tablekit-logo@1.0.1`, `@tablecheck/tablekit-radio@1.0.1`, `@tablecheck/tablekit-select@1.0.1`, `@tablecheck/tablekit-table@1.0.1`, `@tablecheck/tablekit-tag@1.0.1`, `@tablecheck/tablekit-toggle@1.0.1`, `@tablecheck/tablekit-tooltip@1.0.1`
+  - chore: migrate approved stories [#37](https://github.com/tablecheck/tablekit/pull/37) ([@irmir](https://github.com/irmir))
+
+#### 📝 Documentation
+
+- `@tablecheck/tablekit-banner@1.0.1`, `@tablecheck/tablekit-button-group@1.0.1`, `@tablecheck/tablekit-button@1.0.1`, `@tablecheck/tablekit-calendar@1.0.1`, `@tablecheck/tablekit-inline-dialog@1.0.1`, `@tablecheck/tablekit-item@1.0.1`, `@tablecheck/tablekit-modal-dialog@1.0.2`, `@tablecheck/tablekit-panel@1.0.1`, `@tablecheck/tablekit-password-field@1.0.1`, `@tablecheck/tablekit-phone-input@1.0.1`, `@tablecheck/tablekit-sidenav@1.0.1`, `@tablecheck/tablekit-tabs@1.0.1`, `@tablecheck/tablekit-textarea@1.0.1`, `@tablecheck/tablekit-topnav@1.0.1`
+  - docs: migrate unapproved stories [#36](https://github.com/tablecheck/tablekit/pull/36) ([@irmir](https://github.com/irmir))
+
+#### Authors: 3
+
+- [@irmir](https://github.com/irmir)
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Mon Aug 23 2021)
 
 #### 🐛 Bug Fix

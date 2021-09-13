@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -15,9 +15,9 @@
     "lib"
   ],
   "dependencies": {
-    "@tablecheck/tablekit-button": "^1.0.0",
-    "@tablecheck/tablekit-icon": "^1.0.0",
-    "@tablecheck/tablekit-input": "^1.0.0",
+    "@tablecheck/tablekit-button": "^1.0.1",
+    "@tablecheck/tablekit-icon": "^1.0.1",
+    "@tablecheck/tablekit-input": "^1.0.1",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
     "@tablecheck/tablekit-theme": "^1.0.0",
     "@tablecheck/tablekit-typography": "^1.0.0",
@@ -32,8 +32,10 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
+    "@storybook/react": "6.3.7",
     "@tablecheck/tablekit-enzyme": "^1.0.0",
-    "@tablecheck/tablekit-free-icon-config": "^1.0.0"
+    "@tablecheck/tablekit-free-icon-config": "^1.0.1"
   },
   "publishConfig": {
     "access": "public"

@@ -34,7 +34,7 @@ export const ResizablePanel = forwardRef<Resizable, ResizablePanelProps>(
       () => ({
         top: position === 'bottom',
         right: position === 'left',
-        bottom: false,
+        bottom: position === 'top',
         left: position === 'right',
         topRight: false,
         bottomRight: false,
@@ -76,7 +76,7 @@ export const ResizablePanel = forwardRef<Resizable, ResizablePanelProps>(
     }, [containerRef, onClickOutside, isOpen, togglePanel]);
 
     const defaultSize =
-      position === 'bottom'
+      position === PanelPosition.Bottom || position === PanelPosition.Top
         ? { height: defaultHeight, width: '100% !important' }
         : { width: defaultWidth, height: '100% important' };
 
@@ -88,7 +88,11 @@ export const ResizablePanel = forwardRef<Resizable, ResizablePanelProps>(
         position={position}
         defaultSize={defaultSize}
         minWidth={minWidth}
-        maxWidth={position === PanelPosition.Bottom ? 'auto' : maxWidth}
+        maxWidth={
+          position === PanelPosition.Bottom || position === PanelPosition.Top
+            ? 'auto'
+            : maxWidth
+        }
         minHeight={minHeight}
         maxHeight={maxHeight}
         onClick={(ev) => ev.stopPropagation()}

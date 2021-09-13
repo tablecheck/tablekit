@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-item@1.0.0...@tablecheck/tablekit-item@1.0.1) (2021-08-30)
+
+**Note:** Version bump only for package @tablecheck/tablekit-item
+
+
+
+
+
 # [1.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-item@0.1.0...@tablecheck/tablekit-item@1.0.0) (2021-08-17)
 
 **Note:** Version bump only for package @tablecheck/tablekit-item
