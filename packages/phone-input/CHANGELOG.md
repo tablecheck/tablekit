@@ -1,3 +1,15 @@
+# v1.0.2 (Mon Sep 13 2021)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-phone-input): create stories, fix types [#44](https://github.com/tablecheck/tablekit/pull/44) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
