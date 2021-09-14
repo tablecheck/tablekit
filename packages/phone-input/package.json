@@ -24,7 +24,7 @@
     "@tablecheck/tablekit-typography": "^1.0.0",
     "@tablecheck/tablekit-utils": "^1.0.0",
     "input-format": "^0.3.6",
-    "libphonenumber-js": "^1.9.23",
+    "libphonenumber-js": "^1.9.34",
     "react-phone-number-input": "3.0.13"
   },
   "peerDependencies": {

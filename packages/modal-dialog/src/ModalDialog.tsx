@@ -1,3 +1,4 @@
+import { Trigger as RxTrigger } from '@radix-ui/react-dialog';
 import { useCallback, useState } from 'react';
 
 import { AnimatedContent } from './components/AnimatedContent';
@@ -46,7 +47,7 @@ export const ModalDialog = (props: BaseModalProps): JSX.Element => {
 
   return (
     <ModalRoot onOpenChange={onOpenChangeHandler} open={isModalOpen}>
-      {trigger}
+      {trigger ? <RxTrigger asChild>{trigger}</RxTrigger> : null}
       <AnimatedContent
         isOpen={isModalOpen}
         height={height}
