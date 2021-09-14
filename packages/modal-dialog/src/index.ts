@@ -1,7 +1,3 @@
-export {
-  Trigger as ModalTrigger,
-  Close as ModalClosePrimitive
-} from '@radix-ui/react-dialog';
 export { ModalDialog } from './ModalDialog';
 export {
   ModalBody,

@@ -26,7 +26,7 @@ import { useState, ChangeEventHandler, ChangeEvent } from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { Button } from '../../button';
-import { ModalDialog, ModalTrigger } from '../../modal-dialog';
+import { ModalDialog } from '../../modal-dialog';
 import { Toggle } from '../../toggle';
 
 // this is just a mock data - i18nCountries needs to be localized data passed from each project.
@@ -44,8 +44,6 @@ export default {
     }
   }
 } as Meta;
-
-const ModalBtnTrigger = (props: any) => <ModalTrigger as={Button} {...props} />;
 
 const darkTheme = {
   colors: DARK_COLORS,
@@ -139,7 +137,7 @@ const ModalTemplate: Story<PhoneFieldProps> = ({ ...args }) => {
           .
         </p>
         <ModalDialog
-          trigger={<ModalBtnTrigger>Open modal</ModalBtnTrigger>}
+          trigger={<Button>Open modal</Button>}
           headerContent="Modal"
           width={Size.Regular}
           hasCloseIcon

@@ -12,14 +12,15 @@ import { Spacing } from '@tablecheck/tablekit-theme';
 import { margin } from '@tablecheck/tablekit-utils';
 
 const BaseCloseBtn = (props: ButtonProps): JSX.Element => (
-  <RxClose
-    as={Button}
-    size={ButtonSize.Small}
-    shape={ButtonShape.Circular}
-    appearance={ButtonAppearance.Subtle}
-    color={ButtonColor.Ghost}
-    {...props}
-  />
+  <RxClose asChild>
+    <Button
+      size={ButtonSize.Small}
+      shape={ButtonShape.Circular}
+      appearance={ButtonAppearance.Subtle}
+      color={ButtonColor.Ghost}
+      {...props}
+    />
+  </RxClose>
 );
 
 export const ModalCloseButton = styled(BaseCloseBtn)`
