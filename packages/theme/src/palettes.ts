@@ -9,9 +9,9 @@ import {
   WHITE_TRANSLUCENT,
   YELLOW
 } from './colors';
-import type { ThemeColors } from './types';
+import type { BaseColors } from './types';
 
-export const CLASSIC_COLORS: ThemeColors = {
+export const CLASSIC_COLORS: BaseColors = {
   canvas: GRAY.L1, // background for the lowest level of the page, i.e. <body>
   primary: PURPLE.L7,
   primary2: PURPLE.L5,
@@ -38,7 +38,7 @@ export const CLASSIC_COLORS: ThemeColors = {
   focusOutline: BLUE.L4
 };
 
-export const DARK_COLORS: ThemeColors = {
+export const DARK_COLORS: BaseColors = {
   canvas: GRAY.L9,
   primary: PURPLE.L3,
   primary2: PURPLE.L5,

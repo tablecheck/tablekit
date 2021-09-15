@@ -41,13 +41,14 @@ export interface BaseColors {
   focusOutline: string;
 }
 
-export type ThemeColors = BaseColors;
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface ThemeColors extends BaseColors {}
 
 declare module '@emotion/react' {
   export interface Theme {
     isDark: boolean;
     isRtl: boolean;
     fontFamily: string;
-    colors: BaseColors;
+    colors: ThemeColors;
   }
 }
