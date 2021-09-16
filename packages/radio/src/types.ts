@@ -1,13 +1,9 @@
-import { HTMLAttributes } from 'react';
+import { ReactNode, HTMLAttributes } from 'react';
 
 export type Value = string | number | readonly string[] | undefined;
 
-export type OnChangeHandler = (
-  event: React.SyntheticEvent<HTMLInputElement>
-) => void;
-
 export type RadioProps = HTMLAttributes<HTMLInputElement> & {
-  children: JSX.Element | JSX.Element[];
+  children: ReactNode;
 
   /** Set the field as checked */
   isChecked?: boolean;
@@ -22,7 +18,7 @@ export type RadioProps = HTMLAttributes<HTMLInputElement> & {
   name: string;
 
   /** onChange event handler */
-  onChange?: OnChangeHandler;
+  onChange?: HTMLAttributes<HTMLInputElement>['onChange'];
 
   /** Field value */
   value: Value;

@@ -2,10 +2,6 @@ import { ReactNode, HTMLAttributes } from 'react';
 
 export type Value = string | number | readonly string[] | undefined;
 
-type OnChangeHandler = (
-  event: React.SyntheticEvent<HTMLInputElement>
-) => unknown;
-
 export type CheckboxProps = HTMLAttributes<HTMLInputElement> &
   Partial<{
     children: ReactNode;
@@ -27,7 +23,7 @@ export type CheckboxProps = HTMLAttributes<HTMLInputElement> &
     name: string;
 
     /** onChange event handler */
-    onChange: OnChangeHandler;
+    onChange?: HTMLAttributes<HTMLInputElement>['onChange'];
 
     /** Field value */
     value: Value;
