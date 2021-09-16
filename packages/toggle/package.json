@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -18,9 +18,9 @@
     "@types/uuid": "^8.3.0"
   },
   "dependencies": {
-    "@tablecheck/tablekit-icon": "^1.0.1",
+    "@tablecheck/tablekit-icon": "^1.0.2",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
-    "@tablecheck/tablekit-theme": "^1.0.0",
+    "@tablecheck/tablekit-theme": "^1.0.1",
     "@tablecheck/tablekit-utils": "^1.0.0"
   },
   "peerDependencies": {
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@storybook/react": "6.3.7",
-    "@tablecheck/tablekit-enzyme": "^1.0.0",
-    "@tablecheck/tablekit-free-icon-config": "^1.0.1",
+    "@tablecheck/tablekit-enzyme": "^1.0.1",
+    "@tablecheck/tablekit-free-icon-config": "^1.0.2",
     "storybook-dark-mode": "1.0.8"
   },
   "publishConfig": {

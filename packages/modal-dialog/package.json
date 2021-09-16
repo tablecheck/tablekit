@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -15,11 +15,11 @@
     "lib"
   ],
   "dependencies": {
-    "@tablecheck/tablekit-button": "^1.0.1",
-    "@tablecheck/tablekit-icon": "^1.0.1",
+    "@tablecheck/tablekit-button": "^1.0.2",
+    "@tablecheck/tablekit-icon": "^1.0.2",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
-    "@tablecheck/tablekit-theme": "^1.0.0",
-    "@tablecheck/tablekit-typography": "^1.0.0",
+    "@tablecheck/tablekit-theme": "^1.0.1",
+    "@tablecheck/tablekit-typography": "^1.0.1",
     "@tablecheck/tablekit-utils": "^1.0.0"
   },
   "peerDependencies": {
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@radix-ui/react-dialog": "0.1.0",
     "@storybook/react": "6.3.7",
-    "@tablecheck/tablekit-enzyme": "^1.0.0",
+    "@tablecheck/tablekit-enzyme": "^1.0.1",
     "@types/raf-schd": "4.0.0",
     "@types/rc-progress": "^2.4.3",
     "faker": "5.5.3"
