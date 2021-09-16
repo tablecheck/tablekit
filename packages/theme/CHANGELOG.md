@@ -1,3 +1,15 @@
+# v1.0.1 (Thu Sep 16 2021)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-theme): support better extension and overridding of them colors [#54](https://github.com/tablecheck/tablekit/pull/54) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

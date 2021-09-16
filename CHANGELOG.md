@@ -2,6 +2,19 @@
 
 #### 🐛 Bug Fix
 
+- `@tablecheck/tablekit-theme@1.0.1`
+  - fix(tablekit-theme): support better extension and overridding of them colors [#54](https://github.com/tablecheck/tablekit/pull/54) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
+# (Thu Sep 16 2021)
+
+#### 🐛 Bug Fix
+
 - `@tablecheck/tablekit-checkbox@1.0.2`, `@tablecheck/tablekit-radio@1.0.2`
   - fix: use correct children and onChange types [#55](https://github.com/tablecheck/tablekit/pull/55) ([@SimeonC](https://github.com/SimeonC))
 
