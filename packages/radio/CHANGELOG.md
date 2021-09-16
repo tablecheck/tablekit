@@ -1,3 +1,15 @@
+# v1.0.2 (Thu Sep 16 2021)
+
+#### 🐛 Bug Fix
+
+- fix: use correct children and onChange types [#55](https://github.com/tablecheck/tablekit/pull/55) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

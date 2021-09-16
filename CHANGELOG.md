@@ -1,5 +1,18 @@
 # (Thu Sep 16 2021)
 
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-checkbox@1.0.2`, `@tablecheck/tablekit-radio@1.0.2`
+  - fix: use correct children and onChange types [#55](https://github.com/tablecheck/tablekit/pull/55) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
+# (Thu Sep 16 2021)
+
 #### 💥 Breaking Change
 
 - `@tablecheck/tablekit-calendar@2.0.0`, `@tablecheck/tablekit-modal-dialog@2.0.0`, `@tablecheck/tablekit-phone-input@2.0.0`
