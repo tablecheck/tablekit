@@ -1,3 +1,16 @@
+# (Thu Sep 16 2021)
+
+#### 💥 Breaking Change
+
+- `@tablecheck/tablekit-calendar@2.0.0`, `@tablecheck/tablekit-modal-dialog@2.0.0`, `@tablecheck/tablekit-phone-input@2.0.0`
+  - fix: upgrade radix-ui to 0.1 version [#52](https://github.com/tablecheck/tablekit/pull/52) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Mon Sep 13 2021)
 
 #### 🐛 Bug Fix
