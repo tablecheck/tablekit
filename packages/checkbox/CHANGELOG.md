@@ -1,19 +1,18 @@
-# v1.0.2 (Thu Sep 16 2021)
-
-#### 🐛 Bug Fix
-
-- fix: use correct children and onChange types [#55](https://github.com/tablecheck/tablekit/pull/55) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-checkbox@1.0.1...@tablecheck/tablekit-checkbox@1.0.2) (2021-09-16)
+
+
+### Bug Fixes
+
+* use correct children and onChange types ([e8e7da8](https://github.com/tablecheck/tablekit/commit/e8e7da820222aa9d63e7cd1d1b85dcaf4d14cc68))
+
+
+
+
 
 ## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-checkbox@1.0.0...@tablecheck/tablekit-checkbox@1.0.1) (2021-08-30)
 
