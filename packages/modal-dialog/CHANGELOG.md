@@ -1,19 +1,23 @@
-# v2.0.0 (Thu Sep 16 2021)
-
-#### 💥 Breaking Change
-
-- fix: upgrade radix-ui to 0.1 version [#52](https://github.com/tablecheck/tablekit/pull/52) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@1.0.2...@tablecheck/tablekit-modal-dialog@2.0.0) (2021-09-16)
+
+
+### Bug Fixes
+
+* upgrade radix-ui to 0.1 version ([b4b3738](https://github.com/tablecheck/tablekit/commit/b4b37383c5f641207e87c1f874b34ca007995460))
+
+
+### BREAKING CHANGES
+
+* modal dialog and phone-input have typescript and exports changes
+
+
+
+
 
 ## [1.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@1.0.1...@tablecheck/tablekit-modal-dialog@1.0.2) (2021-08-30)
 
