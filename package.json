@@ -35,7 +35,7 @@
     "@emotion/react": "11.4.0",
     "@emotion/styled": "11.3.0",
     "@fortawesome/free-brands-svg-icons": "5.15.3",
-    "@radix-ui/react-id": "0.0.6",
+    "@radix-ui/react-id": "0.1.0",
     "@storybook/addon-actions": "6.3.7",
     "@storybook/addon-docs": "6.3.7",
     "@storybook/addon-essentials": "6.3.7",

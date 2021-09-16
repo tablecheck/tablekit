@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-calendar@1.0.1...@tablecheck/tablekit-calendar@2.0.0) (2021-09-16)
+
+
+### Bug Fixes
+
+* upgrade radix-ui to 0.1 version ([b4b3738](https://github.com/tablecheck/tablekit/commit/b4b37383c5f641207e87c1f874b34ca007995460))
+
+
+### BREAKING CHANGES
+
+* modal dialog and phone-input have typescript and exports changes
+
+
+
+
+
 ## [1.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-calendar@1.0.0...@tablecheck/tablekit-calendar@1.0.1) (2021-08-30)
 
 **Note:** Version bump only for package @tablecheck/tablekit-calendar

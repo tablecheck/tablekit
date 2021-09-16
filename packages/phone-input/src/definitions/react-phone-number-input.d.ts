@@ -1,17 +1,17 @@
 declare module 'react-phone-number-input/modules/phoneInputHelpers' {
   // eslint-disable-next-line import/no-extraneous-dependencies
-  import { Metadata, CountryCode } from 'libphonenumber-js/core';
+  import { MetadataJson, CountryCode } from 'libphonenumber-js/core';
 
   export const e164: (
     val: string,
     country: CountryCode,
-    meta: Metadata
+    meta: MetadataJson
   ) => string;
   export const migrateParsedInputForNewCountry: (
     val: string,
     prev_country: CountryCode | undefined,
     next_country: CountryCode | undefined,
-    meta: Metadata,
+    meta: MetadataJson,
     preferNationalFormat?: boolean
   ) => string;
   export const parseInput: (
@@ -22,7 +22,7 @@ declare module 'react-phone-number-input/modules/phoneInputHelpers' {
     countries?: string[],
     includeInternationalOption: boolean,
     limitMaxLength: boolean,
-    meta: Metadata
+    meta: MetadataJson
   ) => {
     country?: CountryCode;
     input?: string;
