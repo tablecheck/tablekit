@@ -15,7 +15,6 @@
     "lib"
   ],
   "dependencies": {
-    "@radix-ui/react-dialog": "0.0.17",
     "@tablecheck/tablekit-button": "^1.0.1",
     "@tablecheck/tablekit-icon": "^1.0.1",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
@@ -26,11 +25,13 @@
   "peerDependencies": {
     "@emotion/react": ">=11.4 <12",
     "@emotion/styled": ">=11.3 <12",
+    "@radix-ui/react-dialog": "0.1",
     "react": ">=16.8.0 <18",
     "react-dom": ">=16.2.0 <18",
     "react-spring": ">=9.0.0-rc.3 <10"
   },
   "devDependencies": {
+    "@radix-ui/react-dialog": "0.1.0",
     "@storybook/react": "6.3.7",
     "@tablecheck/tablekit-enzyme": "^1.0.0",
     "@types/raf-schd": "4.0.0",

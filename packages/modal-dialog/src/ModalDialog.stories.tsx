@@ -4,7 +4,7 @@ import { Button } from '@tablecheck/tablekit-button';
 import { Size } from '@tablecheck/tablekit-theme';
 import { Typography, Link } from '@tablecheck/tablekit-typography';
 import faker from 'faker';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
 import { HeaderAppearance, ModalDialog, BaseModalProps } from './index';
 
@@ -132,10 +132,6 @@ const InfoTemplate = () => (
       </thead>
       <tbody>
         <tr>
-          <td>ModalTrigger</td>
-          <td>Trigger</td>
-        </tr>
-        <tr>
           <td>ModalRoot</td>
           <td>Root</td>
         </tr>
@@ -147,10 +143,6 @@ const InfoTemplate = () => (
           <td>ModalOverlay</td>
           <td>Overlay</td>
         </tr>
-        <tr>
-          <td>ModalClosePrimitive</td>
-          <td>Close</td>
-        </tr>
       </tbody>
     </Table>
   </InfoWrapper>
@@ -158,17 +150,13 @@ const InfoTemplate = () => (
 
 export const Information = InfoTemplate.bind({});
 
-const Template: Story<BaseModalProps> = ({ ...args }) => {
-  const [isOpen, setOpen] = useState(false);
-  return (
-    <Wrapper>
-      <ModalDialog {...args} isOpen={isOpen} onOpenChange={setOpen}>
-        {args.children}
-      </ModalDialog>
-      <Button onClick={() => setOpen((value) => !value)}>Toggle Modal</Button>
-    </Wrapper>
-  );
-};
+const Template: Story<BaseModalProps> = ({ isOpen, onOpenChange, ...args }) => (
+  <Wrapper>
+    <ModalDialog {...args} trigger={<Button>Toggle Modal</Button>}>
+      {args.children}
+    </ModalDialog>
+  </Wrapper>
+);
 
 export const BaseModal = Template.bind({});
 

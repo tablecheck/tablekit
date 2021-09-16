@@ -63,9 +63,14 @@ export const ModalOverlay = animated<ElementType>(styled(RxOverlay)`
 
 export const ModalContent = animated<ElementType>(styled(RxContent, {
   shouldForwardProp: (prop: string) =>
-    ['shouldPreventOverflow', 'height', 'width', 'isChromeless'].indexOf(
-      prop
-    ) === -1
+    [
+      'shouldPreventOverflow',
+      'height',
+      'maxHeight',
+      'width',
+      'maxWidth',
+      'isChromeless'
+    ].indexOf(prop) === -1
 })<
   Pick<
     BaseModalProps,
