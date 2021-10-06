@@ -37,6 +37,7 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
       onChange,
       value,
       children,
+      size,
       ...inputProps
     } = props;
 
@@ -74,8 +75,8 @@ export const Radio = forwardRef<HTMLInputElement, RadioProps>(
           value={value}
           ref={ref}
         />
-        <RadioInputDisplay />
-        <RadioText>{children}</RadioText>
+        <RadioInputDisplay data-size={size} />
+        <RadioText data-size={size}>{children}</RadioText>
       </RadioLabel>
     );
   }

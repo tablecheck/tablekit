@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react';
+import { Size } from '@tablecheck/tablekit-theme';
 import { useState } from 'react';
 
 import { RadioProps } from './types';
@@ -34,6 +35,12 @@ export const Default = DefaultTemplate.bind({});
 const Template: Story<RadioProps> = ({ ...args }) => (
   <Radio {...args}>{args.children}</Radio>
 );
+
+export const LargeSize = Template.bind({});
+LargeSize.args = {
+  size: Size.Large,
+  children: 'Large Size'
+};
 
 export const Required = Template.bind({});
 Required.args = {

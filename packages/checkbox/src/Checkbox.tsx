@@ -5,7 +5,8 @@ import {
   CheckboxInput,
   InputDisplay,
   CheckboxLabel,
-  RequiredIndicator
+  RequiredIndicator,
+  CheckboxText
 } from './styled';
 import { CheckboxProps } from './types';
 
@@ -39,6 +40,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       onChange,
       value,
       children,
+      size,
       ...inputProps
     } = props;
 
@@ -74,7 +76,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           checked={isChecked}
           type="checkbox"
         />
-        <InputDisplay isInvalid={isInvalid}>
+        <InputDisplay isInvalid={isInvalid} data-size={size}>
           <svg
             width="12px"
             height="12px"
@@ -85,9 +87,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             <polyline className="checkbox-checkmark" points="1 3 4 6 9 1" />
           </svg>
         </InputDisplay>
-        <p>{children}</p>
+        <CheckboxText data-size={size}>{children}</CheckboxText>
         {isRequired ? (
-          <RequiredIndicator role="presentation">*</RequiredIndicator>
+          <RequiredIndicator role="presentation" data-size={size}>
+            *
+          </RequiredIndicator>
         ) : null}
       </CheckboxLabel>
     );

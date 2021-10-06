@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Spacing, FieldHeight } from '@tablecheck/tablekit-theme';
+import { Spacing, FieldHeight, Size } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
 import { getThemeValue } from '@tablecheck/tablekit-utils';
 import type { ThemeOnlyProps } from '@tablecheck/tablekit-utils';
@@ -11,6 +11,7 @@ import {
   IS_CLICKED_SELECTOR
 } from './constants';
 import { checkboxClassicTheme, checkboxThemeNamespace } from './themes';
+import { CheckboxProps } from './types';
 
 export const Text = styled.span`
   display: inline-flex;
@@ -27,8 +28,17 @@ export const RequiredIndicator = styled.span`
   font-weight: bold;
 `;
 
+export const CheckboxText = styled.p<{
+  'data-size'?: CheckboxProps['size'];
+}>`
+  &[data-size='${Size.Large}'] {
+    ${Typography.Body1};
+  }
+`;
+
 export const InputDisplay = styled.span<{
   isInvalid?: boolean;
+  'data-size'?: CheckboxProps['size'];
 }>`
   background: ${getThemeValue(
     `${checkboxThemeNamespace}.backgroundColorBox`,
@@ -49,6 +59,10 @@ export const InputDisplay = styled.span<{
   vertical-align: text-bottom;
   height: 20px;
   width: 20px;
+  &[data-size='${Size.Large}'] {
+    width: 24px;
+    height: 24px;
+  }
 
   svg {
     position: absolute;
