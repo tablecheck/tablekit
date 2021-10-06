@@ -1,6 +1,6 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { Story, Meta } from '@storybook/react';
-import { DARK_COLORS, CLASSIC_COLORS } from '@tablecheck/tablekit-theme';
+import { DARK_COLORS, CLASSIC_COLORS, Size } from '@tablecheck/tablekit-theme';
 import { useState } from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 
@@ -55,6 +55,12 @@ const Template: Story<CheckboxProps> = ({ children, ...args }) => {
 export const Default = Template.bind({});
 Default.args = {
   children: 'Default'
+};
+
+export const LargeSize = Template.bind({});
+LargeSize.args = {
+  size: Size.Large,
+  children: 'Large Size'
 };
 
 export const Required = Template.bind({});

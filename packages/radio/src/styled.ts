@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
-import { Spacing, FieldHeight } from '@tablecheck/tablekit-theme';
+import { Spacing, FieldHeight, Size } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
 import { getThemeValue } from '@tablecheck/tablekit-utils';
 
 import { radioClassicTheme, radioThemeNamespace } from './themes';
+import { RadioProps } from './types';
 
 export const IS_CLICKED_ATTR = 'isClicked';
 const IS_CLICKED_SELECTOR = '[data-is-clicked="true"]';
@@ -13,12 +14,22 @@ const TRANSITION_SETTINGS = `${TRANSITION_SPEED} ease-in-out`;
 
 export const RadioText = styled.span`
   ${Typography.Body2};
+  &[data-size='${Size.Large}'] {
+    ${Typography.Body1};
+  }
 `;
 
-export const RadioInputDisplay = styled.span`
+export const RadioInputDisplay = styled.span<{
+  'data-size'?: RadioProps['size'];
+}>`
   position: relative;
-  width: ${Spacing.L4};
-  height: ${Spacing.L4};
+
+  width: 16px;
+  height: 16px;
+  &[data-size='${Size.Large}'] {
+    width: 24px;
+    height: 24px;
+  }
   background: ${getThemeValue(
     `${radioThemeNamespace}.default.backgroundColor`,
     radioClassicTheme.default.backgroundColor
@@ -57,12 +68,16 @@ export const RadioInputDisplay = styled.span`
     position: absolute;
     top: -1px; // Offset for border
     left: -1px;
-    width: ${Spacing.L4};
-    height: ${Spacing.L4};
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: ${({ theme }) => theme.colors.primary2};
     transform: scale(0);
     transition: transform ${TRANSITION_SETTINGS};
+  }
+  &[data-size='${Size.Large}']::after {
+    width: 24px;
+    height: 24px;
   }
 `;
 

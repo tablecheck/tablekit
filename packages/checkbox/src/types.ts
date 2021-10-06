@@ -1,3 +1,4 @@
+import { Size } from '@tablecheck/tablekit-theme';
 import { ReactNode, HTMLAttributes } from 'react';
 
 export type Value = string | number | readonly string[] | undefined;
@@ -27,4 +28,6 @@ export type CheckboxProps = HTMLAttributes<HTMLInputElement> &
 
     /** Field value */
     value: Value;
+
+    size?: Size.Regular | Size.Large;
   }>;
