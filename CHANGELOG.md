@@ -1,3 +1,16 @@
+# (Wed Oct 06 2021)
+
+#### 🚀 Enhancement
+
+- `@tablecheck/tablekit-checkbox@1.1.0`, `@tablecheck/tablekit-radio@1.1.0`
+  - feat: add large size to checkbox and radio inputs [#57](https://github.com/tablecheck/tablekit/pull/57) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu Sep 16 2021)
 
 #### 🐛 Bug Fix

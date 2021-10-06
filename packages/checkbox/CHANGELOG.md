@@ -1,3 +1,15 @@
+# v1.1.0 (Wed Oct 06 2021)
+
+#### 🚀 Enhancement
+
+- feat: add large size to checkbox and radio inputs [#57](https://github.com/tablecheck/tablekit/pull/57) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
