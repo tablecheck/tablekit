@@ -1,19 +1,18 @@
-# v1.1.0 (Wed Oct 06 2021)
-
-#### 🚀 Enhancement
-
-- feat: add large size to checkbox and radio inputs [#57](https://github.com/tablecheck/tablekit/pull/57) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [1.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-radio@1.0.3...@tablecheck/tablekit-radio@1.1.0) (2021-10-06)
+
+
+### Features
+
+* add large size to checkbox and radio inputs ([2b8d7f3](https://github.com/tablecheck/tablekit/commit/2b8d7f3a167b9d6f481e4e0f6abf88083b549eb7))
+
+
+
+
 
 ## [1.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-radio@1.0.2...@tablecheck/tablekit-radio@1.0.3) (2021-09-16)
 
