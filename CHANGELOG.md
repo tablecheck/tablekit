@@ -1,3 +1,16 @@
+# (Thu Oct 07 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-input@1.0.3`
+  - fix: restore the appearance to input fields [#58](https://github.com/tablecheck/tablekit/pull/58) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Wed Oct 06 2021)
 
 #### 🚀 Enhancement
