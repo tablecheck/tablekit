@@ -1,19 +1,18 @@
-# v1.0.3 (Thu Oct 07 2021)
-
-#### 🐛 Bug Fix
-
-- fix: restore the appearance to input fields [#58](https://github.com/tablecheck/tablekit/pull/58) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@1.0.2...@tablecheck/tablekit-input@1.0.3) (2021-10-07)
+
+
+### Bug Fixes
+
+* restore the appearance to input fields ([0268355](https://github.com/tablecheck/tablekit/commit/0268355ed1c54bf841a38d7acf3c93b64d218d22))
+
+
+
+
 
 ## [1.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@1.0.1...@tablecheck/tablekit-input@1.0.2) (2021-09-16)
 

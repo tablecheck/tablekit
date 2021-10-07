@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-radio@1.1.0...@tablecheck/tablekit-radio@1.1.1) (2021-10-07)
+
+**Note:** Version bump only for package @tablecheck/tablekit-radio
+
+
+
+
+
 # [1.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-radio@1.0.3...@tablecheck/tablekit-radio@1.1.0) (2021-10-06)
 
 
