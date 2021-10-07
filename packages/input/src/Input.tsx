@@ -88,6 +88,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           <InputField
             {...restProps}
+            appearance={appearance}
             shape={shape}
             className={inputClassName}
             css={inputCss}
