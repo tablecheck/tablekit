@@ -1,4 +1,4 @@
-# TableCheck Contributor Code Of Conduct
+# TableCheck Contributor Code of Conduct
 
 All contributors should act and interact in ways that contribute to an open,
 welcoming, and healthy community. Open source software development is an
