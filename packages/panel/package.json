@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "1.0.3",
+  "version": "1.0.4-alpha.6+063575e",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -38,5 +38,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "d288d66162c89470081c3c17b12dbae1fa63c13c"
+  "gitHead": "063575ea4685fab048b7b3e14a7b22152dfe437e"
 }
