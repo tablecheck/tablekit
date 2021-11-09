@@ -1,5 +1,3 @@
-import { hexToRgba } from '@tablecheck/tablekit-utils';
-
 import { LevelConst } from './types';
 
 export const PURPLE: LevelConst = {
@@ -132,16 +130,4 @@ export const WHITE_TRANSLUCENT: LevelConst = {
   L7: 'rgba(255, 255, 255, 0.66)',
   L8: 'rgba(255, 255, 255, 0.80)',
   L9: 'rgba(255, 255, 255, 0.87)'
-};
-
-export const PURPLE_TRANSLUCENT: LevelConst = {
-  L1: hexToRgba(PURPLE.L5, 0.1),
-  L2: hexToRgba(PURPLE.L5, 0.2),
-  L3: hexToRgba(PURPLE.L5, 0.3),
-  L4: hexToRgba(PURPLE.L5, 0.4),
-  L5: hexToRgba(PURPLE.L5, 0.5),
-  L6: hexToRgba(PURPLE.L5, 0.6),
-  L7: hexToRgba(PURPLE.L5, 0.7),
-  L8: hexToRgba(PURPLE.L5, 0.8),
-  L9: hexToRgba(PURPLE.L5, 0.9)
 };

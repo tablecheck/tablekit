@@ -5,7 +5,7 @@ exports[`Avatar should allow passing of custom className 1`] = `
   width: 32px;
   height: 32px;
   font-size: 14px;
-  background-color: #7935D2;
+  background-color: #5C11A6;
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,7 +54,7 @@ exports[`Avatar should correctly apply styling 1`] = `
   width: 32px;
   height: 32px;
   font-size: 14px;
-  background-color: #7935D2;
+  background-color: #5C11A6;
   border-radius: 100%;
   display: -webkit-box;
   display: -webkit-flex;

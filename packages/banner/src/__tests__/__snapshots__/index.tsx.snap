@@ -14,7 +14,7 @@ exports[`Banner should allow passing of custom className 1`] = `
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  background-color: #5C11A6;
+  background-color: #7935D2;
   color: white;
 }
 
@@ -99,7 +99,7 @@ exports[`Banner should correctly apply styling 1`] = `
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  background-color: #5C11A6;
+  background-color: #7935D2;
   color: white;
 }
 

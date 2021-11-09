@@ -1,21 +1,38 @@
+import { hexToRgba } from '@tablecheck/tablekit-utils';
+
 import {
   BLUE,
   GRAY,
   GRAY_TRANSLUCENT,
   GREEN,
   PURPLE,
-  PURPLE_TRANSLUCENT,
   RED,
   WHITE_TRANSLUCENT,
   YELLOW
 } from './colors';
 import type { BaseColors } from './types';
+import { LevelConst } from './types';
+
+const CLASSIC_PRIMARY = PURPLE.L5;
+
+export const CLASSIC_PRIMARY_TRANSLUCENT: LevelConst = {
+  L1: hexToRgba(CLASSIC_PRIMARY, 0.1),
+  L2: hexToRgba(CLASSIC_PRIMARY, 0.2),
+  L3: hexToRgba(CLASSIC_PRIMARY, 0.3),
+  L4: hexToRgba(CLASSIC_PRIMARY, 0.4),
+  L5: hexToRgba(CLASSIC_PRIMARY, 0.5),
+  L6: hexToRgba(CLASSIC_PRIMARY, 0.6),
+  L7: hexToRgba(CLASSIC_PRIMARY, 0.7),
+  L8: hexToRgba(CLASSIC_PRIMARY, 0.8),
+  L9: hexToRgba(CLASSIC_PRIMARY, 0.9)
+};
 
 export const CLASSIC_COLORS: BaseColors = {
   canvas: GRAY.L1, // background for the lowest level of the page, i.e. <body>
-  primary: PURPLE.L7,
-  primary2: PURPLE.L5,
+  primary: CLASSIC_PRIMARY,
+  primary2: PURPLE.L7,
   primaryHover: PURPLE.L6,
+  primarySelected: CLASSIC_PRIMARY_TRANSLUCENT.L2,
   secondary: BLUE.L5,
   secondary2: BLUE.L4,
   accent: YELLOW.L4,
@@ -32,17 +49,32 @@ export const CLASSIC_COLORS: BaseColors = {
   inputBackground: WHITE_TRANSLUCENT.L4, // background color for text fields, textareas and selects
   iconFill: GRAY_TRANSLUCENT.L7,
   hoverNeutralBackground: GRAY_TRANSLUCENT.L2, // hover bg for comp without colour like items
-  hoverPrimaryBackground: PURPLE_TRANSLUCENT.L1,
-  selectedBackground: PURPLE_TRANSLUCENT.L2, // used in items, tables
+  hoverPrimaryBackground: CLASSIC_PRIMARY_TRANSLUCENT.L1,
+  selectedBackground: CLASSIC_PRIMARY_TRANSLUCENT.L2, // used in items, tables
   disabledBackground: GRAY_TRANSLUCENT.L3,
   focusOutline: BLUE.L4
 };
 
+const DARK_PRIMARY = PURPLE.L3;
+
+export const DARK_PRIMARY_TRANSLUCENT: LevelConst = {
+  L1: hexToRgba(DARK_PRIMARY, 0.1),
+  L2: hexToRgba(DARK_PRIMARY, 0.2),
+  L3: hexToRgba(DARK_PRIMARY, 0.3),
+  L4: hexToRgba(DARK_PRIMARY, 0.4),
+  L5: hexToRgba(DARK_PRIMARY, 0.5),
+  L6: hexToRgba(DARK_PRIMARY, 0.6),
+  L7: hexToRgba(DARK_PRIMARY, 0.7),
+  L8: hexToRgba(DARK_PRIMARY, 0.8),
+  L9: hexToRgba(DARK_PRIMARY, 0.9)
+};
+
 export const DARK_COLORS: BaseColors = {
   canvas: GRAY.L9,
-  primary: PURPLE.L3,
-  primary2: PURPLE.L5,
+  primary: DARK_PRIMARY,
+  primary2: PURPLE.L2,
   primaryHover: PURPLE.L4,
+  primarySelected: DARK_PRIMARY_TRANSLUCENT.L2,
   secondary: BLUE.L5,
   secondary2: BLUE.L4,
   accent: YELLOW.L4,
@@ -59,8 +91,8 @@ export const DARK_COLORS: BaseColors = {
   inputBackground: WHITE_TRANSLUCENT.L1,
   iconFill: WHITE_TRANSLUCENT.L8,
   hoverNeutralBackground: WHITE_TRANSLUCENT.L3,
-  hoverPrimaryBackground: PURPLE_TRANSLUCENT.L2,
-  selectedBackground: PURPLE_TRANSLUCENT.L3,
+  hoverPrimaryBackground: DARK_PRIMARY_TRANSLUCENT.L2,
+  selectedBackground: DARK_PRIMARY_TRANSLUCENT.L3,
   disabledBackground: WHITE_TRANSLUCENT.L4,
   focusOutline: BLUE.L4
 };

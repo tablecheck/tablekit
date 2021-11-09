@@ -49,7 +49,8 @@ export const toggleDarkTheme: PackageTheme = {
     theme.colors.surfaceLow,
   checked: {
     backgroundColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary,
-    backgroundColorHover: COLORS.PURPLE_TRANSLUCENT.L8,
+    backgroundColorHover: ({ theme }: ThemeOnlyProps) =>
+      theme.colors.hoverPrimaryBackground,
     backgroundColorDisabled: ({ theme }: ThemeOnlyProps) =>
       theme.colors.surfaceLow
   },

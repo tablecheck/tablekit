@@ -162,6 +162,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/20b5c393-1a87-4f20-84c9-801c323489ca?component-type=npm&component-name=xmldom&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/ansi-html@0.0.7",
+      "description": "An elegant lib that converts the chalked (ANSI) text to HTML.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ansi-html@0.0.7?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "849e9fed-44e8-4593-a4ca-61026c4b454f",
+          "title": "[CVE-2021-23424] This affects all versions of package ansi-html. If an attacker provides a malici...",
+          "description": "This affects all versions of package ansi-html. If an attacker provides a malicious string, it will get stuck processing the input for an extremely long time.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-23424",
+          "reference": "https://ossindex.sonatype.org/vulnerability/849e9fed-44e8-4593-a4ca-61026c4b454f?component-type=npm&component-name=ansi-html&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -194,6 +210,9 @@
     },
     {
       "id": "20b5c393-1a87-4f20-84c9-801c323489ca"
+    },
+    {
+      "id": "849e9fed-44e8-4593-a4ca-61026c4b454f"
     }
   ]
 }
