@@ -1,19 +1,15 @@
-# v2.0.0 (Tue Nov 09 2021)
-
-#### 🔩 Dependency Updates
-
-- chore: upgrade body-scroll-lock [#60](https://github.com/tablecheck/tablekit/pull/60) ([@wahidmagdy](https://github.com/wahidmagdy))
-
-#### Authors: 1
-
-- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-panel@1.0.3...@tablecheck/tablekit-panel@2.0.0) (2021-11-09)
+
+**Note:** Version bump only for package @tablecheck/tablekit-panel
+
+
+
+
 
 ## [1.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-panel@1.0.2...@tablecheck/tablekit-panel@1.0.3) (2021-09-16)
 

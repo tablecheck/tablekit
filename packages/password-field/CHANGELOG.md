@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-password-field@1.0.3...@tablecheck/tablekit-password-field@2.0.0) (2021-11-09)
+
+**Note:** Version bump only for package @tablecheck/tablekit-password-field
+
+
+
+
+
 ## [1.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-password-field@1.0.2...@tablecheck/tablekit-password-field@1.0.3) (2021-10-07)
 
 **Note:** Version bump only for package @tablecheck/tablekit-password-field

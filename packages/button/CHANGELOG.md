@@ -1,19 +1,23 @@
-# v2.0.0 (Tue Nov 09 2021)
-
-#### 💥 Breaking Change
-
-- feat: upgrade input-button design and primary colours [#62](https://github.com/tablecheck/tablekit/pull/62) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-button@1.0.2...@tablecheck/tablekit-button@2.0.0) (2021-11-09)
+
+
+### Features
+
+* upgrade input-button design and primary colours ([ba17ddc](https://github.com/tablecheck/tablekit/commit/ba17ddccb7634573f8c151a734d2f1acb3b82ec7))
+
+
+### BREAKING CHANGES
+
+* PURPLE_TRANSLUCENT has been removed and replaced with CLASSIC_PRIMARY_TRANSLUCENT and DARK_PRIMARY_TRANSLUCENT
+
+
+
+
 
 ## [1.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-button@1.0.1...@tablecheck/tablekit-button@1.0.2) (2021-09-16)
 
