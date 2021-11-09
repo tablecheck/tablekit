@@ -1,11 +1,8 @@
 import { themes } from '@storybook/theming';
-import {
-  ThemeProvider,
-  CLASSIC_COLORS,
-  DARK_COLORS
-} from '@tablecheck/tablekit-theme';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
+
+import { ThemeProvider, CLASSIC_COLORS, DARK_COLORS } from '../packages/theme';
 
 import './decorators';
 import { DocsContainer } from './DocContainer';
@@ -70,6 +67,7 @@ export const decorators = [
   (story: () => JSX.Element): JSX.Element => {
     const isDark = useDarkMode();
     const theme = {
+      isDark,
       colors: isDark
         ? DARK_COLORS
         : {

@@ -1,4 +1,5 @@
 import { mount } from '@tablecheck/tablekit-enzyme';
+import '@tablecheck/tablekit-free-icon-config';
 
 import { InputButton } from './index';
 

@@ -1,3 +1,4 @@
+import { ButtonShape } from '@tablecheck/tablekit-button';
 import { InputSize } from '@tablecheck/tablekit-input';
 import { MediaQuery } from '@tablecheck/tablekit-utils';
 import { HTMLAttributes } from 'react';
@@ -34,6 +35,8 @@ export type InputButtonProps = Omit<HTMLAttributes<HTMLInputElement>, 'id'> & {
 
     /** Determines the height of the button */
     size?: MediaQuery<InputSize>;
+
+    shape?: MediaQuery<ButtonShape>;
 
     /** Field value */
     value: Value;

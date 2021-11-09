@@ -36,9 +36,9 @@ export const buttonClassicTheme: PackageTheme = {
     hover: ({ theme }: ThemeOnlyProps) => theme.colors.primaryHover,
     active: ({ theme }: ThemeOnlyProps) => theme.colors.primary2,
     hoverTransparent: ({ theme }: ThemeOnlyProps) =>
-      hexToRgba(theme.colors.primary2, 0.1),
+      theme.colors.hoverPrimaryBackground,
     activeTransparent: ({ theme }: ThemeOnlyProps) =>
-      hexToRgba(theme.colors.primary2, 0.2)
+      theme.colors.primarySelected
   },
 
   [Color.Success]: {

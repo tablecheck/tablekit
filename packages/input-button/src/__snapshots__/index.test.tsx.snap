@@ -37,19 +37,33 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
   opacity: 0;
 }
 
+.emotion-2+div {
+  height: 40px;
+  padding: 0 22px;
+}
+
+.emotion-2+div>svg {
+  display: none;
+}
+
 .emotion-2:hover+div {
   background: rgba(121,53,210,0.1);
 }
 
+.emotion-2:checked+div>svg {
+  display: block;
+}
+
 .emotion-2:checked+div {
-  box-shadow: 0 0 0 1px #5C11A6;
-  background: #5C11A6;
-  color: white;
+  background: rgba(121,53,210,0.2);
+  border: 1px solid #5C11A6;
+  height: 40px;
+  padding: 0 8px;
 }
 
 .emotion-2:checked:hover+div {
-  background: #5C11A6;
-  color: white;
+  box-shadow: 0 0 0 1px #7935D2;
+  background: rgba(121,53,210,0.1);
 }
 
 .emotion-2:disabled+div,
@@ -64,8 +78,6 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
 }
 
 .emotion-4 {
-  height: 40px;
-  padding: 0 16px;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.11);
   color: #5C11A6;
@@ -83,9 +95,9 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  -webkit-transition: all 120ms ease-in-out;
-  transition: all 120ms ease-in-out;
-  background-color: rgba(255, 255, 255, 0.03);
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 .emotion-4:not([data-is-clicked="true"]):after {
@@ -98,11 +110,19 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
   left: -5px;
   border: 2px solid transparent;
   border-radius: 10px;
-  -webkit-transition: all 120ms ease-in-out;
-  transition: all 120ms ease-in-out;
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
 }
 
 .emotion-6 {
+  width: 15px;
+  height: 15px;
+  margin: 2.5px;
+  margin-right: 10.5px;
+  color: #5C11A6;
+}
+
+.emotion-8 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -112,7 +132,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
   font-weight: 600;
 }
 
-.emotion-6::after {
+.emotion-8::after {
   content: attr(data-text);
   height: 0;
   visibility: hidden;
@@ -127,7 +147,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
 }
 
 @media speech {
-  .emotion-6::after {
+  .emotion-8::after {
     display: none;
   }
 }
@@ -151,26 +171,41 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
       onMouseDown={[Function]}
     >
       <HiddenInput
+        fieldSize="regular"
         id="test3"
         onBlur={[Function]}
+        shape="rounded"
         type="checkbox"
       >
         <input
           className="emotion-2 emotion-3"
           id="test3"
           onBlur={[Function]}
+          shape="rounded"
           type="checkbox"
         />
       </HiddenInput>
       <ButtonDisplay
         fieldSize="regular"
+        shape="rounded"
       >
         <div
           className="emotion-4 emotion-5"
+          shape="rounded"
         >
+          <SelectedIcon
+            icon="fas-check"
+          >
+            <Icon
+              className="emotion-6 emotion-7"
+              icon="fas-check"
+            >
+              icon-check
+            </Icon>
+          </SelectedIcon>
           <TextWrapper>
             <div
-              className="emotion-6 emotion-7"
+              className="emotion-8 emotion-9"
             />
           </TextWrapper>
         </div>
@@ -217,19 +252,33 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
   opacity: 0;
 }
 
+.emotion-2+div {
+  height: 40px;
+  padding: 0 22px;
+}
+
+.emotion-2+div>svg {
+  display: none;
+}
+
 .emotion-2:hover+div {
   background: rgba(121,53,210,0.1);
 }
 
+.emotion-2:checked+div>svg {
+  display: block;
+}
+
 .emotion-2:checked+div {
-  box-shadow: 0 0 0 1px #5C11A6;
-  background: #5C11A6;
-  color: white;
+  background: rgba(121,53,210,0.2);
+  border: 1px solid #5C11A6;
+  height: 40px;
+  padding: 0 8px;
 }
 
 .emotion-2:checked:hover+div {
-  background: #5C11A6;
-  color: white;
+  box-shadow: 0 0 0 1px #7935D2;
+  background: rgba(121,53,210,0.1);
 }
 
 .emotion-2:disabled+div,
@@ -244,8 +293,6 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
 }
 
 .emotion-4 {
-  height: 40px;
-  padding: 0 16px;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.11);
   color: #5C11A6;
@@ -263,9 +310,9 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
   -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  -webkit-transition: all 120ms ease-in-out;
-  transition: all 120ms ease-in-out;
-  background-color: rgba(255, 255, 255, 0.03);
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.18);
 }
 
 .emotion-4:not([data-is-clicked="true"]):after {
@@ -278,11 +325,19 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
   left: -5px;
   border: 2px solid transparent;
   border-radius: 10px;
-  -webkit-transition: all 120ms ease-in-out;
-  transition: all 120ms ease-in-out;
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
 }
 
 .emotion-6 {
+  width: 15px;
+  height: 15px;
+  margin: 2.5px;
+  margin-right: 10.5px;
+  color: #5C11A6;
+}
+
+.emotion-8 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -292,7 +347,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
   font-weight: 600;
 }
 
-.emotion-6::after {
+.emotion-8::after {
   content: attr(data-text);
   height: 0;
   visibility: hidden;
@@ -307,7 +362,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
 }
 
 @media speech {
-  .emotion-6::after {
+  .emotion-8::after {
     display: none;
   }
 }
@@ -329,26 +384,41 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
       onMouseDown={[Function]}
     >
       <HiddenInput
+        fieldSize="regular"
         id="test2"
         onBlur={[Function]}
+        shape="rounded"
         type="checkbox"
       >
         <input
           className="emotion-2 emotion-3"
           id="test2"
           onBlur={[Function]}
+          shape="rounded"
           type="checkbox"
         />
       </HiddenInput>
       <ButtonDisplay
         fieldSize="regular"
+        shape="rounded"
       >
         <div
           className="emotion-4 emotion-5"
+          shape="rounded"
         >
+          <SelectedIcon
+            icon="fas-check"
+          >
+            <Icon
+              className="emotion-6 emotion-7"
+              icon="fas-check"
+            >
+              icon-check
+            </Icon>
+          </SelectedIcon>
           <TextWrapper>
             <div
-              className="emotion-6 emotion-7"
+              className="emotion-8 emotion-9"
             />
           </TextWrapper>
         </div>

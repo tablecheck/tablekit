@@ -1,7 +1,11 @@
+import styled from '@emotion/styled';
 import { Story, Meta } from '@storybook/react';
+import { ButtonShape } from '@tablecheck/tablekit-button';
 import { InputSize } from '@tablecheck/tablekit-input';
-
-import { ItemGroup, ItemGroupOrientation } from '../../item';
+import { ItemGroup, ItemGroupOrientation } from '@tablecheck/tablekit-item';
+import '@tablecheck/tablekit-free-icon-config';
+import { Spacing } from '@tablecheck/tablekit-theme';
+import { getAllEnumValues } from 'enum-for';
 
 import { InputButtonProps } from './types';
 
@@ -167,3 +171,31 @@ const OtherTemplate: Story<InputButtonProps> = (args) => (
 );
 
 export const Other = OtherTemplate.bind({});
+
+const allSizes = getAllEnumValues(InputSize);
+
+const AllVariantWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(${allSizes.length}, 1fr);
+  grid-gap: ${Spacing.L2};
+`;
+
+export const AllVariants = () => (
+  <AllVariantWrapper>
+    {getAllEnumValues(ButtonShape).map((shape) =>
+      [true, false].map((isSelected) =>
+        allSizes.map((size) => (
+          <InputButton
+            key={`${size}-${isSelected}-${shape}`}
+            id={`${size}-${isSelected}-${shape}`}
+            defaultChecked={isSelected}
+            size={size}
+            shape={shape}
+          >
+            {size}
+          </InputButton>
+        ))
+      )
+    )}
+  </AllVariantWrapper>
+);

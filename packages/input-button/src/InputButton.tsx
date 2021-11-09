@@ -1,8 +1,16 @@
+import { ButtonShape } from '@tablecheck/tablekit-button';
+import { getIcon } from '@tablecheck/tablekit-icon';
 import { InputSize } from '@tablecheck/tablekit-input';
 import { forwardRef } from 'react';
 
 import { IS_CLICKED_ATTR } from './constants';
-import { HiddenInput, ButtonLabel, ButtonDisplay, TextWrapper } from './styled';
+import {
+  HiddenInput,
+  ButtonLabel,
+  ButtonDisplay,
+  TextWrapper,
+  SelectedIcon
+} from './styled';
 import { InputButtonProps } from './types';
 
 /*
@@ -37,6 +45,7 @@ export const InputButton = forwardRef<HTMLInputElement, InputButtonProps>(
       children,
       type = 'checkbox',
       size = InputSize.Regular,
+      shape = ButtonShape.Rounded,
       ...inputProps
     } = props;
 
@@ -72,8 +81,11 @@ export const InputButton = forwardRef<HTMLInputElement, InputButtonProps>(
           onChange={onChange}
           checked={isChecked}
           type={type}
+          fieldSize={size}
+          shape={shape}
         />
-        <ButtonDisplay fieldSize={size}>
+        <ButtonDisplay shape={shape} fieldSize={size}>
+          <SelectedIcon icon={getIcon('confirm')} />
           <TextWrapper data-text={children}>{children}</TextWrapper>
         </ButtonDisplay>
       </ButtonLabel>

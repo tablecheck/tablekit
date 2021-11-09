@@ -19,6 +19,7 @@ export interface BaseColors {
   primary: string;
   primary2: string;
   primaryHover: string;
+  primarySelected: string;
   secondary: string;
   secondary2: string;
   accent: string;
