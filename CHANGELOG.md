@@ -1,3 +1,31 @@
+# (Tue Nov 09 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Johnny Shields ([@johnnyshields](https://github.com/johnnyshields)), for all your work!
+
+#### 💥 Breaking Change
+
+- `@tablecheck/tablekit-avatar@2.0.0`, `@tablecheck/tablekit-banner@2.0.0`, `@tablecheck/tablekit-button@2.0.0`, `@tablecheck/tablekit-input-button@2.0.0`, `@tablecheck/tablekit-theme@2.0.0`, `@tablecheck/tablekit-toggle@2.0.0`
+  - feat: upgrade input-button design and primary colours [#62](https://github.com/tablecheck/tablekit/pull/62) ([@SimeonC](https://github.com/SimeonC))
+
+#### ⚠️ Pushed to `main`
+
+- docs: Code Of Conduct --> Code Of Conduct ([@johnnyshields](https://github.com/johnnyshields))
+
+#### 🔩 Dependency Updates
+
+- `@tablecheck/tablekit-panel@2.0.0`
+  - chore: upgrade body-scroll-lock [#60](https://github.com/tablecheck/tablekit/pull/60) ([@wahidmagdy](https://github.com/wahidmagdy))
+
+#### Authors: 3
+
+- Johnny Shields ([@johnnyshields](https://github.com/johnnyshields))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
+
+---
+
 # (Thu Oct 07 2021)
 
 #### 🐛 Bug Fix

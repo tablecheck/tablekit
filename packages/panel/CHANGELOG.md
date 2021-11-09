@@ -1,3 +1,15 @@
+# v2.0.0 (Tue Nov 09 2021)
+
+#### 🔩 Dependency Updates
+
+- chore: upgrade body-scroll-lock [#60](https://github.com/tablecheck/tablekit/pull/60) ([@wahidmagdy](https://github.com/wahidmagdy))
+
+#### Authors: 1
+
+- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
