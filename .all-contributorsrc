@@ -49,6 +49,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "johnnyshields",
+      "name": "Johnny Shields",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27655?v=4",
+      "profile": "https://github.com/johnnyshields",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 6,
