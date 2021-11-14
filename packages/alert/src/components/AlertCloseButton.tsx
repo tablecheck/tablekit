@@ -17,6 +17,7 @@ export const AlertCloseButton = ({
     appearance={ButtonAppearance.Subtle}
     shape={ButtonShape.Circular}
     onClick={onClick}
+    aria-label="Alert close button"
     iconBefore={() => <Icon icon={getIcon('close')} />}
     size={ButtonSize.Small}
   />
