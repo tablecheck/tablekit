@@ -1,24 +1,18 @@
-# v3.0.0 (Mon Nov 15 2021)
-
-#### 🐛 Bug Fix
-
-- Bump independent versions \[skip ci\] (runner@fv-az132-515.w5jmtgevnbgefpdoz44oxoejwc.bx.internal.cloudapp.net)
-
-#### ⚠️ Pushed to `main`
-
-- fix(tablekit-alert): close button aria-label ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 2
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-- TableCheck Inc (runner@fv-az132-515.w5jmtgevnbgefpdoz44oxoejwc.bx.internal.cloudapp.net)
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [3.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-alert@2.0.0...@tablecheck/tablekit-alert@3.0.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* **tablekit-alert:** close button aria-label ([9a02f8a](https://github.com/tablecheck/tablekit/commit/9a02f8a1c575771ea091090ca30e07186392870f))
+
+
+
+
 
 # [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-alert@1.0.2...@tablecheck/tablekit-alert@2.0.0) (2021-11-09)
 
