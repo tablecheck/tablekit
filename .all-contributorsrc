@@ -28,7 +28,8 @@
       "contributions": [
         "infra",
         "example",
-        "code"
+        "code",
+        "test"
       ]
     },
     {
