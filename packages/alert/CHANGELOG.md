@@ -1,3 +1,20 @@
+# v3.0.0 (Mon Nov 15 2021)
+
+#### 🐛 Bug Fix
+
+- Bump independent versions \[skip ci\] (runner@fv-az132-515.w5jmtgevnbgefpdoz44oxoejwc.bx.internal.cloudapp.net)
+
+#### ⚠️ Pushed to `main`
+
+- fix(tablekit-alert): close button aria-label ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 2
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+- TableCheck Inc (runner@fv-az132-515.w5jmtgevnbgefpdoz44oxoejwc.bx.internal.cloudapp.net)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

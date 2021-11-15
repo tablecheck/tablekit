@@ -1,3 +1,34 @@
+# (Mon Nov 15 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Johnny Shields ([@johnnyshields](https://github.com/johnnyshields)), for all your work!
+
+#### 💥 Breaking Change
+
+- `@tablecheck/tablekit-avatar@3.0.0`, `@tablecheck/tablekit-banner@3.0.0`, `@tablecheck/tablekit-button@3.0.0`, `@tablecheck/tablekit-input-button@3.0.0`, `@tablecheck/tablekit-theme@3.0.0`, `@tablecheck/tablekit-toggle@3.0.0`
+  - feat: upgrade input-button design and primary colours [#62](https://github.com/tablecheck/tablekit/pull/62) ([@SimeonC](https://github.com/SimeonC))
+
+#### ⚠️ Pushed to `main`
+
+- docs: Code Of Conduct --> Code Of Conduct ([@johnnyshields](https://github.com/johnnyshields))
+- `@tablecheck/tablekit-alert@3.0.0`
+  - fix(tablekit-alert): close button aria-label ([@gazpachu](https://github.com/gazpachu))
+
+#### 🔩 Dependency Updates
+
+- `@tablecheck/tablekit-panel@3.0.0`
+  - chore: upgrade body-scroll-lock [#60](https://github.com/tablecheck/tablekit/pull/60) ([@wahidmagdy](https://github.com/wahidmagdy))
+
+#### Authors: 4
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+- Johnny Shields ([@johnnyshields](https://github.com/johnnyshields))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+- Wahid Magdy ([@wahidmagdy](https://github.com/wahidmagdy))
+
+---
+
 # (Tue Nov 09 2021)
 
 :tada: This release contains work from a new contributor! :tada:
