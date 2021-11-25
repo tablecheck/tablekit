@@ -5,7 +5,7 @@ import { resolveColor, VariantProps } from './shared';
 export const solidVariant = (props: VariantProps): SerializedStyles => css`
   &,
   &:focus {
-    color: white;
+    color: ${resolveColor('text', props)};
     background: ${resolveColor('main', props)};
   }
 
