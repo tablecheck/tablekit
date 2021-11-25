@@ -29,6 +29,7 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@storybook/react": "6.3.7",
     "@tablecheck/tablekit-enzyme": "^2.0.0",
     "@types/uuid": "^8.3.0",
