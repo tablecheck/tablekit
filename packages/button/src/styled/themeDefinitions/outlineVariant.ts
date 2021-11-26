@@ -6,8 +6,8 @@ import { resolveColor, VariantProps } from './shared';
 export const outlineVariant = (props: VariantProps): SerializedStyles => css`
   &,
   &:focus {
-    color: ${resolveColor('main', props)};
-    border-color: ${resolveColor('main', props)};
+    color: ${resolveColor('secondary', props)};
+    border-color: ${resolveColor('secondary', props)};
     background: transparent;
   }
 

@@ -10,7 +10,8 @@ import { Color } from './types';
 
 export interface ColorTheme {
   main: PackageThemeValue;
-  text: PackageThemeValue;
+  secondary?: PackageThemeValue;
+  text?: PackageThemeValue;
   active?: PackageThemeValue;
   activeTransparent?: PackageThemeValue;
   hover?: PackageThemeValue;
@@ -34,6 +35,7 @@ declare module '@emotion/react' {
 export const buttonClassicTheme: PackageTheme = {
   [Color.Primary]: {
     main: ({ theme }: ThemeOnlyProps) => theme.colors.primary,
+    secondary: ({ theme }: ThemeOnlyProps) => theme.colors.primary,
     hover: ({ theme }: ThemeOnlyProps) => theme.colors.primaryHover,
     text: ({ theme }: ThemeOnlyProps) => theme.colors.invertedText,
     active: ({ theme }: ThemeOnlyProps) => theme.colors.primary,
@@ -81,6 +83,7 @@ export const buttonDarkTheme: PackageTheme = {
   ...buttonClassicTheme,
   [Color.Primary]: {
     ...buttonClassicTheme[Color.Primary],
+    secondary: ({ theme }: ThemeOnlyProps) => theme.colors.primary2,
     text: 'white'
   },
   [Color.Ghost]: {
