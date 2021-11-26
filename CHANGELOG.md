@@ -1,3 +1,16 @@
+# (Fri Nov 26 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-button@2.0.1`, `@tablecheck/tablekit-theme@2.0.1`
+  - fix(tablekit-button): calculates text color based on background luminance and changes hover color to 10% darker [#67](https://github.com/tablecheck/tablekit/pull/67) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Mon Nov 15 2021)
 
 :tada: This release contains work from a new contributor! :tada:
