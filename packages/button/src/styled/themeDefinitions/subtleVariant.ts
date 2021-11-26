@@ -5,7 +5,7 @@ import { resolveColor, VariantProps } from './shared';
 export const subtleVariant = (props: VariantProps): SerializedStyles => css`
   &,
   &:focus {
-    color: ${resolveColor('main', props)};
+    color: ${resolveColor('secondary', props)};
     background: none;
     border-color: transparent;
   }
