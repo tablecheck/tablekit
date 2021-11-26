@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-banner@2.0.0...@tablecheck/tablekit-banner@2.0.1) (2021-11-26)
+
+**Note:** Version bump only for package @tablecheck/tablekit-banner
+
+
+
+
+
 # [2.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-banner@1.0.2...@tablecheck/tablekit-banner@2.0.0) (2021-11-09)
 
 
