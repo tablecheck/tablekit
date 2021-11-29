@@ -1,19 +1,18 @@
-# v2.0.2 (Mon Nov 29 2021)
-
-#### 🐛 Bug Fix
-
-- fix: theme colors [#70](https://github.com/tablecheck/tablekit/pull/70) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-button@2.0.1...@tablecheck/tablekit-button@2.0.2) (2021-11-29)
+
+
+### Bug Fixes
+
+* theme colors ([67d5b08](https://github.com/tablecheck/tablekit/commit/67d5b0817e525fd850127d082d28c382d13f8288))
+
+
+
+
 
 ## [2.0.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-button@2.0.0...@tablecheck/tablekit-button@2.0.1) (2021-11-26)
 
