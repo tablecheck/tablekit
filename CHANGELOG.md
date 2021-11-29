@@ -1,3 +1,16 @@
+# (Mon Nov 29 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-button@2.0.2`
+  - fix: theme colors [#70](https://github.com/tablecheck/tablekit/pull/70) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Fri Nov 26 2021)
 
 #### 🐛 Bug Fix

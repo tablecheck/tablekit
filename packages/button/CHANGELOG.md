@@ -1,3 +1,15 @@
+# v2.0.2 (Mon Nov 29 2021)
+
+#### 🐛 Bug Fix
+
+- fix: theme colors [#70](https://github.com/tablecheck/tablekit/pull/70) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
