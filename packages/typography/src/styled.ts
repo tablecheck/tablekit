@@ -2,7 +2,7 @@ import { css, SerializedStyles, Theme } from '@emotion/react';
 
 export function getLinkStyles({ theme }: { theme: Theme }): SerializedStyles {
   return css`
-    color: ${theme.colors.primary};
+    color: ${theme.colors.primary2};
     text-decoration: none;
     position: relative;
     background-image: linear-gradient(currentColor, currentColor);
