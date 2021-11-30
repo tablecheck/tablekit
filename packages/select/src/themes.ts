@@ -58,7 +58,7 @@ export const selectClassicTheme: PackageTheme = {
     selected: {
       backgroundColor: ({ theme }: ThemeOnlyProps) =>
         theme.colors.selectedBackground,
-      borderColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary
+      borderColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary2
     },
     active: {
       backgroundColor: ({ theme }: ThemeOnlyProps) =>
@@ -66,17 +66,21 @@ export const selectClassicTheme: PackageTheme = {
     }
   },
   icon: {
-    color: ({ theme }: ThemeOnlyProps) => theme.colors.primary
+    color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2
   },
   dropdownIndicator: {
-    default: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary },
-    focused: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary },
-    hovered: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primaryHover }
+    default: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2 },
+    focused: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2 },
+    hovered: {
+      color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2Hover
+    }
   },
   clearIndicator: {
-    default: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary },
-    focused: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary },
-    hovered: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primaryHover }
+    default: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2 },
+    focused: { color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2 },
+    hovered: {
+      color: ({ theme }: ThemeOnlyProps) => theme.colors.primary2Hover
+    }
   }
 };
 
@@ -94,7 +98,7 @@ export const selectDarkTheme: PackageTheme = {
     selected: {
       backgroundColor: ({ theme }: ThemeOnlyProps) =>
         theme.colors.selectedBackground,
-      borderColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary
+      borderColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary2
     },
     active: {
       backgroundColor: ({ theme }: ThemeOnlyProps) =>

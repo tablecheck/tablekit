@@ -19,7 +19,9 @@ export interface BaseColors {
   primary: string;
   primary2: string;
   primaryHover: string;
+  primary2Hover: string;
   primarySelected: string;
+  primary2Selected: string;
   invertedText: string;
   secondary: string;
   secondary2: string;
