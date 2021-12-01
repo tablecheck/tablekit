@@ -1,19 +1,18 @@
-# v2.0.3 (Wed Dec 01 2021)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-theme): primary2 colors [#71](https://github.com/tablecheck/tablekit/pull/71) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-select@2.0.2...@tablecheck/tablekit-select@2.0.3) (2021-12-01)
+
+
+### Bug Fixes
+
+* **tablekit-theme:** primary2 colors ([9c433f2](https://github.com/tablecheck/tablekit/commit/9c433f20e88cd2c1a9abc1cf2fcab8623635c677))
+
+
+
+
 
 ## [2.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-select@2.0.1...@tablecheck/tablekit-select@2.0.2) (2021-11-29)
 

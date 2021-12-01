@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -18,13 +18,13 @@
     "@types/react-select": "4.0.11"
   },
   "dependencies": {
-    "@tablecheck/tablekit-button": "^2.0.2",
-    "@tablecheck/tablekit-icon": "^2.0.1",
-    "@tablecheck/tablekit-input": "^2.0.1",
+    "@tablecheck/tablekit-button": "^2.0.3",
+    "@tablecheck/tablekit-icon": "^2.0.2",
+    "@tablecheck/tablekit-input": "^2.0.2",
     "@tablecheck/tablekit-package-namespace": "^1.0.0",
-    "@tablecheck/tablekit-spinner": "^2.0.1",
-    "@tablecheck/tablekit-theme": "^2.0.1",
-    "@tablecheck/tablekit-typography": "^2.0.1",
+    "@tablecheck/tablekit-spinner": "^2.0.2",
+    "@tablecheck/tablekit-theme": "^2.0.2",
+    "@tablecheck/tablekit-typography": "^2.0.2",
     "@tablecheck/tablekit-utils": "^1.0.0",
     "chroma-js": "tablecheck/chroma.js#tablekit-1.1.0",
     "react-select": "4.0.2"
