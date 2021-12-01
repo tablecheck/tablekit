@@ -50,7 +50,7 @@ export const inputClassicTheme: PackageTheme = {
       borderColor: ({ theme }: ThemeOnlyProps) => theme.colors.border,
       textColor: ({ theme }: ThemeOnlyProps) => theme.colors.text,
       placeholderColor: ({ theme }: ThemeOnlyProps) => theme.colors.textSubtle,
-      iconColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary
+      iconColor: ({ theme }: ThemeOnlyProps) => theme.colors.primary2
     },
     disabled: {
       borderColor: ({ theme }: ThemeOnlyProps) => theme.colors.border,
