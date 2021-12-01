@@ -1,3 +1,15 @@
+# v2.0.2 (Wed Dec 01 2021)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-theme): primary2 colors [#71](https://github.com/tablecheck/tablekit/pull/71) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

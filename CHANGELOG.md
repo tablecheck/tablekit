@@ -1,3 +1,16 @@
+# (Wed Dec 01 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-select@2.0.3`, `@tablecheck/tablekit-theme@2.0.2`, `@tablecheck/tablekit-typography@2.0.2`
+  - fix(tablekit-theme): primary2 colors [#71](https://github.com/tablecheck/tablekit/pull/71) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Mon Nov 29 2021)
 
 #### 🐛 Bug Fix
