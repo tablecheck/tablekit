@@ -1,3 +1,15 @@
+# v2.0.3 (Thu Dec 02 2021)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-input): use primary2 color for icon [#72](https://github.com/tablecheck/tablekit/pull/72) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
