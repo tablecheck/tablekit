@@ -1,19 +1,18 @@
-# v2.0.3 (Thu Dec 02 2021)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-input): use primary2 color for icon [#72](https://github.com/tablecheck/tablekit/pull/72) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@2.0.2...@tablecheck/tablekit-input@2.0.3) (2021-12-02)
+
+
+### Bug Fixes
+
+* **tablekit-input:** use primary2 color for icon ([e07a026](https://github.com/tablecheck/tablekit/commit/e07a0268b3ed43fe408601e2a69c28828ce59f2b))
+
+
+
+
 
 ## [2.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@2.0.1...@tablecheck/tablekit-input@2.0.2) (2021-12-01)
 
