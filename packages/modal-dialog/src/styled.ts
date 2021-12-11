@@ -10,7 +10,8 @@ import {
   COLORS,
   DEPTH,
   Size,
-  Spacing
+  Spacing,
+  ZIndex
 } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
 import {
@@ -59,6 +60,7 @@ export const ModalOverlay = animated<ElementType>(styled(RxOverlay)`
   right: 0;
   top: 0;
   pointer-events: auto;
+  z-index: ${ZIndex.Modal};
 `);
 
 export const ModalContent = animated<ElementType>(styled(RxContent, {
@@ -91,6 +93,7 @@ export const ModalContent = animated<ElementType>(styled(RxContent, {
   top: calc(${Spacing.L6} / 2);
   left: 50%;
   transform: translateX(-50%);
+  z-index: ${ZIndex.Modal};
   ${mediaQuery('maxWidth', (currentSize = `calc(100% - ${Spacing.L6})`) =>
     typeof currentSize === 'string'
       ? `max-width: ${currentSize};`
