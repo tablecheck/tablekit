@@ -1,3 +1,15 @@
+# v3.0.4 (Mon Dec 13 2021)
+
+#### 🐛 Bug Fix
+
+- input: fix(tablekit-modal-dialog): add z-index from tablekit theme [#73](https://github.com/tablecheck/tablekit/pull/73) (stanislav@external.tablecheck.com)
+
+#### Authors: 1
+
+- Stanislav (stanislav@external.tablecheck.com)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
