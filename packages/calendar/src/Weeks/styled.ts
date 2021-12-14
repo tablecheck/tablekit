@@ -2,7 +2,9 @@ import { css, Theme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { FontWeight, Spacing } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
-import { hexToRgba } from '@tablecheck/tablekit-utils';
+import { getThemeValue, hexToRgba } from '@tablecheck/tablekit-utils';
+
+import { calendarClassicTheme, calendarThemeNamespace } from '../themes';
 
 import { DayOfWeek, DayState } from './types';
 
@@ -127,11 +129,17 @@ export const DateButton = styled.button<{
     &:hover > span,
     &:active > span,
     & > span {
-      color: white;
+      color: ${getThemeValue(
+        `${calendarThemeNamespace}.selectedTextColor`,
+        calendarClassicTheme.selectedTextColor
+      )};
     }
     &:hover > span,
     &:active > span {
-      color: white;
+      color: ${getThemeValue(
+        `${calendarThemeNamespace}.selectedTextColor`,
+        calendarClassicTheme.selectedTextColor
+      )};
       background-color: ${({ theme }) => theme.colors.primary2};
     }
     &[data-today='true'] > span:after {
