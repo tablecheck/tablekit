@@ -1,19 +1,18 @@
-# v3.0.5 (Tue Dec 14 2021)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-calendar): add selectedTextColor to theme [#74](https://github.com/tablecheck/tablekit/pull/74) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-calendar@3.0.4...@tablecheck/tablekit-calendar@3.0.5) (2021-12-14)
+
+
+### Bug Fixes
+
+* **tablekit-calendar:** add selectedTextColor to theme ([9ea4357](https://github.com/tablecheck/tablekit/commit/9ea4357897ab6af1515b3028b11ff049826aa330))
+
+
+
+
 
 ## [3.0.4](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-calendar@3.0.3...@tablecheck/tablekit-calendar@3.0.4) (2021-12-02)
 
