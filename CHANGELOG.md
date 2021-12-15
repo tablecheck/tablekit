@@ -1,3 +1,16 @@
+# (Wed Dec 15 2021)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-calendar@3.0.6`
+  - fix(tablekit-calendar): add selectedTextColor to theme [#75](https://github.com/tablecheck/tablekit/pull/75) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Tue Dec 14 2021)
 
 #### 🐛 Bug Fix
