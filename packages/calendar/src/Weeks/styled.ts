@@ -143,7 +143,10 @@ export const DateButton = styled.button<{
       background-color: ${({ theme }) => theme.colors.primary2};
     }
     &[data-today='true'] > span:after {
-      background-color: white;
+      background-color: ${getThemeValue(
+        `${calendarThemeNamespace}.selectedTextColor`,
+        calendarClassicTheme.selectedTextColor
+      )};
     }
   }
 
