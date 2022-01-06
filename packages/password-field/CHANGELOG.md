@@ -1,19 +1,18 @@
-# v2.0.5 (Thu Jan 06 2022)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-password-field): wrong invalid appearance [#77](https://github.com/tablecheck/tablekit/pull/77) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.0.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-password-field@2.0.4...@tablecheck/tablekit-password-field@2.0.5) (2022-01-06)
+
+
+### Bug Fixes
+
+* **tablekit-password-field:** wrong invalid appearance ([93136e5](https://github.com/tablecheck/tablekit/commit/93136e50eb5f3c325957bb6741b063abad2e1931)), closes [#78](https://github.com/tablecheck/tablekit/issues/78)
+
+
+
+
 
 ## [2.0.4](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-password-field@2.0.3...@tablecheck/tablekit-password-field@2.0.4) (2021-12-02)
 
