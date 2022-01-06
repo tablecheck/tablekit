@@ -77,7 +77,7 @@ export const PasswordFieldStateless = forwardRef<
             {...inputProps}
             label={label}
             appearance={
-              isTouched && (!!i18nMessages.isInvalidFormat || hasInvalidScore)
+              isTouched && (!!invalidKey || hasInvalidScore)
                 ? Appearance.Invalid
                 : appearance
             }
