@@ -7,7 +7,7 @@ export const validationFunc = (value: string): void | I18nMessageFlag => {
   if (!value) {
     return I18nMessageFlag.Required;
   }
-  if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/i.test(value)) {
+  if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_])/i.test(value)) {
     return I18nMessageFlag.InvalidFormat;
   }
   return undefined;
