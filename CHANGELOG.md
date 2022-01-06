@@ -1,3 +1,16 @@
+# (Thu Jan 06 2022)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-password-field@2.0.5`
+  - fix(tablekit-password-field): wrong invalid appearance [#77](https://github.com/tablecheck/tablekit/pull/77) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Wed Dec 15 2021)
 
 #### 🐛 Bug Fix
