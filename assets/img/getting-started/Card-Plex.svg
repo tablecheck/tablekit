@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="118px" viewBox="0 0 176 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Card-Plex</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="160" height="102"></rect>
+        <filter x="-8.1%" y="-10.8%" width="116.2%" height="125.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="160" height="102"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="r" transform="translate(-985.000000, -73.000000)">
+            <g id="Card-Plex" transform="translate(993.000000, 79.000000)">
+                <g id="Rectangle-Copy-2" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Rectangle-Copy-3" fill="#FFFFFF" xlink:href="#path-3"></use>
+                <path d="M108.32,85 L111.12,76.76 L122.4,76.76 L125.2,85 L128.72,85 L118.96,57.08 L114.68,57.08 L104.92,85 L108.32,85 Z M121.56,73.8 L111.92,73.8 L116.64,60.2 L116.84,60.2 L121.56,73.8 Z M138.44,85.48 C141.32,85.48 143.52,84.16 144.4,81.64 L144.6,81.64 C144.84,83.56 145.8,85 148.16,85 L149.96,85 L149.96,82.2 L147.6,82.2 L147.6,70.84 C147.6,66.48 144.64,63.88 139.68,63.88 C135.96,63.88 133.48,65.72 132.36,67.92 L134.28,69.72 C135.4,67.84 137.04,66.64 139.52,66.64 C142.8,66.64 144.4,68.24 144.4,71.16 L144.4,73.2 L140.32,73.2 C134.32,73.2 131.52,75.36 131.52,79.24 C131.52,83.08 134.08,85.48 138.44,85.48 Z M138.96,82.76 C136.48,82.76 134.88,81.6 134.88,79.56 L134.88,78.72 C134.88,76.72 136.52,75.6 140.16,75.6 L144.4,75.6 L144.4,79 C144.4,81.12 142.12,82.76 138.96,82.76 Z" id="Aa" fill-opacity="0.87" fill="#000000" fill-rule="nonzero" opacity="0.5" mask="url(#mask-4)"></path>
+                <text id="IBM-Plex" mask="url(#mask-4)" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="24" fill="#000000" fill-opacity="0.87">
+                    <tspan x="12" y="28">IBM Plex</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

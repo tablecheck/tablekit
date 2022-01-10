@@ -1,0 +1,138 @@
+name: Pull Request Workflow
+
+on: [pull_request]
+
+concurrency:
+  # Here the group is defined by the head_ref of the PR
+  group: ${{ github.head_ref }}-checks
+  # Here we specify that we'll cancel any "in progress" workflow of the same group. Thus if we push, ammend a commit and push
+  # again the previous workflow will be cancelled, thus saving us github action build minutes and avoid any conflicts
+  cancel-in-progress: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      nvmrc: ${{ steps.nvm.outputs.nvmrc }}
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.nvmrc }}
+          cache: npm
+
+      - name: Install 🔧
+        run: npm ci --legacy-peer-deps
+
+  lint:
+    needs: [setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ needs.setup.outputs.nvmrc }}
+          cache: npm
+
+      - name: Restore npm installs and Lerna setup
+        run: npm ci --legacy-peer-deps
+
+      - name: Validate all commits from PR
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+      - name: Run linter
+        run: npm run lint
+
+  audit:
+    needs: [setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ needs.setup.outputs.nvmrc }}
+          cache: npm
+
+      - name: Restore npm installs and Lerna setup
+        run: npm ci --legacy-peer-deps
+
+      - name: Audit Dependencies
+        run: npm run audit:ci
+        env:
+          OSSI_USERNAME: ${{ secrets.OSSI_USERNAME }}
+          OSSI_TOKEN: ${{ secrets.OSSI_TOKEN }}
+
+  test:
+    needs: [setup]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ needs.setup.outputs.nvmrc }}
+          cache: npm
+
+      - name: Restore npm installs and Lerna setup
+        run: npm ci --legacy-peer-deps
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        if: always()
+        with:
+          files: junit/**/*.xml
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [test, audit, lint]
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.nvmrc }}
+
+      - name: Install 🔧
+        run: npm ci --legacy-peer-deps
+
+      - name: Create Canary Release ✨
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        run: npx auto shipit

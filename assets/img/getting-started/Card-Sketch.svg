@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="118px" viewBox="0 0 176 118" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Card-Sketch</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="160" height="102"></rect>
+        <filter x="-8.1%" y="-10.8%" width="116.2%" height="125.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="160" height="102"></rect>
+        <filter x="-41.7%" y="-46.5%" width="183.3%" height="193.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.11 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="r" transform="translate(-99.000000, -73.000000)">
+            <g id="Card-Sketch" transform="translate(107.000000, 79.000000)">
+                <g id="Rectangle-Copy" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Rectangle" fill="#FFFFFF" xlink:href="#path-3"></use>
+                <g id="Sketch-logo" filter="url(#filter-5)" mask="url(#mask-4)" fill-rule="nonzero">
+                    <g transform="translate(104.000000, 49.000000)">
+                        <polygon id="b" fill="#FDB300" points="10.4721937 1.41564953 23.9990534 0 37.5268597 1.41564953 48 15.3328935 24 43 0 15.3328935"></polygon>
+                        <polygon id="c" fill="#EA6C00" points="9.72154295 16 24 43 0 16"></polygon>
+                        <polygon id="d" fill="#EA6C00" transform="translate(36.000000, 29.500000) scale(-1, 1) translate(-36.000000, -29.500000) " points="33.7205964 16 48 43 24 16"></polygon>
+                        <polygon id="e" fill="#FDAD00" points="10 16 38 16 24 43"></polygon>
+                        <polygon id="f" fill="#FDD231" points="24 0 10.7364435 1.38460131 10 15"></polygon>
+                        <polygon id="g" fill="#FDD231" transform="translate(31.000000, 7.500000) scale(-1, 1) translate(-31.000000, -7.500000) " points="38 0 24.7364435 1.38460131 24 15"></polygon>
+                        <polygon id="h" fill="#FDAD00" transform="translate(43.000000, 8.000000) scale(-1, 1) translate(-43.000000, -8.000000) " points="38 15 48 1 47.2824304 15"></polygon>
+                        <polygon id="i" fill="#FDAD00" points="0 15 10 1 9.28236567 15"></polygon>
+                        <polygon id="j" fill="#FEEEB7" points="24 0 10 15 38 15"></polygon>
+                    </g>
+                </g>
+                <text id="Sketch" mask="url(#mask-4)" font-family="IBMPlexSans, IBM Plex Sans" font-size="16" font-weight="normal" line-spacing="24" fill="#000000" fill-opacity="0.87">
+                    <tspan x="20" y="28">Sketch</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

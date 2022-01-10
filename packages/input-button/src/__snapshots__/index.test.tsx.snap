@@ -1,0 +1,429 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@tablecheck/tablekit-input-button should allow passing of custom className 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.emotion-0,
+.emotion-0 * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0;
+}
+
+.emotion-2+div {
+  height: 40px;
+  padding: 0 22px;
+}
+
+.emotion-2+div>svg {
+  display: none;
+}
+
+.emotion-2:hover+div {
+  background: rgba(121,53,210,0.1);
+}
+
+.emotion-2:checked+div>svg {
+  display: block;
+}
+
+.emotion-2:checked+div {
+  background: rgba(121,53,210,0.2);
+  border: 1px solid #5C11A6;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.emotion-2:checked:hover+div {
+  box-shadow: 0 0 0 1px #7935D2;
+  background: rgba(121,53,210,0.1);
+}
+
+.emotion-2:disabled+div,
+.emotion-2:disabled:hover+div {
+  border: 2px solid transparent;
+  background: rgba(0, 0, 0, 0.11);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-2:focus+div:after {
+  border-color: #5192FC;
+}
+
+.emotion-4 {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  color: #5C11A6;
+  max-width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.emotion-4:not([data-is-clicked="true"]):after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+}
+
+.emotion-6 {
+  width: 15px;
+  height: 15px;
+  margin: 2.5px;
+  margin-right: 10.5px;
+  color: #5C11A6;
+}
+
+.emotion-8 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-weight: 600;
+}
+
+.emotion-8::after {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 600;
+  display: block;
+}
+
+@media speech {
+  .emotion-8::after {
+    display: none;
+  }
+}
+
+<ForwardRef
+  className="test-class"
+  id="test3"
+>
+  <ButtonLabel
+    className="test-class"
+    htmlFor="test3"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+  >
+    <label
+      className="test-class emotion-0 emotion-1"
+      htmlFor="test3"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+    >
+      <HiddenInput
+        fieldSize="regular"
+        id="test3"
+        onBlur={[Function]}
+        shape="rounded"
+        type="checkbox"
+      >
+        <input
+          className="emotion-2 emotion-3"
+          id="test3"
+          onBlur={[Function]}
+          shape="rounded"
+          type="checkbox"
+        />
+      </HiddenInput>
+      <ButtonDisplay
+        fieldSize="regular"
+        shape="rounded"
+      >
+        <div
+          className="emotion-4 emotion-5"
+          shape="rounded"
+        >
+          <SelectedIcon
+            icon="fas-check"
+          >
+            <Icon
+              className="emotion-6 emotion-7"
+              icon="fas-check"
+            >
+              icon-check
+            </Icon>
+          </SelectedIcon>
+          <TextWrapper>
+            <div
+              className="emotion-8 emotion-9"
+            />
+          </TextWrapper>
+        </div>
+      </ButtonDisplay>
+    </label>
+  </ButtonLabel>
+</ForwardRef>
+`;
+
+exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.emotion-0,
+.emotion-0 * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0;
+}
+
+.emotion-2+div {
+  height: 40px;
+  padding: 0 22px;
+}
+
+.emotion-2+div>svg {
+  display: none;
+}
+
+.emotion-2:hover+div {
+  background: rgba(121,53,210,0.1);
+}
+
+.emotion-2:checked+div>svg {
+  display: block;
+}
+
+.emotion-2:checked+div {
+  background: rgba(121,53,210,0.2);
+  border: 1px solid #5C11A6;
+  height: 40px;
+  padding: 0 8px;
+}
+
+.emotion-2:checked:hover+div {
+  box-shadow: 0 0 0 1px #7935D2;
+  background: rgba(121,53,210,0.1);
+}
+
+.emotion-2:disabled+div,
+.emotion-2:disabled:hover+div {
+  border: 2px solid transparent;
+  background: rgba(0, 0, 0, 0.11);
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.emotion-2:focus+div:after {
+  border-color: #5192FC;
+}
+
+.emotion-4 {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  color: #5C11A6;
+  max-width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.emotion-4:not([data-is-clicked="true"]):after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  -webkit-transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+  transition: border-color 120ms ease-in-out,color 120ms ease-in-out,background-color 120ms ease-in-out,box-shadow 120ms ease-in-out;
+}
+
+.emotion-6 {
+  width: 15px;
+  height: 15px;
+  margin: 2.5px;
+  margin-right: 10.5px;
+  color: #5C11A6;
+}
+
+.emotion-8 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-weight: 600;
+}
+
+.emotion-8::after {
+  content: attr(data-text);
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 600;
+  display: block;
+}
+
+@media speech {
+  .emotion-8::after {
+    display: none;
+  }
+}
+
+<ForwardRef
+  id="test2"
+>
+  <ButtonLabel
+    htmlFor="test2"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    onMouseDown={[Function]}
+  >
+    <label
+      className="emotion-0 emotion-1"
+      htmlFor="test2"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+    >
+      <HiddenInput
+        fieldSize="regular"
+        id="test2"
+        onBlur={[Function]}
+        shape="rounded"
+        type="checkbox"
+      >
+        <input
+          className="emotion-2 emotion-3"
+          id="test2"
+          onBlur={[Function]}
+          shape="rounded"
+          type="checkbox"
+        />
+      </HiddenInput>
+      <ButtonDisplay
+        fieldSize="regular"
+        shape="rounded"
+      >
+        <div
+          className="emotion-4 emotion-5"
+          shape="rounded"
+        >
+          <SelectedIcon
+            icon="fas-check"
+          >
+            <Icon
+              className="emotion-6 emotion-7"
+              icon="fas-check"
+            >
+              icon-check
+            </Icon>
+          </SelectedIcon>
+          <TextWrapper>
+            <div
+              className="emotion-8 emotion-9"
+            />
+          </TextWrapper>
+        </div>
+      </ButtonDisplay>
+    </label>
+  </ButtonLabel>
+</ForwardRef>
+`;
