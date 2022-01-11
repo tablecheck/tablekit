@@ -28,6 +28,7 @@ exports[`Tooltip should allow passing of custom className 1`] = `
     onMouseOut={[Function]}
     onMouseOver={[Function]}
   >
+    <Noop />
     <div
       className="test-class emotion-0 emotion-1"
       onBlur={[Function]}
@@ -75,6 +76,7 @@ exports[`Tooltip should correctly apply styling 1`] = `
     onMouseOut={[Function]}
     onMouseOver={[Function]}
   >
+    <Noop />
     <div
       className="emotion-0 emotion-1"
       onBlur={[Function]}

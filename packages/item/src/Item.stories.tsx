@@ -212,19 +212,13 @@ const NavTemplate: Story = () => {
         </ItemGroup>
         <Switch>
           {colors.map((color) => (
-            <Route
-              key={color}
-              path={`/${color}`}
-              render={() => (
-                <Page style={{ background: color }}>
-                  {startCase(color)} Page
-                </Page>
-              )}
-            />
+            <Route key={color} path={`/${color}`}>
+              <Page style={{ background: color }}>{startCase(color)} Page</Page>
+            </Route>
           ))}
-          <Route
-            render={() => <Page style={{ color: 'black' }}>Default Page</Page>}
-          />
+          <Route>
+            <Page style={{ color: 'black' }}>Default Page</Page>
+          </Route>
         </Switch>
       </App>
     </MemoryRouter>

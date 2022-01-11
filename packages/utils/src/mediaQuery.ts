@@ -54,7 +54,7 @@ export function mediaQuery<
           props as unknown as Record<string, unknown | Value>
         );
       }
-      queries = defaultQueriesOrValue;
+      queries = defaultQueriesOrValue as MediaQueryObject<Value>;
     }
     // This handles if the prop value is _not_ being used as a media query object
     if (!isObject(queries)) {
@@ -89,7 +89,7 @@ export function mediaQuery<
     if (defaultQueryValue) {
       defaultStyles =
         propsEvalOrReturn(
-          renderer(defaultQueryValue),
+          renderer(defaultQueryValue as Value),
           props as unknown as Record<string, unknown | Value>
         ) || '';
     }
@@ -98,6 +98,6 @@ export function mediaQuery<
         ${defaultStyles}
       `);
     }
-    return css(cssMediaQueries);
+    return css(...cssMediaQueries);
   };
 }

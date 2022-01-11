@@ -18,13 +18,11 @@ export interface Score {
   progressPercent: number;
 }
 
-export type I18nMessages = Record<string, string | undefined> &
-  {
-    [key in ScoreLevel]?: string;
-  } &
-  {
-    [key in I18nMessageFlag]?: string;
-  };
+export type I18nMessages = Record<string, string | undefined> & {
+  [key in ScoreLevel]?: string;
+} & {
+  [key in I18nMessageFlag]?: string;
+};
 
 interface BaseProps extends InputProps {
   /** object of error messages. Can add any key which `validationFunc` can return  */

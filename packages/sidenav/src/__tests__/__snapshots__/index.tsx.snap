@@ -74,6 +74,7 @@ exports[`Sidenav should allow passing of custom className 1`] = `
         isExpanded={true}
         size="regular"
       >
+        <Noop />
         <div
           className="test-class emotion-0 emotion-1"
           size="regular"
@@ -99,6 +100,7 @@ exports[`Sidenav should allow passing of custom className 1`] = `
                 onClick={[Function]}
                 size="regular"
               >
+                <Noop />
                 <div
                   className="emotion-2 emotion-3"
                   onClick={[Function]}
@@ -113,6 +115,7 @@ exports[`Sidenav should allow passing of custom className 1`] = `
                   <SideNavFooterLabel
                     size="regular"
                   >
+                    <Noop />
                     <div
                       className="emotion-4 emotion-5"
                       size="regular"
@@ -198,6 +201,7 @@ exports[`Sidenav should correctly apply styling 1`] = `
         isExpanded={true}
         size="regular"
       >
+        <Noop />
         <div
           className="emotion-0 emotion-1"
           size="regular"
@@ -223,6 +227,7 @@ exports[`Sidenav should correctly apply styling 1`] = `
                 onClick={[Function]}
                 size="regular"
               >
+                <Noop />
                 <div
                   className="emotion-2 emotion-3"
                   onClick={[Function]}
@@ -237,6 +242,7 @@ exports[`Sidenav should correctly apply styling 1`] = `
                   <SideNavFooterLabel
                     size="regular"
                   >
+                    <Noop />
                     <div
                       className="emotion-4 emotion-5"
                       size="regular"

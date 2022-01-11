@@ -15,6 +15,7 @@ exports[`Inline Dialog should allow passing of custom className 1`] = `
   <InlineDialogContainer
     className="test-class"
   >
+    <Noop />
     <div
       className="test-class emotion-0 emotion-1"
     >
@@ -45,6 +46,7 @@ exports[`Inline Dialog should correctly apply styling 1`] = `
   renderTrigger={[Function]}
 >
   <InlineDialogContainer>
+    <Noop />
     <div
       className="emotion-0 emotion-1"
     >

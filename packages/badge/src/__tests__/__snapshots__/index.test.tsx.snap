@@ -27,6 +27,7 @@ exports[`Badge should allow passing of custom children 1`] = `
 
 <Badge>
   <BadgeContainer>
+    <Noop />
     <div
       className="emotion-0 emotion-1"
     >
@@ -70,6 +71,7 @@ exports[`Badge should allow passing of custom className 1`] = `
   <BadgeContainer
     className="test-class"
   >
+    <Noop />
     <div
       className="test-class emotion-0 emotion-1"
     >
@@ -108,6 +110,7 @@ exports[`Badge should correctly apply styling 1`] = `
   value={0}
 >
   <BadgeContainer>
+    <Noop />
     <div
       className="emotion-0 emotion-1"
     >

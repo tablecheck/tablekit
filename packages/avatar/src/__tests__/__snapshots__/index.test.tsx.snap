@@ -35,6 +35,7 @@ exports[`Avatar should allow passing of custom className 1`] = `
     className="test-class"
     size="regular"
   >
+    <Noop />
     <div
       className="test-class emotion-0 emotion-1"
       size="regular"
@@ -81,6 +82,7 @@ exports[`Avatar should correctly apply styling 1`] = `
   <Container
     size="regular"
   >
+    <Noop />
     <div
       className="emotion-0 emotion-1"
       size="regular"

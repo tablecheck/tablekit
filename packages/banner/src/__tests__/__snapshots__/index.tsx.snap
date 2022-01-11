@@ -54,11 +54,13 @@ exports[`Banner should allow passing of custom className 1`] = `
     className="test-class"
     size="regular"
   >
+    <Noop />
     <div
       className="test-class emotion-0 emotion-1"
       size="regular"
     >
       <BannerMessageContainer>
+        <Noop />
         <div
           className="emotion-2 emotion-3"
         >
@@ -67,6 +69,7 @@ exports[`Banner should allow passing of custom className 1`] = `
             icon="fas-info-circle"
             size="regular2"
           >
+            <Noop />
             <Icon
               className="bannerIcon emotion-4 emotion-5"
               icon="fas-info-circle"
@@ -137,11 +140,13 @@ exports[`Banner should correctly apply styling 1`] = `
     appearance="primary"
     size="regular"
   >
+    <Noop />
     <div
       className="emotion-0 emotion-1"
       size="regular"
     >
       <BannerMessageContainer>
+        <Noop />
         <div
           className="emotion-2 emotion-3"
         >
@@ -150,6 +155,7 @@ exports[`Banner should correctly apply styling 1`] = `
             icon="fas-info-circle"
             size="regular2"
           >
+            <Noop />
             <Icon
               className="bannerIcon emotion-4 emotion-5"
               icon="fas-info-circle"

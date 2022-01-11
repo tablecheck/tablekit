@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@radix-ui/react-dialog": "0.1.0",
-    "@storybook/react": "6.3.7",
+    "@storybook/react": "6.4.10",
     "@tablecheck/tablekit-enzyme": "^2.0.2",
     "@types/raf-schd": "4.0.0",
     "@types/rc-progress": "^2.4.3",

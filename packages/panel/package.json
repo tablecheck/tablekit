@@ -28,7 +28,7 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
-    "@storybook/react": "6.3.7",
+    "@storybook/react": "6.4.10",
     "@tablecheck/tablekit-button": "^2.0.3",
     "@tablecheck/tablekit-enzyme": "^2.0.2",
     "@tablecheck/tablekit-item": "^2.0.2",
