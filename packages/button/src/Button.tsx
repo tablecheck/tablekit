@@ -33,7 +33,12 @@ function renderIcon(
 }
 
 export function InternalButton(props: DerivedButtonProps): JSX.Element {
-  const { children, isLoading = false, fit: shouldFitContainer } = props;
+  const {
+    children,
+    isOnlyChild,
+    isLoading = false,
+    fit: shouldFitContainer
+  } = props;
   const theme = useTheme();
 
   const { iconBefore, iconAfter, ...buttonProps } = getButtonProps(
@@ -46,7 +51,7 @@ export function InternalButton(props: DerivedButtonProps): JSX.Element {
       <ButtonWrapper fit={shouldFitContainer} isVertical>
         {isLoading ? <LoadingSpinner size={buttonProps.size} /> : null}
         {iconBefore &&
-          (props.isOnlyChild ? (
+          (isOnlyChild ? (
             <IconWrapper isLoading={isLoading}>
               {renderIcon(iconBefore, props)}
             </IconWrapper>
@@ -202,19 +207,19 @@ interface ButtonType {
   >;
 }
 
-/** @component */
-export const ComponentButton = React.forwardRef<
-  HTMLButtonElement,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ComponentButtonProps<any>
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
->(({ component, ...props }: ComponentButtonProps<any>, innerRef) => {
+const ComponentButtonInner = <Component extends React.ElementType>(
+  { component, ...props }: ComponentButtonProps<Component>,
+  innerRef: React.ForwardedRef<HTMLButtonElement>
+) => {
   const theme = useTheme();
 
   const derivedProps = getButtonProps(props, theme);
 
   const ResolvedComponent = React.useMemo(
-    () => (component ? StyledButton.withComponent(component) : StyledButton),
+    () =>
+      (component
+        ? StyledButton.withComponent(component as never)
+        : StyledButton) as typeof StyledButton,
     [component]
   );
 
@@ -232,7 +237,12 @@ export const ComponentButton = React.forwardRef<
       <InternalButton {...derivedProps} />
     </ResolvedComponent>
   );
-}) as unknown as ComponentButtonType;
+};
+
+/** @component */
+export const ComponentButton = React.forwardRef(
+  ComponentButtonInner
+) as unknown as ComponentButtonType;
 
 interface WithComponentOptions {
   staticProps?: BaseButtonProps;

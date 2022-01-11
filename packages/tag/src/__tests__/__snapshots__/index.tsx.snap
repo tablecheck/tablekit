@@ -84,11 +84,13 @@ exports[`Tag should allow passing of custom className 1`] = `
     isSelected={false}
     size="regular"
   >
+    <Noop />
     <button
       className="test-class emotion-0 emotion-1"
       size="regular"
     >
       <TagWrapper>
+        <Noop />
         <span
           className="emotion-2 emotion-3"
         />
@@ -179,11 +181,13 @@ exports[`Tag should correctly apply styling 1`] = `
     isSelected={false}
     size="regular"
   >
+    <Noop />
     <button
       className="emotion-0 emotion-1"
       size="regular"
     >
       <TagWrapper>
+        <Noop />
         <span
           className="emotion-2 emotion-3"
         />

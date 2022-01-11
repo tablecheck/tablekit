@@ -33,8 +33,8 @@
     "react-use": ">=17.2.3 <18"
   },
   "devDependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@storybook/react": "6.3.7",
+    "@fortawesome/free-solid-svg-icons": "5.15.3",
+    "@storybook/react": "6.4.10",
     "@tablecheck/locales": "1.0.3",
     "@tablecheck/tablekit-enzyme": "^2.0.2",
     "@tablecheck/tablekit-free-icon-config": "^2.0.2",

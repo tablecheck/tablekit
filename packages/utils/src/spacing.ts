@@ -47,30 +47,30 @@ function spacing<Props extends { theme: Theme } = { theme: Theme }>(
     } else {
       ({ top, bottom, right, left } = spacingValue as SpacingType);
     }
-    if (top === bottom && bottom === right && right === left) {
-      return css`
-        ${property}: ${parseSpacing(top)};
-      `;
-    }
-    const { left: leftSpacing, right: rightSpacing } = ifRtl<
-      { left: SpacingDimension; right: SpacingDimension },
-      Props
-    >(
-      { left: right, right: left },
-      { left, right }
-    )(props);
     const args = [];
-    if (top !== undefined) {
-      args.push(`${property}-top:${parseSpacing(top)};`);
-    }
-    if (rightSpacing !== undefined) {
-      args.push(`${property}-right:${parseSpacing(rightSpacing)};`);
-    }
-    if (bottom !== undefined) {
-      args.push(`${property}-bottom:${parseSpacing(bottom)};`);
-    }
-    if (leftSpacing !== undefined) {
-      args.push(`${property}-left:${parseSpacing(leftSpacing)};`);
+    if (top === bottom && bottom === right && right === left) {
+      // this is to stop the babel plugin from re-writing the call with classes etc
+      args.push(`${property}:${parseSpacing(top)};`);
+    } else {
+      const { left: leftSpacing, right: rightSpacing } = ifRtl<
+        { left: SpacingDimension; right: SpacingDimension },
+        Props
+      >(
+        { left: right, right: left },
+        { left, right }
+      )(props);
+      if (top !== undefined) {
+        args.push(`${property}-top:${parseSpacing(top)};`);
+      }
+      if (rightSpacing !== undefined) {
+        args.push(`${property}-right:${parseSpacing(rightSpacing)};`);
+      }
+      if (bottom !== undefined) {
+        args.push(`${property}-bottom:${parseSpacing(bottom)};`);
+      }
+      if (leftSpacing !== undefined) {
+        args.push(`${property}-left:${parseSpacing(leftSpacing)};`);
+      }
     }
 
     return css(...args);

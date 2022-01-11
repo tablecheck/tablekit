@@ -163,6 +163,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
     onKeyDown={[Function]}
     onMouseDown={[Function]}
   >
+    <Noop />
     <label
       className="test-class emotion-0 emotion-1"
       htmlFor="test3"
@@ -177,6 +178,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
         shape="rounded"
         type="checkbox"
       >
+        <Noop />
         <input
           className="emotion-2 emotion-3"
           id="test3"
@@ -189,6 +191,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
         fieldSize="regular"
         shape="rounded"
       >
+        <Noop />
         <div
           className="emotion-4 emotion-5"
           shape="rounded"
@@ -196,6 +199,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
           <SelectedIcon
             icon="fas-check"
           >
+            <Noop />
             <Icon
               className="emotion-6 emotion-7"
               icon="fas-check"
@@ -204,6 +208,7 @@ exports[`@tablecheck/tablekit-input-button should allow passing of custom classN
             </Icon>
           </SelectedIcon>
           <TextWrapper>
+            <Noop />
             <div
               className="emotion-8 emotion-9"
             />
@@ -376,6 +381,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
     onKeyDown={[Function]}
     onMouseDown={[Function]}
   >
+    <Noop />
     <label
       className="emotion-0 emotion-1"
       htmlFor="test2"
@@ -390,6 +396,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
         shape="rounded"
         type="checkbox"
       >
+        <Noop />
         <input
           className="emotion-2 emotion-3"
           id="test2"
@@ -402,6 +409,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
         fieldSize="regular"
         shape="rounded"
       >
+        <Noop />
         <div
           className="emotion-4 emotion-5"
           shape="rounded"
@@ -409,6 +417,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
           <SelectedIcon
             icon="fas-check"
           >
+            <Noop />
             <Icon
               className="emotion-6 emotion-7"
               icon="fas-check"
@@ -417,6 +426,7 @@ exports[`@tablecheck/tablekit-input-button should correctly apply styling 1`] = 
             </Icon>
           </SelectedIcon>
           <TextWrapper>
+            <Noop />
             <div
               className="emotion-8 emotion-9"
             />

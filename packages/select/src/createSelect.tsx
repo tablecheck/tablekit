@@ -66,7 +66,8 @@ export function createSelect<
       size = InputSize.Regular,
       styles,
       onChange,
-      shouldNotChangeDropdownIcon
+      shouldNotChangeDropdownIcon,
+      name
     } = props;
     const tablekitTheme = useTheme();
 
@@ -108,7 +109,7 @@ export function createSelect<
       if (onChange) {
         onChange(value, {
           ...actionMeta,
-          name: props.name
+          name
         });
       }
     };

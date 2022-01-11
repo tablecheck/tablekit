@@ -31,12 +31,14 @@ exports[`@tablecheck/tablekit-logo Logo should allow passing of custom className
   <LogoWrapper
     className="test-class"
   >
+    <Noop />
     <div
       className="test-class emotion-0 emotion-1"
     >
       <LogoSymbol
         size="24px"
       >
+        <Noop />
         <SvgSymbolBase
           className="emotion-2 emotion-3"
           size="24px"
@@ -72,6 +74,7 @@ exports[`@tablecheck/tablekit-logo Logo should allow passing of custom className
       <LogoWording
         size="96px"
       >
+        <Noop />
         <SvgWordingBase
           className="emotion-6 emotion-7"
           size="96px"
@@ -163,12 +166,14 @@ exports[`@tablecheck/tablekit-logo Logo should correctly apply styling 1`] = `
 
 <Logo>
   <LogoWrapper>
+    <Noop />
     <div
       className="emotion-0 emotion-1"
     >
       <LogoSymbol
         size="24px"
       >
+        <Noop />
         <SvgSymbolBase
           className="emotion-2 emotion-3"
           size="24px"
@@ -204,6 +209,7 @@ exports[`@tablecheck/tablekit-logo Logo should correctly apply styling 1`] = `
       <LogoWording
         size="96px"
       >
+        <Noop />
         <SvgWordingBase
           className="emotion-6 emotion-7"
           size="96px"

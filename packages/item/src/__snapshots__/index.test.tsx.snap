@@ -86,6 +86,7 @@ exports[`Item should allow passing of custom className 1`] = `
       size="regular"
       tabIndex={0}
     >
+      <Noop />
       <span
         aria-disabled={false}
         className="test-class emotion-0 emotion-1"
@@ -182,6 +183,7 @@ exports[`Item should correctly apply styling 1`] = `
       size="regular"
       tabIndex={0}
     >
+      <Noop />
       <span
         aria-disabled={false}
         className="emotion-0 emotion-1"

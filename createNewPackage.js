@@ -130,10 +130,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     main: 'lib/es5/index.js',
     module: 'lib/esm/index.js',
     types: 'lib/esm/index.ts',
-    publishConfig: {
-      registry:
-        'https://tablecheck-934763610305.d.codeartifact.ap-northeast-1.amazonaws.com/npm/tablecheck/'
-    },
     scripts: {},
     author: 'TableCheck Inc.',
     license: 'MIT',
