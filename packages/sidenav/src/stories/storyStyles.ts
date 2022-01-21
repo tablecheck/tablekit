@@ -2,23 +2,12 @@ import styled from '@emotion/styled';
 import { FieldHeight, Size } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
 
-export const Wrapper = styled.div`
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90%;
-  & > div {
-    margin: 20px 0;
-  }
-`;
-
-export const Container = styled.div`
+export const Container = styled.div<{ forceScroll?: boolean }>`
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 300px;
-  border: 1px solid #ccc;
+  width: 100vw;
+  height: ${({ forceScroll }) => (forceScroll ? '300px' : '100vh')};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;
 
 export const Page = styled.div`
@@ -86,9 +75,9 @@ export const Description = styled.div`
       white-space: nowrap;
       border-radius: 3px;
       font-size: 13px;
-      border: 1px solid #eeeeee;
-      color: rgba(51, 51, 51, 0.9);
-      background-color: #f8f8f8;
+      border: 1px solid ${({ theme }) => theme.colors.border};
+      color: ${({ theme }) => theme.colors.text};
+      background-color: ${({ theme }) => theme.colors.surfaceHigh};
     }
   }
 `;
@@ -102,7 +91,7 @@ export const Table = styled.table`
   margin-top: 0px;
   margin-bottom: 16px;
   border-collapse: collapse;
-  color: #767676;
+  color: ${({ theme }) => theme.colors.textSubtle};
   th {
     font-weight: bold;
     text-align: start;
@@ -111,7 +100,7 @@ export const Table = styled.table`
     padding: 4px 16px 4px 0px;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 15px;
-    color: rgb(51, 51, 51);
+    color: ${({ theme }) => theme.colors.text};
     line-height: 1.5;
   }
 `;

@@ -32,9 +32,11 @@
     "react-dom": ">=16.2.0 <18"
   },
   "devDependencies": {
+    "@carbon/icons-react": "10.44.0",
     "@storybook/react": "6.4.10",
     "@tablecheck/tablekit-enzyme": "^2.0.2",
     "@tablecheck/tablekit-free-icon-config": "^2.0.2",
+    "@types/carbon__icons-react": "10.31.2",
     "@types/react-router-dom": "5.3.2",
     "storybook-dark-mode": "1.0.8"
   },

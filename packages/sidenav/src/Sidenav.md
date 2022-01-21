@@ -1,4 +1,4 @@
-The SideNav component dispalys navigation items. It's shown on the left side.
+The SideNav component displays navigation items. It's shown on the left side.
 
 List of components that you can use to implement SideNav:
 

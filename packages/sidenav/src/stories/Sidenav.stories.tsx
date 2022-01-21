@@ -15,7 +15,7 @@ import { useState } from 'react';
 import { MemoryRouter, NavLink, Route, Switch } from 'react-router-dom';
 import { useDarkMode } from 'storybook-dark-mode';
 
-import { NavItems, NavItem } from '../examples/navItems';
+import { NavItems } from '../examples/navItems';
 import {
   SideNav,
   SideNavProvider,
@@ -30,7 +30,6 @@ import {
 import { SideNavProviderProps } from '../types';
 
 import {
-  Wrapper,
   Container,
   Page,
   Text,
@@ -42,7 +41,7 @@ import {
 } from './storyStyles';
 
 export default {
-  title: 'Components/Side Nav Provider',
+  title: 'Components/SideNav',
   component: SideNavProvider,
   parameters: {
     layout: 'fullscreen',
@@ -52,10 +51,10 @@ export default {
   }
 } as Meta;
 
-const InfoTemplate: Story = () => (
+export const Information = () => (
   <Description>
     <p>
-      The <span>SideNav</span> component dispalys navigation items. It is shown
+      The <span>SideNav</span> component displays navigation items. It is shown
       on the left side. List of components that you can use to implement{' '}
       <span>SideNav</span>:
     </p>
@@ -96,7 +95,7 @@ const InfoTemplate: Story = () => (
       <tbody>
         <tr>
           <td width="250">SideNavProvider</td>
-          <td>{` import { SideNavProvider } from '@tablekit/sidenav';`}</td>
+          <td>{`import { SideNavProvider } from '@tablekit/sidenav';`}</td>
         </tr>
         <tr>
           <td>SideNavContext</td>
@@ -104,7 +103,7 @@ const InfoTemplate: Story = () => (
         </tr>
         <tr>
           <td>useSideNav</td>
-          <td>{` import { useSideNav } from '@tablekit/sidenav';`}</td>
+          <td>{`import { useSideNav } from '@tablekit/sidenav';`}</td>
         </tr>
       </tbody>
     </Table>
@@ -130,11 +129,7 @@ const InfoTemplate: Story = () => (
   </Description>
 );
 
-export const Information = InfoTemplate.bind({});
-
-const NavSections: NavItem[] | undefined = NavItems.filter(
-  ({ type }) => type === 'section'
-);
+const NavSections = NavItems.filter(({ type }) => type === 'section');
 
 const classicTheme = {
   colors: CLASSIC_COLORS,
@@ -157,8 +152,7 @@ const renderNavItem = ({
   activeSection,
   openedSection,
   setOpenedSection
-}: // eslint-disable-next-line consistent-return
-any): JSX.Element | undefined => {
+}: any): JSX.Element | null => {
   if (item.type === 'link') {
     return (
       <SideNavItem
@@ -216,6 +210,7 @@ any): JSX.Element | undefined => {
       </SideNavSection>
     );
   }
+  return null;
 };
 
 type SideNavExampleProps = {
@@ -248,42 +243,43 @@ const SideNavExample = ({ currentSize }: SideNavExampleProps) => {
   );
 };
 
-const Template: Story<SideNavProviderProps> = ({ ...args }) => {
+const Template: Story<SideNavProviderProps & { forceScroll?: boolean }> = ({
+  forceScroll,
+  ...args
+}) => {
   const isDark = useDarkMode();
   return (
     <EmotionThemeProvider theme={isDark ? darkTheme : classicTheme}>
-      <Wrapper>
-        <Container>
-          <SideNavProvider {...args}>
-            <MemoryRouter>
-              <SideNavExample currentSize={args.size} />
-              <Page>
-                <Switch>
-                  <Route exact path="/">
-                    <Text>
-                      Home Route. Click on the links below to see React-Router
-                      wrapped NavLink in action
-                    </Text>
-                  </Route>
-                  <Route path="/page-1">
-                    <div>Page 1</div>
-                  </Route>
-                  <Route path="/page-2">
-                    <div>Page 2</div>
-                  </Route>
-                </Switch>
-                <LinkFooter>
-                  <NavLink exact to="/">
-                    Home
-                  </NavLink>
-                  <NavLink to="/page-1">Page 1</NavLink>
-                  <NavLink to="/page-2">Page 2</NavLink>
-                </LinkFooter>
-              </Page>
-            </MemoryRouter>
-          </SideNavProvider>
-        </Container>
-      </Wrapper>
+      <Container forceScroll={forceScroll}>
+        <SideNavProvider {...args}>
+          <MemoryRouter>
+            <SideNavExample currentSize={args.size} />
+            <Page>
+              <Switch>
+                <Route path="/page-1">
+                  <div>Page 1</div>
+                </Route>
+                <Route path="/page-2">
+                  <div>Page 2</div>
+                </Route>
+                <Route path="/">
+                  <Text>
+                    Home Route. Click on the links below to see React-Router
+                    wrapped NavLink in action
+                  </Text>
+                </Route>
+              </Switch>
+              <LinkFooter>
+                <NavLink exact to="/">
+                  Home
+                </NavLink>
+                <NavLink to="/page-1">Page 1</NavLink>
+                <NavLink to="/page-2">Page 2</NavLink>
+              </LinkFooter>
+            </Page>
+          </MemoryRouter>
+        </SideNavProvider>
+      </Container>
     </EmotionThemeProvider>
   );
 };
@@ -295,4 +291,14 @@ Default.args = {
   shouldHideToggle: false,
   size: Size.Regular,
   state: SideNavState.Expanded
+};
+
+export const WithScrolledNav = Template.bind({});
+WithScrolledNav.args = {
+  toggleStateLabels: { expand: 'Expand', collapse: 'Collapse' },
+  isExpanded: true,
+  shouldHideToggle: false,
+  size: Size.Regular,
+  state: SideNavState.Expanded,
+  forceScroll: true
 };
