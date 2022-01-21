@@ -1,3 +1,9 @@
+import {
+  Settings16,
+  ChartCombo16,
+  EdgeCluster16,
+  FolderMoveTo16
+} from '@carbon/icons-react';
 import { getIcon, IconDefinition } from '@tablecheck/tablekit-icon';
 
 export type NavItem = {
@@ -106,18 +112,25 @@ export const NavItems = [
     icon: getIcon('globe')
   },
   {
-    type: 'item',
-    label: 'Txt 14 + Icn',
-    icon: getIcon('globe')
-  },
-  {
-    type: 'item',
-    label: 'Txt 15 + Icn',
-    icon: getIcon('globe')
-  },
-  {
-    type: 'item',
-    label: 'Txt 16 + Icn',
-    icon: getIcon('globe')
+    type: 'section',
+    label: 'Carbon Icon Section',
+    icon: <FolderMoveTo16 />,
+    children: [
+      {
+        type: 'item',
+        label: 'Carbon Icon',
+        icon: <Settings16 />
+      },
+      {
+        type: 'item',
+        label: 'Carbon Icon',
+        icon: <ChartCombo16 />
+      },
+      {
+        type: 'item',
+        label: 'Carbon Icon',
+        icon: <EdgeCluster16 />
+      }
+    ]
   }
 ];

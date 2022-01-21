@@ -33,7 +33,7 @@ export interface SideNavProviderProps
 
 export interface BaseSideNavItemProps {
   /** one of @fortawesome icons */
-  icon?: IconDefinition;
+  icon?: React.ReactNode | IconDefinition;
 
   /** Causes the item to appear in a disabled state and click behavior will not be triggered. */
   isDisabled?: boolean;
@@ -59,7 +59,7 @@ export type SideNavSectionProps<Component extends ElementType> =
     childrenCount?: number;
 
     /** one of @fortawesome icons */
-    icon?: IconDefinition;
+    icon?: React.ReactNode | IconDefinition;
 
     /** Causes the item to appear in a disabled state and click behavior will not be triggered. */
     isDisabled?: boolean;

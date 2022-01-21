@@ -1,4 +1,4 @@
-import { Icon, getIcon } from '@tablecheck/tablekit-icon';
+import { Icon, getIcon, IconDefinition } from '@tablecheck/tablekit-icon';
 import {
   InlineDialog,
   InlineDialogProps
@@ -29,6 +29,10 @@ export const SideNavSection = (
     isDisabled,
     ...additionalProps
   } = props;
+  let elemBefore = (icon || null) as React.ReactNode;
+  if (icon && (icon as IconDefinition).icon) {
+    elemBefore = <Icon size={size} icon={icon as IconDefinition} />;
+  }
   if (isExpanded) {
     return (
       <NavSectionContainer
@@ -40,7 +44,7 @@ export const SideNavSection = (
           size={size}
           isExpanded
           isDisabled={isDisabled}
-          elemBefore={icon && <Icon size={size} icon={icon} />}
+          elemBefore={elemBefore}
           elemAfter={
             <Icon
               icon={isOpened ? getIcon('chevronDown') : getIcon('chevronUp')}
@@ -71,7 +75,7 @@ export const SideNavSection = (
           isExpanded={false}
           isDisabled={isDisabled}
           isSelected={isSelected}
-          elemBefore={icon && <Icon size={size} icon={icon} />}
+          elemBefore={elemBefore}
           onMouseOver={() => !isOpenedDropdown && setIsOpenedDropdown(true)}
           onFocus={() => !isOpenedDropdown && setIsOpenedDropdown(true)}
           onMouseLeave={() => isOpenedDropdown && setIsOpenedDropdown(false)}

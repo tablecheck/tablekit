@@ -1,4 +1,4 @@
-import { Icon } from '@tablecheck/tablekit-icon';
+import { Icon, IconDefinition } from '@tablecheck/tablekit-icon';
 import { Size } from '@tablecheck/tablekit-theme';
 import { Tooltip } from '@tablecheck/tablekit-tooltip';
 import { ElementType, ReactNode, Ref } from 'react';
@@ -23,6 +23,11 @@ export function SideNavItem<Component extends ElementType>({
   } else {
     width = getSideNavRegularWidth({ isExpanded });
   }
+
+  let elemBefore = (icon || null) as React.ReactNode;
+  if (icon && (icon as IconDefinition).icon) {
+    elemBefore = <Icon size={size} icon={icon as IconDefinition} />;
+  }
   // This causes all sorts of hell and isn't actually helping at all
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const props: any = {
@@ -30,7 +35,7 @@ export function SideNavItem<Component extends ElementType>({
     isExpanded,
     isNested,
     size,
-    elemBefore: icon ? <Icon size={size} icon={icon} /> : null,
+    elemBefore,
     width
   };
   if (isExpanded || isNested) {
