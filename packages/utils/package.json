@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -15,7 +15,7 @@
     "lib"
   ],
   "dependencies": {
-    "@tablecheck/tablekit-package-namespace": "^1.0.0",
+    "@tablecheck/tablekit-package-namespace": "^1.1.0",
     "deepmerge": "3.2.1"
   },
   "peerDependencies": {

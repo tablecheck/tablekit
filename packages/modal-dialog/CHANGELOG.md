@@ -1,19 +1,15 @@
-# v3.1.0 (Mon Jan 24 2022)
-
-#### 🔩 Dependency Updates
-
-- security: update dependencies [#83](https://github.com/tablecheck/tablekit/pull/83) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [3.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@3.0.4...@tablecheck/tablekit-modal-dialog@3.1.0) (2022-01-24)
+
+**Note:** Version bump only for package @tablecheck/tablekit-modal-dialog
+
+
+
+
 
 ## [3.0.4](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@3.0.3...@tablecheck/tablekit-modal-dialog@3.0.4) (2021-12-13)
 

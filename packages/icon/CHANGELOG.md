@@ -1,23 +1,15 @@
-# v2.1.0 (Mon Jan 24 2022)
-
-:tada: This release contains work from a new contributor! :tada:
-
-Thank you, Alexander ([@DragonStuff](https://github.com/DragonStuff)), for all your work!
-
-#### 🔩 Dependency Updates
-
-- security(tablekit-icon): colors.js has embedded denial of service [#82](https://github.com/tablecheck/tablekit/pull/82) ([@DragonStuff](https://github.com/DragonStuff))
-
-#### Authors: 1
-
-- Alexander ([@DragonStuff](https://github.com/DragonStuff))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-icon@2.0.2...@tablecheck/tablekit-icon@2.1.0) (2022-01-24)
+
+**Note:** Version bump only for package @tablecheck/tablekit-icon
+
+
+
+
 
 ## [2.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-icon@2.0.1...@tablecheck/tablekit-icon@2.0.2) (2021-12-01)
 

@@ -1,23 +1,18 @@
-# v2.1.0 (Mon Jan 24 2022)
-
-#### 🚀 Enhancement
-
-- feat(tablekit-sidenav): support carbon icons in sidenav [#84](https://github.com/tablecheck/tablekit/pull/84) ([@SimeonC](https://github.com/SimeonC))
-
-#### 🔩 Dependency Updates
-
-- security: update dependencies [#83](https://github.com/tablecheck/tablekit/pull/83) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-sidenav@2.0.2...@tablecheck/tablekit-sidenav@2.1.0) (2022-01-24)
+
+
+### Features
+
+* **tablekit-sidenav:** support carbon icons in sidenav ([e21fa7f](https://github.com/tablecheck/tablekit/commit/e21fa7f30f85dd38980b21b43e8fd61714a93d46))
+
+
+
+
 
 ## [2.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-sidenav@2.0.1...@tablecheck/tablekit-sidenav@2.0.2) (2021-12-01)
 
