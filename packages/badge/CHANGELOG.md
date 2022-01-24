@@ -1,3 +1,15 @@
+# v2.1.0 (Mon Jan 24 2022)
+
+#### 🔩 Dependency Updates
+
+- security: update dependencies [#83](https://github.com/tablecheck/tablekit/pull/83) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

@@ -1,3 +1,30 @@
+# (Mon Jan 24 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Alexander ([@DragonStuff](https://github.com/DragonStuff)), for all your work!
+
+#### 🚀 Enhancement
+
+- `@tablecheck/tablekit-sidenav@2.1.0`
+  - feat(tablekit-sidenav): support carbon icons in sidenav [#84](https://github.com/tablecheck/tablekit/pull/84) ([@SimeonC](https://github.com/SimeonC))
+  - docs(tablekit-sidenav): create stories [#84](https://github.com/tablecheck/tablekit/pull/84) ([@irmir](https://github.com/irmir))
+
+#### 🔩 Dependency Updates
+
+- `@tablecheck/tablekit-alert@3.1.0`, `@tablecheck/tablekit-avatar@2.1.0`, `@tablecheck/tablekit-badge@2.1.0`, `@tablecheck/tablekit-banner@2.1.0`, `@tablecheck/tablekit-button-group@2.1.0`, `@tablecheck/tablekit-button@2.1.0`, `@tablecheck/tablekit-calendar@3.1.0`, `@tablecheck/tablekit-checkbox@2.1.0`, `@tablecheck/tablekit-inline-dialog@2.1.0`, `@tablecheck/tablekit-input-button@2.1.0`, `@tablecheck/tablekit-input@2.1.0`, `@tablecheck/tablekit-item@2.1.0`, `@tablecheck/tablekit-language-selector@2.1.0`, `@tablecheck/tablekit-logo@2.1.0`, `@tablecheck/tablekit-modal-dialog@3.1.0`, `@tablecheck/tablekit-package-namespace@1.1.0`, `@tablecheck/tablekit-panel@2.1.0`, `@tablecheck/tablekit-password-field@2.1.0`, `@tablecheck/tablekit-phone-input@3.1.0`, `@tablecheck/tablekit-radio@2.1.0`, `@tablecheck/tablekit-select@2.1.0`, `@tablecheck/tablekit-sidenav@2.1.0`, `@tablecheck/tablekit-spinner@2.1.0`, `@tablecheck/tablekit-table@2.1.0`, `@tablecheck/tablekit-tabs@2.1.0`, `@tablecheck/tablekit-tag@2.1.0`, `@tablecheck/tablekit-textarea@2.1.0`, `@tablecheck/tablekit-toggle@2.1.0`, `@tablecheck/tablekit-tooltip@2.1.0`, `@tablecheck/tablekit-topnav@2.1.0`, `@tablecheck/tablekit-utils@1.1.0`
+  - security: update dependencies [#83](https://github.com/tablecheck/tablekit/pull/83) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-icon@2.1.0`
+  - security(tablekit-icon): colors.js has embedded denial of service [#82](https://github.com/tablecheck/tablekit/pull/82) ([@DragonStuff](https://github.com/DragonStuff))
+
+#### Authors: 3
+
+- [@irmir](https://github.com/irmir)
+- Alexander ([@DragonStuff](https://github.com/DragonStuff))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu Jan 06 2022)
 
 #### 🐛 Bug Fix

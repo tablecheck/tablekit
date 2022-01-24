@@ -1,3 +1,19 @@
+# v2.1.0 (Mon Jan 24 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Alexander ([@DragonStuff](https://github.com/DragonStuff)), for all your work!
+
+#### 🔩 Dependency Updates
+
+- security(tablekit-icon): colors.js has embedded denial of service [#82](https://github.com/tablecheck/tablekit/pull/82) ([@DragonStuff](https://github.com/DragonStuff))
+
+#### Authors: 1
+
+- Alexander ([@DragonStuff](https://github.com/DragonStuff))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
