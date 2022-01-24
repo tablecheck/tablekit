@@ -29,7 +29,8 @@
         "infra",
         "example",
         "code",
-        "test"
+        "test",
+        "doc"
       ]
     },
     {
