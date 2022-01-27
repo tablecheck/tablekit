@@ -2,6 +2,19 @@
 
 #### 🐛 Bug Fix
 
+- `@tablecheck/tablekit-password-field@2.1.2`
+  - fix(tablekit-password-field): export stateless version [#86](https://github.com/tablecheck/tablekit/pull/86) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
+# (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
 - `@tablecheck/tablekit-input@2.1.1`
   - fix(tablekit-input): change font size to 16px [#85](https://github.com/tablecheck/tablekit/pull/85) ([@gazpachu](https://github.com/gazpachu))
 

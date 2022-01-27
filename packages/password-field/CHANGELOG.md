@@ -1,3 +1,15 @@
+# v2.1.2 (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-password-field): export stateless version [#86](https://github.com/tablecheck/tablekit/pull/86) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 1
+
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
