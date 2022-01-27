@@ -1,19 +1,18 @@
-# v2.1.2 (Thu Jan 27 2022)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-password-field): export stateless version [#86](https://github.com/tablecheck/tablekit/pull/86) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-password-field@2.1.1...@tablecheck/tablekit-password-field@2.1.2) (2022-01-27)
+
+
+### Bug Fixes
+
+* **tablekit-password-field:** export stateless version ([23014aa](https://github.com/tablecheck/tablekit/commit/23014aa41c4a3fa4df7bc004f4a151836bdf5e3e))
+
+
+
+
 
 ## [2.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-password-field@2.1.0...@tablecheck/tablekit-password-field@2.1.1) (2022-01-27)
 
