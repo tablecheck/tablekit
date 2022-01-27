@@ -1,3 +1,24 @@
+# (Thu Jan 27 2022)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-input@2.1.1`
+  - fix(tablekit-input): change font size to 16px [#85](https://github.com/tablecheck/tablekit/pull/85) ([@gazpachu](https://github.com/gazpachu))
+
+#### 📝 Documentation
+
+- `@tablecheck/tablekit-theme@2.1.1`, `@tablecheck/tablekit-typography@2.1.1`, `@tablecheck/tablekit-utils@1.1.1`
+  - docs: create stories for UI Helpers [#47](https://github.com/tablecheck/tablekit/pull/47) ([@irmir](https://github.com/irmir))
+- `@tablecheck/tablekit-free-icon-config@2.1.1`, `@tablecheck/tablekit-icon@2.1.1`, `@tablecheck/tablekit-topnav@2.1.1`
+  - docs: migrate Iconography [#59](https://github.com/tablecheck/tablekit/pull/59) ([@irmir](https://github.com/irmir))
+
+#### Authors: 2
+
+- [@irmir](https://github.com/irmir)
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Mon Jan 24 2022)
 
 :tada: This release contains work from a new contributor! :tada:

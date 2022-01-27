@@ -1,3 +1,15 @@
+# v2.1.1 (Thu Jan 27 2022)
+
+#### 📝 Documentation
+
+- docs: migrate Iconography [#59](https://github.com/tablecheck/tablekit/pull/59) ([@irmir](https://github.com/irmir))
+
+#### Authors: 1
+
+- [@irmir](https://github.com/irmir)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
