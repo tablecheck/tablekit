@@ -1,19 +1,15 @@
-# v1.1.1 (Thu Jan 27 2022)
-
-#### 📝 Documentation
-
-- docs: create stories for UI Helpers [#47](https://github.com/tablecheck/tablekit/pull/47) ([@irmir](https://github.com/irmir))
-
-#### Authors: 1
-
-- [@irmir](https://github.com/irmir)
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [1.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-utils@1.1.0...@tablecheck/tablekit-utils@1.1.1) (2022-01-27)
+
+**Note:** Version bump only for package @tablecheck/tablekit-utils
+
+
+
+
 
 # [1.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-utils@1.0.0...@tablecheck/tablekit-utils@1.1.0) (2022-01-24)
 

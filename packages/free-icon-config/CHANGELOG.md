@@ -1,19 +1,15 @@
-# v2.1.1 (Thu Jan 27 2022)
-
-#### 📝 Documentation
-
-- docs: migrate Iconography [#59](https://github.com/tablecheck/tablekit/pull/59) ([@irmir](https://github.com/irmir))
-
-#### Authors: 1
-
-- [@irmir](https://github.com/irmir)
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-free-icon-config@2.1.0...@tablecheck/tablekit-free-icon-config@2.1.1) (2022-01-27)
+
+**Note:** Version bump only for package @tablecheck/tablekit-free-icon-config
+
+
+
+
 
 # [2.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-free-icon-config@2.0.2...@tablecheck/tablekit-free-icon-config@2.1.0) (2022-01-24)
 

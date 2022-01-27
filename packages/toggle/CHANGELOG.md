@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-toggle@2.1.0...@tablecheck/tablekit-toggle@2.1.1) (2022-01-27)
+
+**Note:** Version bump only for package @tablecheck/tablekit-toggle
+
+
+
+
+
 # [2.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-toggle@2.0.2...@tablecheck/tablekit-toggle@2.1.0) (2022-01-24)
 
 **Note:** Version bump only for package @tablecheck/tablekit-toggle

@@ -1,19 +1,18 @@
-# v2.1.1 (Thu Jan 27 2022)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-input): change font size to 16px [#85](https://github.com/tablecheck/tablekit/pull/85) ([@gazpachu](https://github.com/gazpachu))
-
-#### Authors: 1
-
-- Joan Mira ([@gazpachu](https://github.com/gazpachu))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@2.1.0...@tablecheck/tablekit-input@2.1.1) (2022-01-27)
+
+
+### Bug Fixes
+
+* **tablekit-input:** change font size to 16px ([8cf4fd0](https://github.com/tablecheck/tablekit/commit/8cf4fd0bd8954141f15d42a29d40ffc8a864bcb8))
+
+
+
+
 
 # [2.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@2.0.3...@tablecheck/tablekit-input@2.1.0) (2022-01-24)
 
