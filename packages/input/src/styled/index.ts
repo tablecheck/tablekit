@@ -50,14 +50,7 @@ export const InputField = styled.input<InputFieldProps>`
 
   &,
   &::placeholder {
-    ${variant({
-      prop: 'fieldSize',
-      default: InputSize.Regular,
-      variants: {
-        [InputSize.Large]: css(Typography.Body1),
-        [InputSize.Regular]: css(Typography.Body2)
-      }
-    })};
+    ${Typography.Body1};
     line-height: initial;
   }
 
