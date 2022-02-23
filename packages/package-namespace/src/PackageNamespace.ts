@@ -13,6 +13,7 @@ export enum PackageNamespace {
   Icon = 'icon',
   InlineDialog = 'inline-dialog',
   InputButton = 'input-button',
+  InputGroup = 'input-group',
   Input = 'input',
   Item = 'item',
   LanguageSelector = 'language-selector',
