@@ -23,11 +23,6 @@ const Template: Story<InputGroupProps> = ({ ...args }) => (
       <Input placeholder="Code" size={InputSize.Regular} width={Size.Regular} />
       <Button>Submit</Button>
     </InputGroup>
-    <br />
-    <InputGroup {...args}>
-      <Input placeholder="Code" size={InputSize.Regular} shouldFitContainer />
-      <Button>Submit</Button>
-    </InputGroup>
   </ThemeProvider>
 );
 
