@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { Story, Meta } from '@storybook/react';
 import { Button } from '@tablecheck/tablekit-button';
-import { ItemGroup, ItemGroupOrientation } from '@tablecheck/tablekit-item';
 import { Typography } from '@tablecheck/tablekit-typography';
 import faker from 'faker';
 import { useState } from 'react';
@@ -39,28 +38,27 @@ const Wrapper = styled.div`
   }
 `;
 
-const BodyLockWrapper = styled.div`
-  height: 130vh;
-`;
-
-const StyledPanel = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  button {
-    margin-top: 20px;
-  }
-`;
-
-const StyledScrollable = styled.div`
+const BodyScrollLockWrapper = styled.div`
+  height: 200vh;
   display: flex;
   flex-direction: column;
-  height: 110vh;
-  overflow-y: auto;
-  padding: 15px;
-  p {
-    padding-top: 10px;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(2, 0, 36, 0) 50%,
+    rgba(222, 0, 255, 1) 100%
+  );
+  width: 90vw;
+`;
+
+const StyledPanel = styled(Panel)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  button {
+    margin-top: 20px;
   }
 `;
 
@@ -81,11 +79,13 @@ const Template: Story<PanelProps> = ({ ...args }) => {
         </ul>
       </div>
       <Button onClick={() => setOpen(true)}>{args.position} panel</Button>
-      <Panel {...args} isOpen={isOpen} onClickOutside={() => setOpen(false)}>
-        <StyledPanel>
-          <Button onClick={() => setOpen(false)}>Close Panel</Button>
-        </StyledPanel>
-      </Panel>
+      <StyledPanel
+        {...args}
+        isOpen={isOpen}
+        onClickOutside={() => setOpen(false)}
+      >
+        <Button onClick={() => setOpen(false)}>Close Panel</Button>
+      </StyledPanel>
     </Wrapper>
   );
 };
@@ -114,7 +114,7 @@ TopPanel.args = {
   height: '100px'
 };
 
-const BodyLockTemplate: Story<PanelProps> = ({ ...args }) => {
+const BodyScrollLockTemplate: Story<PanelProps> = ({ ...args }) => {
   const [state, setState] = useState({
     isOpenRight: false,
     isOpenLeft: false
@@ -132,39 +132,31 @@ const BodyLockTemplate: Story<PanelProps> = ({ ...args }) => {
     });
   };
   return (
-    <BodyLockWrapper>
-      <ItemGroup hasIndent orientation={ItemGroupOrientation.Horizontal}>
-        <Button onClick={toggleLeft}>Toggle Left Panel</Button>
-        <Button onClick={toggleRight}>Toggle Right Panel</Button>
-      </ItemGroup>
+    <BodyScrollLockWrapper>
+      <Button onClick={toggleLeft}>Toggle Left Panel</Button>
+      <p>
+        This story is for testing the case where the panel has full height, and
+        making sure it maintains it properly in physical devices when scrolling
+        changes the height of the viewport
+      </p>
       <Panel {...args} position={PanelPosition.Left} isOpen={state.isOpenLeft}>
-        <StyledPanel>
-          <StyledScrollable>
-            <Button onClick={toggleLeft}>Close Panel</Button>
-            <p>{faker.lorem.paragraph(30)}</p>
-          </StyledScrollable>
-        </StyledPanel>
-      </Panel>
-      {state.isOpenRight && (
+        <Button onClick={toggleLeft}>Close Panel</Button>
+        <Button onClick={toggleRight}>Toggle Right Panel</Button>
+        <p>{faker.lorem.paragraph(30)}</p>
         <Panel
           {...args}
           position={PanelPosition.Right}
           isOpen={state.isOpenRight}
         >
-          <StyledPanel>
-            <StyledScrollable>
-              <Button onClick={toggleRight}>Close Panel</Button>
-              <p>{faker.lorem.paragraph(30)}</p>
-            </StyledScrollable>
-          </StyledPanel>
+          <Button onClick={toggleRight}>Close Panel</Button>
+          <p>{faker.lorem.paragraph(25)}</p>
         </Panel>
-      )}
-    </BodyLockWrapper>
+      </Panel>
+    </BodyScrollLockWrapper>
   );
 };
 
-export const BodyLock = BodyLockTemplate.bind({});
-BodyLock.args = {
-  shouldDisableBodyScroll: true,
-  width: '400px'
+export const BodyScrollLock = BodyScrollLockTemplate.bind({});
+BodyScrollLock.args = {
+  shouldDisableBodyScroll: true
 };
