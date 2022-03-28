@@ -1,3 +1,19 @@
+# (Mon Mar 28 2022)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-banner@2.1.2`
+  - fix(tablekit-banner): fix icon alignment [#40](https://github.com/tablecheck/tablekit/pull/40) ([@irmir](https://github.com/irmir))
+- `@tablecheck/tablekit-password-field@2.1.3`
+  - fix(tablekit-password-field): export stateless version [#86](https://github.com/tablecheck/tablekit/pull/86) ([@gazpachu](https://github.com/gazpachu))
+
+#### Authors: 2
+
+- [@irmir](https://github.com/irmir)
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+---
+
 # (Thu Jan 27 2022)
 
 #### 🐛 Bug Fix
