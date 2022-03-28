@@ -1,19 +1,18 @@
-# v2.1.2 (Mon Mar 28 2022)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-banner): fix icon alignment [#40](https://github.com/tablecheck/tablekit/pull/40) ([@irmir](https://github.com/irmir))
-
-#### Authors: 1
-
-- [@irmir](https://github.com/irmir)
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-banner@2.1.1...@tablecheck/tablekit-banner@2.1.2) (2022-03-28)
+
+
+### Bug Fixes
+
+* **tablekit-banner:** fix icon alignment ([dbbd56c](https://github.com/tablecheck/tablekit/commit/dbbd56c858291eecf63e89628ed72b71b2fbfabf)), closes [#39](https://github.com/tablecheck/tablekit/issues/39)
+
+
+
+
 
 ## [2.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-banner@2.1.0...@tablecheck/tablekit-banner@2.1.1) (2022-01-27)
 
