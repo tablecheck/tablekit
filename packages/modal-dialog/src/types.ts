@@ -25,6 +25,7 @@ type ControlledModalProps =
     };
 
 export type BaseModalProps = ControlledModalProps & {
+  ['data-testid']?: string;
   children: ReactChild | null | (ReactChild | null)[];
   footerContent?: JSX.Element | string;
   hasCloseIcon?: boolean;

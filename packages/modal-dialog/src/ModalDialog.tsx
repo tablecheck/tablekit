@@ -26,7 +26,8 @@ export const ModalDialog = (props: BaseModalProps): JSX.Element => {
     onPointerDownOutside,
     onOpenAutoFocus,
     onEscapeKeyDown,
-    onCloseAutoFocus
+    onCloseAutoFocus,
+    'data-testid': testId
   } = props;
   // internal state of uncontrolled modal, needed for animation
   const [isOpenInternal, setIsOpenInternal] = useState(false);
@@ -60,6 +61,7 @@ export const ModalDialog = (props: BaseModalProps): JSX.Element => {
         onPointerDownOutside={onPointerDownOutside}
         isChromeless={isChromeless}
         shouldPreventCloseOutside={shouldPreventCloseOutside}
+        data-testid={testId}
       >
         {typeof headerContent !== 'undefined' ? (
           <ModalHeader
