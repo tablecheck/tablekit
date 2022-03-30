@@ -19,6 +19,7 @@ export const AnimatedContent = (
     | 'shouldPreventCloseOutside'
     | 'maxWidth'
     | 'maxHeight'
+    | 'data-testid'
   >
 ): JSX.Element => {
   const {
@@ -33,7 +34,8 @@ export const AnimatedContent = (
     onOpenAutoFocus,
     onCloseAutoFocus,
     shouldPreventCloseOutside,
-    onPointerDownOutside
+    onPointerDownOutside,
+    'data-testid': testId
   } = props;
   const transition = useTransition(isOpen, {
     from: { opacity: 0, top: Spacing.L6 },
@@ -76,6 +78,7 @@ export const AnimatedContent = (
                   e.preventDefault();
                 }
               }}
+              data-testid={testId}
             >
               {children}
             </ModalContent>

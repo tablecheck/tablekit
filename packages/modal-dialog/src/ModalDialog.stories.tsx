@@ -152,7 +152,11 @@ export const Information = InfoTemplate.bind({});
 
 const Template: Story<BaseModalProps> = ({ isOpen, onOpenChange, ...args }) => (
   <Wrapper>
-    <ModalDialog {...args} trigger={<Button>Toggle Modal</Button>}>
+    <ModalDialog
+      {...args}
+      data-testid="Modal Test Id"
+      trigger={<Button>Toggle Modal</Button>}
+    >
       {args.children}
     </ModalDialog>
   </Wrapper>
