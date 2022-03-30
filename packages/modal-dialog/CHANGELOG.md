@@ -1,19 +1,18 @@
-# v3.1.2 (Wed Mar 30 2022)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-modal-dialog): correctly forward on data-testid prop [#91](https://github.com/tablecheck/tablekit/pull/91) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@3.1.1...@tablecheck/tablekit-modal-dialog@3.1.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* **tablekit-modal-dialog:** correctly forward on data-testid prop ([d070989](https://github.com/tablecheck/tablekit/commit/d0709892a325e388b77ba48eafdc082e22476ae5))
+
+
+
+
 
 ## [3.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-modal-dialog@3.1.0...@tablecheck/tablekit-modal-dialog@3.1.1) (2022-01-27)
 
