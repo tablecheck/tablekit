@@ -1,3 +1,15 @@
+# v3.1.2 (Wed Mar 30 2022)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-modal-dialog): correctly forward on data-testid prop [#91](https://github.com/tablecheck/tablekit/pull/91) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
