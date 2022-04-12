@@ -71,7 +71,8 @@ export const ModalContent = animated<ElementType>(styled(RxContent, {
       'maxHeight',
       'width',
       'maxWidth',
-      'isChromeless'
+      'isChromeless',
+      'className'
     ].indexOf(prop) === -1
 })<
   Pick<

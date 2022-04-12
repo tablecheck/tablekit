@@ -9,6 +9,7 @@ import { BaseModalProps } from './types';
 export const ModalDialog = (props: BaseModalProps): JSX.Element => {
   const {
     children,
+    className,
     headerContent,
     height,
     width,
@@ -50,6 +51,7 @@ export const ModalDialog = (props: BaseModalProps): JSX.Element => {
     <ModalRoot onOpenChange={onOpenChangeHandler} open={isModalOpen}>
       {trigger ? <RxTrigger asChild>{trigger}</RxTrigger> : null}
       <AnimatedContent
+        className={className}
         isOpen={isModalOpen}
         height={height}
         width={width}
