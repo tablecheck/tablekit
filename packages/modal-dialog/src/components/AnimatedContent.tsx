@@ -8,6 +8,7 @@ export const AnimatedContent = (
   props: Pick<
     BaseModalProps,
     | 'children'
+    | 'className'
     | 'height'
     | 'width'
     | 'isChromeless'
@@ -24,6 +25,7 @@ export const AnimatedContent = (
 ): JSX.Element => {
   const {
     children,
+    className,
     height,
     width,
     maxHeight,
@@ -57,6 +59,7 @@ export const AnimatedContent = (
               }}
             />
             <ModalContent
+              className={className}
               forceMount
               height={height}
               width={width}
