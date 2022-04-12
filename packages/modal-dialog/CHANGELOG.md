@@ -1,3 +1,15 @@
+# v3.1.3 (Tue Apr 12 2022)
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-modal-dialog): passthrough classname to modal content [#92](https://github.com/tablecheck/tablekit/pull/92) (wahid.farid@tablecheck.com)
+
+#### Authors: 1
+
+- Wahid Farid (wahid.farid@tablecheck.com)
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
