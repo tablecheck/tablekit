@@ -2,7 +2,7 @@ const mainConfig = require('@tablecheck/scripts/config/storybook.main');
 
 module.exports = {
   ...mainConfig,
-  addons: [...mainConfig.addons, 'storybook-dark-mode'],
+  addons: [...mainConfig.addons, 'storybook-dark-mode', 'storybook-rtl-addon'],
   stories: [
     '../pages/**/*.stories.mdx',
     '../packages/**/src/*.stories.mdx',

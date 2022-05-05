@@ -130,83 +130,115 @@ export const getPadding = variant<InputSize, SerializedStyles, InputFieldProps>(
     default: InputSize.Regular,
     variants: {
       [InputSize.Large]: ({ hasIconAfter, hasIconBefore, ...props }) => css`
-        padding-right: ${hasIconAfter ? FieldHeight.Large : '18px'};
-        padding-left: ${hasIconBefore ? FieldHeight.Large : '18px'};
+        padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Large : '18px'
+      };
+        padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Large : '18px'
+      };
         background-position: right ${FieldHeight.Large} top 50% !important;
 
         &:hover,
         &:focus {
-          padding-right: ${hasIconAfter ? FieldHeight.Large : '18px'};
-          padding-left: ${hasIconBefore ? FieldHeight.Large : '18px'};
+          padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Large : '18px'
+      };
+          padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Large : '18px'
+      };
           background-position: right ${FieldHeight.Large} top 50% !important;
         }
 
         & ~ span {
           left: auto !important;
           right: auto !important;
-          ${ifRtl('left', 'right')(props)}: ${hasIconAfter
-            ? FieldHeight.Large
-            : '18px'} !important;
+          ${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Large : '18px'
+      } !important;
         }
       `,
       [InputSize.Regular]: ({ hasIconAfter, hasIconBefore, ...props }) => css`
-        padding-right: ${hasIconAfter ? FieldHeight.Regular : Spacing.L3};
-        padding-left: ${hasIconBefore ? FieldHeight.Regular : Spacing.L3};
+        padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Regular : Spacing.L3
+      };
+        padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Regular : Spacing.L3
+      };
         background-position: right ${FieldHeight.Regular} top 50% !important;
 
         &:hover,
         &:focus {
-          padding-right: ${hasIconAfter ? FieldHeight.Regular : Spacing.L3};
-          padding-left: ${hasIconBefore ? FieldHeight.Regular : Spacing.L3};
+          padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Regular : Spacing.L3
+      };
+          padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Regular : Spacing.L3
+      };
           background-position: right ${FieldHeight.Regular} top 50% !important;
         }
 
         & ~ span {
           left: auto !important;
           right: auto !important;
-          ${ifRtl('left', 'right')(props)}: ${hasIconAfter
-            ? FieldHeight.Regular
-            : Spacing.L3} !important;
+          ${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Regular : Spacing.L3
+      } !important;
         }
       `,
       [InputSize.Regular2]: ({ hasIconAfter, hasIconBefore, ...props }) => css`
-        padding-right: ${hasIconAfter ? FieldHeight.Regular2 : Spacing.L3};
-        padding-left: ${hasIconBefore ? FieldHeight.Regular2 : Spacing.L3};
+        padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Regular2 : Spacing.L3
+      };
+        padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Regular2 : Spacing.L3
+      };
         background-position: right ${FieldHeight.Regular2} top 50% !important;
 
         &:hover,
         &:focus {
-          padding-right: ${hasIconAfter ? FieldHeight.Regular2 : Spacing.L3};
-          padding-left: ${hasIconBefore ? FieldHeight.Regular2 : Spacing.L3};
+          padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Regular2 : Spacing.L3
+      };
+          padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Regular2 : Spacing.L3
+      };
           background-position: right ${FieldHeight.Regular2} top 50% !important;
         }
 
         & ~ span {
           left: auto !important;
           right: auto !important;
-          ${ifRtl('left', 'right')(props)}: ${hasIconAfter
-            ? FieldHeight.Regular2
-            : Spacing.L3} !important;
+          ${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Regular2 : Spacing.L3
+      } !important;
         }
       `,
       [InputSize.Small]: ({ hasIconAfter, hasIconBefore, ...props }) => css`
-        padding-right: ${hasIconAfter ? FieldHeight.Small : '10px'};
-        padding-left: ${hasIconBefore ? FieldHeight.Small : '10px'};
+        padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Small : '10px'
+      };
+        padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Small : '10px'
+      };
         background-position: right ${FieldHeight.Small} top 50% !important;
 
         &:hover,
         &:focus {
-          padding-right: ${hasIconAfter ? FieldHeight.Small : '10px'};
-          padding-left: ${hasIconBefore ? FieldHeight.Small : '10px'};
+          padding-${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Small : '10px'
+      };
+          padding-${ifRtl('right', 'left')(props)}: ${
+        hasIconBefore ? FieldHeight.Small : '10px'
+      };
           background-position: right ${FieldHeight.Small} top 50% !important;
         }
 
         & ~ span {
           left: auto !important;
           right: auto !important;
-          ${ifRtl('left', 'right')(props)}: ${hasIconAfter
-            ? FieldHeight.Small
-            : '10px'} !important;
+          ${ifRtl('left', 'right')(props)}: ${
+        hasIconAfter ? FieldHeight.Small : '10px'
+      } !important;
         }
       `
     }

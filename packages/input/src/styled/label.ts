@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Spacing } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
-import { getThemeValue } from '@tablecheck/tablekit-utils';
+import { getThemeValue, ifRtl, padding } from '@tablecheck/tablekit-utils';
 
 import { inputClassicTheme, inputThemeNamespace } from '../themes';
 
@@ -14,7 +14,7 @@ export const InputLabelInner = styled.div`
   ${Typography.Label2};
   font-style: normal;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: ${ifRtl('right', 'left')};
   color: ${getThemeValue(
     `${inputThemeNamespace}.label.textColor`,
     inputClassicTheme?.label?.textColor
@@ -25,5 +25,7 @@ export const InputLabelInner = styled.div`
 
 export const RequiredIndicator = styled.span`
   color: ${({ theme }) => theme.colors.danger};
-  padding-left: 2px;
+  ${padding({
+    left: '2px'
+  })}
 `;
