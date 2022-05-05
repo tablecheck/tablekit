@@ -2,25 +2,10 @@ import styled from '@emotion/styled';
 import { faEdit } from '@fortawesome/free-solid-svg-icons/faEdit';
 import { Story, Meta } from '@storybook/react';
 import { Icon } from '@tablecheck/tablekit-icon';
-import {
-  DARK_COLORS,
-  CLASSIC_COLORS,
-  Size,
-  ThemeProvider
-} from '@tablecheck/tablekit-theme';
+import { Size } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
-import { useDarkMode } from 'storybook-dark-mode';
 
-import {
-  Input,
-  InputProps,
-  inputDarkTheme,
-  inputClassicTheme,
-  inputThemeNamespace,
-  Appearance,
-  InputSize,
-  InputShape
-} from './index';
+import { Input, InputProps, Appearance, InputSize, InputShape } from './index';
 
 export default {
   title: 'Components/Input',
@@ -71,16 +56,6 @@ export default {
   }
 } as Meta;
 
-const darkTheme = {
-  colors: DARK_COLORS,
-  [inputThemeNamespace]: inputDarkTheme
-};
-
-const classicTheme = {
-  colors: CLASSIC_COLORS,
-  [inputThemeNamespace]: inputClassicTheme
-};
-
 const Wrapper = styled.div`
   width: 94%;
   margin: 0 auto;
@@ -107,18 +82,13 @@ const FormInput = styled(Input)`
   border: 1px solid blue;
 `;
 
-const Template: Story<InputProps> = ({ ...args }) => {
-  const isDark = useDarkMode();
-  return (
-    <ThemeProvider theme={isDark ? darkTheme : classicTheme}>
-      <Wrapper>
-        <div>
-          <Input {...args} />
-        </div>
-      </Wrapper>
-    </ThemeProvider>
-  );
-};
+const Template: Story<InputProps> = ({ ...args }) => (
+  <Wrapper>
+    <div>
+      <Input {...args} />
+    </div>
+  </Wrapper>
+);
 
 export const SmallSize = Template.bind({});
 SmallSize.args = {
@@ -307,31 +277,25 @@ FittedForContainer.args = {
   shouldFitContainer: true
 };
 
-const FormTemplate: Story<InputProps> = ({ ...args }) => {
-  const isDark = useDarkMode();
-  return (
-    <ThemeProvider theme={isDark ? darkTheme : classicTheme}>
-      <FormWrapper>
-        <div>
-          <p>
-            By default, the Input field has no external padding, the div that
-            wraps the input is the exact size of the content. When using in a
-            form, often we will want to space inputs apart from each other, here
-            is the minimal example of how to do this.
-          </p>
-          <p>
-            A blue border has been added around the inputs to assist with
-            clarity.
-          </p>
-        </div>
-        <div>
-          <FormInput {...args} isMessageHidden />
-          <FormInput {...args} message="Some helper text" />
-          <FormInput {...args} isMessageHidden />
-        </div>
-      </FormWrapper>
-    </ThemeProvider>
-  );
-};
+const FormTemplate: Story<InputProps> = ({ ...args }) => (
+  <FormWrapper>
+    <div>
+      <p>
+        By default, the Input field has no external padding, the div that wraps
+        the input is the exact size of the content. When using in a form, often
+        we will want to space inputs apart from each other, here is the minimal
+        example of how to do this.
+      </p>
+      <p>
+        A blue border has been added around the inputs to assist with clarity.
+      </p>
+    </div>
+    <div>
+      <FormInput {...args} isMessageHidden />
+      <FormInput {...args} message="Some helper text" />
+      <FormInput {...args} isMessageHidden />
+    </div>
+  </FormWrapper>
+);
 
 export const UsingInForms = FormTemplate.bind({});

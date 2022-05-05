@@ -1,6 +1,8 @@
 import { themes } from '@storybook/theming';
+import { LocaleCode } from '@tablecheck/locales';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
+import { useDirection } from 'storybook-rtl-addon';
 
 import { ThemeProvider, CLASSIC_COLORS, DARK_COLORS } from '../packages/theme';
 
@@ -64,8 +66,9 @@ export const parameters = {
 };
 
 export const decorators = [
-  (story: () => JSX.Element): JSX.Element => {
+  (story: () => JSX.Element, context): JSX.Element => {
     const isDark = useDarkMode();
+    const direction = useDirection(context);
     const theme = {
       isDark,
       colors: isDark
@@ -76,8 +79,12 @@ export const decorators = [
           }
     };
     return (
-      <ThemeProvider theme={theme} isDark={isDark}>
-        {story()}
+      <ThemeProvider
+        theme={theme}
+        isDark={isDark}
+        locale={direction === 'rtl' ? LocaleCode.Arabic : LocaleCode.English}
+      >
+        <div dir={direction}>{story()}</div>
       </ThemeProvider>
     );
   }
