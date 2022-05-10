@@ -57,6 +57,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/irmir"><img src="https://avatars.githubusercontent.com/u/59263605?v=4?s=100" width="100px;" alt=""/><br /><sub><b>irmir</b></sub></a><br /><a href="#example-irmir" title="Examples">💡</a> <a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=irmir" title="Code">💻</a></td>
     <td align="center"><a href="http://joanmira.com/"><img src="https://avatars.githubusercontent.com/u/1721288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joan Mira</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=gazpachu" title="Documentation">📖</a> <a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=gazpachu" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/johnnyshields"><img src="https://avatars.githubusercontent.com/u/27655?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Johnny Shields</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=johnnyshields" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Findmitrey"><img src="https://avatars.githubusercontent.com/u/19979106?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitriy</b></sub></a><br /><a href="#example-Findmitrey" title="Examples">💡</a> <a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=Findmitrey" title="Code">💻</a></td>
   </tr>
 </table>
 

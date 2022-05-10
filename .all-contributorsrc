@@ -61,6 +61,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Findmitrey",
+      "name": "Dmitriy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19979106?v=4",
+      "profile": "https://github.com/Findmitrey",
+      "contributions": [
+        "example",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 6,
