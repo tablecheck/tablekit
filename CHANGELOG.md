@@ -1,3 +1,16 @@
+# (Tue May 10 2022)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-input@2.1.2`
+  - fix(tablekit-input): add rtl support [#94](https://github.com/tablecheck/tablekit/pull/94) ([@Findmitrey](https://github.com/Findmitrey))
+
+#### Authors: 1
+
+- Dmitriy ([@Findmitrey](https://github.com/Findmitrey))
+
+---
+
 # (Tue Apr 12 2022)
 
 #### 🐛 Bug Fix
