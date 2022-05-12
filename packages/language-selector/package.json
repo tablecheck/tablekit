@@ -20,7 +20,7 @@
     "@tablecheck/tablekit-inline-dialog": "^2.1.1",
     "@tablecheck/tablekit-item": "^2.1.1",
     "@tablecheck/tablekit-package-namespace": "^1.1.0",
-    "@tablecheck/tablekit-panel": "^2.1.1",
+    "@tablecheck/tablekit-panel": "2.1.2-canary.90.2028240272.0",
     "@tablecheck/tablekit-theme": "^2.1.1",
     "@tablecheck/tablekit-typography": "^2.1.1",
     "@tablecheck/tablekit-utils": "^1.1.1"

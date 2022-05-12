@@ -14,8 +14,8 @@ export const Panel = forwardRef<HTMLDivElement, PanelProps>(
       onClickOutside,
       shouldDisableBodyScroll = false,
       position = PanelPosition.Right,
-      width = '100%',
-      height = '100%',
+      width,
+      height,
       ...restProps
     }: PanelProps,
     ref

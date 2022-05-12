@@ -35,7 +35,17 @@ export const StaticContainer = styled('div', {
     }`;
   }};
   ${mediaQuery('width', (value) => `width: ${value || '100%'}`)};
-  ${mediaQuery('height', (value) => `height: ${value || '100%'}`)};
+  ${mediaQuery(
+    'height',
+    (value) =>
+      `${
+        value
+          ? `height: ${value};`
+          : 'min-height: max(100%, 100vh); min-height: -webkit-fill-available;'
+      }`
+  )}
+  max-height: max(100%, 100vh);
+  overflow-y: auto;
   ${DEPTH.FIXED};
   background-color: ${getThemeValue(
     `${panelThemeNamespace}.backgroundColor`,

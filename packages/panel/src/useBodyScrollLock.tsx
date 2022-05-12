@@ -1,9 +1,10 @@
+import { MutableRefObject, useEffect } from 'react';
+
 import {
   clearAllBodyScrollLocks,
   disableBodyScroll,
   enableBodyScroll
-} from 'body-scroll-lock';
-import { MutableRefObject, useEffect } from 'react';
+} from './bodyScrollLock';
 
 const OBSERVER_CLASS_NAME = 'PanelScrollObserver';
 
