@@ -59,6 +59,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/johnnyshields"><img src="https://avatars.githubusercontent.com/u/27655?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Johnny Shields</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=johnnyshields" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/Findmitrey"><img src="https://avatars.githubusercontent.com/u/19979106?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitriy</b></sub></a><br /><a href="#example-Findmitrey" title="Examples">💡</a> <a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=Findmitrey" title="Code">💻</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/daniellizik"><img src="https://avatars.githubusercontent.com/u/10506366?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Lizik</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=daniellizik" title="Code">💻</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
