@@ -16,8 +16,8 @@ type PropsType = {
   /** show a style indicating that the label is for a required field */
   isRequired?: boolean;
 
-  /** the label text to display */
-  label: string;
+  /** the label text to display, note that the label's direct parent is a span so passing in a block element such as a div might throw warnings */
+  label: string | ReactNode;
 
   /** onclick handler */
   onClick?: (event: MouseEvent | KeyboardEvent) => void;
