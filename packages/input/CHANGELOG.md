@@ -1,23 +1,18 @@
-# v2.1.3 (Thu May 12 2022)
-
-:tada: This release contains work from a new contributor! :tada:
-
-Thank you, Daniel Lizik ([@daniellizik](https://github.com/daniellizik)), for all your work!
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-input): label prop can be react node or string [#97](https://github.com/tablecheck/tablekit/pull/97) ([@daniellizik](https://github.com/daniellizik))
-
-#### Authors: 1
-
-- Daniel Lizik ([@daniellizik](https://github.com/daniellizik))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.1.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@2.1.2...@tablecheck/tablekit-input@2.1.3) (2022-05-12)
+
+
+### Bug Fixes
+
+* **tablekit-input:** label prop can be react node or string ([d5116d4](https://github.com/tablecheck/tablekit/commit/d5116d4dc8e2e87f30154df3885f1236fedcf44b)), closes [#96](https://github.com/tablecheck/tablekit/issues/96)
+
+
+
+
 
 ## [2.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-input@2.1.1...@tablecheck/tablekit-input@2.1.2) (2022-05-10)
 
