@@ -1,3 +1,19 @@
+# v2.1.3 (Thu May 12 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Daniel Lizik ([@daniellizik](https://github.com/daniellizik)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix(tablekit-input): label prop can be react node or string [#97](https://github.com/tablecheck/tablekit/pull/97) ([@daniellizik](https://github.com/daniellizik))
+
+#### Authors: 1
+
+- Daniel Lizik ([@daniellizik](https://github.com/daniellizik))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
