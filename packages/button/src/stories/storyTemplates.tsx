@@ -1,25 +1,13 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Story } from '@storybook/react';
-import {
-  ThemeProvider,
-  COLORS,
-  CLASSIC_COLORS,
-  DARK_COLORS
-} from '@tablecheck/tablekit-theme';
+import { COLORS, CLASSIC_COLORS } from '@tablecheck/tablekit-theme';
 import { useState } from 'react';
-import { useDarkMode } from 'storybook-dark-mode';
 
-import {
-  checkboxDarkTheme,
-  checkboxThemeNamespace,
-  Checkbox
-} from '../../../checkbox';
+import { Checkbox } from '../../../checkbox';
 import { ItemGroup, ItemGroupOrientation } from '../../../item';
 import { Tooltip } from '../../../tooltip';
 import {
-  buttonDarkTheme,
-  buttonThemeNamespace,
   Button,
   BaseButtonProps,
   ButtonAppearance,
@@ -27,16 +15,6 @@ import {
 } from '../index';
 
 import { Description, Wrapper, Container, RotatorButton } from './storyStyles';
-
-const darkTheme = {
-  colors: DARK_COLORS,
-  [buttonThemeNamespace]: buttonDarkTheme,
-  [checkboxThemeNamespace]: checkboxDarkTheme
-};
-
-const classicTheme = {
-  colors: CLASSIC_COLORS
-};
 
 export const InfoTemplate: Story = () => (
   <Description>
@@ -70,58 +48,43 @@ export const InfoTemplate: Story = () => (
   </Description>
 );
 
-export const Template: Story<BaseButtonProps> = ({ ...args }) => {
-  const isDark = useDarkMode();
-  return (
-    <Wrapper>
-      <ThemeProvider theme={isDark ? darkTheme : classicTheme}>
-        <Container>
-          <Button onClick={() => {}} {...args}>
-            {args.children}
-          </Button>
-        </Container>
-      </ThemeProvider>
-    </Wrapper>
-  );
-};
+export const Template: Story<BaseButtonProps> = ({ ...args }) => (
+  <Wrapper>
+    <Container>
+      <Button onClick={() => {}} {...args}>
+        {args.children}
+      </Button>
+    </Container>
+  </Wrapper>
+);
 
 const Ref = styled.a``;
 
 const LinkBtn = ComponentButton.withComponent(Ref);
 
-export const HrefTemplate: Story = ({ ...args }) => {
-  const isDark = useDarkMode();
-  return (
-    <Wrapper>
-      <ThemeProvider theme={isDark ? darkTheme : classicTheme}>
-        <LinkBtn href="http://google.com" {...args}>
-          {args.children}
-        </LinkBtn>
-      </ThemeProvider>
-    </Wrapper>
-  );
-};
+export const HrefTemplate: Story = ({ ...args }) => (
+  <Wrapper>
+    <LinkBtn href="http://google.com" {...args}>
+      {args.children}
+    </LinkBtn>
+  </Wrapper>
+);
 
-export const RefTemplate: Story<BaseButtonProps> = ({ ...args }) => {
-  const isDark = useDarkMode();
-  return (
-    <Wrapper>
-      <ThemeProvider theme={isDark ? darkTheme : classicTheme}>
-        <Tooltip
-          shouldHideOnMouseDown
-          content="Some content"
-          popperProps={{ placement: 'bottom' }}
-        >
-          {(setTargetRef: React.ForwardedRef<HTMLButtonElement>) => (
-            <Button onClick={() => {}} {...args} ref={setTargetRef}>
-              {args.children}
-            </Button>
-          )}
-        </Tooltip>
-      </ThemeProvider>
-    </Wrapper>
-  );
-};
+export const RefTemplate: Story<BaseButtonProps> = ({ ...args }) => (
+  <Wrapper>
+    <Tooltip
+      shouldHideOnMouseDown
+      content="Some content"
+      popperProps={{ placement: 'bottom' }}
+    >
+      {(setTargetRef: React.ForwardedRef<HTMLButtonElement>) => (
+        <Button onClick={() => {}} {...args} ref={setTargetRef}>
+          {args.children}
+        </Button>
+      )}
+    </Tooltip>
+  </Wrapper>
+);
 
 const appearances = Object.values(ButtonAppearance).filter(
   (appearance) =>
@@ -160,17 +123,15 @@ export const RotateTemplate: Story<BaseButtonProps> = ({ ...args }) => {
   const [state, set] = useState('closed');
   return (
     <Wrapper>
-      <ThemeProvider>
-        <Checkbox
-          onChange={() => set(state === 'open' ? 'closed' : 'open')}
-          isChecked={state === 'open'}
-        >
-          Toggle chevron state
-        </Checkbox>
-        <Btn {...args} data-state={state}>
-          {args.children}
-        </Btn>
-      </ThemeProvider>
+      <Checkbox
+        onChange={() => set(state === 'open' ? 'closed' : 'open')}
+        isChecked={state === 'open'}
+      >
+        Toggle chevron state
+      </Checkbox>
+      <Btn {...args} data-state={state}>
+        {args.children}
+      </Btn>
     </Wrapper>
   );
 };

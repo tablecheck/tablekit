@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Spacing, FieldHeight, Size } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
-import { getThemeValue } from '@tablecheck/tablekit-utils';
+import { getThemeValue, ifRtl } from '@tablecheck/tablekit-utils';
 
 import { radioClassicTheme, radioThemeNamespace } from './themes';
 import { RadioProps } from './types';
@@ -40,7 +40,8 @@ export const RadioInputDisplay = styled.span<{
       radioClassicTheme.default.borderColor
     )};
   border-radius: 50%;
-  margin: 0 ${Spacing.L2} 0 0;
+  margin: 2px 0 0 0;
+  ${(props) => `margin-${ifRtl('left', 'right')(props)}: ${Spacing.L2};`}
   transition: box-shadow ${TRANSITION_SETTINGS},
     border-color ${TRANSITION_SETTINGS};
   vertical-align: text-bottom;

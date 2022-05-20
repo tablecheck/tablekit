@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Spacing, FieldHeight, Size } from '@tablecheck/tablekit-theme';
 import { Typography } from '@tablecheck/tablekit-typography';
-import { getThemeValue } from '@tablecheck/tablekit-utils';
+import { getThemeValue, ifRtl } from '@tablecheck/tablekit-utils';
 import type { ThemeOnlyProps } from '@tablecheck/tablekit-utils';
 
 import {
@@ -24,7 +24,7 @@ export const RequiredIndicator = styled.span`
     `${checkboxThemeNamespace}.fillColorInvalid`,
     checkboxClassicTheme.fillColorInvalid
   )};
-  padding-left: ${Spacing.L1};
+  ${(props) => `padding-${ifRtl('right', 'left')(props)}: ${Spacing.L1};`}
   font-weight: bold;
 `;
 
@@ -52,7 +52,8 @@ export const InputDisplay = styled.span<{
   border-radius: 2px;
   display: inline-flex;
   flex-shrink: 0;
-  margin: 2px ${Spacing.L2} 0 0;
+  margin: 2px 0 0 0;
+  ${(props) => `margin-${ifRtl('left', 'right')(props)}: ${Spacing.L2};`}
   position: relative;
   transition: box-shadow ${TRANSITION_SETTINGS},
     border-color ${TRANSITION_SETTINGS};
