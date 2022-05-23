@@ -19,3 +19,10 @@ tsconfig.*.json
 .env.production.local
 .@tablecheck-react-system
 .@tablecheck
+*-debug.log
+
+# Rush temporary files
+common/deploy/
+common/temp/
+common/autoinstallers/*/.npmrc
+**/.rush/temp/
