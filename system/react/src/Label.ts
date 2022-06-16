@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Spacing } from 'constants';
+
+import { Spacing } from './constants';
 
 export const baseElement = 'label';
 

@@ -2,9 +2,17 @@
 
 Next generation UI component library
 
+# TODO list
+
+1. Need to change `paths.js` in `@tablecheck/scripts` to be `const appDirectory = process.env.RUSH_INVOKED_FOLDER || process.env.INIT_CWD || fs.realpathSync(process.cwd());` or the cwd doesn't run properly on `rush build`
+2. Haven't tested/fixed commitlint, eslint, tests etc
+3. Need to write docs/link to how to do releases with Rush (it's not based on commit messages, but there don't seem to be any that support commit based release bump for monorepos anymore...)
+4. Haven't checked storybook runs.
+5. Commit checks are broken (use --skip-checks)
+
 ## Installation
 
-You will require [pnpm](https://pnpm.io/installation) and [rushjs](https://rushjs.io/pages/developer/new_developer/).
+You will require [rushjs](https://rushjs.io/pages/developer/new_developer/).
 
 ```
 nvm use

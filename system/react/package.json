@@ -5,7 +5,7 @@
   "author": "TableCheck Inc.",
   "version": "3.0.0-0",
   "keywords": [],
-  "main": ".eslintrc.js",
+  "main": "./lib/es5/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "scripts": {
@@ -50,8 +50,7 @@
     "@storybook/core-events": "6.5.4",
     "@storybook/react": "6.5.4",
     "@storybook/theming": "6.5.4",
-    "@tablecheck/commitlint-config": "1.1.0",
-    "@tablecheck/scripts": "1.12.3",
+    "@tablecheck/scripts": "2.1.0",
     "@types/react": "17",
     "acorn": "8.7.1",
     "auditjs": "~4.0.25",

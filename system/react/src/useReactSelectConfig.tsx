@@ -3,7 +3,7 @@ import { ChevronDown20, Close16 } from '@carbon/icons-react';
 import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Spinner } from '@tablecheck/tablekit-spinner';
-import { Spacing } from '@tablecheck/tablekit-theme';
+import { Spacing } from './constants';
 import * as React from 'react';
 import {
   SelectComponentsConfig,
@@ -17,7 +17,7 @@ import {
   BorderSide,
   getBorderColor,
   getBorderRadius
-} from 'utils/css/border';
+} from './border';
 
 import { baseStylesObject as menuStylesObject } from './Menu';
 import {
