@@ -4,9 +4,21 @@ import fs from 'fs-extra';
 import prettier from 'prettier';
 import ts from 'typescript';
 
-const filenames = fs
-  .readdirSync(path.join(process.cwd(), 'src'))
-  .concat(['fonts/weights.ts'])
+const subDirectories = ['components', 'styles', 'utils', 'hooks'];
+
+const filenames = ['fonts/weights.ts']
+  .concat(
+    subDirectories.reduce(
+      (result, folder) =>
+        result.concat(
+          fs
+            .readdirSync(path.join(process.cwd(), `src/${folder}`))
+            .map((filepath) => path.join(folder, filepath)),
+          []
+        ),
+      []
+    )
+  )
   .filter(
     (filepath) =>
       filepath.match(/\.tsx?$/gi) &&

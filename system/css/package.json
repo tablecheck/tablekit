@@ -1,24 +1,22 @@
 {
   "name": "@tablecheck/tablekit-css",
-  "version": "3.0.0-rc.0",
   "description": "TableCheck design system in scss/css",
-  "main": "src/build.js",
+  "license": "ISC",
+  "author": "",
+  "version": "3.0.0-rc.0",
   "type": "module",
+  "keywords": [],
+  "main": "src/build.js",
   "scripts": {
     "build": "node src/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@tablecheck/tablekit-react": "3.0.0-0",
-    "fs-extra": "10.1.0",
-    "execa": "6.1.0",
-    "typescript": "4.7.3",
-    "@tablecheck/scripts": "2.1.0",
-    "prettier": "2.7.0",
+    "cssnano": "5.1.12",
     "lodash": "4.17.21",
-    "pluralize": "8.0.0"
+    "pluralize": "8.0.0",
+    "postcss": "8.4.14",
+    "postcss-nested": "5.0.6"
   }
 }

@@ -11,12 +11,11 @@
   "scripts": {
     "audit": "tablecheck-scripts auditjs",
     "audit:ci": "tablecheck-scripts auditjs --ci",
-    "build": "SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
+    "build": "npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
     "build:storybook": "build-storybook -o docs",
     "coverage-summary": "tablecheck-scripts coverage-summary",
     "format": "tablecheck-scripts lint --fix --skip-typescript",
     "lint": "tablecheck-scripts lint",
-    "prepare": "npm run update:exports && npm run build",
     "start": "start-storybook -p 6006",
     "test": "tablecheck-scripts test --coverage --env=jsdom",
     "test:watch": "tablecheck-scripts test --env=jsdom",
@@ -25,49 +24,18 @@
     "update:exports": "node ./scripts/generateIndex.mjs",
     "update:figma": "node ./scripts/updateFromFigma.mjs"
   },
+  "optionalDependencies": {
+    "react-select": "5"
+  },
   "peerDependencies": {
     "@emotion/react": "11",
     "@emotion/styled": "11",
-    "react": "17",
-    "react-dom": "17"
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "devDependencies": {
-    "@babel/core": "7",
-    "@babel/preset-env": "7",
-    "@bissolli/storybook-css-properties": "0.0.14",
-    "@carbon/icons-react": "11.3.0",
-    "@commitlint/cli": "16",
-    "@emotion/react": "11.9.0",
-    "@emotion/styled": "11.8.1",
-    "@storybook/addon-a11y": "6.5.4",
-    "@storybook/addon-actions": "6.5.4",
-    "@storybook/addon-essentials": "6.5.4",
-    "@storybook/addon-links": "6.5.4",
-    "@storybook/addons": "6.5.4",
-    "@storybook/api": "6.5.4",
-    "@storybook/components": "6.5.4",
-    "@storybook/core-events": "6.5.4",
-    "@storybook/react": "6.5.4",
-    "@storybook/theming": "6.5.4",
-    "@tablecheck/commitlint-config": "1.1.0",
-    "@tablecheck/scripts": "1.12.3",
-    "@types/react": "17",
-    "acorn": "8.7.1",
-    "auditjs": "~4.0.25",
-    "babel-plugin-module-resolver": "4.1.0",
-    "babel-preset-razzle": "^4.0.4",
-    "fs-extra": "10.1.0",
-    "lodash": "4.17.21",
-    "pluralize": "8.0.0",
-    "prettier": "2.6.2",
-    "react": "17",
-    "react-dom": "17",
-    "require-from-string": "2",
-    "storybook": "6.5.4",
-    "storybook-dark-mode": "1.1.0",
-    "storybook-rtl-addon": "0.3.3",
-    "tslib": "2.4.0",
-    "typescript": "4",
-    "webpack": "4"
+    "@carbon/icons-react": "11.5.0",
+    "@storybook/addon-actions": "6.5.9",
+    "react-select": "5.4.0"
   }
 }
