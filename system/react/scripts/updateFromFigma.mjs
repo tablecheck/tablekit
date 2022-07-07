@@ -114,6 +114,9 @@ ${Object.keys(colorVars)
   .map(
     (groupKey) =>
       `export const ${pluralize.singular(groupKey)}Colors = css\`
+      ${
+        ['dark', 'light'].includes(groupKey) ? `color-scheme: ${groupKey};` : ''
+      }
   ${colorVars[groupKey]
     .map(([name, value]) => `--${name}: ${value};`)
     .join('\n  ')}
@@ -129,7 +132,28 @@ export const ${pluralize.singular(groupKey)}ColorsObject = {
   
   export const effectStyles = css\`
   ${effectVars.map(([name, value]) => `--${name}: ${value};`).join('\n  ')}
-\`;`;
+\`;
+
+  export const theme = css\`
+  [data-theme='light'],
+  :root {
+    \${lightColors};
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      \${darkColors}
+    }
+  }
+  [data-theme='dark'] {
+    \${darkColors}
+  }
+  :root {
+    ${Object.keys(colorVars)
+      .filter((key) => !['light', 'dark'].includes(key))
+      .map((key) => `\${${key}Colors}`)
+      .join('\n')}
+  }
+\``;
 
 const filepath = path.join(process.cwd(), 'src/theme.ts');
 const config = prettier.resolveConfig.sync(filepath);

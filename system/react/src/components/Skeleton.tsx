@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/react';
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 import { BORDER_RADIUS_LARGE, BORDER_RADIUS_SMALL } from 'utils/constants';
 

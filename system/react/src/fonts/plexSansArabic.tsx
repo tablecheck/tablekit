@@ -14,7 +14,7 @@ const folder = 'IBMPlex-Sans-Arabic';
 
 export function plexSansArabicFont(
   getCdnPath: GetCdnPathFunction,
-  fontWeights: FontWeight[]
+  fontWeights: (keyof typeof FontWeight)[]
 ): FontType {
   const sourceSansArabicExtraLightWoff = getCdnPath(
     folder,
@@ -72,25 +72,31 @@ export function plexSansArabicFont(
 
   const preloadLinks = fontWeights.reduce<React.ReactNode[]>(
     (result, fontWeight) => {
-      if (fontWeight === FontWeight.ExtraLight) {
-        return result.concat([
-          buildPreloadLink(sourceSansArabicExtraLightWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Light) {
-        return result.concat([buildPreloadLink(sourceSansArabicLightWoff2)]);
-      }
-      if (fontWeight === FontWeight.Regular) {
-        return result.concat([buildPreloadLink(sourceSansArabicRegularWoff2)]);
-      }
-      if (fontWeight === FontWeight.Medium) {
-        return result.concat([buildPreloadLink(sourceSansArabicMediumWoff2)]);
-      }
-      if (fontWeight === FontWeight.SemiBold) {
-        return result.concat([buildPreloadLink(sourceSansArabicSemiBoldWoff2)]);
-      }
-      if (fontWeight === FontWeight.Bold) {
-        return result.concat([buildPreloadLink(sourceSansArabicBoldWoff2)]);
+      switch (fontWeight) {
+        case 'ExtraLight': {
+          return result.concat([
+            buildPreloadLink(sourceSansArabicExtraLightWoff2)
+          ]);
+        }
+        case 'Light': {
+          return result.concat([buildPreloadLink(sourceSansArabicLightWoff2)]);
+        }
+        case 'Regular': {
+          return result.concat([
+            buildPreloadLink(sourceSansArabicRegularWoff2)
+          ]);
+        }
+        case 'Medium': {
+          return result.concat([buildPreloadLink(sourceSansArabicMediumWoff2)]);
+        }
+        case 'SemiBold': {
+          return result.concat([
+            buildPreloadLink(sourceSansArabicSemiBoldWoff2)
+          ]);
+        }
+        case 'Bold': {
+          return result.concat([buildPreloadLink(sourceSansArabicBoldWoff2)]);
+        }
       }
       return result;
     },
@@ -102,42 +108,42 @@ export function plexSansArabicFont(
     css`
       ${buildFontFace({
         name,
-        weight: FontWeight.ExtraLight,
+        weight: 'ExtraLight',
         woff: sourceSansArabicExtraLightWoff,
         woff2: sourceSansArabicExtraLightWoff2
       })}
 
       ${buildFontFace({
         name,
-        weight: FontWeight.Light,
+        weight: 'Light',
         woff: sourceSansArabicLightWoff,
         woff2: sourceSansArabicLightWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Regular,
+        weight: 'Regular',
         woff: sourceSansArabicRegularWoff,
         woff2: sourceSansArabicRegularWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Medium,
+        weight: 'Medium',
         woff: sourceSansArabicMediumWoff,
         woff2: sourceSansArabicMediumWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.SemiBold,
+        weight: 'SemiBold',
         woff: sourceSansArabicSemiBoldWoff,
         woff2: sourceSansArabicSemiBoldWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Bold,
+        weight: 'Bold',
         woff: sourceSansArabicBoldWoff,
         woff2: sourceSansArabicBoldWoff2
       })}

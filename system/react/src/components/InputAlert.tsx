@@ -2,9 +2,8 @@ import { Information, WarningAlt, WarningAltFilled } from '@carbon/icons-react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import * as React from 'react';
-
+import { SentimentColors } from 'themeVariables/theme';
 import { BORDER_RADIUS_SMALL, Spacing } from 'utils/constants';
-import { SentimentColors } from 'styles/theme';
 
 const inputAlertIconMap: Record<
   Extract<SentimentColors, 'info' | 'error' | 'warning'>,

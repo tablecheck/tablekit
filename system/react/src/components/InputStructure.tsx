@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { Spacing } from 'utils/constants';
 
 import { InputAlert, Props as InputAlertProps } from './InputAlert';
-import { Spacing } from 'utils/constants';
 
 interface Props {
   name: string;

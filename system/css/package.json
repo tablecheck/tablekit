@@ -6,14 +6,23 @@
   "version": "3.0.0-rc.0",
   "type": "module",
   "keywords": [],
-  "main": "src/build.js",
+  "files": [
+    "*.css",
+    "classless/**/*.css",
+    "classy/**/*.css"
+  ],
   "scripts": {
     "build": "node src/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postpublish": "rm -rf *.css classless classy",
+    "prepublishOnly": "npm run build && mv lib/* ."
   },
   "devDependencies": {
+    "@emotion/react": "11.9.3",
     "@tablecheck/tablekit-react": "3.0.0-0",
+    "chalk": "5.0.1",
     "cssnano": "5.1.12",
+    "execa": "6.1.0",
+    "fs-extra": "10.1.0",
     "lodash": "4.17.21",
     "pluralize": "8.0.0",
     "postcss": "8.4.14",

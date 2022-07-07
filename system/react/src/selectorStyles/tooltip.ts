@@ -1,5 +1,4 @@
 import { css, keyframes } from '@emotion/react';
-
 import { BORDER_RADIUS_SMALL, FontWeight, ZIndex } from 'utils/constants';
 
 /**

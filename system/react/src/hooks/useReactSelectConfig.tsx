@@ -2,6 +2,12 @@
 import { ChevronDown, Close } from '@carbon/icons-react';
 import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import { baseStylesObject as menuStylesObject } from 'components/Menu';
+import {
+  baseStylesObject as menuItemStylesObject,
+  stateStylesObjects as menuItemStateStylesObjects
+} from 'components/MenuItem';
+import { baseStylesObject as menuListStylesObject } from 'components/MenuList';
 import { Spinner } from 'components/Spinner';
 import * as React from 'react';
 import {
@@ -10,21 +16,13 @@ import {
   GroupBase,
   StylesConfig
 } from 'react-select';
-
-import { Spacing } from 'utils/constants';
 import {
   BorderRadii,
   BorderSide,
   getBorderColor,
   getBorderRadius
 } from 'utils/border';
-
-import { baseStylesObject as menuStylesObject } from 'components/Menu';
-import {
-  baseStylesObject as menuItemStylesObject,
-  stateStylesObjects as menuItemStateStylesObjects
-} from 'components/MenuItem';
-import { baseStylesObject as menuListStylesObject } from 'components/MenuList';
+import { Spacing } from 'utils/constants';
 
 declare module '@emotion/react' {
   export interface Theme {

@@ -7,6 +7,7 @@ import {
   BORDER_RADIUS_LARGE,
   BORDER_RADIUS_SMALL
 } from 'utils/constants';
+
 import {
   beforeStyles as spinnerBeforeStyles,
   elementStyles as spinnerElementStyles
@@ -17,7 +18,7 @@ import {
  * If provided the CSS selector should also be `button {...`.
  * Alteratively `baseSelector` can be provided which should be either an attribute or class
  */
-export const baseElement = 'button';
+export const baseElement = 'button, a[role="button"]';
 export const baseSelector = '.btn';
 
 export const baseStyles = css`
@@ -52,7 +53,7 @@ export const baseStyles = css`
   }
 `;
 
-export const ButtonBase = styled(baseElement)<{
+export const ButtonBase = styled.button<{
   /**
    * @deprecated The tooltip styling clashes with the busy styling, apply the tooltip on a wrapper component
    */

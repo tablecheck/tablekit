@@ -4,7 +4,10 @@ import fs from 'fs-extra';
 import prettier from 'prettier';
 import ts from 'typescript';
 
-const subDirectories = ['components', 'styles', 'utils', 'hooks'];
+const subDirectories = fs
+  .readdirSync(path.join(process.cwd(), 'src'), { withFileTypes: true })
+  .filter((dirent) => dirent.isDirectory() && dirent.name !== 'fonts')
+  .map((dirent) => dirent.name);
 
 const filenames = ['fonts/weights.ts']
   .concat(

@@ -47,19 +47,19 @@ const AR_COUNTRIES = [
 // need to host google fonts by ourselves since China wont have an access to google
 
 export function resolveFontWeights(
-  paramFontWeights?: FontWeight[]
-): FontWeight[] {
+  paramFontWeights?: (keyof typeof FontWeight)[]
+): (keyof typeof FontWeight)[] {
   if (paramFontWeights && paramFontWeights.length) {
     return paramFontWeights;
   }
-  return [FontWeight.Regular, FontWeight.Bold, FontWeight.SemiBold];
+  return ['Regular', 'Bold', 'SemiBold'];
 }
 
 export const getFont = (
   getCdnPath: GetCdnPathFunction,
   casedLocale?: string,
   casedCountry?: string,
-  paramFontWeights?: FontWeight[]
+  paramFontWeights?: (keyof typeof FontWeight)[]
 ): FontType => {
   const fontWeights = resolveFontWeights(paramFontWeights);
   const country = (casedCountry || '').toLowerCase();

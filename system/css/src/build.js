@@ -1,12 +1,13 @@
 import path from 'path';
 
-import fs from 'fs-extra';
 import chalk from 'chalk';
-import { execa } from 'execa';
-import { css } from '@emotion/react';
 import cssnano from 'cssnano';
+import { execa } from 'execa';
+import fs from 'fs-extra';
 import postcss from 'postcss';
 import postcssNested from 'postcss-nested';
+
+import { evaluateStyleElement } from './evaluateStyleElement.js';
 import { utilsBuild } from './utilsBuild.js';
 
 const cssProcesser = postcss([postcssNested]);
@@ -15,36 +16,23 @@ const outputFolderPath = path.join(process.cwd(), 'lib');
 fs.emptyDirSync(outputFolderPath);
 
 const reactSystemPath = path.join(process.cwd(), '../react/lib/es5');
-const loadFolders = ['utils', 'styles', 'components'].map((folderName) => {
+const loadFolders = [
+  'utils',
+  'themeVariables',
+  'selectorStyles',
+  'components'
+].map((folderName) => {
   const folderPath = path.join(reactSystemPath, folderName);
-  return [folderName, folderPath, fs.readdirSync(folderPath)];
+  const fileNames = fs.readdirSync(folderPath);
+  if (folderName === 'utils') {
+    // we want resetCss to be the first thing we ever input on the page
+    const index = fileNames.indexOf('resetCss.js');
+    fileNames.splice(index, 1);
+    fileNames.unshift('resetCss.js');
+  }
+  return [folderName, folderPath, fileNames];
 });
 
-function innerEvaluateStyleElement(style, keyframes) {
-  if (!style) return '';
-  if (typeof style === 'function')
-    throw new Error(
-      `Cannot parse dynamic CSS, use attribute selectors not props`
-    );
-  if (Array.isArray(style))
-    return style.map((s) => innerEvaluateStyleElement(s, keyframes)).join('');
-  if (style.anim) {
-    keyframes.push(innerEvaluateStyleElement(style.styles, keyframes));
-    return style.name;
-  }
-  if (style.styles) return innerEvaluateStyleElement(style.styles, keyframes);
-  if (typeof style === 'object') return innerEvaluateStyleElement(css(style));
-  return style.toString();
-}
-function evaluateStyleElement(style) {
-  const keyframes = [];
-  return [
-    innerEvaluateStyleElement(style, keyframes)
-      .replace(/(^|;)label:[a-z]+;/gi, '$1')
-      .replace(/;+|^;/gi, ';'),
-    keyframes.join('')
-  ];
-}
 const classlessOutputFolder = path.join(outputFolderPath, 'classless');
 const classyOutputFolder = path.join(outputFolderPath, 'classy');
 
@@ -82,16 +70,19 @@ await Promise.all(
             [outputStyles, keyframes] = utilsBuild(fileName, fileContent);
             break;
           }
-          case 'styles': {
+          case 'themeVariables':
+          case 'selectorStyles': {
             [outputStyles, keyframes] = evaluateStyleElement(
-              fileContent[exportName].styles
+              fileContent[exportName]
             );
             break;
           }
           case 'components': {
+            if (fileName === 'ThemeProvider.js') return;
             const {
               [exportName]: Component,
               baseStyles,
+              baseStylesObject,
               baseElement: maybeBaseElement,
               baseSelector: maybeBaseSelector
             } = fileContent;
@@ -108,9 +99,12 @@ await Promise.all(
               );
             }
             [outputStyles, keyframes] = evaluateStyleElement(
-              Component.__emotion_styles || baseStyles
+              Component.__emotion_styles || baseStyles || baseStylesObject
             );
             break;
+          }
+          default: {
+            throw new Error(`New unhandled folder "${folderName}" detected`);
           }
         }
 
@@ -120,18 +114,17 @@ await Promise.all(
           [
             [classlessOutputFolder, allClasslessStyles, baseElement],
             [classyOutputFolder, allClassyStyles, baseSelector]
-          ].map(async ([outputFolderPath, aggregateStyles, selector]) => {
+          ].map(async ([childOutputFolderPath, aggregateStyles, selector]) => {
             const input = `${keyframes}${
               selector ? `${selector} { ${outputStyles} }` : outputStyles
             }`;
-            const { css: output } = await new Promise((resolve, reject) =>
-              cssProcesser
-                .process(input, { from: undefined })
-                .then(resolve, reject)
-            );
+            const { css: output } = await cssProcesser.process(input, {
+              from: undefined
+            });
+            aggregateStyles.push(`\n/* ${folderName}/${fileName} */\n`);
             aggregateStyles.push(output);
             await outputFile(
-              path.join(outputFolderPath, folderName, `${exportName}.css`),
+              path.join(childOutputFolderPath, folderName, `${exportName}.css`),
               output
             );
           })
@@ -145,9 +138,9 @@ await Promise.all(
   [
     [classlessOutputFolder, allClasslessStyles, 'classless'],
     [classyOutputFolder, allClassyStyles, 'classy']
-  ].map(([outputFolderPath, aggregateStyles, postfix]) =>
+  ].map(([childOutputFolderPath, aggregateStyles, postfix]) =>
     outputFile(
-      path.join(outputFolderPath, `../tablekit.${postfix}.css`),
+      path.join(childOutputFolderPath, `../tablekit.${postfix}.css`),
       aggregateStyles.join('\n')
     )
   )
@@ -169,9 +162,9 @@ const cssMinifier = postcss([cssnano({ preset: 'default' })]);
 await Promise.all(
   allFiles.map(async (filepath) => {
     const input = await fs.readFile(filepath);
-    const { css: output } = await new Promise((resolve, reject) =>
-      cssMinifier.process(input, { from: undefined }).then(resolve, reject)
-    );
+    const { css: output } = await cssMinifier.process(input, {
+      from: undefined
+    });
     await fs.outputFile(filepath.replace(/\.css$/gi, '.min.css'), output);
   })
 );

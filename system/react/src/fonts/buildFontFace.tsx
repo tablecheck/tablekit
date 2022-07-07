@@ -32,7 +32,7 @@ export function buildFontFace({
   isItalic?: boolean;
   name: string;
   unicodeRange?: string;
-  weight: FontWeight;
+  weight: keyof typeof FontWeight;
   woff: string;
   woff2: string;
 }): SerializedStyles {

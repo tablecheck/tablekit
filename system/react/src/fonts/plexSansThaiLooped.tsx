@@ -14,7 +14,7 @@ const folder = 'IBMPlex-Sans-Thai-Looped';
 
 export function plexSansThaiLoopedFont(
   getCdnPath: GetCdnPathFunction,
-  fontWeights: FontWeight[]
+  fontWeights: (keyof typeof FontWeight)[]
 ): FontType {
   const sourceSansThaiLoopedExtraLightWoff = getCdnPath(
     folder,
@@ -72,33 +72,37 @@ export function plexSansThaiLoopedFont(
 
   const preloadLinks = fontWeights.reduce<React.ReactNode[]>(
     (result, fontWeight) => {
-      if (fontWeight === FontWeight.ExtraLight) {
-        return result.concat([
-          buildPreloadLink(sourceSansThaiLoopedExtraLightWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Light) {
-        return result.concat([
-          buildPreloadLink(sourceSansThaiLoopedLightWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Regular) {
-        return result.concat([
-          buildPreloadLink(sourceSansThaiLoopedRegularWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Medium) {
-        return result.concat([
-          buildPreloadLink(sourceSansThaiLoopedMediumWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.SemiBold) {
-        return result.concat([
-          buildPreloadLink(sourceSansThaiLoopedSemiBoldWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Bold) {
-        return result.concat([buildPreloadLink(sourceSansThaiLoopedBoldWoff2)]);
+      switch (fontWeight) {
+        case 'ExtraLight': {
+          return result.concat([
+            buildPreloadLink(sourceSansThaiLoopedExtraLightWoff2)
+          ]);
+        }
+        case 'Light': {
+          return result.concat([
+            buildPreloadLink(sourceSansThaiLoopedLightWoff2)
+          ]);
+        }
+        case 'Regular': {
+          return result.concat([
+            buildPreloadLink(sourceSansThaiLoopedRegularWoff2)
+          ]);
+        }
+        case 'Medium': {
+          return result.concat([
+            buildPreloadLink(sourceSansThaiLoopedMediumWoff2)
+          ]);
+        }
+        case 'SemiBold': {
+          return result.concat([
+            buildPreloadLink(sourceSansThaiLoopedSemiBoldWoff2)
+          ]);
+        }
+        case 'Bold': {
+          return result.concat([
+            buildPreloadLink(sourceSansThaiLoopedBoldWoff2)
+          ]);
+        }
       }
       return result;
     },
@@ -110,42 +114,42 @@ export function plexSansThaiLoopedFont(
     css`
       ${buildFontFace({
         name,
-        weight: FontWeight.ExtraLight,
+        weight: 'ExtraLight',
         woff: sourceSansThaiLoopedExtraLightWoff,
         woff2: sourceSansThaiLoopedExtraLightWoff2
       })}
 
       ${buildFontFace({
         name,
-        weight: FontWeight.Light,
+        weight: 'Light',
         woff: sourceSansThaiLoopedLightWoff,
         woff2: sourceSansThaiLoopedLightWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Regular,
+        weight: 'Regular',
         woff: sourceSansThaiLoopedRegularWoff,
         woff2: sourceSansThaiLoopedRegularWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Medium,
+        weight: 'Medium',
         woff: sourceSansThaiLoopedMediumWoff,
         woff2: sourceSansThaiLoopedMediumWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.SemiBold,
+        weight: 'SemiBold',
         woff: sourceSansThaiLoopedSemiBoldWoff,
         woff2: sourceSansThaiLoopedSemiBoldWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Bold,
+        weight: 'Bold',
         woff: sourceSansThaiLoopedBoldWoff,
         woff2: sourceSansThaiLoopedBoldWoff2
       })}

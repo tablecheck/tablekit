@@ -14,7 +14,7 @@ const folder = 'IBMPlex-Sans';
 
 export function plexSansFont(
   getCdnPath: GetCdnPathFunction,
-  fontWeights: FontWeight[]
+  fontWeights: (keyof typeof FontWeight)[]
 ): FontType {
   const sourceSansProExtraLightWoff = getCdnPath(
     folder,
@@ -105,41 +105,43 @@ export function plexSansFont(
 
   const preloadLinks = fontWeights.reduce<React.ReactNode[]>(
     (result, fontWeight) => {
-      if (fontWeight === FontWeight.ExtraLight) {
-        return result.concat([
-          buildPreloadLink(sourceSansProExtraLightWoff2),
-          buildPreloadLink(sourceSansProExtraLightItalicWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Light) {
-        return result.concat([
-          buildPreloadLink(sourceSansProLightWoff2),
-          buildPreloadLink(sourceSansProLightItalicWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Regular) {
-        return result.concat([
-          buildPreloadLink(sourceSansProRegularWoff2),
-          buildPreloadLink(sourceSansProRegularItalicWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Medium) {
-        return result.concat([
-          buildPreloadLink(sourceSansProMediumWoff2),
-          buildPreloadLink(sourceSansProMediumItalicWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.SemiBold) {
-        return result.concat([
-          buildPreloadLink(sourceSansProSemiBoldWoff2),
-          buildPreloadLink(sourceSansProSemiBoldItalicWoff2)
-        ]);
-      }
-      if (fontWeight === FontWeight.Bold) {
-        return result.concat([
-          buildPreloadLink(sourceSansProBoldWoff2),
-          buildPreloadLink(sourceSansProBoldItalicWoff2)
-        ]);
+      switch (fontWeight) {
+        case 'ExtraLight': {
+          return result.concat([
+            buildPreloadLink(sourceSansProExtraLightWoff2),
+            buildPreloadLink(sourceSansProExtraLightItalicWoff2)
+          ]);
+        }
+        case 'Light': {
+          return result.concat([
+            buildPreloadLink(sourceSansProLightWoff2),
+            buildPreloadLink(sourceSansProLightItalicWoff2)
+          ]);
+        }
+        case 'Regular': {
+          return result.concat([
+            buildPreloadLink(sourceSansProRegularWoff2),
+            buildPreloadLink(sourceSansProRegularItalicWoff2)
+          ]);
+        }
+        case 'Medium': {
+          return result.concat([
+            buildPreloadLink(sourceSansProMediumWoff2),
+            buildPreloadLink(sourceSansProMediumItalicWoff2)
+          ]);
+        }
+        case 'SemiBold': {
+          return result.concat([
+            buildPreloadLink(sourceSansProSemiBoldWoff2),
+            buildPreloadLink(sourceSansProSemiBoldItalicWoff2)
+          ]);
+        }
+        case 'Bold': {
+          return result.concat([
+            buildPreloadLink(sourceSansProBoldWoff2),
+            buildPreloadLink(sourceSansProBoldItalicWoff2)
+          ]);
+        }
       }
       return result;
     },
@@ -151,14 +153,14 @@ export function plexSansFont(
     css`
       ${buildFontFace({
         name,
-        weight: FontWeight.ExtraLight,
+        weight: 'ExtraLight',
         woff: sourceSansProExtraLightWoff,
         woff2: sourceSansProExtraLightWoff2
       })}
 
       ${buildFontFace({
         name,
-        weight: FontWeight.ExtraLight,
+        weight: 'ExtraLight',
         woff: sourceSansProExtraLightItalicWoff,
         woff2: sourceSansProExtraLightItalicWoff2,
         isItalic: true
@@ -166,14 +168,14 @@ export function plexSansFont(
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Light,
+        weight: 'Light',
         woff: sourceSansProLightWoff,
         woff2: sourceSansProLightWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Light,
+        weight: 'Light',
         woff: sourceSansProLightItalicWoff,
         woff2: sourceSansProLightItalicWoff2,
         isItalic: true
@@ -181,14 +183,14 @@ export function plexSansFont(
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Regular,
+        weight: 'Regular',
         woff: sourceSansProRegularWoff,
         woff2: sourceSansProRegularWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Regular,
+        weight: 'Regular',
         woff: sourceSansProRegularItalicWoff,
         woff2: sourceSansProRegularItalicWoff2,
         isItalic: true
@@ -196,14 +198,14 @@ export function plexSansFont(
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Medium,
+        weight: 'Medium',
         woff: sourceSansProMediumWoff,
         woff2: sourceSansProMediumWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Medium,
+        weight: 'Medium',
         woff: sourceSansProMediumItalicWoff,
         woff2: sourceSansProMediumItalicWoff2,
         isItalic: true
@@ -211,14 +213,14 @@ export function plexSansFont(
     
     ${buildFontFace({
         name,
-        weight: FontWeight.SemiBold,
+        weight: 'SemiBold',
         woff: sourceSansProSemiBoldWoff,
         woff2: sourceSansProSemiBoldWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.SemiBold,
+        weight: 'SemiBold',
         woff: sourceSansProSemiBoldItalicWoff,
         woff2: sourceSansProSemiBoldItalicWoff2,
         isItalic: true
@@ -226,14 +228,14 @@ export function plexSansFont(
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Bold,
+        weight: 'Bold',
         woff: sourceSansProBoldWoff,
         woff2: sourceSansProBoldWoff2
       })}
     
     ${buildFontFace({
         name,
-        weight: FontWeight.Bold,
+        weight: 'Bold',
         woff: sourceSansProBoldItalicWoff,
         woff2: sourceSansProBoldItalicWoff2,
         isItalic: true

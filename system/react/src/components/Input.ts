@@ -1,6 +1,5 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-
 import { BORDER_RADIUS_SMALL, Spacing } from 'utils/constants';
 
 export const baseElement = 'input';

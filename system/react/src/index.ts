@@ -27,7 +27,11 @@ export {
   elementStyles,
   Spinner
 } from './components/Spinner';
-export { resetCss } from './styles/resetCss';
+export { ThemeProvider } from './components/ThemeProvider';
+export { useReactSelectConfig } from './hooks/useReactSelectConfig';
+export type { Options } from './hooks/useReactSelectConfig';
+export { tooltip } from './selectorStyles/tooltip';
+export { ltrSupport } from './themeVariables/ltrSupport';
 export {
   lightColors,
   lightColorsObject,
@@ -37,11 +41,11 @@ export {
   sentimentColorsObject,
   utilityColors,
   utilityColorsObject,
-  effectStyles
-} from './styles/theme';
-export type { SentimentColors } from './styles/theme';
-export { tooltip } from './styles/tooltip';
-export { typography } from './styles/typography';
+  effectStyles,
+  theme
+} from './themeVariables/theme';
+export type { SentimentColors } from './themeVariables/theme';
+export { typography } from './themeVariables/typography';
 export {
   BorderRadii,
   getBorderRadius,
@@ -55,11 +59,5 @@ export {
   Spacing,
   ZIndex
 } from './utils/constants';
-export {
-  resolveFontWeights,
-  getFont,
-  getFontFamily
-} from './utils/fontSettings';
-export { buildCssVars } from './utils/globalUtilCss';
-export { useReactSelectConfig } from './hooks/useReactSelectConfig';
-export type { Options } from './hooks/useReactSelectConfig';
+export { resolveFontWeights, getFont, getFontFamily } from './utils/fontFace';
+export { resetCss } from './utils/resetCss';

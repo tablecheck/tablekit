@@ -36,6 +36,10 @@
   "devDependencies": {
     "@carbon/icons-react": "11.5.0",
     "@storybook/addon-actions": "6.5.9",
-    "react-select": "5.4.0"
+    "@storybook/react": "6.5.9",
+    "fs-extra": "10.1.0",
+    "prettier": "2.7.1",
+    "react-select": "5.4.0",
+    "typescript": "4.7.4"
   }
 }

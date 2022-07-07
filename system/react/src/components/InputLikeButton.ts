@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
+import { Spacing } from 'utils/constants';
 
 import { baseStyles, Props } from './Input';
-import { Spacing } from 'utils/constants';
 
 export const baseSelector = 'button.input';
 

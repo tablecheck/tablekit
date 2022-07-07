@@ -1,5 +1,4 @@
 import styled, { CSSObject } from '@emotion/styled';
-
 import { BORDER_RADIUS_SMALL, Spacing } from 'utils/constants';
 
 export const baseSelector = '.menu';

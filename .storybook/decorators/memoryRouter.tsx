@@ -1,14 +1,14 @@
 import { action } from '@storybook/addon-actions';
 import { makeDecorator } from '@storybook/addons';
 import { addDecorator } from '@storybook/react';
-import { useEffect } from 'react';
+import * as React from 'react';
 import { MemoryRouter, useHistory } from 'react-router-dom';
 
 const routeChangeAction = action('route change');
 
 function RouteChangeWatcher() {
   const history = useHistory();
-  useEffect(
+  React.useEffect(
     () =>
       history.listen((location, routeAction) => {
         let newPath = location.pathname;
