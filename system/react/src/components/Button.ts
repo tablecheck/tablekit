@@ -1,6 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
 import styled, { StyledComponent } from '@emotion/styled';
-
 import {
   FontWeight,
   Spacing,
