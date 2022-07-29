@@ -4,7 +4,6 @@
   "description": "TableKit website",
   "license": "ISC",
   "author": "",
-  "version": "0.0.0-0",
   "keywords": [],
   "main": "./lib/es5/index.js",
   "module": "./lib/esm/index.js",

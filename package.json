@@ -4,7 +4,6 @@
   "license": "MIT",
   "author": "TableCheck Inc.",
   "repository": "github:tablecheck/tablekit",
-  "version": "0.0.0",
   "scripts": {
     "audit": "tablecheck-scripts auditjs",
     "audit:ci": "tablecheck-scripts auditjs --ci",
