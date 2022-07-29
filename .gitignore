@@ -20,3 +20,4 @@ tsconfig.*.json
 .@tablecheck-react-system
 .@tablecheck
 .rollup.cache
+/cache
