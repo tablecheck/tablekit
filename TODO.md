@@ -1,9 +1,8 @@
 ## TODO List
 
 - Finish build script - not all CSS needed is being output yet, notably fonts (need to base off `html[lang^="jp"]` (attribute starts with) selector) NOT a property
-- Need to update to include this PR or linter won't pass https://github.com/tablecheck/tablecheck-react-system/pull/68
-- Write readme in both system/css and system/react about format required of files and how the css is generated.
-- It looks like there may be a bug with how top level tsconfig.json is being generated that causes a crash. Needs to be fixed for monorepo compatability in tablecheck-react-system.
+- Write in the main README about system/css and system/react and the format required of files and how the css is generated.
+- Write a README for both system/css and system/react that will be published to npm.
 - Build the website? Ideally we should generate docs with the classname/classless selectors and the react component import.
 
 # Code note about font-face and language
