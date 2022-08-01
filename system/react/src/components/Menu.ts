@@ -2,7 +2,6 @@ import styled, { CSSObject } from '@emotion/styled';
 import { BORDER_RADIUS_SMALL, Spacing } from 'utils/constants';
 
 export const baseSelector = '.menu';
-export const baseElement = 'div';
 
 /**
  * We export the objects as well for compatibilty with 3rd party libs like react-select
@@ -14,4 +13,4 @@ export const baseStylesObject: CSSObject = {
   padding: Spacing.L1
 };
 
-export const Menu = styled(baseElement)(baseStylesObject);
+export const Menu = styled.div(baseStylesObject);
