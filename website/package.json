@@ -9,6 +9,15 @@
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "scripts": {
+    "build": "charge build src public",
+    "start": "charge serve src",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@emotion/core": "11.0.0",
+    "@emotion/styled": "11.9.3"
+  },
+  "devDependencies": {
+    "@static/charge": "1.7.0"
   }
 }
