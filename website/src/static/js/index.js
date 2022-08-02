@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window
     .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', (event) => {
+    .addEventListener('change', () => {
       if (event.matches) {
         html.setAttribute('data-theme', 'dark');
         localStorage.setItem(themeKey, 'dark');
