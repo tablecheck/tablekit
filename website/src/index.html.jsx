@@ -1,20 +1,7 @@
-import Header from './layout/header/index.html.jsx';
-import { Main } from './layout/styles';
+import Layout from './layout/index.html';
 
-export default ({ data, environment }) => (
-  <html lang="en">
-    <head>
-      <meta charSet="utf-8" />
-      <title>TableKit</title>
-      <script src="/static/js/index.js"></script>
-      <link href="/static/css/index.css" rel="stylesheet" media="all" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </head>
-    <body>
-      <Header />
-      <Main>
-        <h1>Hello World!</h1>
-      </Main>
-    </body>
-  </html>
+export default () => (
+  <Layout title="TableKit">
+    <h1>I&apos;m the home page</h1>
+  </Layout>
 );

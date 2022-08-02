@@ -1,15 +1,7 @@
-import Header from './layout/header/index.html.jsx';
+import Layout from './layout/index.html';
 
 export default () => (
-  <html lang="en">
-    <head>
-      <meta charSet="utf-8" />
-      <title>TableKit</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </head>
-    <body>
-      <Header />
-      <p>Page or file not found</p>
-    </body>
-  </html>
+  <Layout title="Page or file not found">
+    <h1>Page or file not found</h1>
+  </Layout>
 );
