@@ -1,10 +1,13 @@
 import { themes } from '@storybook/theming';
 import { LocaleCode } from '@tablecheck/locales';
+import {
+  ThemeProvider,
+  CLASSIC_COLORS,
+  DARK_COLORS
+} from '@tablecheck/tablekit-react/lib/esm';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 import { useDirection } from 'storybook-rtl-addon';
-
-import { ThemeProvider, CLASSIC_COLORS, DARK_COLORS } from '../packages/theme';
 
 import './decorators';
 import { DocsContainer } from './DocContainer';

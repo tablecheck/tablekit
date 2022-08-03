@@ -19,3 +19,5 @@ tsconfig.*.json
 .env.production.local
 .@tablecheck-react-system
 .@tablecheck
+.rollup.cache
+/cache

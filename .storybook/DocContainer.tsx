@@ -1,14 +1,14 @@
 import { DocsContainer as BaseContainer } from '@storybook/addon-docs/blocks';
 import { themes } from '@storybook/theming';
 import set from 'lodash/set';
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 
 export const DocsContainer = ({
   children,
   context
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
   context: any;
 }) => {
   const dark = useDarkMode();

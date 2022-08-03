@@ -1,0 +1,34 @@
+{
+  "name": "@tablecheck/tablekit-css",
+  "description": "TableCheck design system in scss/css",
+  "license": "ISC",
+  "author": "",
+  "version": "2.0.0",
+  "type": "module",
+  "keywords": [],
+  "files": [
+    "*.css",
+    "classless/**/*.css",
+    "classy/**/*.css"
+  ],
+  "scripts": {
+    "build": "node src/build.js && cp lib/*.css .",
+    "postpublish": "rm -rf *.css classless classy",
+    "prepublishOnly": "npm run build && mv -f lib/* ."
+  },
+  "devDependencies": {
+    "@emotion/react": "11.9.3",
+    "@tablecheck/tablekit-react": "2.0.0",
+    "chalk": "5.0.1",
+    "cssnano": "5.1.12",
+    "execa": "6.1.0",
+    "fs-extra": "10.1.0",
+    "lodash": "4.17.21",
+    "pluralize": "8.0.0",
+    "postcss": "8.4.14",
+    "postcss-nested": "5.0.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

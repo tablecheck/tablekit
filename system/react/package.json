@@ -1,0 +1,51 @@
+{
+  "name": "@tablecheck/tablekit-react",
+  "description": "Emotion.sh based react components for tablekit design system",
+  "license": "MIT",
+  "author": "TableCheck Inc.",
+  "version": "2.0.0",
+  "keywords": [],
+  "main": "./lib/es5/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "audit": "tablecheck-scripts auditjs",
+    "audit:ci": "tablecheck-scripts auditjs --ci",
+    "build": "npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
+    "build:storybook": "build-storybook -o docs",
+    "coverage-summary": "tablecheck-scripts coverage-summary",
+    "format": "tablecheck-scripts lint --fix --skip-typescript",
+    "lint": "tablecheck-scripts lint",
+    "start": "start-storybook -p 6006",
+    "test": "tablecheck-scripts test --coverage --env=jsdom",
+    "test:watch": "tablecheck-scripts test --env=jsdom",
+    "tsc": "tablecheck-scripts tsc",
+    "tsc:watch": "tablecheck-scripts tsc -w",
+    "update:exports": "node ./scripts/generateIndex.mjs",
+    "update:figma": "node ./scripts/updateFromFigma.mjs"
+  },
+  "optionalDependencies": {
+    "react-select": "5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "react": ">=17",
+    "react-dom": ">=17"
+  },
+  "devDependencies": {
+    "@carbon/icons-react": "11.6.0",
+    "@storybook/addon-actions": "6.5.9",
+    "@storybook/react": "6.5.9",
+    "fs-extra": "10.1.0",
+    "prettier": "2.7.1",
+    "react-select": "5.4.0",
+    "typescript": "4.7.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
