@@ -12,9 +12,9 @@
     "classy/**/*.css"
   ],
   "scripts": {
-    "build": "node src/build.js",
+    "build": "node src/build.js && cp lib/*.css .",
     "postpublish": "rm -rf *.css classless classy",
-    "prepublishOnly": "npm run build && mv lib/* ."
+    "prepublishOnly": "npm run build && mv -f lib/* ."
   },
   "devDependencies": {
     "@emotion/react": "11.9.3",

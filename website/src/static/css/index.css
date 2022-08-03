@@ -1,3 +1,5 @@
+@import '@tablecheck/tablekit-css/tablekit.classless.min.css';
+
 :root {
   --containerWidth: 1280px;
 }

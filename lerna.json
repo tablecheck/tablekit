@@ -8,7 +8,7 @@
       "verifyAccess": false
     },
     "bootstrap": {
-      "hoist": true
+      "hoist": false
     }
   }
 }

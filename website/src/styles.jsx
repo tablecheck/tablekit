@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import { breakpoints } from './layout/styles';
 
 const heroBreakpoint = '@media screen and (max-width: 1000px)';

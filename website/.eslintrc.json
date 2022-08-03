@@ -1,6 +1,5 @@
 {
   "rules": {
-    "import/no-default-export": "off",
-    "react/function-component-definition": "off"
+    "import/no-default-export": "off"
   }
 }

@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window
     .matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', () => {
+    .addEventListener('change', (event) => {
       if (event.matches) {
         html.setAttribute('data-theme', 'dark');
         localStorage.setItem(themeKey, 'dark');
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-  themeToggleButton.addEventListener('click', (event) => {
+  themeToggleButton.addEventListener('click', () => {
     if (html.getAttribute('data-theme') === 'dark') {
       html.setAttribute('data-theme', 'light');
       localStorage.setItem(themeKey, 'light');
