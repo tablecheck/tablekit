@@ -191,7 +191,7 @@ export const theme = css`
     ${lightColors};
   }
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme='light']) {
       ${darkColors}
     }
   }
