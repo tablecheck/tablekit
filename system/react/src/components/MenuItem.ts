@@ -6,6 +6,11 @@ export const baseSelector = '.menu-item';
 /**
  * We export the objects as well for compatibilty with 3rd party libs like react-select
  */
+
+/**
+ *
+ * @alias menuItemStateStylesObjects
+ */
 export const stateStylesObjects: Record<
   'focus' | 'selected' | 'active' | 'hover',
   CSSObject

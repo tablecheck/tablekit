@@ -1,6 +1,8 @@
 import path from 'path';
 
 import fs from 'fs-extra';
+// eslint-disable-next-line @tablecheck/forbidden-imports
+import _ from 'lodash';
 import prettier from 'prettier';
 import ts from 'typescript';
 
@@ -9,18 +11,16 @@ const subDirectories = fs
   .filter((dirent) => dirent.isDirectory() && dirent.name !== 'fonts')
   .map((dirent) => dirent.name);
 
-const filenames = ['fonts/weights.ts']
-  .concat(
-    subDirectories.reduce(
-      (result, folder) =>
-        result.concat(
-          fs
-            .readdirSync(path.join(process.cwd(), `src/${folder}`))
-            .map((filepath) => path.join(folder, filepath)),
-          []
-        ),
-      []
-    )
+const filenames = subDirectories
+  .reduce(
+    (result, folder) =>
+      result.concat(
+        fs
+          .readdirSync(path.join(process.cwd(), `src/${folder}`))
+          .map((filepath) => path.join(folder, filepath)),
+        []
+      ),
+    []
   )
   .filter(
     (filepath) =>
@@ -43,11 +43,14 @@ async function getExport(filename) {
         s.modifiers &&
         s.modifiers.find((m) => m.kind === ts.SyntaxKind.ExportKeyword)
     )
-    .reduce(
-      (r, s) =>
-        r.concat(s.declarationList ? s.declarationList.declarations : s),
-      []
-    )
+    .reduce((r, s) => {
+      if (s.declarationList) {
+        return r.concat(
+          s.declarationList.declarations.map((d) => ({ ...d, jsDoc: s.jsDoc }))
+        );
+      }
+      return r.concat(s);
+    }, [])
     .filter(
       (node) =>
         !(
@@ -69,8 +72,32 @@ async function getExport(filename) {
   }
   const exportNames = exportNodes
     .filter((node) => !nodeIsType(node))
-    .map((node) => node.name.escapedText)
-    .filter((name) => !name.match(/^base/g));
+    .map((node) => {
+      if (node.jsDoc) {
+        const alias = node.jsDoc
+          .map(
+            (doc) =>
+              doc.tags &&
+              doc.tags.find(
+                (tag) =>
+                  tag && tag.tagName && tag.tagName.escapedText === 'alias'
+              )
+          )
+          .filter((n) => !!n);
+        if (alias[alias.length - 1] && alias[alias.length - 1].comment) {
+          return `${node.name.escapedText} as ${alias[
+            alias.length - 1
+          ].comment.trim()}`;
+        }
+      }
+      return node.name.escapedText;
+    })
+    .filter(
+      (name) =>
+        name.match(/ as /g) ||
+        !name.match(/^base/g) ||
+        (name.match(/^base/g) && name.match(/Object$/g))
+    );
   const exportTypes = exportNodes
     .filter((node) => nodeIsType(node))
     .map((node) => {
@@ -81,10 +108,15 @@ async function getExport(filename) {
   const exportDeclarations = [];
   if (exportNames.length)
     exportDeclarations.push(
-      `export {${exportNames.join(',')}} from './${path.join(
-        parsedName.dir,
-        parsedName.name
-      )}';`
+      `export {${exportNames
+        .map((name) => {
+          if (name.match(/ as /g) || !name.match(/^base/g)) return name;
+          return `${name} as ${name.replace(
+            /^base/g,
+            _.camelCase(parsedName.name)
+          )}`;
+        })
+        .join(',')}} from './${path.join(parsedName.dir, parsedName.name)}';`
     );
   if (exportTypes.length)
     exportDeclarations.push(

@@ -1,3 +1,4 @@
 node_modules
 tmp/*
 public
+src/static/css/fonts*

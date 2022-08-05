@@ -1,7 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import styled, { StyledComponent } from '@emotion/styled';
 import {
-  FontWeight,
   Spacing,
   BORDER_RADIUS_LARGE,
   BORDER_RADIUS_SMALL
@@ -28,7 +27,7 @@ export const baseStyles = css`
   grid-auto-flow: column;
   cursor: pointer;
 
-  font-weight: ${FontWeight.Medium};
+  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   border-radius: ${BORDER_RADIUS_SMALL}px;

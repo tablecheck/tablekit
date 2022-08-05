@@ -1,4 +1,5 @@
 @import '@tablecheck/tablekit-css/tablekit.classless.min.css';
+@import './fonts.css';
 
 :root {
   --containerWidth: 1280px;

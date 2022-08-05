@@ -10,15 +10,19 @@
   "types": "./lib/esm/index.d.ts",
   "scripts": {
     "build": "charge build src public",
+    "buildFonts": "node scripts/generateFonts.mjs",
+    "postinstall": "npm run buildFonts",
     "start": "charge serve src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@emotion/core": "10.0.35",
     "@emotion/styled": "10.0.27",
+    "@ibm/plex": "6.0.2",
     "@tablecheck/tablekit-css": "2.0.0"
   },
   "devDependencies": {
-    "@static/charge": "1.7.0"
+    "@static/charge": "1.7.0",
+    "fs-extra": "10.1.0"
   }
 }

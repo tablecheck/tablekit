@@ -25,10 +25,12 @@ const loadFolders = [
   const folderPath = path.join(reactSystemPath, folderName);
   const fileNames = fs.readdirSync(folderPath);
   if (folderName === 'utils') {
-    // we want resetCss to be the first thing we ever input on the page
-    const index = fileNames.indexOf('resetCss.js');
-    fileNames.splice(index, 1);
-    fileNames.unshift('resetCss.js');
+    const fontIndex = fileNames.indexOf('font.js');
+    fileNames.splice(fontIndex, 1);
+    const resetIndex = fileNames.indexOf('resetCss.js');
+    fileNames.splice(resetIndex, 1);
+    // we want resetCss, then fonts to be the first two things we ever input on the page
+    fileNames.unshift('resetCss.js', 'font.js');
   }
   return [folderName, folderPath, fileNames];
 });

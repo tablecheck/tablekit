@@ -1,5 +1,3 @@
-export { FontWeight } from '../fonts/weights';
-
 export const BORDER_RADIUS_SMALL = 4;
 export const BORDER_RADIUS_LARGE = 8;
 export const INPUT_HEIGHT = 48;

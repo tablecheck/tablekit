@@ -1,5 +1,5 @@
 import { css, keyframes } from '@emotion/react';
-import { BORDER_RADIUS_SMALL, FontWeight, ZIndex } from 'utils/constants';
+import { BORDER_RADIUS_SMALL, ZIndex } from 'utils/constants';
 
 /**
  * Adapted from https://github.com/picocss/pico/blob/master/scss/utilities/_tooltip.scss
@@ -39,7 +39,7 @@ export const tooltip = css`
       white-space: nowrap;
       opacity: 0;
       pointer-events: none;
-      font: ${FontWeight.Regular} var(--body-2);
+      font: var(--body-2);
     }
     &::before {
       box-shadow: var(--elevation-medium);

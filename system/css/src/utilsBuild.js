@@ -35,8 +35,8 @@ export function utilsBuild(fileName, fileContent) {
     case 'border.js': {
       return ['', ''];
     }
-    case 'fontFace.js': {
-      return ['', ''];
+    case 'font.js': {
+      return evaluateStyleElement(fileContent.font.styles);
     }
     case 'resetCss.js': {
       return evaluateStyleElement(fileContent.resetCss.styles);

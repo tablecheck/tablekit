@@ -47,7 +47,7 @@
     "@tablecheck/babel-preset": "1.1.0",
     "@tablecheck/eslint-config": "1.8.1",
     "@tablecheck/locales": "1.1.1",
-    "@tablecheck/scripts": "2.3.3-canary.71.2787011566.0",
+    "@tablecheck/scripts": "2.3.4",
     "@types/enzyme": "3.10.12",
     "@types/flushable": "1.0.1",
     "@types/jest": "28.1.6",

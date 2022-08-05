@@ -1,19 +1,16 @@
 import { css } from '@emotion/react';
-import { FontWeight } from 'utils/constants';
 
 export const typography = css`
-  // TODO add @font-face logics here too.
   :root {
-    --font-family: 'IBM Plex Sans';
-    --headline: ${FontWeight.Bold} 54px / 64px var(--font-family);
-    --h1: ${FontWeight.SemiBold} 36px / 48px var(--font-family);
-    --h2: 24px / 32px var(--font-family);
-    --h3: ${FontWeight.SemiBold} 20px / 24px var(--font-family);
-    --h4: ${FontWeight.SemiBold} 16px / 24px var(--font-family);
-    --body-1: 16px / 24px var(--font-family);
-    --body-2: 14px / 20px var(--font-family);
-    --small: 12px / 18px var(--font-family);
-    --label: ${FontWeight.SemiBold} 14px / 20px var(--font-family);
+    --headline: 700 54px / 64px var(--font-family);
+    --h1: 600 36px / 48px var(--font-family);
+    --h2: 400 24px / 32px var(--font-family);
+    --h3: 600 20px / 24px var(--font-family);
+    --h4: 600 16px / 24px var(--font-family);
+    --body-1: 400 16px / 24px var(--font-family);
+    --body-2: 400 14px / 20px var(--font-family);
+    --small: 400 12px / 18px var(--font-family);
+    --label: 600 14px / 20px var(--font-family);
   }
   header h1 {
     font: var(--headline);
@@ -46,6 +43,6 @@ export const typography = css`
 
   b,
   strong {
-    font-weight: ${FontWeight.Bold};
+    font-weight: 700;
   }
 `;
