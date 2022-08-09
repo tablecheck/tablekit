@@ -217,7 +217,7 @@ export const theme = css`
     ${darkColors}
   }
   :root {
-    ${sentimentsColors}
-    ${utilitiesColors}
+    ${sentimentColors}
+    ${utilityColors}
   }
 `;
