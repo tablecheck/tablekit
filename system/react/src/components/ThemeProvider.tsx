@@ -21,11 +21,13 @@ const globalStyles = css`
 export function ThemeProvider({
   isRtl,
   lang,
+  country,
   theme = 'light',
   children
 }: {
   isRtl?: boolean;
   lang?: string;
+  country?: string;
   theme?: 'light' | 'dark';
   children: React.ReactNode;
 }): JSX.Element {
@@ -33,9 +35,12 @@ export function ThemeProvider({
     if (lang) {
       document.documentElement.setAttribute('lang', lang);
     }
+    if (country) {
+      document.documentElement.dataset.country = country;
+    }
     document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
     document.documentElement.dataset.theme = theme;
-  }, [isRtl, lang, theme]);
+  }, [isRtl, lang, theme, country]);
   return (
     <EmotionThemeProvider
       theme={(parentTheme) => ({
