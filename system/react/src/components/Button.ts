@@ -2,12 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import styled, { StyledComponent } from '@emotion/styled';
 
 import {
-  Spacing,
-  BORDER_RADIUS_LARGE,
-  BORDER_RADIUS_SMALL
-} from '../utils/constants';
-
-import {
   beforeStyles as spinnerBeforeStyles,
   elementStyles as spinnerElementStyles
 } from './Spinner';
@@ -24,14 +18,14 @@ export const baseStyles = css`
   position: relative;
   display: grid;
   padding: 12px 20px;
-  grid-gap: ${Spacing.L2};
+  grid-gap: var(--spacing-l2);
   grid-auto-flow: column;
   cursor: pointer;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  border-radius: ${BORDER_RADIUS_SMALL}px;
+  border-radius: var(--border-radius-small);
 
   align-items: center;
   text-align: center;
@@ -46,7 +40,7 @@ export const baseStyles = css`
       bottom: -4px;
       left: -4px;
       right: -4px;
-      border-radius: ${BORDER_RADIUS_LARGE}px;
+      border-radius: var(--border-radius-large);
       border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
     }
   }

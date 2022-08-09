@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import * as React from 'react';
 
 import { SentimentColors } from '../themeVariables/theme';
-import { BORDER_RADIUS_SMALL, Spacing } from '../utils/constants';
 
 const inputAlertIconMap: Record<
   Extract<SentimentColors, 'info' | 'error' | 'warning'>,
@@ -29,15 +28,15 @@ export const baseSelector = 'span.input-alert';
 export const baseStyles = css`
   display: grid;
   grid-template-columns: min-content 1fr;
-  grid-gap: ${Spacing.L2};
-  margin-top: ${Spacing.L2};
+  grid-gap: var(--spacing-l2);
+  margin-top: var(--spacing-l2);
   color: var(--text);
-  border-radius: ${BORDER_RADIUS_SMALL}px;
+  border-radius: var(--border-radius-small);
 
   &[data-variant='error'],
   &[data-variant='warning'] {
-    border-radius: ${BORDER_RADIUS_SMALL};
-    padding: ${Spacing.L2} ${Spacing.L3};
+    border-radius: var(--border-radius-small);
+    padding: var(--spacing-l2) var(--spacing-l3);
   }
 
   &[data-variant='info'] > svg:first-child {

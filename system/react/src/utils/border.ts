@@ -1,7 +1,5 @@
 import { CSSObject } from '@emotion/react';
 
-import { BORDER_RADIUS_SMALL } from './constants';
-
 export enum BorderRadii {
   All,
   Top,
@@ -13,7 +11,7 @@ export enum BorderRadii {
   BottomRight,
   BottomLeft
 }
-const borderRadius = `${BORDER_RADIUS_SMALL}px`;
+const borderRadius = `var(--border-radius-small)`;
 function formatBorderRadius(
   ...positions: ('TopLeft' | 'TopRight' | 'BottomRight' | 'BottomLeft')[]
 ) {

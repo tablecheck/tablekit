@@ -51,12 +51,6 @@ export {
   BorderSide,
   getBorderColor
 } from './utils/border';
-export {
-  BORDER_RADIUS_SMALL,
-  BORDER_RADIUS_LARGE,
-  INPUT_HEIGHT,
-  Spacing,
-  ZIndex
-} from './utils/constants';
+export { constants } from './utils/constants';
 export { font } from './utils/font';
 export { resetCss } from './utils/resetCss';

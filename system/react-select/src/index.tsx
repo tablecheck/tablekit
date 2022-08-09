@@ -11,8 +11,7 @@ import {
   BorderRadii,
   BorderSide,
   getBorderColor,
-  getBorderRadius,
-  Spacing
+  getBorderRadius
 } from '@tablecheck/tablekit-react';
 import * as React from 'react';
 import {
@@ -238,7 +237,7 @@ export function useReactSelectConfig<
           gridTemplateColumns: icon
             ? 'min-content 1fr min-content'
             : '1fr min-content',
-          gridGap: Spacing.L2,
+          gridGap: 'var(--spacing-l2)',
           alignItems: 'flex-start',
           outline: 'none',
           transitionProperty: 'border-color, box-shadow',

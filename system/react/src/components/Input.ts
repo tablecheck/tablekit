@@ -1,14 +1,12 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { BORDER_RADIUS_SMALL, Spacing } from '../utils/constants';
-
 export const baseElement = 'input';
 
 export const baseStyles = css`
   padding: 12px 16px;
   border: 1px solid var(--border-transparent);
-  border-radius: ${BORDER_RADIUS_SMALL}px;
+  border-radius: var(--border-radius-small);
   font: var(--body-1);
   background: var(--surface);
   --width: 220px;
@@ -73,7 +71,7 @@ export const InputWithIcons = styled.div<Props>`
   ${baseStyles};
   display: grid;
   grid-template-columns: 8px 16px auto 16px 8px;
-  grid-gap: ${Spacing.L2};
+  grid-gap: var(--spacing-l2);
   align-items: center;
   cursor: text;
   padding: 0;

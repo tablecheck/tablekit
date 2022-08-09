@@ -1,7 +1,5 @@
 import { css, keyframes } from '@emotion/react';
 
-import { BORDER_RADIUS_SMALL, ZIndex } from '../utils/constants';
-
 /**
  * Adapted from https://github.com/picocss/pico/blob/master/scss/utilities/_tooltip.scss
  */
@@ -24,14 +22,14 @@ export const tooltip = css`
     position: relative;
     &:before {
       display: block;
-      z-index: ${ZIndex.Tooltip};
+      z-index: var(--zindex-tooltip);
       position: absolute;
       bottom: 100%;
       left: 50%;
       padding: 6px 8px;
       overflow: hidden;
       transform: translate(-50%, -0.25rem);
-      border-radius: ${BORDER_RADIUS_SMALL}px;
+      border-radius: var(--border-radius-small);
       background: var(--tooltip-background-color);
       content: attr(data-tooltip);
       color: var(--tooltip-text-color);

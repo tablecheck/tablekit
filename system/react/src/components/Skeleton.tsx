@@ -1,18 +1,13 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { BORDER_RADIUS_LARGE, BORDER_RADIUS_SMALL } from '../utils/constants';
-
 // This file is a replacement for https://github.com/dvtng/react-loading-skeleton
 
 export const baseSelector = '.skeleton';
 
 const loadingAnimation = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
+  to {
+    background-position: -200% 0;
   }
 `;
 
@@ -32,9 +27,9 @@ export const Skeleton = styled.span<{
     width: 100%;
   }
   height: 100%;
-  border-radius: ${BORDER_RADIUS_LARGE};
+  border-radius: var(--border-radius-large);
   &[data-style='input'] {
-    border-radius: ${BORDER_RADIUS_SMALL};
+    border-radius: var(--border-radius-small);
   }
   display: inline-flex;
   line-height: 1.2rem;
@@ -50,19 +45,20 @@ export const Skeleton = styled.span<{
     left: 0;
     right: 0;
     height: 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(
-      90deg,
-      var(--surface),
-      var(--surface-hover),
-      var(--surface)
-    );
-    transform: translateX(-100%);
+    background: linear-gradient(
+          -75deg,
+          transparent 30%,
+          var(--surface-active) 40%,
+          transparent 50%
+        )
+        0 0 / 200% 100%,
+      var(--grey-100);
+    background-attachment: fixed;
 
     animation-name: ${loadingAnimation};
     animation-direction: var(--animation-direction);
     animation-duration: var(--animation-duration);
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
 `;
