@@ -7,8 +7,9 @@ import pluralize from 'pluralize';
 import prettier from 'prettier';
 
 /**
- * To use this file, install this figma plugin; https://www.figma.com/community/plugin/888356646278934516
+ * To use this file, install design tokens figma plugin; https://www.figma.com/community/plugin/888356646278934516
  * Open up Tablekit Components (3.0), clone it to your drafts (as we can't run plugins on files we can't edit)
+ * Make sure the Design Tokens plugin settings has `kebab-case` as it's Name Conversion setting.
  * Run the plugin, exporting everything.
  * Run `node src/Tablekit/updateFromFigma.mjs <filepath of exported file>`
  */
@@ -155,7 +156,7 @@ export const ${pluralize.singular(groupKey)}ColorsObject = {
   }
 \``;
 
-const filepath = path.join(process.cwd(), 'src/theme.ts');
+const filepath = path.join(process.cwd(), 'src/themeVariables/theme.ts');
 const config = prettier.resolveConfig.sync(filepath);
 fs.outputFileSync(
   filepath,
