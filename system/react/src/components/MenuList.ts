@@ -1,5 +1,6 @@
 import styled, { CSSObject } from '@emotion/styled';
-import { Spacing } from 'utils/constants';
+
+import { Spacing } from '../utils/constants';
 
 export const baseSelector = '.menu-list';
 export const baseElement = 'menu';

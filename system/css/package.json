@@ -17,7 +17,7 @@
     "prepublishOnly": "npm run build && mv -f lib/* ."
   },
   "devDependencies": {
-    "@emotion/react": "11.9.3",
+    "@emotion/react": "11.10.0",
     "@tablecheck/tablekit-react": "2.0.0",
     "chalk": "5.0.1",
     "cssnano": "5.1.12",

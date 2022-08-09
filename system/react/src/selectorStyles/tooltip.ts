@@ -1,5 +1,6 @@
 import { css, keyframes } from '@emotion/react';
-import { BORDER_RADIUS_SMALL, ZIndex } from 'utils/constants';
+
+import { BORDER_RADIUS_SMALL, ZIndex } from '../utils/constants';
 
 /**
  * Adapted from https://github.com/picocss/pico/blob/master/scss/utilities/_tooltip.scss

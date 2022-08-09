@@ -1,20 +1,14 @@
 import { themes } from '@storybook/theming';
 import { LocaleCode } from '@tablecheck/locales';
-import {
-  ThemeProvider,
-  CLASSIC_COLORS,
-  DARK_COLORS
-} from '@tablecheck/tablekit-react/lib/esm';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ThemeProvider } from '@tablecheck/tablekit-react/src/components/ThemeProvider';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 import { useDirection } from 'storybook-rtl-addon';
 
-import './decorators';
-import { DocsContainer } from './DocContainer';
-
 const commonTheme = {
   brandTitle: 'Tablekit',
-  brandUrl: 'https://tablebkit.tablecheck.com',
+  brandUrl: 'https://tablekit.tablecheck.com',
   fontBase: 'IBM Plex Sans',
   inputBorderRadius: 4
 };
@@ -35,9 +29,6 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'centered',
   panelPosition: 'right',
-  docs: {
-    container: DocsContainer
-  },
   darkMode: {
     dark: {
       ...themes.dark,
@@ -72,22 +63,13 @@ export const decorators = [
   (story: () => JSX.Element, context): JSX.Element => {
     const isDark = useDarkMode();
     const direction = useDirection(context);
-    const theme = {
-      isDark,
-      colors: isDark
-        ? DARK_COLORS
-        : {
-            ...CLASSIC_COLORS,
-            canvas: 'white'
-          }
-    };
     return (
       <ThemeProvider
-        theme={theme}
-        isDark={isDark}
-        locale={direction === 'rtl' ? LocaleCode.Arabic : LocaleCode.English}
+        theme={isDark ? 'dark' : 'light'}
+        lang={direction === 'rtl' ? LocaleCode.Arabic : LocaleCode.English}
+        isRtl={direction === 'rtl'}
       >
-        <div dir={direction}>{story()}</div>
+        {story()}
       </ThemeProvider>
     );
   }

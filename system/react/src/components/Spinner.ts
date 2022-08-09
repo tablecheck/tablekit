@@ -1,6 +1,7 @@
 import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Spacing } from 'utils/constants';
+
+import { Spacing } from '../utils/constants';
 
 /**
  * Adapted from https://github.com/picocss/pico/blob/master/scss/utilities/_loading.scss

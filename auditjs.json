@@ -734,6 +734,45 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-3803?component-type=npm&component-name=nth-check&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/parse-url@7.0.2",
+      "description": "An advanced url parser supporting git urls too.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/parse-url@7.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2022-4430",
+          "title": "[sonatype-2022-4430] CWE-611: Improper Restriction of XML External Entity Reference ('XXE')",
+          "description": "parse-url - Misinterpretation of Input\n\nThe software processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+          "cvssScore": 9.4,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4430?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-4429",
+          "title": "[sonatype-2022-4429] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "parse-url - Denial of Service (DoS)\n\nThe software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4429?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-4428",
+          "title": "[sonatype-2022-4428] CWE-20: Improper Input Validation",
+          "description": "parse-url - Improper Input Validation\n\nThe product does not validate or incorrectly validates input that can affect the control flow or data flow of a program.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4428?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-4431",
+          "title": "[sonatype-2022-4431] CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "description": "parse-url - Cross-site Scripting (XSS)\n\nThe software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4431?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -874,6 +913,18 @@
     },
     {
       "id": "CVE-2021-3803"
+    },
+    {
+      "id": "sonatype-2022-4430"
+    },
+    {
+      "id": "sonatype-2022-4429"
+    },
+    {
+      "id": "sonatype-2022-4428"
+    },
+    {
+      "id": "sonatype-2022-4431"
     }
   ]
 }

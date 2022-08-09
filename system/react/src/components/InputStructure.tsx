@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Spacing } from 'utils/constants';
+
+import { Spacing } from '../utils/constants';
 
 import { InputAlert, Props as InputAlertProps } from './InputAlert';
 

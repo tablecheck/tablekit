@@ -1,6 +1,7 @@
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { BORDER_RADIUS_LARGE, BORDER_RADIUS_SMALL } from 'utils/constants';
+
+import { BORDER_RADIUS_LARGE, BORDER_RADIUS_SMALL } from '../utils/constants';
 
 // This file is a replacement for https://github.com/dvtng/react-loading-skeleton
 

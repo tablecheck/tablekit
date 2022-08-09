@@ -1,10 +1,11 @@
 import { css, SerializedStyles } from '@emotion/react';
 import styled, { StyledComponent } from '@emotion/styled';
+
 import {
   Spacing,
   BORDER_RADIUS_LARGE,
   BORDER_RADIUS_SMALL
-} from 'utils/constants';
+} from '../utils/constants';
 
 import {
   beforeStyles as spinnerBeforeStyles,
