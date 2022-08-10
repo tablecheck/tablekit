@@ -1,10 +1,11 @@
 import { themes } from '@storybook/theming';
 import { LocaleCode } from '@tablecheck/locales';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { ThemeProvider } from '@tablecheck/tablekit-react/src/components/ThemeProvider';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 import { useDirection } from 'storybook-rtl-addon';
+
+// eslint-disable-next-line import/no-relative-packages
+import { ThemeProvider } from '../system/react/src/components/ThemeProvider';
 
 const commonTheme = {
   brandTitle: 'Tablekit',
