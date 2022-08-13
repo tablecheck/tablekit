@@ -1,13 +1,13 @@
 import Footer from './footer/index.html';
 import Header from './header/index.html';
-import { Content, MainWrapper } from './styles';
+import { Content, ContentWithSidebar, MainWrapper } from './styles';
 
-export default function MainLayout({ children, head, title }) {
+export default function MainLayout({ children, head, title, isHomePage }) {
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <title>{title}</title>
+        <title>{isHomePage ? title : `${title} • TableKit`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           href="https://cdn0.tablecheck.com/common/images/favicons/tc/v1.0.0/favicon.ico"
@@ -93,9 +93,13 @@ export default function MainLayout({ children, head, title }) {
       </head>
       <body>
         <MainWrapper>
-          <Header />
-          <Content>{children}</Content>
-          <Footer />
+          <Header isHomePage={isHomePage} />
+          {isHomePage ? (
+            <Content>{children}</Content>
+          ) : (
+            <ContentWithSidebar>{children}</ContentWithSidebar>
+          )}
+          {isHomePage && <Footer />}
         </MainWrapper>
       </body>
     </html>

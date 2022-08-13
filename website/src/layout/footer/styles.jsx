@@ -51,7 +51,7 @@ export const Link = styled.a`
 
 export const Button = styled.a`
   text-decoration: none;
-  width: 240px;
+  width: fit-content;
 `;
 
 export const Title = styled.h1`

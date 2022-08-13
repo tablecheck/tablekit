@@ -11,7 +11,7 @@ import {
 
 export default function HomePage() {
   return (
-    <Layout title="TableKit">
+    <Layout title="TableKit" isHomePage>
       <Hero>
         <InnerWrapper>
           <Content>

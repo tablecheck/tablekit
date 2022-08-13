@@ -16,3 +16,10 @@ export const Content = styled.main`
   max-width: var(--containerWidth);
   flex: 1 0 auto;
 `;
+
+export const ContentWithSidebar = styled.main`
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  z-index: 0;
+`;

@@ -7,36 +7,36 @@ import {
   TopNav
 } from './styles';
 
-export default function () {
+export default function ({ isHomePage }) {
   return (
-    <HeaderWrapper>
+    <HeaderWrapper isHomePage={isHomePage}>
       <Logo href="/">
         <LogoSymbol src="//cdn0.tablecheck.com/common/images/logos/tc/v1.0.0/logo-symbol.svg" />
         <LogoWording>TableKit</LogoWording>
       </Logo>
       <TopNav>
         <li>
-          <a href="/changelog" role="button" data-variant="bare">
+          <a href="/changelog/" role="button" data-variant="bare">
             Changelog
           </a>
         </li>
         <li>
-          <a href="/design" role="button" data-variant="bare">
+          <a href="/design/" role="button" data-variant="bare">
             Design
           </a>
         </li>
         <li>
-          <a href="/build" role="button" data-variant="bare">
+          <a href="/build/" role="button" data-variant="bare">
             Build
           </a>
         </li>
         <li>
-          <a href="/contribute" role="button" data-variant="bare">
+          <a href="/contribute/" role="button" data-variant="bare">
             Contribute
           </a>
         </li>
         <li>
-          <a href="/about" role="button" data-variant="bare">
+          <a href="/about/" role="button" data-variant="bare">
             About
           </a>
         </li>

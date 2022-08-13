@@ -1,8 +1,11 @@
-@import '@tablecheck/tablekit-css/tablekit.classless.min.css';
+/* To-do import from package again when issues are fixed */
+/* @import '@tablecheck/tablekit-css/tablekit.classless.min.css'; */
+@import 'root.css';
 @import './fonts.css';
 
 :root {
   --containerWidth: 1280px;
+  --headerHeight: 64px;
 }
 
 html {
