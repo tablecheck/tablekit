@@ -1,6 +1,4 @@
-/* To-do import from package again when issues are fixed */
-/* @import '@tablecheck/tablekit-css/tablekit.classless.min.css'; */
-@import 'root.css';
+@import '@tablecheck/tablekit-css/tablekit.classless.min.css';
 @import './fonts.css';
 
 :root {
