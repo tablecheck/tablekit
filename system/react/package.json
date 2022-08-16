@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@carbon/icons-react": "11.7.0",
+    "@radix-ui/react-tabs": "1.0.0",
     "@storybook/addon-actions": "6.5.10",
     "@storybook/react": "6.5.10",
     "fs-extra": "10.1.0",

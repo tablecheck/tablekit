@@ -1,7 +1,5 @@
 import styled, { CSSObject } from '@emotion/styled';
 
-import { Spacing } from '../utils/constants';
-
 export const baseSelector = '.menu-list';
 export const baseElement = 'menu';
 
@@ -16,7 +14,7 @@ export const baseStylesObject: CSSObject = {
   padding: 0,
   display: 'grid',
   gridAutoFlow: 'row',
-  gridGap: Spacing.L1,
+  gridGap: 'var(--spacing-l1)',
   listStyle: 'none',
   alignItems: 'stretch',
   '& > li': {

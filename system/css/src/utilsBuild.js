@@ -2,9 +2,6 @@ import { evaluateStyleElement } from './evaluateStyleElement.js';
 
 export function utilsBuild(fileName, fileContent) {
   switch (fileName) {
-    case 'constants.js': {
-      return evaluateStyleElement(fileContent.constants.styles);
-    }
     case 'border.js': {
       return ['', ''];
     }

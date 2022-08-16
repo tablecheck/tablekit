@@ -5,6 +5,7 @@ import {
 } from '@emotion/react';
 import * as React from 'react';
 
+import { constants } from '../themeVariables/constants';
 import { ltrSupport } from '../themeVariables/ltrSupport';
 import { theme as themeStyles } from '../themeVariables/theme';
 import { typography } from '../themeVariables/typography';
@@ -16,6 +17,7 @@ const globalStyles = css`
   ${ltrSupport};
   ${themeStyles};
   ${typography};
+  ${constants}
 `;
 
 export function ThemeProvider({

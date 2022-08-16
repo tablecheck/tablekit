@@ -145,7 +145,6 @@ const coreStyles = css`
     position: absolute;
     top: calc(50% - var(--spinner-size) / 2);
     left: calc(50% - var(--spinner-size) / 2);
-    pointer-events: initial;
     opacity: 0;
     background-color: var(--color);
     transition: opacity var(--loading-transition);

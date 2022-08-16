@@ -1,7 +1,5 @@
 import styled, { CSSObject } from '@emotion/styled';
 
-import { BORDER_RADIUS_SMALL, Spacing } from '../utils/constants';
-
 export const baseSelector = '.menu';
 
 /**
@@ -10,8 +8,9 @@ export const baseSelector = '.menu';
 export const baseStylesObject: CSSObject = {
   backgroundColor: 'var(--surface)',
   boxShadow: 'var(--elevation-small)',
-  borderRadius: BORDER_RADIUS_SMALL,
-  padding: Spacing.L1
+  borderRadius: 'var(--border-radius-small)',
+  padding: 'var(--spacing-l1)',
+  zIndex: 'var(--zindex-layer)'
 };
 
 export const Menu = styled.div(baseStylesObject);

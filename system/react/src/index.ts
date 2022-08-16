@@ -28,8 +28,11 @@ export {
   elementStyles,
   Spinner
 } from './components/Spinner';
+export { TabButton } from './components/TabButton';
+export { Tabs, TabContent } from './components/Tabs';
 export { ThemeProvider } from './components/ThemeProvider';
 export { tooltip } from './selectorStyles/tooltip';
+export { constants } from './themeVariables/constants';
 export { ltrSupport } from './themeVariables/ltrSupport';
 export {
   lightColors,
@@ -51,6 +54,5 @@ export {
   BorderSide,
   getBorderColor
 } from './utils/border';
-export { constants } from './utils/constants';
 export { font } from './utils/font';
 export { resetCss } from './utils/resetCss';

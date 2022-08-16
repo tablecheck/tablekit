@@ -1,7 +1,5 @@
 import styled, { CSSObject } from '@emotion/styled';
 
-import { BORDER_RADIUS_SMALL, Spacing } from '../utils/constants';
-
 export const baseSelector = '.menu-item';
 
 /**
@@ -37,10 +35,10 @@ export const stateStylesObjects: Record<
 export const baseStylesObject: CSSObject = {
   font: 'var(--body-1)',
   color: 'var(--text)',
-  padding: Spacing.L3,
-  borderRadius: BORDER_RADIUS_SMALL,
+  padding: 'var(--spacing-l3)',
+  borderRadius: 'var(--border-radius-small)',
   display: 'grid',
-  gridGap: Spacing.L2,
+  gridGap: 'var(--spacing-l2)',
   gridAutoFlow: 'column',
   alignItems: 'center',
   justifyContent: 'flex-start',

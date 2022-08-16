@@ -18,6 +18,7 @@
     "release:auto": "lerna publish -y",
     "release:canary": "lerna publish --canary -y",
     "start": "start-storybook -p 6006",
+    "start:website": "lerna run start --scope=website",
     "test": "tablecheck-scripts test --coverage --env=jsdom --passWithNoTests",
     "test:watch": "tablecheck-scripts test --env=jsdom",
     "tsc": "tablecheck-scripts tsc",

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { Spacing } from '../utils/constants';
+import { Spacing } from '../themeVariables/constants';
 
 import { baseStyles, Props } from './Input';
 
