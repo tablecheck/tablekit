@@ -23,7 +23,7 @@ export interface Props {
   content: React.ReactNode;
 }
 
-export const baseSelector = 'span.input-alert';
+export const classySelector = 'span.input-alert';
 
 export const baseStyles = css`
   display: grid;

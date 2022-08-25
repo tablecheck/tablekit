@@ -2,6 +2,8 @@
  * DO NOT EDIT: This file is generated, run 'pnpm update:exports' to update this.
  * The exports here are generated from all ts/tsx files at the root level
  */
+export { BadgeBase, VariantBadges, Badge } from './components/Badge';
+export type { BadgeVariant } from './components/Badge';
 export { ButtonBase, VariantButtons, Button } from './components/Button';
 export type { ButtonVariant } from './components/Button';
 export { Input, InputWithIcons } from './components/Input';

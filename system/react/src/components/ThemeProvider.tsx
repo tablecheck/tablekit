@@ -9,11 +9,12 @@ import { constants } from '../themeVariables/constants';
 import { ltrSupport } from '../themeVariables/ltrSupport';
 import { theme as themeStyles } from '../themeVariables/theme';
 import { typography } from '../themeVariables/typography';
+import { font } from '../utils/font';
 import { resetCss } from '../utils/resetCss';
 
 const globalStyles = css`
-  // TODO add font-face from fontSettings
   ${resetCss};
+  ${font};
   ${ltrSupport};
   ${themeStyles};
   ${typography};

@@ -14,7 +14,7 @@ interface Props {
   alert?: InputAlertProps;
 }
 
-export const baseSelector = '.input-structure';
+export const classySelector = '.input-structure';
 
 export const baseStyles = css`
   display: grid;

@@ -1,7 +1,8 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const baseElement = 'input';
+export const classlessSelector = 'input';
+export const classySelector = '.input';
 
 export const baseStyles = css`
   padding: 12px 16px;
@@ -63,7 +64,7 @@ export interface Props {
   'data-disabled'?: boolean;
 }
 
-export const Input = styled(baseElement)<Props>`
+export const Input = styled(classlessSelector)<Props>`
   ${baseStyles}
 `;
 

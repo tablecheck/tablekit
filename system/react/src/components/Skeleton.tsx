@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 // This file is a replacement for https://github.com/dvtng/react-loading-skeleton
 
-export const baseSelector = '.skeleton';
+export const classySelector = '.skeleton';
 
 const loadingAnimation = keyframes`
   to {

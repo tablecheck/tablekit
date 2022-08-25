@@ -63,8 +63,8 @@ await Promise.all(
           );
           return;
         }
-        let baseElement;
-        let baseSelector;
+        let classlessSelector;
+        let classySelector;
         let outputStyles;
         let keyframes;
         switch (folderName) {
@@ -85,19 +85,18 @@ await Promise.all(
               [exportName]: Component,
               baseStyles,
               baseStylesObject,
-              baseElement: maybeBaseElement,
-              baseSelector: maybeBaseSelector
+              classlessSelector: maybeClasslessSelector
             } = fileContent;
+            ({ classySelector } = fileContent);
 
-            baseElement = maybeBaseElement || maybeBaseSelector;
-            baseSelector = maybeBaseSelector || maybeBaseElement;
+            classlessSelector = maybeClasslessSelector || classySelector;
 
-            if (!baseElement || !baseSelector) {
+            if (!classySelector) {
               throw new Error(
                 `${path.relative(
                   process.cwd(),
                   path.join(folderPath, fileName)
-                )} does not export either a "baseSelector" or "baseElement" value`
+                )} does not export either a "classySelector" value`
               );
             }
             [outputStyles, keyframes] = evaluateStyleElement(
@@ -114,8 +113,8 @@ await Promise.all(
 
         await Promise.all(
           [
-            [classlessOutputFolder, allClasslessStyles, baseElement],
-            [classyOutputFolder, allClassyStyles, baseSelector]
+            [classlessOutputFolder, allClasslessStyles, classlessSelector],
+            [classyOutputFolder, allClassyStyles, classySelector]
           ].map(async ([childOutputFolderPath, aggregateStyles, selector]) => {
             const input = `${keyframes}${
               selector ? `${selector} { ${outputStyles} }` : outputStyles

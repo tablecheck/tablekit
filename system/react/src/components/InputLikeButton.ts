@@ -4,7 +4,7 @@ import { Spacing } from '../themeVariables/constants';
 
 import { baseStyles, Props } from './Input';
 
-export const baseSelector = 'button.input';
+export const classySelector = 'button.input';
 
 export const InputLikeButton = styled.button<Props>`
   ${baseStyles};

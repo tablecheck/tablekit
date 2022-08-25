@@ -7,7 +7,7 @@ import { Spacing } from '../themeVariables/constants';
  * Adapted from https://github.com/picocss/pico/blob/master/scss/utilities/_loading.scss
  */
 
-export const baseSelector =
+export const classySelector =
   '[aria-busy="true"]:not(button):not(select):not(input):not(textarea)';
 
 export const rotateAnimation = keyframes`

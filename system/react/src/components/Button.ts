@@ -9,10 +9,10 @@ import {
 /**
  * This is the normal element used for this styles.
  * If provided the CSS selector should also be `button {...`.
- * Alteratively `baseSelector` can be provided which should be either an attribute or class
+ * Alteratively `classySelector` can be provided which should be either an attribute or class
  */
-export const baseElement = 'button, a[role="button"]';
-export const baseSelector = '.btn';
+export const classlessSelector = 'button, a[role="button"]';
+export const classySelector = '.btn';
 
 export const baseStyles = css`
   position: relative;

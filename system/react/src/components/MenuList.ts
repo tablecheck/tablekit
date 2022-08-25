@@ -1,7 +1,7 @@
 import styled, { CSSObject } from '@emotion/styled';
 
-export const baseSelector = '.menu-list';
-export const baseElement = 'menu';
+export const classlessSelector = 'menu';
+export const classySelector = '.menu-list';
 
 /**
  * We export the objects as well for compatibilty with 3rd party libs like react-select
@@ -27,6 +27,6 @@ export const baseStylesObject: CSSObject = {
   }
 };
 
-export const MenuList = styled(baseElement)<{ 'data-noscroll'?: boolean }>(
-  baseStylesObject
-);
+export const MenuList = styled(classlessSelector)<{
+  'data-noscroll'?: boolean;
+}>(baseStylesObject);

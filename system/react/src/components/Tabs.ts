@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const baseSelector = '.tabs';
+export const classySelector = '.tabs';
 
 export const Tabs = styled.div<{
   role?: 'tablist';

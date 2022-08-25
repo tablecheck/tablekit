@@ -1,6 +1,6 @@
 import styled, { CSSObject } from '@emotion/styled';
 
-export const baseSelector = '.menu';
+export const classySelector = '.menu';
 
 /**
  * We export the objects as well for compatibilty with 3rd party libs like react-select

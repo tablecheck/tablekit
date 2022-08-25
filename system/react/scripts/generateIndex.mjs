@@ -70,6 +70,7 @@ async function getExport(filename) {
       node.kind === ts.SyntaxKind.TypeAliasDeclaration
     );
   }
+  const selectorRegex = /^base|class(less|y)/g;
   const exportNames = exportNodes
     .filter((node) => !nodeIsType(node))
     .map((node) => {
@@ -95,8 +96,8 @@ async function getExport(filename) {
     .filter(
       (name) =>
         name.match(/ as /g) ||
-        !name.match(/^base/g) ||
-        (name.match(/^base/g) && name.match(/Object$/g))
+        !name.match(selectorRegex) ||
+        (name.match(selectorRegex) && name.match(/Object$/g))
     );
   const exportTypes = exportNodes
     .filter((node) => nodeIsType(node))
@@ -110,9 +111,9 @@ async function getExport(filename) {
     exportDeclarations.push(
       `export {${exportNames
         .map((name) => {
-          if (name.match(/ as /g) || !name.match(/^base/g)) return name;
+          if (name.match(/ as /g) || !name.match(selectorRegex)) return name;
           return `${name} as ${name.replace(
-            /^base/g,
+            selectorRegex,
             _.camelCase(parsedName.name)
           )}`;
         })

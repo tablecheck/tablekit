@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const baseSelector = '.tab-button';
+export const classySelector = '.tab-button';
 
 export const TabButton = styled.button<{
   role?: 'tab';
