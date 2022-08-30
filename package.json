@@ -2,8 +2,13 @@
   "name": "tablekit",
   "description": "TableCheck's Design System",
   "license": "MIT",
-  "author": "TableCheck Inc.",
-  "repository": "github:tablecheck/tablekit",
+  "author": {
+    "name": "TableCheck Inc."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tablecheck/tablekit.git"
+  },
   "scripts": {
     "audit": "tablecheck-scripts auditjs",
     "audit:ci": "tablecheck-scripts auditjs --ci",
@@ -76,5 +81,15 @@
     "storybook-dark-mode": "1.1.0",
     "storybook-rtl-addon": "0.3.3",
     "typescript": "4.7.4"
-  }
+  },
+  "devDependencies": {
+    "chromatic": "6.8.0"
+  },
+  "version": "",
+  "bugs": {
+    "url": "https://github.com/tablecheck/tablekit/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/tablecheck/tablekit#readme",
+  "_id": "tablekit@"
 }
