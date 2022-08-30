@@ -28,7 +28,7 @@ export const Default: Story<any> = () => (
       </Tabs>
     </TabElements.List>
     {tabs.map((name) => (
-      <Content value={name} key={name}>
+      <Content role="tabpanel" id={name} value={name} key={name}>
         Content for tab {name}
       </Content>
     ))}

@@ -1,4 +1,5 @@
 import Layout from '../layout/index.html';
+
 import {
   Body,
   IntroText,
@@ -42,40 +43,40 @@ export default function () {
               </SectionHeading>
               <ul>
                 <li>
-                  <a href="">Accessibility at TableCheck</a>
+                  <a href="#Accessibility">Accessibility at TableCheck</a>
                 </li>
                 <li>
-                  <a href="">Guidelines</a>
+                  <a href="#Guidelines">Guidelines</a>
                 </li>
                 <li>
-                  <a href="">Tools</a>
+                  <a href="#Tools">Tools</a>
                 </li>
                 <li>
-                  <a href="">Alternative text for images</a>
+                  <a href="#input">Alternative text for images</a>
                 </li>
                 <li>
-                  <a href="">Assistive technology announcements</a>
+                  <a href="#Assistive">Assistive technology announcements</a>
                 </li>
                 <li>
-                  <a href="">Descriptive buttons</a>
+                  <a href="#Descriptive">Descriptive buttons</a>
                 </li>
                 <li>
-                  <a href="">Focus management</a>
+                  <a href="#Focus">Focus management</a>
                 </li>
                 <li>
-                  <a href="">Headings</a>
+                  <a href="#Headings">Headings</a>
                 </li>
                 <li>
-                  <a href="">Links</a>
+                  <a href="#Links">Links</a>
                 </li>
                 <li>
-                  <a href="">Semantic HTML</a>
+                  <a href="#Semantic">Semantic HTML</a>
                 </li>
                 <li>
-                  <a href="">Text resize and respacing</a>
+                  <a href="#Text">Text resize and respacing</a>
                 </li>
                 <li>
-                  <a href="">Tooltip alternatives</a>
+                  <a href="#Tooltip">Tooltip alternatives</a>
                 </li>
               </ul>
             </SidebarSection>
@@ -85,8 +86,8 @@ export default function () {
           <PageContent>
             <h1>Color</h1>
             <IntroText>
-              Color is a fundamental piece in TableKit's visual language. In
-              this guide you will learn about the principles, patterns, and
+              Color is a fundamental piece in TableKit&apos;s visual language.
+              In this guide you will learn about the principles, patterns, and
               abstractions that make TableKit’s color system.
             </IntroText>
             <h2>
@@ -96,7 +97,7 @@ export default function () {
             </h2>
             <img
               width="960"
-              alt="Image showing the two different types of color modes: light mode and dark mode"
+              alt="Two different types of color modes: light mode and dark mode"
               src="https://user-images.githubusercontent.com/6951037/146927448-cb518377-114a-4ab8-a37e-1eeffc8732c7.png"
             />
           </PageContent>
