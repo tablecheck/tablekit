@@ -1,3 +1,7 @@
+# Developer Experience with VSCode
+
+When using the [VSCode Styled Global Variables Autocomplete](https://marketplace.visualstudio.com/items?itemName=yeion7.styled-global-variables-autocomplete) plugin, add the following to the `Variables Autocomplete: Include` setting to get autocomplete in all projects and inside the tablekit repo as well; `{src,node_modules/@tablecheck/tablekit-react/lib/esm}/{**/theme,**/themes,**/typography,**/colors,**/globalUtilCss,themeVariables/*,utils/*}.{ts,js,tsx,jsx}`
+
 # Fonts
 
 Tablekit ships by default with a lot of fallback fonts, our preference is using @ibm/plex but you will need to host these fonts yourselves. If you want to self host on a CDN you can use this snippet as a basis.

@@ -18,7 +18,7 @@ export const InputLikeButton = styled.button<Props>`
   &:hover {
     background: var(--surface-hover);
   }
-  &:active() {
+  &:active {
     background: var(--surface-active);
   }
 `;

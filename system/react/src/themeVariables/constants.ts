@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { globalThemeVars as selectGlobalThemeVars } from '../components/Select';
+
 /** @deprecated use `var(--border-radius-small)` */
 export const BORDER_RADIUS_SMALL = 4;
 /** @deprecated use `var(--border-radius-large)` */
@@ -63,4 +65,6 @@ export const constants = css`
     --zindex-spotlight: ${ZIndex.Spotlight};
     --zindex-tooltip: ${ZIndex.Tooltip};
   }
+
+  ${selectGlobalThemeVars}
 `;

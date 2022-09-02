@@ -1,50 +1,50 @@
 import { Close, FavoriteFilled } from '@carbon/icons-react';
-import styled from '@emotion/styled';
 import { Story, Meta } from '@storybook/react';
-import * as React from 'react';
 
-import { Input, InputWithIcons } from './Input';
+import {
+  Input,
+  InputWithIcons,
+  classlessSelector,
+  classySelector
+} from './Input';
+
+const contentVariants = [
+  {},
+  { 'data-disabled': true },
+  { 'data-stretch': true },
+  { 'data-error': true }
+];
 
 export default {
-  title: 'TableKit/Input'
+  title: 'TableKit/Input',
+  component: Input,
+  parameters: {
+    variants: contentVariants.length,
+    classlessSelector,
+    classySelector
+  }
 } as Meta;
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-`;
-
-export const Template: Story<React.ComponentProps<typeof Input>> = (props) => (
-  <Wrapper>
-    <Input {...props} placeholder="Placeholder" />
-    <InputWithIcons {...props}>
-      <input placeholder="Placeholder" />
-      <Close size={16} />
-    </InputWithIcons>
-    <InputWithIcons {...props}>
-      <FavoriteFilled size={16} />
-      <input placeholder="Placeholder" />
-    </InputWithIcons>
-    <InputWithIcons {...props}>
-      <FavoriteFilled size={16} />
-      <input placeholder="Placeholder" />
-      <Close size={16} />
-    </InputWithIcons>
-  </Wrapper>
+export const Variants: Story = () => (
+  <>
+    {contentVariants.map((props) => (
+      <>
+        {' '}
+        <Input {...props} placeholder="Placeholder" />
+        <InputWithIcons {...props}>
+          <input placeholder="Placeholder" />
+          <Close size={16} />
+        </InputWithIcons>
+        <InputWithIcons {...props}>
+          <FavoriteFilled size={16} />
+          <input placeholder="Placeholder" />
+        </InputWithIcons>
+        <InputWithIcons {...props}>
+          <FavoriteFilled size={16} />
+          <input placeholder="Placeholder" />
+          <Close size={16} />
+        </InputWithIcons>
+      </>
+    ))}
+  </>
 );
-Template.storyName = 'Default';
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  'data-disabled': true
-};
-export const Stretched = Template.bind({});
-Stretched.args = {
-  'data-stretch': true
-};
-export const Error = Template.bind({});
-Error.args = {
-  'data-error': true
-};

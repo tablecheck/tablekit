@@ -89,7 +89,14 @@ await Promise.all(
             } = fileContent;
             ({ classySelector } = fileContent);
 
-            classlessSelector = maybeClasslessSelector || classySelector;
+            if (maybeClasslessSelector) {
+              classlessSelector = maybeClasslessSelector
+                .split(',')
+                .map((selector) => `${selector.trim()}:not(.custom)`)
+                .join(', ');
+            } else {
+              classlessSelector = classySelector;
+            }
 
             if (!classySelector) {
               throw new Error(

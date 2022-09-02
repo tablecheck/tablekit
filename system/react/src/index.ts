@@ -6,6 +6,7 @@ export { BadgeBase, VariantBadges, Badge } from './components/Badge';
 export type { Props as BadgeProps, BadgeVariant } from './components/Badge';
 export { ButtonBase, VariantButtons, Button } from './components/Button';
 export type { ButtonVariant } from './components/Button';
+export { Checkbox } from './components/Checkbox';
 export { Input, InputWithIcons } from './components/Input';
 export type { Props as InputProps } from './components/Input';
 export { InputAlert } from './components/InputAlert';
@@ -23,6 +24,8 @@ export {
   baseStylesObject as menuListStylesObject,
   MenuList
 } from './components/MenuList';
+export { ScrollShadow } from './components/ScrollShadow';
+export { globalThemeVars, Select } from './components/Select';
 export { Skeleton } from './components/Skeleton';
 export {
   rotateAnimation,

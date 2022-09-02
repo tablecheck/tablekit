@@ -219,5 +219,6 @@ export const theme = css`
   :root {
     ${sentimentColors}
     ${utilityColors}
+    ${effectStyles}
   }
 `;

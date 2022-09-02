@@ -1,7 +1,8 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const classlessSelector = 'input';
+export const classlessSelector =
+  'input:not([type="checkbox"]):not([type="radio"])';
 export const classySelector = '.input';
 
 export const baseStyles = css`
@@ -16,14 +17,14 @@ export const baseStyles = css`
   }
 
   &,
-  & input,
+  & input:not([type='checkbox']):not([type='radio']),
   & select {
     width: var(--width);
   }
 
   &,
   &:focus-within,
-  & input,
+  & input:not([type='checkbox']):not([type='radio']),
   & select {
     &,
     &:focus {
@@ -64,7 +65,7 @@ export interface Props {
   'data-disabled'?: boolean;
 }
 
-export const Input = styled(classlessSelector)<Props>`
+export const Input = styled.input<Props>`
   ${baseStyles}
 `;
 

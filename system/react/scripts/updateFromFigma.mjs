@@ -153,6 +153,7 @@ export const ${pluralize.singular(groupKey)}ColorsObject = {
       .filter((key) => !['light', 'dark'].includes(key))
       .map((key) => `\${${key}Colors}`)
       .join('\n')}
+    \${effectStyles}
   }
 \``;
 
