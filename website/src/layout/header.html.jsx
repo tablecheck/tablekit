@@ -5,9 +5,9 @@ import {
   LogoWording,
   ToggleTheme,
   TopNav
-} from './styles';
+} from './header.styles';
 
-export default function ({ isHomePage }) {
+export function Header({ isHomePage }) {
   return (
     <HeaderWrapper isHomePage={isHomePage}>
       <Logo href="/">
@@ -16,27 +16,32 @@ export default function ({ isHomePage }) {
       </Logo>
       <TopNav>
         <li>
-          <a href="/changelog/" role="button" data-variant="bare">
+          <a href="/changelog" role="button" data-variant="bare">
             Changelog
           </a>
         </li>
         <li>
-          <a href="/design/" role="button" data-variant="bare">
+          <a href="/brand" role="button" data-variant="bare">
+            Brand
+          </a>
+        </li>
+        <li>
+          <a href="/design" role="button" data-variant="bare">
             Design
           </a>
         </li>
         <li>
-          <a href="/build/" role="button" data-variant="bare">
-            Build
+          <a href="/dev" role="button" data-variant="bare">
+            Dev
           </a>
         </li>
         <li>
-          <a href="/contribute/" role="button" data-variant="bare">
+          <a href="/contribute" role="button" data-variant="bare">
             Contribute
           </a>
         </li>
         <li>
-          <a href="/about/" role="button" data-variant="bare">
+          <a href="/about" role="button" data-variant="bare">
             About
           </a>
         </li>

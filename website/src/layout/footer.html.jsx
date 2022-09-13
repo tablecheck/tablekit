@@ -9,9 +9,9 @@ import {
   SubTitle,
   SvgIcon,
   Title
-} from './styles';
+} from './footer.styles';
 
-export default function () {
+export function Footer() {
   return (
     <FooterWrapper>
       <InnerWrapper>

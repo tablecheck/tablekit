@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { breakpoints } from '../styles';
+import { breakpoints } from './styles';
 
 export const FooterWrapper = styled.div`
   padding-top: 128px;

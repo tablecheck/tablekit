@@ -1,8 +1,22 @@
-import Footer from './footer/index.html';
-import Header from './header/index.html';
+import { SideNav as BrandSideNav } from '../brand/sideNav.html';
+import { SideNav as DesignSideNav } from '../design/sideNav.html';
+
+import { Body, PageContent, PageWrapper } from './body.styles';
+import { EditThisPage } from './editPage.html';
+import { Footer } from './footer.html';
+import { Header } from './header.html';
+import { PageIndex } from './pageIndex.html';
 import { Content, ContentWithSidebar, MainWrapper } from './styles';
 
-export default function MainLayout({ children, head, title, isHomePage }) {
+export default function MainLayout({
+  children,
+  head,
+  title,
+  isHomePage,
+  sideNav,
+  editPageRoute,
+  shouldIncludePageIndex
+}) {
   return (
     <html lang="en">
       <head>
@@ -97,7 +111,19 @@ export default function MainLayout({ children, head, title, isHomePage }) {
           {isHomePage ? (
             <Content>{children}</Content>
           ) : (
-            <ContentWithSidebar>{children}</ContentWithSidebar>
+            <ContentWithSidebar>
+              <PageWrapper>
+                {sideNav === 'brand' && <BrandSideNav />}
+                {sideNav === 'design' && <DesignSideNav />}
+                <Body>
+                  <PageContent>
+                    {children}
+                    <EditThisPage route={editPageRoute} />
+                  </PageContent>
+                  {shouldIncludePageIndex && <PageIndex />}
+                </Body>
+              </PageWrapper>
+            </ContentWithSidebar>
           )}
           {isHomePage && <Footer />}
         </MainWrapper>
