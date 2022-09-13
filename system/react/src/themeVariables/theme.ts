@@ -208,14 +208,17 @@ export const theme = css`
   :root {
     ${lightColors};
   }
+
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme='light']) {
       ${darkColors}
     }
   }
+
   [data-theme='dark'] {
     ${darkColors}
   }
+
   :root {
     ${sentimentColors}
     ${utilityColors}

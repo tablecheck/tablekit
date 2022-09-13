@@ -773,6 +773,30 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4431?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/parse-url@7.0.2",
+      "description": "An advanced url parser supporting git urls too.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/parse-url@7.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-2900",
+          "title": "[CVE-2022-2900] CWE-918: Server-Side Request Forgery (SSRF)",
+          "description": "parse-url - Server-Side Request Forgery (SSRF)",
+          "cvssScore": 9.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "cve": "CVE-2022-2900",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-2900?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-5570",
+          "title": "1 vulnerability found",
+          "description": "1 non-CVE vulnerability found. To see more details, please create a free account at https://ossindex.sonatype.org/ and request for this information using your registered account",
+          "cvssScore": 9.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-5570"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -925,6 +949,12 @@
     },
     {
       "id": "sonatype-2022-4431"
+    },
+    {
+      "id": "CVE-2022-2900"
+    },
+    {
+      "id": "sonatype-2022-5570"
     }
   ]
 }

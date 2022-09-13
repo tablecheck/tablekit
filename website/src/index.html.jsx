@@ -1,4 +1,3 @@
-import Layout from './layout/index.html';
 import {
   Content,
   Hero,
@@ -7,11 +6,12 @@ import {
   Intro,
   SubTitle,
   Title
-} from './styles';
+} from './index.styles';
+import Layout from './layout/index.html';
 
 export default function HomePage() {
   return (
-    <Layout title="TableKit" isHomePage>
+    <Layout title="TableKit" isHomePage editPageRoute="index.html.jsx">
       <Hero>
         <InnerWrapper>
           <Content>
