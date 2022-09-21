@@ -24,6 +24,7 @@ export {
   baseStylesObject as menuListStylesObject,
   MenuList
 } from './components/MenuList';
+export { Radio } from './components/Radio';
 export { ScrollShadow } from './components/ScrollShadow';
 export { globalThemeVars, Select } from './components/Select';
 export { Skeleton } from './components/Skeleton';
