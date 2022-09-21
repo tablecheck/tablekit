@@ -1,5 +1,7 @@
 # tablekit
 
+[![Join the chat at https://gitter.im/tablecheck-tablekit/community](https://badges.gitter.im/tablecheck-tablekit/community.svg)](https://gitter.im/tablecheck-tablekit/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Next generation UI component library
 
 ## Installation
