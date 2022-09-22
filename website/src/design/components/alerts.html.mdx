@@ -1,0 +1,43 @@
+import Layout from '../../layout/index.html';
+
+import { IntroText } from '../../layout/body.styles';
+
+export default function (props) {
+  return (
+    <Layout
+      title="Design"
+      sideNav="design"
+      editPageRoute="design/components/alerts"
+      shouldIncludePageIndex
+    >
+      {props.children}
+    </Layout>
+  );
+}
+
+# Alerts
+
+<IntroText>
+  Alerts to notify the user of events, communication actions that are required
+  or that have taken place.
+</IntroText>
+
+[Figma](<https://www.figma.com/file/W3hxWj6VZydNaNGJSGxRsV/TableKit-Components-(3.0)?node-id=1545%3A4575>)
+
+## [Varients](website/src/design/components/badges.html#varients)
+
+Alerts come in two sizes, standard size containing the title with content, and an optional icon, or a smaller version with no title. There are also several different statuses options.
+
+#
+
+![No icon](/static/img/components/alert-varients.png 'Badges with no icon')
+
+#
+
+## [Anatomy](website/src/design/components/badges.html#anatomy)
+
+TODO
+
+## [Rules](website/src/design/components/badges.html#rules)
+
+TODO
