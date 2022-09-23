@@ -46,6 +46,7 @@ export {
   Spinner
 } from './components/Spinner';
 export { TabButton } from './components/TabButton';
+export { Table } from './components/Table';
 export { Tabs, TabContent } from './components/Tabs';
 export {
   textareaSizingStyles,
