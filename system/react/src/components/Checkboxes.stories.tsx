@@ -19,7 +19,6 @@ export const Variants: Story = () => (
     {[true, false].map((isChecked) =>
       contentVariants.map((variant) => (
         <Checkbox
-          type="checkbox"
           data-pseudo={variant.toLowerCase()}
           disabled={variant.toLowerCase() === 'disabled'}
           checked={isChecked}
