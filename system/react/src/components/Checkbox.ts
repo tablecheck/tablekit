@@ -3,9 +3,10 @@ import styled from '@emotion/styled';
 export const classlessSelector = 'input[type="checkbox"]';
 export const classySelector = '.checkbox';
 
-export const Checkbox = styled.input<{ type: 'checkbox' }>`
+export const Checkbox = styled.input<{ type?: 'checkbox' }>`
   --checkbox-size: 20px;
   appearance: none;
+  cursor: pointer;
   position: relative;
   margin: 2px;
   padding: 0;
@@ -18,7 +19,9 @@ export const Checkbox = styled.input<{ type: 'checkbox' }>`
   border: 2px solid var(--border);
   border-radius: 2px;
   transition: all 80ms linear;
-  &:hover {
+
+  &:hover,
+  &:focus-visible {
     border-color: var(--text);
   }
   &:focus {
@@ -43,6 +46,7 @@ export const Checkbox = styled.input<{ type: 'checkbox' }>`
   &:disabled {
     border-color: var(--border-transparent);
     background-color: var(--text-disabled);
+    cursor: not-allowed;
   }
   &:before {
     --c: var(--text-contrast); /* Color */
@@ -78,3 +82,7 @@ export const Checkbox = styled.input<{ type: 'checkbox' }>`
     background-repeat: no-repeat;
   }
 `;
+
+Checkbox.defaultProps = {
+  type: 'checkbox'
+};
