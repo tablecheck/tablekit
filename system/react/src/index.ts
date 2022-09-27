@@ -7,6 +7,11 @@ export type { Props as BadgeProps, BadgeVariant } from './components/Badge';
 export { ButtonBase, VariantButtons, Button } from './components/Button';
 export type { ButtonVariant } from './components/Button';
 export { Checkbox } from './components/Checkbox';
+export {
+  stateStylesObjects,
+  baseStylesObject as chipStylesObject,
+  Chip
+} from './components/Chip';
 export { Input, InputWithIcons } from './components/Input';
 export type { Props as InputProps } from './components/Input';
 export { InputAlert } from './components/InputAlert';
