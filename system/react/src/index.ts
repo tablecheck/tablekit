@@ -39,6 +39,7 @@ export {
 export { TabButton } from './components/TabButton';
 export { Tabs, TabContent } from './components/Tabs';
 export { ThemeProvider } from './components/ThemeProvider';
+export { Toggle } from './components/Toggle';
 export { tooltip } from './selectorStyles/tooltip';
 export { constants } from './themeVariables/constants';
 export { ltrSupport } from './themeVariables/ltrSupport';
