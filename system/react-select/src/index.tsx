@@ -18,7 +18,8 @@ import {
   SelectComponentsConfig,
   components as reactSelectComponents,
   GroupBase,
-  StylesConfig
+  StylesConfig,
+  ClearIndicatorProps
 } from 'react-select';
 
 declare module '@emotion/react' {
@@ -35,6 +36,7 @@ export interface Options {
   borderRadii?: BorderRadii;
   icon?: React.ReactNode;
   isCompact?: boolean;
+  isClearable?: boolean;
 }
 
 function getControlBorderColor({
@@ -62,6 +64,13 @@ const IconWrapper = styled.div`
   height: ${INPUT_INTERNAL_HEIGHT}px;
 `;
 
+const IndicatorWrapper = styled.div`
+  height: 20px;
+  svg {
+    color: var(--text);
+  }
+`;
+
 export function useReactSelectConfig<
   OptionType,
   IsMulti extends boolean = false
@@ -72,7 +81,8 @@ export function useReactSelectConfig<
   isMulti,
   borderRadii = BorderRadii.All,
   icon: unsafeIcon,
-  isCompact
+  isCompact,
+  isClearable
 }: Options): {
   components: SelectComponentsConfig<
     OptionType,
@@ -149,13 +159,34 @@ export function useReactSelectConfig<
       // eslint-disable-next-line @typescript-eslint/naming-convention
       IndicatorSeparator: () => null,
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      DropdownIndicator: () => <ChevronDown size={20} />,
+      DropdownIndicator: ({ getValue }) => {
+        if (isClearable && getValue().length) return null;
+        return (
+          <IndicatorWrapper>
+            <ChevronDown size={20} />
+          </IndicatorWrapper>
+        );
+      },
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      ClearIndicator: (
+        props: ClearIndicatorProps<OptionType, IsMulti, GroupBase<OptionType>>
+      ) => {
+        const {
+          innerProps: { ref, ...restInnerProps }
+        } = props;
+        return (
+          <IndicatorWrapper {...restInnerProps} ref={ref} data-testid="Clear">
+            <Close size={20} />
+          </IndicatorWrapper>
+        );
+      },
       // eslint-disable-next-line @typescript-eslint/naming-convention
       MultiValueRemove: (props) => (
         <reactSelectComponents.MultiValueRemove {...props}>
           <Close size={16} />
         </reactSelectComponents.MultiValueRemove>
-      ), // eslint-disable-next-line @typescript-eslint/naming-convention
+      ),
+      // eslint-disable-next-line @typescript-eslint/naming-convention
       MultiValue: ({ innerProps, removeProps, ...props }) => (
         <reactSelectComponents.MultiValue
           {...{
@@ -173,7 +204,7 @@ export function useReactSelectConfig<
       // eslint-disable-next-line @typescript-eslint/naming-convention
       LoadingIndicator: () => <Spinner color="var(--text-subtle)" />
     }),
-    [dataTestId, isInvalid, icon]
+    [dataTestId, isInvalid, icon, isClearable]
   );
   const stylesObject = React.useMemo<StylesConfig<OptionType, IsMulti>>(
     () => ({
@@ -249,9 +280,13 @@ export function useReactSelectConfig<
                 boxShadow,
                 ...borderColorProps,
                 borderColor: getControlBorderColor({
-                  isFocused: true,
+                  isFocused: false,
                   isInvalid
-                })
+                }),
+                cursor: 'pointer',
+                'div:last-child svg': {
+                  color: 'var(--text-subtle)'
+                }
               }
         };
       },
