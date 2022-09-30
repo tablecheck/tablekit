@@ -1,0 +1,63 @@
+import Layout from '../../layout/index.html';
+
+import { IntroText } from '../../layout/body.styles';
+
+export default function (props) {
+  return (
+    <Layout
+      title="Design"
+      sideNav="design"
+      editPageRoute="design/components/tabs"
+      shouldIncludePageIndex
+    >
+      {props.children}
+    </Layout>
+  );
+}
+
+# Tabs WIP
+
+<IntroText>
+  Tabs are used to organize related content. They allow the user to navigate
+  between groups of information that appear within the same context
+</IntroText>
+
+#### Figma: [Tabs](<https://www.figma.com/file/W3hxWj6VZydNaNGJSGxRsV/TableKit-Components-(3.0)>)
+
+## [Variants](#variants)
+
+### Text
+
+#
+
+Text only variant.
+
+![Title text](/static/img/components/PLACEHOLDER.png 'IMAGEDESCRIPTION')
+
+### Icon + Text
+
+#
+
+Variant with icon.
+
+![Title text](/static/img/components/PLACEHOLDER.png 'IMAGEDESCRIPTION')
+
+## [Anatomy](website/src/design/components/tabs.html#anatomy)
+
+The default total size of the button component is 48px, but depending on the state the padding will be different.
+
+Standard (default, hover, active etc) will use 12px padding on the top and bottom, along with 16px on each side.
+
+Active will have 8px padding bottom, with a 4px border.
+
+The standard font size inside the buttons is 16px IBM plex with a medium font weight.
+
+Hover and active states will have a 4px border radius.
+
+![Tabs anatomy](/static/img/components/PLACEHOLDER.png 'IMAGEDESCRIPTION')
+
+## [Rules](website/src/design/components/tabs.html#rules)
+
+Here is where rules content should go.
+
+![Tabs anatomy](/static/img/components/placeholder-rules.png 'IMAGEDESCRIPTION') ![Tabs anatomy](/static/img/components/placeholder-rules.png 'IMAGEDESCRIPTION')
