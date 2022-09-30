@@ -9,7 +9,7 @@ import {
 export default {
   title: 'TableKit/ScrollShadow',
   component: CoreScrollShadow,
-  parameters: { variants: 3, classySelector }
+  parameters: { variants: ['Start', 'Center', 'End'], classySelector }
 } as Meta;
 
 const ScrollShadow = styled(CoreScrollShadow)`

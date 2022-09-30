@@ -13,7 +13,7 @@ const contentVariants = [
 export default {
   title: 'TableKit/InputLikeButton',
   component: InputLikeButton,
-  parameters: { variants: contentVariants.length, classySelector }
+  parameters: { variants: contentVariants, classySelector }
 } as Meta;
 
 export const Variants: Story = () => (

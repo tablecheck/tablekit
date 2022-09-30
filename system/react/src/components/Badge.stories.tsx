@@ -6,7 +6,7 @@ import { Badge, variants, classySelector } from './Badge';
 export default {
   title: 'TableKit/Badges',
   component: Badge,
-  parameters: { variants: variants.length, classySelector }
+  parameters: { variants, classySelector }
 } as Meta;
 
 export const AllVariants: Story = () => (

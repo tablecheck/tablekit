@@ -129,7 +129,6 @@ const StoryWrapper = styled.div`
   grid-template-rows: max-content;
   align-items: stretch;
   min-width: 100vw;
-
   & > * {
     display: flex;
     flex-direction: column;
@@ -164,6 +163,18 @@ export const decorators = [
     const isDark = useDarkMode();
     const direction = getDirection();
     const { classlessSelector, classySelector } = context.parameters;
+    const gridStyles = {
+      '--variants': context.parameters.variants?.length || 1
+    };
+    const storyHeader =
+      context.parameters.variants?.length > 1 &&
+      context.parameters.variants.every(
+        (variant: any) => typeof variant === 'string'
+      )
+        ? context.parameters.variants.map((variant: string) => (
+            <b>{variant.charAt(0).toUpperCase() + variant.slice(1)}</b>
+          ))
+        : null;
     return (
       <CacheProvider value={emotionCache}>
         <StoryWrapper>
@@ -190,12 +201,8 @@ export const decorators = [
                   ) : null}
                 </Selectors>
               ) : null}
-              <Grid
-                ref={handleGridRef}
-                style={
-                  { '--variants': context.parameters.variants || 1 } as any
-                }
-              >
+              <Grid ref={handleGridRef} style={gridStyles as any}>
+                {storyHeader}
                 {story()}
               </Grid>
             </ThemeInner>
@@ -207,12 +214,8 @@ export const decorators = [
             isRtl={direction === 'rtl'}
           >
             <ThemeInner>
-              <Grid
-                ref={handleGridRef}
-                style={
-                  { '--variants': context.parameters.variants || 1 } as any
-                }
-              >
+              <Grid ref={handleGridRef} style={gridStyles as any}>
+                {storyHeader}
                 {story()}
               </Grid>
             </ThemeInner>

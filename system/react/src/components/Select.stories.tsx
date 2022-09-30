@@ -8,7 +8,7 @@ export default {
   title: 'TableKit/Select',
   component: Select,
   parameters: {
-    variants: contentVariants.length,
+    variants: contentVariants,
     classlessSelector,
     classySelector
   }

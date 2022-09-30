@@ -10,7 +10,7 @@ export default {
   parameters: {
     classySelector,
     classlessSelector,
-    variants: contentVariants.length
+    variants: contentVariants
   }
 };
 
