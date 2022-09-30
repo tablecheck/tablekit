@@ -138,7 +138,7 @@ Promise.all(filenames.map(getExport)).then((exportLines) => {
     filepath,
     prettier.format(
       `/**
-        * DO NOT EDIT: This file is generated, run 'pnpm update:exports' to update this.
+        * DO NOT EDIT: This file is generated, run 'npm update:exports' to update this.
         * The exports here are generated from all ts/tsx files at the root level
         */
        ${fileContent}`,

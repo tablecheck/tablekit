@@ -31,7 +31,7 @@ jobs:
           cache: npm
 
       - name: Install 🔧
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
   lint:
     needs: [setup]
@@ -49,7 +49,7 @@ jobs:
           cache: npm
 
       - name: Restore npm installs and Lerna setup
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Validate all commits from PR
         run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
@@ -73,7 +73,7 @@ jobs:
           cache: npm
 
       - name: Restore npm installs and Lerna setup
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Audit Dependencies
         run: npm run audit:ci
@@ -97,7 +97,7 @@ jobs:
           cache: npm
 
       - name: Restore npm installs and Lerna setup
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Run Tests
         run: npm test
@@ -128,7 +128,7 @@ jobs:
           node-version: ${{ steps.nvm.outputs.nvmrc }}
 
       - name: Install 🔧
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Create Canary Release ✨
         env:
@@ -157,7 +157,7 @@ jobs:
           node-version: ${{ steps.nvm.outputs.nvmrc }}
 
       - name: Install 🔧
-        run: npm ci --legacy-peer-deps
+        run: npm ci
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1

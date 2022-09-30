@@ -21,7 +21,7 @@ export const TabButton = styled.button<{
     height: var(--underline-height);
     left: 0;
     right: 0;
-    background: black;
+    background: var(--text);
     opacity: 0;
     transform: scale(0.6);
     transform-origin: bottom center;

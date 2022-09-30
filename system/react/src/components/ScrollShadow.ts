@@ -9,7 +9,7 @@ export const ScrollShadow = styled.div<{
   'data-overflow'?: 'x' | 'y';
 }>`
   background-repeat: no-repeat;
-  background-color: white;
+  background-color: var(--surface);
   /* Opera doesn't support this in the shorthand */
   background-attachment: local, local, scroll, scroll;
   &[data-overflow='y'] {
