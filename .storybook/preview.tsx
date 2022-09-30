@@ -1,11 +1,10 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+import { getDirection } from '@brightlayer-ui/storybook-rtl-addon';
 import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { styled, themes } from '@storybook/theming';
 import { LocaleCode } from '@tablecheck/locales';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
-import { useDirection } from 'storybook-rtl-addon';
 
 // eslint-disable-next-line import/no-relative-packages
 import { ThemeProvider } from '../system/react/src/components/ThemeProvider';
@@ -31,7 +30,7 @@ const darkTheme = {
 // https://github.com/hipstersmoothie/storybook-dark-mode
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  layout: 'centered',
+  layout: 'fullscreen',
   panelPosition: 'right',
   darkMode: {
     dark: {
@@ -80,6 +79,7 @@ const Selectors = styled.div`
   grid-gap: var(--spacing-l3);
   margin-bottom: var(--spacing-l4);
   align-items: center;
+  color: var(--text);
 `;
 
 const Code = styled.pre`
@@ -122,40 +122,102 @@ const emotionCache = createCache({
   ]
 });
 
+const StoryWrapper = styled.div`
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content;
+  align-items: stretch;
+  min-width: 100vw;
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--surface);
+    padding: var(--spacing-l7) var(--spacing-l4);
+  }
+`;
+
+const ThemeInner = styled.div``;
+
+declare global {
+  interface Window {
+    firstStorybookGridRef?: HTMLDivElement;
+  }
+}
+
+function handleGridRef(ref: HTMLDivElement) {
+  if (!window.firstStorybookGridRef) window.firstStorybookGridRef = ref;
+  else {
+    const width1 = ref.getBoundingClientRect().width;
+    const width2 = window.firstStorybookGridRef.getBoundingClientRect().width;
+    const width = `${Math.max(width1, width2)}px`;
+    ref.style.setProperty('min-width', width);
+    window.firstStorybookGridRef.style.setProperty('min-width', width);
+    window.firstStorybookGridRef = undefined;
+  }
+}
+
 export const decorators = [
   (story: () => JSX.Element, context): JSX.Element => {
     const isDark = useDarkMode();
-    const direction = useDirection(context);
+    const direction = getDirection();
     const { classlessSelector, classySelector } = context.parameters;
     return (
       <CacheProvider value={emotionCache}>
-        <ThemeProvider
-          theme={isDark ? 'dark' : 'light'}
-          lang={direction === 'rtl' ? LocaleCode.Arabic : LocaleCode.English}
-          isRtl={direction === 'rtl'}
-        >
-          {classlessSelector || classySelector ? (
-            <Selectors>
-              {classlessSelector ? (
-                <>
-                  <b>Classless Selector:</b>
-                  <Code>{classlessSelector}</Code>
-                </>
-              ) : null}
-              {classySelector ? (
-                <>
-                  <b>Classy Selector:</b>
-                  <Code>{classySelector}</Code>
-                </>
-              ) : null}
-            </Selectors>
-          ) : null}
-          <Grid
-            style={{ '--variants': context.parameters.variants || 1 } as any}
+        <StoryWrapper>
+          <ThemeProvider
+            useLocalCssVariables
+            theme={isDark ? 'dark' : 'light'}
+            lang={direction === 'rtl' ? LocaleCode.Arabic : LocaleCode.English}
+            isRtl={direction === 'rtl'}
           >
-            {story()}
-          </Grid>
-        </ThemeProvider>
+            <ThemeInner>
+              {classlessSelector || classySelector ? (
+                <Selectors>
+                  {classlessSelector ? (
+                    <>
+                      <b>Classless Selector:</b>
+                      <Code>{classlessSelector}</Code>
+                    </>
+                  ) : null}
+                  {classySelector ? (
+                    <>
+                      <b>Classy Selector:</b>
+                      <Code>{classySelector}</Code>
+                    </>
+                  ) : null}
+                </Selectors>
+              ) : null}
+              <Grid
+                ref={handleGridRef}
+                style={
+                  { '--variants': context.parameters.variants || 1 } as any
+                }
+              >
+                {story()}
+              </Grid>
+            </ThemeInner>
+          </ThemeProvider>
+          <ThemeProvider
+            useLocalCssVariables
+            theme={isDark ? 'light' : 'dark'}
+            lang={direction === 'rtl' ? LocaleCode.Arabic : LocaleCode.English}
+            isRtl={direction === 'rtl'}
+          >
+            <ThemeInner>
+              <Grid
+                ref={handleGridRef}
+                style={
+                  { '--variants': context.parameters.variants || 1 } as any
+                }
+              >
+                {story()}
+              </Grid>
+            </ThemeInner>
+          </ThemeProvider>
+        </StoryWrapper>
       </CacheProvider>
     );
   }

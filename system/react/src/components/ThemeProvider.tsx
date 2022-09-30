@@ -26,24 +26,36 @@ export function ThemeProvider({
   lang,
   country,
   theme = 'light',
-  children
+  children,
+  useLocalCssVariables
 }: {
   isRtl?: boolean;
   lang?: string;
   country?: string;
   theme?: 'light' | 'dark';
   children: React.ReactNode;
+  useLocalCssVariables?: boolean;
 }): JSX.Element {
   React.useEffect(() => {
+    if (useLocalCssVariables) return;
+    const node = document.documentElement;
     if (lang) {
-      document.documentElement.setAttribute('lang', lang);
+      node.setAttribute('lang', lang);
     }
     if (country) {
-      document.documentElement.dataset.country = country;
+      node.dataset.country = country;
     }
-    document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
-    document.documentElement.dataset.theme = theme;
-  }, [isRtl, lang, theme, country]);
+    node.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+    node.dataset.theme = theme;
+  }, [isRtl, lang, theme, country, useLocalCssVariables]);
+  const wrapperProps = useLocalCssVariables
+    ? {
+        lang,
+        'data-country': country,
+        dir: isRtl ? 'rtl' : 'ltr',
+        'data-theme': theme
+      }
+    : {};
   return (
     <EmotionThemeProvider
       theme={(parentTheme) => ({
@@ -53,7 +65,11 @@ export function ThemeProvider({
       })}
     >
       <Global styles={globalStyles} />
-      {children}
+      {useLocalCssVariables ? (
+        <div {...wrapperProps}>{children}</div>
+      ) : (
+        children
+      )}
     </EmotionThemeProvider>
   );
 }

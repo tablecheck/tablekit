@@ -31,6 +31,9 @@ export const resetCss = css`
     border: 0;
     font-size: 125%;
     vertical-align: baseline;
+  }
+  body,
+  [data-theme] {
     color: var(--text);
   }
   ol,
