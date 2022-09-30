@@ -19,7 +19,7 @@ export default {
   title: 'TableKit/Input',
   component: Input,
   parameters: {
-    variants: contentVariants.length,
+    variants: contentVariants,
     classlessSelector,
     classySelector
   }
@@ -29,7 +29,6 @@ export const Variants: Story = () => (
   <>
     {contentVariants.map((props) => (
       <>
-        {' '}
         <Input {...props} placeholder="Placeholder" />
         <InputWithIcons {...props}>
           <input placeholder="Placeholder" />

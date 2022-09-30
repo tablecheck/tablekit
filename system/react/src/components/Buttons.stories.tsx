@@ -13,7 +13,7 @@ import {
 export default {
   title: 'TableKit/Buttons',
   component: Button,
-  parameters: { variants: variants.length, classlessSelector, classySelector }
+  parameters: { variants, classlessSelector, classySelector }
 } as Meta;
 
 export const AllVariants = () => (

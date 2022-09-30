@@ -8,7 +8,7 @@ export default {
   title: 'TableKit/Checkbox',
   component: Checkbox,
   parameters: {
-    variants: contentVariants.length,
+    variants: contentVariants,
     classlessSelector,
     classySelector
   }
