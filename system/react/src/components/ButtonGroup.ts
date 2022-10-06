@@ -48,12 +48,19 @@ export const baseStyles = css`
         content: '';
         position: absolute;
         z-index: 1;
-        top: -4px;
-        bottom: -4px;
-        left: -5px;
-        right: -4px;
-        border-radius: var(--border-radius-small);
+        top: -2px;
+        bottom: -2px;
+        left: -3px;
+        right: -2px;
         border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
+      }
+      box-shadow: -1px 0 var(--border), inset 0 1px var(--border),
+        inset -1px 0 var(--border), inset 0 -1px var(--border);
+
+      & + *[data-selected='true'],
+      & + *:last-child[data-selected='true'] {
+        box-shadow: -1px 0 var(--border), inset 0 1px var(--border-active),
+          inset -1px 0 var(--border-active), inset 0 -1px var(--border-active);
       }
 
       &[data-selected='true'] {
@@ -77,8 +84,11 @@ export const baseStyles = css`
 
       &:focus-visible {
         &:after {
-          left: -4px;
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+          left: -2px;
         }
+        box-shadow: inset 0 0 0 1px var(--border);
 
         &[data-selected='true'] {
           box-shadow: inset 0 0 0 1px var(--border-active);
@@ -101,6 +111,13 @@ export const baseStyles = css`
       box-shadow: ${stateBoxShadow.default};
 
       &:focus-visible {
+        &:after {
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+        }
+        box-shadow: -1px 0 var(--border), inset 0 1px var(--border),
+          inset -1px 0 var(--border), inset 0 -1px var(--border);
+
         &[data-selected='true'] {
           box-shadow: ${stateBoxShadow.selected};
         }
