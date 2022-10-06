@@ -46,11 +46,12 @@ export {
   lightColorsObject,
   darkColors,
   darkColorsObject,
-  sentimentColors,
-  sentimentColorsObject,
+  brandColors,
+  brandColorsObject,
   utilityColors,
   utilityColorsObject,
-  effectStyles,
+  lightEffectStyles,
+  darkEffectStyles,
   theme
 } from './themeVariables/theme';
 export type { SentimentColors } from './themeVariables/theme';
