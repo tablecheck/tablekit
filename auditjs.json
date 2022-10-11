@@ -797,6 +797,54 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-5570"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/loader-utils@2.0.2",
+      "description": "utils for webpack loaders",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/loader-utils@2.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-37599",
+          "title": "[CVE-2022-37599] loader-utils - REDOS",
+          "description": "loader-utils - REDOS",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-37599",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/loader-utils@1.4.0",
+      "description": "utils for webpack loaders",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/loader-utils@1.4.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-37599",
+          "title": "[CVE-2022-37599] loader-utils - REDOS",
+          "description": "loader-utils - REDOS",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-37599",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/loader-utils@2.0.0",
+      "description": "utils for webpack loaders",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/loader-utils@2.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-37599",
+          "title": "[CVE-2022-37599] loader-utils - REDOS",
+          "description": "loader-utils - REDOS",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-37599",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -955,6 +1003,9 @@
     },
     {
       "id": "sonatype-2022-5570"
+    },
+    {
+      "id": "CVE-2022-37599"
     }
   ]
 }
