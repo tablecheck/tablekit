@@ -26,6 +26,8 @@ export {
   baseStylesObject as menuListStylesObject,
   MenuList
 } from './components/MenuList';
+export { PhoneInput } from './components/PhoneInput';
+export type { Props as PhoneInputProps } from './components/PhoneInput';
 export { Radio } from './components/Radio';
 export { ScrollShadow } from './components/ScrollShadow';
 export { globalThemeVars, Select } from './components/Select';
