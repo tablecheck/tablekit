@@ -1,6 +1,6 @@
 import Layout from '../../layout/index.html';
 
-import { IntroText } from '../../layout/body.styles';
+import { IntroText, ImageWrap, TwoCol, Rule } from '../../layout/body.styles';
 
 export default function (props) {
   return (
@@ -60,7 +60,11 @@ All disabled-buttons regardless of variant or state will have the same appearanc
 
 ## [Anatomy](website/src/design/components/buttons.html#anatomy)
 
+<ImageWrap>
+
 ![Anatomy](/static/img/components/button-anatomy-1.svg 'Anatomy of the badge component')
+
+</ImageWrap>
 
 <ul>
   <li>1. Leading icon</li>
@@ -69,12 +73,51 @@ All disabled-buttons regardless of variant or state will have the same appearanc
 
 ## [Rules](website/src/design/components/badges.html#rules)
 
-![Rules](/static/img/components/button-rule-1.png 'Badge rules #1')
+<TwoCol>
+<div>
+  <ImageWrap>
 
-#
+![Rules](/static/img/components/button-rules-1.svg 'Button rules #1')
 
-![Rules](/static/img/components/button-rule-2.png 'Badge rules #2')
+  </ImageWrap>
 
-#
+  <Rule>
+    Use concise, easy to scan, and clear button labels to indicate the next action to the user.
+  </Rule>
+</div>
+<div>
+  <ImageWrap>
 
-![Rules](/static/img/components/button-rule-3.png 'Badge rules #3')
+![Rules](/static/img/components/button-rules-2.svg 'Button rules #2')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+    Use long, redundant button labels.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/button-rules-3.svg 'Button rules #3')
+
+  </ImageWrap>
+
+  <Rule>
+    Use concise, easily understood label text, particularly when communicating status.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/button-rules-4.svg 'Button rules #4')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+   Don't use all caps.
+  </Rule>
+</div>
+</TwoCol>

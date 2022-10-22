@@ -47,3 +47,37 @@ export const IntroText = styled.p`
   margin: var(--spacing-l6) 0;
   line-height: 1.5;
 `;
+
+export const ImageWrap = styled.div`
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-small);
+  text-align: center;
+`;
+
+export const TwoCol = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--spacing-l3);
+  row-gap: var(--spacing-l5);
+`;
+
+// Temp styling for rules, switch to TK alerts
+
+export const Rule = styled.div`
+  background: var(--success-surface);
+  color: var(--success-text);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-l2) var(--spacing-l3);
+  margin-top: var(--spacing-l3);
+
+  &[data-variant='error'] {
+    background: var(--error-surface);
+    color: var(--error-text);
+  }
+
+  &[data-variant='warning'] {
+    background: var(--warning-surface);
+    color: var(--warning-text);
+  }
+`;
