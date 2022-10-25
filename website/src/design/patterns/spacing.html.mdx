@@ -1,0 +1,41 @@
+import Layout from '../../layout/index.html';
+
+import { IntroText } from '../../layout/body.styles';
+
+export default function (props) {
+  return (
+    <Layout
+      title="Design"
+      sideNav="design"
+      editPageRoute="design/patterns/spacing"
+      shouldIncludePageIndex
+    >
+      {props.children}
+    </Layout>
+  );
+}
+
+# Spacing
+
+<IntroText>
+  Spacing is based on the 8px grid using a T-shirt sizing method from XS to XXL.
+  All sizes are derived from a base of 16px (1em) Medium size. There are three
+  types of spacing used - inset, stack and inline. These types can be combined
+  to achieve the desired effect, as shown in the examples.
+</IntroText>
+
+#### Figma: [Spacing](https://)
+
+## [Inset](website/src/design/patterns/spacing.html#inset)
+
+Inset spacing indents content on all four sides. It’s use is widespread, across many components at varying sizes.
+
+#
+
+![PLACEHOLDER NAME](/static/img/patterns/placeholder.png 'Placeholder text')
+
+#
+
+## [Rules](website/src/design/patterns/spacing.html#rules)
+
+TODO
