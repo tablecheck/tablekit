@@ -1,6 +1,6 @@
 import Layout from '../../layout/index.html';
 
-import { IntroText } from '../../layout/body.styles';
+import { IntroText, ImageWrap, TwoCol, Rule } from '../../layout/body.styles';
 
 export default function (props) {
   return (
@@ -37,28 +37,88 @@ export default function (props) {
 
 ## [Anatomy](website/src/design/components/badges.html#anatomy)
 
-The default total height of the badge component is 32px, vertical padding of 6px and horizontal padding of 8px, corner radius is 4px.
+<ImageWrap>
 
-The standard font size inside the buttons is 14px IBM Plex with a semi-bold font-weight.
+![Select anatomy 2](/static/img/components/badge-anatomy-1.svg 'IMAGEDESCRIPTION')
 
-The variants include with and without an icon, but text is always required.
-
-![Badge anatomy](/static/img/components/anatomy-badge.svg 'Anatomy of the badge component')
-
+</ImageWrap>
 <ul>
-  <li>1. Leading icon</li>
-  <li>2. Text</li>
-  <li>3. Trailing icon</li>
+  <li>1. Icon</li>
+  <li>2. Close</li>
+  <li>3. Label</li>
 </ul>
 
 ## [Rules](website/src/design/components/badges.html#rules)
 
-![Rules](/static/img/components/badge-rule-1.png 'Badge rules #1')
+<TwoCol>
+<div>
+  <ImageWrap>
 
-#
+![Rules](/static/img/components/badge-rules-1.svg 'Badge rules #1')
 
-![Rules](/static/img/components/badge-rule-2.png 'Badge rules #2')
+  </ImageWrap>
 
-#
+  <Rule>
+    Be consistent when using text or icon + text icons
+  </Rule>
+</div>
+<div>
+  <ImageWrap>
 
-![Rules](/static/img/components/badge-rule-3.png 'Badge rules #3')
+![Rules](/static/img/components/badge-rules-2.svg 'Badge rules #2')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+    Use icons sporadically within sets of badges.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/badge-rules-3.svg 'Badge rules #3')
+
+  </ImageWrap>
+
+  <Rule>
+    Use concise, easily understood label text, particularly when communicating status.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/badge-rules-4.svg 'Badge rules #4')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+   Use overly verbose, redundant badge text.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/badge-rules-5.svg 'Badge rules #5')
+
+  </ImageWrap>
+
+  <Rule>
+   Use icons that pair well with the badge text and help communicate its meaning at a glance.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/badge-rules-6.svg 'Badge rules #6')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+   Use vaguely related imagery that could cause confusion or seem mismatched.
+  </Rule>
+</div>
+</TwoCol>

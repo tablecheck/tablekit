@@ -1,6 +1,6 @@
 import Layout from '../../layout/index.html';
 
-import { IntroText } from '../../layout/body.styles';
+import { IntroText, ImageWrap, TwoCol, Rule } from '../../layout/body.styles';
 
 export default function (props) {
   return (
@@ -34,8 +34,12 @@ Chips have two variants - text only, and text with leading icon.
 
 ## [Anatomy](website/src/design/components/chips.html#anatomy)
 
-![Chips anatomy](/static/img/components/anatomy-chips.svg 'IMAGEDESCRIPTION')
+<ImageWrap>
 
+![Title text](/static/img/components/chip-anatomy-1.svg 'IMAGEDESCRIPTION')
+
+</ImageWrap>
+<br />
 <ul>
   <li>1. Icon</li>
   <li>2. Label</li>
@@ -43,12 +47,100 @@ Chips have two variants - text only, and text with leading icon.
 
 ## [Rules](website/src/design/components/chips.html#rules)
 
-Here is where rules content should go.
+<TwoCol>
 
-![Tabs anatomy](/static/img/components/chip-rules-3.png 'IMAGEDESCRIPTION')
+<div>
+  <ImageWrap>
 
-![Tabs anatomy](/static/img/components/chip-rules-2.png 'IMAGEDESCRIPTION')
+![Rules](/static/img/components/chip-rules-5.svg 'Button rules #5')
 
-![Tabs anatomy](/static/img/components/chip-rules-1.png 'IMAGEDESCRIPTION')
+  </ImageWrap>
 
-![Tabs anatomy](/static/img/components/chip-rules-4.png 'IMAGEDESCRIPTION')
+  <Rule>
+    Use chips when there are at least 2 options.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-6.svg 'Button rules #6')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+   Don't use when there is a single option present.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-1.svg 'Button rules #1')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+    Don't stack chips vertically
+  </Rule>
+</div>
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-2.svg 'Button rules #2')
+
+  </ImageWrap>
+
+  <Rule data-variant='warning'>
+    When space is limited, horizontal scrolling is OK on mobile/touch devices, stacking rows is OK on desktop.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-7.svg 'Button rules #3')
+
+  </ImageWrap>
+
+  <Rule>
+    Use them as toggles, where only one option can be selected.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-8.svg 'Button rules #4')
+
+  </ImageWrap>
+
+  <Rule>
+   Use them as multi-selects, where multiple or all options can be selected.
+  </Rule>
+</div>
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-3.svg 'Button rules #3')
+
+  </ImageWrap>
+
+  <Rule data-variant='warning'>
+    Try to use at least 3 characters to avoid losing the structure of the chips.
+  </Rule>
+</div>
+
+<div>
+  <ImageWrap>
+
+![Rules](/static/img/components/chip-rules-4.svg 'Button rules #4')
+
+  </ImageWrap>
+
+  <Rule data-variant='error'>
+   Use overly long labels, particularly repeated prefix or suffix text.
+  </Rule>
+</div>
+
+</TwoCol>
