@@ -9,6 +9,15 @@ export { ButtonBase, VariantButtons, Button } from './components/Button';
 export type { ButtonVariant } from './components/Button';
 export { ButtonGroup } from './components/ButtonGroup';
 export { Checkbox } from './components/Checkbox';
+export {
+  IconButtonBase,
+  VariantIconButtons,
+  IconButton
+} from './components/IconButton';
+export type {
+  Props as IconButtonProps,
+  IconButtonVariant
+} from './components/IconButton';
 export { Input, InputWithIcons } from './components/Input';
 export type { Props as InputProps } from './components/Input';
 export { InputAlert } from './components/InputAlert';
@@ -63,5 +72,6 @@ export {
   BorderSide,
   getBorderColor
 } from './utils/border';
+export { focus } from './utils/focus';
 export { font } from './utils/font';
 export { resetCss } from './utils/resetCss';

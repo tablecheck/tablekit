@@ -9,12 +9,14 @@ import { constants } from '../themeVariables/constants';
 import { ltrSupport } from '../themeVariables/ltrSupport';
 import { theme as themeStyles } from '../themeVariables/theme';
 import { typography } from '../themeVariables/typography';
+import { focus } from '../utils/focus';
 import { font } from '../utils/font';
 import { resetCss } from '../utils/resetCss';
 
 const globalStyles = css`
   ${resetCss};
   ${font};
+  ${focus};
   ${ltrSupport};
   ${themeStyles};
   ${typography};

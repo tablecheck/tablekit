@@ -6,6 +6,8 @@ import { globalThemeVars as selectGlobalThemeVars } from '../components/Select';
 export const BORDER_RADIUS_SMALL = 4;
 /** @deprecated use `var(--border-radius-large)` */
 export const BORDER_RADIUS_LARGE = 8;
+/** @deprecated use `var(--border-radius-full)` */
+export const BORDER_RADIUS_FULL = 48;
 /** @deprecated use `var(--input-height)` */
 export const INPUT_HEIGHT = 48;
 
@@ -45,6 +47,7 @@ export const constants = css`
   :root {
     --border-radius-small: ${BORDER_RADIUS_SMALL}px;
     --border-radius-large: ${BORDER_RADIUS_LARGE}px;
+    --border-radius-full: 999px;
     --input-height: ${INPUT_HEIGHT}px;
     --spacing-l1: ${Spacing.L1};
     --spacing-l2: ${Spacing.L2};
