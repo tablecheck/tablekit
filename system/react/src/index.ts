@@ -26,7 +26,7 @@ export {
   baseStylesObject as menuListStylesObject,
   MenuList
 } from './components/MenuList';
-export { PhoneInput } from './components/PhoneInput';
+export { flagStyles, PhoneInput } from './components/PhoneInput';
 export type { Props as PhoneInputProps } from './components/PhoneInput';
 export { Radio } from './components/Radio';
 export { ScrollShadow } from './components/ScrollShadow';
@@ -66,4 +66,5 @@ export {
   getBorderColor
 } from './utils/border';
 export { font } from './utils/font';
+export { allCountries, groupedCountries } from './utils/phoneUtils';
 export { resetCss } from './utils/resetCss';

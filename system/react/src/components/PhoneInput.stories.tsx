@@ -22,6 +22,9 @@ export default {
 export const Variants: Story = () => (
   <>
     {contentVariants.map((props) => (
+      <PhoneInput shouldDisplayFlag={false} {...props} />
+    ))}
+    {contentVariants.map((props) => (
       <PhoneInput {...props} />
     ))}
   </>
