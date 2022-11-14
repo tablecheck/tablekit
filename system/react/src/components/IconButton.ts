@@ -17,7 +17,7 @@ export const classySelector = '.icon-button';
 export const baseStyles = css`
   position: relative;
   display: grid;
-  padding: 14px;
+  padding: calc(14px - 2px);
   grid-gap: var(--spacing-l2);
   grid-auto-flow: column;
   cursor: pointer;
@@ -29,6 +29,8 @@ export const baseStyles = css`
 
   align-items: center;
   text-align: center;
+
+  border: solid 1px transparent;
 
   &[data-round] {
     border-radius: var(--border-radius-full);
@@ -65,6 +67,8 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   primary: css`
     --color: white;
     --background-color: var(--primary);
+    border-color: var(--primary);
+
     &:hover {
       --background-color: var(--primary-hover);
     }
@@ -75,6 +79,8 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   secondary: css`
     --color: var(--text-contrast);
     --background-color: var(--secondary);
+    border-color: var(--secondary);
+
     &:hover {
       --background-color: var(--secondary-hover);
     }
@@ -84,16 +90,9 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   `,
   tertiary: css`
     --color: var(--text);
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0px;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      border-radius: var(--border-radius-small);
-      border: solid 2px var(--secondary);
-    }
+    border: solid 2px var(--secondary);
+    padding: calc(14px - 4px);
+
     &[data-round]&:after {
       border-radius: var(--border-radius-full);
     }
@@ -106,16 +105,8 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   `,
   ghost: css`
     --color: var(--text);
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0px;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      border-radius: var(--border-radius-small);
-      border: solid 1px var(--border-transparent);
-    }
+    border-color: var(--border-transparent);
+
     &[data-round]&:after {
       border-radius: var(--border-radius-full);
     }
@@ -128,6 +119,7 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   `,
   bare: css`
     --color: var(--text);
+
     &:hover {
       --background-color: var(--surface-hover);
     }

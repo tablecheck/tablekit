@@ -5,6 +5,7 @@ import {
 } from '@emotion/react';
 import * as React from 'react';
 
+import { focus } from '../selectorStyles/focus';
 import { constants } from '../themeVariables/constants';
 import { ltrSupport } from '../themeVariables/ltrSupport';
 import { theme as themeStyles } from '../themeVariables/theme';
@@ -14,6 +15,7 @@ import { resetCss } from '../utils/resetCss';
 
 const globalStyles = css`
   ${resetCss};
+  ${focus};
   ${font};
   ${ltrSupport};
   ${themeStyles};

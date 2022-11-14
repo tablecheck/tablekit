@@ -15,9 +15,11 @@ export const classlessSelector = 'button, a[role="button"]';
 export const classySelector = '.btn';
 
 export const baseStyles = css`
+  --padding-y: 12px;
+  --padding-x: 20px;
   position: relative;
   display: grid;
-  padding: 12px 20px;
+  padding: calc(12px - 2px) calc(20px - 2px);
   grid-gap: var(--spacing-l2);
   grid-auto-flow: column;
   cursor: pointer;
@@ -30,20 +32,7 @@ export const baseStyles = css`
   align-items: center;
   text-align: center;
 
-  &:focus:not(:focus-visible),
-  &:focus-visible {
-    outline: none;
-    &:after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      bottom: -4px;
-      left: -4px;
-      right: -4px;
-      border-radius: var(--border-radius-large);
-      border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
-    }
-  }
+  border: solid 1px transparent;
 `;
 
 export const ButtonBase = styled.button<{
@@ -72,6 +61,8 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   primary: css`
     --color: white;
     --background-color: var(--primary);
+    border-color: var(--primary);
+
     &:hover {
       --background-color: var(--primary-hover);
     }
@@ -82,6 +73,8 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   secondary: css`
     --color: var(--text-contrast);
     --background-color: var(--secondary);
+    border-color: var(--secondary);
+
     &:hover {
       --background-color: var(--secondary-hover);
     }
@@ -91,7 +84,9 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   `,
   tertiary: css`
     --color: var(--text);
-    border: 2px solid var(--secondary);
+    border: solid 2px var(--secondary);
+    padding: calc(12px - 4px) calc(20px - 4px);
+
     &:hover {
       --background-color: var(--surface-hover);
     }
@@ -101,7 +96,7 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   `,
   ghost: css`
     --color: var(--text);
-    border: 1px solid var(--border-transparent);
+    border-color: var(--border-transparent);
     &:hover {
       --background-color: var(--surface-hover);
     }
