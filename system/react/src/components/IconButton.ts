@@ -15,9 +15,10 @@ export const classlessSelector = 'button.icon, a[type="button"].icon';
 export const classySelector = '.icon-button';
 
 export const baseStyles = css`
+  --padding: 12px;
   position: relative;
   display: grid;
-  padding: calc(14px - 2px);
+  padding: calc(var(--padding) - 2px);
   grid-gap: var(--spacing-l2);
   grid-auto-flow: column;
   cursor: pointer;
@@ -91,7 +92,7 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   tertiary: css`
     --color: var(--text);
     border: solid 2px var(--secondary);
-    padding: calc(14px - 4px);
+    padding: calc(var(--padding) - 4px);
 
     &[data-round]&:after {
       border-radius: var(--border-radius-full);

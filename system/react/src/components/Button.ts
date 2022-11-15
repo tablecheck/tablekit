@@ -19,7 +19,7 @@ export const baseStyles = css`
   --padding-x: 20px;
   position: relative;
   display: grid;
-  padding: calc(12px - 2px) calc(20px - 2px);
+  padding: calc(var(--padding-y) - 2px) calc(var(--padding-x) - 2px);
   grid-gap: var(--spacing-l2);
   grid-auto-flow: column;
   cursor: pointer;
@@ -85,7 +85,7 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   tertiary: css`
     --color: var(--text);
     border: solid 2px var(--secondary);
-    padding: calc(12px - 4px) calc(20px - 4px);
+    padding: calc(var(--padding-y) - 4px) calc(var(--padding-x) - 4px);
 
     &:hover {
       --background-color: var(--surface-hover);
