@@ -1,4 +1,4 @@
-/* eslint max-lines: ["error", 400] */
+/* eslint max-lines: ["error", 500] */
 import { ChevronDown, Close } from '@carbon/icons-react';
 import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
@@ -11,7 +11,8 @@ import {
   BorderRadii,
   BorderSide,
   getBorderColor,
-  getBorderRadius
+  getBorderRadius,
+  Checkbox
 } from '@tablecheck/tablekit-react';
 import * as React from 'react';
 import {
@@ -37,6 +38,7 @@ export interface Options {
   icon?: React.ReactNode;
   isCompact?: boolean;
   isClearable?: boolean;
+  hideSelectedOptions?: boolean;
 }
 
 function getControlBorderColor({
@@ -82,7 +84,8 @@ export function useReactSelectConfig<
   borderRadii = BorderRadii.All,
   icon: unsafeIcon,
   isCompact,
-  isClearable
+  isClearable,
+  hideSelectedOptions = true
 }: Options): {
   components: SelectComponentsConfig<
     OptionType,
@@ -104,8 +107,12 @@ export function useReactSelectConfig<
   const icon = cachedIcon.current;
   const components = React.useMemo<
     SelectComponentsConfig<OptionType, IsMulti, GroupBase<OptionType>>
-  >(
-    () => ({
+  >(() => {
+    const selectComponents: SelectComponentsConfig<
+      OptionType,
+      IsMulti,
+      GroupBase<OptionType>
+    > = {
       // eslint-disable-next-line @typescript-eslint/naming-convention
       Control: ({ innerProps, children, ...props }) => (
         <reactSelectComponents.Control
@@ -202,10 +209,33 @@ export function useReactSelectConfig<
         />
       ),
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      LoadingIndicator: () => <Spinner color="var(--text-subtle)" />
-    }),
-    [dataTestId, isInvalid, icon, isClearable]
-  );
+      LoadingIndicator: () => <Spinner color="var(--text-subtle)" />,
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      GroupHeading: (props) => {
+        const { children } = props;
+
+        return (
+          <reactSelectComponents.GroupHeading {...props}>
+            {children}
+          </reactSelectComponents.GroupHeading>
+        );
+      }
+    };
+
+    if (!hideSelectedOptions) {
+      selectComponents.Option = function (props) {
+        const { isSelected, label } = props;
+        return (
+          <reactSelectComponents.Option {...props}>
+            <Checkbox checked={isSelected} readOnly />
+            <span>{label}</span>
+          </reactSelectComponents.Option>
+        );
+      };
+    }
+
+    return selectComponents;
+  }, [dataTestId, isInvalid, icon, isClearable, hideSelectedOptions]);
   const stylesObject = React.useMemo<StylesConfig<OptionType, IsMulti>>(
     () => ({
       container: (styles) => ({
@@ -318,7 +348,9 @@ export function useReactSelectConfig<
       option: (styles, { isFocused, isSelected }) => {
         let stateStyles = {};
         if (isSelected) {
-          stateStyles = menuItemStateStylesObjects.selected;
+          stateStyles = hideSelectedOptions
+            ? menuItemStateStylesObjects.selected
+            : { color: 'var(--text)', background: 'var(--surface)' };
         } else if (isFocused) {
           stateStyles = menuItemStateStylesObjects.focus;
         }
@@ -327,7 +359,10 @@ export function useReactSelectConfig<
           ...menuItemStylesObject,
           ...stateStyles,
           cursor: 'pointer',
-          ':active': isSelected ? {} : menuItemStateStylesObjects.active
+          ':active': isSelected ? {} : menuItemStateStylesObjects.active,
+          ':hover > input[type="checkbox"]': {
+            borderColor: 'var(--text)'
+          }
         };
       },
       singleValue: (styles) => ({
@@ -372,9 +407,31 @@ export function useReactSelectConfig<
         ':active': {
           background: 'var(--select-multi-value-active)'
         }
+      }),
+      group: (styles) => ({
+        ...styles,
+        ':not(:last-child)': {
+          borderBottom: '1px solid var(--border)'
+        }
+      }),
+      groupHeading: (styles) => ({
+        ...styles,
+        color: 'var(--text)',
+        font: 'var(--small)',
+        textTransform: 'unset',
+        marginBottom: '4px'
       })
     }),
-    [borderRadii, borderSides, icon, isCompact, isInvalid, isMulti, theme.isRtl]
+    [
+      borderRadii,
+      borderSides,
+      icon,
+      isCompact,
+      isInvalid,
+      isMulti,
+      theme.isRtl,
+      hideSelectedOptions
+    ]
   );
   return {
     components,
