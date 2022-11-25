@@ -34,17 +34,18 @@ export const baseStyles = css`
 
   &:focus,
   &:focus-within {
-    border-color: var(--border-active);
-    box-shadow: 0 0 0 1px var(--border-active);
+    border-color: var(--focus);
+    box-shadow: 0 0 0 1px var(--focus);
   }
 
-  &[data-error] {
+  &[data-variant='error'] {
     border-color: var(--error);
     box-shadow: 0 0 0 1px var(--error);
   }
 
   &:disabled,
-  &[data-disabled] {
+  &[data-variant='disabled'] {
+    color: var(--text-disabled);
     border-color: var(--border-transparent);
     box-shadow: none;
     background: var(--surface-disabled);
@@ -60,9 +61,8 @@ export const baseStyles = css`
 `;
 
 export interface Props {
+  'data-variant'?: 'error' | 'disabled';
   'data-stretch'?: boolean;
-  'data-error'?: boolean;
-  'data-disabled'?: boolean;
 }
 
 export const Input = styled.input<Props>`
@@ -85,7 +85,6 @@ export const InputWithIcons = styled.div<Props>`
   & > :not(input):not(select):not(button):not(a) {
     pointer-events: none;
   }
-
   & > :nth-child(1):not(input):not(select) {
     grid-area: 1/2;
   }

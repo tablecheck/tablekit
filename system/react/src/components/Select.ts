@@ -20,8 +20,8 @@ export const globalThemeVars = css`
   }
 `;
 
-export const Select = styled.select<Pick<Props, 'data-error'>>`
-  ${baseStyles}
+export const Select = styled.select<Pick<Props, 'data-variant'>>`
+  ${baseStyles};
   --select-chevron-size: 20px;
   --select-padding-block: 12px;
   --select-padding-inline: 16px;
@@ -49,7 +49,7 @@ export const Select = styled.select<Pick<Props, 'data-error'>>`
   }
   &:focus {
     outline: none;
-    border-color: var(--border-active);
-    box-shadow: 0 0 0 1px var(--border-active);
+    border-color: var(--focus);
+    box-shadow: 0 0 0 1px var(--focus);
   }
 `;

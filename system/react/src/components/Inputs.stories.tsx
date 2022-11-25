@@ -10,9 +10,9 @@ import {
 
 const contentVariants = [
   {},
-  { 'data-disabled': true },
-  { 'data-stretch': true },
-  { 'data-error': true }
+  { 'data-variant': 'disabled' as const },
+  { 'data-variant': 'error' as const },
+  { 'data-stretch': true }
 ];
 
 export default {
