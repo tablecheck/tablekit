@@ -43,27 +43,27 @@ export const ZIndex = {
 
 export const constants = css`
   :root {
-    --border-radius-small: ${BORDER_RADIUS_SMALL}px;
-    --border-radius-large: ${BORDER_RADIUS_LARGE}px;
-    --input-height: ${INPUT_HEIGHT}px;
-    --spacing-l1: ${Spacing.L1};
-    --spacing-l2: ${Spacing.L2};
-    --spacing-l3: ${Spacing.L3};
-    --spacing-l4: ${Spacing.L4};
-    --spacing-l5: ${Spacing.L5};
-    --spacing-l6: ${Spacing.L6};
-    --spacing-l7: ${Spacing.L7};
-    --spacing-l8: ${Spacing.L8};
-    --zindex-card: ${ZIndex.Card};
-    --zindex-dialog: ${ZIndex.Dialog};
-    --zindex-sidenav: ${ZIndex.Sidenav};
-    --zindex-topnav: ${ZIndex.Topnav};
-    --zindex-layer: ${ZIndex.Layer};
-    --zindex-blanket: ${ZIndex.Blanket};
-    --zindex-modal: ${ZIndex.Modal};
-    --zindex-flag: ${ZIndex.Flag};
-    --zindex-spotlight: ${ZIndex.Spotlight};
-    --zindex-tooltip: ${ZIndex.Tooltip};
+    --border-radius-small: 4px;
+    --border-radius-large: 8px;
+    --input-height: 48px;
+    --spacing-l1: 4px;
+    --spacing-l2: 8px;
+    --spacing-l3: 12px;
+    --spacing-l4: 16px;
+    --spacing-l5: 24px;
+    --spacing-l6: 32px;
+    --spacing-l7: 40px;
+    --spacing-l8: 48px;
+    --zindex-card: 100;
+    --zindex-dialog: 200;
+    --zindex-sidenav: 300;
+    --zindex-topnav: 310;
+    --zindex-layer: 400;
+    --zindex-blanket: 500;
+    --zindex-modal: 510;
+    --zindex-flag: 600;
+    --zindex-spotlight: 700;
+    --zindex-tooltip: 800;
   }
 
   ${selectGlobalThemeVars}
