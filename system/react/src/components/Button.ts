@@ -17,14 +17,16 @@ export const classySelector = '.btn';
 export const baseStyles = css`
   position: relative;
   display: grid;
-  padding: 12px 20px;
+  padding: 10px var(--spacing-l3);
   grid-gap: var(--spacing-l2);
   grid-auto-flow: column;
+  align-content: center;
   cursor: pointer;
+  height: 40px;
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   border-radius: var(--border-radius-small);
 
   align-items: center;
@@ -40,9 +42,23 @@ export const baseStyles = css`
       bottom: -4px;
       left: -4px;
       right: -4px;
-      border-radius: var(--border-radius-large);
+      border-radius: 6px;
       border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
     }
+  }
+
+  &[data-size='small'] {
+    padding: var(--spacing-l2);
+    font-size: 14px;
+    line-height: 16px;
+    height: 32px;
+  }
+
+  &[data-size='large'] {
+    padding: 14px var(--spacing-l4);
+    font-size: 16px;
+    line-height: 20px;
+    height: 48px;
   }
 `;
 
@@ -67,6 +83,7 @@ export const variants = [
 ] as const;
 
 export type ButtonVariant = typeof variants[number];
+export type ButtonSize = 'small' | 'medium' | 'large';
 
 const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   primary: css`
@@ -152,7 +169,7 @@ const coreStyles = css`
     z-index: 2;
   }
   &[aria-busy='true'] {
-    ${spinnerElementStyles}
+    ${spinnerElementStyles};
     color: transparent;
   }
   &[aria-busy='true']:before {
@@ -184,6 +201,7 @@ export const VariantButtons = variants.reduce(
 
 export const Button = styled(ButtonBase)<{
   'data-variant'?: ButtonVariant;
+  'data-size'?: ButtonSize;
   'aria-busy'?: boolean;
 }>`
   &:not([data-variant]) {
