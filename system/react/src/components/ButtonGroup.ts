@@ -73,7 +73,8 @@ export const baseStyles = css`
     }
 
     &[data-selected='true'] {
-      background: var(--surface);
+      color: var(--text-contrast);
+      background: var(--secondary);
       box-shadow: ${stateBoxShadow.selected};
     }
 
@@ -100,7 +101,8 @@ export const baseStyles = css`
       }
 
       &[data-selected='true'] {
-        background: var(--surface);
+        color: var(--text-contrast);
+        background: var(--secondary);
         box-shadow: inset 0 0 0 1px var(--border-active);
       }
     }
@@ -128,7 +130,8 @@ export const baseStyles = css`
       }
 
       &[data-selected='true'] {
-        background: var(--surface);
+        color: var(--text-contrast);
+        background: var(--secondary);
         box-shadow: ${stateBoxShadow.selected};
       }
     }
