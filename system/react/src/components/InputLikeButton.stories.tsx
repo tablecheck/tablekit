@@ -5,9 +5,9 @@ import { InputLikeButton, classySelector } from './InputLikeButton';
 
 const contentVariants = [
   {},
-  { 'data-disabled': true },
-  { 'data-stretch': true },
-  { 'data-error': true }
+  { 'data-variant': 'disabled' as const },
+  { 'data-variant': 'error' as const },
+  { 'data-stretch': true }
 ];
 
 export default {
@@ -22,16 +22,16 @@ export const Variants: Story = () => (
       <>
         <InputLikeButton {...props}>Click Me!</InputLikeButton>
         <InputLikeButton {...props}>
-          Click Me!
+          <span>Click Me!</span>
           <Close size={16} />
         </InputLikeButton>
         <InputLikeButton {...props}>
           <FavoriteFilled size={16} />
-          Click Me!
+          <span>Click Me!</span>
         </InputLikeButton>
         <InputLikeButton {...props}>
           <FavoriteFilled size={16} />
-          Click Me!
+          <span>Click Me!</span>
           <Close size={16} />
         </InputLikeButton>
       </>

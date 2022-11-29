@@ -18,31 +18,34 @@ export default {
 
 export const AllVariants = () => (
   <>
-    {(
-      [
-        'Button',
-        'Icon Left',
-        'Icon Right',
-        'Active',
-        'Hover',
-        'Focus',
-        'Loading',
-        'Disabled'
-      ] as const
-    ).map((status) =>
-      variants.map((variant) => (
-        <Button
-          key={`${status}_${variant}`}
-          aria-busy={status === 'Loading'}
-          disabled={status === 'Disabled'}
-          data-variant={variant}
-          data-pseudo={status.toLowerCase()}
-        >
-          {status === 'Icon Left' ? <Globe size={20} /> : null}
-          {status}
-          {status === 'Icon Right' ? <ChevronDown size={20} /> : null}
-        </Button>
-      ))
+    {(['small', undefined, 'large'] as const).map((size) =>
+      (
+        [
+          'Button',
+          'Icon Left',
+          'Icon Right',
+          'Active',
+          'Hover',
+          'Focus',
+          'Loading',
+          'Disabled'
+        ] as const
+      ).map((status) =>
+        variants.map((variant) => (
+          <Button
+            key={`${status}_${variant}`}
+            aria-busy={status === 'Loading'}
+            disabled={status === 'Disabled'}
+            data-variant={variant}
+            data-pseudo={status.toLowerCase()}
+            data-size={size}
+          >
+            {status === 'Icon Left' ? <Globe size={20} /> : null}
+            {status} {size}
+            {status === 'Icon Right' ? <ChevronDown size={20} /> : null}
+          </Button>
+        ))
+      )
     )}
   </>
 );
