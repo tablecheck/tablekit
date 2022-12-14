@@ -31,8 +31,9 @@
   },
   "devDependencies": {
     "@carbon/icons-react": "11.8.0",
+    "@storybook/react": "6.5.12",
     "@tablecheck/tablekit-react": "2.0.0",
-    "react-select": "5.4.0"
+    "react-select": "5.7.0"
   },
   "publishConfig": {
     "access": "public"

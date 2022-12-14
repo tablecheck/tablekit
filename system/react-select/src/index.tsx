@@ -39,6 +39,11 @@ export interface Options {
   isCompact?: boolean;
   isClearable?: boolean;
   hideSelectedOptions?: boolean;
+  /**
+   * This is used for storybook only
+   * @deprecated
+   */
+  isInternalFocused?: boolean;
 }
 
 function getControlBorderColor({
@@ -52,7 +57,7 @@ function getControlBorderColor({
 }>): string {
   if (isDisabled) return 'var(--border-transparent)';
   if (isInvalid) return 'var(--error)';
-  if (isFocused) return 'var(--border-active)';
+  if (isFocused) return 'var(--focus)';
   return 'var(--border-transparent)';
 }
 
@@ -85,6 +90,7 @@ export function useReactSelectConfig<
   icon: unsafeIcon,
   isCompact,
   isClearable,
+  isInternalFocused,
   hideSelectedOptions = true
 }: Options): {
   components: SelectComponentsConfig<
@@ -167,7 +173,7 @@ export function useReactSelectConfig<
       IndicatorSeparator: () => null,
       // eslint-disable-next-line @typescript-eslint/naming-convention
       DropdownIndicator: ({ getValue }) => {
-        if (isClearable && getValue().length) return null;
+        if (!isMulti && isClearable && getValue().length) return null;
         return (
           <IndicatorWrapper>
             <ChevronDown size={20} />
@@ -181,6 +187,7 @@ export function useReactSelectConfig<
         const {
           innerProps: { ref, ...restInnerProps }
         } = props;
+        if (isMulti) return null;
         return (
           <IndicatorWrapper {...restInnerProps} ref={ref} data-testid="Clear">
             <Close size={20} />
@@ -248,15 +255,16 @@ export function useReactSelectConfig<
         minWidth: isCompact ? 'auto' : 180
       }),
       control: (styles, { isFocused, isDisabled }) => {
-        const isLargeBorder = !isDisabled && (isFocused || isInvalid);
+        const isLargeBorder =
+          !isDisabled && (isFocused || isInternalFocused || isInvalid);
         const borderColor = getControlBorderColor({
-          isFocused,
+          isFocused: isInternalFocused || isFocused,
           isDisabled,
           isInvalid
         });
         const borderColorProps = getBorderColor(
           !!theme.isRtl,
-          !isFocused && !isInvalid && borderSides
+          !(isFocused || isInternalFocused) && !isInvalid && borderSides
             ? borderSides
             : [
                 BorderSide.Right,
@@ -304,20 +312,24 @@ export function useReactSelectConfig<
           transitionProperty: 'border-color, box-shadow',
           transitionDuration: '200ms',
           transitionTimingFunction: 'ease-in-out',
-          ':hover': isDisabled
-            ? {}
-            : {
-                boxShadow,
-                ...borderColorProps,
-                borderColor: getControlBorderColor({
-                  isFocused: false,
-                  isInvalid
-                }),
-                cursor: 'pointer',
-                'div:last-child svg': {
-                  color: 'var(--text-subtle)'
+          ':focus': {
+            borderColor: getControlBorderColor({ isFocused: true, isInvalid })
+          },
+          ':hover':
+            isDisabled || isFocused || isInternalFocused
+              ? borderColorProps
+              : {
+                  boxShadow,
+                  ...borderColorProps,
+                  borderColor: getControlBorderColor({
+                    isFocused: false,
+                    isInvalid
+                  }),
+                  cursor: 'pointer',
+                  'div:last-child svg': {
+                    color: 'var(--text-subtle)'
+                  }
                 }
-              }
         };
       },
       valueContainer: (containerStyles) => ({
@@ -351,7 +363,7 @@ export function useReactSelectConfig<
           stateStyles = hideSelectedOptions
             ? menuItemStateStylesObjects.selected
             : { color: 'var(--text)', background: 'var(--surface)' };
-        } else if (isFocused) {
+        } else if (isFocused || isInternalFocused) {
           stateStyles = menuItemStateStylesObjects.focus;
         }
         return {
