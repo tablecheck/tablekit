@@ -47,6 +47,12 @@ export {
 } from './components/Spinner';
 export { TabButton } from './components/TabButton';
 export { Tabs, TabContent } from './components/Tabs';
+export {
+  textareaSizingStyles,
+  TextArea,
+  TextAreaWithIcons
+} from './components/TextArea';
+export type { Props as TextAreaProps } from './components/TextArea';
 export { ThemeProvider } from './components/ThemeProvider';
 export { Toggle } from './components/Toggle';
 export { tooltip } from './selectorStyles/tooltip';

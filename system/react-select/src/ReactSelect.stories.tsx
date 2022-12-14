@@ -22,7 +22,8 @@ const contentVariants = [
 export default {
   title: 'TableKit/useReactSelect hook',
   parameters: {
-    variants: contentVariants.map(({ title }) => title)
+    variants: contentVariants.map(({ title }) => title),
+    packageName: '@tablecheck/tablekit-react-select'
   }
 } as Meta;
 
