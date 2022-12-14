@@ -62,35 +62,6 @@ export const parameters = {
   }
 };
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(var(--variants), 1fr);
-  grid-gap: var(--spacing-l7) var(--spacing-l4);
-  padding: var(--spacing-l4);
-  border: 1px dashed var(--primary);
-  border-radius: var(--border-radius-small);
-  align-items: flex-start;
-  justify-items: flex-start;
-`;
-
-const Selectors = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: var(--spacing-l3);
-  margin-bottom: var(--spacing-l4);
-  align-items: center;
-  color: var(--text);
-`;
-
-const Code = styled.pre`
-  display: inline-block;
-  padding: 4px 6px;
-  border: 1px solid var(--info);
-  border-radius: var(--border-radius-small);
-  background: var(--info-surface);
-  color: var(--info-text);
-`;
-
 // use a special cache so we can check :focus :active etc easily in stories
 const emotionCache = createCache({
   key: 'key',
@@ -140,7 +111,47 @@ const StoryWrapper = styled.div`
   }
 `;
 
-const ThemeInner = styled.div``;
+const ThemeInner = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(var(--variants), 1fr);
+  grid-gap: var(--spacing-l7) var(--spacing-l4);
+  padding: var(--spacing-l4);
+  border: 1px dashed var(--primary);
+  border-radius: var(--border-radius-small);
+  align-items: flex-start;
+  justify-items: flex-start;
+`;
+
+const Selectors = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: var(--spacing-l3);
+  margin-bottom: var(--spacing-l4);
+  align-items: center;
+  justify-items: flex-start;
+  align-self: flex-end;
+  color: var(--text);
+  & :nth-child(n) {
+    justify-self: flex-end;
+  }
+  & :nth-child(2n) {
+    justify-self: flex-start;
+  }
+`;
+
+const Code = styled.pre`
+  display: inline-block;
+  padding: 4px 6px;
+  border: 1px solid var(--info);
+  border-radius: var(--border-radius-small);
+  background: var(--info-surface);
+  color: var(--info-text);
+`;
 
 declare global {
   interface Window {
@@ -164,7 +175,8 @@ export const decorators = [
   (story: () => JSX.Element, context): JSX.Element => {
     const isDark = useDarkMode();
     const direction = getDirection();
-    const { classlessSelector, classySelector } = context.parameters;
+    const { classlessSelector, classySelector, packageName } =
+      context.parameters;
     const gridStyles = {
       '--variants': context.parameters.variants?.length || 1
     };
@@ -177,6 +189,11 @@ export const decorators = [
             <b>{variant.charAt(0).toUpperCase() + variant.slice(1)}</b>
           ))
         : null;
+    const selectors = [
+      { value: classlessSelector, name: 'Classless Selector' },
+      { value: classySelector, name: 'Classy Selector' },
+      { value: packageName, name: 'Package Name' }
+    ].filter(({ value }) => !!value);
     return (
       <CacheProvider value={emotionCache}>
         <StoryWrapper>
@@ -187,20 +204,14 @@ export const decorators = [
             isRtl={direction === 'rtl'}
           >
             <ThemeInner>
-              {classlessSelector || classySelector ? (
+              {selectors.length ? (
                 <Selectors>
-                  {classlessSelector ? (
+                  {selectors.map(({ name, value }) => (
                     <>
-                      <b>Classless Selector:</b>
-                      <Code>{classlessSelector}</Code>
+                      <b>{name}:</b>
+                      <Code>{value}</Code>
                     </>
-                  ) : null}
-                  {classySelector ? (
-                    <>
-                      <b>Classy Selector:</b>
-                      <Code>{classySelector}</Code>
-                    </>
-                  ) : null}
+                  ))}
                 </Selectors>
               ) : null}
               <Grid ref={handleGridRef} style={gridStyles as any}>
