@@ -12,7 +12,7 @@ module.exports = {
     '@brightlayer-ui/storybook-rtl-addon/register'
   ],
   stories: [
-    '../system/react/src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../system/*/src/**/*.stories.@(js|jsx|ts|tsx)',
     '../website/src/*.stories.@(js|jsx|ts|tsx)'
   ],
   // override hacks we don't need and are breaking, particularly the emotion aliases

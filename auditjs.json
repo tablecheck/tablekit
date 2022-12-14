@@ -845,6 +845,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/decode-uri-component@0.2.0",
+      "description": "A better decodeURIComponent",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/decode-uri-component@0.2.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-38900",
+          "title": "[CVE-2022-38900] CWE-20: Improper Input Validation",
+          "description": "decode-uri-component 0.2.0 is vulnerable to Improper Input Validation resulting in DoS.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-38900",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-38900?component-type=npm&component-name=decode-uri-component&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1024,6 +1040,9 @@
     },
     {
       "id": "CVE-2022-37603"
+    },
+    {
+      "id": "CVE-2022-38900"
     }
   ]
 }

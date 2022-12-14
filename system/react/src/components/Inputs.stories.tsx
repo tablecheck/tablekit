@@ -9,17 +9,19 @@ import {
 } from './Input';
 
 const contentVariants = [
-  {},
-  { 'data-variant': 'disabled' as const },
-  { 'data-variant': 'error' as const },
-  { 'data-stretch': true }
+  { title: 'Default' },
+  { title: 'With Value', defaultValue: 'Some Content' },
+  { title: 'Focus', 'data-pseudo': 'focus' },
+  { title: 'Disabled', 'data-variant': 'disabled' as const },
+  { title: 'Error', 'data-variant': 'error' as const },
+  { title: 'Stretch', 'data-stretch': true }
 ];
 
 export default {
   title: 'TableKit/Input',
   component: Input,
   parameters: {
-    variants: contentVariants,
+    variants: contentVariants.map(({ title }) => title),
     classlessSelector,
     classySelector
   }
@@ -27,23 +29,27 @@ export default {
 
 export const Variants: Story = () => (
   <>
-    {contentVariants.map((props) => (
-      <>
-        <Input {...props} placeholder="Placeholder" />
-        <InputWithIcons {...props}>
-          <input placeholder="Placeholder" />
-          <Close size={16} />
-        </InputWithIcons>
-        <InputWithIcons {...props}>
-          <FavoriteFilled size={16} />
-          <input placeholder="Placeholder" />
-        </InputWithIcons>
-        <InputWithIcons {...props}>
-          <FavoriteFilled size={16} />
-          <input placeholder="Placeholder" />
-          <Close size={16} />
-        </InputWithIcons>
-      </>
+    {contentVariants.map(({ title: key, ...props }) => (
+      <Input key={key} {...props} placeholder="Placeholder" />
+    ))}
+    {contentVariants.map(({ title: key, ...props }) => (
+      <InputWithIcons key={key} {...props}>
+        <input placeholder="Placeholder" defaultValue={props.defaultValue} />
+        <Close size={16} />
+      </InputWithIcons>
+    ))}
+    {contentVariants.map(({ title: key, ...props }) => (
+      <InputWithIcons key={key} {...props}>
+        <FavoriteFilled size={16} />
+        <input placeholder="Placeholder" defaultValue={props.defaultValue} />
+      </InputWithIcons>
+    ))}
+    {contentVariants.map(({ title: key, ...props }) => (
+      <InputWithIcons key={key} {...props}>
+        <FavoriteFilled size={16} />
+        <input placeholder="Placeholder" defaultValue={props.defaultValue} />
+        <Close size={16} />
+      </InputWithIcons>
     ))}
   </>
 );

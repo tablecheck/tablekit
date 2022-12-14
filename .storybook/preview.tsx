@@ -98,17 +98,19 @@ const emotionCache = createCache({
     (_, __, selectors) => {
       for (const selector of selectors) {
         if (
-          selector.value.match(/:(active|hover|focus|focus-visible)(:|$)/gi)
+          selector.value.match(
+            /:(active|hover|focus|focus-visible)(:|$|\.|,)/gi
+          )
         ) {
           selector.props = (
             Array.isArray(selector.props) ? selector.props : [selector.props]
           ).reduce((result, prop) => {
-            if (prop.match(/:(active|hover|focus|focus-visible)(:|$)/gi)) {
+            if (prop.match(/:(active|hover|focus|focus-visible)(:|$|\.|,)/gi)) {
               return result.concat([
                 prop,
                 prop
                   .replace(
-                    /:(active|hover|focus|focus-visible)(:|$)/gi,
+                    /:(active|hover|focus|focus-visible)(:|$|\.|,)/gi,
                     '[data-pseudo="$1"]$2'
                   )
                   .replace('"focus-visible"', 'focus')
