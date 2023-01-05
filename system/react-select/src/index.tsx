@@ -231,11 +231,11 @@ export function useReactSelectConfig<
 
     if (!hideSelectedOptions) {
       selectComponents.Option = function (props) {
-        const { isSelected, label } = props;
+        const { isSelected, children } = props;
         return (
           <reactSelectComponents.Option {...props}>
             <Checkbox checked={isSelected} readOnly />
-            <span>{label}</span>
+            {children}
           </reactSelectComponents.Option>
         );
       };
