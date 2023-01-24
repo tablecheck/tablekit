@@ -45,6 +45,7 @@ export const constants = css`
   :root {
     --border-radius-small: 4px;
     --border-radius-large: 8px;
+    --border-radius-full: 9999px;
     --input-height: 48px;
     --spacing-l1: 4px;
     --spacing-l2: 8px;

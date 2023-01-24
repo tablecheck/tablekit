@@ -10,6 +10,8 @@ export type { ButtonVariant } from './components/Button';
 export { ButtonGroup } from './components/ButtonGroup';
 export { Checkbox } from './components/Checkbox';
 export { CheckboxLabel, RadioLabel } from './components/CheckboxLabel';
+export { Chip } from './components/Chip';
+export { ChipRow } from './components/ChipRow';
 export {
   IconButtonBase,
   VariantIconButtons,
