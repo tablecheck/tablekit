@@ -20,23 +20,14 @@ export const Checkbox = styled.input<{ type?: 'checkbox' }>`
   border-radius: 2px;
   transition: all 80ms linear;
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     border-color: var(--text);
   }
   &:focus {
     outline: none;
   }
-  &:focus-visible:after {
-    display: block;
-    content: '';
-    border: 2px solid var(--focus);
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    left: -6px;
-    bottom: -6px;
-    border-radius: 4px;
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--focus);
   }
   &:checked,
   &:indeterminate {

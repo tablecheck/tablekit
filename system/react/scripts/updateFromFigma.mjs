@@ -108,7 +108,9 @@ while (greys.length) {
 
 delete colorVars.greys;
 
-const fileContent = `import { css } from '@emotion/react';
+const fileContent = `// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable max-lines */
+import { css } from '@emotion/react';
 
 /**
  * DO NOT EDIT; File is generated from figma, see './updateFromFigma.mjs' for update instructions

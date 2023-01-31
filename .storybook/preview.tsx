@@ -193,7 +193,12 @@ export const decorators = [
       { value: classlessSelector, name: 'Classless Selector' },
       { value: classySelector, name: 'Classy Selector' },
       { value: packageName, name: 'Package Name' }
-    ].filter(({ value }) => !!value);
+    ]
+      .filter(({ value }) => !!value)
+      .map(({ value, ...rest }) => ({
+        ...rest,
+        value: Array.isArray(value) ? value.join(', ') : value
+      }));
     return (
       <CacheProvider value={emotionCache}>
         <StoryWrapper>

@@ -1,3 +1,5 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable max-lines */
 import { css } from '@emotion/react';
 
 /**
@@ -22,13 +24,21 @@ export const lightColors = css`
   --border-transparent: rgba(0, 0, 0, 0.1);
   --error: rgba(204, 0, 0, 1);
   --error-surface: rgba(254, 223, 223, 1);
+  --error-surface-hover: rgba(254, 205, 205, 1);
   --error-text: rgba(204, 0, 0, 1);
   --field: rgba(255, 255, 255, 1);
   --focus: rgba(0, 23, 231, 1);
   --info: rgba(0, 102, 204, 1);
   --info-surface: rgba(223, 239, 254, 1);
+  --info-surface-hover: rgba(205, 229, 254, 1);
   --info-text: rgba(0, 102, 204, 1);
-  --neutral-surface: rgba(249, 249, 249, 1);
+  --link: rgba(0, 102, 204, 1);
+  --link-disabled: rgba(206, 206, 206, 1);
+  --link-hover: rgba(27, 126, 225, 1);
+  --link-visited: rgba(200, 0, 204, 1);
+  --neutral: rgba(75, 75, 75, 1);
+  --neutral-surface: rgba(238, 238, 238, 1);
+  --neutral-surface-hover: rgba(229, 229, 229, 1);
   --neutral-text: rgba(75, 75, 75, 1);
   --secondary: rgba(41, 41, 41, 1);
   --secondary-active: rgba(75, 75, 75, 1);
@@ -36,6 +46,7 @@ export const lightColors = css`
   --secondary-surface: rgba(249, 249, 249, 1);
   --success: rgba(6, 121, 0, 1);
   --success-surface: rgba(233, 254, 223, 1);
+  --success-surface-hover: rgba(220, 254, 205, 1);
   --success-text: rgba(6, 121, 0, 1);
   --surface: rgba(255, 255, 255, 1);
   --surface-active: rgba(0, 0, 0, 0.14);
@@ -43,7 +54,7 @@ export const lightColors = css`
   --surface-alt-active: rgba(243, 242, 255, 1);
   --surface-alt-hover: rgba(249, 249, 249, 1);
   --surface-alt-hover-transparent: rgba(0, 0, 0, 0.03);
-  --surface-disabled: rgba(229, 229, 229, 1);
+  --surface-disabled: rgba(238, 238, 238, 1);
   --surface-hover: rgba(238, 238, 238, 1);
   --surface-hover-transparent: rgba(0, 0, 0, 0.06);
   --text: rgba(41, 41, 41, 1);
@@ -53,6 +64,7 @@ export const lightColors = css`
   --text-subtle: rgba(152, 152, 152, 1);
   --warning: rgba(232, 183, 47, 1);
   --warning-surface: rgba(255, 250, 223, 1);
+  --warning-surface-hover: rgba(255, 248, 212, 1);
   --warning-text: rgba(146, 107, 7, 1);
   --grey-950: rgba(30, 30, 30, 1);
   --grey-900: rgba(41, 41, 41, 1);
@@ -75,13 +87,21 @@ export const lightColorsObject = {
   'border-transparent': 'rgba(0, 0, 0, 0.1)',
   error: 'rgba(204, 0, 0, 1)',
   'error-surface': 'rgba(254, 223, 223, 1)',
+  'error-surface-hover': 'rgba(254, 205, 205, 1)',
   'error-text': 'rgba(204, 0, 0, 1)',
   field: 'rgba(255, 255, 255, 1)',
   focus: 'rgba(0, 23, 231, 1)',
   info: 'rgba(0, 102, 204, 1)',
   'info-surface': 'rgba(223, 239, 254, 1)',
+  'info-surface-hover': 'rgba(205, 229, 254, 1)',
   'info-text': 'rgba(0, 102, 204, 1)',
-  'neutral-surface': 'rgba(249, 249, 249, 1)',
+  link: 'rgba(0, 102, 204, 1)',
+  'link-disabled': 'rgba(206, 206, 206, 1)',
+  'link-hover': 'rgba(27, 126, 225, 1)',
+  'link-visited': 'rgba(200, 0, 204, 1)',
+  neutral: 'rgba(75, 75, 75, 1)',
+  'neutral-surface': 'rgba(238, 238, 238, 1)',
+  'neutral-surface-hover': 'rgba(229, 229, 229, 1)',
   'neutral-text': 'rgba(75, 75, 75, 1)',
   secondary: 'rgba(41, 41, 41, 1)',
   'secondary-active': 'rgba(75, 75, 75, 1)',
@@ -89,6 +109,7 @@ export const lightColorsObject = {
   'secondary-surface': 'rgba(249, 249, 249, 1)',
   success: 'rgba(6, 121, 0, 1)',
   'success-surface': 'rgba(233, 254, 223, 1)',
+  'success-surface-hover': 'rgba(220, 254, 205, 1)',
   'success-text': 'rgba(6, 121, 0, 1)',
   surface: 'rgba(255, 255, 255, 1)',
   'surface-active': 'rgba(0, 0, 0, 0.14)',
@@ -96,7 +117,7 @@ export const lightColorsObject = {
   'surface-alt-active': 'rgba(243, 242, 255, 1)',
   'surface-alt-hover': 'rgba(249, 249, 249, 1)',
   'surface-alt-hover-transparent': 'rgba(0, 0, 0, 0.03)',
-  'surface-disabled': 'rgba(229, 229, 229, 1)',
+  'surface-disabled': 'rgba(238, 238, 238, 1)',
   'surface-hover': 'rgba(238, 238, 238, 1)',
   'surface-hover-transparent': 'rgba(0, 0, 0, 0.06)',
   text: 'rgba(41, 41, 41, 1)',
@@ -106,6 +127,7 @@ export const lightColorsObject = {
   'text-subtle': 'rgba(152, 152, 152, 1)',
   warning: 'rgba(232, 183, 47, 1)',
   'warning-surface': 'rgba(255, 250, 223, 1)',
+  'warning-surface-hover': 'rgba(255, 248, 212, 1)',
   'warning-text': 'rgba(146, 107, 7, 1)',
   'grey-950': 'rgba(30, 30, 30, 1)',
   'grey-900': 'rgba(41, 41, 41, 1)',
@@ -129,13 +151,21 @@ export const darkColors = css`
   --border-transparent: rgba(255, 255, 255, 0.17);
   --error: rgba(239, 72, 72, 1);
   --error-surface: rgba(140, 0, 0, 1);
+  --error-surface-hover: rgba(159, 0, 0, 1);
   --error-text: rgba(254, 223, 223, 1);
   --field: rgba(41, 41, 41, 1);
   --focus: rgba(104, 119, 253, 1);
   --info: rgba(72, 155, 239, 1);
   --info-surface: rgba(0, 70, 140, 1);
+  --info-surface-hover: rgba(0, 88, 175, 1);
   --info-text: rgba(223, 239, 254, 1);
+  --link: rgba(72, 155, 239, 1);
+  --link-disabled: rgba(152, 152, 152, 1);
+  --link-hover: rgba(27, 126, 225, 1);
+  --link-visited: rgba(181, 11, 215, 1);
+  --neutral: rgba(102, 102, 102, 1);
   --neutral-surface: rgba(58, 58, 58, 1);
+  --neutral-surface-hover: rgba(41, 41, 41, 1);
   --neutral-text: rgba(219, 219, 219, 1);
   --secondary: rgba(255, 255, 255, 1);
   --secondary-active: rgba(206, 206, 206, 1);
@@ -143,6 +173,7 @@ export const darkColors = css`
   --secondary-surface: rgba(41, 41, 41, 1);
   --success: rgba(20, 175, 0, 1);
   --success-surface: rgba(3, 102, 0, 1);
+  --success-surface-hover: rgba(6, 121, 0, 1);
   --success-text: rgba(233, 254, 223, 1);
   --surface: rgba(18, 18, 18, 1);
   --surface-active: rgba(255, 255, 255, 0.17);
@@ -150,7 +181,7 @@ export const darkColors = css`
   --surface-alt-active: rgba(56, 39, 80, 1);
   --surface-alt-hover: rgba(41, 41, 41, 1);
   --surface-alt-hover-transparent: rgba(255, 255, 255, 0.09);
-  --surface-disabled: rgba(102, 102, 102, 1);
+  --surface-disabled: rgba(75, 75, 75, 1);
   --surface-hover: rgba(41, 41, 41, 1);
   --surface-hover-transparent: rgba(255, 255, 255, 0.09);
   --text: rgba(253, 253, 253, 1);
@@ -160,6 +191,7 @@ export const darkColors = css`
   --text-subtle: rgba(191, 191, 191, 1);
   --warning: rgba(239, 194, 72, 1);
   --warning-surface: rgba(140, 103, 0, 1);
+  --warning-surface-hover: rgba(159, 116, 0, 1);
   --warning-text: rgba(254, 246, 223, 1);
   --grey-950: rgba(253, 253, 253, 1);
   --grey-900: rgba(249, 249, 249, 1);
@@ -182,13 +214,21 @@ export const darkColorsObject = {
   'border-transparent': 'rgba(255, 255, 255, 0.17)',
   error: 'rgba(239, 72, 72, 1)',
   'error-surface': 'rgba(140, 0, 0, 1)',
+  'error-surface-hover': 'rgba(159, 0, 0, 1)',
   'error-text': 'rgba(254, 223, 223, 1)',
   field: 'rgba(41, 41, 41, 1)',
   focus: 'rgba(104, 119, 253, 1)',
   info: 'rgba(72, 155, 239, 1)',
   'info-surface': 'rgba(0, 70, 140, 1)',
+  'info-surface-hover': 'rgba(0, 88, 175, 1)',
   'info-text': 'rgba(223, 239, 254, 1)',
+  link: 'rgba(72, 155, 239, 1)',
+  'link-disabled': 'rgba(152, 152, 152, 1)',
+  'link-hover': 'rgba(27, 126, 225, 1)',
+  'link-visited': 'rgba(181, 11, 215, 1)',
+  neutral: 'rgba(102, 102, 102, 1)',
   'neutral-surface': 'rgba(58, 58, 58, 1)',
+  'neutral-surface-hover': 'rgba(41, 41, 41, 1)',
   'neutral-text': 'rgba(219, 219, 219, 1)',
   secondary: 'rgba(255, 255, 255, 1)',
   'secondary-active': 'rgba(206, 206, 206, 1)',
@@ -196,6 +236,7 @@ export const darkColorsObject = {
   'secondary-surface': 'rgba(41, 41, 41, 1)',
   success: 'rgba(20, 175, 0, 1)',
   'success-surface': 'rgba(3, 102, 0, 1)',
+  'success-surface-hover': 'rgba(6, 121, 0, 1)',
   'success-text': 'rgba(233, 254, 223, 1)',
   surface: 'rgba(18, 18, 18, 1)',
   'surface-active': 'rgba(255, 255, 255, 0.17)',
@@ -203,7 +244,7 @@ export const darkColorsObject = {
   'surface-alt-active': 'rgba(56, 39, 80, 1)',
   'surface-alt-hover': 'rgba(41, 41, 41, 1)',
   'surface-alt-hover-transparent': 'rgba(255, 255, 255, 0.09)',
-  'surface-disabled': 'rgba(102, 102, 102, 1)',
+  'surface-disabled': 'rgba(75, 75, 75, 1)',
   'surface-hover': 'rgba(41, 41, 41, 1)',
   'surface-hover-transparent': 'rgba(255, 255, 255, 0.09)',
   text: 'rgba(253, 253, 253, 1)',
@@ -213,6 +254,7 @@ export const darkColorsObject = {
   'text-subtle': 'rgba(191, 191, 191, 1)',
   warning: 'rgba(239, 194, 72, 1)',
   'warning-surface': 'rgba(140, 103, 0, 1)',
+  'warning-surface-hover': 'rgba(159, 116, 0, 1)',
   'warning-text': 'rgba(254, 246, 223, 1)',
   'grey-950': 'rgba(253, 253, 253, 1)',
   'grey-900': 'rgba(249, 249, 249, 1)',
@@ -234,13 +276,15 @@ export const brandColors = css`
   --primary-active: rgba(109, 48, 189, 1);
   --primary-hover: rgba(109, 48, 189, 1);
   --primary-surface: rgba(230, 219, 243, 1);
+  --primary-text: rgba(255, 255, 255, 1);
 `;
 
 export const brandColorsObject = {
   primary: 'rgba(121, 53, 210, 1)',
   'primary-active': 'rgba(109, 48, 189, 1)',
   'primary-hover': 'rgba(109, 48, 189, 1)',
-  'primary-surface': 'rgba(230, 219, 243, 1)'
+  'primary-surface': 'rgba(230, 219, 243, 1)',
+  'primary-text': 'rgba(255, 255, 255, 1)'
 };
 
 export const utilityColors = css`
