@@ -9,6 +9,7 @@ export { ButtonBase, VariantButtons, Button } from './components/Button';
 export type { ButtonVariant } from './components/Button';
 export { ButtonGroup } from './components/ButtonGroup';
 export { Checkbox } from './components/Checkbox';
+export { CheckboxLabel, RadioLabel } from './components/CheckboxLabel';
 export {
   IconButtonBase,
   VariantIconButtons,

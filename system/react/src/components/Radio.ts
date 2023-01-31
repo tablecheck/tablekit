@@ -7,7 +7,7 @@ export const Radio = styled.input<{ type?: 'radio' }>`
   --radio-size: 20px;
   appearance: none;
   border-radius: 100%;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   cursor: pointer;
   height: var(--radio-size);
   margin: 2px;
@@ -33,8 +33,7 @@ export const Radio = styled.input<{ type?: 'radio' }>`
     width: var(--radio-inner-size);
   }
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     border-color: var(--text);
   }
 
@@ -42,16 +41,8 @@ export const Radio = styled.input<{ type?: 'radio' }>`
     outline: none;
   }
 
-  &:focus-visible:after {
-    display: block;
-    content: '';
-    border: 2px solid var(--focus);
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    left: -6px;
-    bottom: -6px;
-    border-radius: 100%;
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--focus);
   }
 
   &:checked {

@@ -1,6 +1,10 @@
 import { Story, Meta } from '@storybook/react';
 
 import { Checkbox, classlessSelector, classySelector } from './Checkbox';
+import {
+  CheckboxLabel,
+  classySelector as labelSelector
+} from './CheckboxLabel';
 
 const contentVariants = ['Default', 'Hover', 'Focus', 'Disabled'] as const;
 
@@ -10,7 +14,7 @@ export default {
   parameters: {
     variants: contentVariants,
     classlessSelector,
-    classySelector
+    classySelector: [classySelector, labelSelector]
   }
 } as Meta;
 
@@ -18,11 +22,14 @@ export const Variants: Story = () => (
   <>
     {[true, false].map((isChecked) =>
       contentVariants.map((variant) => (
-        <Checkbox
-          data-pseudo={variant.toLowerCase()}
-          disabled={variant.toLowerCase() === 'disabled'}
-          checked={isChecked}
-        />
+        <CheckboxLabel>
+          <Checkbox
+            data-pseudo={variant.toLowerCase()}
+            disabled={variant.toLowerCase() === 'disabled'}
+            checked={isChecked}
+          />
+          {variant} {isChecked ? '☑' : '☐'}
+        </CheckboxLabel>
       ))
     )}
   </>
