@@ -16,6 +16,7 @@ const contentVariants = [
   },
   { title: 'Focus', isInternalFocused: true },
   { title: 'Disabled', isDisabled: true },
+  { title: 'Disabled with value', isDisabled: true, defaultValue: options[0] },
   { title: 'Error', isInvalid: true }
 ] as const;
 
