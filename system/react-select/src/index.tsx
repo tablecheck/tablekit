@@ -137,27 +137,15 @@ export function useReactSelectConfig<
       ),
       // eslint-disable-next-line @typescript-eslint/naming-convention
       SelectContainer: (props) => {
-        const {
-          children,
-          className,
-          cx,
-          getStyles,
-          innerProps,
-          isDisabled: isComponentDisabled,
-          isRtl
-        } = props;
+        const { children, className, getStyles, innerProps, isDisabled } =
+          props;
         return (
           <div
             css={css(getStyles('container', props))}
-            className={cx(
-              {
-                '--is-disabled': isComponentDisabled,
-                '--is-rtl': isRtl
-              },
-              className
-            )}
+            className={className}
             {...innerProps}
             data-testid={dataTestId}
+            aria-disabled={isDisabled}
           >
             <div
               css={css`
@@ -230,7 +218,7 @@ export function useReactSelectConfig<
     };
 
     if (!hideSelectedOptions) {
-      selectComponents.Option = function (props) {
+      selectComponents.Option = function Option(props) {
         const { isSelected, children } = props;
         return (
           <reactSelectComponents.Option {...props}>
@@ -242,17 +230,20 @@ export function useReactSelectConfig<
     }
 
     return selectComponents;
-  }, [dataTestId, isInvalid, icon, isClearable, hideSelectedOptions]);
+  }, [hideSelectedOptions, isInvalid, icon, dataTestId, isMulti, isClearable]);
   const stylesObject = React.useMemo<StylesConfig<OptionType, IsMulti>>(
     () => ({
-      container: (styles) => ({
+      container: (styles, { isDisabled, isRtl }) => ({
         ...styles,
         display: 'grid !important',
         justifyContent: 'stretch',
         pointerEvents: 'auto',
         height: 'auto',
         width: 'auto',
-        minWidth: isCompact ? 'auto' : 180
+        minWidth: isCompact ? 'auto' : 180,
+        '--is-disabled': isDisabled,
+        '--is-rtl': isRtl,
+        'pointer-events': isDisabled ? 'none' : 'auto'
       }),
       control: (styles, { isFocused, isDisabled }) => {
         const isLargeBorder =
@@ -435,13 +426,14 @@ export function useReactSelectConfig<
       })
     }),
     [
-      borderRadii,
-      borderSides,
-      icon,
       isCompact,
+      isInternalFocused,
       isInvalid,
-      isMulti,
       theme.isRtl,
+      borderSides,
+      isMulti,
+      borderRadii,
+      icon,
       hideSelectedOptions
     ]
   );
