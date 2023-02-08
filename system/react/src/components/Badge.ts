@@ -34,7 +34,14 @@ export const BadgeBase = styled.span<Props>`
 /**
  * @deprecated This is intented for internal use only, changes here have no effect
  */
-export const variants = ['success', 'warning', 'info', 'error'] as const;
+export const variants = [
+  'success',
+  'warning',
+  'info',
+  'error',
+  'neutral',
+  'purple'
+] as const;
 
 export type BadgeVariant = typeof variants[number];
 
