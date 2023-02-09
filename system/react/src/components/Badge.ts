@@ -21,7 +21,7 @@ export const baseStyles = css`
 `;
 
 export interface Props {
-  'data-variant'?: typeof variants[number];
+  'data-variant'?: (typeof variants)[number];
   'data-size'?: 'small';
 }
 
@@ -44,7 +44,7 @@ export const variants = [
   'orange'
 ] as const;
 
-export type BadgeVariant = typeof variants[number];
+export type BadgeVariant = (typeof variants)[number];
 
 function generateVariant(variant: BadgeVariant) {
   return css`

@@ -93,7 +93,7 @@ export const variants = [
   'danger'
 ] as const;
 
-export type IconButtonVariant = typeof variants[number];
+export type IconButtonVariant = (typeof variants)[number];
 
 const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   primary: css`

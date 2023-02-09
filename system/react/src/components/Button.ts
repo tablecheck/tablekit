@@ -80,7 +80,7 @@ export const variants = [
   'bare'
 ] as const;
 
-export type ButtonVariant = typeof variants[number];
+export type ButtonVariant = (typeof variants)[number];
 
 const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   primary: css`

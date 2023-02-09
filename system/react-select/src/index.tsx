@@ -23,12 +23,6 @@ import {
   ClearIndicatorProps
 } from 'react-select';
 
-declare module '@emotion/react' {
-  export interface Theme {
-    isRtl?: boolean;
-  }
-}
-
 export interface Options {
   isInvalid?: boolean | undefined;
   dataTestId: string;

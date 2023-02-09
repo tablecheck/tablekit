@@ -5,12 +5,16 @@ import cssnano from 'cssnano';
 import { execa } from 'execa';
 import fs from 'fs-extra';
 import postcss from 'postcss';
-import postcssNested from 'postcss-nested';
+import postcssNesting from 'postcss-nesting';
 
 import { evaluateStyleElement } from './evaluateStyleElement.js';
 import { utilsBuild } from './utilsBuild.js';
 
-const cssProcesser = postcss([postcssNested]);
+const cssProcesser = postcss([
+  postcssNesting({
+    noIsPseudoSelector: true
+  })
+]);
 
 const outputFolderPath = path.join(process.cwd(), 'lib');
 fs.emptyDirSync(outputFolderPath);

@@ -2,6 +2,8 @@
  * DO NOT EDIT: This file is generated, run 'npm update:exports' to update this.
  * The exports here are generated from all ts/tsx files at the root level
  */
+import './globalTypes';
+
 export { BadgeBase, VariantBadges, Badge } from './components/Badge';
 export type { Props as BadgeProps, BadgeVariant } from './components/Badge';
 export { Banner } from './components/Banner';
