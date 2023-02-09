@@ -3,6 +3,7 @@ import createCache from '@emotion/cache';
 import { CacheProvider } from '@emotion/react';
 import { styled, themes } from '@storybook/theming';
 import { LocaleCode } from '@tablecheck/locales';
+import mockdate from 'mockdate';
 import * as React from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 
@@ -172,6 +173,13 @@ function handleGridRef(ref: HTMLDivElement) {
 }
 
 export const decorators = [
+  (story: () => JSX.Element, context): JSX.Element => {
+    mockdate.reset();
+    mockdate.set(
+      context.parameters.mockDate || new Date('2023-03-14T16:47:18.502Z')
+    );
+    return story();
+  },
   (story: () => JSX.Element, context): JSX.Element => {
     const isDark = useDarkMode();
     const direction = getDirection();

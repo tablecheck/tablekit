@@ -22,7 +22,7 @@ const globalStyles = css`
 `;
 
 export function ThemeProvider({
-  isRtl,
+  isRtl = false,
   lang,
   country,
   theme = 'light',

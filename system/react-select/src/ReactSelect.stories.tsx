@@ -28,7 +28,7 @@ export default {
   }
 } as Meta;
 
-const Select = (props: Omit<typeof contentVariants[number], 'title'>) => {
+const Select = (props: Omit<(typeof contentVariants)[number], 'title'>) => {
   const config = useReactSelectConfig({
     dataTestId: 'test-id',
     ...props
@@ -44,7 +44,9 @@ const Select = (props: Omit<typeof contentVariants[number], 'title'>) => {
   );
 };
 
-const MultiSelect = (props: Omit<typeof contentVariants[number], 'title'>) => {
+const MultiSelect = (
+  props: Omit<(typeof contentVariants)[number], 'title'>
+) => {
   const config = useReactSelectConfig<{ label: string; value: string }, true>({
     dataTestId: 'test-id',
     isMulti: true,
