@@ -40,7 +40,8 @@ export const variants = [
   'info',
   'error',
   'neutral',
-  'purple'
+  'purple',
+  'orange'
 ] as const;
 
 export type BadgeVariant = typeof variants[number];

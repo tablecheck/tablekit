@@ -40,6 +40,8 @@ export const lightColors = css`
   --neutral-surface: rgba(238, 238, 238, 1);
   --neutral-surface-hover: rgba(229, 229, 229, 1);
   --neutral-text: rgba(75, 75, 75, 1);
+  --orange-surface: rgba(255, 237, 202, 1);
+  --orange-text: rgba(175, 93, 0, 1);
   --purple-surface: rgba(245, 216, 255, 1);
   --purple-text: rgba(113, 0, 153, 1);
   --secondary: rgba(41, 41, 41, 1);
@@ -105,6 +107,8 @@ export const lightColorsObject = {
   'neutral-surface': 'rgba(238, 238, 238, 1)',
   'neutral-surface-hover': 'rgba(229, 229, 229, 1)',
   'neutral-text': 'rgba(75, 75, 75, 1)',
+  'orange-surface': 'rgba(255, 237, 202, 1)',
+  'orange-text': 'rgba(175, 93, 0, 1)',
   'purple-surface': 'rgba(245, 216, 255, 1)',
   'purple-text': 'rgba(113, 0, 153, 1)',
   secondary: 'rgba(41, 41, 41, 1)',
@@ -171,6 +175,8 @@ export const darkColors = css`
   --neutral-surface: rgba(58, 58, 58, 1);
   --neutral-surface-hover: rgba(41, 41, 41, 1);
   --neutral-text: rgba(219, 219, 219, 1);
+  --orange-surface: rgba(175, 93, 0, 1);
+  --orange-text: rgba(255, 237, 202, 1);
   --purple-surface: rgba(113, 0, 153, 1);
   --purple-text: rgba(245, 216, 255, 1);
   --secondary: rgba(255, 255, 255, 1);
@@ -236,6 +242,8 @@ export const darkColorsObject = {
   'neutral-surface': 'rgba(58, 58, 58, 1)',
   'neutral-surface-hover': 'rgba(41, 41, 41, 1)',
   'neutral-text': 'rgba(219, 219, 219, 1)',
+  'orange-surface': 'rgba(175, 93, 0, 1)',
+  'orange-text': 'rgba(255, 237, 202, 1)',
   'purple-surface': 'rgba(113, 0, 153, 1)',
   'purple-text': 'rgba(245, 216, 255, 1)',
   secondary: 'rgba(255, 255, 255, 1)',
