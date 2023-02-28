@@ -909,6 +909,21 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25881?component-type=npm&component-name=http-cache-semantics&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/core-js@3.26.0",
+      "description": "Standard library",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/core-js@3.26.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2023-0962",
+          "title": "1 vulnerability found",
+          "description": "1 non-CVE vulnerability found. To see more details, please create a free account at https://ossindex.sonatype.org/ and request for this information using your registered account",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2023-0962"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1097,6 +1112,9 @@
     },
     {
       "id": "CVE-2022-25881"
+    },
+    {
+      "id": "sonatype-2023-0962"
     }
   ]
 }
