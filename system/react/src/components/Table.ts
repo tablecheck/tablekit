@@ -16,14 +16,14 @@ export const Table = styled.table`
 
   tbody {
     font: var(--body-2);
+
+    tr:hover {
+      background-color: var(--surface-hover-transparent);
+    }
   }
 
   tr {
     transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: var(--surface-hover-transparent);
-    }
   }
 
   th,
