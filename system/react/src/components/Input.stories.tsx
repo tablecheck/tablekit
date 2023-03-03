@@ -23,7 +23,8 @@ export default {
   parameters: {
     variants: contentVariants.map(({ title }) => title),
     classlessSelector,
-    classySelector
+    classySelector,
+    auxiliaryComponents: [InputWithIcons]
   }
 } as Meta;
 

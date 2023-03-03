@@ -18,6 +18,7 @@ export default {
   component: Root,
   parameters: {
     layout: 'fullscreen',
+    showStarImport: true,
     packageName: '@tablecheck/tablekit-react-datepicker',
     controls: {
       exclude: ['data-testid']

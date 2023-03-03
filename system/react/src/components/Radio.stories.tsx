@@ -9,9 +9,11 @@ export default {
   title: 'TableKit/Radio',
   component: Radio,
   parameters: {
-    classySelector: [classySelector, labelSelector],
+    variants: contentVariants,
     classlessSelector,
-    variants: contentVariants
+    auxiliaryClasslessSelectors: [labelSelector],
+    classySelector,
+    auxiliaryClassySelectors: [labelSelector]
   }
 };
 
