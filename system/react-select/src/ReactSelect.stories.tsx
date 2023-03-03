@@ -24,6 +24,7 @@ export default {
   title: 'TableKit/useReactSelect hook',
   parameters: {
     variants: contentVariants.map(({ title }) => title),
+    importName: 'useReactSelectConfig',
     packageName: '@tablecheck/tablekit-react-select'
   }
 } as Meta;

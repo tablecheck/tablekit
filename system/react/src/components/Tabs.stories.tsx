@@ -6,7 +6,11 @@ import { TabButton } from './TabButton';
 import { Tabs, TabContent } from './Tabs';
 
 export default {
-  title: 'TableKit/Tabs'
+  title: 'TableKit/Tabs',
+  component: Tabs,
+  parameters: {
+    auxiliaryComponents: [TabContent, TabButton]
+  }
 } as Meta;
 
 const tabs = ['one', 'two', 'three'];

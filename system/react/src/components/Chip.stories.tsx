@@ -14,8 +14,10 @@ const contentVariants = [
 
 export default {
   title: 'TableKit/Chip',
+  component: Chip,
   parameters: {
     classySelector,
+    auxiliaryComponents: [ChipRow],
     variants: contentVariants,
     chromatic: { viewports: [1500] }
   }

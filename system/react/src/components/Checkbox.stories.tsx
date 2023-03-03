@@ -14,7 +14,9 @@ export default {
   parameters: {
     variants: contentVariants,
     classlessSelector,
-    classySelector: [classySelector, labelSelector]
+    auxiliaryClasslessSelectors: [labelSelector],
+    classySelector,
+    auxiliaryClassySelectors: [labelSelector]
   }
 } as Meta;
 

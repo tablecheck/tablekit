@@ -6,7 +6,7 @@ export const ScrollShadow = styled.div<{
   /**
    * Which axis to apply overflow: auto on.
    */
-  'data-overflow'?: 'x' | 'y';
+  'data-overflow': 'x' | 'y';
 }>`
   background-repeat: no-repeat;
   background-color: var(--surface);

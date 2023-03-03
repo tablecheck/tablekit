@@ -154,6 +154,11 @@ const Code = styled.pre`
   color: var(--info-text);
 `;
 
+const MultiCode = styled.span`
+  display: flex;
+  gap: var(--spacing-l1);
+`;
+
 declare global {
   interface Window {
     firstStorybookGridRef?: HTMLDivElement;
@@ -183,8 +188,16 @@ export const decorators = [
   (story: () => JSX.Element, context): JSX.Element => {
     const isDark = useDarkMode();
     const direction = getDirection();
-    const { classlessSelector, classySelector, packageName } =
-      context.parameters;
+    const {
+      classlessSelector,
+      auxiliaryClasslessSelectors,
+      classySelector,
+      auxiliaryClassySelectors,
+      packageName,
+      showStarImport,
+      importName,
+      auxiliaryComponents
+    } = context.parameters;
     const gridStyles = {
       '--variants': context.parameters.variants?.length || 1
     };
@@ -197,16 +210,56 @@ export const decorators = [
             <b>{variant.charAt(0).toUpperCase() + variant.slice(1)}</b>
           ))
         : null;
+    const componentDisplayName = importName || context.component?.displayName;
+    const auxiliaryComponentNames = (auxiliaryComponents || []).map(
+      (c) => c.displayName
+    );
+    const componentNames = [componentDisplayName]
+      .concat(auxiliaryComponentNames)
+      .filter((v) => !!v)
+      .join(', ');
+    const packageSelector = { value: packageName, name: 'React Import' };
+    const starImportName = (packageName as string | undefined)
+      ?.split('/')
+      .at(-1)
+      ?.replace('tablekit-react-', '')
+      .split('-')
+      .map((name) => `${name[0].toUpperCase()}${name.substring(1)}`)
+      .join('');
+    if (packageName && showStarImport && starImportName) {
+      packageSelector.value = `import * as ${starImportName} from '${packageName}';`;
+    } else if (componentDisplayName && packageName) {
+      packageSelector.value = `import { ${componentNames} } from '${packageName}';`;
+    } else if (componentDisplayName) {
+      packageSelector.value = `import { ${componentNames} } from '@tablecheck/tablekit-react';`;
+    }
+    const classySelectors = [classySelector].concat(
+      auxiliaryClassySelectors || []
+    );
+    const classlessSelectors = [classlessSelector].concat(
+      auxiliaryClasslessSelectors || []
+    );
+    for (let i = 0; i < classySelectors.length; i += 1) {
+      if (!classlessSelectors[i] && classySelectors[i]) {
+        classlessSelectors[i] = classySelectors[i];
+      }
+    }
     const selectors = [
-      { value: classlessSelector, name: 'Classless Selector' },
-      { value: classySelector, name: 'Classy Selector' },
-      { value: packageName, name: 'Package Name' }
-    ]
-      .filter(({ value }) => !!value)
-      .map(({ value, ...rest }) => ({
-        ...rest,
-        value: Array.isArray(value) ? value.join(', ') : value
-      }));
+      packageSelector,
+      {
+        value: classlessSelectors,
+        name: 'Classless Selector'
+      },
+      {
+        value: classySelectors,
+        name: 'Classy Selector'
+      }
+    ].filter(({ value }) => {
+      if (!value) return false;
+      if (Array.isArray(value) && !value.filter((v) => !!v).length)
+        return false;
+      return true;
+    });
     return (
       <CacheProvider value={emotionCache}>
         <StoryWrapper>
@@ -220,10 +273,19 @@ export const decorators = [
               {selectors.length ? (
                 <Selectors>
                   {selectors.map(({ name, value }) => (
-                    <>
+                    <React.Fragment key={name}>
                       <b>{name}:</b>
-                      <Code>{value}</Code>
-                    </>
+                      {Array.isArray(value) ? (
+                        <MultiCode>
+                          {value.map((v, i) => (
+                            // eslint-disable-next-line react/no-array-index-key
+                            <Code key={i}>{v}</Code>
+                          ))}
+                        </MultiCode>
+                      ) : (
+                        <Code>{value}</Code>
+                      )}
+                    </React.Fragment>
                   ))}
                 </Selectors>
               ) : null}
