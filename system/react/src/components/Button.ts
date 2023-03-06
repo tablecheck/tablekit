@@ -165,7 +165,11 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   `
 };
 
-const coreStyles = css`
+/**
+ *
+ * @alias buttonCoreStyles
+ */
+export const coreStyles = css`
   &:disabled {
     &,
     &:hover,

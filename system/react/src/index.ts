@@ -7,7 +7,12 @@ import './globalTypes';
 export { BadgeBase, VariantBadges, Badge } from './components/Badge';
 export type { Props as BadgeProps, BadgeVariant } from './components/Badge';
 export { Banner } from './components/Banner';
-export { ButtonBase, VariantButtons, Button } from './components/Button';
+export {
+  ButtonBase,
+  coreStyles as buttonCoreStyles,
+  VariantButtons,
+  Button
+} from './components/Button';
 export type { ButtonVariant } from './components/Button';
 export { ButtonGroup } from './components/ButtonGroup';
 export { Checkbox } from './components/Checkbox';
