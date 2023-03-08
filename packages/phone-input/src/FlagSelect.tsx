@@ -2,7 +2,7 @@ import { useTheme } from '@emotion/react';
 import { Icon, getIcon } from '@tablecheck/tablekit-icon';
 import { InputSize } from '@tablecheck/tablekit-input';
 import { Select, createFilter, Config } from '@tablecheck/tablekit-select';
-import { useMemo, ReactNode } from 'react';
+import * as React from 'react';
 
 import { Flag } from './styled/Flag';
 import { getFlagSelectStyles, Label, FlagWrap } from './styles';
@@ -25,24 +25,26 @@ const filterOptions: Config = {
   matchFrom: 'any'
 };
 
-const Opt = ({
+function Opt({
   children = null,
   shortName,
   shouldHideFlags
 }: {
-  children?: ReactNode | null;
+  children?: React.ReactNode | null;
   shortName: string;
   shouldHideFlags: boolean;
-}) => (
-  <Label>
-    {!shouldHideFlags && (
-      <FlagWrap>
-        <Flag country={shortName.toUpperCase()} />
-      </FlagWrap>
-    )}
-    {children}
-  </Label>
-);
+}) {
+  return (
+    <Label>
+      {!shouldHideFlags && (
+        <FlagWrap>
+          <Flag country={shortName.toUpperCase()} />
+        </FlagWrap>
+      )}
+      {children}
+    </Label>
+  );
+}
 
 const getOptionLabel = (opt: I18nCountry) => opt.name || '';
 
@@ -86,7 +88,7 @@ const findCountry = (
   return undefined;
 };
 
-export const FlagSelect = (props: FlagSelectProps): JSX.Element => {
+export function FlagSelect(props: FlagSelectProps): JSX.Element {
   const {
     i18nCountries,
     isInvalid,
@@ -100,7 +102,7 @@ export const FlagSelect = (props: FlagSelectProps): JSX.Element => {
     shouldHideFlags
   } = props;
 
-  const value = useMemo(
+  const value = React.useMemo(
     () => findCountry(countryCode, i18nCountries),
     [countryCode, i18nCountries]
   );
@@ -130,8 +132,7 @@ export const FlagSelect = (props: FlagSelectProps): JSX.Element => {
       options={i18nCountries}
       value={value}
       shouldNotChangeDropdownIcon
-      isRtl={theme.isRtl}
       styles={{ ...getFlagSelectStyles({ theme, size }), ...styles }}
     />
   );
-};
+}

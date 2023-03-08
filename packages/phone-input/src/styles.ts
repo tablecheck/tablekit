@@ -7,7 +7,7 @@ import {
   Spacing
 } from '@tablecheck/tablekit-theme';
 import { margin, mediaQuery } from '@tablecheck/tablekit-utils';
-import { ReactNode } from 'react';
+import * as React from 'react';
 
 import { FlagSelectProps, SelectType } from './types';
 
@@ -40,20 +40,17 @@ export const getFlagSelectStyles = ({
     minHeight: 'initial',
     transition:
       'background-color 200ms ease-in-out, border-color 200ms ease-in-out, width 100ms',
-    borderRadius: theme.isRtl
-      ? `0 ${BORDER_RADIUS}px ${BORDER_RADIUS}px 0`
-      : `${BORDER_RADIUS}px 0 0 ${BORDER_RADIUS}px`
+    borderRadius: `${BORDER_RADIUS}px 0 0 ${BORDER_RADIUS}px`
   }),
   dropdownIndicator: (style: CSSObject) => ({
     ...style,
     paddingBottom: '0',
     paddingTop: '0',
-    ...(theme.isRtl ? { paddingRight: '0' } : { paddingLeft: '0' })
+    paddingLeft: '0'
   }),
   menu: (style: CSSObject) => ({
     ...style,
-    width: '200px',
-    ...(theme.isRtl && { marginLeft: 'calc(70px - 200px)' })
+    width: '200px'
   }),
   singleValue: (style) => ({
     ...style,
@@ -74,16 +71,10 @@ export const getFlagSelectStyles = ({
     width: undefined
   }),
   groupHeading: (style: CSSObject) => ({
-    ...style,
-    ...(theme.isRtl && { direction: 'rtl' })
+    ...style
   }),
   option: (style: CSSObject) => ({
-    ...style,
-    ...(theme.isRtl && {
-      '&>div': {
-        direction: 'rtl'
-      }
-    })
+    ...style
   })
 });
 
@@ -94,7 +85,7 @@ export const Label = styled.div`
   line-height: 1.2;
 `;
 
-export const FlagWrap = styled.span<{ children: ReactNode | null }>`
+export const FlagWrap = styled.span<{ children: React.ReactNode | null }>`
   margin-top: 1px;
   margin-bottom: 1px;
   ${margin({ right: 8, left: 1 })};
