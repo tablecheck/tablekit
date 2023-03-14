@@ -5,7 +5,8 @@ import { useReactSelectConfig } from './index';
 
 const options = ['One', 'Two', 'Three'].map((value) => ({
   label: `Option ${value}`,
-  value
+  value,
+  isDisabled: value === 'Three'
 }));
 
 const contentVariants = [

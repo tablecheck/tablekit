@@ -342,7 +342,18 @@ export function useReactSelectConfig<
         ...styles,
         ...menuListStylesObject
       }),
-      option: (styles, { isFocused, isSelected }) => {
+      option: (styles, { isFocused, isSelected, isDisabled }) => {
+        const optionVariables = isDisabled
+          ? {
+              '--option-background-color': 'var(--surface-disabled)',
+              '--option-background-color-hover': 'var(--surface-disabled)',
+              '--option-background-color-active': 'var(--surface-disabled)'
+            }
+          : {
+              '--option-background-color': 'var(--surface)',
+              '--option-background-color-hover': 'var(--surface-hover)',
+              '--option-background-color-active': 'var(--surface-active)'
+            };
         let stateStyles = {};
         if (isSelected) {
           stateStyles = hideSelectedOptions
@@ -355,10 +366,16 @@ export function useReactSelectConfig<
           ...styles,
           ...menuItemStylesObject,
           ...stateStyles,
+          ...optionVariables,
+          background: 'var(--option-background-color)',
           cursor: 'pointer',
-          ':active': isSelected ? {} : menuItemStateStylesObjects.active,
+          ':active': {
+            ...(isSelected ? {} : menuItemStateStylesObjects.active),
+            background: 'var(--option-background-color-active)'
+          },
           ':hover > input[type="checkbox"]': {
-            borderColor: 'var(--text)'
+            borderColor: 'var(--text)',
+            background: 'var(--option-background-color-hover)'
           }
         };
       },
