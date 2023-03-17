@@ -24,14 +24,15 @@
     "@carbon/icons-react": "^11",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@tablecheck/tablekit-core": "*",
     "@tablecheck/tablekit-react": "*",
     "react": ">=17",
     "react-dom": ">=17",
     "react-select": "^5"
   },
   "devDependencies": {
-    "@carbon/icons-react": "11.16.0",
-    "@storybook/react": "6.5.16",
+    "@carbon/icons-react": "11.17.0",
+    "@tablecheck/tablekit-core": "2.0.0",
     "@tablecheck/tablekit-react": "2.0.0",
     "react-select": "5.7.0"
   },

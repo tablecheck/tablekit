@@ -20,6 +20,7 @@ const DirectionButton = styled.button`
   color: var(--text);
   background: var(--surface);
 
+  &[data-pseudo='hover'],
   &:hover {
     background: var(--surface-hover);
   }
@@ -27,6 +28,7 @@ const DirectionButton = styled.button`
     background: var(--surface);
     color: var(--text-disabled);
   }
+  &[data-pseudo='focus'],
   &:focus {
     box-shadow: 2px solid var(--focus);
   }

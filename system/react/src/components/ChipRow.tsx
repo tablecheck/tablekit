@@ -1,11 +1,14 @@
+/**
+ * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
+ * The exports here are generated from @tablecheck/tablekit-core
+ * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
+ */
 import styled from '@emotion/styled';
+import { chipRow } from '@tablecheck/tablekit-core';
 
-export const classySelector = '.chip-row';
+export type Props = chipRow.DefaultedProps;
 
-export const ChipRow = styled.div<{
-  role?: 'tablist';
-}>`
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-l2);
+export const ChipRow = styled.div<Props>`
+  ${chipRow.baseStyles}
 `;
+ChipRow.defaultProps = { role: 'tablist' };

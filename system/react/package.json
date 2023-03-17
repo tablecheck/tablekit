@@ -14,7 +14,7 @@
   "scripts": {
     "audit": "tablecheck-scripts auditjs",
     "audit:ci": "tablecheck-scripts auditjs --ci",
-    "build": "npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
+    "build": "npm run update:components && npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
     "coverage-summary": "tablecheck-scripts coverage-summary",
     "format": "tablecheck-scripts lint --fix --skip-typescript",
     "lint": "tablecheck-scripts lint",
@@ -23,8 +23,11 @@
     "test:watch": "tablecheck-scripts test --env=jsdom",
     "tsc": "tablecheck-scripts tsc",
     "tsc:watch": "tablecheck-scripts tsc -w",
-    "update:exports": "node scripts/generateIndex.mjs",
-    "update:figma": "node scripts/updateFromFigma.mjs"
+    "update:components": "node scripts/generateComponents.mjs && prettier -w src/components/*",
+    "update:exports": "node scripts/generateIndex.mjs"
+  },
+  "dependencies": {
+    "@tablecheck/tablekit-core": "2.0.0"
   },
   "peerDependencies": {
     "@carbon/icons-react": "11",
@@ -34,10 +37,7 @@
     "react-dom": ">=17"
   },
   "devDependencies": {
-    "@carbon/icons-react": "11.16.0",
-    "@radix-ui/react-tabs": "1.0.2",
-    "@storybook/addon-actions": "6.5.16",
-    "@storybook/react": "6.5.16",
+    "@carbon/icons-react": "11.17.0",
     "fs-extra": "11.1.0",
     "lodash": "4.17.21",
     "pluralize": "8.0.0",

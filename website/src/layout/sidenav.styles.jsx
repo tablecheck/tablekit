@@ -6,7 +6,7 @@ export const Sidebar = styled.div`
   left: 0;
   height: calc(100vh - var(--headerHeight));
   min-width: 260px;
-  background-color: var(--grey-100);
+  background-color: var(--surface-raised);
   border-right: 1px solid var(--border);
 `;
 

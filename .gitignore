@@ -10,6 +10,7 @@ public/static
 lib
 junit
 docs
+storybook-static
 tsconfig.json
 tsconfig.*.json
 *.tsbuildinfo

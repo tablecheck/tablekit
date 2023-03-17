@@ -2,18 +2,8 @@
 import { ChevronDown, Close } from '@carbon/icons-react';
 import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-import {
-  menuStylesObject,
-  menuItemStylesObject,
-  menuItemStateStylesObjects,
-  menuListStylesObject,
-  Spinner,
-  BorderRadii,
-  BorderSide,
-  getBorderColor,
-  getBorderRadius,
-  Checkbox
-} from '@tablecheck/tablekit-react';
+import { menu, menuList, menuItem } from '@tablecheck/tablekit-core';
+import { Spinner, Checkbox } from '@tablecheck/tablekit-react';
 import * as React from 'react';
 import {
   SelectComponentsConfig,
@@ -22,6 +12,30 @@ import {
   StylesConfig,
   ClearIndicatorProps
 } from 'react-select';
+
+import {
+  getBorderColor,
+  getBorderRadius,
+  BorderRadii,
+  BorderSide
+} from './border';
+
+// this shouldn't be necessary as it's done inside the tablekit-react package which should merge when imported
+// but inside the lerna monorepo the merging doesn't happen and throws typescript errors. Most likely due to how
+// node_modules is linking files
+declare module '@emotion/react' {
+  interface Theme {
+    isRtl: boolean;
+    isDark: boolean;
+  }
+}
+
+const menuStylesObject = menu.baseStylesObject;
+const {
+  baseStylesObject: menuItemStylesObject,
+  stateStylesObjects: menuItemStateStylesObjects
+} = menuItem;
+const { baseStylesObject: menuListStylesObject } = menuList;
 
 export interface Options {
   isInvalid?: boolean | undefined;
@@ -198,7 +212,7 @@ export function useReactSelectConfig<
         />
       ),
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      LoadingIndicator: () => <Spinner color="var(--text-subtle)" />,
+      LoadingIndicator: () => <Spinner aria-busy color="var(--text-subtle)" />,
       // eslint-disable-next-line @typescript-eslint/naming-convention
       GroupHeading: (props) => {
         const { children } = props;

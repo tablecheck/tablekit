@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "name": "stories",
+  "license": "MIT",
+  "author": "TableCheck Inc.",
+  "version": "2.0.0",
+  "keywords": [],
+  "main": "./lib/es5/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "audit": "tablecheck-scripts auditjs",
+    "audit:ci": "tablecheck-scripts auditjs --ci",
+    "build": "storybook build",
+    "start": "storybook dev -p 6006"
+  },
+  "devDependencies": {
+    "@carbon/icons-react": "11.17.0",
+    "@emotion/styled": "11.10.6",
+    "@radix-ui/react-tabs": "1.0.2",
+    "@storybook/addon-a11y": "7.0.0-rc.4",
+    "@storybook/addon-actions": "7.0.0-rc.4",
+    "@storybook/addon-controls": "7.0.0-rc.4",
+    "@storybook/addon-docs": "7.0.0-rc.4",
+    "@storybook/addon-essentials": "7.0.0-rc.4",
+    "@storybook/addon-links": "7.0.0-rc.4",
+    "@storybook/addon-storysource": "7.0.0-rc.4",
+    "@storybook/addons": "7.0.0-rc.4",
+    "@storybook/react": "7.0.0-rc.4",
+    "@storybook/react-vite": "7.0.0-rc.4",
+    "@storybook/theming": "7.0.0-rc.4",
+    "@tablecheck/babel-preset": "1.1.0",
+    "@tablecheck/locales": "1.1.1",
+    "@tablecheck/tablekit-core": "2.0.0",
+    "@tablecheck/tablekit-css": "2.0.0",
+    "@tablecheck/tablekit-react": "2.0.0",
+    "@tablecheck/tablekit-react-css": "2.0.0",
+    "@tablecheck/tablekit-react-datepicker": "2.0.0",
+    "@tablecheck/tablekit-react-fit-content-textarea": "2.0.0",
+    "@tablecheck/tablekit-react-select": "2.0.0",
+    "@vitejs/plugin-react": "3.1.0",
+    "date-fns": "2.29.3",
+    "dayzed": "3.2.3",
+    "fs-extra": "11.1.0",
+    "lodash": "4.17.21",
+    "pluralize": "8.0.0",
+    "prettier": "2.8.4",
+    "react": "18.2.0",
+    "react-select": "5.7.0",
+    "storybook": "7.0.0-rc.4",
+    "typescript": "4.9.5",
+    "vite": "4.2.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

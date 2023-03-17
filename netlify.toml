@@ -1,0 +1,4 @@
+[build]
+  command = "npx lerna bootstrap --scope=@tablecheck/tablekit-core --scope=@tablecheck/tablekit-css --scope=website && npx lerna run build:netlify --scope=@tablecheck/tablekit-core --scope=@tablecheck/tablekit-css --scope=website"
+  publish = "website/public"
+  environment = { NPM_FLAGS = "--ignore-scripts" }

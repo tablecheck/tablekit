@@ -10,6 +10,7 @@
   "types": "./lib/esm/index.d.ts",
   "scripts": {
     "build": "charge build src public",
+    "build:netlify": "npm run build",
     "buildFonts": "node scripts/generateFonts.mjs",
     "postinstall": "npm run buildFonts",
     "start": "charge serve src",
@@ -17,8 +18,8 @@
   },
   "dependencies": {
     "@emotion/core": "11.0.0",
-    "@emotion/react": "11.10.5",
-    "@emotion/styled": "11.10.5",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
     "@ibm/plex": "6.1.1",
     "@tablecheck/tablekit-css": "2.0.0"
   },
