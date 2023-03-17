@@ -1,56 +1,29 @@
-import { css } from '@emotion/react';
+/**
+ * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
+ * The exports here are generated from @tablecheck/tablekit-core
+ * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
+ */
 import styled from '@emotion/styled';
+import { banner } from '@tablecheck/tablekit-core';
 
-export const classySelector = '.banner';
+import {
+  buildVariantComponents,
+  buildComponentWithVariants
+} from '../buildVariantComponents';
 
-const baseStyles = css`
-  padding: var(--spacing-l4);
-  background-color: var(--neutral-surface);
-  display: grid;
-  grid-template-columns: min-content auto min-content;
-  grid-template-areas: 'icon title close' 'icon content content' 'icon actions actions';
+export type Props = banner.Props;
+export type BannerVariant = banner.BannerVariant;
 
-  .banner-icon {
-    grid-area: icon;
-    padding-right: var(--spacing-l4);
-  }
-
-  .banner-title {
-    grid-area: title;
-  }
-
-  .banner-close {
-    grid-area: close;
-    cursor: pointer;
-  }
-
-  .banner-content {
-    grid-area: content;
-    padding-top: var(--spacing-l2);
-  }
-
-  .banner-actions {
-    grid-area: actions;
-    display: flex;
-    gap: var(--spacing-l4);
-    padding-top: var(--spacing-l2);
-  }
-
-  &[data-variant='success'] {
-    background-color: var(--success-surface);
-  }
-
-  &[data-variant='info'] {
-    background-color: var(--info-surface);
-  }
-
-  &[data-variant='warning'] {
-    background-color: var(--warning-surface);
-  }
+export const BannerBase = styled.div<Omit<Props, 'data-variant'>>`
+  ${banner.baseStyles}
 `;
-
-export const Banner = styled.div<{
-  'data-variant'?: 'success' | 'info' | 'warning' | 'neutral';
-}>`
-  ${baseStyles}
-`;
+export const Banner = buildComponentWithVariants(
+  banner.variantStyles,
+  BannerBase,
+  {} as Props
+);
+Banner.displayName = 'Banner';
+export const VariantBanner = buildVariantComponents(
+  banner.variantStyles,
+  Banner
+);

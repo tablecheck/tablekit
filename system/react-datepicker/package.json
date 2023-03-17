@@ -20,23 +20,21 @@
     "lint": "tablecheck-scripts lint",
     "tsc": "tablecheck-scripts tsc"
   },
-  "dependencies": {
-    "date-fns": "2.x.x",
-    "dayzed": "3.x.x"
-  },
   "peerDependencies": {
     "@carbon/icons-react": "^11",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@tablecheck/tablekit-react": "*",
+    "date-fns": "2.x.x",
+    "dayzed": "3.x.x",
     "react": ">=17",
     "react-dom": ">=17"
   },
   "devDependencies": {
-    "@carbon/icons-react": "11.16.0",
-    "@storybook/addon-actions": "6.5.16",
-    "@storybook/react": "6.5.16",
-    "@tablecheck/tablekit-react": "2.0.0"
+    "@carbon/icons-react": "11.17.0",
+    "@tablecheck/tablekit-react": "2.0.0",
+    "date-fns": "2.29.3",
+    "dayzed": "3.2.3"
   },
   "publishConfig": {
     "access": "public"

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { textareaSizingStyles } from '@tablecheck/tablekit-react';
+import { textArea } from '@tablecheck/tablekit-core';
 
 // lifted from https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/
 export const FitContentTextareaWrapper = styled.div`
@@ -9,10 +9,11 @@ export const FitContentTextareaWrapper = styled.div`
   grid-gap: 0 var(--spacing-l2);
   align-items: center;
   cursor: text;
-  ${textareaSizingStyles};
+  ${textArea.textareaSizingStyles};
   background: var(--surface);
   padding: 0;
 
+  &[data-pseudo='focus'],
   &:focus,
   &:focus-within {
     border-color: var(--focus);

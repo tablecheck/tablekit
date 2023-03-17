@@ -80,16 +80,20 @@ export const DateButton = styled.button<{
     background-color: var(--day-background);
   }
 
+  &[data-pseudo='hover'],
   &:hover {
     --day-background: var(--surface-hover-transparent);
   }
 
+  &[data-pseudo='active'],
+  &[data-pseudo='focus'],
   &:active,
   &:focus {
     --day-text: var(--text-contrast);
     --day-background: var(--secondary);
   }
 
+  &[data-pseudo='focus'],
   &:focus-visible > span {
     box-shadow: 0 0 0 2px var(--focus);
   }

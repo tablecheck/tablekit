@@ -31,7 +31,9 @@ export function MonthSelect({
       style={{ '--width': '117px' } as React.CSSProperties}
     >
       {months.map((month) => (
-        <option value={month}>{formatMonth(month)}</option>
+        <option key={month} value={month}>
+          {formatMonth(month)}
+        </option>
       ))}
     </BaseSelect>
   );
@@ -57,7 +59,9 @@ export function YearSelect({
       style={{ '--width': '71px' } as React.CSSProperties}
     >
       {years.map((year) => (
-        <option value={year}>{year}</option>
+        <option key={year} value={year}>
+          {year}
+        </option>
       ))}
     </BaseSelect>
   );
