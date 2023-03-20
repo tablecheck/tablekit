@@ -41,8 +41,10 @@ export const lightColors = css`
   --neutral-surface-hover: rgba(229, 229, 229, 1);
   --neutral-text: rgba(75, 75, 75, 1);
   --orange-surface: rgba(255, 237, 202, 1);
+  --orange-surface-hover: rgba(252, 230, 187, 1);
   --orange-text: rgba(175, 93, 0, 1);
   --purple-surface: rgba(245, 216, 255, 1);
+  --purple-surface-hover: rgba(240, 198, 254, 1);
   --purple-text: rgba(113, 0, 153, 1);
   --secondary: rgba(41, 41, 41, 1);
   --secondary-active: rgba(75, 75, 75, 1);
@@ -54,14 +56,16 @@ export const lightColors = css`
   --success-text: rgba(6, 121, 0, 1);
   --surface: rgba(255, 255, 255, 1);
   --surface-active: rgba(0, 0, 0, 0.14);
-  --surface-alt: rgba(252, 252, 252, 1);
-  --surface-alt-active: rgba(243, 242, 255, 1);
-  --surface-alt-hover: rgba(249, 249, 249, 1);
-  --surface-alt-hover-transparent: rgba(0, 0, 0, 0.03);
   --surface-disabled: rgba(238, 238, 238, 1);
   --surface-hover: rgba(238, 238, 238, 1);
   --surface-hover-transparent: rgba(0, 0, 0, 0.06);
+  --surface-low: rgba(252, 252, 252, 1);
+  --surface-raised: rgba(252, 252, 252, 1);
+  --surface-raised-active: rgba(243, 242, 255, 1);
+  --surface-raised-hover: rgba(249, 249, 249, 1);
+  --surface-raised-hover-transparent: rgba(0, 0, 0, 0.03);
   --text: rgba(41, 41, 41, 1);
+  --text-alt: rgba(132, 132, 132, 1);
   --text-contrast: rgba(255, 255, 255, 1);
   --text-disabled: rgba(206, 206, 206, 1);
   --text-placeholder: rgba(191, 191, 191, 1);
@@ -75,6 +79,7 @@ export const lightColors = css`
   --grey-850: rgba(58, 58, 58, 1);
   --grey-800: rgba(75, 75, 75, 1);
   --grey-750: rgba(102, 102, 102, 1);
+  --grey-725: rgba(132, 132, 132, 1);
   --grey-700: rgba(152, 152, 152, 1);
   --grey-600: rgba(191, 191, 191, 1);
   --grey-500: rgba(206, 206, 206, 1);
@@ -108,8 +113,10 @@ export const lightColorsObject = {
   'neutral-surface-hover': 'rgba(229, 229, 229, 1)',
   'neutral-text': 'rgba(75, 75, 75, 1)',
   'orange-surface': 'rgba(255, 237, 202, 1)',
+  'orange-surface-hover': 'rgba(252, 230, 187, 1)',
   'orange-text': 'rgba(175, 93, 0, 1)',
   'purple-surface': 'rgba(245, 216, 255, 1)',
+  'purple-surface-hover': 'rgba(240, 198, 254, 1)',
   'purple-text': 'rgba(113, 0, 153, 1)',
   secondary: 'rgba(41, 41, 41, 1)',
   'secondary-active': 'rgba(75, 75, 75, 1)',
@@ -121,14 +128,16 @@ export const lightColorsObject = {
   'success-text': 'rgba(6, 121, 0, 1)',
   surface: 'rgba(255, 255, 255, 1)',
   'surface-active': 'rgba(0, 0, 0, 0.14)',
-  'surface-alt': 'rgba(252, 252, 252, 1)',
-  'surface-alt-active': 'rgba(243, 242, 255, 1)',
-  'surface-alt-hover': 'rgba(249, 249, 249, 1)',
-  'surface-alt-hover-transparent': 'rgba(0, 0, 0, 0.03)',
   'surface-disabled': 'rgba(238, 238, 238, 1)',
   'surface-hover': 'rgba(238, 238, 238, 1)',
   'surface-hover-transparent': 'rgba(0, 0, 0, 0.06)',
+  'surface-low': 'rgba(252, 252, 252, 1)',
+  'surface-raised': 'rgba(252, 252, 252, 1)',
+  'surface-raised-active': 'rgba(243, 242, 255, 1)',
+  'surface-raised-hover': 'rgba(249, 249, 249, 1)',
+  'surface-raised-hover-transparent': 'rgba(0, 0, 0, 0.03)',
   text: 'rgba(41, 41, 41, 1)',
+  'text-alt': 'rgba(132, 132, 132, 1)',
   'text-contrast': 'rgba(255, 255, 255, 1)',
   'text-disabled': 'rgba(206, 206, 206, 1)',
   'text-placeholder': 'rgba(191, 191, 191, 1)',
@@ -142,6 +151,7 @@ export const lightColorsObject = {
   'grey-850': 'rgba(58, 58, 58, 1)',
   'grey-800': 'rgba(75, 75, 75, 1)',
   'grey-750': 'rgba(102, 102, 102, 1)',
+  'grey-725': 'rgba(132, 132, 132, 1)',
   'grey-700': 'rgba(152, 152, 152, 1)',
   'grey-600': 'rgba(191, 191, 191, 1)',
   'grey-500': 'rgba(206, 206, 206, 1)',
@@ -176,8 +186,10 @@ export const darkColors = css`
   --neutral-surface-hover: rgba(41, 41, 41, 1);
   --neutral-text: rgba(219, 219, 219, 1);
   --orange-surface: rgba(175, 93, 0, 1);
+  --orange-surface-hover: rgba(197, 109, 10, 1);
   --orange-text: rgba(255, 237, 202, 1);
   --purple-surface: rgba(113, 0, 153, 1);
+  --purple-surface-hover: rgba(136, 8, 182, 1);
   --purple-text: rgba(245, 216, 255, 1);
   --secondary: rgba(255, 255, 255, 1);
   --secondary-active: rgba(206, 206, 206, 1);
@@ -187,16 +199,19 @@ export const darkColors = css`
   --success-surface: rgba(3, 102, 0, 1);
   --success-surface-hover: rgba(6, 121, 0, 1);
   --success-text: rgba(233, 254, 223, 1);
-  --surface: rgba(18, 18, 18, 1);
+  --surface: rgba(30, 30, 30, 1);
   --surface-active: rgba(255, 255, 255, 0.17);
-  --surface-alt: rgba(30, 30, 30, 1);
-  --surface-alt-active: rgba(56, 39, 80, 1);
-  --surface-alt-hover: rgba(41, 41, 41, 1);
-  --surface-alt-hover-transparent: rgba(255, 255, 255, 0.09);
   --surface-disabled: rgba(75, 75, 75, 1);
-  --surface-hover: rgba(41, 41, 41, 1);
-  --surface-hover-transparent: rgba(255, 255, 255, 0.09);
+  --surface-hover: rgba(58, 58, 58, 1);
+  --surface-hover-transparent: rgba(255, 255, 255, 0.13);
+  --surface-low: rgba(18, 18, 18, 1);
+  --surface-low-active: rgba(56, 39, 80, 1);
+  --surface-low-hover: rgba(41, 41, 41, 1);
+  --surface-low-hover-transparent: rgba(255, 255, 255, 0.09);
+  --surface-raised: rgba(41, 41, 41, 1);
+  --surface-raised-hover: rgba(75, 75, 75, 1);
   --text: rgba(253, 253, 253, 1);
+  --text-alt: rgba(229, 229, 229, 1);
   --text-contrast: rgba(18, 18, 18, 1);
   --text-disabled: rgba(152, 152, 152, 1);
   --text-placeholder: rgba(152, 152, 152, 1);
@@ -213,6 +228,7 @@ export const darkColors = css`
   --grey-500: rgba(206, 206, 206, 1);
   --grey-400: rgba(191, 191, 191, 1);
   --grey-300: rgba(152, 152, 152, 1);
+  --grey-275: rgba(132, 132, 132, 1);
   --grey-250: rgba(102, 102, 102, 1);
   --grey-200: rgba(75, 75, 75, 1);
   --grey-150: rgba(58, 58, 58, 1);
@@ -243,8 +259,10 @@ export const darkColorsObject = {
   'neutral-surface-hover': 'rgba(41, 41, 41, 1)',
   'neutral-text': 'rgba(219, 219, 219, 1)',
   'orange-surface': 'rgba(175, 93, 0, 1)',
+  'orange-surface-hover': 'rgba(197, 109, 10, 1)',
   'orange-text': 'rgba(255, 237, 202, 1)',
   'purple-surface': 'rgba(113, 0, 153, 1)',
+  'purple-surface-hover': 'rgba(136, 8, 182, 1)',
   'purple-text': 'rgba(245, 216, 255, 1)',
   secondary: 'rgba(255, 255, 255, 1)',
   'secondary-active': 'rgba(206, 206, 206, 1)',
@@ -254,16 +272,19 @@ export const darkColorsObject = {
   'success-surface': 'rgba(3, 102, 0, 1)',
   'success-surface-hover': 'rgba(6, 121, 0, 1)',
   'success-text': 'rgba(233, 254, 223, 1)',
-  surface: 'rgba(18, 18, 18, 1)',
+  surface: 'rgba(30, 30, 30, 1)',
   'surface-active': 'rgba(255, 255, 255, 0.17)',
-  'surface-alt': 'rgba(30, 30, 30, 1)',
-  'surface-alt-active': 'rgba(56, 39, 80, 1)',
-  'surface-alt-hover': 'rgba(41, 41, 41, 1)',
-  'surface-alt-hover-transparent': 'rgba(255, 255, 255, 0.09)',
   'surface-disabled': 'rgba(75, 75, 75, 1)',
-  'surface-hover': 'rgba(41, 41, 41, 1)',
-  'surface-hover-transparent': 'rgba(255, 255, 255, 0.09)',
+  'surface-hover': 'rgba(58, 58, 58, 1)',
+  'surface-hover-transparent': 'rgba(255, 255, 255, 0.13)',
+  'surface-low': 'rgba(18, 18, 18, 1)',
+  'surface-low-active': 'rgba(56, 39, 80, 1)',
+  'surface-low-hover': 'rgba(41, 41, 41, 1)',
+  'surface-low-hover-transparent': 'rgba(255, 255, 255, 0.09)',
+  'surface-raised': 'rgba(41, 41, 41, 1)',
+  'surface-raised-hover': 'rgba(75, 75, 75, 1)',
   text: 'rgba(253, 253, 253, 1)',
+  'text-alt': 'rgba(229, 229, 229, 1)',
   'text-contrast': 'rgba(18, 18, 18, 1)',
   'text-disabled': 'rgba(152, 152, 152, 1)',
   'text-placeholder': 'rgba(152, 152, 152, 1)',
@@ -280,6 +301,7 @@ export const darkColorsObject = {
   'grey-500': 'rgba(206, 206, 206, 1)',
   'grey-400': 'rgba(191, 191, 191, 1)',
   'grey-300': 'rgba(152, 152, 152, 1)',
+  'grey-275': 'rgba(132, 132, 132, 1)',
   'grey-250': 'rgba(102, 102, 102, 1)',
   'grey-200': 'rgba(75, 75, 75, 1)',
   'grey-150': 'rgba(58, 58, 58, 1)',
