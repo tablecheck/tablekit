@@ -124,26 +124,11 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
   `,
   tertiary: css`
     --color: var(--text);
-    border: solid 2px var(--secondary);
-    padding: calc(var(--padding) - 4px);
+    --background-color: var(--surface);
+    border-color: var(--border-transparent);
 
     &:hover {
       --background-color: var(--surface-hover);
-    }
-
-    &:focus:not(:focus-visible),
-    &:focus-visible {
-      outline: none;
-      &:after {
-        content: '';
-        position: absolute;
-        top: -4px;
-        bottom: -4px;
-        left: -4px;
-        right: -4px;
-        border-radius: 6px;
-        border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
-      }
     }
 
     &:active {
@@ -153,21 +138,13 @@ const variantStyles: Record<IconButtonVariant, SerializedStyles> = {
     &[data-round]&:after {
       border-radius: 50%;
     }
-
-    &[data-size='small'] {
-      padding: calc(var(--padding) - 6px);
-    }
-
-    &[data-size='large'] {
-      padding: var(--padding);
-    }
   `,
   ghost: css`
     --color: var(--text);
     border-color: var(--border-transparent);
 
     &:hover {
-      --background-color: var(--surface-hover);
+      --background-color: var(--surface-hover-transparent);
     }
 
     &:active {

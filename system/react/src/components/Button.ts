@@ -111,43 +111,20 @@ const variantStyles: Record<ButtonVariant, SerializedStyles> = {
   `,
   tertiary: css`
     --color: var(--text);
-    border-width: 2px;
-    --border-color: var(--secondary);
-    padding: var(--spacing-l2) var(--spacing-l3);
+    --background-color: var(--surface);
+    --border-color: var(--border-transparent);
     &:hover {
       --background-color: var(--surface-hover);
     }
-    &:focus:not(:focus-visible),
-    &:focus-visible {
-      outline: none;
-      &:after {
-        content: '';
-        position: absolute;
-        top: -4px;
-        bottom: -4px;
-        left: -4px;
-        right: -4px;
-        border-radius: 6px;
-        border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
-      }
-    }
     &:active {
       --background-color: var(--surface-active);
-    }
-
-    &[data-size='small'] {
-      padding: 6px var(--spacing-l2);
-    }
-
-    &[data-size='large'] {
-      padding: var(--spacing-l3) var(--spacing-l4);
     }
   `,
   ghost: css`
     --color: var(--text);
     --border-color: var(--border-transparent);
     &:hover {
-      --background-color: var(--surface-hover);
+      --background-color: var(--surface-hover-transparent);
     }
     &:active {
       --background-color: var(--surface-active);
