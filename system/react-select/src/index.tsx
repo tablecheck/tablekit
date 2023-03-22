@@ -231,13 +231,12 @@ export function useReactSelectConfig<
         ...styles,
         display: 'grid !important',
         justifyContent: 'stretch',
-        pointerEvents: 'auto',
         height: 'auto',
         width: 'auto',
         minWidth: isCompact ? 'auto' : 180,
         '--is-disabled': isDisabled,
         '--is-rtl': isRtl,
-        'pointer-events': isDisabled ? 'none' : 'auto'
+        pointerEvents: isDisabled ? 'none' : 'auto'
       }),
       control: (styles, { isFocused, isDisabled }) => {
         const isLargeBorder =
@@ -328,7 +327,12 @@ export function useReactSelectConfig<
         gridArea: 'indicators',
         height: INPUT_INTERNAL_HEIGHT
       }),
-      input: (styles) => ({ ...styles, margin: 0, padding: 0 }),
+      input: (styles) => ({
+        ...styles,
+        margin: 0,
+        padding: 0,
+        color: 'var(--text)'
+      }),
       placeholder: (styles) => ({
         ...styles,
         font: 'var(--body-1)',
