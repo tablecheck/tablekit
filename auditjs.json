@@ -924,6 +924,38 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2023-0962"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/webpack@4.46.0",
+      "description": "Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/webpack@4.46.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-28154",
+          "title": "[CVE-2023-28154] CWE-noinfo",
+          "description": "Webpack 5 before 5.76.0 does not avoid cross-realm object access. ImportParserPlugin.js mishandles the magic comment feature. An attacker who controls a property of an untrusted object can obtain access to the real global object.\n\nSonatype's research suggests that this CVE's details differ from those defined at NVD. See https://ossindex.sonatype.org/vulnerability/CVE-2023-28154 for details",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-28154",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-28154?component-type=npm&component-name=webpack&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/request@2.88.2",
+      "description": "Simplified HTTP request client.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/request@2.88.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-28155",
+          "title": "[CVE-2023-28155] CWE-918: Server-Side Request Forgery (SSRF)",
+          "description": "** UNSUPPORTED WHEN ASSIGNED ** The Request package through 2.88.1 for Node.js allows a bypass of SSRF mitigations via an attacker-controller server that does a cross-protocol redirect (HTTP to HTTPS, or HTTPS to HTTP). NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+          "cvssScore": 9.6,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+          "cve": "CVE-2023-28155",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-28155?component-type=npm&component-name=request&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1115,6 +1147,12 @@
     },
     {
       "id": "sonatype-2023-0962"
+    },
+    {
+      "id": "CVE-2023-28154"
+    },
+    {
+      "id": "CVE-2023-28155"
     }
   ]
 }
