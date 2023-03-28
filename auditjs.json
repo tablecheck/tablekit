@@ -956,6 +956,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-28155?component-type=npm&component-name=request&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/word-wrap@1.2.3",
+      "description": "Wrap words to a specified length.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/word-wrap@1.2.3?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26115",
+          "title": "[CVE-2023-26115] CWE-1333",
+          "description": "word-wrap - Regular Expression Denial of Service (ReDoS)",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2023-26115",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26115?component-type=npm&component-name=word-wrap&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1153,6 +1169,9 @@
     },
     {
       "id": "CVE-2023-28155"
+    },
+    {
+      "id": "CVE-2023-26115"
     }
   ]
 }
