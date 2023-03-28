@@ -19,6 +19,7 @@ export const Checkbox = styled.input<{ type?: 'checkbox' }>`
   border: 2px solid var(--border);
   border-radius: 2px;
   transition: all 80ms linear;
+  background-color: var(--surface);
 
   &:hover {
     border-color: var(--text);
