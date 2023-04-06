@@ -9,7 +9,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+    if: !contains(github.event.head_commit.message , 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -39,7 +39,7 @@ jobs:
 
       - name: Create Release ✨
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
         run: npx auto shipit
