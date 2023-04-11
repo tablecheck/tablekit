@@ -129,7 +129,7 @@ export const coreStyles = css`
     }
   }
 
-  &:disabled {
+  &:disabled:disabled {
     &,
     &[data-pseudo='hover'],
     &[data-pseudo='active'],
