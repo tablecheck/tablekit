@@ -97,10 +97,10 @@ export const variantStyles = {
 
 export const coreStyles = css`
   position: relative;
-  display: grid;
+  display: flex;
+  gap: var(--spacing-l2);
+  justify-content: center;
   padding: 9px var(--spacing-l3);
-  grid-gap: var(--spacing-l2);
-  grid-auto-flow: column;
   white-space: nowrap;
   cursor: pointer;
 
