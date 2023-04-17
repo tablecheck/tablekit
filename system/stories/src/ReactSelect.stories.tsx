@@ -7,28 +7,38 @@ const options = ['One', 'Two', 'Three'].map((value) => ({
   value
 }));
 
-const contentVariants = [
-  { title: 'Default' },
-  {
-    title: 'With Value',
-    defaultValue: options[0]
-  },
-  { title: 'Focus', isInternalFocused: true },
-  { title: 'Disabled', isDisabled: true },
-  { title: 'Disabled with value', isDisabled: true, defaultValue: options[0] },
-  { title: 'Error', isInvalid: true }
-] as const;
+const getContentVariants = (isMulti = false) => {
+  const defaultValue = isMulti ? [options[0], options[1]] : options[0];
+
+  return [
+    { title: 'Default' },
+    {
+      title: 'With Value',
+      defaultValue
+    },
+    { title: 'Focus', isInternalFocused: true },
+    { title: 'Disabled', isDisabled: true },
+    {
+      title: 'Disabled with value',
+      isDisabled: true,
+      defaultValue
+    },
+    { title: 'Error', isInvalid: true }
+  ] as const;
+};
 
 export default {
   title: 'TableKit/useReactSelect hook',
   parameters: {
-    variants: contentVariants.map(({ title }) => title),
+    variants: getContentVariants().map(({ title }) => title),
     importName: 'useReactSelectConfig',
     packageName: '@tablecheck/tablekit-react-select'
   }
 } as Meta;
 
-const Select = (props: Omit<(typeof contentVariants)[number], 'title'>) => {
+const Select = (
+  props: Omit<ReturnType<typeof getContentVariants>[number], 'title'>
+) => {
   const config = useReactSelectConfig({
     dataTestId: 'test-id',
     ...props
@@ -44,9 +54,11 @@ const Select = (props: Omit<(typeof contentVariants)[number], 'title'>) => {
   );
 };
 
-const MultiSelect = (
-  props: Omit<(typeof contentVariants)[number], 'title'>
-) => {
+const MultiSelect = ({
+  ...props
+}: Omit<ReturnType<typeof getContentVariants>[number], 'title'> & {
+  useVerticalMultiValues?: boolean;
+}) => {
   const config = useReactSelectConfig<{ label: string; value: string }, true>({
     dataTestId: 'test-id',
     isMulti: true,
@@ -66,11 +78,14 @@ const MultiSelect = (
 
 export const Variants: Story = () => (
   <>
-    {contentVariants.map(({ title: key, ...props }) => (
+    {getContentVariants().map(({ title: key, ...props }) => (
       <Select key={key} {...props} />
     ))}
-    {contentVariants.map(({ title: key, ...props }) => (
+    {getContentVariants(true).map(({ title: key, ...props }) => (
       <MultiSelect key={key} {...props} />
+    ))}
+    {getContentVariants(true).map(({ title: key, ...props }) => (
+      <MultiSelect key={key} useVerticalMultiValues {...props} />
     ))}
   </>
 );

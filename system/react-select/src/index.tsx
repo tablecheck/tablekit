@@ -47,6 +47,7 @@ export interface Options {
   isCompact?: boolean;
   isClearable?: boolean;
   hideSelectedOptions?: boolean;
+  useVerticalMultiValues?: boolean;
   /**
    * This is used for storybook only
    * @deprecated
@@ -94,6 +95,7 @@ export function useReactSelectConfig<
   dataTestId,
   borderSides,
   isMulti,
+  useVerticalMultiValues = false,
   borderRadii = BorderRadii.All,
   icon: unsafeIcon,
   isCompact,
@@ -142,6 +144,21 @@ export function useReactSelectConfig<
           {icon ? <IconWrapper>{icon}</IconWrapper> : null}
           {children}
         </reactSelectComponents.Control>
+      ),
+      // eslint-disable-next-line @typescript-eslint/naming-convention
+      ValueContainer: ({ innerProps, children, ...props }) => (
+        <reactSelectComponents.ValueContainer
+          {...props}
+          innerProps={
+            {
+              ...innerProps,
+              id: 'value-container',
+              'data-testid': 'Value Container'
+            } as typeof innerProps
+          }
+        >
+          {children}
+        </reactSelectComponents.ValueContainer>
       ),
       // eslint-disable-next-line @typescript-eslint/naming-convention
       SelectContainer: (props) => {
@@ -247,7 +264,7 @@ export function useReactSelectConfig<
         justifyContent: 'stretch',
         height: 'auto',
         width: 'auto',
-        minWidth: isCompact ? 'auto' : 180,
+        minWidth: isCompact ? '100%' : 180,
         '--is-disabled': isDisabled,
         '--is-rtl': isRtl,
         pointerEvents: isDisabled ? 'none' : 'auto'
@@ -285,10 +302,23 @@ export function useReactSelectConfig<
               '--select-multi-value-hover': 'var(--surface-hover)',
               '--select-multi-value-active': 'var(--surface-active)'
             };
+        let verticalValueContainerStyles = {};
+        if (isMulti && useVerticalMultiValues)
+          verticalValueContainerStyles =
+            isFocused || isInternalFocused
+              ? {
+                  '#value-container > div:last-child': { height: 'auto' }
+                }
+              : {
+                  '#value-container': { marginBottom: -8 },
+                  '#value-container > div:last-child': { height: 0 }
+                };
+
         return {
           ...styles,
           ...borderColorProps,
           ...multiValueVariables,
+          ...verticalValueContainerStyles,
           borderRadius: getBorderRadius(!!theme.isRtl, borderRadii),
           borderWidth: 1,
           padding: `${verticalPadding}px 15px`,
@@ -330,12 +360,20 @@ export function useReactSelectConfig<
                 }
         };
       },
-      valueContainer: (containerStyles) => ({
-        ...containerStyles,
-        padding: 0,
-        gap: 8,
-        gridArea: 'input'
-      }),
+      valueContainer: (containerStyles) => {
+        const verticalStyles: React.CSSProperties =
+          isMulti && useVerticalMultiValues
+            ? { flexDirection: 'column', alignItems: 'flex-start' }
+            : {};
+
+        return {
+          ...containerStyles,
+          ...verticalStyles,
+          padding: 0,
+          gap: 8,
+          gridArea: 'input'
+        };
+      },
       indicatorsContainer: (containerStyles) => ({
         ...containerStyles,
         gridArea: 'indicators',
@@ -446,7 +484,8 @@ export function useReactSelectConfig<
       isMulti,
       borderRadii,
       icon,
-      hideSelectedOptions
+      hideSelectedOptions,
+      useVerticalMultiValues
     ]
   );
   return {
