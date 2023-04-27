@@ -264,7 +264,7 @@ export function useReactSelectConfig<
         justifyContent: 'stretch',
         height: 'auto',
         width: 'auto',
-        minWidth: isCompact ? '100%' : 180,
+        minWidth: isCompact ? 'auto' : 180,
         '--is-disabled': isDisabled,
         '--is-rtl': isRtl,
         pointerEvents: isDisabled ? 'none' : 'auto'
@@ -307,11 +307,13 @@ export function useReactSelectConfig<
           verticalValueContainerStyles =
             isFocused || isInternalFocused
               ? {
-                  '#value-container > div:last-child': { height: 'auto' }
+                  '#value-container > div:last-child, #value-container > input:last-child':
+                    { height: 'auto' }
                 }
               : {
                   '#value-container': { marginBottom: -8 },
-                  '#value-container > div:last-child': { height: 0 }
+                  '#value-container > div:last-child, #value-container > input:last-child':
+                    { height: 0 }
                 };
 
         return {
