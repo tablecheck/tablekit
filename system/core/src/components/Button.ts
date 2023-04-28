@@ -104,7 +104,7 @@ export const coreStyles = css`
   white-space: nowrap;
   cursor: pointer;
 
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   border: 1px solid var(--primary);
