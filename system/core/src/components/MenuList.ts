@@ -21,10 +21,6 @@ export const baseStylesObject: CSSObject = {
   '& > li': {
     display: 'flex',
     justifyContent: 'stretch'
-  },
-  '& > li > *': {
-    flex: '1 1 100%',
-    justifyContent: 'flex-start'
   }
 };
 
