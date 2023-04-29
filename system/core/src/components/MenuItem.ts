@@ -42,6 +42,7 @@ export const baseStylesObject: CSSObject = {
   gridGap: 'var(--spacing-l2)',
   gridAutoFlow: 'column',
   alignItems: 'center',
+  flex: '1 1 100%',
   justifyContent: 'flex-start',
   textDecoration: 'none !important',
   outline: 'none',
