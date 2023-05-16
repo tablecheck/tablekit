@@ -972,6 +972,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26115?component-type=npm&component-name=word-wrap&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/ejs@3.1.9",
+      "description": "Embedded JavaScript templates",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ejs@3.1.9?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-29827",
+          "title": "[CVE-2023-29827] CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+          "description": "ejs v3.1.9 is vulnerable to server-side template injection. If the ejs file is controllable, template injection can be implemented through the configuration settings of the closeDelimiter parameter.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-29827",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-29827?component-type=npm&component-name=ejs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1172,6 +1188,9 @@
     },
     {
       "id": "CVE-2023-26115"
+    },
+    {
+      "id": "CVE-2023-29827"
     }
   ]
 }
