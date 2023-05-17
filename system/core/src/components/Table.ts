@@ -23,6 +23,7 @@ export const baseStyles = css`
 
     & tr[data-pseudo=''],
     & tr:hover {
+      transition: none;
       background-color: var(--surface-hover-transparent);
     }
   }
