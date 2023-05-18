@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import {
   beforeStyles as spinnerBeforeStyles,
-  baseStyles as spinnerElementStyles
+  coreStyles as spinnerElementStyles
 } from './Spinner';
 
 export const element = 'button';
