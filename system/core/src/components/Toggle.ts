@@ -6,6 +6,7 @@ export const element = 'input';
 export const selectors = ['input[type="checkbox"].toggle'];
 export interface Props {
   type: 'checkbox';
+  'data-size'?: 'small' | 'regular';
 }
 
 export type DefaultedProps = OptionalKeys<Props, 'type'>;

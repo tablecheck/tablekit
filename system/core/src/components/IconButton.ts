@@ -12,7 +12,7 @@ export const className = 'icon-button';
 
 export interface Props {
   'data-variant'?: IconButtonVariant;
-  'data-size'?: 'small' | 'large';
+  'data-size'?: 'small' | 'regular' | 'large';
   'aria-busy'?: boolean;
   'data-round'?: boolean;
   /**

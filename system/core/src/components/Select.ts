@@ -43,7 +43,8 @@ export const baseStyles = css`
   );
   cursor: pointer;
   &,
-  &:disabled {
+  &:disabled,
+  &[data-variant='disabled'] {
     background-color: var(--surface);
     background-image: var(--down-chevron-svg);
     background-position: right var(--select-padding-inline) center;
@@ -51,7 +52,8 @@ export const baseStyles = css`
     background-repeat: no-repeat;
     background-size: var(--select-chevron-size) var(--select-chevron-size);
   }
-  &:disabled {
+  &:disabled,
+  &[data-variant='disabled'] {
     background-color: var(--surface-disabled);
     cursor: default;
   }
