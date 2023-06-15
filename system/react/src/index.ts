@@ -68,6 +68,7 @@ export type { Props as TooltipProps } from './components/Tooltip';
 export { InputAlertInner, InputAlert } from './structuredComponents/InputAlert';
 export type { Props as InputAlertProps } from './structuredComponents/InputAlert';
 export { InputStructure } from './structuredComponents/InputStructure';
+export type { Props as InputStructureProps } from './structuredComponents/InputStructure';
 export { Skeleton } from './structuredComponents/Skeleton';
 export type { Props as SkeletonProps } from './structuredComponents/Skeleton';
 export { ThemeProvider } from './structuredComponents/ThemeProvider';

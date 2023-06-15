@@ -35,7 +35,7 @@ export const baseStyles = css`
 
   &[data-variant='error'] {
     background: var(--error-surface);
-    color: var(--error);
+    color: var(--error-text);
   }
 
   &[data-variant='warning'] {

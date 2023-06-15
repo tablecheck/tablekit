@@ -3,7 +3,7 @@ import { inputStructure } from '@tablecheck/tablekit-core';
 
 import { InputAlert, Props as InputAlertProps } from './InputAlert';
 
-interface Props {
+export interface Props {
   name: string;
   input: React.ReactNode;
   label: React.ReactNode;
