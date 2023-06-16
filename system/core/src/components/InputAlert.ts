@@ -40,6 +40,6 @@ export const baseStyles = css`
 
   &[data-variant='warning'] {
     background: var(--warning-surface);
-    color: var(--warning);
+    color: var(--warning-text);
   }
 `;
