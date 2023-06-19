@@ -17,14 +17,6 @@ import { outputFolderPath } from './constants.js';
 
 const cssMinifier = postcss([cssnano({ preset: 'default' })]);
 
-const allFiles: string[] = [];
-async function outputFile(filepath: string, content: string) {
-  if (allFiles.includes(filepath))
-    console.log(`Warning, overwriting ${filepath}`);
-  allFiles.push(filepath);
-  await fs.outputFile(filepath, content);
-}
-
 interface FolderProcessers {
   utils: UtilsFolderProcesser;
   components: ComponentFolderProcesser;
@@ -87,12 +79,19 @@ class CssBuilder {
           [this.allClassyStyles, 'classy']
         ] as const
       ).map(([aggregateStyles, postfix]) =>
-        outputFile(
+        this.outputFile(
           path.join(outputFolderPath, `tablekit.${postfix}.css`),
           aggregateStyles.join('\n')
         )
       )
     );
+  }
+
+  async outputFile(filepath: string, content: string) {
+    if (this.allFiles.includes(filepath))
+      console.log(`Warning, overwriting ${filepath}`);
+    this.allFiles.push(filepath);
+    await fs.outputFile(filepath, content);
   }
 
   async formatOutput() {
