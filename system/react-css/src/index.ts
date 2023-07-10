@@ -51,6 +51,14 @@ export type { Props as TextAreaProps } from './components/TextArea';
 export { TextAreaWithIcons } from './components/TextAreaWithIcons';
 export type { Props as TextAreaWithIconsProps } from './components/TextAreaWithIcons';
 export {
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  AlertCloseButton,
+  AlertIconWrapper
+} from './structuredComponents/Alert';
+export type { Props as AlertProps } from './structuredComponents/Alert';
+export {
   CheckboxLabel,
   RadioLabel
 } from './structuredComponents/CheckboxRadioLabel';

@@ -2,6 +2,7 @@
  * DO NOT EDIT: This file is generated, run 'npm update:exports' to update this.
  * The exports here are generated from all ts/tsx files at the root level
  */
+export * as alert from './components/Alert';
 export * as badge from './components/Badge';
 export * as banner from './components/Banner';
 export * as button from './components/Button';

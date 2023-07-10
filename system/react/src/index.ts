@@ -65,6 +65,14 @@ export { Toggle } from './components/Toggle';
 export type { Props as ToggleProps } from './components/Toggle';
 export { Tooltip } from './components/Tooltip';
 export type { Props as TooltipProps } from './components/Tooltip';
+export {
+  Alert,
+  AlertTitle,
+  AlertDescription,
+  AlertCloseButton,
+  AlertIconWrapper
+} from './structuredComponents/Alert';
+export type { Props as AlertProps } from './structuredComponents/Alert';
 export { InputAlertInner, InputAlert } from './structuredComponents/InputAlert';
 export type { Props as InputAlertProps } from './structuredComponents/InputAlert';
 export { InputStructure } from './structuredComponents/InputStructure';

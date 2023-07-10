@@ -11,7 +11,7 @@ export default {
   parameters: {
     ...menu,
     auxiliaryClassNames: [menuItem.className, menuList.className],
-    auxiliarySelectors: [undefined, menuList.selectors],
+    auxiliarySelectors: [`.${menuItem.className}`, menuList.selectors],
     auxiliaryComponents: [emotion.MenuItem, emotion.MenuList]
   }
 } as Meta;

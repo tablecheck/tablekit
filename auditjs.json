@@ -988,6 +988,102 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-29827?component-type=npm&component-name=ejs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@7.3.8",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@7.3.8?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@5.7.1",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@5.7.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@6.3.0",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@6.3.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/tough-cookie@4.1.2",
+      "description": "RFC6265 Cookies and Cookie Jar for node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/tough-cookie@4.1.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26136",
+          "title": "[CVE-2023-26136] CWE-1321",
+          "description": "Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in rejectPublicSuffixes=false mode. This issue arises from the manner in which the objects are initialized.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-26136",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26136?component-type=npm&component-name=tough-cookie&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/tough-cookie@2.5.0",
+      "description": "RFC6265 Cookies and Cookie Jar for node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/tough-cookie@2.5.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26136",
+          "title": "[CVE-2023-26136] CWE-1321",
+          "description": "Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in rejectPublicSuffixes=false mode. This issue arises from the manner in which the objects are initialized.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-26136",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26136?component-type=npm&component-name=tough-cookie&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@7.3.4",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@7.3.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1191,6 +1287,12 @@
     },
     {
       "id": "CVE-2023-29827"
+    },
+    {
+      "id": "CVE-2022-25883"
+    },
+    {
+      "id": "CVE-2023-26136"
     }
   ]
 }
