@@ -249,8 +249,9 @@ class StoryParametersParser {
     const { importName, auxiliaryComponents } = this.parameters;
     const componentDisplayName = importName || this.component?.displayName;
     const auxiliaryComponentNames = (auxiliaryComponents || []).map(
-      (c) => c.displayName
+      (c) => c.displayName || c.name || c.__docgenInfo?.displayName
     );
+
     return [componentDisplayName]
       .concat(auxiliaryComponentNames)
       .filter((v) => !!v)
@@ -258,33 +259,14 @@ class StoryParametersParser {
   }
 
   chooseSelectors(main, secondary) {
-    if (main) return main;
-    if (secondary) return secondary;
+    if (main?.length) return main;
+    if (secondary?.length) return secondary;
     return [];
   }
 
   getSelectors() {
-    const {
-      className,
-      auxiliaryClassNames: auxiliaryClassNamesParam,
-      selectors,
-      auxiliarySelectors
-    } = this.parameters;
-    const auxiliaryClassNames = auxiliaryClassNamesParam?.map(
-      (auxClassName) => `.${auxClassName}`
-    );
-    const classySelectors = (className ? [`.${className}`] : []).concat(
-      this.chooseSelectors(auxiliaryClassNames, auxiliarySelectors)
-    );
-    const classlessSelectors = ([] as (string | undefined)[]).concat(
-      selectors || [],
-      this.chooseSelectors(auxiliarySelectors, auxiliaryClassNames)
-    );
-    for (let i = 0; i < classySelectors.length; i += 1) {
-      if (!classlessSelectors[i] && classySelectors[i]) {
-        classlessSelectors[i] = classySelectors[i];
-      }
-    }
+    const classlessSelectors = this.composeClasslessSelectors();
+    const classySelectors = this.composeClassySelectors();
     return [
       this.getPackageSelector(),
       {
@@ -301,6 +283,39 @@ class StoryParametersParser {
         return false;
       return true;
     });
+  }
+
+  composeClassySelectors() {
+    const { auxiliarySelectors } = this.parameters;
+    return this.composeClassNameSelector().concat(
+      this.chooseSelectors(
+        this.composeAuxiliaryClassNames(),
+        auxiliarySelectors
+      )
+    );
+  }
+
+  composeClassNameSelector() {
+    const { className, selectors } = this.parameters;
+    return className ? [`.${className}`] : selectors || [];
+  }
+
+  composeAuxiliaryClassNames() {
+    const { auxiliaryClassNames: auxiliaryClassNamesParam } = this.parameters;
+    return auxiliaryClassNamesParam?.map((auxClassName) => `.${auxClassName}`);
+  }
+
+  composeClasslessSelectors() {
+    const { selectors, auxiliarySelectors } = this.parameters;
+    if (!selectors?.length && !auxiliarySelectors?.length)
+      return this.composeClassySelectors();
+    return ([] as (string | undefined)[]).concat(
+      this.chooseSelectors(selectors, this.composeClassNameSelector()),
+      this.chooseSelectors(
+        auxiliarySelectors,
+        this.composeAuxiliaryClassNames()
+      )
+    );
   }
 }
 

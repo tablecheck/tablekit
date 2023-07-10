@@ -23,6 +23,10 @@ export const baseStyles = css`
   color: var(--text);
   border-radius: var(--border-radius-small);
 
+  & > svg:first-child {
+    margin-top: 2px;
+  }
+
   &[data-variant='error'],
   &[data-variant='warning'] {
     border-radius: var(--border-radius-small);
