@@ -65,6 +65,18 @@ const layouts: {
     )
   },
   {
+    key: 'icon-title',
+    render: ({ Description, IconWrapper, Title }, InstanceIcon) => (
+      <>
+        <IconWrapper>
+          <InstanceIcon size={20} />
+        </IconWrapper>
+        <Title>Title</Title>
+        <Description>More text here</Description>
+      </>
+    )
+  },
+  {
     key: 'title',
     render: ({ Description, Title }) => (
       <>
@@ -99,6 +111,17 @@ const layouts: {
     )
   },
   {
+    key: 'icon',
+    render: ({ Description, IconWrapper }, InstanceIcon) => (
+      <>
+        <IconWrapper>
+          <InstanceIcon size={16} />
+        </IconWrapper>
+        <Description>More text here</Description>
+      </>
+    )
+  },
+  {
     key: 'text-only',
     render: ({ Description }) => <Description>More text here</Description>
   }
@@ -125,7 +148,7 @@ export default {
   parameters: {
     ...alert,
     variants: contentVariants,
-    auxiliaryClassNames: ['input-alert-icon'],
+    auxiliaryClassNames: ['alert-icon'],
     auxiliaryComponents: [
       emotion.AlertTitle,
       emotion.AlertDescription,

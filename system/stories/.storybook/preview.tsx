@@ -249,7 +249,7 @@ class StoryParametersParser {
     const { importName, auxiliaryComponents } = this.parameters;
     const componentDisplayName = importName || this.component?.displayName;
     const auxiliaryComponentNames = (auxiliaryComponents || []).map(
-      (c) => c.displayName || c.name || c.__docgenInfo?.displayName
+      (c) => c.displayName || c.__docgenInfo?.displayName
     );
 
     return [componentDisplayName]

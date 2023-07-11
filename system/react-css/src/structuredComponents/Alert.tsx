@@ -7,16 +7,12 @@ export const Alert = React.forwardRef<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
 >((props, ref) => (
-  <div
-    {...props}
-    ref={ref}
-    className={`${props.className || ''} input-alert`}
-  />
+  <div {...props} ref={ref} className={`${props.className || ''} alert`} />
 ));
 
 export const AlertTitle = React.forwardRef<
   HTMLHeadingElement,
-  Props & React.HTMLAttributes<HTMLHeadingElement>
+  React.HTMLAttributes<HTMLHeadingElement>
 >((props, ref) => (
   // eslint-disable-next-line jsx-a11y/heading-has-content
   <h4
@@ -27,7 +23,7 @@ export const AlertTitle = React.forwardRef<
 ));
 export const AlertDescription = React.forwardRef<
   HTMLDivElement,
-  Props & React.HTMLAttributes<HTMLDivElement>
+  React.HTMLAttributes<HTMLDivElement>
 >((props, ref) => (
   <div
     {...props}
@@ -38,19 +34,24 @@ export const AlertDescription = React.forwardRef<
 
 export const AlertCloseButton = React.forwardRef<
   HTMLButtonElement,
-  Props & React.HTMLAttributes<HTMLButtonElement>
+  React.HTMLAttributes<HTMLButtonElement>
 >((props, ref) => (
   <button
     type="button"
     {...props}
     ref={ref}
-    style={{ color: 'currentColor', ...(props.style || {}), gridArea: 'close' }}
+    style={{
+      cursor: 'pointer',
+      color: 'currentColor',
+      ...(props.style || {}),
+      gridArea: 'close'
+    }}
   />
 ));
 
 export const AlertIconWrapper = React.forwardRef<
   HTMLSpanElement,
-  Props & React.HTMLAttributes<HTMLSpanElement>
+  React.HTMLAttributes<HTMLSpanElement>
 >((props, ref) => (
   <span
     {...props}
