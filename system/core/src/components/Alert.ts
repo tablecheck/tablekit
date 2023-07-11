@@ -1,24 +1,22 @@
 import { css } from '@emotion/react';
 
 export const element = 'div';
-export const className = 'input-alert';
+export const className = 'alert';
 
 const variants = ['success', 'info', 'error', 'warning', 'neutral'] as const;
 
 export type AlertVariant = (typeof variants)[number];
 
 export interface Props {
-  /**
-   * This prop should be used with `aria-describedby` on the input field
-   */
-  id: string;
   'data-variant': AlertVariant;
   'data-layout':
     | 'icon-title-close'
     | 'title-close'
+    | 'icon-title'
     | 'title'
     | 'icon-close'
     | 'close'
+    | 'icon'
     | 'text-only';
 }
 
@@ -32,12 +30,15 @@ export const baseStyles = css`
   align-items: flex-start;
   width: 345px;
 
-  & .input-alert-icon {
+  & .alert-icon {
     margin-top: 2px;
   }
 
   &[data-layout='icon-title-close'] {
     grid: 'icon title close' 1fr '. description .' 1fr / min-content 1fr min-content;
+  }
+  &[data-layout='icon-title'] {
+    grid: 'icon title' 1fr '. description' 1fr / min-content 1fr min-content;
   }
   &[data-layout='title-close'] {
     grid: 'title close' 1fr 'description .' 1fr / 1fr min-content;
@@ -47,6 +48,9 @@ export const baseStyles = css`
   }
   &[data-layout='icon-close'] {
     grid: 'icon description close' 1fr / min-content 1fr min-content;
+  }
+  &[data-layout='icon'] {
+    grid: 'icon description' 1fr / min-content 1fr min-content;
   }
   &[data-layout='close'] {
     grid: 'description close' 1fr / 1fr min-content;

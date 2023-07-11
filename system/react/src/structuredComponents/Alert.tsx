@@ -19,16 +19,17 @@ export const AlertDescription = styled.div`
 export const AlertCloseButton = styled.button`
   grid-area: close;
   color: currentColor;
+  cursor: pointer;
 `;
 
 export const AlertIconWrapper = React.forwardRef<
   HTMLSpanElement,
-  Props & React.HTMLAttributes<HTMLSpanElement>
+  React.HTMLAttributes<HTMLSpanElement>
 >((props, ref) => (
   <span
     {...props}
     ref={ref}
     style={{ ...(props.style || {}), gridArea: 'icon' }}
-    className={`${props.className || ''} input-alert-icon`}
+    className={`${props.className || ''} alert-icon`}
   />
 ));
