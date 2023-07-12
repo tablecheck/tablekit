@@ -24,7 +24,7 @@ export const baseStyles = css`
   position: relative;
   text-decoration: none !important;
   color: var(--text);
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   --underline-height: 4px;
   &:after {
@@ -56,8 +56,11 @@ export const baseStyles = css`
       transform: scale(0.97);
     }
   }
-  &[aria-selected='true']:after {
-    opacity: 1;
-    transform: scale(1);
+  &[aria-selected='true'] {
+    font-weight: 600;
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 `;
