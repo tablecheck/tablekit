@@ -55,7 +55,6 @@ export const coreStyles = css`
   padding: calc(var(--padding) - 3px);
   cursor: pointer;
 
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   border-radius: var(--border-radius-small);
