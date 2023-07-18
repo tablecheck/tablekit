@@ -1,3 +1,16 @@
+# (Tue Jul 18 2023)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-icon@2.1.2`
+  - fix(tablekit-icon): move dev dependencies to correct place [#195](https://github.com/tablecheck/tablekit/pull/195) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu May 12 2022)
 
 :tada: This release contains work from a new contributor! :tada:
