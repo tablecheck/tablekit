@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
   },
-  "version": "2.1.1",
+  "version": "2.1.2",
   "main": "lib/es5/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
@@ -31,7 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@storybook/react": "6.4.10",
     "@tablecheck/tablekit-enzyme": "^2.1.1",
-    "@tablecheck/tablekit-icon": "^2.1.1",
+    "@tablecheck/tablekit-icon": "^2.1.2",
     "@types/lodash": "4.14.171",
     "@types/react-router-dom": "5.3.2"
   },

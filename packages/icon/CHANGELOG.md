@@ -1,19 +1,18 @@
-# v2.1.2 (Tue Jul 18 2023)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-icon): move dev dependencies to correct place [#195](https://github.com/tablecheck/tablekit/pull/195) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [2.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-icon@2.1.1...@tablecheck/tablekit-icon@2.1.2) (2023-07-18)
+
+
+### Bug Fixes
+
+* **tablekit-icon:** move dev dependencies to correct place ([a508b71](https://github.com/tablecheck/tablekit/commit/a508b7179e4eb91267d674c11a35915521e90b8a))
+
+
+
+
 
 ## [2.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-icon@2.1.0...@tablecheck/tablekit-icon@2.1.1) (2022-01-27)
 
