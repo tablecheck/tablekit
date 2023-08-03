@@ -2,6 +2,7 @@ import { css, CSSObject } from '@emotion/react';
 
 export const element = 'button';
 export const className = 'menu-item';
+const variants = ['success', 'info', 'error', 'warning'] as const;
 
 /**
  * We export the objects as well for compatibilty with 3rd party libs like react-select
@@ -28,7 +29,6 @@ export const stateStylesObjects: Record<
     background: 'var(--surface-active)'
   },
   hover: {
-    color: 'var(--text)',
     background: 'var(--surface-hover)'
   }
 };
@@ -48,11 +48,24 @@ export const baseStylesObject: CSSObject = {
   outline: 'none',
   '&:is(button, :any-link)': {
     cursor: 'pointer'
+  },
+  '&[data-variant="success"]': {
+    color: 'var(--success)'
+  },
+  '&[data-variant="info"]': {
+    color: 'var(--info)'
+  },
+  '&[data-variant="error"]': {
+    color: 'var(--error)'
+  },
+  '&[data-variant="warning"]': {
+    color: 'var(--warning)'
   }
 };
 
 export interface Props {
   'data-selected'?: boolean;
+  'data-variant'?: (typeof variants)[number];
 }
 
 // eslint-disable-next-line @emotion/syntax-preference
