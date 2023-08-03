@@ -1,6 +1,6 @@
 import { Earth } from '@carbon/icons-react';
 import { action } from '@storybook/addon-actions';
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { menu, menuItem, menuList } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
@@ -16,7 +16,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = ({ components }) => (
+const Template: StoryFn = ({ components }) => (
   <components.Menu>
     <components.MenuList>
       <li>
@@ -47,19 +47,34 @@ const Template: Story = ({ components }) => (
         </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem>Item</components.MenuItem>
+        <components.MenuItem data-variant="success">
+          <Earth size={20} />
+          Success
+        </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem>Item</components.MenuItem>
+        <components.MenuItem data-variant="info">
+          <Earth size={20} />
+          Info
+        </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem>Item</components.MenuItem>
+        <components.MenuItem data-variant="error">
+          <Earth size={20} />
+          Error
+        </components.MenuItem>
+      </li>
+      <li>
+        <components.MenuItem data-variant="warning">
+          <Earth size={20} />
+          Warn
+        </components.MenuItem>
       </li>
     </components.MenuList>
   </components.Menu>
 );
 
-export const Emotion: Story = Template.bind({});
+export const Emotion: StoryFn = Template.bind({});
 Emotion.args = {
   components: {
     Menu: emotion.Menu,
@@ -70,7 +85,7 @@ Emotion.args = {
 };
 Emotion.parameters = { useEmotion: true };
 
-export const Class: Story = Template.bind({});
+export const Class: StoryFn = Template.bind({});
 Class.args = {
   components: {
     Menu: css.Menu,
