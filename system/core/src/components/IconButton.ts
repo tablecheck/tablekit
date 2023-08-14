@@ -12,7 +12,7 @@ export const className = 'icon-button';
 
 export interface Props {
   'data-variant'?: IconButtonVariant;
-  'data-size'?: 'small' | 'regular' | 'large';
+  'data-size'?: 'small' | 'medium' | 'large';
   'aria-busy'?: boolean;
   'data-round'?: boolean;
   /**
@@ -49,10 +49,9 @@ export const variantStyles = {
 };
 
 export const coreStyles = css`
-  --padding: 12px;
   position: relative;
   display: grid;
-  padding: calc(var(--padding) - 3px);
+  padding: 9px;
   cursor: pointer;
 
   font-size: 16px;
@@ -142,11 +141,11 @@ export const coreStyles = css`
   }
 
   &[data-size='small'] {
-    padding: calc(var(--padding) - 5px);
+    padding: 7px;
   }
 
   &[data-size='large'] {
-    padding: calc(var(--padding) + 1px);
+    padding: 13px;
   }
 `;
 
