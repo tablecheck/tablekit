@@ -15,7 +15,7 @@ export interface Props {
    */
   'data-tooltip'?: never;
   'data-variant'?: ButtonVariant;
-  'data-size'?: 'small' | 'large';
+  'data-size'?: 'small' | 'medium' | 'large';
   'aria-busy'?: boolean;
 }
 
@@ -100,7 +100,7 @@ export const coreStyles = css`
   display: flex;
   gap: var(--spacing-l2);
   justify-content: center;
-  padding: 9px var(--spacing-l3);
+  padding: 9px 11px;
   white-space: nowrap;
   cursor: pointer;
 
@@ -176,13 +176,13 @@ export const coreStyles = css`
   }
 
   &[data-size='small'] {
-    padding: 7px var(--spacing-l2);
+    padding: 7px;
     font-size: 14px;
     line-height: 16px;
   }
 
   &[data-size='large'] {
-    padding: 13px var(--spacing-l4);
+    padding: 13px 15px;
     font-size: 16px;
     line-height: 20px;
   }
