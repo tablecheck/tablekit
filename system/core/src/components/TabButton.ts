@@ -25,6 +25,7 @@ export const baseStyles = css`
   text-decoration: none !important;
   color: var(--text);
   font-weight: 400;
+  white-space: nowrap;
   cursor: pointer;
   --underline-height: 4px;
   &:after {
