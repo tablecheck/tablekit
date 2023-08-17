@@ -12,13 +12,14 @@ export default {
     ...menu,
     auxiliaryClassNames: [menuItem.className, menuList.className],
     auxiliarySelectors: [`.${menuItem.className}`, menuList.selectors],
-    auxiliaryComponents: [emotion.MenuItem, emotion.MenuList]
+    auxiliaryComponents: [emotion.MenuItem, emotion.MenuList],
+    variants: ['Menu', 'Menu Items']
   }
 } as Meta;
 
-const Template: StoryFn = ({ components }) => (
-  <components.Menu>
-    <components.MenuList>
+function AllMenuItems({ components }: any) {
+  return (
+    <>
       <li>
         <components.MenuItem>Item</components.MenuItem>
       </li>
@@ -70,8 +71,21 @@ const Template: StoryFn = ({ components }) => (
           Warn
         </components.MenuItem>
       </li>
+    </>
+  );
+}
+
+const Template: StoryFn = ({ components }) => (
+  <>
+    <components.Menu>
+      <components.MenuList>
+        <AllMenuItems components={components} />
+      </components.MenuList>
+    </components.Menu>
+    <components.MenuList style={{ maxHeight: 'none' }}>
+      <AllMenuItems components={components} />
     </components.MenuList>
-  </components.Menu>
+  </>
 );
 
 export const Emotion: StoryFn = Template.bind({});
