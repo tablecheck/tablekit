@@ -71,6 +71,7 @@ export interface Props {
 // eslint-disable-next-line @emotion/syntax-preference
 export const baseStyles = css({
   ...baseStylesObject,
+  '&:is(button, :any-link)': baseStylesObject,
   '&:is(button, :any-link):active': stateStylesObjects.active,
   '&:is(button, :any-link)[data-pseudo="active"]': stateStylesObjects.active,
   '&:is(button, :any-link):focus': stateStylesObjects.focus,

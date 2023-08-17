@@ -76,4 +76,17 @@ export const resetCss = css`
   button {
     background-color: transparent;
   }
+  a {
+    color: var(--link-disabled);
+    &:link {
+      color: var(--link);
+    }
+    &:hover,
+    &:active {
+      color: var(--link-hover);
+    }
+    &:visited {
+      color: var(--link-visited);
+    }
+  }
 `;
