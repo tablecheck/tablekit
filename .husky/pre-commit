@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx lerna run precommit
+git update-index --refresh
+if [ -e "git diff-index --quiet HEAD system/react/src/index.ts" ]
+then
+  echo "Unstaged changes in the react index file, file has been updated please review and add the changes"
+  exit 1
+fi
+npx tablecheck-scripts precommit

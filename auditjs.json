@@ -1,0 +1,1298 @@
+{
+  "affected": [
+    {
+      "coordinates": "pkg:npm/browserslist@4.14.2",
+      "description": "Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-env-preset",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/browserslist@4.14.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "e0905398-4778-4da0-a4ab-42ed4e0bdb73",
+          "title": "[CVE-2021-23364] The package browserslist from 4.0.0 and before 4.16.5 are vulnerable to Regular ...",
+          "description": "The package browserslist from 4.0.0 and before 4.16.5 are vulnerable to Regular Expression Denial of Service (ReDoS) during parsing of queries.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2021-23364",
+          "reference": "https://ossindex.sonatype.org/vulnerability/e0905398-4778-4da0-a4ab-42ed4e0bdb73?component-type=npm&component-name=browserslist&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/trim@0.0.1",
+      "description": "Trim string whitespace",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/trim@0.0.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "1f6dccfd-74f4-464f-a800-e5d1c4efb67e",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/1f6dccfd-74f4-464f-a800-e5d1c4efb67e?component-type=npm&component-name=trim&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/postcss@7.0.36",
+      "description": "Tool for transforming styles with JS plugins",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/postcss@7.0.36?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "e3f310ed-219c-4087-aa58-8425b13c3ec5",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/e3f310ed-219c-4087-aa58-8425b13c3ec5?component-type=npm&component-name=postcss&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ws@5.2.3",
+      "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ws@5.2.3?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "7b682dd5-ef07-459c-be11-50ec76c9eba2",
+          "title": "[CVE-2021-32640] ws is an open source WebSocket client and server library for Node.js. A speciall...",
+          "description": "ws is an open source WebSocket client and server library for Node.js. A specially crafted value of the `Sec-Websocket-Protocol` header can be used to significantly slow down a ws server. The vulnerability has been fixed in ws@7.4.6 (https://github.com/websockets/ws/commit/00c425ec77993773d823f018f64a5c44e17023ff). In vulnerable versions of ws, the issue can be mitigated by reducing the maximum allowed length of the request headers using the [`--max-http-header-size=size`](https://nodejs.org/api/cli.html#cli_max_http_header_size_size) and/or the [`maxHeaderSize`](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener) options.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2021-32640",
+          "reference": "https://ossindex.sonatype.org/vulnerability/7b682dd5-ef07-459c-be11-50ec76c9eba2?component-type=npm&component-name=ws&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/yargs-parser@10.1.0",
+      "description": "the mighty option parser used by yargs",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/yargs-parser@10.1.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "b7740d41-fc85-4d22-8af5-5a3159e114ea",
+          "title": "[CVE-2020-7608] yargs-parser could be tricked into adding or modifying properties of Object.prot...",
+          "description": "yargs-parser could be tricked into adding or modifying properties of Object.prototype using a \"__proto__\" payload.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cve": "CVE-2020-7608",
+          "reference": "https://ossindex.sonatype.org/vulnerability/b7740d41-fc85-4d22-8af5-5a3159e114ea?component-type=npm&component-name=yargs-parser&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        },
+        {
+          "id": "7ccaaed0-205b-4382-a963-8a30a0b151b1",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/7ccaaed0-205b-4382-a963-8a30a0b151b1?component-type=npm&component-name=yargs-parser&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ssri@7.1.1",
+      "description": "Standard Subresource Integrity library -- parses, serializes, generates, and verifies integrity metadata according to the SRI spec.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ssri@7.1.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "92bbcbaf-097a-43f9-855e-2052e38930db",
+          "title": "[CVE-2021-27290] ssri 5.2.2-8.0.0, fixed in 8.0.1, processes SRIs using a regular expression whic...",
+          "description": "ssri 5.2.2-8.0.0, fixed in 8.0.1, processes SRIs using a regular expression which is vulnerable to a denial of service. Malicious SRIs could take an extremely long time to process, leading to denial of service. This issue only affects consumers using the strict option.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-27290",
+          "reference": "https://ossindex.sonatype.org/vulnerability/92bbcbaf-097a-43f9-855e-2052e38930db?component-type=npm&component-name=ssri&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/gitlog@4.0.4",
+      "description": "Git log parser for Node.JS",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/gitlog@4.0.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "a49aa690-87d8-404f-b41a-202b88cb0674",
+          "title": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+          "description": "The software constructs all or part of an OS command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended OS command when it is sent to a downstream component.",
+          "cvssScore": 8.8,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/a49aa690-87d8-404f-b41a-202b88cb0674?component-type=npm&component-name=gitlog&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/glob-parent@2.0.0",
+      "description": "Extract the non-magic parent path from a glob string.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/glob-parent@2.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/64cd5f21-8af4-4eae-ac7d-a53241ea693a?component-type=npm&component-name=glob-parent&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/glob-parent@3.1.0",
+      "description": "Extract the non-magic parent path from a glob string.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/glob-parent@3.1.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a",
+          "title": "CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/64cd5f21-8af4-4eae-ac7d-a53241ea693a?component-type=npm&component-name=glob-parent&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/xmldom@0.5.0",
+      "description": "A pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and XMLSerializer module.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/xmldom@0.5.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "20b5c393-1a87-4f20-84c9-801c323489ca",
+          "title": "[CVE-2021-32796] xmldom is an open source pure JavaScript W3C standard-based (XML DOM Level 2 Cor...",
+          "description": "xmldom is an open source pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and XMLSerializer module. xmldom versions 0.6.0 and older do not correctly escape special characters when serializing elements removed from their ancestor. This may lead to unexpected syntactic changes during XML processing in some downstream applications. This issue has been resolved in version 0.7.0. As a workaround downstream applications can validate the input and reject the maliciously crafted documents.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cve": "CVE-2021-32796",
+          "reference": "https://ossindex.sonatype.org/vulnerability/20b5c393-1a87-4f20-84c9-801c323489ca?component-type=npm&component-name=xmldom&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ansi-html@0.0.7",
+      "description": "An elegant lib that converts the chalked (ANSI) text to HTML.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ansi-html@0.0.7?utm_source=auditjs&utm_medium=integration&utm_content=4.0.25",
+      "vulnerabilities": [
+        {
+          "id": "849e9fed-44e8-4593-a4ca-61026c4b454f",
+          "title": "[CVE-2021-23424] This affects all versions of package ansi-html. If an attacker provides a malici...",
+          "description": "This affects all versions of package ansi-html. If an attacker provides a malicious string, it will get stuck processing the input for an extremely long time.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-23424",
+          "reference": "https://ossindex.sonatype.org/vulnerability/849e9fed-44e8-4593-a4ca-61026c4b454f?component-type=npm&component-name=ansi-html&utm_source=auditjs&utm_medium=integration&utm_content=4.0.25"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/node-fetch@2.6.7",
+      "description": "A light-weight module that brings window.fetch to node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/node-fetch@2.6.7?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2022-3677",
+          "title": "[sonatype-2022-3677] CWE-200: Information Exposure",
+          "description": "node-fetch - Exposure of Sensitive Information to an Unauthorized Actor\n\nAn information exposure is the intentional or unintentional disclosure of information to an actor that is not explicitly authorized to have access to that information.",
+          "cvssScore": 3.7,
+          "cvssVector": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-3677?component-type=npm&component-name=node-fetch&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/gitlog@4.0.4",
+      "description": "Git log parser for Node.JS",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/gitlog@4.0.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2020-0947",
+          "title": "[sonatype-2020-0947] CWE-94: Improper Control of Generation of Code ('Code Injection')",
+          "description": "gitlog - Arbitrary Code Execution\n\nThe software constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the syntax or behavior of the intended code segment.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2020-0947?component-type=npm&component-name=gitlog&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/prismjs@1.28.0",
+      "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/prismjs@1.28.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2020-1579",
+          "title": "[sonatype-2020-1579] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "prismjs - Regular Expression Denial of Service (ReDoS) in SCSS Processor\n\nThe software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2020-1579?component-type=npm&component-name=prismjs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/prismjs@1.27.0",
+      "description": "Lightweight, robust, elegant syntax highlighting. A spin-off project from Dabblet.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/prismjs@1.27.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2020-1579",
+          "title": "[sonatype-2020-1579] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "prismjs - Regular Expression Denial of Service (ReDoS) in SCSS Processor\n\nThe software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2020-1579?component-type=npm&component-name=prismjs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/fb-watchman@2.0.1",
+      "description": "Bindings for the Watchman file watching service",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/fb-watchman@2.0.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-21944",
+          "title": "[CVE-2022-21944] CWE-59: Improper Link Resolution Before File Access ('Link Following')",
+          "description": "A UNIX Symbolic Link (Symlink) Following vulnerability in the systemd service file for watchman of openSUSE Backports SLE-15-SP3, Factory allows local attackers to escalate to root. This issue affects: openSUSE Backports SLE-15-SP3 watchman versions prior to 4.9.0. openSUSE Factory watchman versions prior to 4.9.0-9.1.",
+          "cvssScore": 7.8,
+          "cvssVector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2022-21944",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-21944?component-type=npm&component-name=fb-watchman&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/unset-value@1.0.0",
+      "description": "Delete nested properties from an object using dot notation.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/unset-value@1.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2021-0459",
+          "title": "[sonatype-2021-0459] Unknown",
+          "description": "unset-value - Prototype Pollution\n\nunset-value - Prototype Pollution",
+          "cvssScore": 9.4,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2021-0459?component-type=npm&component-name=unset-value&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/execa@1.0.0",
+      "description": "Process execution for humans",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/execa@1.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2019-0206",
+          "title": "[sonatype-2019-0206] CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+          "description": "execa - OS Command Injection\n\nThe software constructs all or part of an OS command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended OS command when it is sent to a downstream component.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2019-0206?component-type=npm&component-name=execa&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/express@4.18.1",
+      "description": "Fast, unopinionated, minimalist web framework",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/express@4.18.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2012-0022",
+          "title": "[sonatype-2012-0022] CWE-113: Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting')",
+          "description": "expressjs - HTTP Splitting Attack\n\nThe software receives data from an upstream component, but does not neutralize or incorrectly neutralizes CR and LF characters before the data is included in outgoing HTTP headers.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2012-0022?component-type=npm&component-name=express&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2021-0078",
+          "title": "[sonatype-2021-0078] CWE-23: Relative Path Traversal",
+          "description": "express + hbs - Local File Read via Path Traversal\n\nThe software uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as .. that can resolve to a location that is outside of that directory.",
+          "cvssScore": 5.9,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2021-0078?component-type=npm&component-name=express&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/terser@4.8.0",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit for ES6+",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/terser@4.8.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25858",
+          "title": "[CVE-2022-25858] The package terser before 4.8.1, from 5.0.0 and before 5.14.2 are vulnerable to Regular Expression Denial of Service (ReDoS) due to insecure usage of regular expressions.",
+          "description": "The package terser before 4.8.1, from 5.0.0 and before 5.14.2 are vulnerable to Regular Expression Denial of Service (ReDoS) due to insecure usage of regular expressions.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25858",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25858?component-type=npm&component-name=terser&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/trim@0.0.1",
+      "description": "Trim string whitespace",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/trim@0.0.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2020-7753",
+          "title": "[CVE-2020-7753] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "All versions of package trim are vulnerable to Regular Expression Denial of Service (ReDoS) via trim().",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2020-7753",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2020-7753?component-type=npm&component-name=trim&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/postcss@7.0.39",
+      "description": "Tool for transforming styles with JS plugins",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/postcss@7.0.39?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2021-0563",
+          "title": "[sonatype-2021-0563] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "postcss - Regular Expression Denial Of Service (REDOS)\n\nThe software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 6.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2021-0563?component-type=npm&component-name=postcss&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/clean-css@4.2.4",
+      "description": "A well-tested CSS minifier",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/clean-css@4.2.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2021-1523",
+          "title": "[sonatype-2021-1523] Unknown",
+          "description": "nodejs-clean-css - Regular Expression Denial of Service (ReDoS)\n\nnodejs-clean-css - Regular Expression Denial of Service (ReDoS)",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2021-1523?component-type=npm&component-name=clean-css&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/terser@5.14.1",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit for ES6+",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/terser@5.14.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25858",
+          "title": "[CVE-2022-25858] The package terser before 4.8.1, from 5.0.0 and before 5.14.2 are vulnerable to Regular Expression Denial of Service (ReDoS) due to insecure usage of regular expressions.",
+          "description": "The package terser before 4.8.1, from 5.0.0 and before 5.14.2 are vulnerable to Regular Expression Denial of Service (ReDoS) due to insecure usage of regular expressions.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25858",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25858?component-type=npm&component-name=terser&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/glob-parent@3.1.0",
+      "description": "Extract the non-magic parent path from a glob string.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/glob-parent@3.1.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2020-28469",
+          "title": "[CVE-2020-28469] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "This affects the package glob-parent before 5.1.2. The enclosure regex used to check for strings ending in enclosure containing path separator.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2020-28469",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2020-28469?component-type=npm&component-name=glob-parent&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/flat@5.0.2",
+      "description": "Take a nested Javascript object and flatten it, or unflatten an object with delimited keys",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/flat@5.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2020-0889",
+          "title": "[sonatype-2020-0889] CWE-471: Modification of Assumed-Immutable Data (MAID)",
+          "description": "flat - Prototype Pollution\n\nThe software does not properly protect an assumed-immutable element from being modified by an attacker.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2020-0889?component-type=npm&component-name=flat&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/request@2.88.2",
+      "description": "Simplified HTTP request client.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/request@2.88.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2017-0655",
+          "title": "[sonatype-2017-0655] Unknown",
+          "description": "request - Weak Authentication Algorithm\n\nrequest - Weak Authentication Algorithm",
+          "cvssScore": 5.9,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2017-0655?component-type=npm&component-name=request&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2021-0749",
+          "title": "[sonatype-2021-0749] CWE-326: Inadequate Encryption Strength",
+          "description": "request - Inadequate Encryption Strength\n\nThe software stores or transmits sensitive data using an encryption scheme that is theoretically sound, but is not strong enough for the level of protection required.",
+          "cvssScore": 3.7,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2021-0749?component-type=npm&component-name=request&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ws@5.2.3",
+      "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ws@5.2.3?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-32640",
+          "title": "[CVE-2021-32640] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "ws is an open source WebSocket client and server library for Node.js. A specially crafted value of the `Sec-Websocket-Protocol` header can be used to significantly slow down a ws server. The vulnerability has been fixed in ws@7.4.6 (https://github.com/websockets/ws/commit/00c425ec77993773d823f018f64a5c44e17023ff). In vulnerable versions of ws, the issue can be mitigated by reducing the maximum allowed length of the request headers using the [`--max-http-header-size=size`](https://nodejs.org/api/cli.html#cli_max_http_header_size_size) and/or the [`maxHeaderSize`](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener) options.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2021-32640",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-32640?component-type=npm&component-name=ws&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/node-forge@0.10.0",
+      "description": "JavaScript implementations of network transports, cryptography, ciphers, PKI, message digests, and various utilities.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/node-forge@0.10.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-24771",
+          "title": "[CVE-2022-24771] CWE-347: Improper Verification of Cryptographic Signature",
+          "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.3.0, RSA PKCS#1 v1.5 signature verification code is lenient in checking the digest algorithm structure. This can allow a crafted structure that steals padding bytes and uses unchecked portion of the PKCS#1 encoded message to forge a signature when a low public exponent is being used. The issue has been addressed in `node-forge` version 1.3.0. There are currently no known workarounds.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cve": "CVE-2022-24771",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-24771?component-type=npm&component-name=node-forge&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "CVE-2022-24772",
+          "title": "[CVE-2022-24772] CWE-347: Improper Verification of Cryptographic Signature",
+          "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.3.0, RSA PKCS#1 v1.5 signature verification code does not check for tailing garbage bytes after decoding a `DigestInfo` ASN.1 structure. This can allow padding bytes to be removed and garbage data added to forge a signature when a low public exponent is being used. The issue has been addressed in `node-forge` version 1.3.0. There are currently no known workarounds.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cve": "CVE-2022-24772",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-24772?component-type=npm&component-name=node-forge&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-0218",
+          "title": "[sonatype-2022-0218] Unknown",
+          "description": "node-forge - Prototype Pollution\n\nnode-forge - Prototype Pollution",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-0218?component-type=npm&component-name=node-forge&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "CVE-2022-0122",
+          "title": "[CVE-2022-0122] CWE-601: URL Redirection to Untrusted Site ('Open Redirect')",
+          "description": "forge is vulnerable to URL Redirection to Untrusted Site",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cve": "CVE-2022-0122",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-0122?component-type=npm&component-name=node-forge&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "CVE-2022-24773",
+          "title": "[CVE-2022-24773] CWE-347: Improper Verification of Cryptographic Signature",
+          "description": "Forge (also called `node-forge`) is a native implementation of Transport Layer Security in JavaScript. Prior to version 1.3.0, RSA PKCS#1 v1.5 signature verification code does not properly check `DigestInfo` for a proper ASN.1 structure. This can lead to successful verification with signatures that contain invalid structures but a valid digest. The issue has been addressed in `node-forge` version 1.3.0. There are currently no known workarounds.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cve": "CVE-2022-24773",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-24773?component-type=npm&component-name=node-forge&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ws@6.2.2",
+      "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ws@6.2.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-32640",
+          "title": "[CVE-2021-32640] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "ws is an open source WebSocket client and server library for Node.js. A specially crafted value of the `Sec-Websocket-Protocol` header can be used to significantly slow down a ws server. The vulnerability has been fixed in ws@7.4.6 (https://github.com/websockets/ws/commit/00c425ec77993773d823f018f64a5c44e17023ff). In vulnerable versions of ws, the issue can be mitigated by reducing the maximum allowed length of the request headers using the [`--max-http-header-size=size`](https://nodejs.org/api/cli.html#cli_max_http_header_size_size) and/or the [`maxHeaderSize`](https://nodejs.org/api/http.html#http_http_createserver_options_requestlistener) options.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2021-32640",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-32640?component-type=npm&component-name=ws&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/react@17.0.2",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/react@17.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2017-0717",
+          "title": "[sonatype-2017-0717] CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "description": "react - Cross-Site Scripting (XSS)\n\nThe software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+          "cvssScore": 4.7,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2017-0717?component-type=npm&component-name=react&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/remove-markdown@0.3.0",
+      "description": "Remove Markdown formatting from text",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/remove-markdown@0.3.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2019-0106",
+          "title": "[sonatype-2019-0106] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "remove-markdown - Regular Expression Denial of Service (ReDoS) when Matching Many Spaces\n\nThe software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2019-0106?component-type=npm&component-name=remove-markdown&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/react@18.2.0",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/react@18.2.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2017-0717",
+          "title": "[sonatype-2017-0717] CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "description": "react - Cross-Site Scripting (XSS)\n\nThe software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+          "cvssScore": 4.7,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2017-0717?component-type=npm&component-name=react&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/shelljs@0.8.5",
+      "description": "Portable Unix shell commands for Node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/shelljs@0.8.5?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2014-0038",
+          "title": "[sonatype-2014-0038] CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+          "description": "shelljs - Command Injection\n\nThe software constructs all or part of a command using externally-influenced input from an upstream component, but it does not neutralize or incorrectly neutralizes special elements that could modify the intended command when it is sent to a downstream component.",
+          "cvssScore": 8.8,
+          "cvssVector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2014-0038?component-type=npm&component-name=shelljs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/got@9.6.0",
+      "description": "Human-friendly and powerful HTTP request library for Node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/got@9.6.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-33987",
+          "title": "[CVE-2022-33987] CWE-601: URL Redirection to Untrusted Site ('Open Redirect')",
+          "description": "The got package before 12.1.0 (also fixed in 11.8.5) for Node.js allows a redirect to a UNIX socket.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cve": "CVE-2022-33987",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-33987?component-type=npm&component-name=got&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/shell-quote@1.7.2",
+      "description": "quote and parse shell commands",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/shell-quote@1.7.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-42740",
+          "title": "[CVE-2021-42740] CWE-77: Improper Neutralization of Special Elements used in a Command ('Command Injection')",
+          "description": "The shell-quote package before 1.7.3 for Node.js allows command injection. An attacker can inject unescaped shell metacharacters through a regex designed to support Windows drive letters. If the output of this package is passed to a real shell as a quoted argument to a command with exec(), an attacker can inject arbitrary commands. This is because the Windows drive letter regex character class is {A-z] instead of the correct {A-Za-z]. Several shell metacharacters exist in the space between capital letter Z and lower case letter a, such as the backtick character.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2021-42740",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-42740?component-type=npm&component-name=shell-quote&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ansi-html@0.0.7",
+      "description": "An elegant lib that converts the chalked (ANSI) text to HTML.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ansi-html@0.0.7?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-23424",
+          "title": "[CVE-2021-23424] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "This affects all versions of package ansi-html. If an attacker provides a malicious string, it will get stuck processing the input for an extremely long time.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-23424",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-23424?component-type=npm&component-name=ansi-html&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/browserslist@4.14.2",
+      "description": "Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-env-preset",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/browserslist@4.14.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-23364",
+          "title": "[CVE-2021-23364] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The package browserslist from 4.0.0 and before 4.16.5 are vulnerable to Regular Expression Denial of Service (ReDoS) during parsing of queries.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2021-23364",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-23364?component-type=npm&component-name=browserslist&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/immer@8.0.1",
+      "description": "Create your next immutable state by mutating the current one",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/immer@8.0.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-23436",
+          "title": "[CVE-2021-23436] CWE-843: Access of Resource Using Incompatible Type ('Type Confusion')",
+          "description": "This affects the package immer before 9.0.6. A type confusion vulnerability can lead to a bypass of CVE-2020-28477 when the user-provided keys used in the path parameter are arrays. In particular, this bypass is possible because the condition (p === \"__proto__\" || p === \"constructor\") in applyPatches_ returns false if p is ['__proto__'] (or ['constructor']). The === operator (strict equality operator) returns false if the operands have different type.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2021-23436",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-23436?component-type=npm&component-name=immer&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "CVE-2021-3757",
+          "title": "[CVE-2021-3757] CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes",
+          "description": "immer is vulnerable to Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2021-3757",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-3757?component-type=npm&component-name=immer&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/prompts@2.4.0",
+      "description": "Lightweight, beautiful and user-friendly prompts",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/prompts@2.4.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-3868",
+          "title": "[CVE-2021-3868] ** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: The CNA or individual who requested this candidate did not associate it with any vulnerability during 2021. Notes: none.",
+          "description": "** REJECT ** DO NOT USE THIS CANDIDATE NUMBER. ConsultIDs: none. Reason: The CNA or individual who requested this candidate did not associate it with any vulnerability during 2021. Notes: none.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-3868",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-3868?component-type=npm&component-name=prompts&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/minimatch@3.0.4",
+      "description": "a glob matcher in javascript",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/minimatch@3.0.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2021-4879",
+          "title": "[sonatype-2021-4879] Unknown",
+          "description": "minimatch - Regular Expression Denial of Service (ReDoS)\n\nminimatch - Regular Expression Denial of Service (ReDoS)",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2021-4879?component-type=npm&component-name=minimatch&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/trim-newlines@1.0.0",
+      "description": "Trim newlines from the start and/or end of a string",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/trim-newlines@1.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-33623",
+          "title": "[CVE-2021-33623] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "The trim-newlines package before 3.0.1 and 4.x before 4.0.1 for Node.js has an issue related to regular expression denial-of-service (ReDoS) for the .end() method.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-33623",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-33623?component-type=npm&component-name=trim-newlines&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/nth-check@1.0.2",
+      "description": "performant nth-check parser & compiler",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/nth-check@1.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2021-3803",
+          "title": "[CVE-2021-3803] nth-check is vulnerable to Inefficient Regular Expression Complexity",
+          "description": "nth-check is vulnerable to Inefficient Regular Expression Complexity",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2021-3803",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2021-3803?component-type=npm&component-name=nth-check&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/parse-url@7.0.2",
+      "description": "An advanced url parser supporting git urls too.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/parse-url@7.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2022-4430",
+          "title": "[sonatype-2022-4430] CWE-611: Improper Restriction of XML External Entity Reference ('XXE')",
+          "description": "parse-url - Misinterpretation of Input\n\nThe software processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+          "cvssScore": 9.4,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4430?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-4429",
+          "title": "[sonatype-2022-4429] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "parse-url - Denial of Service (DoS)\n\nThe software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4429?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-4428",
+          "title": "[sonatype-2022-4428] CWE-20: Improper Input Validation",
+          "description": "parse-url - Improper Input Validation\n\nThe product does not validate or incorrectly validates input that can affect the control flow or data flow of a program.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4428?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-4431",
+          "title": "[sonatype-2022-4431] CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "description": "parse-url - Cross-site Scripting (XSS)\n\nThe software does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-4431?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/parse-url@7.0.2",
+      "description": "An advanced url parser supporting git urls too.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/parse-url@7.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-2900",
+          "title": "[CVE-2022-2900] CWE-918: Server-Side Request Forgery (SSRF)",
+          "description": "parse-url - Server-Side Request Forgery (SSRF)",
+          "cvssScore": 9.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "cve": "CVE-2022-2900",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-2900?component-type=npm&component-name=parse-url&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        },
+        {
+          "id": "sonatype-2022-5570",
+          "title": "1 vulnerability found",
+          "description": "1 non-CVE vulnerability found. To see more details, please create a free account at https://ossindex.sonatype.org/ and request for this information using your registered account",
+          "cvssScore": 9.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2022-5570"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/loader-utils@2.0.2",
+      "description": "utils for webpack loaders",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/loader-utils@2.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-37599",
+          "title": "[CVE-2022-37599] loader-utils - REDOS",
+          "description": "loader-utils - REDOS",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-37599",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/loader-utils@1.4.0",
+      "description": "utils for webpack loaders",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/loader-utils@1.4.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-37599",
+          "title": "[CVE-2022-37599] loader-utils - REDOS",
+          "description": "loader-utils - REDOS",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-37599",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/loader-utils@2.0.0",
+      "description": "utils for webpack loaders",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/loader-utils@2.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.37",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-37599",
+          "title": "[CVE-2022-37599] loader-utils - REDOS",
+          "description": "loader-utils - REDOS",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-37599",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-37599?component-type=npm&component-name=loader-utils&utm_source=auditjs&utm_medium=integration&utm_content=4.0.37"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/decode-uri-component@0.2.0",
+      "description": "A better decodeURIComponent",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/decode-uri-component@0.2.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-38900",
+          "title": "[CVE-2022-38900] CWE-20: Improper Input Validation",
+          "description": "decode-uri-component 0.2.0 is vulnerable to Improper Input Validation resulting in DoS.",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-38900",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-38900?component-type=npm&component-name=decode-uri-component&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/json5@2.2.1",
+      "description": "JSON for humans.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/json5@2.2.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-46175",
+          "title": "[CVE-2022-46175] CWE-1321",
+          "description": "JSON5 is an extension to the popular JSON file format that aims to be easier to write and maintain by hand (e.g. for config files). The `parse` method of the JSON5 library before and including versions 1.0.1 and 2.2.1 does not restrict parsing of keys named `__proto__`, allowing specially crafted strings to pollute the prototype of the resulting object. This vulnerability pollutes the prototype of the object returned by `JSON5.parse` and not the global Object prototype, which is the commonly understood definition of Prototype Pollution. However, polluting the prototype of a single object can have significant security impact for an application if the object is later used in trusted operations. This vulnerability could allow an attacker to set arbitrary and unexpected keys on the object returned from `JSON5.parse`. The actual impact will depend on how applications utilize the returned object and how they filter unwanted keys, but could include denial of service, cross-site scripting, elevation of privilege, and in extreme cases, remote code execution. `JSON5.parse` should restrict parsing of `__proto__` keys when parsing JSON strings to objects. As a point of reference, the `JSON.parse` method included in JavaScript ignores `__proto__` keys. Simply changing `JSON5.parse` to `JSON.parse` in the examples above mitigates this vulnerability. This vulnerability is patched in json5 versions 1.0.2, 2.2.2, and later.\n\nSonatype's research suggests that this CVE's details differ from those defined at NVD. See https://ossindex.sonatype.org/vulnerability/CVE-2022-46175 for details",
+          "cvssScore": 8.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2022-46175",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-46175?component-type=npm&component-name=json5&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/json5@1.0.1",
+      "description": "JSON for humans.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/json5@1.0.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-46175",
+          "title": "[CVE-2022-46175] CWE-1321",
+          "description": "JSON5 is an extension to the popular JSON file format that aims to be easier to write and maintain by hand (e.g. for config files). The `parse` method of the JSON5 library before and including versions 1.0.1 and 2.2.1 does not restrict parsing of keys named `__proto__`, allowing specially crafted strings to pollute the prototype of the resulting object. This vulnerability pollutes the prototype of the object returned by `JSON5.parse` and not the global Object prototype, which is the commonly understood definition of Prototype Pollution. However, polluting the prototype of a single object can have significant security impact for an application if the object is later used in trusted operations. This vulnerability could allow an attacker to set arbitrary and unexpected keys on the object returned from `JSON5.parse`. The actual impact will depend on how applications utilize the returned object and how they filter unwanted keys, but could include denial of service, cross-site scripting, elevation of privilege, and in extreme cases, remote code execution. `JSON5.parse` should restrict parsing of `__proto__` keys when parsing JSON strings to objects. As a point of reference, the `JSON.parse` method included in JavaScript ignores `__proto__` keys. Simply changing `JSON5.parse` to `JSON.parse` in the examples above mitigates this vulnerability. This vulnerability is patched in json5 versions 1.0.2, 2.2.2, and later.\n\nSonatype's research suggests that this CVE's details differ from those defined at NVD. See https://ossindex.sonatype.org/vulnerability/CVE-2022-46175 for details",
+          "cvssScore": 8.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2022-46175",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-46175?component-type=npm&component-name=json5&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/http-cache-semantics@4.1.0",
+      "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/http-cache-semantics@4.1.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25881",
+          "title": "[CVE-2022-25881] CWE-1333",
+          "description": "This affects versions of the package http-cache-semantics before 4.1.1. The issue can be exploited via malicious request header values sent to a server, when that server reads the cache policy from the request using this library.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2022-25881",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25881?component-type=npm&component-name=http-cache-semantics&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/core-js@3.26.0",
+      "description": "Standard library",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/core-js@3.26.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "sonatype-2023-0962",
+          "title": "1 vulnerability found",
+          "description": "1 non-CVE vulnerability found. To see more details, please create a free account at https://ossindex.sonatype.org/ and request for this information using your registered account",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "reference": "https://ossindex.sonatype.org/vulnerability/sonatype-2023-0962"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/webpack@4.46.0",
+      "description": "Packs CommonJs/AMD modules for the browser. Allows to split your codebase into multiple bundles, which can be loaded on demand. Support loaders to preprocess files, i.e. json, jsx, es7, css, less, ... and your custom stuff.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/webpack@4.46.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-28154",
+          "title": "[CVE-2023-28154] CWE-noinfo",
+          "description": "Webpack 5 before 5.76.0 does not avoid cross-realm object access. ImportParserPlugin.js mishandles the magic comment feature. An attacker who controls a property of an untrusted object can obtain access to the real global object.\n\nSonatype's research suggests that this CVE's details differ from those defined at NVD. See https://ossindex.sonatype.org/vulnerability/CVE-2023-28154 for details",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-28154",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-28154?component-type=npm&component-name=webpack&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/request@2.88.2",
+      "description": "Simplified HTTP request client.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/request@2.88.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-28155",
+          "title": "[CVE-2023-28155] CWE-918: Server-Side Request Forgery (SSRF)",
+          "description": "** UNSUPPORTED WHEN ASSIGNED ** The Request package through 2.88.1 for Node.js allows a bypass of SSRF mitigations via an attacker-controller server that does a cross-protocol redirect (HTTP to HTTPS, or HTTPS to HTTP). NOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+          "cvssScore": 9.6,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+          "cve": "CVE-2023-28155",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-28155?component-type=npm&component-name=request&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/word-wrap@1.2.3",
+      "description": "Wrap words to a specified length.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/word-wrap@1.2.3?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26115",
+          "title": "[CVE-2023-26115] CWE-1333",
+          "description": "word-wrap - Regular Expression Denial of Service (ReDoS)",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2023-26115",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26115?component-type=npm&component-name=word-wrap&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ejs@3.1.9",
+      "description": "Embedded JavaScript templates",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ejs@3.1.9?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-29827",
+          "title": "[CVE-2023-29827] CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+          "description": "ejs v3.1.9 is vulnerable to server-side template injection. If the ejs file is controllable, template injection can be implemented through the configuration settings of the closeDelimiter parameter.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-29827",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-29827?component-type=npm&component-name=ejs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@7.3.8",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@7.3.8?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@5.7.1",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@5.7.1?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@6.3.0",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@6.3.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/tough-cookie@4.1.2",
+      "description": "RFC6265 Cookies and Cookie Jar for node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/tough-cookie@4.1.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26136",
+          "title": "[CVE-2023-26136] CWE-1321",
+          "description": "Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in rejectPublicSuffixes=false mode. This issue arises from the manner in which the objects are initialized.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-26136",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26136?component-type=npm&component-name=tough-cookie&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/tough-cookie@2.5.0",
+      "description": "RFC6265 Cookies and Cookie Jar for node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/tough-cookie@2.5.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26136",
+          "title": "[CVE-2023-26136] CWE-1321",
+          "description": "Versions of the package tough-cookie before 4.1.3 are vulnerable to Prototype Pollution due to improper handling of Cookies when using CookieJar in rejectPublicSuffixes=false mode. This issue arises from the manner in which the objects are initialized.",
+          "cvssScore": 9.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "cve": "CVE-2023-26136",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26136?component-type=npm&component-name=tough-cookie&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/semver@7.3.4",
+      "description": "The semantic version parser used by npm.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/semver@7.3.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2022-25883",
+          "title": "[CVE-2022-25883] CWE-1333",
+          "description": "Versions of the package semver before 7.5.2 are vulnerable to Regular Expression Denial of Service (ReDoS) via the function new Range, when untrusted user data is provided as a range.\r\r\r",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2022-25883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    }
+  ],
+  "ignore": [
+    {
+      "id": "e0905398-4778-4da0-a4ab-42ed4e0bdb73"
+    },
+    {
+      "id": "1f6dccfd-74f4-464f-a800-e5d1c4efb67e"
+    },
+    {
+      "id": "e3f310ed-219c-4087-aa58-8425b13c3ec5"
+    },
+    {
+      "id": "7b682dd5-ef07-459c-be11-50ec76c9eba2"
+    },
+    {
+      "id": "b7740d41-fc85-4d22-8af5-5a3159e114ea"
+    },
+    {
+      "id": "7ccaaed0-205b-4382-a963-8a30a0b151b1"
+    },
+    {
+      "id": "92bbcbaf-097a-43f9-855e-2052e38930db"
+    },
+    {
+      "id": "a49aa690-87d8-404f-b41a-202b88cb0674"
+    },
+    {
+      "id": "64cd5f21-8af4-4eae-ac7d-a53241ea693a"
+    },
+    {
+      "id": "20b5c393-1a87-4f20-84c9-801c323489ca"
+    },
+    {
+      "id": "849e9fed-44e8-4593-a4ca-61026c4b454f"
+    },
+    {
+      "id": "sonatype-2022-3677"
+    },
+    {
+      "id": "sonatype-2020-0947"
+    },
+    {
+      "id": "sonatype-2020-1579"
+    },
+    {
+      "id": "CVE-2022-21944"
+    },
+    {
+      "id": "sonatype-2021-0459"
+    },
+    {
+      "id": "sonatype-2019-0206"
+    },
+    {
+      "id": "sonatype-2012-0022"
+    },
+    {
+      "id": "sonatype-2021-0078"
+    },
+    {
+      "id": "CVE-2022-25858"
+    },
+    {
+      "id": "CVE-2020-7753"
+    },
+    {
+      "id": "sonatype-2021-0563"
+    },
+    {
+      "id": "sonatype-2021-1523"
+    },
+    {
+      "id": "CVE-2020-28469"
+    },
+    {
+      "id": "sonatype-2020-0889"
+    },
+    {
+      "id": "sonatype-2017-0655"
+    },
+    {
+      "id": "sonatype-2021-0749"
+    },
+    {
+      "id": "CVE-2021-32640"
+    },
+    {
+      "id": "CVE-2022-24771"
+    },
+    {
+      "id": "CVE-2022-24772"
+    },
+    {
+      "id": "sonatype-2022-0218"
+    },
+    {
+      "id": "CVE-2022-0122"
+    },
+    {
+      "id": "CVE-2022-24773"
+    },
+    {
+      "id": "sonatype-2017-0717"
+    },
+    {
+      "id": "sonatype-2019-0106"
+    },
+    {
+      "id": "sonatype-2014-0038"
+    },
+    {
+      "id": "CVE-2022-33987"
+    },
+    {
+      "id": "CVE-2021-42740"
+    },
+    {
+      "id": "CVE-2021-23424"
+    },
+    {
+      "id": "CVE-2021-23364"
+    },
+    {
+      "id": "CVE-2021-23436"
+    },
+    {
+      "id": "CVE-2021-3757"
+    },
+    {
+      "id": "CVE-2021-3868"
+    },
+    {
+      "id": "sonatype-2021-4879"
+    },
+    {
+      "id": "CVE-2021-33623"
+    },
+    {
+      "id": "CVE-2021-3803"
+    },
+    {
+      "id": "sonatype-2022-4430"
+    },
+    {
+      "id": "sonatype-2022-4429"
+    },
+    {
+      "id": "sonatype-2022-4428"
+    },
+    {
+      "id": "sonatype-2022-4431"
+    },
+    {
+      "id": "CVE-2022-2900"
+    },
+    {
+      "id": "sonatype-2022-5570"
+    },
+    {
+      "id": "CVE-2022-37599"
+    },
+    {
+      "id": "CVE-2022-21222"
+    },
+    {
+      "id": "CVE-2022-37601"
+    },
+    {
+      "id": "CVE-2022-37601"
+    },
+    {
+      "id": "CVE-2022-37603"
+    },
+    {
+      "id": "CVE-2022-37603"
+    },
+    {
+      "id": "CVE-2022-37603"
+    },
+    {
+      "id": "CVE-2022-38900"
+    },
+    {
+      "id": "CVE-2022-46175"
+    },
+    {
+      "id": "CVE-2022-25881"
+    },
+    {
+      "id": "sonatype-2023-0962"
+    },
+    {
+      "id": "CVE-2023-28154"
+    },
+    {
+      "id": "CVE-2023-28155"
+    },
+    {
+      "id": "CVE-2023-26115"
+    },
+    {
+      "id": "CVE-2023-29827"
+    },
+    {
+      "id": "CVE-2022-25883"
+    },
+    {
+      "id": "CVE-2023-26136"
+    }
+  ]
+}

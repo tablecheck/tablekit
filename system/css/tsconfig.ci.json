@@ -1,0 +1,35 @@
+{
+  "exclude": ["node_modules"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/*.ts",
+    "src/*.tsx",
+    "src/**/*.json",
+    "src/*.json"
+  ],
+  "compilerOptions": {
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "declaration": true,
+    "downlevelIteration": true,
+    "jsx": "preserve",
+    "outDir": "lib/esm",
+    "declarationDir": "lib/esm",
+    "declarationMap": false,
+    "noEmit": false,
+    "rootDir": "src",
+    "baseUrl": "src"
+  }
+}

@@ -1,0 +1,44 @@
+name: Auto Release
+
+on:
+  push:
+    branches:
+      - main
+      - next
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Prepare repository
+        run: git fetch --unshallow --prune --tags
+
+      - name: Unset header
+        # checkout@v2 adds a header that makes branch protection report errors ):
+        run: git config --local --unset http.https://github.com/.extraheader
+
+      - name: Read .nvmrc
+        id: nvm
+        run: echo ::set-output name=nvmrc::$(cat .nvmrc)
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ steps.nvm.outputs.nvmrc }}
+          cache: npm
+
+      - name: Install 🔧
+        run: npm ci
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Create Release ✨
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        run: npx auto shipit
