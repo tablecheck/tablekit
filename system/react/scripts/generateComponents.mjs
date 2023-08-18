@@ -112,7 +112,12 @@ class ComponentBuilder {
   }
 
   isValidComponentImport() {
-    if (!this.baseStyles) return false;
+    if (!this.baseStyles) {
+      console.warn(
+        `Skipping ${this.importKey} as it does not export 'baseStyles'`
+      );
+      return false;
+    }
     return !structuredFileNames.includes(this.fileName);
   }
 

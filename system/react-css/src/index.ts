@@ -4,6 +4,8 @@
  */
 import './globalTypes';
 
+export { Anchor } from './components/Anchor';
+export type { Props as AnchorProps } from './components/Anchor';
 export { Badge } from './components/Badge';
 export type { Props as BadgeProps } from './components/Badge';
 export { Banner } from './components/Banner';

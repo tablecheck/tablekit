@@ -67,13 +67,10 @@ class ComponentBuilder {
         `export type ${this.pascalImportKey}Variant = ${this.importKey}.${this.pascalImportKey}Variant;`
       );
     }
-    const elementTypeName = upperFirstChar(this.element);
-    const elementType = `HTML${
-      this.element === 'textarea' ? 'TextArea' : elementTypeName
-    }Element`;
-    const attributesTypePrefix = ['div', 'span'].includes(this.element)
+    const elementType = this.getHtmlElementType();
+    const attributesTypePrefix = ['div', 'span', 'a'].includes(this.element)
       ? ''
-      : elementTypeName;
+      : upperFirstChar(this.element);
     fileContent.push(
       '',
       `export const ${
@@ -101,10 +98,20 @@ class ComponentBuilder {
     return this.className || '';
   }
 
+  getHtmlElementType() {
+    if (this.element === 'a') return 'HTMLAnchorElement';
+    if (this.element === 'textarea') return 'HTMLTextAreaElement';
+    return `HTML${upperFirstChar(this.element)}Element`;
+  }
+
   isValidComponentImport() {
-    return (
-      this.hasValidSelectors() && !structuredFileNames.includes(this.fileName)
-    );
+    if (!this.hasValidSelectors()) {
+      console.warn(
+        `Skipping ${this.importKey} as it does not export 'className' or has a 'defaultProps.type' value set`
+      );
+      return false;
+    }
+    return !structuredFileNames.includes(this.fileName);
   }
 
   hasValidSelectors() {
