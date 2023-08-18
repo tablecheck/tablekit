@@ -80,13 +80,13 @@ export const resetCss = css`
     color: var(--link-disabled);
     &:link {
       color: var(--link);
-    }
-    &:hover,
-    &:active {
-      color: var(--link-hover);
-    }
-    &:visited {
-      color: var(--link-visited);
+      &:hover,
+      &:active {
+        color: var(--link-hover);
+      }
+      &:visited {
+        color: var(--link-visited);
+      }
     }
   }
 `;

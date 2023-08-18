@@ -97,7 +97,11 @@ export const coreStyles = css`
     }
   }
 
-  color: var(--color);
+  &,
+  &:any-link,
+  &:hover {
+    color: var(--color);
+  }
   background-color: var(--background-color);
   --loading-transition: 300ms ease-in-out;
   transition: color var(--loading-transition),

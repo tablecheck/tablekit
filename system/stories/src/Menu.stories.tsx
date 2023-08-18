@@ -13,18 +13,21 @@ export default {
     auxiliaryClassNames: [menuItem.className, menuList.className],
     auxiliarySelectors: [`.${menuItem.className}`, menuList.selectors],
     auxiliaryComponents: [emotion.MenuItem, emotion.MenuList],
-    variants: ['Menu', 'Menu Items']
+    variants: ['Menu', 'Menu Items', 'Selected']
   }
 } as Meta;
 
-function AllMenuItems({ components }: any) {
+function AllMenuItems({ components, isSelected }: any) {
   return (
     <>
       <li>
-        <components.MenuItem>Item</components.MenuItem>
+        <components.MenuItem data-selected={isSelected}>
+          Item
+        </components.MenuItem>
       </li>
       <li>
         <components.MenuItemLink
+          data-selected={isSelected}
           href="#"
           onMouseDown={(e: Event) => {
             e.preventDefault();
@@ -35,6 +38,7 @@ function AllMenuItems({ components }: any) {
       </li>
       <li>
         <components.MenuItem
+          data-selected={isSelected}
           as="button"
           onClick={() => action('button-click')()}
         >
@@ -42,31 +46,31 @@ function AllMenuItems({ components }: any) {
         </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem>
+        <components.MenuItem data-selected={isSelected}>
           <Earth size={20} />
           Item
         </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem data-variant="success">
+        <components.MenuItem data-selected={isSelected} data-variant="success">
           <Earth size={20} />
           Success
         </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem data-variant="info">
+        <components.MenuItem data-selected={isSelected} data-variant="info">
           <Earth size={20} />
           Info
         </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem data-variant="error">
+        <components.MenuItem data-selected={isSelected} data-variant="error">
           <Earth size={20} />
           Error
         </components.MenuItem>
       </li>
       <li>
-        <components.MenuItem data-variant="warning">
+        <components.MenuItem data-selected={isSelected} data-variant="warning">
           <Earth size={20} />
           Warn
         </components.MenuItem>
@@ -84,6 +88,9 @@ const Template: StoryFn = ({ components }) => (
     </components.Menu>
     <components.MenuList style={{ maxHeight: 'none' }}>
       <AllMenuItems components={components} />
+    </components.MenuList>
+    <components.MenuList style={{ maxHeight: 'none' }}>
+      <AllMenuItems components={components} isSelected />
     </components.MenuList>
   </>
 );
