@@ -35,7 +35,9 @@ export const stateStylesObjects: Record<
 
 export const baseStylesObject: CSSObject = {
   font: 'var(--body-1)',
-  color: 'var(--text)',
+  '&, &:any-link, &:hover': {
+    color: 'var(--text)'
+  },
   padding: 'var(--spacing-l3)',
   borderRadius: 'var(--border-radius-small)',
   display: 'grid',
@@ -46,7 +48,7 @@ export const baseStylesObject: CSSObject = {
   justifyContent: 'flex-start',
   textDecoration: 'none !important',
   outline: 'none',
-  '&:is(button, :any-link)': {
+  '&:is(button, :any-link), &:matches(button, :any-link)': {
     cursor: 'pointer'
   },
   '&[data-variant="success"]': {
@@ -71,12 +73,17 @@ export interface Props {
 // eslint-disable-next-line @emotion/syntax-preference
 export const baseStyles = css({
   ...baseStylesObject,
-  '&:is(button, :any-link)': baseStylesObject,
-  '&:is(button, :any-link):active': stateStylesObjects.active,
-  '&:is(button, :any-link)[data-pseudo="active"]': stateStylesObjects.active,
-  '&:is(button, :any-link):focus': stateStylesObjects.focus,
-  '&:is(button, :any-link)[data-pseudo="focus"]': stateStylesObjects.focus,
-  '&:is(button, :any-link):hover': stateStylesObjects.hover,
-  '&:is(button, :any-link)[data-pseudo="hover"]': stateStylesObjects.hover,
+  '&:matches(button, :any-link):matches(:active, [data-pseudo="active"])':
+    stateStylesObjects.active,
+  '&:is(button, :any-link):is(:active, [data-pseudo="active"])':
+    stateStylesObjects.active,
+  '&:matches(button, :any-link):matches(:focus, [data-pseudo="focus"])':
+    stateStylesObjects.focus,
+  '&:is(button, :any-link):is(:focus, [data-pseudo="focus"])':
+    stateStylesObjects.focus,
+  '&:matches(button, :any-link):matches(:hover, [data-pseudo="hover"])':
+    stateStylesObjects.hover,
+  '&:is(button, :any-link):is(:hover, [data-pseudo="hover"])':
+    stateStylesObjects.hover,
   '&[data-selected=true]': stateStylesObjects.selected
 });

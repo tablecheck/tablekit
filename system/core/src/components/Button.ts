@@ -143,7 +143,11 @@ export const coreStyles = css`
     }
   }
 
-  color: var(--color);
+  &,
+  &:any-link,
+  &:hover {
+    color: var(--color);
+  }
   background-color: var(--background-color);
   border-color: var(--border-color);
   --loading-transition: 300ms ease-in-out;
