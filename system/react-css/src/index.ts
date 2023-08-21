@@ -16,6 +16,8 @@ export { ButtonGroup } from './components/ButtonGroup';
 export type { Props as ButtonGroupProps } from './components/ButtonGroup';
 export { Checkbox } from './components/Checkbox';
 export type { Props as CheckboxProps } from './components/Checkbox';
+export { ChildAnchors } from './components/ChildAnchors';
+export type { Props as ChildAnchorsProps } from './components/ChildAnchors';
 export { Chip } from './components/Chip';
 export type { Props as ChipProps } from './components/Chip';
 export { ChipRow } from './components/ChipRow';
