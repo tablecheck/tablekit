@@ -18,6 +18,8 @@ export { Checkbox } from './components/Checkbox';
 export type { Props as CheckboxProps } from './components/Checkbox';
 export { CheckboxRadioLabel } from './components/CheckboxRadioLabel';
 export type { Props as CheckboxRadioLabelProps } from './components/CheckboxRadioLabel';
+export { ChildAnchors } from './components/ChildAnchors';
+export type { Props as ChildAnchorsProps } from './components/ChildAnchors';
 export { Chip } from './components/Chip';
 export type { Props as ChipProps } from './components/Chip';
 export { ChipRow } from './components/ChipRow';

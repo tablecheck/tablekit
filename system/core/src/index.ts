@@ -10,6 +10,7 @@ export * as button from './components/Button';
 export * as buttonGroup from './components/ButtonGroup';
 export * as checkbox from './components/Checkbox';
 export * as checkboxRadioLabel from './components/CheckboxRadioLabel';
+export * as childAnchors from './components/ChildAnchors';
 export * as chip from './components/Chip';
 export * as chipRow from './components/ChipRow';
 export * as iconButton from './components/IconButton';
