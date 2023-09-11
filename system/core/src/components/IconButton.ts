@@ -53,6 +53,7 @@ export const coreStyles = css`
   display: grid;
   padding: 9px;
   cursor: pointer;
+  text-decoration: none;
 
   font-size: 16px;
   line-height: 24px;
