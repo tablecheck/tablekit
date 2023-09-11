@@ -103,6 +103,7 @@ export const coreStyles = css`
   padding: 9px 11px;
   white-space: nowrap;
   cursor: pointer;
+  text-decoration: none;
 
   font-weight: 400;
   font-size: 16px;
