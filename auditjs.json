@@ -1084,6 +1084,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2022-25883?component-type=npm&component-name=semver&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/graphql@16.6.0",
+      "description": "A Query Language and Runtime which can target any service.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/graphql@16.6.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26144",
+          "title": "[CVE-2023-26144] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "Versions of the package graphql from 16.3.0 and before 16.8.1 are vulnerable to Denial of Service (DoS) due to insufficient checks in the OverlappingFieldsCanBeMergedRule.ts file when parsing large queries. This vulnerability allows an attacker to degrade system performance.\r\r**Note:** It was not proven that this vulnerability can crash the process.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cve": "CVE-2023-26144",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26144?component-type=npm&component-name=graphql&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1293,6 +1309,9 @@
     },
     {
       "id": "CVE-2023-26136"
+    },
+    {
+      "id": "CVE-2023-26144"
     }
   ]
 }
