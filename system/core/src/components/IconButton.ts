@@ -33,19 +33,7 @@ const variants = [
 export type IconButtonVariant = (typeof variants)[number];
 
 export const variantStyles = {
-  ...buttonVariantStyles,
-  danger: css`
-    --color: var(--error);
-    border: 1px solid var(--border-transparent);
-    &[data-pseudo='hover'],
-    &:hover {
-      --background-color: var(--surface-hover);
-    }
-    &[data-pseudo='active'],
-    &:active {
-      --background-color: var(--surface-active);
-    }
-  `
+  ...buttonVariantStyles
 };
 
 export const coreStyles = css`
