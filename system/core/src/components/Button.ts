@@ -19,7 +19,14 @@ export interface Props {
   'aria-busy'?: boolean;
 }
 
-const variants = ['primary', 'secondary', 'tertiary', 'ghost', 'bare'] as const;
+const variants = [
+  'primary',
+  'secondary',
+  'tertiary',
+  'ghost',
+  'bare',
+  'danger'
+] as const;
 
 export type ButtonVariant = (typeof variants)[number];
 
@@ -84,6 +91,19 @@ export const variantStyles = {
     --color: var(--text);
     --background-color: transparent;
     --border-color: transparent;
+    &[data-pseudo='hover'],
+    &:hover {
+      --background-color: var(--surface-hover);
+    }
+    &[data-pseudo='active'],
+    &:active {
+      --background-color: var(--surface-active);
+    }
+  `,
+  danger: css`
+    --color: var(--error);
+    --background-color: transparent;
+    --border-color: var(--border-transparent);
     &[data-pseudo='hover'],
     &:hover {
       --background-color: var(--surface-hover);
