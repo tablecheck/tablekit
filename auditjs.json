@@ -1100,6 +1100,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26144?component-type=npm&component-name=graphql&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/postcss@7.0.39",
+      "description": "Tool for transforming styles with JS plugins",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/postcss@7.0.39?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-44270",
+          "title": "[CVE-2023-44270] CWE-74: Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection')",
+          "description": "An issue was discovered in PostCSS before 8.4.31. The vulnerability affects linters using PostCSS to parse external untrusted CSS. An attacker can prepare CSS in such a way that it will contains parts parsed by PostCSS as a CSS comment. After processing by PostCSS, it will be included in the PostCSS output in CSS nodes (rules, properties) despite being included in a comment.",
+          "cvssScore": 5.3,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cve": "CVE-2023-44270",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-44270?component-type=npm&component-name=postcss&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1312,6 +1328,9 @@
     },
     {
       "id": "CVE-2023-26144"
+    },
+    {
+      "id": "CVE-2023-44270"
     }
   ]
 }
