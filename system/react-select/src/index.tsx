@@ -396,9 +396,10 @@ export function useReactSelectConfig<
         ...styles,
         ...menuStylesObject
       }),
-      menuList: (styles) => ({
+      menuList: (styles, { maxHeight }) => ({
         ...styles,
-        ...menuListStylesObject
+        ...menuListStylesObject,
+        maxHeight: `${maxHeight}px !important`
       }),
       option: (styles, { isFocused, isSelected }) => {
         let stateStyles = {};
