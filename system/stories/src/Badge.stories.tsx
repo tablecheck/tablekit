@@ -14,14 +14,14 @@ export default {
 
 const Template: Story = ({ Badge }) => (
   <>
-    {[undefined, 'small'].map((size) =>
+    {(['x-large', 'large', 'medium', 'small', 'x-small'] as const).map((size) =>
       ['left', 'right', false].map((hasIcon) =>
         variants.map((variant) => (
-          <Badge key={variant} data-variant={variant} data-size={size as any}>
+          <Badge key={variant} data-variant={variant} data-size={size}>
             {hasIcon === 'left' ? (
               <FavoriteFilled size={size ? 16 : 20} />
             ) : null}
-            Text
+            {size}
             {hasIcon === 'right' ? (
               <FavoriteFilled size={size ? 16 : 20} />
             ) : null}
