@@ -1,24 +1,21 @@
 import { css } from '@emotion/react';
 
+import { themedCss } from '../themeVariables/theme';
+
 import { baseStyles as inputBaseStyles, Props as InputProps } from './Input';
 
 export const element = 'select';
 export const selectors = ['select'];
 export const className = 'select';
 
-export const globalThemeVars = css`
-  :root {
+export const globalThemeVars = themedCss({
+  light: css`
     --down-chevron-svg: url('data:image/svg+xml;charset=utf8, <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 13.75L3.75 7.5L4.625 6.625L10 12L15.375 6.625L16.25 7.5L10 13.75Z" fill="%23292929"/></svg>');
-  }
-  @media (prefers-color-scheme: dark) {
-    :not([data-theme='light']) {
-      --down-chevron-svg: url('data:image/svg+xml;charset=utf8, <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 13.75L3.75 7.5L4.625 6.625L10 12L15.375 6.625L16.25 7.5L10 13.75Z" fill="%23ffffff"/></svg>');
-    }
-  }
-  [data-theme='dark'] {
+  `,
+  dark: css`
     --down-chevron-svg: url('data:image/svg+xml;charset=utf8, <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 13.75L3.75 7.5L4.625 6.625L10 12L15.375 6.625L16.25 7.5L10 13.75Z" fill="%23ffffff"/></svg>');
-  }
-`;
+  `
+});
 
 export type Props = InputProps;
 

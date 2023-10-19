@@ -321,22 +321,41 @@ export const darkEffectStyles = css`
   --elevation-small: 0 0 3px 0 rgba(255, 255, 255, 0.1);
 `;
 
-export const theme = css`
-  [data-theme='light'],
-  :root {
-    ${lightColors};
-    ${lightEffectStyles}
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme='light']) {
-      ${darkColors}
-      ${darkEffectStyles}
+export function themedCss({
+  light,
+  dark
+}: {
+  light: ReturnType<typeof css>;
+  dark: ReturnType<typeof css>;
+}): ReturnType<typeof css> {
+  return css`
+    [data-theme='light'],
+    :root {
+      ${light}
     }
-  }
-  [data-theme='dark'] {
-    ${darkColors}
-    ${darkEffectStyles}
-  }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme='light']),
+      [data-theme='system'] {
+        ${dark}
+      }
+    }
+    [data-theme='dark'] {
+      ${dark}
+    }
+  `;
+}
+
+export const theme = css`
+  ${themedCss({
+    light: css`
+      ${lightColors};
+      ${lightEffectStyles}
+    `,
+    dark: css`
+      ${darkColors};
+      ${darkEffectStyles}
+    `
+  })}
   :root {
     ${brandColors}
     ${utilityColors}
