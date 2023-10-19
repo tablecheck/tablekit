@@ -10,18 +10,41 @@ export function useTablekitTheme() {
   return React.useContext(ThemeContext);
 }
 
+function useIsDark(theme: 'light' | 'dark' | 'system'): boolean {
+  const [isDark, setIsDark] = React.useState(() => {
+    if (theme === 'system') {
+      return (
+        window.matchMedia?.('(prefers-color-scheme:dark)').matches || false
+      );
+    }
+    return theme === 'dark';
+  });
+  React.useEffect(() => {
+    if (theme !== 'system') return;
+    const watcher = window.matchMedia('(prefers-color-scheme: dark)');
+    const listener = (event: MediaQueryListEvent) => {
+      setIsDark(event.matches);
+    };
+    watcher.addEventListener('change', listener);
+    return () => {
+      watcher.removeEventListener('change', listener);
+    };
+  }, [theme, setIsDark]);
+  return isDark;
+}
+
 export function ThemeProvider({
   isRtl = false,
   lang,
   country,
-  theme = 'light',
+  theme = 'system',
   children,
   useLocalCssVariables
 }: {
   isRtl?: boolean;
   lang?: string;
   country?: string;
-  theme?: 'light' | 'dark';
+  theme?: 'light' | 'dark' | 'system';
   children: React.ReactNode;
   useLocalCssVariables?: boolean;
 }): JSX.Element {
@@ -45,12 +68,13 @@ export function ThemeProvider({
         'data-theme': theme
       }
     : {};
+  const isDark = useIsDark(theme);
   return (
     <ThemeContext.Provider
       value={React.useMemo(
         () => ({
           isRtl,
-          isDark: theme === 'dark'
+          isDark
         }),
         [isRtl, theme]
       )}

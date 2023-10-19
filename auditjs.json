@@ -1116,6 +1116,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-44270?component-type=npm&component-name=postcss&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/axios@1.3.4",
+      "description": "Promise based HTTP client for the browser and node.js",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/axios@1.3.4?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-45857",
+          "title": "[CVE-2023-45857] CWE-352: Cross-Site Request Forgery (CSRF)",
+          "description": "axios - Cross-Site Request Forgery (CSRF)",
+          "cvssScore": 6.8,
+          "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+          "cve": "CVE-2023-45857",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-45857?component-type=npm&component-name=axios&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1331,6 +1347,9 @@
     },
     {
       "id": "CVE-2023-44270"
+    },
+    {
+      "id": "CVE-2023-45857"
     }
   ]
 }
