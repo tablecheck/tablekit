@@ -35,16 +35,16 @@ export const baseStyles = css`
   }
 
   &[data-layout='icon-title-close'] {
-    grid: 'icon title close' 1fr '. description .' 1fr / min-content 1fr min-content;
+    grid: 'icon title close' min-content '. description .' 1fr / min-content 1fr min-content;
   }
   &[data-layout='icon-title'] {
-    grid: 'icon title' 1fr '. description' 1fr / min-content 1fr min-content;
+    grid: 'icon title' min-content '. description' 1fr / min-content 1fr min-content;
   }
   &[data-layout='title-close'] {
-    grid: 'title close' 1fr 'description .' 1fr / 1fr min-content;
+    grid: 'title close' min-content 'description .' 1fr / 1fr min-content;
   }
   &[data-layout='title'] {
-    grid: 'title' 1fr 'description' 1fr / 1fr;
+    grid: 'title' min-content 'description' 1fr / 1fr;
   }
   &[data-layout='icon-close'] {
     grid: 'icon description close' 1fr / min-content 1fr min-content;

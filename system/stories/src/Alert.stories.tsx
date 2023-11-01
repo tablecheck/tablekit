@@ -45,7 +45,11 @@ const layouts: {
           <InstanceIcon size={20} />
         </IconWrapper>
         <Title>Title</Title>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
         <CloseButton>
           <CloseIcon />
         </CloseButton>
@@ -57,7 +61,11 @@ const layouts: {
     render: ({ CloseButton, Description, Title }) => (
       <>
         <Title>Title</Title>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
         <CloseButton>
           <CloseIcon />
         </CloseButton>
@@ -72,7 +80,11 @@ const layouts: {
           <InstanceIcon size={20} />
         </IconWrapper>
         <Title>Title</Title>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
       </>
     )
   },
@@ -81,7 +93,11 @@ const layouts: {
     render: ({ Description, Title }) => (
       <>
         <Title>Title</Title>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
       </>
     )
   },
@@ -92,7 +108,11 @@ const layouts: {
         <IconWrapper>
           <InstanceIcon size={16} />
         </IconWrapper>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
         <CloseButton>
           <CloseIcon />
         </CloseButton>
@@ -103,7 +123,11 @@ const layouts: {
     key: 'close',
     render: ({ CloseButton, Description }) => (
       <>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
         <CloseButton>
           <CloseIcon />
         </CloseButton>
@@ -117,7 +141,11 @@ const layouts: {
         <IconWrapper>
           <InstanceIcon size={16} />
         </IconWrapper>
-        <Description>More text here</Description>
+        <Description>
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
+        </Description>
       </>
     )
   },
