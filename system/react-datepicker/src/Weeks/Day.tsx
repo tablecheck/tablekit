@@ -258,6 +258,7 @@ export function useDayProps(
     tabIndex: getTabIndex(calendars, dateObj, selected, hoveredDate, buttonRef),
     ref: buttonRef,
     ...dateProps,
+    type: 'button',
     'aria-pressed': undefined,
     'aria-roledescription': 'Date Button',
     'aria-selected': isSelected ? 'true' : undefined,
