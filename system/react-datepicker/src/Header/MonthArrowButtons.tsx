@@ -42,6 +42,7 @@ export const PreviousMonth = React.forwardRef<
   return (
     <DirectionButton
       {...getBackProps({ ...props, calendars, offset: 1 })}
+      type="button"
       ref={ref}
     >
       <ChevronLeft size={20} />
@@ -56,6 +57,7 @@ export const NextMonth = React.forwardRef<
   return (
     <DirectionButton
       {...getForwardProps({ ...props, calendars, offset: 1 })}
+      type="button"
       ref={ref}
     >
       <ChevronRight size={20} />
