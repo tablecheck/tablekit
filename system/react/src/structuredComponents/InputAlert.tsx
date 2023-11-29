@@ -11,12 +11,16 @@ export const InputAlertInner = styled(inputAlert.element)<Props>`
   ${inputAlert.baseStyles}
 `;
 
-const inputAlertIconMap: Record<inputAlert.Props['data-variant'], JSX.Element> =
-  {
-    info: <Information size={16} />,
-    error: <WarningAltFilled size={16} />,
-    warning: <WarningAlt size={16} />
-  };
+const inputAlertIconMap: Record<
+  inputAlert.Props['data-variant'],
+  JSX.Element | null
+> = {
+  info: <Information size={16} />,
+  error: <WarningAltFilled size={16} />,
+  warning: <WarningAlt size={16} />,
+  bare: null,
+  disabled: null
+};
 
 export const InputAlert = React.forwardRef<
   HTMLSpanElement,
