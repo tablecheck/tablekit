@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 export const element = 'span';
 export const className = 'input-alert';
 
-const variants = ['info', 'error', 'warning'] as const;
+const variants = ['info', 'error', 'warning', 'bare', 'disabled'] as const;
 
 export type InputAlertVariant = (typeof variants)[number];
 
@@ -28,13 +28,14 @@ export const baseStyles = css`
   }
 
   &[data-variant='error'],
-  &[data-variant='warning'] {
+  &[data-variant='warning'],
+  &[data-variant='info'] {
     border-radius: var(--border-radius-small);
     padding: var(--spacing-l2) var(--spacing-l3);
   }
 
-  &[data-variant='info'] > svg:first-child {
-    color: var(--info);
+  &[data-variant='disabled'] {
+    color: var(--text-disabled);
   }
 
   &[data-variant='error'] {
@@ -45,5 +46,10 @@ export const baseStyles = css`
   &[data-variant='warning'] {
     background: var(--warning-surface);
     color: var(--warning-text);
+  }
+
+  &[data-variant='info'] {
+    background: var(--info-surface);
+    color: var(--info-text);
   }
 `;

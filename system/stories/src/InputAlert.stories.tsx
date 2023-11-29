@@ -6,7 +6,9 @@ import * as css from '@tablecheck/tablekit-react-css';
 const contentVariants: emotion.InputAlertProps[] = [
   { id: '1', 'data-variant': 'info', children: 'Info' },
   { id: '2', 'data-variant': 'warning', children: 'Warning' },
-  { id: '3', 'data-variant': 'error', children: 'Error' }
+  { id: '3', 'data-variant': 'error', children: 'Error' },
+  { id: '4', 'data-variant': 'bare', children: 'Bare' },
+  { id: '5', 'data-variant': 'disabled', children: 'Disabled' }
 ];
 
 export default {
