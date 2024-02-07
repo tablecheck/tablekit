@@ -1148,6 +1148,54 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-46234?component-type=npm&component-name=browserify-sign&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/follow-redirects@1.15.2",
+      "description": "HTTP and HTTPS modules that follow redirects.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/follow-redirects@1.15.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-26159",
+          "title": "[CVE-2023-26159] CWE-20: Improper Input Validation",
+          "description": "Versions of the package follow-redirects before 1.15.4 are vulnerable to Improper Input Validation due to the improper handling of URLs by the url.parse() function. When new URL() throws an error, it can be manipulated to misinterpret the hostname. An attacker could exploit this weakness to redirect traffic to a malicious site, potentially leading to information disclosure, phishing attacks, or other security breaches.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cve": "CVE-2023-26159",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-26159?component-type=npm&component-name=follow-redirects&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ip@1.1.8",
+      "description": "[![](https://badge.fury.io/js/ip.svg)](https://www.npmjs.com/package/ip)",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ip@1.1.8?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-42282",
+          "title": "[CVE-2023-42282] CWE-918: Server-Side Request Forgery (SSRF)",
+          "description": "An issue in NPM IP Package v.1.1.8 and before allows an attacker to execute arbitrary code and obtain sensitive information via the isPublic() function.",
+          "cvssScore": 7.2,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+          "cve": "CVE-2023-42282",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-42282?component-type=npm&component-name=ip&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ip@2.0.0",
+      "description": "[![](https://badge.fury.io/js/ip.svg)](https://www.npmjs.com/package/ip)",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ip@2.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2023-42282",
+          "title": "[CVE-2023-42282] CWE-918: Server-Side Request Forgery (SSRF)",
+          "description": "An issue in NPM IP Package v.1.1.8 and before allows an attacker to execute arbitrary code and obtain sensitive information via the isPublic() function.",
+          "cvssScore": 7.2,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+          "cve": "CVE-2023-42282",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-42282?component-type=npm&component-name=ip&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1369,6 +1417,12 @@
     },
     {
       "id": "CVE-2023-46234"
+    },
+    {
+      "id": "CVE-2023-26159"
+    },
+    {
+      "id": "CVE-2023-42282"
     }
   ]
 }
