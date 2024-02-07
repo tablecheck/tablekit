@@ -8,7 +8,7 @@ export const className = 'table';
 export interface Props {}
 
 export const baseStyles = css`
-  text-align: left;
+  text-align: start;
   border-spacing: 0;
   border-collapse: separate;
   border: 1px solid var(--border);
@@ -34,14 +34,18 @@ export const baseStyles = css`
 
   & th,
   & td {
-    vertical-align: middle;
+    vertical-align: baseline;
     white-space: nowrap;
     overflow: hidden;
-    padding: 18px var(--spacing-l5);
+    padding: var(--spacing-l4);
   }
 
   & th {
     border-bottom: 1px solid var(--border);
+    text-align: left;
+    [dir='rtl'] & {
+      text-align: right;
+    }
 
     & > .table-resizer {
       display: inline-block;
@@ -67,9 +71,5 @@ export const baseStyles = css`
   & tbody:not(:last-child),
   & tfoot:not(:last-child) {
     border-bottom: 1px solid var(--border);
-  }
-
-  &[aria-hidden='true'] {
-    display: none;
   }
 `;
