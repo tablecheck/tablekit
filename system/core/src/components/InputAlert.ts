@@ -26,6 +26,9 @@ export const baseStyles = css`
   & > svg:first-child {
     margin-top: 2px;
   }
+  & > :not(svg):first-child:last-child {
+    grid-column: 1 / 3;
+  }
 
   &[data-variant='error'],
   &[data-variant='warning'],

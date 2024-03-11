@@ -3,13 +3,18 @@ import { inputAlert } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-const contentVariants: emotion.InputAlertProps[] = [
-  { id: '1', 'data-variant': 'info', children: 'Info' },
-  { id: '2', 'data-variant': 'warning', children: 'Warning' },
-  { id: '3', 'data-variant': 'error', children: 'Error' },
-  { id: '4', 'data-variant': 'bare', children: 'Bare' },
-  { id: '5', 'data-variant': 'disabled', children: 'Disabled' }
-];
+const contentVariants: emotion.InputAlertProps[] = (
+  [
+    { id: '1', 'data-variant': 'info', children: 'Info' },
+    { id: '2', 'data-variant': 'warning', children: 'Warning' },
+    { id: '3', 'data-variant': 'error', children: 'Error' },
+    { id: '4', 'data-variant': 'bare', children: 'Bare' },
+    { id: '5', 'data-variant': 'disabled', children: 'Disabled' }
+  ] as const
+).map((props) => ({
+  ...props,
+  children: `${props.children} - This very, very long text should correctly show if the columns and wrapping are working correctly`
+}));
 
 export default {
   title: 'TableKit/InputAlert',

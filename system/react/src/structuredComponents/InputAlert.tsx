@@ -9,6 +9,7 @@ export interface Props extends inputAlert.Props {
 
 export const InputAlertInner = styled(inputAlert.element)<Props>`
   ${inputAlert.baseStyles}
+  margin-top: 0;
 `;
 
 const inputAlertIconMap: Record<

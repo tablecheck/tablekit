@@ -1196,6 +1196,22 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2023-42282?component-type=npm&component-name=ip&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/railroad-diagrams@1.0.0",
+      "description": "A small JS+SVG library for drawing railroad syntax diagrams.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/railroad-diagrams@1.0.0?utm_source=auditjs&utm_medium=integration&utm_content=4.0.39",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-26467",
+          "title": "[CVE-2024-26467] CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "description": "A DOM based cross-site scripting (XSS) vulnerability in the component generator.html of tabatkins/railroad-diagrams before commit ea9a123 allows attackers to execute arbitrary Javascript via sending a crafted URL.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cve": "CVE-2024-26467",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-26467?component-type=npm&component-name=railroad-diagrams&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1423,6 +1439,9 @@
     },
     {
       "id": "CVE-2023-42282"
+    },
+    {
+      "id": "CVE-2024-26467"
     }
   ]
 }
