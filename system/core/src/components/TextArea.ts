@@ -28,6 +28,11 @@ export const baseStyles = css`
   ${textareaSizingStyles}
   background: var(--surface);
 
+  @supports (field-sizing: content) {
+    field-sizing: content;
+    resize: none;
+  }
+
   &,
   &:focus-within,
   &:focus {
