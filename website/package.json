@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "website",
+  "description": "TableKit website",
+  "license": "ISC",
+  "author": "",
+  "keywords": [],
+  "main": "./lib/es5/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "scripts": {
+    "build": "charge build src public",
+    "build:netlify": "npm run build",
+    "buildFonts": "node scripts/generateFonts.mjs",
+    "postinstall": "npm run buildFonts",
+    "start": "charge serve src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@emotion/core": "11.0.0",
+    "@emotion/react": "11.10.6",
+    "@emotion/styled": "11.10.6",
+    "@ibm/plex": "6.1.1",
+    "@tablecheck/tablekit-css": "2.0.0"
+  },
+  "devDependencies": {
+    "@static/charge": "1.7.0",
+    "fs-extra": "11.1.0"
+  }
+}

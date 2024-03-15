@@ -1,0 +1,15 @@
+@import '@tablecheck/tablekit-css/tablekit.classless.min.css';
+@import './fonts.css';
+
+:root {
+  --containerWidth: 1280px;
+  --headerHeight: 64px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}

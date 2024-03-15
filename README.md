@@ -6,7 +6,7 @@ Next generation UI component library
 
 ```shell
 nvm use
-npm ci --legacy-peer-deps
+npm ci
 npm start
 ```
 

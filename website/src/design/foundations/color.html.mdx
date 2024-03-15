@@ -1,0 +1,34 @@
+import Layout from '../../layout/index.html';
+
+import { IntroText } from '../../layout/body.styles';
+
+export default function (props) {
+  return (
+    <Layout
+      title="Design"
+      sideNav="design"
+      editPageRoute="design/foundations/color"
+      shouldIncludePageIndex
+    >
+      {props.children}
+    </Layout>
+  );
+}
+
+# Color
+
+<IntroText>
+  Color is a fundamental piece in TableKit&apos;s visual language. In this guide
+  you will learn about the principles, patterns, and abstractions that make
+  TableKit’s color system.
+</IntroText>
+
+## [Get started](website/src/design.html#get-started)
+
+![Dark and Light modes](/static/img/light-and-dark.png 'Two different types of color modes: light mode and dark mode')
+
+TableKit's UI offers a variety of different color modes. Every pattern in TableKit is built to work across all color modes out of the box.
+
+When designing product interfaces in Figma, we recommend using light mode. This is best because the TableKit Figma components are only available in light mode. To preview your work in other modes, use the [Figma color mode plugin](https://www.figma.com/community/plugin/992128487074360945/Change-Color-Mode).
+
+To be continued...

@@ -24,11 +24,13 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm ci --legacy-peer-deps
+          npm ci
           npm run build:storybook
+        env:
+          NODE_OPTIONS: --max-old-space-size=16384
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: docs
-          folder: docs
+          folder: system/stories/storybook-static
