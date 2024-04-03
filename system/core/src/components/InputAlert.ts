@@ -37,6 +37,11 @@ export const baseStyles = css`
     padding: var(--spacing-l2) var(--spacing-l3);
   }
 
+  &[data-variant='bare'],
+  &[data-variant='disabled'] {
+    grid-template-columns: 1fr;
+  }
+
   &[data-variant='disabled'] {
     color: var(--text-disabled);
   }
