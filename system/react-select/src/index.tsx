@@ -83,7 +83,7 @@ const IconWrapper = styled.div`
 const IndicatorWrapper = styled.div`
   height: 20px;
   svg {
-    color: var(--text);
+    color: currentColor;
   }
 `;
 
@@ -327,7 +327,7 @@ export function useReactSelectConfig<
           backgroundColor: isDisabled
             ? 'var(--surface-disabled)'
             : 'var(--surface)',
-          color: 'var(--text)',
+          color: isDisabled ? 'var(--text-disabled)' : 'var(--text)',
           boxShadow,
           display: 'grid',
           gridTemplateAreas: icon
