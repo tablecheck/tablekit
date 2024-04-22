@@ -32,6 +32,7 @@ export const baseStyles = css`
 
   & > input,
   & > select {
+    color: currentColor;
     &,
     &[data-pseudo='focus'],
     &:focus {
