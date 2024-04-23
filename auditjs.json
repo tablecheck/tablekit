@@ -1212,6 +1212,70 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-26467?component-type=npm&component-name=railroad-diagrams&utm_source=auditjs&utm_medium=integration&utm_content=4.0.39"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/express@4.18.2",
+      "description": "Fast, unopinionated, minimalist web framework",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/express@4.18.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-29041",
+          "title": "[CVE-2024-29041] CWE-1286 CWE-601",
+          "description": "Express.js minimalist web framework for node. Versions of Express.js prior to 4.19.0 and all pre-release alpha and beta versions of 5.0 are affected by an open redirect vulnerability using malformed URLs. When a user of Express performs a redirect using a user-provided URL Express performs an encode [using `encodeurl`](https://github.com/pillarjs/encodeurl) on the contents before passing it to the `location` header. This can cause malformed URLs to be evaluated in unexpected ways by common redirect allow list implementations in Express applications, leading to an Open Redirect via bypass of a properly implemented allow list. The main method impacted is `res.location()` but this is also called from within `res.redirect()`. The vulnerability is fixed in 4.19.2 and 5.0.0-beta.3.",
+          "cvssScore": 6.1,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cve": "CVE-2024-29041",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-29041?component-type=npm&component-name=express&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/follow-redirects@1.15.2",
+      "description": "HTTP and HTTPS modules that follow redirects.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/follow-redirects@1.15.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-28849",
+          "title": "[CVE-2024-28849] CWE-200: Information Exposure",
+          "description": "follow-redirects is an open source, drop-in replacement for Node's `http` and `https` modules that automatically follows redirects. In affected versions follow-redirects only clears authorization header during cross-domain redirect, but keep the proxy-authentication header which contains credentials too. This vulnerability may lead to credentials leak, but has been addressed in version 1.15.6. Users are advised to upgrade. There are no known workarounds for this vulnerability.\n\nSonatype's research suggests that this CVE's details differ from those defined at NVD. See https://ossindex.sonatype.org/vulnerability/CVE-2024-28849 for details",
+          "cvssScore": 6.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cve": "CVE-2024-28849",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-28849?component-type=npm&component-name=follow-redirects&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/webpack-dev-middleware@3.7.3",
+      "description": "A development middleware for webpack",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/webpack-dev-middleware@3.7.3?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-29180",
+          "title": "[CVE-2024-29180] CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+          "description": "Prior to versions 7.1.0, 6.1.2, and 5.3.4, the webpack-dev-middleware development middleware for devpack does not validate the supplied URL address sufficiently before returning the local file. It is possible to access any file on the developer's machine. The middleware can either work with the physical filesystem when reading the files or it can use a virtualized in-memory `memfs` filesystem. If `writeToDisk` configuration option is set to `true`, the physical filesystem is used. The `getFilenameFromUrl` method is used to parse URL and build the local file path. The public path prefix is stripped from the URL, and the `unsecaped` path suffix is appended to the `outputPath`. As the URL is not unescaped and normalized automatically before calling the midlleware, it is possible to use `%2e` and `%2f` sequences to perform path traversal attack.\n\nDevelopers using `webpack-dev-server` or `webpack-dev-middleware` are affected by the issue. When the project is started, an attacker might access any file on the developer's machine and exfiltrate the content. If the development server is listening on a public IP address (or `0.0.0.0`), an attacker on the local network can access the local files without any interaction from the victim (direct connection to the port). If the server allows access from third-party domains, an attacker can send a malicious link to the victim. When visited, the client side script can connect to the local server and exfiltrate the local files. Starting with fixed versions 7.1.0, 6.1.2, and 5.3.4, the URL is unescaped and normalized before any further processing.",
+          "cvssScore": 7.4,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+          "cve": "CVE-2024-29180",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-29180?component-type=npm&component-name=webpack-dev-middleware&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/tar@6.1.13",
+      "description": "tar for node",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/tar@6.1.13?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-28863",
+          "title": "[CVE-2024-28863] CWE-400: Uncontrolled Resource Consumption ('Resource Exhaustion')",
+          "description": "node-tar is a Tar for Node.js. node-tar prior to version 6.2.1 has no limit on the number of sub-folders created in the folder creation process. An attacker who generates a large number of sub-folders can consume memory on the system running node-tar and even crash the Node.js client within few seconds of running it using a path with too many sub-folders inside. Version 6.2.1 fixes this issue by preventing extraction in excessively deep sub-folders.",
+          "cvssScore": 6.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2024-28863",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-28863?component-type=npm&component-name=tar&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1442,6 +1506,18 @@
     },
     {
       "id": "CVE-2024-26467"
+    },
+    {
+      "id": "CVE-2024-29041"
+    },
+    {
+      "id": "CVE-2024-28849"
+    },
+    {
+      "id": "CVE-2024-29180"
+    },
+    {
+      "id": "CVE-2024-28863"
     }
   ]
 }
