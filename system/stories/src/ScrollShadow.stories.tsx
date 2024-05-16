@@ -5,7 +5,7 @@ import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
 export default {
-  title: 'TableKit/ScrollShadow',
+  title: 'Components/ScrollShadow',
   component: emotion.ScrollShadow,
   parameters: { variants: ['Start', 'Center', 'End'], ...scrollShadow }
 } as Meta;

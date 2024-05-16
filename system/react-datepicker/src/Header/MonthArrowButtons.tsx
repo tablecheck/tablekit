@@ -1,38 +1,8 @@
 import { ChevronLeft, ChevronRight } from '@carbon/icons-react';
-import styled from '@emotion/styled';
+import { IconButton, getConfigDefault } from '@tablecheck/tablekit-react';
 import * as React from 'react';
 
 import { useDatePickerContext } from '../Root';
-
-const DirectionButton = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  gap: 8px;
-  border-radius: 4px;
-  cursor: pointer;
-
-  width: 40px;
-  height: 48px;
-
-  color: var(--text);
-  background: var(--surface);
-
-  &[data-pseudo='hover'],
-  &:hover {
-    background: var(--surface-hover);
-  }
-  &:disabled {
-    background: var(--surface);
-    color: var(--text-disabled);
-  }
-  &[data-pseudo='focus'],
-  &:focus {
-    box-shadow: 2px solid var(--focus);
-  }
-`;
 
 export const PreviousMonth = React.forwardRef<
   HTMLButtonElement,
@@ -40,13 +10,15 @@ export const PreviousMonth = React.forwardRef<
 >((props, ref) => {
   const { calendars, getBackProps } = useDatePickerContext();
   return (
-    <DirectionButton
+    <IconButton
       {...getBackProps({ ...props, calendars, offset: 1 })}
+      data-size="small"
+      data-variant="bare"
       type="button"
       ref={ref}
     >
-      <ChevronLeft size={20} />
-    </DirectionButton>
+      <ChevronLeft size={getConfigDefault('iconSize')} />
+    </IconButton>
   );
 });
 export const NextMonth = React.forwardRef<
@@ -55,12 +27,14 @@ export const NextMonth = React.forwardRef<
 >((props, ref) => {
   const { calendars, getForwardProps } = useDatePickerContext();
   return (
-    <DirectionButton
+    <IconButton
       {...getForwardProps({ ...props, calendars, offset: 1 })}
+      data-size="small"
+      data-variant="bare"
       type="button"
       ref={ref}
     >
-      <ChevronRight size={20} />
-    </DirectionButton>
+      <ChevronRight size={getConfigDefault('iconSize')} />
+    </IconButton>
   );
 });

@@ -1,10 +1,14 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
-import { variantStyles as buttonVariantStyles } from './Button';
+import { variantStyles as buttonVariantStyles, ButtonVariant } from './Button';
 import {
   beforeStyles as spinnerBeforeStyles,
   coreStyles as spinnerElementStyles
 } from './Spinner';
+
+export { configurableDefaultProps } from './Button';
+
+export type IconButtonVariant = ButtonVariant | 'danger-bare';
 
 export const element = 'button';
 export const selectors = ['button.icon', 'a[role="button"].icon'];
@@ -15,48 +19,51 @@ export interface Props {
   'data-size'?: 'small' | 'medium' | 'large';
   'aria-busy'?: boolean;
   'data-round'?: boolean;
+  'data-mode'?: 'default' | 'input-append';
   /**
    * @deprecated The tooltip styling clashes with the busy styling, apply the tooltip on a wrapper component
    */
   'data-tooltip'?: never;
 }
 
-const variants = [
-  'primary',
-  'secondary',
-  'tertiary',
-  'ghost',
-  'bare',
-  'danger'
-] as const;
-
-export type IconButtonVariant = (typeof variants)[number];
-
 export const variantStyles = {
-  ...buttonVariantStyles
+  ...buttonVariantStyles,
+  'danger-bare': css`
+    ${buttonVariantStyles.danger}
+    --tk-button-border-color: transparent;
+  `
 };
 
 export const coreStyles = css`
   position: relative;
   display: grid;
-  padding: 9px;
   cursor: pointer;
   text-decoration: none;
 
   font-size: 16px;
-  line-height: 24px;
+  line-height: 20px;
   border-radius: var(--border-radius-small);
 
   align-items: center;
   text-align: center;
 
-  border: solid 1px var(--border-color);
+  border: solid 1px var(--tk-button-border-color);
+
+  --tk-icon-button-padding: 9px;
+  padding: var(--tk-icon-button-padding);
+  &[data-size='small'] {
+    --tk-icon-button-padding: 7px;
+  }
+  &[data-size='large'] {
+    --tk-icon-button-padding: 13px;
+  }
 
   &[data-pseudo='focus'],
-  &:focus:not(:focus-visible),
+  &:focus,
   &:focus-visible {
     outline: none;
-    &:after {
+    &:not([data-mode='input-append']):after {
+      display: block;
       content: '';
       pointer-events: none;
       position: absolute;
@@ -65,8 +72,11 @@ export const coreStyles = css`
       left: -3px;
       right: -3px;
       border-radius: 6px;
-      border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
+      box-shadow: 0 0 0 2px var(--focus);
     }
+  }
+  &:focus:not(:focus-visible):after {
+    box-shadow: none !important;
   }
 
   &:disabled:disabled {
@@ -75,11 +85,13 @@ export const coreStyles = css`
     &[data-pseudo='active'],
     &:hover,
     &:active {
-      --background-color: var(--surface-disabled);
-      --border-color: var(--surface-disabled);
-      --color: var(--text-disabled);
       cursor: not-allowed;
       pointer-events: none;
+      --tk-button-color: var(--text-disabled);
+      &:not([data-variant='bare']) {
+        --tk-button-background-color: var(--surface-disabled);
+        --tk-button-border-color: var(--surface-disabled);
+      }
     }
     &:after {
       border: none;
@@ -89,9 +101,9 @@ export const coreStyles = css`
   &,
   &:any-link,
   &:hover {
-    color: var(--color);
+    color: var(--tk-button-color);
   }
-  background-color: var(--background-color);
+  background-color: var(--tk-button-background-color);
   --loading-transition: 300ms ease-in-out;
   transition: color var(--loading-transition),
     background-color var(--loading-transition),
@@ -105,7 +117,7 @@ export const coreStyles = css`
     top: calc(50% - var(--spinner-size) / 2);
     left: calc(50% - var(--spinner-size) / 2);
     opacity: 0;
-    background-color: var(--color);
+    background-color: var(--tk-button-color);
     transition: opacity var(--loading-transition);
     transition-delay: 0ms;
     z-index: 2;
@@ -124,27 +136,30 @@ export const coreStyles = css`
   &[data-round] {
     border-radius: 50%;
     &[data-pseudo='focus'],
-    &:focus:not(:focus-visible),
+    &:focus,
     &:focus-visible {
       border-radius: 50%;
-      &::after {
+      &:after {
         border-radius: 50%;
       }
     }
   }
-
-  &[data-size='small'] {
-    padding: 7px;
-  }
-
-  &[data-size='large'] {
-    padding: 13px;
-  }
 `;
 
-export const baseStyles = css`
+export const fullStyles = css`
   ${coreStyles}
-  &:not([data-variant]) {
+
+  &[data-mode='input-append'] {
+    height: var(--tk-input-height);
+    --tk-icon-button-padding: 8px !important;
+    border-color: transparent !important;
+    margin: 0 -8px;
+    &:not([data-variant]) {
+      ${variantStyles.bare};
+    }
+  }
+
+  &:not([data-variant]):not([data-mode='input-append']) {
     ${variantStyles.primary}
   }
 `;

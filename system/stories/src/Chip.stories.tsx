@@ -2,6 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import { chip, chipRow } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
+import * as React from 'react';
 
 const contentVariants = [
   'Default',
@@ -13,7 +14,7 @@ const contentVariants = [
 ] as const;
 
 export default {
-  title: 'TableKit/Chip',
+  title: 'Components/Chip',
   component: emotion.Chip,
   parameters: {
     ...chip,
@@ -24,29 +25,25 @@ export default {
   }
 } as Meta;
 
-const chips = ['State', 'Default'];
-
 const Template: Story = ({ Chip, ChipRow }) => (
   <>
-    {(['small', undefined] as const).map((size) => (
-      <>
+    {(['small', 'medium', 'large'] as const).map((size) => (
+      <React.Fragment key={size}>
+        <h4>{size}</h4>
         {contentVariants.map((variant) => (
           <ChipRow role="tablist">
-            {chips.map((name, i) => (
-              <Chip
-                key={name}
-                data-variant={i === 0 && variant}
-                data-size={size}
-                disabled={i === 0 && variant === 'Disabled'}
-                aria-selected={i === 0 && variant === 'Selected'}
-                data-pseudo={i === 0 && variant.toLowerCase()}
-              >
-                {name} {size}
-              </Chip>
-            ))}
+            <Chip
+              key={variant}
+              data-size={size}
+              disabled={variant === 'Disabled'}
+              aria-selected={variant === 'Selected'}
+              data-pseudo={variant.toLowerCase()}
+            >
+              {size}
+            </Chip>
           </ChipRow>
         ))}
-      </>
+      </React.Fragment>
     ))}
   </>
 );

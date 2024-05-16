@@ -13,7 +13,7 @@ import { addDays, addMonths, isSameDay } from 'date-fns';
 import { Table, InfoWrapper } from './storyStyles';
 
 export default {
-  title: 'TableKit/Date Picker',
+  title: 'Components/Date Picker',
   component: Root,
   parameters: {
     layout: 'fullscreen',

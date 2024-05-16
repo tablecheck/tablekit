@@ -68,7 +68,7 @@ const contentVariants: emotion.InputStructureProps[] = [
 ];
 
 export default {
-  title: 'TableKit/InputStructure',
+  title: 'Components/InputStructure',
   component: emotion.InputStructure,
   parameters: {
     ...inputStructure

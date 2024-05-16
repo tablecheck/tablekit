@@ -1,4 +1,4 @@
-import { css, CSSObject } from '@emotion/react';
+import { css, CSSObject } from '../utils';
 
 export const className = 'menu';
 
@@ -8,12 +8,12 @@ export interface Props {}
 /**
  * We export the objects as well for compatibilty with 3rd party libs like react-select
  */
-export const baseStylesObject: CSSObject = {
+export const fullStylesObject: CSSObject = {
   backgroundColor: 'var(--surface)',
   boxShadow: 'var(--elevation-small)',
   borderRadius: 'var(--border-radius-small)',
-  padding: 'var(--spacing-l1)',
+  padding: 0,
   zIndex: 'var(--zindex-layer)'
 };
 
-export const baseStyles = css(baseStylesObject);
+export const fullStyles = css(fullStylesObject);

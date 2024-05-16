@@ -2,7 +2,6 @@
 /* eslint-disable max-classes-per-file, @typescript-eslint/explicit-module-boundary-types, class-methods-use-this */
 import path from 'path';
 
-import { SerializedStyles } from '@emotion/react';
 import chalk from 'chalk';
 import { outputFile } from 'fs-extra';
 import postcss from 'postcss';
@@ -101,7 +100,7 @@ export class UtilFileBuilder extends CssFileBuilder {
         `utils files must have a single export with the same name as the file`
       );
     const [outputStyles, keyframes] = evaluateStyleElement(
-      this.fileContent[this.exportName].styles
+      this.fileContent[this.exportName]
     );
     return this.buildCssFiles(outputStyles, keyframes);
   }
@@ -120,8 +119,8 @@ interface ComponentFileContent {
   element?: string;
   className?: string;
   selectors?: string[];
-  baseStyles: SerializedStyles;
-  variantStyles?: Record<string, SerializedStyles>;
+  fullStyles: string;
+  variantStyles?: Record<string, string>;
 }
 
 export class ComponentBuilder extends CssFileBuilder<ComponentFileContent> {
@@ -147,11 +146,11 @@ export class ComponentBuilder extends CssFileBuilder<ComponentFileContent> {
   }
 
   async build() {
-    const { selectors = [], baseStyles, variantStyles } = this.fileContent;
-    if (!baseStyles) {
+    const { selectors = [], fullStyles, variantStyles } = this.fileContent;
+    if (typeof fullStyles !== 'string') {
       console.log(
         chalk.yellow(
-          `No export "baseStyles" found in "${this.folderName}/${this.fileName}", skipping file generation.`
+          `No export "fullStyles" found in "${this.folderName}/${this.fileName}", skipping file generation.`
         )
       );
       return { classy: [], classless: [] };
@@ -168,7 +167,7 @@ export class ComponentBuilder extends CssFileBuilder<ComponentFileContent> {
         )} does not export either a "className" or "selectors" value`
       );
     }
-    const [outputStyles, keyframes] = evaluateStyleElement(baseStyles);
+    const [outputStyles, keyframes] = evaluateStyleElement(fullStyles);
     let variantOutputStyles;
     if (variantStyles) {
       variantOutputStyles = Object.entries(variantStyles).reduce(

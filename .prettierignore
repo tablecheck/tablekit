@@ -9,3 +9,8 @@ assets
 CHANGELOG.md
 system/css/*.css
 website/src/static/css/fonts.css
+.nx
+.gritmodules
+storybook-static
+tmp
+.@tablecheck

@@ -1,12 +1,11 @@
 /**
- * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
- * The exports here are generated from @tablecheck/tablekit-core
+ * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
  */
-import type { scrollShadow } from '@tablecheck/tablekit-core';
+import { scrollShadow } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
-export type Props = scrollShadow.Props;
+export type Props = scrollShadow.Props & React.HTMLAttributes<HTMLDivElement>;
 
 export const ScrollShadow = React.forwardRef<
   HTMLDivElement,
@@ -14,7 +13,8 @@ export const ScrollShadow = React.forwardRef<
 >((props, ref) => (
   <div
     {...props}
+    className={`${props.className ?? ''} scroll-shadow`}
     ref={ref}
-    className={`${props.className || ''} scroll-shadow`}
   />
 ));
+ScrollShadow.displayName = `ScrollShadow`;

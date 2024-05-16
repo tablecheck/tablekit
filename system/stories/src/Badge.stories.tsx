@@ -3,30 +3,40 @@ import { Story, Meta } from '@storybook/react';
 import { badge } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
+import * as React from 'react';
 
 const variants = Object.keys(badge.variantStyles);
 
 export default {
-  title: 'TableKit/Badge',
+  title: 'Components/Badge',
   component: emotion.Badge,
   parameters: { ...badge, variants }
 } as Meta;
 
 const Template: Story = ({ Badge }) => (
   <>
-    {(['x-large', 'large', 'medium', 'small', 'x-small'] as const).map((size) =>
-      ['left', 'right', false].map((hasIcon) =>
-        variants.map((variant) => (
-          <Badge key={variant} data-variant={variant} data-size={size}>
-            {hasIcon === 'left' ? (
-              <FavoriteFilled size={size ? 16 : 20} />
-            ) : null}
-            {size}
-            {hasIcon === 'right' ? (
-              <FavoriteFilled size={size ? 16 : 20} />
-            ) : null}
-          </Badge>
-        ))
+    {(['x-large', 'large', 'medium', 'small', 'x-small'] as const).map(
+      (size) => (
+        <React.Fragment key={size}>
+          <h4>{size}</h4>
+          {['left', 'right', false].map((hasIcon) =>
+            variants.map((variant) => (
+              <Badge
+                key={variant + hasIcon}
+                data-variant={variant}
+                data-size={size}
+              >
+                {hasIcon === 'left' ? (
+                  <FavoriteFilled size={size ? 16 : 20} />
+                ) : null}
+                Text
+                {hasIcon === 'right' ? (
+                  <FavoriteFilled size={size ? 16 : 20} />
+                ) : null}
+              </Badge>
+            ))
+          )}
+        </React.Fragment>
       )
     )}
   </>

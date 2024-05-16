@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const element = 'button';
 export const className = 'tab-button';
@@ -19,21 +19,26 @@ export const defaultProps = {
   role: 'tab'
 };
 
-export const baseStyles = css`
+export const fullStyles = css`
   padding: var(--spacing-l3) var(--spacing-l4);
   position: relative;
   text-decoration: none !important;
-  color: var(--text);
+  --tk-tab-button-color: var(--text-subtle);
+  color: var(--tk-tab-button-color);
   font-weight: 400;
   white-space: nowrap;
-  cursor: pointer;
-  --underline-height: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:not([aria-selected='true']) {
+    cursor: pointer;
+  }
   &:after {
     display: block;
     content: '';
     position: absolute;
     bottom: 0;
-    height: var(--underline-height);
+    height: var(--tk-tabs-underline-height, 2px);
     left: 0;
     right: 0;
     background: var(--text);
@@ -58,7 +63,7 @@ export const baseStyles = css`
     }
   }
   &[aria-selected='true'] {
-    font-weight: 600;
+    --tk-tab-button-color: var(--text);
     &:after {
       opacity: 1;
       transform: scale(1);

@@ -1,21 +1,21 @@
 /**
- * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
- * The exports here are generated from @tablecheck/tablekit-core
+ * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
  */
-import type { tabs } from '@tablecheck/tablekit-core';
+import { tabs } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
-export type Props = tabs.DefaultedProps;
+export type Props = tabs.DefaultedProps & React.HTMLAttributes<HTMLDivElement>;
 
 export const Tabs = React.forwardRef<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
 >((props, ref) => (
   <div
-    role="tablist"
     {...props}
+    className={`${props.className ?? ''} tabs`}
+    role={props.role ?? (tabs.defaultProps.role as never)}
     ref={ref}
-    className={`${props.className || ''} tabs`}
   />
 ));
+Tabs.displayName = `Tabs`;

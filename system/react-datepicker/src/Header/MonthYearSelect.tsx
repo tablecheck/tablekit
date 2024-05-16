@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
-import { Select } from '@tablecheck/tablekit-react';
+import { selectStyledComponents } from '@tablecheck/tablekit-react';
 import * as React from 'react';
 
-const BaseSelect = styled(Select)`
-  min-width: var(--width);
-  max-width: var(--width);
-  width: var(--width);
+const BaseSelect = styled(selectStyledComponents.Base)`
+  min-width: var(--tk-date-select-width);
+  max-width: var(--tk-date-select-width);
+  width: var(--tk-date-select-width);
 
   background-image: none !important;
   text-align: center;
-  padding: var(--spacing-l3) !important;
+  padding: calc(var(--tk-input-vertical-padding) - var(--tk-input-border-width))
+    var(--tk-input-horizontal-padding);
 `;
 
 interface Props {
@@ -26,9 +27,10 @@ export function MonthSelect({
 }: Props & { formatMonth: (month: number) => string }): JSX.Element {
   return (
     <BaseSelect
+      data-size="small"
       value={value}
       onChange={onChange}
-      style={{ '--width': '117px' } as React.CSSProperties}
+      style={{ '--tk-date-select-width': '117px' } as React.CSSProperties}
     >
       {months.map((month) => (
         <option key={month} value={month}>
@@ -54,9 +56,10 @@ export function YearSelect({
   }, [startYear, endYear]);
   return (
     <BaseSelect
+      data-size="small"
       value={value}
       onChange={onChange}
-      style={{ '--width': '71px' } as React.CSSProperties}
+      style={{ '--tk-date-select-width': '71px' } as React.CSSProperties}
     >
       {years.map((year) => (
         <option key={year} value={year}>

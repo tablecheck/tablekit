@@ -13,12 +13,13 @@ export interface Props {
 }
 
 const Wrapper = styled.div`
-  ${inputStructure.baseStyles}
+  ${inputStructure.fullStyles}
 `;
 
 const LabelRow = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 `;
 
 export function InputStructure({

@@ -1,11 +1,3 @@
-import {
-  CarbonIcon,
-  CheckmarkFilled,
-  Close,
-  Information,
-  WarningAlt,
-  WarningAltFilled
-} from '@carbon/icons-react';
 import { Meta, StoryFn } from '@storybook/react';
 import { alert } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
@@ -20,158 +12,54 @@ const contentVariants: emotion.AlertProps['data-variant'][] = [
   'neutral'
 ];
 
-const CloseIcon = () => <Close size={20} />;
+type LayoutComponents = Record<'Alert', React.ElementType>;
 
-type LayoutComponents = Record<
-  'Title' | 'Description' | 'CloseButton' | 'IconWrapper',
-  React.ElementType
->;
-
-const layouts: {
+const layouts: ({
   key: emotion.AlertProps['data-layout'];
-  render: (
-    layoutComponents: LayoutComponents,
-    icon: CarbonIcon
-  ) => React.ReactNode;
-}[] = [
+} & Omit<
+  React.ComponentPropsWithoutRef<typeof emotion.Alert>,
+  'data-variant' | 'children'
+>)[] = [
   {
     key: 'icon-title-close',
-    render: (
-      { CloseButton, Description, IconWrapper, Title },
-      InstanceIcon
-    ) => (
-      <>
-        <IconWrapper>
-          <InstanceIcon size={20} />
-        </IconWrapper>
-        <Title>Title</Title>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-        <CloseButton>
-          <CloseIcon />
-        </CloseButton>
-      </>
-    )
+    title: 'Icon, title, and close button',
+    onClose: () => {}
   },
   {
     key: 'title-close',
-    render: ({ CloseButton, Description, Title }) => (
-      <>
-        <Title>Title</Title>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-        <CloseButton>
-          <CloseIcon />
-        </CloseButton>
-      </>
-    )
+    title: 'Title and close button',
+    icon: null,
+    onClose: () => {}
   },
   {
     key: 'icon-title',
-    render: ({ Description, IconWrapper, Title }, InstanceIcon) => (
-      <>
-        <IconWrapper>
-          <InstanceIcon size={20} />
-        </IconWrapper>
-        <Title>Title</Title>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-      </>
-    )
+    title: 'Icon and title'
   },
   {
     key: 'title',
-    render: ({ Description, Title }) => (
-      <>
-        <Title>Title</Title>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-      </>
-    )
+    title: 'Title',
+    icon: null
   },
   {
     key: 'icon-close',
-    render: ({ CloseButton, Description, IconWrapper }, InstanceIcon) => (
-      <>
-        <IconWrapper>
-          <InstanceIcon size={16} />
-        </IconWrapper>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-        <CloseButton>
-          <CloseIcon />
-        </CloseButton>
-      </>
-    )
+    onClose: () => {}
   },
   {
     key: 'close',
-    render: ({ CloseButton, Description }) => (
-      <>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-        <CloseButton>
-          <CloseIcon />
-        </CloseButton>
-      </>
-    )
+    icon: null,
+    onClose: () => {}
   },
   {
-    key: 'icon',
-    render: ({ Description, IconWrapper }, InstanceIcon) => (
-      <>
-        <IconWrapper>
-          <InstanceIcon size={16} />
-        </IconWrapper>
-        <Description>
-          <p>More text here</p>
-          <p>More text here</p>
-          <p>More text here</p>
-        </Description>
-      </>
-    )
+    key: 'icon'
   },
   {
     key: 'text-only',
-    render: ({ Description }) => <Description>More text here</Description>
+    icon: null
   }
 ];
 
-// eslint-disable-next-line consistent-return
-function getIcon(variant: (typeof contentVariants)[number]) {
-  switch (variant) {
-    case 'success':
-      return CheckmarkFilled;
-    case 'error':
-      return WarningAltFilled;
-    case 'neutral':
-    case 'info':
-      return Information;
-    case 'warning':
-      return WarningAlt;
-  }
-}
-
 export default {
-  title: 'TableKit/Alert',
+  title: 'Components/Alert',
   component: emotion.Alert,
   parameters: {
     ...alert,
@@ -186,19 +74,19 @@ export default {
   }
 } as Meta;
 
-const Template: StoryFn = ({ Alert, ...layoutComponents }) => (
+const Template: StoryFn = ({ Alert }) => (
   <>
-    {layouts.map((layout) =>
+    {layouts.map(({ key, ...layout }) =>
       contentVariants.map((variant) => (
         <Alert
-          key={`${variant}-${layout}`}
+          key={`${variant}-${key}`}
           data-variant={variant}
-          data-layout={layout.key}
+          data-layout={key}
+          {...layout}
         >
-          {layout.render(
-            layoutComponents as LayoutComponents,
-            getIcon(variant)
-          )}
+          <p>More text here</p>
+          <p>More text here</p>
+          <p>More text here</p>
         </Alert>
       ))
     )}
@@ -207,20 +95,12 @@ const Template: StoryFn = ({ Alert, ...layoutComponents }) => (
 
 export const Emotion: StoryFn = Template.bind({});
 Emotion.args = {
-  Alert: emotion.Alert,
-  Title: emotion.AlertTitle,
-  Description: emotion.AlertDescription,
-  CloseButton: emotion.AlertCloseButton,
-  IconWrapper: emotion.AlertIconWrapper
-} satisfies LayoutComponents & { Alert: React.ElementType };
+  Alert: emotion.Alert
+} satisfies LayoutComponents;
 Emotion.parameters = { useEmotion: true };
 
 export const Class: StoryFn = Template.bind({});
 Class.args = {
-  Alert: css.Alert,
-  Title: css.AlertTitle,
-  Description: css.AlertDescription,
-  CloseButton: css.AlertCloseButton,
-  IconWrapper: css.AlertIconWrapper
-} satisfies LayoutComponents & { Alert: React.ElementType };
+  Alert: css.Alert
+} satisfies LayoutComponents;
 Class.parameters = { useEmotion: false };

@@ -1,9 +1,9 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '../utils';
 
 export const element = 'span';
 export const className = 'badge';
 
-export const baseStyles = css`
+export const fullStyles = css`
   width: max-content;
   font: var(--label);
   display: grid;
@@ -67,5 +67,5 @@ export const variantStyles = variants.reduce(
             background-color: var(--${key}-surface);
           `
   }),
-  {} as Record<BadgeVariant, SerializedStyles>
+  {} as Record<BadgeVariant, string>
 );

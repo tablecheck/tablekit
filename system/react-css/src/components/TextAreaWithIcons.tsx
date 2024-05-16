@@ -1,12 +1,14 @@
 /**
- * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
- * The exports here are generated from @tablecheck/tablekit-core
+ * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
  */
-import type { textAreaWithIcons } from '@tablecheck/tablekit-core';
+import { textAreaWithIcons } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
-export type Props = textAreaWithIcons.Props;
+import { getConfigDefault } from '../config';
+
+export type Props = textAreaWithIcons.Props &
+  React.HTMLAttributes<HTMLDivElement>;
 
 export const TextAreaWithIcons = React.forwardRef<
   HTMLDivElement,
@@ -14,7 +16,9 @@ export const TextAreaWithIcons = React.forwardRef<
 >((props, ref) => (
   <div
     {...props}
+    className={`${props.className ?? ''} textarea-with-icons`}
+    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
     ref={ref}
-    className={`${props.className || ''} textarea-with-icons`}
   />
 ));
+TextAreaWithIcons.displayName = `TextAreaWithIcons`;

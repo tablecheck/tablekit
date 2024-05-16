@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const className = 'scroll-shadow';
 
@@ -9,18 +9,22 @@ export interface Props {
   'data-overflow': 'x' | 'y';
 }
 
-export const baseStyles = css`
+export const fullStyles = css`
+  --tk-scroll-shadow-background: var(--surface);
   background-repeat: no-repeat;
-  background-color: var(--surface);
+  background-color: var(--tk-scroll-shadow-background);
   /* Opera doesn't support this in the shorthand */
   background-attachment: local, local, scroll, scroll;
   &[data-overflow='y'] {
     overflow-y: auto;
     background-image: /* Shadow covers */ linear-gradient(
-        var(--surface) 30%,
-        var(--surface)
+        var(--tk-scroll-shadow-background) 30%,
+        var(--tk-scroll-shadow-background)
       ),
-      linear-gradient(var(--surface), var(--surface) 70%),
+      linear-gradient(
+        var(--tk-scroll-shadow-background),
+        var(--tk-scroll-shadow-background) 70%
+      ),
       /* Shadows */
         radial-gradient(
           farthest-side at 0% 0,
@@ -38,10 +42,13 @@ export const baseStyles = css`
   &[data-overflow='x'] {
     overflow-x: auto;
     background-image: /* Shadow covers */ linear-gradient(
-        var(--surface) 30%,
-        var(--surface)
+        var(--tk-scroll-shadow-background) 30%,
+        var(--tk-scroll-shadow-background)
       ),
-      linear-gradient(var(--surface), var(--surface) 70%),
+      linear-gradient(
+        var(--tk-scroll-shadow-background),
+        var(--tk-scroll-shadow-background) 70%
+      ),
       /* Shadows */
         radial-gradient(
           farthest-side at 0% 0%,

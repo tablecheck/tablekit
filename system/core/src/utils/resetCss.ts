@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const resetCss = css`
   * {

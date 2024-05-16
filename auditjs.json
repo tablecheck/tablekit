@@ -1276,6 +1276,86 @@
           "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-28863?component-type=npm&component-name=tar&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
         }
       ]
+    },
+    {
+      "coordinates": "pkg:npm/micromatch@4.0.5",
+      "description": "Glob matching for javascript/node.js. A replacement and faster alternative to minimatch and multimatch.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/micromatch@4.0.5?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-4067",
+          "title": "[CVE-2024-4067] CWE-1333",
+          "description": "The NPM package `micromatch` is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persists. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2024-4067",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-4067?component-type=npm&component-name=micromatch&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/braces@3.0.2",
+      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/braces@3.0.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-4068",
+          "title": "[CVE-2024-4068] CWE-1050",
+          "description": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2024-4068",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-4068?component-type=npm&component-name=braces&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/micromatch@3.1.10",
+      "description": "Glob matching for javascript/node.js. A replacement and faster alternative to minimatch and multimatch.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/micromatch@3.1.10?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-4067",
+          "title": "[CVE-2024-4067] CWE-1333",
+          "description": "The NPM package `micromatch` is vulnerable to Regular Expression Denial of Service (ReDoS). The vulnerability occurs in `micromatch.braces()` in `index.js` because the pattern `.*` will greedily match anything. By passing a malicious payload, the pattern matching will keep backtracking to the input while it doesn't find the closing bracket. As the input size increases, the consumption time will also increase until it causes the application to hang or slow down. There was a merged fix but further testing shows the issue persists. This issue should be mitigated by using a safe pattern that won't start backtracking the regular expression due to greedy matching.\n",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2024-4067",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-4067?component-type=npm&component-name=micromatch&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/braces@2.3.2",
+      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/braces@2.3.2?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-4068",
+          "title": "[CVE-2024-4068] CWE-1050",
+          "description": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
+          "cvssScore": 7.5,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cve": "CVE-2024-4068",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-4068?component-type=npm&component-name=braces&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
+    },
+    {
+      "coordinates": "pkg:npm/ejs@3.1.9",
+      "description": "Embedded JavaScript templates",
+      "reference": "https://ossindex.sonatype.org/component/pkg:npm/ejs@3.1.9?utm_source=auditjs&utm_medium=integration&utm_content=4.0.45",
+      "vulnerabilities": [
+        {
+          "id": "CVE-2024-33883",
+          "title": "[CVE-2024-33883] CWE-1321",
+          "description": "The ejs (aka Embedded JavaScript templates) package before 3.1.10 for Node.js lacks certain pollution protection.",
+          "cvssScore": 8.6,
+          "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+          "cve": "CVE-2024-33883",
+          "reference": "https://ossindex.sonatype.org/vulnerability/CVE-2024-33883?component-type=npm&component-name=ejs&utm_source=auditjs&utm_medium=integration&utm_content=4.0.45"
+        }
+      ]
     }
   ],
   "ignore": [
@@ -1518,6 +1598,15 @@
     },
     {
       "id": "CVE-2024-28863"
+    },
+    {
+      "id": "CVE-2024-4067"
+    },
+    {
+      "id": "CVE-2024-4068"
+    },
+    {
+      "id": "CVE-2024-33883"
     }
   ]
 }

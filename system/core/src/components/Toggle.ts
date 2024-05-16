@@ -1,127 +1,99 @@
-import { css } from '@emotion/react';
-
-import { OptionalKeys } from '../typeUtils';
+import { OptionalKeys, css } from '../utils';
 
 export const element = 'input';
 export const selectors = ['input[type="checkbox"].toggle'];
 export interface Props {
   type: 'checkbox';
-  'data-size'?: 'small' | 'regular';
+  'data-size'?: 'small' | 'medium' | 'large';
 }
 
 export type DefaultedProps = OptionalKeys<Props, 'type'>;
 export const defaultProps = { type: 'checkbox' };
 
-export const baseStyles = css`
+export const configurableDefaultProps = {
+  'data-size': 'controlSize'
+};
+
+export const fullStyles = css`
   position: relative;
   appearance: none;
-  border: 2px solid var(--border);
-  border-radius: 70px;
-  width: 68px;
-  height: 38px;
+  border-radius: var(--border-radius-full);
+  width: var(--tk-toggle-width);
+  height: var(--tk-toggle-height);
   transition: all 80ms linear;
   cursor: pointer;
+  background: var(--tk-toggle-background);
 
   &:before {
-    --size: 26px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: var(--spacing-l1);
+    left: calc((var(--tk-toggle-height) - var(--tk-toggle-handle-size)) / 2);
     content: '';
-    height: var(--size);
-    width: var(--size);
+    height: var(--tk-toggle-handle-size);
+    width: var(--tk-toggle-handle-size);
     border-radius: 50%;
-    background-color: var(--text);
-  }
-
-  &:disabled:before {
-    background-color: var(--text-disabled);
-  }
-
-  &[data-pseudo='hover'],
-  &:hover {
-    background-color: var(--surface-hover-transparent);
-
-    &:disabled {
-      background-color: var(--surface);
-
-      &:before {
-        background-color: var(--text);
-      }
-    }
-  }
-
-  &:checked,
-  &:indeterminate {
-    background-color: var(--primary);
-    border: 2px solid var(--border-transparent);
-
-    &:before {
-      background-color: var(--surface);
-    }
-
-    &[data-pseudo='hover'],
-    &:hover {
-      background-color: var(--primary-hover);
-    }
-
-    &:disabled {
-      background-color: var(--surface-disabled);
-      border: 2px solid var(--border);
-
-      &[data-pseudo='hover'],
-      &:hover {
-        &::before {
-          background-color: var(--surface);
-        }
-      }
-    }
+    background-color: var(--tk-toggle-foreground);
   }
 
   &:checked:before {
-    right: var(--spacing-l1);
+    right: calc((var(--tk-toggle-height) - var(--tk-toggle-handle-size)) / 2);
     left: auto;
   }
 
   &:indeterminate {
     &:before {
-      width: 36px;
-      height: 6px;
-      background-color: var(--surface);
+      width: calc(var(--tk-toggle-height) - 2px);
+      height: calc(
+        (var(--tk-toggle-height) - var(--tk-toggle-handle-size)) / 2
+      );
       border-radius: 50px;
       left: 50%;
       transform: translate(-50%, -50%);
     }
   }
 
+  --tk-toggle-background: var(--toggle-inactive);
+  --tk-toggle-foreground: var(--surface-raised);
+
+  &:checked,
+  &:indeterminate {
+    --tk-toggle-background: var(--brand-primary);
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    --tk-toggle-background: var(--toggle-disabled);
+    --tk-toggle-foreground: var(--surface-disabled);
+    cursor: not-allowed;
+  }
+
   &[data-pseudo='focus'],
   &:focus,
   &:focus-visible {
     outline: none;
-    &:after {
-      content: '';
-      position: absolute;
-      top: -4px;
-      bottom: -4px;
-      left: -4px;
-      right: -4px;
-      border: 2px solid var(--focus);
-      border-radius: 99px;
-    }
+    box-shadow: 0 0 0 2px var(--focus);
+  }
+  &:focus:not(:focus-visible) {
+    box-shadow: none !important;
+  }
+
+  &[data-size='medium'],
+  &:not([data-size]) {
+    --tk-toggle-width: 50px;
+    --tk-toggle-height: 26px;
+    --tk-toggle-handle-size: 18px;
   }
 
   &[data-size='small'] {
-    width: 50px;
-    height: 26px;
+    --tk-toggle-width: 38px;
+    --tk-toggle-height: 20px;
+    --tk-toggle-handle-size: 15px;
+  }
 
-    &:before {
-      --size: 18px;
-    }
-
-    &:indeterminate:before {
-      width: 26px;
-      height: 4px;
-    }
+  &[data-size='large'] {
+    --tk-toggle-width: 68px;
+    --tk-toggle-height: 38px;
+    --tk-toggle-handle-size: 26px;
   }
 `;

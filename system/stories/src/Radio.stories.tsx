@@ -10,7 +10,7 @@ const labelSelector = checkboxRadioLabel.selectors.find((selector) =>
 );
 
 export default {
-  title: 'TableKit/Radio',
+  title: 'Components/Radio',
   component: emotion.Radio,
   parameters: {
     ...radio,

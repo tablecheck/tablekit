@@ -1,9 +1,12 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
-import { baseStyles as inputBaseStyles } from './Input';
+import { fullStyles as inputfullStyles } from './InputCore';
 
-export type { Props } from './Input';
-export type { Props as DefaultedProps } from './Input';
+export type {
+  Props,
+  DefaultedProps,
+  configurableDefaultProps
+} from './InputCore';
 
 export const element = 'button';
 export const selectors = ['button.input', 'a.input'];
@@ -12,8 +15,8 @@ export const defaultProps = {
   role: 'button'
 };
 
-export const baseStyles = css`
-  ${inputBaseStyles};
+export const fullStyles = css`
+  ${inputfullStyles};
   display: flex;
   gap: var(--spacing-l2);
   align-items: center;

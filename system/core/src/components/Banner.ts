@@ -1,13 +1,14 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '../utils';
 
 export const className = 'banner';
 
-export const baseStyles = css`
+export const fullStyles = css`
   padding: var(--spacing-l4);
   background-color: var(--neutral-surface);
   display: grid;
   grid-template-columns: min-content auto min-content;
   grid-template-areas: 'icon title close' 'icon content content' 'icon actions actions';
+  border-radius: var(--border-radius-small);
 
   .banner-icon {
     grid-area: icon;
@@ -51,5 +52,5 @@ export const variantStyles = variants.reduce(
       background-color: var(--${key}-surface);
     `
   }),
-  {} as Record<BannerVariant, SerializedStyles>
+  {} as Record<BannerVariant, string>
 );

@@ -89,13 +89,16 @@ export const DateButton = styled.button<{
   &[data-pseudo='focus'],
   &:active,
   &:focus {
-    --day-text: var(--text-contrast);
-    --day-background: var(--secondary);
+    --day-background: var(--surface-active);
   }
 
-  &[data-pseudo='focus'],
+  &[data-pseudo='focus'] > span,
+  &:focus > span,
   &:focus-visible > span {
     box-shadow: 0 0 0 2px var(--focus);
+  }
+  &:focus:not(:focus-visible) > span {
+    box-shadow: none !important;
   }
 
   &[data-today='true'] > span:after {
@@ -111,8 +114,8 @@ export const DateButton = styled.button<{
   }
 
   &[data-state=${DayState.Selected}], &[data-state=${DayState.SelectionStart}], &[data-state=${DayState.SelectionEnd}] {
-    --day-text: var(--text-contrast);
-    --day-background: var(--secondary);
+    --day-text: var(--brand-primary-text);
+    --day-background: var(--brand-primary);
     cursor: default;
   }
 

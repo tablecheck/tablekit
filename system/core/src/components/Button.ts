@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 import {
   beforeStyles as spinnerBeforeStyles,
@@ -19,9 +19,20 @@ export interface Props {
   'aria-busy'?: boolean;
 }
 
+export type DefaultedProps = Props;
+
+export const defaultProps = {
+  type: 'button'
+};
+
+export const configurableDefaultProps = {
+  'data-size': 'controlSize'
+};
+
 const variants = [
   'primary',
   'secondary',
+  'secondary-brand',
   'tertiary',
   'ghost',
   'bare',
@@ -32,85 +43,100 @@ export type ButtonVariant = (typeof variants)[number];
 
 export const variantStyles = {
   primary: css`
-    --color: white;
-    --background-color: var(--primary);
-    --border-color: var(--primary);
+    --tk-button-color: var(--brand-primary-text);
+    --tk-button-background-color: var(--brand-primary);
+    --tk-button-border-color: var(--brand-primary);
     &[data-pseudo='hover'],
     &:hover {
-      --background-color: var(--primary-hover);
-      --border-color: var(--primary-hover);
+      --tk-button-background-color: var(--brand-primary-hover);
+      --tk-button-border-color: var(--brand-primary-hover);
     }
     &[data-pseudo='active'],
     &:active {
-      --background-color: var(--primary-active);
-      --border-color: var(--primary-active);
+      --tk-button-background-color: var(--brand-primary-active);
+      --tk-button-border-color: var(--brand-primary-active);
+    }
+  `,
+  'secondary-brand': css`
+    --tk-button-color: var(--brand-secondary-text);
+    --tk-button-background-color: var(--brand-secondary);
+    --tk-button-border-color: var(--brand-secondary);
+    &[data-pseudo='hover'],
+    &:hover {
+      --tk-button-background-color: var(--brand-secondary-hover);
+      --tk-button-border-color: var(--brand-secondary-hover);
+    }
+    &[data-pseudo='active'],
+    &:active {
+      --tk-button-background-color: var(--brand-secondary-active);
+      --tk-button-border-color: var(--brand-secondary-active);
     }
   `,
   secondary: css`
-    --color: var(--text-contrast);
-    --background-color: var(--secondary);
-    --border-color: var(--secondary);
+    --tk-button-color: var(--surface-secondary-text);
+    --tk-button-background-color: var(--surface-secondary);
+    --tk-button-border-color: var(--surface-secondary);
     &[data-pseudo='hover'],
     &:hover {
-      --background-color: var(--secondary-hover);
-      --border-color: var(--secondary-hover);
+      --tk-button-background-color: var(--surface-secondary-hover);
+      --tk-button-border-color: var(--surface-secondary-hover);
     }
     &[data-pseudo='active'],
     &:active {
-      --background-color: var(--secondary-active);
-      --border-color: var(--secondary-active);
+      --tk-button-background-color: var(--surface-secondary-active);
+      --tk-button-border-color: var(--surface-secondary-active);
     }
   `,
   tertiary: css`
-    --color: var(--text);
-    --background-color: var(--surface);
-    --border-color: var(--border-transparent);
+    --tk-button-color: var(--text);
+    --tk-button-background-color: var(--surface);
+    --tk-button-border-color: var(--border);
     &[data-pseudo='hover'],
     &:hover {
-      --background-color: var(--surface-hover);
+      --tk-button-background-color: var(--surface-hover);
     }
     &[data-pseudo='active'],
     &:active {
-      --background-color: var(--surface-active);
+      --tk-button-background-color: var(--surface-active);
     }
   `,
   ghost: css`
-    --color: var(--text);
-    --background-color: transparent;
-    --border-color: var(--border-transparent);
+    --tk-button-color: var(--text);
+    --tk-button-background-color: transparent;
+    --tk-button-border-color: var(--border-transparent);
     &[data-pseudo='hover'],
     &:hover {
-      --background-color: var(--surface-hover-transparent);
+      --tk-button-background-color: var(--surface-hover-transparent);
     }
     &[data-pseudo='active'],
     &:active {
-      --background-color: var(--surface-active);
+      --tk-button-background-color: var(--surface-active);
     }
   `,
   bare: css`
-    --color: var(--text);
-    --background-color: transparent;
-    --border-color: transparent;
+    --tk-button-color: var(--text);
+    --tk-button-background-color: transparent;
+    --tk-button-border-color: transparent;
     &[data-pseudo='hover'],
     &:hover {
-      --background-color: var(--surface-hover);
+      --tk-button-background-color: var(--surface-hover);
     }
     &[data-pseudo='active'],
     &:active {
-      --background-color: var(--surface-active);
+      --tk-button-background-color: var(--surface-active);
     }
   `,
   danger: css`
-    --color: var(--error);
-    --background-color: transparent;
-    --border-color: var(--border-transparent);
+    --tk-button-color: var(--error);
+    --tk-button-background-color: transparent;
+    --tk-button-border-color: var(--border-transparent);
     &[data-pseudo='hover'],
     &:hover {
-      --background-color: var(--surface-hover);
+      --tk-button-background-color: var(--surface-hover);
     }
     &[data-pseudo='active'],
     &:active {
-      --background-color: var(--surface-active);
+      --tk-button-background-color: var(--surface-active);
     }
   `
 };
@@ -120,14 +146,11 @@ export const coreStyles = css`
   display: flex;
   gap: var(--spacing-l2);
   justify-content: center;
-  padding: 9px 11px;
   white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
 
   font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
   border: 1px solid var(--primary);
   border-radius: var(--border-radius-small);
 
@@ -135,10 +158,11 @@ export const coreStyles = css`
   text-align: center;
 
   &[data-pseudo='focus'],
-  &:focus:not(:focus-visible),
+  &:focus,
   &:focus-visible {
     outline: none;
     &:after {
+      display: block;
       content: '';
       position: absolute;
       top: -3px;
@@ -146,8 +170,12 @@ export const coreStyles = css`
       left: -3px;
       right: -3px;
       border-radius: 6px;
-      border: 2px solid var(--focus, hsla(219, 78.5%, 52.5%, 1));
+      box-shadow: 0 0 0 2px var(--focus);
     }
+  }
+
+  &:focus:not(:focus-visible):after {
+    box-shadow: none !important;
   }
 
   &:disabled:disabled {
@@ -158,19 +186,21 @@ export const coreStyles = css`
     &:active {
       cursor: not-allowed;
       pointer-events: none;
-      --background-color: var(--surface-disabled);
-      border-color: var(--surface-disabled);
-      --color: var(--text-disabled);
+      --tk-button-color: var(--text-disabled);
+      &:not([data-variant='bare']) {
+        --tk-button-background-color: var(--surface-disabled);
+        --tk-button-border-color: var(--surface-disabled);
+      }
     }
   }
 
   &,
   &:any-link,
   &:hover {
-    color: var(--color);
+    color: var(--tk-button-color);
   }
-  background-color: var(--background-color);
-  border-color: var(--border-color);
+  background-color: var(--tk-button-background-color);
+  border-color: var(--tk-button-border-color);
   --loading-transition: 300ms ease-in-out;
   transition: color var(--loading-transition),
     background-color var(--loading-transition),
@@ -184,7 +214,7 @@ export const coreStyles = css`
     top: calc(50% - var(--spinner-size) / 2);
     left: calc(50% - var(--spinner-size) / 2);
     opacity: 0;
-    background-color: var(--color);
+    background-color: var(--tk-button-color);
     transition: opacity var(--loading-transition);
     transition-delay: 0ms;
     z-index: 2;
@@ -200,6 +230,13 @@ export const coreStyles = css`
     transition-delay: 200ms;
   }
 
+  &[data-size='medium'],
+  &:not([data-size]) {
+    padding: 9px 11px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   &[data-size='small'] {
     padding: 7px;
     font-size: 14px;
@@ -213,7 +250,7 @@ export const coreStyles = css`
   }
 `;
 
-export const baseStyles = css`
+export const fullStyles = css`
   ${coreStyles};
 
   &:not([data-variant]) {

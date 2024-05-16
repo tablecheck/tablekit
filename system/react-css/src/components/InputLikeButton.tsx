@@ -1,9 +1,8 @@
 /**
- * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
- * The exports here are generated from @tablecheck/tablekit-core
+ * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
  */
-import type { inputLikeButton } from '@tablecheck/tablekit-core';
+import { inputLikeButton } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 export type Props = inputLikeButton.DefaultedProps &
@@ -14,9 +13,11 @@ export const InputLikeButton = React.forwardRef<
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
 >((props, ref) => (
   <button
-    type="button"
     {...props}
+    className={`${props.className ?? ''} input`}
+    role={props.role ?? (inputLikeButton.defaultProps.role as never)}
+    type="button"
     ref={ref}
-    className={`${props.className || ''} input`}
   />
 ));
+InputLikeButton.displayName = `InputLikeButton`;

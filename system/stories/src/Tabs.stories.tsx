@@ -6,7 +6,7 @@ import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
 export default {
-  title: 'TableKit/Tabs',
+  title: 'Components/Tabs',
   component: emotion.Tabs,
   parameters: {
     ...tabs,

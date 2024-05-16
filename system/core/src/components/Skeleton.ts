@@ -1,12 +1,14 @@
-import { css, keyframes } from '@emotion/react';
+import { css } from '../utils';
 
 // This file is a replacement for https://github.com/dvtng/react-loading-skeleton
 
 export const className = 'skeleton';
 
-const loadingAnimation = keyframes`
-  to {
-    background-position: -200% 0;
+export const keyframes = css`
+  @keyframes tk-skeleton {
+    to {
+      background-position: -200% 0;
+    }
   }
 `;
 
@@ -23,7 +25,7 @@ export interface SkeletonCSSProperties {
   '--skeleton-border-radius': string;
 }
 
-export const baseStyles = css`
+export const fullStyles = css`
   --animation-duration: 2s;
   --animation-direction: normal;
 
@@ -42,7 +44,7 @@ export const baseStyles = css`
   overflow: hidden;
   z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
 
-  &::after {
+  &:after {
     content: ' ';
     display: block;
     position: absolute;
@@ -58,7 +60,7 @@ export const baseStyles = css`
         0 0 / 200% 100%,
       var(--surface-raised);
     background-attachment: fixed;
-    animation-name: ${loadingAnimation};
+    animation-name: tk-skeleton;
     animation-direction: var(--animation-direction);
     animation-duration: var(--animation-duration);
     animation-delay: var(--animation-delay);

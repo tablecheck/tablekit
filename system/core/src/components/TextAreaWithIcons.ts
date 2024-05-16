@@ -1,21 +1,31 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 import {
-  baseStyles as textareaBaseStyles,
-  Props as TextareaProps,
-  textareaSizingStyles
-} from './TextArea';
+  fullStyles as textareaStyles,
+  textareaWrapperStyles
+} from './TextAreaCore';
+
+export type { Props, DefaultedProps } from './TextAreaCore';
+export { configurableDefaultProps } from './InputCore';
 
 export const className = 'textarea-with-icons';
 
-export type Props = TextareaProps;
-
-export const baseStyles = css`
-  ${textareaBaseStyles};
+export const fullStyles = css`
+  ${textareaStyles};
+  ${textareaWrapperStyles};
   display: grid;
-  grid-template-columns: 8px 16px auto 16px 8px;
-  grid-template-rows: var(--input-height) auto;
-  grid-gap: 0 var(--spacing-l2);
+  --tk-input-icon-gap: var(--spacing-l2);
+  --tk-input-icon-end-padding: calc(
+    var(--tk-input-horizontal-padding) - var(--tk-input-border-width) -
+      var(--tk-input-icon-gap)
+  );
+  grid-template-columns:
+    var(--tk-input-icon-end-padding) var(--tk-input-icon-size) auto var(
+      --tk-input-icon-size
+    )
+    var(--tk-input-icon-end-padding);
+  grid-template-rows: var(--tk-textarea-height) auto;
+  gap: 0 var(--tk-input-icon-gap);
   align-items: center;
   cursor: text;
   padding: 0;
@@ -36,21 +46,52 @@ export const baseStyles = css`
   }
 
   & > textarea {
-    ${textareaSizingStyles};
+    &,
+    &[data-pseudo='focus'],
+    &:focus {
+      outline: none;
+    }
+    color: currentColor;
+    width: var(--tk-input-width);
     border: none;
     background: transparent;
     grid-area: 1/1/3/6;
-    // the 24 below is 16px width icon + 8px gap
-    &:first-child:not(:last-child) {
-      padding-left: calc(16px + (24 * var(--rtl-space)));
-      padding-right: calc(16px + (24 * var(--ltr-space)));
-    }
-    &:not(:first-child):last-child {
-      padding-left: calc(16px + (24 * var(--ltr-space)));
-      padding-right: calc(16px + (24 * var(--rtl-space)));
-    }
+    padding: calc(
+        var(--tk-input-vertical-padding) - var(--tk-input-border-width)
+      )
+      var(--tk-input-horizontal-padding);
+
+    &:first-child:not(:last-child),
     &:not(:first-child):not(:last-child) {
-      padding: 12px calc(16px + 24px);
+      padding-inline-end: calc(
+        var(--tk-input-horizontal-padding) + var(--tk-input-icon-size) +
+          var(--tk-input-icon-gap)
+      );
     }
+    &:not(:first-child):last-child,
+    &:not(:first-child):not(:last-child) {
+      padding-inline-start: calc(
+        var(--tk-input-horizontal-padding) + var(--tk-input-icon-size) +
+          var(--tk-input-icon-gap)
+      );
+    }
+  }
+
+  &:after {
+    grid-area: 1/1/3/6;
+  }
+  &[data-with-icon='before']:after,
+  &[data-with-icon='both']:after {
+    padding-inline-start: calc(
+      var(--tk-input-horizontal-padding) + var(--tk-input-icon-size) +
+        var(--tk-input-icon-gap)
+    );
+  }
+  &[data-with-icon='after']:after,
+  &[data-with-icon='both']:after {
+    padding-inline-end: calc(
+      var(--tk-input-horizontal-padding) + var(--tk-input-icon-size) +
+        var(--tk-input-icon-gap)
+    );
   }
 `;

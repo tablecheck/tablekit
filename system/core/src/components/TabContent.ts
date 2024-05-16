@@ -1,6 +1,4 @@
-import { css } from '@emotion/react';
-
-import { OptionalKeys } from '../typeUtils';
+import { OptionalKeys, css } from '../utils';
 
 export const className = 'tab-content';
 export interface Props {
@@ -11,4 +9,4 @@ export interface Props {
 export type DefaultedProps = OptionalKeys<Props, 'role'>;
 export const defaultProps = { role: 'tabpanel' };
 
-export const baseStyles = css``;
+export const fullStyles = css``;

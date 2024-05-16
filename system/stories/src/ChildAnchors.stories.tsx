@@ -5,7 +5,7 @@ import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
 export default {
-  title: 'TableKit/ChildAnchors',
+  title: 'Components/ChildAnchors',
   component: emotion.ChildAnchors,
   parameters: {
     ...childAnchors

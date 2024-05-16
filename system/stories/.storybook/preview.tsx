@@ -1,6 +1,7 @@
 import { getDirection } from '@brightlayer-ui/storybook-rtl-addon';
 import { styled, themes } from '@storybook/theming';
 import { LocaleCode } from '@tablecheck/locales';
+import { Preview } from '@storybook/react';
 import { ThemeProvider as CssThemeProvider } from '@tablecheck/tablekit-react-css';
 import mockdate from 'mockdate';
 import * as React from 'react';
@@ -41,7 +42,12 @@ const darkTheme = {
 // https://storybook.js.org/docs/react/configure/features-and-behavior
 // https://storybook.js.org/docs/react/configure/theming
 // https://github.com/hipstersmoothie/storybook-dark-mode
-export const parameters = {
+export const parameters: Preview['parameters'] = {
+  options: {
+    storySort: {
+      order: ['Introduction', 'Theming', 'Components', 'Hooks', 'Utils']
+    }
+  },
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'fullscreen',
   panelPosition: 'right',
@@ -98,19 +104,30 @@ const ThemeInner = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(var(--variants), 1fr);
-  grid-gap: var(--spacing-l7) var(--spacing-l4);
+  grid-template-columns: repeat(var(--variants), var(--variant-width, 1fr));
+  gap: var(--spacing-l7) var(--spacing-l4);
   padding: var(--spacing-l4);
   border: 1px dashed var(--primary);
   border-radius: var(--border-radius-small);
   align-items: flex-start;
   justify-items: flex-start;
+
+  & > h2,
+  & > h4,
+  & > p {
+    grid-column: 1 / -1;
+  }
+
+  & > h2,
+  & > h4 {
+    text-transform: capitalize;
+  }
 `;
 
 const Selectors = styled.div`
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-gap: var(--spacing-l3);
+  gap: var(--spacing-l3);
   margin-bottom: var(--spacing-l4);
   align-items: center;
   justify-items: flex-start;
@@ -158,6 +175,7 @@ function handleGridRef(ref: HTMLDivElement) {
 
 interface StoryParametersOptions {
   variants: (string | { name: string })[];
+  variantWidth?: string;
   selectors: string[];
   auxiliarySelectors: (string | undefined)[];
   className: string;
@@ -193,7 +211,10 @@ class StoryParametersParser {
   }
 
   getGridStyles() {
-    return { '--variants': this.parameters?.variants?.length || 1 };
+    return {
+      '--variants': this.parameters?.variants?.length || 1,
+      '--variant-width': this.parameters?.variantWidth
+    };
   }
 
   getStoryHeader() {
@@ -202,9 +223,9 @@ class StoryParametersParser {
     );
     if (variants?.every((variant: any) => typeof variant === 'string')) {
       return variants.map((variant) => (
-        <b key={variant}>
+        <h3 key={variant}>
           {variant.charAt(0).toUpperCase() + variant.slice(1)}
-        </b>
+        </h3>
       ));
     }
     return null;

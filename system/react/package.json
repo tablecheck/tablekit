@@ -14,7 +14,7 @@
   "scripts": {
     "audit": "tablecheck-scripts auditjs",
     "audit:ci": "tablecheck-scripts auditjs --ci",
-    "build": "npm run update:components && npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
+    "build": "npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
     "coverage-summary": "tablecheck-scripts coverage-summary",
     "format": "tablecheck-scripts lint --fix --skip-typescript",
     "lint": "tablecheck-scripts lint",
@@ -23,7 +23,6 @@
     "test:watch": "tablecheck-scripts test --env=jsdom",
     "tsc": "tablecheck-scripts tsc",
     "tsc:watch": "tablecheck-scripts tsc -w",
-    "update:components": "node scripts/generateComponents.mjs && prettier -w src/components/*",
     "update:exports": "node scripts/generateIndex.mjs"
   },
   "dependencies": {

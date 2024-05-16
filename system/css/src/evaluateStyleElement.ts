@@ -29,12 +29,15 @@ function recursiveEvaluateStyleElement(
   return style.toString();
 }
 
-export function evaluateStyleElement(
-  style: SerializedStyles
-): [string, string] {
+export function evaluateStyleElement(style: string): [string, string] {
   const keyframes: string[] = [];
   return [
-    recursiveEvaluateStyleElement(style, keyframes)
+    recursiveEvaluateStyleElement(
+      css`
+        ${style}
+      `,
+      keyframes
+    )
       .replace(/(^|;)label:[a-z]+;/gi, '$1')
       .replace(/;+|^;/gi, ';'),
     keyframes.join('')

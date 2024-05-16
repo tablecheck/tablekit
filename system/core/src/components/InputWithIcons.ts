@@ -1,16 +1,30 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
-import { sharedInputStyles } from './Input';
+import { fullStyles as inputStyles } from './InputCore';
 
-export type { Props } from './Input';
+export type {
+  Props,
+  DefaultedProps,
+  configurableDefaultProps
+} from './InputCore';
 
 export const className = 'input-with-icons';
 
-export const baseStyles = css`
-  ${sharedInputStyles}
+export const fullStyles = css`
+  ${inputStyles}
   display: grid;
-  grid-template-columns: 8px 16px auto 16px 8px;
-  grid-gap: var(--spacing-l2);
+  --tk-input-icon-gap: var(--spacing-l2);
+  --tk-input-icon-end-padding: calc(
+    var(--tk-input-horizontal-padding) - var(--tk-input-border-width) -
+      var(--tk-input-icon-gap)
+  );
+  grid-template-columns:
+    var(--tk-input-icon-end-padding)
+    var(--tk-input-icon-size)
+    auto
+    var(--tk-input-icon-size)
+    var(--tk-input-icon-end-padding);
+  gap: var(--tk-input-icon-gap);
   align-items: center;
   cursor: text;
   padding: 0;
@@ -38,25 +52,27 @@ export const baseStyles = css`
     &:focus {
       outline: none;
     }
-    width: var(--width);
+    width: var(--tk-input-width);
     border: none;
     background: transparent;
-    grid-area: 1/1/1/6;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    // the 24 below is 16px width icon + 8px gap
-    &:first-child:not(:last-child) {
-      padding-left: calc(16px + (24 * var(--rtl-space)));
-      padding-right: calc(16px + (24 * var(--ltr-space)));
-    }
-    &:not(:first-child):last-child {
-      padding-left: calc(16px + (24 * var(--ltr-space)));
-      padding-right: calc(16px + (24 * var(--rtl-space)));
-    }
+    grid-area: 1/1/2/6;
+    padding: calc(
+        var(--tk-input-vertical-padding) - var(--tk-input-border-width)
+      )
+      var(--tk-input-horizontal-padding);
+    &:first-child:not(:last-child),
     &:not(:first-child):not(:last-child) {
-      padding: 12px calc(16px + 24px);
+      padding-inline-end: calc(
+        var(--tk-input-horizontal-padding) + var(--tk-input-icon-size) +
+          var(--tk-input-icon-gap)
+      );
+    }
+    &:not(:first-child):last-child,
+    &:not(:first-child):not(:last-child) {
+      padding-inline-start: calc(
+        var(--tk-input-horizontal-padding) + var(--tk-input-icon-size) +
+          var(--tk-input-icon-gap)
+      );
     }
   }
 `;

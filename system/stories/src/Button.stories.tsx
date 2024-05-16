@@ -3,46 +3,54 @@ import { Story, Meta } from '@storybook/react';
 import { button } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
+import * as React from 'react';
 
 const variants = Object.keys(button.variantStyles);
 
 export default {
-  title: 'TableKit/Buttons',
+  title: 'Components/Buttons',
   component: emotion.Button,
   parameters: { ...button, variants }
 } as Meta;
 
 const Template: Story = ({ Button }) => (
   <>
-    {(['small', undefined, 'large'] as const).map((size) =>
-      (
-        [
-          'Button',
-          'Icon Left',
-          'Icon Right',
-          'Active',
-          'Hover',
-          'Focus',
-          'Loading',
-          'Disabled'
-        ] as const
-      ).map((status) =>
-        variants.map((variant) => (
-          <Button
-            key={variant}
-            aria-busy={status === 'Loading'}
-            disabled={status === 'Disabled'}
-            data-variant={variant}
-            data-pseudo={status.toLowerCase()}
-            data-size={size}
-          >
-            {status === 'Icon Left' ? <Globe size={20} /> : null}
-            {status}
-            {status === 'Icon Right' ? <ChevronDown size={20} /> : null}
-          </Button>
-        ))
-      )
-    )}
+    {(['small', 'medium', 'large'] as const).map((size) => (
+      <React.Fragment key={size}>
+        <h4>{size}</h4>
+        {(
+          [
+            'Button',
+            'Icon Left',
+            'Icon Right',
+            'Active',
+            'Hover',
+            'Focus',
+            'Loading',
+            'Disabled'
+          ] as const
+        ).map((status) =>
+          variants.map((variant) => (
+            <Button
+              key={variant}
+              aria-busy={status === 'Loading'}
+              disabled={status === 'Disabled'}
+              data-variant={variant}
+              data-pseudo={status.toLowerCase()}
+              data-size={size}
+            >
+              {status === 'Icon Left' ? (
+                <Globe size={size === 'small' ? 16 : 20} />
+              ) : null}
+              {status}
+              {status === 'Icon Right' ? (
+                <ChevronDown size={size === 'small' ? 16 : 20} />
+              ) : null}
+            </Button>
+          ))
+        )}
+      </React.Fragment>
+    ))}
   </>
 );
 

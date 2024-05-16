@@ -6,7 +6,7 @@ export const DatePickerWrapper = styled.div`
   gap: var(--spacing-l2);
   padding: var(--spacing-l4) var(--spacing-l2);
   box-shadow: var(--elevation-small);
-  border: 1px solid var(--border-transparent);
+  border: 1px solid var(--border);
   border-radius: var(--border-radius-small);
   background: var(--surface);
 `;

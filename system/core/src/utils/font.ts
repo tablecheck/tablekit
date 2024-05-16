@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 const SUFFIX =
   '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,"Fira Sans","Droid Sans","Helvetica Neue","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji",sans-serif,system-ui';

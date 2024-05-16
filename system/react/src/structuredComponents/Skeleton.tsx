@@ -14,7 +14,7 @@ function pixelParam(
 }
 
 const SkeletonAnimation = styled.span`
-  ${skeleton.baseStyles}
+  ${skeleton.fullStyles}
 `;
 
 export const Skeleton = React.forwardRef<
