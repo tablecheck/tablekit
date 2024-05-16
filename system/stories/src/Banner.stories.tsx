@@ -8,7 +8,7 @@ const bannerTypes = [undefined, 'single', 'dismissed', 'basic'] as const;
 const variants = Object.keys(banner.variantStyles);
 
 export default {
-  title: 'TableKit/Banner',
+  title: 'Components/Banner',
   component: emotion.Banner,
   parameters: {
     ...banner

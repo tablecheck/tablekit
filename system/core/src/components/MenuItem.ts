@@ -1,4 +1,4 @@
-import { css, CSSObject } from '@emotion/react';
+import { css, CSSObject } from '../utils';
 
 export const element = 'button';
 export const className = 'menu-item';
@@ -17,15 +17,12 @@ export const stateStylesObjects: Record<
   CSSObject
 > = {
   active: {
-    color: 'var(--text)',
     background: 'var(--surface-active)'
   },
   focus: {
-    color: 'var(--text)',
     background: 'var(--surface-hover)'
   },
   selected: {
-    color: 'var(--text)',
     background: 'var(--surface-active)'
   },
   hover: {
@@ -33,7 +30,7 @@ export const stateStylesObjects: Record<
   }
 };
 
-export const baseStylesObject: CSSObject = {
+export const fullStylesObject: CSSObject = {
   font: 'var(--body-1)',
   '&, &:any-link, &:hover': {
     color: 'var(--text)'
@@ -71,8 +68,8 @@ export interface Props {
 }
 
 // eslint-disable-next-line @emotion/syntax-preference
-export const baseStyles = css({
-  ...baseStylesObject,
+export const fullStyles = css({
+  ...fullStylesObject,
   '&:matches(button, :any-link):matches(:active, [data-pseudo="active"])':
     stateStylesObjects.active,
   '&:is(button, :any-link):is(:active, [data-pseudo="active"])':

@@ -1,6 +1,4 @@
-import { css } from '@emotion/react';
-
-import { OptionalKeys } from '../typeUtils';
+import { OptionalKeys, css } from '../utils';
 
 export const className = 'tabs';
 export interface Props {
@@ -11,10 +9,9 @@ export interface Props {
 export type DefaultedProps = OptionalKeys<Props, 'role'>;
 export const defaultProps = { role: 'tablist' };
 
-export const baseStyles = css`
+export const fullStyles = css`
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-l2);
   &[data-wrap='true'] {
     flex-wrap: wrap;
   }

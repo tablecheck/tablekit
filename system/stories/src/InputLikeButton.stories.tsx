@@ -1,8 +1,10 @@
 import { FavoriteFilled, Close } from '@carbon/icons-react';
-import { Story, Meta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { inputLikeButton } from '@tablecheck/tablekit-core';
+import { getCarbonIconSize } from '@tablecheck/tablekit-react';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
+import * as React from 'react';
 
 const contentVariants = [
   { name: 'Default' },
@@ -15,41 +17,55 @@ const contentVariants = [
 ];
 
 export default {
-  title: 'TableKit/InputLikeButton',
+  title: 'Components/InputLikeButton',
   component: emotion.InputLikeButton,
-  parameters: { variants: contentVariants, ...inputLikeButton }
+  parameters: {
+    variants: contentVariants,
+    variantWidth: '280px',
+    ...inputLikeButton
+  }
 } as Meta;
 
-const Template: Story = ({ InputLikeButton }) => (
+const Template: StoryFn<{
+  InputLikeButton: typeof emotion.InputLikeButton | typeof css.InputLikeButton;
+}> = ({ InputLikeButton }) => (
   <>
-    {contentVariants.map((props) => (
-      <InputLikeButton {...props}>Click Me!</InputLikeButton>
-    ))}
-    {contentVariants.map((props) => (
-      <InputLikeButton {...props}>
-        <span>Click Me!</span>
-        <Close size={16} />
-      </InputLikeButton>
-    ))}
-    {contentVariants.map((props) => (
-      <InputLikeButton {...props}>
-        <FavoriteFilled size={16} />
-        <span>Click Me!</span>
-      </InputLikeButton>
-    ))}
-    {contentVariants.map((props) => (
-      <InputLikeButton {...props}>
-        <FavoriteFilled size={16} />
-        <span>Click Me!</span>
-        <Close size={16} />
-      </InputLikeButton>
+    {(['small', 'medium', 'large'] as const).map((size) => (
+      <React.Fragment key={size}>
+        <h4>{size}</h4>
+        {contentVariants.map(({ name: key, ...props }) => (
+          <InputLikeButton key={key} {...props} data-size={size}>
+            Click Me!
+          </InputLikeButton>
+        ))}
+        {contentVariants.map(({ name: key, ...props }) => (
+          <InputLikeButton key={key} {...props} data-size={size}>
+            <span>Click Me!</span>
+            <Close size={getCarbonIconSize('small')} />
+          </InputLikeButton>
+        ))}
+        {contentVariants.map(({ name: key, ...props }) => (
+          <InputLikeButton key={key} {...props} data-size={size}>
+            <FavoriteFilled size={getCarbonIconSize('small')} />
+            <span>Click Me!</span>
+          </InputLikeButton>
+        ))}
+        {contentVariants.map(({ name: key, ...props }) => (
+          <InputLikeButton key={key} {...props} data-size={size}>
+            <FavoriteFilled size={getCarbonIconSize('small')} />
+            <span>Click Me!</span>
+            <Close size={getCarbonIconSize('small')} />
+          </InputLikeButton>
+        ))}
+      </React.Fragment>
     ))}
   </>
 );
-export const Emotion: Story = Template.bind({});
+
+export const Emotion = Template.bind({});
 Emotion.args = { InputLikeButton: emotion.InputLikeButton };
 Emotion.parameters = { useEmotion: true };
 
-export const Class: Story = Template.bind({});
+export const Class = Template.bind({});
 Class.args = { InputLikeButton: css.InputLikeButton };
 Class.parameters = { useEmotion: false };

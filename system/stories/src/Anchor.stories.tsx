@@ -12,7 +12,7 @@ const contentVariants = [
 ] as const;
 
 export default {
-  title: 'TableKit/Anchor',
+  title: 'Components/Anchor',
   component: emotion.Anchor,
   parameters: {
     ...anchor,
@@ -20,7 +20,7 @@ export default {
   }
 } as Meta;
 
-const Template: Story = ({ Anchor }) => (
+const Template: Story = ({ Anchor, ButtonAnchor }) => (
   <>
     {contentVariants.map((variant) => (
       <Anchor
@@ -30,10 +30,30 @@ const Template: Story = ({ Anchor }) => (
         Link text here
       </Anchor>
     ))}
+    {contentVariants.map((variant) => (
+      <ButtonAnchor
+        disabled={variant === 'Disabled'}
+        data-pseudo={variant.toLowerCase()}
+      >
+        Button text here
+      </ButtonAnchor>
+    ))}
   </>
 );
 export const Emotion: Story = Template.bind({});
-Emotion.args = { Anchor: emotion.Anchor };
+Emotion.args = {
+  Anchor: emotion.Anchor,
+  ButtonAnchor: emotion.Anchor.withComponent('button')
+};
 
 export const Class: Story = Template.bind({});
-Class.args = { Anchor: css.Anchor };
+Class.args = {
+  Anchor: css.Anchor,
+  ButtonAnchor: (props: css.AnchorProps) => (
+    <button
+      className={anchor.className}
+      {...(props as never as object)}
+      type="button"
+    />
+  )
+};

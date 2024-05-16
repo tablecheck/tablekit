@@ -1,16 +1,17 @@
 /**
- * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
- * The exports here are generated from @tablecheck/tablekit-core
+ * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
  */
-import type { anchor } from '@tablecheck/tablekit-core';
+import { anchor } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
-export type Props = anchor.Props;
+export type Props = anchor.Props &
+  React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export const Anchor = React.forwardRef<
   HTMLAnchorElement,
-  Props & React.HTMLAttributes<HTMLAnchorElement>
+  Props & React.AnchorHTMLAttributes<HTMLAnchorElement>
 >((props, ref) => (
-  <a {...props} ref={ref} className={`${props.className || ''} link`} />
+  <a {...props} className={`${props.className ?? ''} link`} ref={ref} />
 ));
+Anchor.displayName = `Anchor`;

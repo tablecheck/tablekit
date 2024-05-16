@@ -4,7 +4,7 @@ import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
 export default {
-  title: 'TableKit/Spinner',
+  title: 'Components/Spinner',
   component: emotion.Spinner,
   parameters: {
     ...spinner

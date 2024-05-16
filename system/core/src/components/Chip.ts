@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const element = 'button';
 export const className = 'chip';
@@ -8,46 +8,76 @@ export interface Props {
   disabled?: boolean;
   'aria-selected'?: boolean;
   'aria-controls'?: string;
-  'data-size'?: 'small' | 'regular';
+  'data-size'?: 'small' | 'medium' | 'large';
 }
 
-export const baseStyles = css`
-  --padding-y: 12px;
-  --padding-x: 16px;
-  padding: calc(var(--padding-y) - 2px) calc(var(--padding-x) - 2px);
+export type DefaultedProps = Props;
+
+export const configurableDefaultProps = {
+  'data-size': 'controlSize'
+};
+
+export const fullStyles = css`
+  --tk-chip-color: var(--text-subtle);
+  --tk-chip-background-color: var(--surface-low);
+  --tk-chip-border-color: var(--border);
   position: relative;
   text-decoration: none !important;
-  color: var(--text);
+  color: var(--tk-chip-color);
+  background-color: var(--tk-chip-background-color);
   border-radius: var(--border-radius-full);
-  border: 2px solid var(--border-transparent);
+  border: 1px solid var(--tk-chip-border-color);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-l2);
+
+  &[data-size='medium'],
+  &:not([data-size]) {
+    padding: 9px 11px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &[data-size='small'] {
+    padding: 7px 11px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &[data-size='large'] {
+    padding: 13px 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
   &[data-pseudo='hover'],
   &:hover {
-    background-color: var(--surface-hover);
+    --tk-chip-background-color: var(--surface-hover);
     cursor: pointer;
   }
   &[data-pseudo='focus'],
-  &:focus:not(:focus-visible),
+  &:focus,
   &:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px var(--focus, hsla(219, 78.5%, 52.5%, 1));
   }
+  &:focus:not(:focus-visible) {
+    box-shadow: none !important;
+  }
   &[data-pseudo='active'],
   &:active {
-    background-color: var(--surface-active);
-  }
-  &[data-size='small'] {
-    --padding-x: 14px;
-    --padding-y: 6px;
+    --tk-chip-background-color: var(--surface-active);
   }
   &[aria-selected='true'] {
-    background-color: var(--secondary);
-    border-color: var(--secondary);
-    color: var(--text-contrast);
+    --tk-chip-background-color: var(--brand-primary);
+    --tk-chip-border-color: var(--brand-primary);
+    --tk-chip-color: var(--brand-primary-text);
   }
   &:disabled {
-    color: var(--text-disabled);
-    background-color: var(--surface-disabled);
+    --tk-chip-color: var(--text-disabled);
+    --tk-chip-background-color: var(--surface-disabled);
     cursor: not-allowed;
   }
 `;

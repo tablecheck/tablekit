@@ -10,7 +10,7 @@ const labelSelector = checkboxRadioLabel.selectors.find((selector) =>
 );
 
 export default {
-  title: 'TableKit/Checkbox',
+  title: 'Components/Checkbox',
   component: emotion.Checkbox,
   parameters: {
     ...checkbox,
@@ -27,7 +27,7 @@ const Template: Story = ({ Checkbox, LabelComponent }) => (
           <Checkbox
             data-pseudo={variant.toLowerCase()}
             disabled={variant.toLowerCase() === 'disabled'}
-            checked={isChecked}
+            defaultChecked={isChecked}
           />
           {variant} {isChecked ? '☑' : '☐'}
         </LabelComponent>

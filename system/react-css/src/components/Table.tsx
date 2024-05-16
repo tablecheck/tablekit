@@ -1,16 +1,16 @@
 /**
- * DO NOT EDIT: This file is generated, run 'npm update:components' to update this.
- * The exports here are generated from @tablecheck/tablekit-core
+ * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
  */
-import type { table } from '@tablecheck/tablekit-core';
+import { table } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
-export type Props = table.Props;
+export type Props = table.Props & React.TableHTMLAttributes<HTMLTableElement>;
 
 export const Table = React.forwardRef<
   HTMLTableElement,
   Props & React.TableHTMLAttributes<HTMLTableElement>
 >((props, ref) => (
-  <table {...props} ref={ref} className={`${props.className || ''} table`} />
+  <table {...props} className={`${props.className ?? ''} table`} ref={ref} />
 ));
+Table.displayName = `Table`;

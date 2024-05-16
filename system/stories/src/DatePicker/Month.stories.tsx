@@ -6,7 +6,7 @@ import { addDays, isSameDay } from 'date-fns';
 import { Calendar } from 'dayzed';
 
 export default {
-  title: 'TableKit/DatePicker/Months',
+  title: 'Components/DatePicker/Months',
   component: Months,
   parameters: {
     chromatic: { disableSnapshot: true },

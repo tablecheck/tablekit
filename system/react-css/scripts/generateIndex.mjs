@@ -143,8 +143,7 @@ Promise.all(filenames.map(getExport)).then((exportLines) => {
         * DO NOT EDIT: This file is generated, run 'npm update:exports' to update this.
         * The exports here are generated from all ts/tsx files at the root level
         */
-       import './globalTypes';
-       
+       export * from './config';
        ${fileContent}`,
       { filepath, ...config }
     )

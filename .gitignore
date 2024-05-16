@@ -22,3 +22,4 @@ tsconfig.*.json
 .@tablecheck
 .rollup.cache
 /cache
+/.nx

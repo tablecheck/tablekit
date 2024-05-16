@@ -1,13 +1,11 @@
-import { css } from '@emotion/react';
-
 import { globalThemeVars as selectGlobalThemeVars } from '../components/Select';
+import { css } from '../utils';
 
 export const constants = css`
   :root {
     --border-radius-small: 4px;
     --border-radius-large: 8px;
     --border-radius-full: 9999px;
-    --input-height: 48px;
     --spacing-l1: 4px;
     --spacing-l2: 8px;
     --spacing-l3: 12px;
@@ -26,6 +24,7 @@ export const constants = css`
     --zindex-flag: 600;
     --zindex-spotlight: 700;
     --zindex-tooltip: 800;
+    --tk-input-icon-size: 20px;
   }
 
   ${selectGlobalThemeVars}

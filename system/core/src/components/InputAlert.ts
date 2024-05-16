@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const element = 'span';
 export const className = 'input-alert';
@@ -15,10 +15,10 @@ export interface Props {
   'data-variant': InputAlertVariant;
 }
 
-export const baseStyles = css`
+export const fullStyles = css`
   display: grid;
   grid-template-columns: min-content 1fr;
-  grid-gap: var(--spacing-l2);
+  gap: var(--spacing-l2);
   margin-top: var(--spacing-l2);
   color: var(--text);
   border-radius: var(--border-radius-small);

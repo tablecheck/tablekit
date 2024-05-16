@@ -22,6 +22,13 @@ const globalStyles = css`
   ${constants}
 `;
 
+declare module '@emotion/react' {
+  export interface Theme {
+    isRtl: boolean;
+    isDark: boolean;
+  }
+}
+
 function useIsDark(theme: 'light' | 'dark' | 'system') {
   const [isDark, setIsDark] = React.useState(() => {
     if (theme === 'system') {

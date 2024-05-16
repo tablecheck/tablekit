@@ -1,9 +1,15 @@
-/* eslint max-lines: ["error", 500] */
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable max-lines */
 import { ChevronDown, Close } from '@carbon/icons-react';
 import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { menu, menuList, menuItem } from '@tablecheck/tablekit-core';
-import { Spinner, Checkbox } from '@tablecheck/tablekit-react';
+import {
+  Spinner,
+  Checkbox,
+  getConfigDefault,
+  getCarbonIconSize
+} from '@tablecheck/tablekit-react';
 import * as React from 'react';
 import {
   SelectComponentsConfig,
@@ -30,12 +36,14 @@ declare module '@emotion/react' {
   }
 }
 
-const menuStylesObject = menu.baseStylesObject;
+const VALUE_GRID_GAP = 4;
+
+const menuStylesObject = menu.fullStylesObject;
 const {
-  baseStylesObject: menuItemStylesObject,
+  fullStylesObject: menuItemStylesObject,
   stateStylesObjects: menuItemStateStylesObjects
 } = menuItem;
-const { baseStylesObject: menuListStylesObject } = menuList;
+const { fullStylesObject: menuListStylesObject } = menuList;
 
 export interface Options {
   isInvalid?: boolean | undefined;
@@ -44,6 +52,7 @@ export interface Options {
   isMulti?: boolean;
   borderRadii?: BorderRadii;
   icon?: React.ReactNode;
+  size?: 'small' | 'medium' | 'large';
   isCompact?: boolean;
   isClearable?: boolean;
   hideSelectedOptions?: boolean;
@@ -55,6 +64,48 @@ export interface Options {
   isInternalFocused?: boolean;
 }
 
+function getVerticalPadding(size: NonNullable<Options['size']>) {
+  switch (size) {
+    case 'small':
+      return 3;
+    case 'large':
+      return 8;
+    default:
+      return 4;
+  }
+}
+
+function getMinHeight(size: NonNullable<Options['size']>) {
+  switch (size) {
+    case 'small':
+      return 36;
+    case 'large':
+      return 48;
+    default:
+      return 40;
+  }
+}
+
+function getVerticalValueContainerStyles({
+  isMulti,
+  isFocused,
+  useVerticalMultiValues
+}: {
+  isFocused: boolean;
+  isMulti: boolean;
+  useVerticalMultiValues: boolean;
+}) {
+  if (!isMulti || !useVerticalMultiValues) return {};
+  if (isFocused) return {};
+  return {
+    '[data-testid="Value Container"]': {
+      marginBottom: -1 * VALUE_GRID_GAP
+    },
+    '[data-testid="Value Container"] > div:last-child, [data-testid="Value Container"] > input:last-child':
+      { height: 0 }
+  };
+}
+
 function getControlBorderColor({
   isFocused,
   isDisabled,
@@ -64,24 +115,17 @@ function getControlBorderColor({
   isDisabled: boolean;
   isInvalid: boolean;
 }>): string {
-  if (isDisabled) return 'var(--border-transparent)';
+  if (isDisabled) return 'var(--border)';
   if (isInvalid) return 'var(--error)';
   if (isFocused) return 'var(--focus)';
-  return 'var(--border-transparent)';
+  return 'var(--border)';
 }
-
-// this is the calculated internal minimum height without the padding
-// we use it to make sure the icons and the chevron are positioned correctly
-const INPUT_INTERNAL_HEIGHT = 26;
 
 const IconWrapper = styled.div`
   display: flex;
   align-items: center;
-  height: ${INPUT_INTERNAL_HEIGHT}px;
-`;
-
-const IndicatorWrapper = styled.div`
-  height: 20px;
+  justify-content: center;
+  height: var(--tk-react-select-icon-wrapper-height);
   svg {
     color: currentColor;
   }
@@ -94,10 +138,11 @@ export function useReactSelectConfig<
   isInvalid,
   dataTestId,
   borderSides,
-  isMulti,
+  isMulti = false,
   useVerticalMultiValues = false,
   borderRadii = BorderRadii.All,
   icon: unsafeIcon,
+  size = getConfigDefault('controlSize'),
   isCompact,
   isClearable,
   isInternalFocused,
@@ -141,8 +186,10 @@ export function useReactSelectConfig<
             } as typeof innerProps
           }
         >
-          {icon ? <IconWrapper>{icon}</IconWrapper> : null}
-          {children}
+          <div className="tk-select-positioner">
+            {icon ? <IconWrapper>{icon}</IconWrapper> : null}
+            {children}
+          </div>
         </reactSelectComponents.Control>
       ),
       // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -152,7 +199,6 @@ export function useReactSelectConfig<
           innerProps={
             {
               ...innerProps,
-              id: 'value-container',
               'data-testid': 'Value Container'
             } as typeof innerProps
           }
@@ -188,9 +234,9 @@ export function useReactSelectConfig<
       DropdownIndicator: ({ getValue }) => {
         if (!isMulti && isClearable && getValue().length) return null;
         return (
-          <IndicatorWrapper>
-            <ChevronDown size={20} />
-          </IndicatorWrapper>
+          <IconWrapper>
+            <ChevronDown size={getConfigDefault('iconSize')} />
+          </IconWrapper>
         );
       },
       // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -202,15 +248,15 @@ export function useReactSelectConfig<
         } = props;
         if (isMulti) return null;
         return (
-          <IndicatorWrapper {...restInnerProps} ref={ref} data-testid="Clear">
-            <Close size={20} />
-          </IndicatorWrapper>
+          <IconWrapper {...restInnerProps} ref={ref} data-testid="Clear">
+            <Close size={getConfigDefault('iconSize')} />
+          </IconWrapper>
         );
       },
       // eslint-disable-next-line @typescript-eslint/naming-convention
       MultiValueRemove: (props) => (
         <reactSelectComponents.MultiValueRemove {...props}>
-          <Close size={16} />
+          <Close size={getCarbonIconSize('small')} />
         </reactSelectComponents.MultiValueRemove>
       ),
       // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -290,54 +336,52 @@ export function useReactSelectConfig<
           borderColor
         );
         const boxShadow = isLargeBorder ? `0 0 0 1px ${borderColor}` : '';
-        const verticalPadding = (isCompact ? 7 : 11) - (isMulti ? 1 : 0);
         const multiValueVariables = isDisabled
           ? {
-              '--select-multi-value': 'var(--surface-disabled)',
-              '--select-multi-value-hover': 'var(--surface-disabled)',
-              '--select-multi-value-active': 'var(--surface-disabled)'
+              '--tk-select-multi-value': 'var(--surface-disabled)',
+              '--tk-select-multi-value-hover': 'var(--surface-disabled)',
+              '--tk-select-multi-value-active': 'var(--surface-disabled)'
             }
           : {
-              '--select-multi-value': 'var(--surface)',
-              '--select-multi-value-hover': 'var(--surface-hover)',
-              '--select-multi-value-active': 'var(--surface-active)'
+              '--tk-select-multi-value': 'var(--surface)',
+              '--tk-select-multi-value-hover': 'var(--surface-hover)',
+              '--tk-select-multi-value-active': 'var(--surface-active)'
             };
-        let verticalValueContainerStyles = {};
-        if (isMulti && useVerticalMultiValues)
-          verticalValueContainerStyles =
-            isFocused || isInternalFocused
-              ? {
-                  '#value-container > div:last-child, #value-container > input:last-child':
-                    { height: 'auto' }
-                }
-              : {
-                  '#value-container': { marginBottom: -8 },
-                  '#value-container > div:last-child, #value-container > input:last-child':
-                    { height: 0 }
-                };
 
         return {
           ...styles,
           ...borderColorProps,
           ...multiValueVariables,
-          ...verticalValueContainerStyles,
+          ...getVerticalValueContainerStyles({
+            isMulti,
+            isFocused: isInternalFocused || isFocused,
+            useVerticalMultiValues
+          }),
+          '--tk-react-select-icon-wrapper-height': `${32}px`,
           borderRadius: getBorderRadius(!!theme.isRtl, borderRadii),
           borderWidth: 1,
-          padding: `${verticalPadding}px 15px`,
+          padding: `${getVerticalPadding(size) - 1}px 11px`,
+          minHeight: getMinHeight(size),
+          display: 'flex',
+          alignItems: 'center',
           backgroundColor: isDisabled
             ? 'var(--surface-disabled)'
             : 'var(--surface)',
           color: isDisabled ? 'var(--text-disabled)' : 'var(--text)',
           boxShadow,
-          display: 'grid',
-          gridTemplateAreas: icon
-            ? '"icon input indicators"'
-            : '"input indicators"',
-          gridTemplateColumns: icon
-            ? 'min-content 1fr min-content'
-            : '1fr min-content',
-          gridGap: 'var(--spacing-l2)',
-          alignItems: 'flex-start',
+          '& > .tk-select-positioner': {
+            display: 'grid',
+            gridTemplateAreas: icon
+              ? '"icon input indicators"'
+              : '"input indicators"',
+            gridTemplateColumns: icon
+              ? 'min-content 1fr min-content'
+              : '1fr min-content',
+            minHeight: 'var(--tk-react-select-icon-wrapper-height)',
+            gap: 'var(--spacing-l2)',
+            alignItems: isMulti ? 'flex-start' : 'center',
+            width: '100%'
+          },
           outline: 'none',
           transitionProperty: 'border-color, box-shadow',
           transitionDuration: '200ms',
@@ -372,14 +416,15 @@ export function useReactSelectConfig<
           ...containerStyles,
           ...verticalStyles,
           padding: 0,
-          gap: 8,
-          gridArea: 'input'
+          gap: VALUE_GRID_GAP,
+          gridArea: 'input',
+          minHeight: 'var(--tk-react-select-icon-wrapper-height)'
         };
       },
       indicatorsContainer: (containerStyles) => ({
         ...containerStyles,
         gridArea: 'indicators',
-        height: INPUT_INTERNAL_HEIGHT
+        height: 'var(--tk-react-select-icon-wrapper-height)'
       }),
       input: (styles) => ({
         ...styles,
@@ -390,7 +435,8 @@ export function useReactSelectConfig<
       placeholder: (styles) => ({
         ...styles,
         font: 'var(--body-1)',
-        color: 'var(--text-placeholder)'
+        color: 'var(--text-placeholder)',
+        alignSelf: 'center'
       }),
       menu: (styles) => ({
         ...styles,
@@ -447,21 +493,21 @@ export function useReactSelectConfig<
       }),
       multiValue: (styles) => ({
         ...styles,
-        border: `1px solid var(--border-transparent)`,
-        padding: '3px 5px',
+        border: `1px solid var(--border)`,
+        padding: '6px',
         margin: 0,
         display: 'grid',
         gridTemplateColumns: 'max-content min-content',
-        gridGap: 4,
+        gridGap: VALUE_GRID_GAP,
         alignItems: 'center',
-        borderRadius: 4,
-        background: 'var(--select-multi-value)',
+        borderRadius: 'var(--border-radius-small)',
+        background: 'var(--tk-select-multi-value)',
         cursor: 'pointer',
         ':hover': {
-          background: 'var(--select-multi-value-hover)'
+          background: 'var(--tk-select-multi-value-hover)'
         },
         ':active': {
-          background: 'var(--select-multi-value-active)'
+          background: 'var(--tk-select-multi-value-active)'
         }
       }),
       group: (styles) => ({

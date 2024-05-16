@@ -1,12 +1,13 @@
 import { OverflowMenuHorizontal } from '@carbon/icons-react';
 import styled from '@emotion/styled';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { table } from '@tablecheck/tablekit-core';
+import { getConfigDefault } from '@tablecheck/tablekit-react';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
 export default {
-  title: 'TableKit/Table',
+  title: 'Components/Table',
   component: emotion.Table,
   parameters: {
     ...table
@@ -100,8 +101,19 @@ const ActionWrapper = styled.div`
   display: flex;
 `;
 
-const SimpleTemplate: Story = ({ Table }) => (
-  <Table>
+interface Options {
+  Table: typeof emotion.Table | typeof css.Table;
+  Button: typeof emotion.Button | typeof css.Button;
+  Badge: typeof emotion.Badge | typeof css.Badge;
+  Checkbox: typeof emotion.Checkbox | typeof css.Checkbox;
+  isStriped: boolean;
+}
+
+const SimpleTemplate: StoryFn<Pick<Options, 'Table' | 'isStriped'>> = ({
+  Table,
+  isStriped
+}) => (
+  <Table data-variant={isStriped ? 'striped' : 'default'}>
     <thead>
       <tr>
         <th>Name</th>
@@ -111,10 +123,20 @@ const SimpleTemplate: Story = ({ Table }) => (
       </tr>
     </thead>
     <tbody>
-      {tableData.map((user) => (
-        <tr key={user.id}>
+      {tableData.map((user, index) => (
+        <tr key={user.id} data-active={index === 3 || index === 4}>
           <td>{user.name}</td>
-          <td>{user.address}</td>
+          <td>
+            {index % 2 ? (
+              user.address
+            ) : (
+              <ul>
+                {user.address.split(', ').map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            )}
+          </td>
           <td>{user.birthday}</td>
           <td>{user.email}</td>
         </tr>
@@ -123,16 +145,30 @@ const SimpleTemplate: Story = ({ Table }) => (
   </Table>
 );
 
-export const BasicEmotion: Story = SimpleTemplate.bind({});
+export const BasicEmotion = SimpleTemplate.bind({});
 BasicEmotion.args = { Table: emotion.Table };
 BasicEmotion.parameters = { useEmotion: true };
 
-export const BasicClass: Story = SimpleTemplate.bind({});
+export const BasicStripedEmotion = SimpleTemplate.bind({});
+BasicStripedEmotion.args = { Table: emotion.Table, isStriped: true };
+BasicStripedEmotion.parameters = { useEmotion: true };
+
+export const BasicClass = SimpleTemplate.bind({});
 BasicClass.args = { Table: css.Table };
 BasicClass.parameters = { useEmotion: false };
 
-const WithControlsTemplate: Story = ({ Table, Button, Badge, Checkbox }) => (
-  <Table>
+export const BasicStripedClass = SimpleTemplate.bind({});
+BasicStripedClass.args = { Table: css.Table, isStriped: true };
+BasicStripedClass.parameters = { useEmotion: false };
+
+const WithControlsTemplate: StoryFn<Options> = ({
+  Table,
+  Button,
+  Badge,
+  Checkbox,
+  isStriped
+}) => (
+  <Table data-variant={isStriped ? 'striped' : 'default'}>
     <thead>
       <tr>
         <th>
@@ -146,20 +182,32 @@ const WithControlsTemplate: Story = ({ Table, Button, Badge, Checkbox }) => (
       </tr>
     </thead>
     <tbody>
-      {tableData.map((user) => (
-        <tr key={user.id}>
+      {tableData.map((user, index) => (
+        <tr key={user.id} data-active={index === 3 || index === 4}>
           <td>
             <ActionWrapper>
               <Checkbox type="checkbox" />
             </ActionWrapper>
           </td>
-          <td>{user.address}</td>
           <td>
-            <Badge data-variant={user.status}>{user.status}</Badge>
+            {index % 2 ? (
+              user.address
+            ) : (
+              <ul>
+                {user.address.split(', ').map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+            )}
           </td>
-          <td>
+          <td data-cell-type="badge">
+            <Badge data-variant={user.status} data-size="small">
+              {user.status}
+            </Badge>
+          </td>
+          <td data-cell-type="button">
             <Button data-variant="bare" data-size="small">
-              <OverflowMenuHorizontal size={20} />
+              <OverflowMenuHorizontal size={getConfigDefault('iconSize')} />
             </Button>
           </td>
         </tr>
@@ -168,16 +216,27 @@ const WithControlsTemplate: Story = ({ Table, Button, Badge, Checkbox }) => (
   </Table>
 );
 
-export const WithControlsEmotion: Story = WithControlsTemplate.bind({});
+export const WithControlsEmotion = WithControlsTemplate.bind({});
 WithControlsEmotion.args = {
   Table: emotion.Table,
   Button: emotion.Button,
   Badge: emotion.Badge,
   Checkbox: emotion.Checkbox
 };
+
 WithControlsEmotion.parameters = { useEmotion: true };
 
-export const WithControlsClass: Story = WithControlsTemplate.bind({});
+export const StripedControlsEmotion = WithControlsTemplate.bind({});
+StripedControlsEmotion.args = {
+  Table: emotion.Table,
+  Button: emotion.Button,
+  Badge: emotion.Badge,
+  Checkbox: emotion.Checkbox,
+  isStriped: true
+};
+StripedControlsEmotion.parameters = { useEmotion: true };
+
+export const WithControlsClass = WithControlsTemplate.bind({});
 WithControlsClass.args = {
   Table: css.Table,
   Button: css.Button,
@@ -185,3 +244,13 @@ WithControlsClass.args = {
   Checkbox: css.Checkbox
 };
 WithControlsClass.parameters = { useEmotion: false };
+
+export const StripedControlsClass = WithControlsTemplate.bind({});
+StripedControlsClass.args = {
+  Table: css.Table,
+  Button: css.Button,
+  Badge: css.Badge,
+  Checkbox: css.Checkbox,
+  isStriped: true
+};
+StripedControlsClass.parameters = { useEmotion: false };

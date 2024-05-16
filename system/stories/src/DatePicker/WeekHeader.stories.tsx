@@ -7,7 +7,7 @@ import {
 } from '@tablecheck/tablekit-react-datepicker';
 
 export default {
-  title: 'TableKit/DatePicker/WeekHeader',
+  title: 'Components/DatePicker/WeekHeader',
   component: WeekHeader,
   parameters: {
     chromatic: { disableSnapshot: true },

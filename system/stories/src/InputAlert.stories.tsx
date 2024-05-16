@@ -17,7 +17,7 @@ const contentVariants: emotion.InputAlertProps[] = (
 }));
 
 export default {
-  title: 'TableKit/InputAlert',
+  title: 'Components/InputAlert',
   component: emotion.InputAlert,
   parameters: {
     variants: contentVariants.map((props) => props['data-variant']),

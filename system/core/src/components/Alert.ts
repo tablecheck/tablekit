@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const element = 'div';
 export const className = 'alert';
@@ -20,9 +20,9 @@ export interface Props {
     | 'text-only';
 }
 
-export const baseStyles = css`
+export const fullStyles = css`
   display: grid;
-  grid-gap: var(--spacing-l1) var(--spacing-l2);
+  gap: var(--spacing-l1) var(--spacing-l2);
   color: var(--neutral-text);
   background: var(--neutral-surface);
   border-radius: var(--border-radius-small);

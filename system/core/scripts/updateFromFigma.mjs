@@ -1,10 +1,10 @@
-import path from 'path';
-
+import chalk from 'chalk';
 import fs from 'fs-extra';
 // eslint-disable-next-line @tablecheck/forbidden-imports
 import _ from 'lodash';
 import pluralize from 'pluralize';
-import prettier from 'prettier';
+
+import { prettierWrite } from './prettierWrite.mjs';
 
 /**
  * To use this file, install design tokens figma plugin; https://www.figma.com/community/plugin/888356646278934516
@@ -66,6 +66,8 @@ function valueToCssValue(value) {
   return `${value}px`;
 }
 
+const FIGMA_ONLY_TOKENS = ['demolight'];
+
 Object.keys(effectTokens).forEach((name) => {
   const { value, type } = effectTokens[name];
   switch (type) {
@@ -88,12 +90,28 @@ Object.keys(effectTokens).forEach((name) => {
       return;
     }
     default: {
-      console.warn('Unknown Effect', name, type, effectTokens[name]);
+      if (FIGMA_ONLY_TOKENS.includes(name)) return;
+      console.warn(
+        chalk.yellow('Unknown Effect'),
+        chalk.cyan(name),
+        type,
+        effectTokens[name]
+      );
     }
   }
 });
-
 Object.keys(colorVars).forEach((groupKey) => {
+  if (groupKey === 'light' || groupKey === 'dark') {
+    const text = colorVars[groupKey].find(([name]) => name === 'text');
+    const textSecondary = colorVars[groupKey].find(
+      ([name]) => name === 'text-secondary'
+    );
+    colorVars[groupKey].push(['brand-secondary-text', text[1]]);
+    colorVars[groupKey].push([
+      'surface-secondary-text',
+      groupKey === 'light' ? textSecondary[1] : text[1]
+    ]);
+  }
   colorVars[groupKey] = _.sortBy(colorVars[groupKey], '0').map(
     ([name, value]) => [name, hexToRgba(value)]
   );
@@ -110,9 +128,27 @@ function formatCssProp(name, value) {
   return `--${name}: ${value};`;
 }
 
+const lightVars = colorVars.light.map(([name]) => name);
+const darkVars = colorVars.dark.map(([name]) => name);
+const missingLightVars = darkVars.filter((name) => !lightVars.includes(name));
+const missingDarkVars = lightVars.filter((name) => !darkVars.includes(name));
+
+if (missingLightVars.length) {
+  console.warn(
+    chalk.bold.red('Missing light vars:'),
+    missingLightVars.join(', ')
+  );
+}
+if (missingDarkVars.length) {
+  console.warn(
+    chalk.bold.red('Missing dark vars:'),
+    missingDarkVars.join(', ')
+  );
+}
+
 const themeContent = `// eslint-disable-next-line eslint-comments/disable-enable-pair
 /* eslint-disable max-lines */
-import { css } from '@emotion/react';
+import { css, themedCss } from '../utils';
 
 /**
  * DO NOT EDIT; File is generated from figma, see './updateFromFigma.mjs' for update instructions
@@ -161,26 +197,9 @@ export const darkEffectStyles = css\`
     .join('\n  ')}
 \`;
 
-
-export function themedCss({ light, dark }: { light: ReturnType<typeof css>, dark: ReturnType<typeof css>}): : ReturnType<typeof css> {
-  return css\`
-    [data-theme='light'],
-    :root {
-      \${light}
-    }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme='light']), [data-theme='system'] {
-        \${dark}
-      }
-    }
-    [data-theme='dark'] {
-      \${dark}
-    }
-  \`;
-}
-
 export const theme = css\`
   \${themedCss({
+    selector: '',
     light: css\`
       \${lightColors};
       \${lightEffectStyles}
@@ -198,20 +217,14 @@ export const theme = css\`
   }
 \``;
 
-function outputFile(relativePath, fileContent) {
-  const filepath = path.join(process.cwd(), 'src', relativePath);
-  const config = prettier.resolveConfig.sync(filepath);
-  fs.outputFileSync(
-    filepath,
-    prettier.format(fileContent, { filepath, ...config })
-  );
-}
+await prettierWrite('themeVariables/theme.ts', themeContent);
 
-outputFile('themeVariables/theme.ts', themeContent);
+const typesContent = `/**
+* DO NOT EDIT; File is generated from figma, see './updateFromFigma.mjs' for update instructions
+*/
 
-const typesContent = `
 export interface TableKitCSSProperties {
   ${allCssProperties.map((name) => `'--${name}'?: string;`).join('\n')}
 }`;
 
-outputFile('themeVariables/types.ts', typesContent);
+await prettierWrite('themeVariables/types.gen.ts', typesContent);

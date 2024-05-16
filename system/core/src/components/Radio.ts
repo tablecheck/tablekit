@@ -1,6 +1,4 @@
-import { css } from '@emotion/react';
-
-import { OptionalKeys } from '../typeUtils';
+import { OptionalKeys, css } from '../utils';
 
 export const element = 'input';
 export const selectors = ['input[type="radio"]:not(.toggle)'];
@@ -12,8 +10,9 @@ export interface Props {
 export type DefaultedProps = OptionalKeys<Props, 'type'>;
 export const defaultProps = { type: 'radio' };
 
-export const baseStyles = css`
+export const fullStyles = css`
   --radio-size: 20px;
+  --tk-radio-fill: transparent;
   appearance: none;
   border-radius: 100%;
   border: 2px solid var(--border);
@@ -30,7 +29,7 @@ export const baseStyles = css`
 
   &:before {
     --radio-inner-size: 9px;
-    background-color: transparent;
+    background-color: var(--tk-radio-fill);
     border-radius: 100%;
     content: '';
     height: var(--radio-inner-size);
@@ -52,21 +51,26 @@ export const baseStyles = css`
   }
 
   &[data-pseudo='focus'],
+  &:focus,
   &:focus-visible {
     box-shadow: 0 0 0 2px var(--focus);
   }
-
-  &:checked {
-    border-color: var(--text);
+  &:focus:not(:focus-visible) {
+    box-shadow: none !important;
   }
 
-  &:checked:before {
-    background-color: var(--text);
+  &:checked {
+    border-color: var(--brand-primary);
+    --tk-radio-fill: var(--brand-primary);
   }
 
   &:disabled {
-    border-color: var(--border-transparent);
+    border-color: var(--border);
     background-color: var(--surface-disabled);
     cursor: not-allowed;
+    --tk-radio-fill: transparent;
+    &:checked {
+      --tk-radio-fill: var(--text-disabled);
+    }
   }
 `;

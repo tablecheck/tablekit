@@ -2,11 +2,12 @@ import { Earth } from '@carbon/icons-react';
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn } from '@storybook/react';
 import { menu, menuItem, menuList } from '@tablecheck/tablekit-core';
+import { getConfigDefault } from '@tablecheck/tablekit-react';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
 export default {
-  title: 'TableKit/Menu',
+  title: 'Components/Menu',
   component: emotion.Menu,
   parameters: {
     ...menu,
@@ -47,31 +48,31 @@ function AllMenuItems({ components, isSelected }: any) {
       </li>
       <li>
         <components.MenuItem data-selected={isSelected}>
-          <Earth size={20} />
+          <Earth size={getConfigDefault('iconSize')} />
           Item
         </components.MenuItem>
       </li>
       <li>
         <components.MenuItem data-selected={isSelected} data-variant="success">
-          <Earth size={20} />
+          <Earth size={getConfigDefault('iconSize')} />
           Success
         </components.MenuItem>
       </li>
       <li>
         <components.MenuItem data-selected={isSelected} data-variant="info">
-          <Earth size={20} />
+          <Earth size={getConfigDefault('iconSize')} />
           Info
         </components.MenuItem>
       </li>
       <li>
         <components.MenuItem data-selected={isSelected} data-variant="error">
-          <Earth size={20} />
+          <Earth size={getConfigDefault('iconSize')} />
           Error
         </components.MenuItem>
       </li>
       <li>
         <components.MenuItem data-selected={isSelected} data-variant="warning">
-          <Earth size={20} />
+          <Earth size={getConfigDefault('iconSize')} />
           Warn
         </components.MenuItem>
       </li>

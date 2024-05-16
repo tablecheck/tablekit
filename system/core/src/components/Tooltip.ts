@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/react';
+import { css } from '../utils';
 
 /**
  * Adapted from https://github.com/picocss/pico/blob/master/scss/utilities/_tooltip.scss
@@ -11,18 +11,20 @@ export interface Props {
   'data-tooltip': string;
 }
 
-const slide = keyframes`
-  from {
-    transform: translate(-50%, .75rem);
-    opacity: 0;
-  }
-  to {
-    transform: translate(-50%, -.25rem);
-    opacity: 1;
+export const keyframes = css`
+  @keyframes tk-tooltip {
+    from {
+      transform: translate(-50%, 0.75rem);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -0.25rem);
+      opacity: 1;
+    }
   }
 `;
 
-export const baseStyles = css`
+export const fullStyles = css`
   --tooltip-background-color: var(--surface, #000);
   --tooltip-text-color: var(--text, #fff);
   position: relative;
@@ -51,7 +53,6 @@ export const baseStyles = css`
     border: 1px solid var(--border);
   }
 
-  // Display
   &[data-pseudo='focus'],
   &[data-pseudo='hover'],
   &:focus,
@@ -66,7 +67,7 @@ export const baseStyles = css`
     &:hover {
       &::before {
         animation-duration: 0.2s;
-        animation-name: ${slide};
+        animation-name: tk-tooltip;
       }
     }
   }

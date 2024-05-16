@@ -1,4 +1,4 @@
-import { css } from '@emotion/react';
+import { css } from '../utils';
 
 export const element = 'a';
 export const selectors = ['a.link', 'a:not([class])'];
@@ -8,31 +8,54 @@ export interface Props {
   href?: string | undefined;
 }
 
-export const baseStyles = css`
-  color: var(--internal-link);
-  text-decoration: none;
-  &:not(:any-link) {
-    --internal-link: var(--link-disabled);
+export const fullStyles = css`
+  color: var(--tk-anchor-internal-color);
+  text-decoration: underline;
+
+  &:is(button),
+  &:-webkit-any(button) {
+    cursor: pointer;
   }
-  &:link {
-    --internal-link: var(--link);
+  &:not(:any-link):not(button),
+  &:disabled {
+    --tk-anchor-internal-color: var(
+      --tk-anchor-disabled-color,
+      var(--link-disabled)
+    );
+    cursor: not-allowed;
+  }
+  &:link,
+  &:is(button):not(:disabled),
+  &:-webkit-any(button):not(:disabled) {
+    --tk-anchor-internal-color: var(--tk-anchor-color, var(--link));
     &:hover,
     &:active,
     &[data-pseudo='hover'] {
-      text-decoration: underline;
-      --internal-link: var(--link-hover);
+      --tk-anchor-internal-color: var(
+        --tk-anchor-hover-color,
+        var(--link-hover)
+      );
     }
     &:visited,
     &[data-pseudo='visited'] {
-      --internal-link: var(--link-visited);
+      --tk-anchor-internal-color: var(
+        --tk-anchor-visited-color,
+        var(--link-visited)
+      );
     }
-    &:focus:not(:focus-visible),
+    &:focus,
     &:focus-visible,
     &[data-pseudo='focus'] {
       outline: none;
-      --internal-link: var(--link-hover);
+      --tk-anchor-internal-color: var(
+        --tk-anchor-hover-color,
+        var(--link-hover)
+      );
       border-radius: 2px;
-      box-shadow: 0 0 0 2px var(--link-hover);
+      box-shadow: 0 0 0 2px var(--focus);
+    }
+    &:focus:not(:focus-visible) {
+      box-shadow: none !important;
     }
   }
 `;
