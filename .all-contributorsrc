@@ -3,7 +3,9 @@
   "projectOwner": "tablecheck",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": ["README.md"],
+  "files": [
+    "README.md"
+  ],
   "imageSize": 100,
   "commit": false,
   "commitConvention": "angular",
@@ -13,49 +15,81 @@
       "name": "Wahid Magdy",
       "avatar_url": "https://avatars.githubusercontent.com/u/3442546?v=4",
       "profile": "https://github.com/wahidmagdy",
-      "contributions": ["doc", "example"]
+      "contributions": [
+        "doc",
+        "example"
+      ]
     },
     {
       "login": "SimeonC",
       "name": "Simeon Cheeseman",
       "avatar_url": "https://avatars.githubusercontent.com/u/1085899?v=4",
       "profile": "https://github.com/SimeonC",
-      "contributions": ["infra", "example", "code", "test", "doc"]
+      "contributions": [
+        "infra",
+        "example",
+        "code",
+        "test",
+        "doc"
+      ]
     },
     {
       "login": "irmir",
       "name": "irmir",
       "avatar_url": "https://avatars.githubusercontent.com/u/59263605?v=4",
       "profile": "https://github.com/irmir",
-      "contributions": ["example", "code"]
+      "contributions": [
+        "example",
+        "code"
+      ]
     },
     {
       "login": "gazpachu",
       "name": "Joan Mira",
       "avatar_url": "https://avatars.githubusercontent.com/u/1721288?v=4",
       "profile": "http://joanmira.com/",
-      "contributions": ["doc", "code"]
+      "contributions": [
+        "doc",
+        "code"
+      ]
     },
     {
       "login": "johnnyshields",
       "name": "Johnny Shields",
       "avatar_url": "https://avatars.githubusercontent.com/u/27655?v=4",
       "profile": "https://github.com/johnnyshields",
-      "contributions": ["doc"]
+      "contributions": [
+        "doc"
+      ]
     },
     {
       "login": "Findmitrey",
       "name": "Dmitriy",
       "avatar_url": "https://avatars.githubusercontent.com/u/19979106?v=4",
       "profile": "https://github.com/Findmitrey",
-      "contributions": ["example", "code"]
+      "contributions": [
+        "example",
+        "code"
+      ]
     },
     {
       "login": "daniellizik",
       "name": "Daniel Lizik",
       "avatar_url": "https://avatars.githubusercontent.com/u/10506366?v=4",
       "profile": "https://github.com/daniellizik",
-      "contributions": ["code"]
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Fred6475",
+      "name": "Frederic Wojcikowski",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95334381?v=4",
+      "profile": "https://github.com/Fred6475",
+      "contributions": [
+        "example",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 6,

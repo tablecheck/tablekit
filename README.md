@@ -61,6 +61,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/daniellizik"><img src="https://avatars.githubusercontent.com/u/10506366?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Lizik</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=daniellizik" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Fred6475"><img src="https://avatars.githubusercontent.com/u/95334381?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Frederic Wojcikowski</b></sub></a><br /><a href="#example-Fred6475" title="Examples">💡</a> <a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=Fred6475" title="Code">💻</a></td>
   </tr>
 </table>
 
