@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [3.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.0-next.29...@tablecheck/tablekit-react@3.0.0) (2024-05-27)
+
+
+### Features
+
+* update all styling and designs ([e0080dd](https://github.com/tablecheck/tablekit/commit/e0080dd5d8d5147a02a7d2fbdf667dc3e27b37f2))
+
+
+
+
+
 # v3.0.0 (Mon May 27 2024)
 
 :tada: This release contains work from new contributors! :tada:
