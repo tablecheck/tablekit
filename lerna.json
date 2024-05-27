@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/*"],
+  "packages": ["system/*", "website"],
   "version": "independent",
   "command": {
     "publish": {
@@ -8,7 +8,9 @@
       "verifyAccess": false
     },
     "bootstrap": {
-      "hoist": true
+      "hoist": false,
+      "//comment": "We need this here to stop npm from installing peerDependencies of child packages automatically",
+      "npmClientArgs": ["--legacy-peer-deps"]
     }
   }
 }

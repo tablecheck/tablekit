@@ -1,0 +1,46 @@
+{
+  "name": "@tablecheck/tablekit-core",
+  "description": "Emotion.sh styling for tablekit design system",
+  "license": "MIT",
+  "author": "TableCheck Inc.",
+  "version": "2.0.0",
+  "keywords": [],
+  "main": "./lib/es5/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "audit": "tablecheck-scripts auditjs",
+    "audit:ci": "tablecheck-scripts auditjs --ci",
+    "build": "npm run update:exports && SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib && npm run update:components",
+    "build:netlify": "SKIP_PREFLIGHT_CHECK=true tablecheck-scripts build-lib",
+    "coverage-summary": "tablecheck-scripts coverage-summary",
+    "format": "tablecheck-scripts lint --fix --skip-typescript",
+    "lint": "tablecheck-scripts lint",
+    "precommit": "npm run update:exports",
+    "test": "tablecheck-scripts test --coverage --env=jsdom",
+    "test:watch": "tablecheck-scripts test --env=jsdom",
+    "tsc": "tablecheck-scripts tsc",
+    "tsc:watch": "tablecheck-scripts tsc -w",
+    "update:components": "node scripts/generateComponents.mjs",
+    "update:exports": "node scripts/generateIndex.mjs",
+    "update:figma": "node scripts/updateFromFigma.mjs"
+  },
+  "dependencies": {
+    "csstype": "3.1.1"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.10.6",
+    "chalk": "5.2.0",
+    "fs-extra": "11.1.0",
+    "lodash": "4.17.21",
+    "pluralize": "8.0.0",
+    "prettier": "2.8.4",
+    "typescript": "4.9.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

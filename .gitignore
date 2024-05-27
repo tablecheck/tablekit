@@ -10,6 +10,7 @@ public/static
 lib
 junit
 docs
+storybook-static
 tsconfig.json
 tsconfig.*.json
 *.tsbuildinfo
@@ -19,3 +20,6 @@ tsconfig.*.json
 .env.production.local
 .@tablecheck-react-system
 .@tablecheck
+.rollup.cache
+/cache
+/.nx
