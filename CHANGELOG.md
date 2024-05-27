@@ -1,3 +1,196 @@
+# (Mon May 27 2024)
+
+:tada: This release contains work from new contributors! :tada:
+
+Thanks for all your work!
+
+:heart: Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+:heart: null[@k-baldauf](https://github.com/k-baldauf)
+
+:heart: Neilson Gardose ([@nkgardose](https://github.com/nkgardose))
+
+:heart: null[@Maruth51](https://github.com/Maruth51)
+
+:heart: Hachi ([@hachi-studio](https://github.com/hachi-studio))
+
+:heart: Stanislav ([@staevs](https://github.com/staevs))
+
+:heart: Frederic Wojcikowski ([@Fred6475](https://github.com/Fred6475))
+
+:heart: Joan Mira ([@gazpachu](https://github.com/gazpachu))
+
+#### 💥 Breaking Change
+
+- Merge remote-tracking branch 'origin/main' into next [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- ci: update deps to fix release [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- chore: update auditjs [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- ci: fix build by excluding stories from precommit checking [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- ci: fix stories release attempt 1 [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- ci: remove invalid yaml [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- ci: fix branch release [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- fix: revert back website tk css package [#100](https://github.com/tablecheck/tablekit/pull/100) ([@gazpachu](https://github.com/gazpachu))
+- feat: added initial layout for documentation pages [#100](https://github.com/tablecheck/tablekit/pull/100) ([@gazpachu](https://github.com/gazpachu))
+- chore: fix storybook build by disabling eslint-rule [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- fix: eslint error [#100](https://github.com/tablecheck/tablekit/pull/100) ([@gazpachu](https://github.com/gazpachu))
+- feat: website home page and theme toggle working [#100](https://github.com/tablecheck/tablekit/pull/100) ([@gazpachu](https://github.com/gazpachu))
+- fix: website eslint errors [#100](https://github.com/tablecheck/tablekit/pull/100) ([@gazpachu](https://github.com/gazpachu))
+- feat: website initial push [#100](https://github.com/tablecheck/tablekit/pull/100) ([@gazpachu](https://github.com/gazpachu))
+- chore: update TODO list [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-core@3.0.0`, `@tablecheck/tablekit-css@3.0.0`, `@tablecheck/tablekit-react-css@3.0.0`, `@tablecheck/tablekit-react-datepicker@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - feat: merge version 3 to main [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat: update all styling and designs [#223](https://github.com/tablecheck/tablekit/pull/223) ([@SimeonC](https://github.com/SimeonC))
+  - feat: add react-css and core packages [#169](https://github.com/tablecheck/tablekit/pull/169) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react-datepicker@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - docs: add react import statements [#169](https://github.com/tablecheck/tablekit/pull/169) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-css@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - feat: push new components and optimise stories [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat: add Badge and refactor naming to be more clear [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat: add tabs and minor bugfixes [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - chore: fix website build and linter/precommit errors [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - chore: prevent website from generating tags [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat(tablekit-css): add css publish scripts [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat: enable auto-build of css [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - chore: port v3 from old next branch [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react@3.0.0`
+  - fix: lint and typescript errors [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - ci: add chromatic [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix: mistyped theme variables after generation [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat(tablekit-react): add country prop to ThemeProvider [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - feat: update theme colors from figma [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix: prevent prefers-color-scheme from overriding data-theme attr on html tag [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix(tablekit-css): remove incorrect baseElement items [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix: build and lint should now work correctly [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-css@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - ci: fix up package-lock files [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix: change skeleton to be more smooth, update constants to be css export [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix: get storybook working for react [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+  - fix: some minor refactoring and styling fixes [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-css@3.0.0`
+  - chore: update auditjs [#100](https://github.com/tablecheck/tablekit/pull/100) ([@SimeonC](https://github.com/SimeonC))
+
+#### 🚀 Enhancement
+
+- chore: extend whitelist [#155](https://github.com/tablecheck/tablekit/pull/155) ([@SashaShostyr](https://github.com/SashaShostyr))
+- `@tablecheck/tablekit-core@3.0.0`, `@tablecheck/tablekit-react-css@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - feat(tablekit-core): add bare and disabled-bare, update info styling in input-alert [#214](https://github.com/tablecheck/tablekit/pull/214) ([@k-baldauf](https://github.com/k-baldauf))
+  - feat: add system theme mode and `themedCss` util [#211](https://github.com/tablecheck/tablekit/pull/211) ([@SimeonC](https://github.com/SimeonC))
+  - feat: add component to auto apply anchor styling to children [#204](https://github.com/tablecheck/tablekit/pull/204) ([@SimeonC](https://github.com/SimeonC))
+  - fix: update alerts [#189](https://github.com/tablecheck/tablekit/pull/189) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-core@3.0.0`
+  - feat: add new Badge sizes [#210](https://github.com/tablecheck/tablekit/pull/210) ([@SimeonC](https://github.com/SimeonC))
+  - feat: implement danger variant for button [#206](https://github.com/tablecheck/tablekit/pull/206) ([@nkgardose](https://github.com/nkgardose))
+  - feat: add default anchor styling [#201](https://github.com/tablecheck/tablekit/pull/201) ([@SimeonC](https://github.com/SimeonC))
+  - feat(tablekit-core): add `data-variant` as prop for `MenuItem` [#196](https://github.com/tablecheck/tablekit/pull/196) ([@nkgardose](https://github.com/nkgardose))
+- `@tablecheck/tablekit-css@3.0.0`, `@tablecheck/tablekit-react-datepicker@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - feat: add react-calendar package and fix types for emotion theme [#159](https://github.com/tablecheck/tablekit/pull/159) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react@3.0.0`
+  - feat(tablekit-react): add orange badge variant [#160](https://github.com/tablecheck/tablekit/pull/160) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix(tablekit-react): add mising variants for badge [#157](https://github.com/tablecheck/tablekit/pull/157) ([@wahidfarid](https://github.com/wahidfarid))
+  - fix: add chip component [#155](https://github.com/tablecheck/tablekit/pull/155) ([@hachi-studio](https://github.com/hachi-studio))
+  - feat(tablekit-react): add checkbox/radio label component [#156](https://github.com/tablecheck/tablekit/pull/156) ([@SimeonC](https://github.com/SimeonC))
+  - feat(tablekit-react): add table component [#124](https://github.com/tablecheck/tablekit/pull/124) ([@staevs](https://github.com/staevs))
+  - feat(tablekit-react): add icon button component [#144](https://github.com/tablecheck/tablekit/pull/144) ([@hachi-studio](https://github.com/hachi-studio))
+  - feat(tablekit-react): add toggle component [#129](https://github.com/tablecheck/tablekit/pull/129) ([@irmir](https://github.com/irmir))
+  - feat(tablekit-react): add button group component [#123](https://github.com/tablecheck/tablekit/pull/123) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - feat(tablekit-react): add radio component [#122](https://github.com/tablecheck/tablekit/pull/122) ([@staevs](https://github.com/staevs))
+  - feat: updated website folder and file structure [#117](https://github.com/tablecheck/tablekit/pull/117) ([@gazpachu](https://github.com/gazpachu))
+- `@tablecheck/tablekit-css@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - feat: add textarea component and resizing textarea package [#151](https://github.com/tablecheck/tablekit/pull/151) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react-select@3.0.0`
+  - feat(tablekit-react-select): add isClearable props [#130](https://github.com/tablecheck/tablekit/pull/130) ([@irmir](https://github.com/irmir))
+
+#### 🐛 Bug Fix
+
+- chore: package bump and audit fix [#221](https://github.com/tablecheck/tablekit/pull/221) ([@SimeonC](https://github.com/SimeonC))
+- chore: fix audit [#212](https://github.com/tablecheck/tablekit/pull/212) ([@SimeonC](https://github.com/SimeonC))
+- fix(tablekit-icon): move dev dependencies to correct place [#195](https://github.com/tablecheck/tablekit/pull/195) ([@SimeonC](https://github.com/SimeonC))
+- ci: allow pull_requests pipeline to run on forks [#181](https://github.com/tablecheck/tablekit/pull/181) ([@SimeonC](https://github.com/SimeonC))
+- chore: extend whitelist [#173](https://github.com/tablecheck/tablekit/pull/173) ([@SashaShostyr](https://github.com/SashaShostyr))
+- chore: extend whitelist [#170](https://github.com/tablecheck/tablekit/pull/170) ([@SashaShostyr](https://github.com/SashaShostyr))
+- chore: extend whitelist [#163](https://github.com/tablecheck/tablekit/pull/163) ([@SashaShostyr](https://github.com/SashaShostyr))
+- chore: extend whitelist [#153](https://github.com/tablecheck/tablekit/pull/153) ([@SashaShostyr](https://github.com/SashaShostyr))
+- chore: extend whitelist [#139](https://github.com/tablecheck/tablekit/pull/139) ([@SashaShostyr](https://github.com/SashaShostyr))
+- ci: skip chromatic on draft pull requests [#136](https://github.com/tablecheck/tablekit/pull/136) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-core@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`
+  - fix: use disabled text color in input and select [#220](https://github.com/tablecheck/tablekit/pull/220) ([@SashaShostyr](https://github.com/SashaShostyr))
+- `@tablecheck/tablekit-core@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - fix: handle case when no icon in input-alert [#217](https://github.com/tablecheck/tablekit/pull/217) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-core@3.0.0`
+  - feat(tablekit-core): update padding to new styling and fix other visual issues [#216](https://github.com/tablecheck/tablekit/pull/216) ([@k-baldauf](https://github.com/k-baldauf))
+  - fix: alert styles [#212](https://github.com/tablecheck/tablekit/pull/212) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix: spinner should resize correctly [#207](https://github.com/tablecheck/tablekit/pull/207) ([@SimeonC](https://github.com/SimeonC))
+  - fix: prevent text-decoration when using a button as a link [#205](https://github.com/tablecheck/tablekit/pull/205) ([@SimeonC](https://github.com/SimeonC))
+  - fix: link hover/active/visited only apply when link [#202](https://github.com/tablecheck/tablekit/pull/202) ([@SimeonC](https://github.com/SimeonC))
+  - fix: TabButtons shouldn't wrap text by default [#199](https://github.com/tablecheck/tablekit/pull/199) ([@SimeonC](https://github.com/SimeonC))
+  - fix: add wrap option to tabs and reduce gap to 8px [#198](https://github.com/tablecheck/tablekit/pull/198) ([@SimeonC](https://github.com/SimeonC))
+  - fix: make button and icon button consistently sized [#197](https://github.com/tablecheck/tablekit/pull/197) ([@SimeonC](https://github.com/SimeonC))
+  - fix: remove medium font-weight references [#194](https://github.com/tablecheck/tablekit/pull/194) ([@SimeonC](https://github.com/SimeonC))
+  - fix(tablekit-core): update warn text for `InputAlert` [#187](https://github.com/tablecheck/tablekit/pull/187) ([@nkgardose](https://github.com/nkgardose))
+  - fix: match types and css data-* selectors [#185](https://github.com/tablecheck/tablekit/pull/185) ([@SimeonC](https://github.com/SimeonC))
+  - fix(tablekit-react): fix table row styles [#183](https://github.com/tablecheck/tablekit/pull/183) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix: standalone spinner styling bugs [#184](https://github.com/tablecheck/tablekit/pull/184) ([@SimeonC](https://github.com/SimeonC))
+  - fix: MenuItem override styles by classname [#180](https://github.com/tablecheck/tablekit/pull/180) ([@Maruth51](https://github.com/Maruth51))
+  - Update button font-weight(Issue#166) [#179](https://github.com/tablecheck/tablekit/pull/179) ([@Maruth51](https://github.com/Maruth51))
+  - fix: button styling for stretched state [#176](https://github.com/tablecheck/tablekit/pull/176) ([@k-baldauf](https://github.com/k-baldauf))
+  - fix: button disabled styles [#175](https://github.com/tablecheck/tablekit/pull/175) ([@SashaShostyr](https://github.com/SashaShostyr))
+- `@tablecheck/tablekit-react-datepicker@3.0.0`
+  - fix: date picker buttons need type=“button” [#213](https://github.com/tablecheck/tablekit/pull/213) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react-select@3.0.0`
+  - fix(tablekit-react-select): allow maxMenuHeight to work [#209](https://github.com/tablecheck/tablekit/pull/209) ([@k-baldauf](https://github.com/k-baldauf))
+  - fix: react select styles for non-searchable variant [#178](https://github.com/tablecheck/tablekit/pull/178) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - feat: add vertical multi values variant [#177](https://github.com/tablecheck/tablekit/pull/177) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix(tablekit-react-select): fix text color for input [#172](https://github.com/tablecheck/tablekit/pull/172) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix(tablekit-react-select): disabled should be uninteractable [#158](https://github.com/tablecheck/tablekit/pull/158) ([@SimeonC](https://github.com/SimeonC))
+  - fix(tablekit-react-select): fix react-select Option component [#153](https://github.com/tablecheck/tablekit/pull/153) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - feat: update react select config [#145](https://github.com/tablecheck/tablekit/pull/145) ([@SashaShostyr](https://github.com/SashaShostyr))
+- `@tablecheck/tablekit-core@3.0.0`, `@tablecheck/tablekit-react-css@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - fix: move Anchor to component [#203](https://github.com/tablecheck/tablekit/pull/203) ([@SimeonC](https://github.com/SimeonC))
+  - fix: add missing alert configurations and remove irrelevant type [#190](https://github.com/tablecheck/tablekit/pull/190) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-css@3.0.0`
+  - fix: correct scoping for allFiles to pass to minifier [#188](https://github.com/tablecheck/tablekit/pull/188) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react@3.0.0`
+  - fix: checkbox default background color [#173](https://github.com/tablecheck/tablekit/pull/173) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - feat(tablekit-react): update theme colors [#170](https://github.com/tablecheck/tablekit/pull/170) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix(tablekit-react): export button core styles [#165](https://github.com/tablecheck/tablekit/pull/165) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix: table styles [#163](https://github.com/tablecheck/tablekit/pull/163) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix: update selected button group item styles [#149](https://github.com/tablecheck/tablekit/pull/149) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix: replace input attributes, fix button padding, focus styles [#146](https://github.com/tablecheck/tablekit/pull/146) ([@irmir](https://github.com/irmir))
+  - fix(tablekit-react): hardcode values for interop with IDE extensions [#147](https://github.com/tablecheck/tablekit/pull/147) ([@SimeonC](https://github.com/SimeonC))
+  - fix(tablekit-react): fix focus state for button group component [#137](https://github.com/tablecheck/tablekit/pull/137) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - feat(tablekit-react): add banner component [#135](https://github.com/tablecheck/tablekit/pull/135) ([@Fred6475](https://github.com/Fred6475))
+  - fix(tablekit-react): update theme colors [#139](https://github.com/tablecheck/tablekit/pull/139) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix: add header to story preview to show variant title [#133](https://github.com/tablecheck/tablekit/pull/133) ([@SashaShostyr](https://github.com/SashaShostyr))
+  - fix(tablekit-react): add cursor changes [#125](https://github.com/tablecheck/tablekit/pull/125) ([@staevs](https://github.com/staevs))
+- `@tablecheck/tablekit-css@3.0.0`, `@tablecheck/tablekit-react-select@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - fix: focus styles on input story and react-select [#152](https://github.com/tablecheck/tablekit/pull/152) ([@SimeonC](https://github.com/SimeonC))
+  - fix: light/dark mode color issues [#131](https://github.com/tablecheck/tablekit/pull/131) ([@SimeonC](https://github.com/SimeonC))
+
+#### 📝 Documentation
+
+- `@tablecheck/tablekit-core@3.0.0`, `@tablecheck/tablekit-react@3.0.0`
+  - feat(tablekit-core): change color for error in `InputAlert` [#186](https://github.com/tablecheck/tablekit/pull/186) ([@nkgardose](https://github.com/nkgardose))
+
+#### 🔩 Dependency Updates
+
+- chore: fix auditjs [#142](https://github.com/tablecheck/tablekit/pull/142) ([@wahidfarid](https://github.com/wahidfarid))
+
+#### Authors: 11
+
+- [@irmir](https://github.com/irmir)
+- [@k-baldauf](https://github.com/k-baldauf)
+- [@Maruth51](https://github.com/Maruth51)
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+- Frederic Wojcikowski ([@Fred6475](https://github.com/Fred6475))
+- Hachi ([@hachi-studio](https://github.com/hachi-studio))
+- Joan Mira ([@gazpachu](https://github.com/gazpachu))
+- Neilson Gardose ([@nkgardose](https://github.com/nkgardose))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+- Stanislav ([@staevs](https://github.com/staevs))
+- Wahid Farid ([@wahidfarid](https://github.com/wahidfarid))
+
+---
+
 # (Thu May 12 2022)
 
 :tada: This release contains work from a new contributor! :tada:
