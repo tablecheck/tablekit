@@ -1,4 +1,4 @@
-import { addDays, endOfDay } from 'date-fns';
+import { startOfDay, endOfDay } from 'date-fns';
 import { useDayzed, Props as DayzedProps } from 'dayzed';
 import * as React from 'react';
 
@@ -133,7 +133,7 @@ export const Root = React.forwardRef<HTMLDivElement, Props>(
     }
     let safeMinDate: undefined | Date;
     if (minDate) {
-      safeMinDate = endOfDay(addDays(minDate, -1));
+      safeMinDate = startOfDay(minDate);
     }
     const dayzed = useDayzed({
       date,
