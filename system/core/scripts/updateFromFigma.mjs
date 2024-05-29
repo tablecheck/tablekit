@@ -112,8 +112,23 @@ Object.keys(colorVars).forEach((groupKey) => {
       groupKey === 'light' ? textSecondary[1] : text[1]
     ]);
   }
+  if (groupKey === 'light') {
+    colorVars[groupKey].push([
+      'surface-raised-active-text',
+      'var(--brand-primary)'
+    ]);
+  }
+  if (groupKey === 'dark') {
+    colorVars[groupKey].push([
+      'surface-raised-active-text',
+      'var(--brand-primary-text)'
+    ]);
+  }
   colorVars[groupKey] = _.sortBy(colorVars[groupKey], '0').map(
-    ([name, value]) => [name, hexToRgba(value)]
+    ([name, value]) => [
+      name,
+      value.startsWith('var(') ? value : hexToRgba(value)
+    ]
   );
 });
 
