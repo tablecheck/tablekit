@@ -3,7 +3,7 @@
   "description": "TableCheck design system in scss/css",
   "license": "ISC",
   "author": "",
-  "version": "2.0.0",
+  "version": "3.0.1",
   "type": "module",
   "keywords": [],
   "files": [
@@ -12,7 +12,7 @@
     "classy/**/*.css"
   ],
   "scripts": {
-    "build": "ts-node-esm --transpileOnly src/build && cp lib/*.css .",
+    "build": "ts-node-esm --transpileOnly src/build.ts && cp lib/*.css .",
     "build:netlify": "npm run setup-typescript && npm run build",
     "prepare": "npm run setup-typescript",
     "prepublishOnly": "npm run build && mv -f lib/* .",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@emotion/react": "11.10.6",
     "@tablecheck/scripts": "2.3.9",
-    "@tablecheck/tablekit-core": "2.0.0",
+    "@tablecheck/tablekit-core": "3.0.1",
     "@types/fs-extra": "11.0.1",
     "chalk": "5.2.0",
     "cssnano": "5.1.15",
@@ -30,9 +30,9 @@
     "fs-extra": "11.1.0",
     "lodash": "4.17.21",
     "pluralize": "8.0.0",
-    "postcss": "8.4.21",
-    "postcss-nesting": "11.2.1",
-    "ts-node": "10.9.1",
+    "postcss": "8.4.38",
+    "postcss-nesting": "12.1.5",
+    "ts-node": "10.9.2",
     "typescript": "4.9.5"
   },
   "publishConfig": {

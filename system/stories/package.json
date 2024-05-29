@@ -3,7 +3,6 @@
   "name": "stories",
   "license": "MIT",
   "author": "TableCheck Inc.",
-  "version": "2.0.0",
   "keywords": [],
   "scripts": {
     "audit": "tablecheck-scripts auditjs",
