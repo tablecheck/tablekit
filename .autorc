@@ -1,15 +1,31 @@
 {
+  "author": "TableCheck CI <no-reply@tablecheck.com>",
   "plugins": [
     "npm",
     [
       "all-contributors",
       {
         "types": {
-          "doc": ["**/*.mdx", "**/*.md"],
-          "example": ["**/*.stories.*", "**/*.story.*", "**/.storybook/**/*"],
-          "infra": ["**/.github/**/*"],
-          "test": ["**/*.test.*", "**/*.spec.*", "cypress/**/*"],
-          "code": ["**/src/**/*"]
+          "doc": [
+            "**/*.mdx",
+            "**/*.md"
+          ],
+          "example": [
+            "**/*.stories.*",
+            "**/*.story.*",
+            "**/.storybook/**/*"
+          ],
+          "infra": [
+            "**/.github/**/*"
+          ],
+          "test": [
+            "**/*.test.*",
+            "**/*.spec.*",
+            "cypress/**/*"
+          ],
+          "code": [
+            "**/src/**/*"
+          ]
         }
       }
     ],
@@ -19,7 +35,9 @@
       "slack",
       {
         "auth": "app",
-        "channels": ["bot-frontend"],
+        "channels": [
+          "bot-frontend"
+        ],
         "atTarget": "frontend-team"
       }
     ]
