@@ -18,7 +18,7 @@
     "build:watch": "node ./watcher.mjs",
     "coverage-summary": "tablecheck-scripts coverage-summary",
     "format": "prettier -w -u *",
-    "postinstall": "husky install && lerna bootstrap",
+    "postinstall": "husky install",
     "lint": "tablecheck-scripts lint",
     "precommit": "tablecheck-scripts precommit",
     "prepare": "npm run build -- --ignore=stories --ignore=website",
@@ -40,8 +40,8 @@
     "@bissolli/storybook-css-properties": "0.0.14",
     "@brightlayer-ui/storybook-rtl-addon": "1.1.0",
     "@carbon/icons-react": "11.17.0",
-    "@commitlint/cli": "17.4.2",
-    "@commitlint/config-lerna-scopes": "17.4.2",
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-lerna-scopes": "19.0.0",
     "@tablecheck/babel-preset": "1.1.0",
     "@tablecheck/eslint-config": "1.8.2",
     "@tablecheck/scripts": "2.3.9",
@@ -64,7 +64,7 @@
     "execa": "6.1.0",
     "fs-extra": "11.1.0",
     "husky": "8.0.3",
-    "lerna": "6.4.1",
+    "lerna": "8.1.3",
     "lodash": "4.17.21",
     "mockdate": "3.0.5",
     "prettier": "2.8.4",
@@ -74,8 +74,11 @@
   },
   "devDependencies": {
     "chalk": "5.2.0",
-    "chromatic": "6.17.4"
+    "chromatic": "11.4.1"
   },
+  "workspaces": [
+    "system/*"
+  ],
   "version": "",
   "bugs": {
     "url": "https://github.com/tablecheck/tablekit/issues"
