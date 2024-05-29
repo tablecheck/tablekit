@@ -69,6 +69,7 @@ export const lightColors = css`
   --surface-low-hover-transparent: rgba(0, 0, 0, 0.03);
   --surface-raised: rgba(249, 249, 249, 1);
   --surface-raised-active: rgba(243, 242, 255, 1);
+  --surface-raised-active-text: var(--brand-primary);
   --surface-raised-hover: rgba(247, 247, 247, 1);
   --surface-raised-hover-transparent: rgba(0, 0, 0, 0.03);
   --surface-secondary: rgba(41, 41, 41, 1);
@@ -139,6 +140,7 @@ export const lightColorsObject = {
   'surface-low-hover-transparent': 'rgba(0, 0, 0, 0.03)',
   'surface-raised': 'rgba(249, 249, 249, 1)',
   'surface-raised-active': 'rgba(243, 242, 255, 1)',
+  'surface-raised-active-text': 'var(--brand-primary)',
   'surface-raised-hover': 'rgba(247, 247, 247, 1)',
   'surface-raised-hover-transparent': 'rgba(0, 0, 0, 0.03)',
   'surface-secondary': 'rgba(41, 41, 41, 1)',
@@ -210,6 +212,7 @@ export const darkColors = css`
   --surface-low-hover-transparent: rgba(255, 255, 255, 0.05);
   --surface-raised: rgba(41, 41, 41, 1);
   --surface-raised-active: rgba(76, 68, 92, 1);
+  --surface-raised-active-text: var(--brand-primary-text);
   --surface-raised-hover: rgba(75, 75, 75, 1);
   --surface-raised-hover-transparent: rgba(255, 255, 255, 0.2);
   --surface-secondary: rgba(75, 75, 75, 1);
@@ -280,6 +283,7 @@ export const darkColorsObject = {
   'surface-low-hover-transparent': 'rgba(255, 255, 255, 0.05)',
   'surface-raised': 'rgba(41, 41, 41, 1)',
   'surface-raised-active': 'rgba(76, 68, 92, 1)',
+  'surface-raised-active-text': 'var(--brand-primary-text)',
   'surface-raised-hover': 'rgba(75, 75, 75, 1)',
   'surface-raised-hover-transparent': 'rgba(255, 255, 255, 0.2)',
   'surface-secondary': 'rgba(75, 75, 75, 1)',

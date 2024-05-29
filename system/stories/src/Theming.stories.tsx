@@ -33,53 +33,121 @@ const PaletteWrapper = styled.button`
   }
 `;
 
-function PaletteColor({ color }: { color: string }) {
+const ColorPreview = styled.span`
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: var(--border-radius-small);
+  border-bottom-left-radius: var(--border-radius-small);
+  border-right: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ColorPreviewLabel = styled.span`
+  color: var(--info-text);
+  font-weight: bold;
+  display: inline-block;
+  width: 80px;
+  text-align: end;
+  padding-inline-end: var(--spacing-l2);
+`;
+
+function PaletteColor({
+  color,
+  background
+}: {
+  color: string;
+  background: string;
+}) {
+  const backgroundVar = `var(--${background})`;
+  const colorVar = `var(--${color})`;
   return (
     <PaletteWrapper
       type="button"
       onClick={(e) => {
         e.preventDefault();
-        navigator.clipboard.writeText(`var(--${color})`);
+        navigator.clipboard.writeText(colorVar);
       }}
     >
-      <span
+      <ColorPreview
         style={{
-          backgroundColor: `var(--${color})`,
-          width: '60px',
-          height: '60px',
-          borderTopLeftRadius: 'var(--border-radius-small)',
-          borderBottomLeftRadius: 'var(--border-radius-small)',
-          borderRight: '1px solid var(--border)'
+          backgroundColor: backgroundVar,
+          color: colorVar
         }}
-      />
+      >
+        Text
+      </ColorPreview>
       <span style={{ textAlign: 'start', whiteSpace: 'nowrap' }}>
-        var(--{color})
+        {backgroundVar === colorVar ? null : (
+          <small>
+            <ColorPreviewLabel>Text:</ColorPreviewLabel>
+          </small>
+        )}
+        {colorVar}
+        {backgroundVar === colorVar ? null : (
+          <>
+            <br />
+            <small>
+              <ColorPreviewLabel>Background:</ColorPreviewLabel> {backgroundVar}
+            </small>
+          </>
+        )}
       </span>
       <Copy size={getConfigDefault('iconSize')} />
     </PaletteWrapper>
   );
 }
 
+function getBackground(keys: string[], key: string) {
+  if (key === 'text-secondary') return 'surface-secondary';
+  if (key === 'primary-text') return 'primary';
+  if (key.startsWith('text')) return 'surface';
+  if (!key.endsWith('-text')) return key;
+  const surface = keys.find((k) => k === key.replace('-text', '-surface'));
+  const base = keys.find((k) => k === key.replace('-text', ''));
+  return surface || base || key;
+}
+
 export const Palette: StoryFn = () => (
   <>
     <h2>Themed Colors</h2>
     {Object.entries(
-      groupBy(Object.keys(lightColorsObject), (key) => key.split('-')[0])
+      groupBy(Object.keys(lightColorsObject), (key) => {
+        const [, rootKey] = key.match(/^(text|toggle)-?/) ?? [];
+        if (rootKey) return rootKey;
+        return key.replace(
+          /-(active|focus|text|transparent|hover|surface|disabled|visited)/gi,
+          ''
+        );
+      })
     ).map(([groupKey, keys]) => (
       <React.Fragment key={groupKey}>
-        <h4>{groupKey}</h4>
+        <h4>{groupKey.replace(/-/gi, ' ')}</h4>
         {keys.map((key) => (
-          <PaletteColor key={key} color={key} />
+          <PaletteColor
+            key={key}
+            color={key}
+            background={getBackground(keys, key)}
+          />
         ))}
       </React.Fragment>
     ))}
     <h2>Brand Colors</h2>
-    {Object.keys(brandColorsObject).map((key) => (
-      <PaletteColor key={key} color={key} />
+    {Object.keys(brandColorsObject).map((key, _, keys) => (
+      <PaletteColor
+        key={key}
+        color={key}
+        background={getBackground(keys, key)}
+      />
     ))}
     <h2>Utility Colors</h2>
-    {Object.keys(utilityColorsObject).map((key) => (
-      <PaletteColor key={key} color={key} />
+    {Object.keys(utilityColorsObject).map((key, _, keys) => (
+      <PaletteColor
+        key={key}
+        color={key}
+        background={getBackground(keys, key)}
+      />
     ))}
   </>
 );

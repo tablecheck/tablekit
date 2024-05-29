@@ -53,6 +53,7 @@ export interface TableKitCSSProperties {
   '--surface-low-hover-transparent'?: string;
   '--surface-raised'?: string;
   '--surface-raised-active'?: string;
+  '--surface-raised-active-text'?: string;
   '--surface-raised-hover'?: string;
   '--surface-raised-hover-transparent'?: string;
   '--surface-secondary'?: string;
