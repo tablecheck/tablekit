@@ -13,7 +13,7 @@
     "audit": "tablecheck-scripts auditjs",
     "audit:ci": "tablecheck-scripts auditjs --ci",
     "build": "lerna run build",
-    "build-storybook": "lerna run build --scope=stories",
+    "build:storybook": "lerna run build --scope=stories",
     "build:website": "lerna run build --scope=website",
     "build:watch": "node ./watcher.mjs",
     "coverage-summary": "tablecheck-scripts coverage-summary",
