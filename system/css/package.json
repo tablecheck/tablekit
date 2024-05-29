@@ -3,7 +3,7 @@
   "description": "TableCheck design system in scss/css",
   "license": "ISC",
   "author": "",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "type": "module",
   "keywords": [],
   "files": [
@@ -22,7 +22,7 @@
   "devDependencies": {
     "@emotion/react": "11.10.6",
     "@tablecheck/scripts": "2.3.9",
-    "@tablecheck/tablekit-core": "3.0.1",
+    "@tablecheck/tablekit-core": "^3.0.2",
     "@types/fs-extra": "11.0.1",
     "chalk": "5.2.0",
     "cssnano": "5.1.15",
