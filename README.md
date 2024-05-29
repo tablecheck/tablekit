@@ -1,6 +1,6 @@
-# tablekit
+# [tablekit](https://tablekit.tablecheck.com)
 
-Next generation UI component library
+Next generation UI component library, view our docs at [tablekit.tablecheck.com](https://tablekit.tablecheck.com)
 
 ## Installation
 
