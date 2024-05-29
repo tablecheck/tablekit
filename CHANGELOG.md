@@ -1,3 +1,25 @@
+# (Wed May 29 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@3.0.2`
+  - fix: add color alias for surface-raised-active-text [#225](https://github.com/tablecheck/tablekit/pull/225) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-core@3.0.2`, `@tablecheck/tablekit-css@3.0.2`, `@tablecheck/tablekit-react-css@3.0.2`, `@tablecheck/tablekit-react-datepicker@3.0.2`, `@tablecheck/tablekit-react-select@3.0.2`, `@tablecheck/tablekit-react@3.0.2`
+  - fix: package versions CI setup [#225](https://github.com/tablecheck/tablekit/pull/225) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-react-datepicker@3.0.2`
+  - fix: datepicker min date [#224](https://github.com/tablecheck/tablekit/pull/224) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### ⚠️ Pushed to `main`
+
+- ci: fix auto release and add chromatic baseline ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 2
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu May 12 2022)
 
 :tada: This release contains work from a new contributor! :tada:
