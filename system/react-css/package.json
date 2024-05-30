@@ -3,7 +3,7 @@
   "description": "CSS based react components for tablekit design system",
   "license": "MIT",
   "author": "TableCheck Inc.",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "keywords": [],
   "main": "./lib/es5/index.js",
   "module": "./lib/esm/index.js",
@@ -26,8 +26,8 @@
     "update:exports": "node scripts/generateIndex.mjs"
   },
   "dependencies": {
-    "@tablecheck/tablekit-core": "^3.0.2",
-    "@tablecheck/tablekit-css": "^3.0.2"
+    "@tablecheck/tablekit-core": "^3.0.3",
+    "@tablecheck/tablekit-css": "^3.0.3"
   },
   "peerDependencies": {
     "@carbon/icons-react": "11",

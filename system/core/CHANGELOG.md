@@ -1,19 +1,18 @@
-# v3.0.3 (Thu May 30 2024)
-
-#### 🐛 Bug Fix
-
-- fix: icon button in input-append mode [#227](https://github.com/tablecheck/tablekit/pull/227) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.2...@tablecheck/tablekit-core@3.0.3) (2024-05-30)
+
+
+### Bug Fixes
+
+* icon button in input-append mode ([1f281a4](https://github.com/tablecheck/tablekit/commit/1f281a4171ae11f4dca11a587dbb79b6f64b8bfc))
+
+
+
+
 
 ## [3.0.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.0-next.29...@tablecheck/tablekit-core@3.0.2) (2024-05-29)
 
