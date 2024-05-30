@@ -1,3 +1,17 @@
+# (Thu May 30 2024)
+
+#### 🐛 Bug Fix
+
+- docs: restore command name for pages deploy [#226](https://github.com/tablecheck/tablekit/pull/226) ([@SimeonC](https://github.com/SimeonC))
+- `@tablecheck/tablekit-core@3.0.3`
+  - fix: icon button in input-append mode [#227](https://github.com/tablecheck/tablekit/pull/227) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Wed May 29 2024)
 
 #### 🐛 Bug Fix

@@ -1,3 +1,15 @@
+# v3.0.3 (Thu May 30 2024)
+
+#### 🐛 Bug Fix
+
+- fix: icon button in input-append mode [#227](https://github.com/tablecheck/tablekit/pull/227) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
