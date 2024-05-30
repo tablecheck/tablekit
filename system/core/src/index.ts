@@ -13,6 +13,7 @@ export * as checkboxRadioLabel from './components/CheckboxRadioLabel';
 export * as childAnchors from './components/ChildAnchors';
 export * as chip from './components/Chip';
 export * as chipRow from './components/ChipRow';
+export * as formBanner from './components/FormBanner';
 export * as iconButton from './components/IconButton';
 export * as inputAlert from './components/InputAlert';
 export * as inputCore from './components/InputCore';
