@@ -150,10 +150,8 @@ export const fullStyles = css`
   ${coreStyles}
 
   &[data-mode='input-append'] {
-    height: var(--tk-input-height);
-    --tk-icon-button-padding: 8px !important;
     border-color: transparent !important;
-    margin: 0 -8px;
+    border-radius: calc(var(--border-radius-small) - 1px);
     &:not([data-variant]) {
       ${variantStyles.bare};
     }
