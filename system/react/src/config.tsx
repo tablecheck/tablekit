@@ -46,7 +46,7 @@ export function configureDefaults(defaults: CoreConfigDefaults): void {
 }
 
 export function getSentimentIcon(
-  variant: 'success' | 'error' | 'neutral' | 'info' | 'warning',
+  variant: 'success' | 'error' | 'neutral' | 'info' | 'warning' | 'default',
   size = getConfigDefault('iconSize')
 ): JSX.Element {
   switch (variant) {
@@ -54,10 +54,11 @@ export function getSentimentIcon(
       return <CheckmarkFilled size={size} />;
     case 'error':
       return <WarningAltFilled size={size} />;
-    case 'neutral':
-    case 'info':
-      return <Information size={size} />;
     case 'warning':
       return <WarningAlt size={size} />;
+    case 'neutral':
+    case 'info':
+    case 'default':
+      return <Information size={size} />;
   }
 }

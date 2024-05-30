@@ -75,6 +75,13 @@ export {
 export type { Props as CheckboxRadioLabelProps } from './structuredComponents/CheckboxRadioLabel';
 export { Chip } from './structuredComponents/Chip';
 export type { Props as ChipProps } from './structuredComponents/Chip';
+export {
+  FormBannerCore,
+  FormBannerMessage,
+  FormBannerIconWrapper,
+  FormBanner
+} from './structuredComponents/FormBanner';
+export type { Props as FormBannerProps } from './structuredComponents/FormBanner';
 export { Input } from './structuredComponents/Input';
 export type { Props as InputProps } from './structuredComponents/Input';
 export { InputAlert } from './structuredComponents/InputAlert';
