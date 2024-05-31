@@ -2,6 +2,19 @@
 
 #### 🐛 Bug Fix
 
+- `@tablecheck/tablekit-core@3.0.5`, `@tablecheck/tablekit-react-css@3.0.5`, `@tablecheck/tablekit-react@3.0.5`
+  - feat: add form banner component [#228](https://github.com/tablecheck/tablekit/pull/228) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
+# (Fri May 31 2024)
+
+#### 🐛 Bug Fix
+
 - `@tablecheck/tablekit-core@3.0.4`, `@tablecheck/tablekit-react-css@3.0.4`, `@tablecheck/tablekit-react@3.0.4`
   - fix: disabled prop on Input component is not being respected [#229](https://github.com/tablecheck/tablekit/pull/229) ([@SimeonC](https://github.com/SimeonC))
 

@@ -1,3 +1,15 @@
+# v3.0.5 (Fri May 31 2024)
+
+#### 🐛 Bug Fix
+
+- feat: add form banner component [#228](https://github.com/tablecheck/tablekit/pull/228) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
