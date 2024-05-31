@@ -1,19 +1,18 @@
-# v3.0.5 (Fri May 31 2024)
-
-#### 🐛 Bug Fix
-
-- feat: add form banner component [#228](https://github.com/tablecheck/tablekit/pull/228) ([@SashaShostyr](https://github.com/SashaShostyr))
-
-#### Authors: 1
-
-- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.4...@tablecheck/tablekit-core@3.0.5) (2024-05-31)
+
+
+### Features
+
+* add form banner component ([46208da](https://github.com/tablecheck/tablekit/commit/46208daa111e9e4e0d9d954ea0a491b800458193))
+
+
+
+
 
 ## [3.0.4](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.3...@tablecheck/tablekit-core@3.0.4) (2024-05-31)
 
