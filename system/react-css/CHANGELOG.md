@@ -1,3 +1,15 @@
+# v3.0.4 (Fri May 31 2024)
+
+#### 🐛 Bug Fix
+
+- fix: disabled prop on Input component is not being respected [#229](https://github.com/tablecheck/tablekit/pull/229) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
