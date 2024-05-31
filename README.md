@@ -61,7 +61,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/daniellizik"><img src="https://avatars.githubusercontent.com/u/10506366?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Lizik</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=daniellizik" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/SashaShostyr"><img src="https://avatars.githubusercontent.com/u/19342294?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=SashaShostyr" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/SashaShostyr"><img src="https://avatars.githubusercontent.com/u/19342294?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Alex</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/tablekit/commits?author=SashaShostyr" title="Code">💻</a> <a href="#example-SashaShostyr" title="Examples">💡</a></td>
   </tr>
 </table>
 
