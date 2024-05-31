@@ -41,6 +41,7 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(
       iconAfter = null,
       suffix = null,
       prefix = null,
+      disabled: isDisabled,
       'data-stretch': isStretched,
       'data-variant': variant,
       'data-pseudo': pseudoDebugger,
@@ -66,7 +67,7 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(
       <Component
         style={style}
         className={className}
-        data-variant={variant}
+        data-variant={isDisabled ? 'disabled' : variant}
         data-stretch={isStretched}
         data-size={size}
         data-with-icon={withIcon}

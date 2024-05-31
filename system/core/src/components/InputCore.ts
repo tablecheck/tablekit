@@ -4,6 +4,12 @@ export const element = 'input';
 export const selectors = ['input:not([type="checkbox"]):not([type="radio"])'];
 export const className = 'input';
 
+export const heightMap = {
+  small: 36,
+  medium: 40,
+  large: 48
+} as const;
+
 export const fullStyles = css`
   --tk-input-border-width: 1px;
   border: var(--tk-input-border-width) solid var(--border);
@@ -20,17 +26,17 @@ export const fullStyles = css`
   &[data-size='medium'],
   &:not([data-size]) {
     --tk-input-vertical-padding: 8px;
-    --tk-input-height: 40px;
+    --tk-input-height: ${heightMap.medium}px;
   }
 
   &[data-size='small'] {
     --tk-input-vertical-padding: 6px;
-    --tk-input-height: 36px;
+    --tk-input-height: ${heightMap.small}px;
   }
 
   &[data-size='large'] {
     --tk-input-vertical-padding: 12px;
-    --tk-input-height: 48px;
+    --tk-input-height: ${heightMap.large}px;
   }
   --tk-input-horizontal-padding: 12px;
   padding: calc(var(--tk-input-vertical-padding) - var(--tk-input-border-width))

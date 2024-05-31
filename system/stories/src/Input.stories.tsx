@@ -15,10 +15,10 @@ const contentVariants = [
   { title: 'Default' },
   { title: 'With Value', defaultValue: 'Some Content' },
   { title: 'Focus', 'data-pseudo': 'focus' },
-  { title: 'Disabled', 'data-variant': 'disabled' as const },
+  { title: 'Disabled', disabled: true },
   {
     title: 'Disabled With Value',
-    'data-variant': 'disabled' as const,
+    disabled: true,
     defaultValue: 'Some Content'
   },
   { title: 'Error', 'data-variant': 'error' as const },
