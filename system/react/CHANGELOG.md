@@ -1,3 +1,15 @@
+# v3.0.6 (Mon Jun 03 2024)
+
+#### 🐛 Bug Fix
+
+- fix: input should set `disabled` attribute [#230](https://github.com/tablecheck/tablekit/pull/230) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
