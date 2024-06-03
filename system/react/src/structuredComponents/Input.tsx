@@ -74,7 +74,7 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(
         data-pseudo={pseudoDebugger}
       >
         {prefix ?? iconBefore}
-        <input ref={ref} {...props} />
+        <input ref={ref} {...props} disabled={isDisabled} />
         {suffix ?? iconAfter}
       </Component>
     );
