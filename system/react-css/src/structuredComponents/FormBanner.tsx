@@ -49,8 +49,8 @@ interface ComposedProps extends Props {
 
 function getIcon(variant: Props['data-variant']): JSX.Element {
   if (variant === 'purple' || variant === 'orange')
-    return getSentimentIcon('default');
-  return getSentimentIcon(variant);
+    return getSentimentIcon('default', 16);
+  return getSentimentIcon(variant, 16);
 }
 
 export const FormBanner = React.forwardRef<
