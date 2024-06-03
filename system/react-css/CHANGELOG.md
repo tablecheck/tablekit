@@ -1,19 +1,18 @@
-# v3.0.6 (Mon Jun 03 2024)
-
-#### 🐛 Bug Fix
-
-- fix: input should set `disabled` attribute [#230](https://github.com/tablecheck/tablekit/pull/230) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.6](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@3.0.5...@tablecheck/tablekit-react-css@3.0.6) (2024-06-03)
+
+
+### Bug Fixes
+
+* input should set `disabled` attribute ([a86b099](https://github.com/tablecheck/tablekit/commit/a86b09941c5bcfccfd13a558a98d8e8669d53684))
+
+
+
+
 
 ## [3.0.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@3.0.4...@tablecheck/tablekit-react-css@3.0.5) (2024-05-31)
 
