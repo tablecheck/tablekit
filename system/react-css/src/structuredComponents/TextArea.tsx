@@ -6,7 +6,10 @@ import { TextAreaWithPrefix } from '../components/TextAreaWithPrefix';
 import { TextAreaWithSuffix } from '../components/TextAreaWithSuffix';
 import { getConfigDefault } from '../config';
 
-const hasFieldSizingSupport = window.CSS?.supports?.('field-sizing', 'content');
+const hasFieldSizingSupport =
+  typeof window === 'undefined'
+    ? true
+    : window.CSS?.supports?.('field-sizing', 'content');
 
 export type Props = textAreaCore.DefaultedProps &
   Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'rows' | 'prefix'> & {
@@ -68,7 +71,6 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(
     }, [iconBefore, iconAfter, suffix, prefix]);
     return (
       <Component
-        data-content={hasFieldSizingSupport ? undefined : props.defaultValue}
         style={style}
         className={className}
         data-variant={variant}
