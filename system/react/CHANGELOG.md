@@ -1,3 +1,15 @@
+# v3.0.7 (Tue Jun 04 2024)
+
+#### 🐛 Bug Fix
+
+- fix: form banner default icon size [#231](https://github.com/tablecheck/tablekit/pull/231) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

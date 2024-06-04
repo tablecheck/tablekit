@@ -1,3 +1,16 @@
+# (Tue Jun 04 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-react-css@3.0.7`, `@tablecheck/tablekit-react@3.0.7`
+  - fix: form banner default icon size [#231](https://github.com/tablecheck/tablekit/pull/231) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # (Mon Jun 03 2024)
 
 #### 🐛 Bug Fix
