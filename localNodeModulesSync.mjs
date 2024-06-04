@@ -20,6 +20,21 @@ for (const target of targets) {
   for (const folder of folders) {
     const root = path.join(systemDir, folder);
     const packageName = fs.readJsonSync(path.join(root, 'package.json')).name;
+    if (packageName === '@tablecheck/tablekit-css') {
+      const dest = path.join(target, 'node_modules', packageName);
+      if (!fs.existsSync(dest)) {
+        continue;
+      }
+      console.log(`Copying ${packageName} to ${target}`);
+      fs.readdirSync(dest, { withFileTypes: true }).forEach((dirent) => {
+        if (dirent.isDirectory()) return;
+        if (!dirent.name.endsWith('.css')) return;
+        fs.copyFileSync(
+          path.join(root, dirent.name),
+          path.join(dest, dirent.name)
+        );
+      });
+    }
     const dest = path.join(target, 'node_modules', packageName, 'lib');
     if (!fs.existsSync(dest)) {
       continue;
