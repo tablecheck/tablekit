@@ -1,19 +1,18 @@
-# v3.0.7 (Tue Jun 04 2024)
-
-#### 🐛 Bug Fix
-
-- fix: form banner default icon size [#231](https://github.com/tablecheck/tablekit/pull/231) ([@SashaShostyr](https://github.com/SashaShostyr))
-
-#### Authors: 1
-
-- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.7](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.6...@tablecheck/tablekit-react@3.0.7) (2024-06-04)
+
+
+### Bug Fixes
+
+* form banner default icon size ([67fe6c0](https://github.com/tablecheck/tablekit/commit/67fe6c03980e55d3564fa5ebc082b33965b6097a))
+
+
+
+
 
 ## [3.0.6](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.5...@tablecheck/tablekit-react@3.0.6) (2024-06-03)
 
