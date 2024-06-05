@@ -1,19 +1,18 @@
-# v3.0.9 (Wed Jun 05 2024)
-
-#### 🐛 Bug Fix
-
-- fix: add missing styles to theme provider [#233](https://github.com/tablecheck/tablekit/pull/233) ([@SashaShostyr](https://github.com/SashaShostyr))
-
-#### Authors: 1
-
-- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.9](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.8...@tablecheck/tablekit-react@3.0.9) (2024-06-05)
+
+
+### Bug Fixes
+
+* add missing styles to theme provider ([a9ea1a6](https://github.com/tablecheck/tablekit/commit/a9ea1a648fd073ea67a022fd74f349bc1b8f2c2c))
+
+
+
+
 
 ## [3.0.8](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.7...@tablecheck/tablekit-react@3.0.8) (2024-06-05)
 
