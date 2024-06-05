@@ -1,3 +1,15 @@
+# v3.0.9 (Wed Jun 05 2024)
+
+#### 🐛 Bug Fix
+
+- fix: add missing styles to theme provider [#233](https://github.com/tablecheck/tablekit/pull/233) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

@@ -2,6 +2,19 @@
 
 #### 🐛 Bug Fix
 
+- `@tablecheck/tablekit-react@3.0.9`
+  - fix: add missing styles to theme provider [#233](https://github.com/tablecheck/tablekit/pull/233) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
+# (Wed Jun 05 2024)
+
+#### 🐛 Bug Fix
+
 - `@tablecheck/tablekit-react-css@3.0.8`, `@tablecheck/tablekit-react@3.0.8`
   - fix: window is not defined in SSR and throws error [#232](https://github.com/tablecheck/tablekit/pull/232) ([@SimeonC](https://github.com/SimeonC))
 
