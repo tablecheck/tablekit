@@ -9,7 +9,8 @@ import {
   ltrSupport,
   resetCss,
   theme as themeStyles,
-  typography
+  typography,
+  keyframes
 } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
@@ -19,7 +20,8 @@ const globalStyles = css`
   ${ltrSupport};
   ${themeStyles};
   ${typography};
-  ${constants}
+  ${constants};
+  ${keyframes};
 `;
 
 declare module '@emotion/react' {
