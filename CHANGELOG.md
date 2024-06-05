@@ -1,3 +1,16 @@
+# (Wed Jun 05 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-react-css@3.0.8`, `@tablecheck/tablekit-react@3.0.8`
+  - fix: window is not defined in SSR and throws error [#232](https://github.com/tablecheck/tablekit/pull/232) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Tue Jun 04 2024)
 
 #### 🐛 Bug Fix
