@@ -1,19 +1,18 @@
-# v3.0.8 (Wed Jun 05 2024)
-
-#### 🐛 Bug Fix
-
-- fix: window is not defined in SSR and throws error [#232](https://github.com/tablecheck/tablekit/pull/232) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.8](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.7...@tablecheck/tablekit-react@3.0.8) (2024-06-05)
+
+
+### Bug Fixes
+
+* window is not defined in SSR and throws error ([0070089](https://github.com/tablecheck/tablekit/commit/007008937e7069ac6c323ad4b70faaa036c75ca2))
+
+
+
+
 
 ## [3.0.7](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react@3.0.6...@tablecheck/tablekit-react@3.0.7) (2024-06-04)
 

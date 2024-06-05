@@ -3,7 +3,7 @@
   "description": "Component for rendering accessible datepickers in react",
   "license": "MIT",
   "author": "TableCheck Inc.",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "keywords": [],
   "main": "./lib/es5/index.js",
   "module": "./lib/esm/index.js",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@carbon/icons-react": "11.17.0",
-    "@tablecheck/tablekit-react": "^3.0.7",
+    "@tablecheck/tablekit-react": "^3.0.8",
     "date-fns": "2.29.3",
     "dayzed": "3.2.3"
   },
