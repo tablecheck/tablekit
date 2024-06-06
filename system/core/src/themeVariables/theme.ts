@@ -206,7 +206,7 @@ export const darkColors = css`
   --surface-disabled: rgba(75, 75, 75, 1);
   --surface-hover: rgba(41, 41, 41, 1);
   --surface-hover-transparent: rgba(255, 255, 255, 0.05);
-  --surface-low: rgba(18, 18, 18, 1);
+  --surface-low: rgba(26, 26, 26, 1);
   --surface-low-active: rgba(76, 68, 92, 1);
   --surface-low-hover: rgba(41, 41, 41, 1);
   --surface-low-hover-transparent: rgba(255, 255, 255, 0.05);
@@ -277,7 +277,7 @@ export const darkColorsObject = {
   'surface-disabled': 'rgba(75, 75, 75, 1)',
   'surface-hover': 'rgba(41, 41, 41, 1)',
   'surface-hover-transparent': 'rgba(255, 255, 255, 0.05)',
-  'surface-low': 'rgba(18, 18, 18, 1)',
+  'surface-low': 'rgba(26, 26, 26, 1)',
   'surface-low-active': 'rgba(76, 68, 92, 1)',
   'surface-low-hover': 'rgba(41, 41, 41, 1)',
   'surface-low-hover-transparent': 'rgba(255, 255, 255, 0.05)',

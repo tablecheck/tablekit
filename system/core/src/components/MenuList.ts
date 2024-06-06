@@ -18,6 +18,10 @@ export const fullStylesObject: CSSObject = {
   gridGap: 'var(--spacing-l1)',
   listStyle: 'none',
   alignItems: 'stretch',
+  borderColor: 'var(--border-transparent)',
+  borderRadius: 'var(--border-radius-small)',
+  borderStyle: 'solid',
+  borderWidth: '1px',
   '& > li': {
     display: 'flex',
     justifyContent: 'stretch'

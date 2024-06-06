@@ -35,7 +35,7 @@ export const fullStylesObject: CSSObject = {
   '&, &:any-link, &:hover': {
     color: 'var(--text)'
   },
-  padding: 'var(--spacing-l3)',
+  padding: 'var(--spacing-l2)',
   borderRadius: 'var(--border-radius-small)',
   display: 'grid',
   gridGap: 'var(--spacing-l2)',
