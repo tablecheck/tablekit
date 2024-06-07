@@ -90,6 +90,15 @@
         "code",
         "example"
       ]
+    },
+    {
+      "login": "k-baldauf",
+      "name": "k-baldauf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107082171?v=4",
+      "profile": "https://github.com/k-baldauf",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 6,
