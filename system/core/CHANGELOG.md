@@ -1,19 +1,18 @@
-# v3.0.6 (Fri Jun 07 2024)
-
-#### 🐛 Bug Fix
-
-- fix(tablekit-react-select): update various visuals [#234](https://github.com/tablecheck/tablekit/pull/234) ([@k-baldauf](https://github.com/k-baldauf))
-
-#### Authors: 1
-
-- [@k-baldauf](https://github.com/k-baldauf)
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.6](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.5...@tablecheck/tablekit-core@3.0.6) (2024-06-07)
+
+
+### Bug Fixes
+
+* **tablekit-react-select:** update various visuals ([04e52c1](https://github.com/tablecheck/tablekit/commit/04e52c1cdc73f6cd244dd7b8d2c6eb489ab1298b))
+
+
+
+
 
 ## [3.0.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.4...@tablecheck/tablekit-core@3.0.5) (2024-05-31)
 

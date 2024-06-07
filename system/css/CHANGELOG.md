@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.6](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-css@3.0.5...@tablecheck/tablekit-css@3.0.6) (2024-06-07)
+
+**Note:** Version bump only for package @tablecheck/tablekit-css
+
+
+
+
+
 ## [3.0.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-css@3.0.4...@tablecheck/tablekit-css@3.0.5) (2024-05-31)
 
 **Note:** Version bump only for package @tablecheck/tablekit-css
