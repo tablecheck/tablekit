@@ -1,3 +1,16 @@
+# (Fri Jun 07 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@3.0.6`
+  - fix(tablekit-react-select): update various visuals [#234](https://github.com/tablecheck/tablekit/pull/234) ([@k-baldauf](https://github.com/k-baldauf))
+
+#### Authors: 1
+
+- [@k-baldauf](https://github.com/k-baldauf)
+
+---
+
 # (Wed Jun 05 2024)
 
 #### 🐛 Bug Fix
