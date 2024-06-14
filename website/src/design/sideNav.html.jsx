@@ -28,6 +28,16 @@ export function SideNav() {
           </ul>
         </SidebarSection>
         <SidebarSection>
+          <SectionHeading href="/design/components">Components</SectionHeading>
+          <ul>
+            <li>
+              <a aria-current="page" href="/design/components/alerts">
+                Alerts
+              </a>
+            </li>
+          </ul>
+        </SidebarSection>
+        <SidebarSection>
           <SectionHeading href="/design/foundations">
             Accessibility
           </SectionHeading>

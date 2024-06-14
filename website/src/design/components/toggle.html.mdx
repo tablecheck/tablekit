@@ -1,0 +1,57 @@
+import Layout from '../../layout/index.html';
+
+import { IntroText } from '../../layout/body.styles';
+
+export default function (props) {
+  return (
+    <Layout
+      title="Design"
+      sideNav="design"
+      editPageRoute="design/components/toggle"
+      shouldIncludePageIndex
+    >
+      {props.children}
+    </Layout>
+  );
+}
+
+# Toggle WIP
+
+<IntroText>
+  Toggle is a control that is used to quickly switch between two possible
+  states. Toggles are only used for these binary actions that occur immediately
+  after the user “flips the switch”. They are commonly used for “on/off”
+  switches.
+</IntroText>
+
+#### Figma: [Toggle](<https://www.figma.com/file/W3hxWj6VZydNaNGJSGxRsV/TableKit-Components-(3.0)>)
+
+## [Variants](#variants)
+
+### False
+
+#
+
+When the toggle is ‘false’ it will have a neutral appearance, hovering will change the background color but there will be no change if the toggle is disabled.
+
+![False](/static/img/components/PLACEHOLDER.png 'IMAGEDESCRIPTION')
+
+### True
+
+#
+
+When ‘true’ the background will use the primary color along with an icon so there is no confusion on the state, again there is no difference when hovering over a disabled version.
+
+![True](/static/img/components/PLACEHOLDER.png 'IMAGEDESCRIPTION')
+
+## [Anatomy](website/src/design/components/toggle.html#anatomy)
+
+The default total size of the toggle component is 68px wide by 38px height, composed of 6px padding and an inner circle 26px x 26px.
+
+![True](/static/img/components/PLACEHOLDER.png 'IMAGEDESCRIPTION')
+
+## [Rules](website/src/design/components/toggle.html#rules)
+
+Here is where rules content should go.
+
+![Tabs anatomy](/static/img/components/placeholder-rules.png 'IMAGEDESCRIPTION') ![Tabs anatomy](/static/img/components/placeholder-rules.png 'IMAGEDESCRIPTION')

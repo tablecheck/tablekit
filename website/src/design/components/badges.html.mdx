@@ -1,0 +1,58 @@
+import Layout from '../../layout/index.html';
+
+import { IntroText } from '../../layout/body.styles';
+
+export default function (props) {
+  return (
+    <Layout
+      title="Design"
+      sideNav="design"
+      editPageRoute="design/components/alerts"
+      shouldIncludePageIndex
+    >
+      {props.children}
+    </Layout>
+  );
+}
+
+# Badges
+
+<IntroText>
+  A badge, sometimes called a tag or label, is a UI atom which indicates a
+  status, notification, or event that appears in relativity with the underlying
+  object.
+</IntroText>
+
+[Figma](<https://www.figma.com/file/W3hxWj6VZydNaNGJSGxRsV/TableKit-Components-(3.0)?node-id=1545%3A4575>)
+
+## [Varients](website/src/design/components/badges.html#varients)
+
+### With icon
+
+#
+
+![No icon](/static/img/components/badge-varients.png 'Badges with no icon')
+
+#
+
+## [Anatomy](website/src/design/components/badges.html#anatomy)
+
+The default total height of the badge component is 32px, vertical padding of 6px and horizontal padding of 8px, corner radius is 4px.
+
+The standard font size inside the buttons is 14px IBM Plex with a semi-bold font-weight.
+
+The variants include with and without an icon, but text is always required.
+
+![Anatomy](/static/img/components/badge-anatomy.png 'Anatomy of the badge component')
+
+## [Rules](website/src/design/components/badges.html#rules)
+
+![Rules](/static/img/components/badge-rule-1.png 'Badge rules #1')
+
+#
+
+![Rules](/static/img/components/badge-rule-2.png 'Badge rules #2')
+
+#
+
+![Rules](/static/img/components/badge-rule-3.png 'Badge rules #3')
