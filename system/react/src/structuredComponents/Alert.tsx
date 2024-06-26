@@ -11,12 +11,13 @@ export const AlertCore = styled.div<Props>`
   ${alert.fullStyles}
 `;
 
-export const AlertTitle = styled.h4`
+export const AlertTitle = styled.h5`
   grid-area: title;
 `;
 
 export const AlertDescription = styled.div`
   grid-area: description;
+  font: var(--body-2);
 `;
 
 export const AlertCloseButton = styled.button`
