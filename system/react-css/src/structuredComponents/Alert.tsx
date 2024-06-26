@@ -18,7 +18,7 @@ export const AlertTitle = React.forwardRef<
   React.HTMLAttributes<HTMLHeadingElement>
 >((props, ref) => (
   // eslint-disable-next-line jsx-a11y/heading-has-content
-  <h4
+  <h5
     {...props}
     ref={ref}
     style={{ ...(props.style || {}), gridArea: 'title' }}
@@ -31,7 +31,11 @@ export const AlertDescription = React.forwardRef<
   <div
     {...props}
     ref={ref}
-    style={{ ...(props.style || {}), gridArea: 'description' }}
+    style={{
+      ...(props.style || {}),
+      gridArea: 'description',
+      font: 'var(--body-2)'
+    }}
   />
 ));
 
