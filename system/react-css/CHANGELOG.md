@@ -1,19 +1,18 @@
-# v3.0.10 (Thu Jun 27 2024)
-
-#### 🐛 Bug Fix
-
-- feat: update alert font sizes and remove form banner [#235](https://github.com/tablecheck/tablekit/pull/235) ([@SashaShostyr](https://github.com/SashaShostyr))
-
-#### Authors: 1
-
-- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.10](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@3.0.9...@tablecheck/tablekit-react-css@3.0.10) (2024-06-27)
+
+
+### Features
+
+* update alert font sizes and remove form banner ([da3dd54](https://github.com/tablecheck/tablekit/commit/da3dd54b57d6d5a1711ae08cb3874a701c5d63f5))
+
+
+
+
 
 ## [3.0.9](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@3.0.8...@tablecheck/tablekit-react-css@3.0.9) (2024-06-07)
 
