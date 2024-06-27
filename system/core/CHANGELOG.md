@@ -1,3 +1,15 @@
+# v3.0.7 (Thu Jun 27 2024)
+
+#### 🐛 Bug Fix
+
+- feat: update alert font sizes and remove form banner [#235](https://github.com/tablecheck/tablekit/pull/235) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

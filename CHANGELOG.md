@@ -1,3 +1,17 @@
+# (Thu Jun 27 2024)
+
+#### 🐛 Bug Fix
+
+- feat: remove the audit step from github workflow [#235](https://github.com/tablecheck/tablekit/pull/235) ([@SashaShostyr](https://github.com/SashaShostyr))
+- `@tablecheck/tablekit-core@3.0.7`, `@tablecheck/tablekit-react-css@3.0.10`, `@tablecheck/tablekit-react@3.0.11`
+  - feat: update alert font sizes and remove form banner [#235](https://github.com/tablecheck/tablekit/pull/235) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # (Fri Jun 07 2024)
 
 #### 🐛 Bug Fix
