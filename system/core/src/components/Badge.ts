@@ -6,7 +6,7 @@ export const className = 'badge';
 export const fullStyles = css`
   width: max-content;
   font: var(--label);
-  display: grid;
+  display: inline-grid;
   grid-auto-flow: column;
   gap: var(--spacing-l1);
   align-items: center;
