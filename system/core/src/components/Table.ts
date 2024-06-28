@@ -8,6 +8,10 @@ export interface Props {
   'data-variant'?: 'default' | 'striped';
 }
 
+export interface TableTdProps {
+  'data-cell-type'?: 'button' | 'badge';
+}
+
 export const fullStyles = css`
   text-align: start;
   border-spacing: 0;
@@ -79,6 +83,10 @@ export const fullStyles = css`
   & td[data-cell-type='button'] {
     padding: var(--spacing-l2) var(--spacing-l4);
     text-align: center;
+  }
+
+  & td[data-cell-type='badge'] {
+    padding: calc(var(--spacing-l3) - 1px) var(--spacing-l4);
   }
 
   /* For reference: https://unused-css.com/blog/css-rounded-table-corners/ */
