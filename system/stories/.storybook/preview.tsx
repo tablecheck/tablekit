@@ -176,6 +176,7 @@ function handleGridRef(ref: HTMLDivElement) {
 interface StoryParametersOptions {
   variants: (string | { name: string })[];
   variantWidth?: string;
+  element: string;
   selectors: string[];
   auxiliarySelectors: (string | undefined)[];
   className: string;
@@ -317,7 +318,8 @@ class StoryParametersParser {
   }
 
   composeClassNameSelector() {
-    const { className, selectors } = this.parameters;
+    const { className, selectors, element } = this.parameters;
+    if (className && element === 'input') return [`input.${className}`];
     return className ? [`.${className}`] : selectors || [];
   }
 

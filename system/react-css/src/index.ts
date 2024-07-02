@@ -59,6 +59,8 @@ export { TextAreaWithPrefix } from './components/TextAreaWithPrefix';
 export type { Props as TextAreaWithPrefixProps } from './components/TextAreaWithPrefix';
 export { TextAreaWithSuffix } from './components/TextAreaWithSuffix';
 export type { Props as TextAreaWithSuffixProps } from './components/TextAreaWithSuffix';
+export { Toggle } from './components/Toggle';
+export type { Props as ToggleProps } from './components/Toggle';
 export {
   AlertCore,
   AlertTitle,
@@ -84,13 +86,15 @@ export { Skeleton } from './structuredComponents/Skeleton';
 export type { Props as SkeletonProps } from './structuredComponents/Skeleton';
 export { Spinner } from './structuredComponents/Spinner';
 export type { Props as SpinnerProps } from './structuredComponents/Spinner';
+export { TableBadgeCell } from './structuredComponents/TableBadgeCell';
+export type { Props as TableBadgeCellProps } from './structuredComponents/TableBadgeCell';
+export { TableButtonCell } from './structuredComponents/TableButtonCell';
+export type { Props as TableButtonCellProps } from './structuredComponents/TableButtonCell';
 export { TextArea } from './structuredComponents/TextArea';
 export type { Props as TextAreaProps } from './structuredComponents/TextArea';
 export {
   useTablekitTheme,
   ThemeProvider
 } from './structuredComponents/ThemeProvider';
-export { Toggle } from './structuredComponents/Toggle';
-export type { Props as ToggleProps } from './structuredComponents/Toggle';
 export { Tooltip } from './structuredComponents/Tooltip';
 export type { Props as TooltipProps } from './structuredComponents/Tooltip';

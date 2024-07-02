@@ -10,7 +10,8 @@ export default {
   title: 'Components/Table',
   component: emotion.Table,
   parameters: {
-    ...table
+    ...table,
+    auxiliaryComponents: [emotion.TableBadgeCell, emotion.TableButtonCell]
   }
 } as Meta;
 
@@ -106,6 +107,8 @@ interface Options {
   Button: typeof emotion.Button | typeof css.Button;
   Badge: typeof emotion.Badge | typeof css.Badge;
   Checkbox: typeof emotion.Checkbox | typeof css.Checkbox;
+  TableBadgeCell: typeof emotion.TableBadgeCell | typeof css.TableBadgeCell;
+  TableButtonCell: typeof emotion.TableButtonCell | typeof css.TableButtonCell;
   isStriped: boolean;
 }
 
@@ -166,6 +169,8 @@ const WithControlsTemplate: StoryFn<Options> = ({
   Button,
   Badge,
   Checkbox,
+  TableBadgeCell,
+  TableButtonCell,
   isStriped
 }) => (
   <Table data-variant={isStriped ? 'striped' : 'default'}>
@@ -200,16 +205,16 @@ const WithControlsTemplate: StoryFn<Options> = ({
               </ul>
             )}
           </td>
-          <td data-cell-type="badge">
+          <TableBadgeCell>
             <Badge data-variant={user.status} data-size="small">
               {user.status}
             </Badge>
-          </td>
-          <td data-cell-type="button">
+          </TableBadgeCell>
+          <TableButtonCell>
             <Button data-variant="bare" data-size="small">
               <OverflowMenuHorizontal size={getConfigDefault('iconSize')} />
             </Button>
-          </td>
+          </TableButtonCell>
         </tr>
       ))}
     </tbody>
@@ -221,7 +226,9 @@ WithControlsEmotion.args = {
   Table: emotion.Table,
   Button: emotion.Button,
   Badge: emotion.Badge,
-  Checkbox: emotion.Checkbox
+  Checkbox: emotion.Checkbox,
+  TableBadgeCell: emotion.TableBadgeCell,
+  TableButtonCell: emotion.TableButtonCell
 };
 
 WithControlsEmotion.parameters = { useEmotion: true };
@@ -232,6 +239,8 @@ StripedControlsEmotion.args = {
   Button: emotion.Button,
   Badge: emotion.Badge,
   Checkbox: emotion.Checkbox,
+  TableBadgeCell: emotion.TableBadgeCell,
+  TableButtonCell: emotion.TableButtonCell,
   isStriped: true
 };
 StripedControlsEmotion.parameters = { useEmotion: true };
@@ -241,7 +250,9 @@ WithControlsClass.args = {
   Table: css.Table,
   Button: css.Button,
   Badge: css.Badge,
-  Checkbox: css.Checkbox
+  Checkbox: css.Checkbox,
+  TableBadgeCell: css.TableBadgeCell,
+  TableButtonCell: css.TableButtonCell
 };
 WithControlsClass.parameters = { useEmotion: false };
 
@@ -251,6 +262,8 @@ StripedControlsClass.args = {
   Button: css.Button,
   Badge: css.Badge,
   Checkbox: css.Checkbox,
+  TableBadgeCell: css.TableBadgeCell,
+  TableButtonCell: css.TableButtonCell,
   isStriped: true
 };
 StripedControlsClass.parameters = { useEmotion: false };
