@@ -3,7 +3,7 @@
   "description": "Emotion.sh styling for tablekit design system",
   "license": "MIT",
   "author": "TableCheck Inc.",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "keywords": [],
   "main": "./lib/es5/index.js",
   "module": "./lib/esm/index.js",

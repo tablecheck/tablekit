@@ -1,19 +1,18 @@
-# v3.0.11 (Wed Jul 03 2024)
-
-#### 🐛 Bug Fix
-
-- fix: the Badge component should be default act like an “inline” component [#236](https://github.com/tablecheck/tablekit/pull/236) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.0.11](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@3.0.10...@tablecheck/tablekit-react-css@3.0.11) (2024-07-03)
+
+
+### Bug Fixes
+
+* the Badge component should be default act like an “inline” component ([c8ce3a2](https://github.com/tablecheck/tablekit/commit/c8ce3a299869ea33c4dce920e808147170916738))
+
+
+
+
 
 ## [3.0.10](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@3.0.9...@tablecheck/tablekit-react-css@3.0.10) (2024-06-27)
 
