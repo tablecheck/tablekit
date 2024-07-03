@@ -1,3 +1,16 @@
+# (Wed Jul 03 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@3.0.8`, `@tablecheck/tablekit-react-css@3.0.11`, `@tablecheck/tablekit-react@3.0.12`
+  - fix: the Badge component should be default act like an “inline” component [#236](https://github.com/tablecheck/tablekit/pull/236) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu Jun 27 2024)
 
 #### 🐛 Bug Fix
