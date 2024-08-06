@@ -3,7 +3,10 @@ import { checkbox, checkboxRadioLabel } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
+const indeterminate = 'indeterminate';
 const contentVariants = ['Default', 'Hover', 'Focus', 'Disabled'] as const;
+
+const states = [false, true, indeterminate] as const;
 
 const labelSelector = checkboxRadioLabel.selectors.find((selector) =>
   selector.includes('checkbox')
@@ -21,15 +24,22 @@ export default {
 
 const Template: Story = ({ Checkbox, LabelComponent }) => (
   <>
-    {[true, false].map((isChecked) =>
+    {states.map((state) =>
       contentVariants.map((variant) => (
         <LabelComponent>
           <Checkbox
             data-pseudo={variant.toLowerCase()}
             disabled={variant.toLowerCase() === 'disabled'}
-            defaultChecked={isChecked}
+            ref={(ref: undefined | HTMLInputElement) => {
+              if (!ref) return;
+              if (state === indeterminate) {
+                ref.indeterminate = true;
+              } else {
+                ref.checked = state;
+              }
+            }}
           />
-          {variant} {isChecked ? '☑' : '☐'}
+          {variant} {state ? '☑' : '☐'}
         </LabelComponent>
       ))
     )}
