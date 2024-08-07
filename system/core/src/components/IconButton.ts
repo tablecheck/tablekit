@@ -152,6 +152,7 @@ export const fullStyles = css`
   &[data-mode='input-append'] {
     border-color: transparent !important;
     border-radius: calc(var(--border-radius-small) - 1px);
+    align-self: flex-start;
     &:not([data-variant]) {
       ${variantStyles.bare};
     }

@@ -82,9 +82,9 @@ export const fullStyles = css`
         var(--tk-input-icon-end-padding)
     );
     --tk-icon-button-padding: 8px !important;
-    margin: 0 -11px 0 -6px;
+    margin: 0 -9px 0 -6px;
   }
   &[data-size='small'] > [data-mode='input-append'] {
-    margin: 0 -11px 0 -3px;
+    margin: 0 -9px 0 -3px;
   }
 `;
