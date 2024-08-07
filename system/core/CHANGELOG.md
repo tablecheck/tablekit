@@ -1,19 +1,18 @@
-# v3.1.0 (Wed Aug 07 2024)
-
-#### 🚀 Enhancement
-
-- feat: add textarea min-lines [#238](https://github.com/tablecheck/tablekit/pull/238) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [3.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.8...@tablecheck/tablekit-core@3.1.0) (2024-08-07)
+
+
+### Features
+
+* add textarea min-lines ([e738d80](https://github.com/tablecheck/tablekit/commit/e738d808b943af0d8a75db9e2413f1216a905734))
+
+
+
+
 
 ## [3.0.8](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.7...@tablecheck/tablekit-core@3.0.8) (2024-07-03)
 
