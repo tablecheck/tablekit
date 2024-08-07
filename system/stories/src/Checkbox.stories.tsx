@@ -11,6 +11,11 @@ const states = [false, true, indeterminate] as const;
 const labelSelector = checkboxRadioLabel.selectors.find((selector) =>
   selector.includes('checkbox')
 );
+const textEmoji = (state: boolean | string) => {
+  if (state === true) return '☑';
+  if (state === false) return '☐';
+  return '-';
+};
 
 export default {
   title: 'Components/Checkbox',
@@ -39,7 +44,7 @@ const Template: Story = ({ Checkbox, LabelComponent }) => (
               }
             }}
           />
-          {variant} {state ? '☑' : '☐'}
+          {variant} {textEmoji(state)}
         </LabelComponent>
       ))
     )}
