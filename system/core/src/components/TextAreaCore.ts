@@ -13,7 +13,8 @@ export const textareaSizingStyles = css`
   ${inputStyles}
   width: var(--tk-input-width);
   --tk-textarea-height: calc(
-    var(--tk-input-height) - (var(--tk-input-border-width) * 2)
+    2lh + (var(--tk-input-border-width) * 2) +
+      (var(--tk-input-vertical-padding) * 2)
   );
   min-height: var(--tk-textarea-height);
   resize: vertical;
@@ -43,6 +44,10 @@ export const textareaWrapperStyles = css`
     resize: none;
     overflow: hidden;
     align-self: stretch;
+  }
+  & > svg {
+    min-height: var(--tk-input-height);
+    align-self: flex-start;
   }
   @supports (field-sizing: content) {
     &[data-content]:after {
