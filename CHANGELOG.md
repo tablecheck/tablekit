@@ -1,3 +1,16 @@
+# (Wed Aug 07 2024)
+
+#### 🚀 Enhancement
+
+- `@tablecheck/tablekit-core@3.1.0`
+  - feat: add textarea min-lines [#238](https://github.com/tablecheck/tablekit/pull/238) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Wed Jul 03 2024)
 
 #### 🐛 Bug Fix

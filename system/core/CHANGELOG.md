@@ -1,3 +1,15 @@
+# v3.1.0 (Wed Aug 07 2024)
+
+#### 🚀 Enhancement
+
+- feat: add textarea min-lines [#238](https://github.com/tablecheck/tablekit/pull/238) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
