@@ -1,7 +1,8 @@
 import {
   ThemeProvider as EmotionThemeProvider,
   Global,
-  css
+  css,
+  useTheme
 } from '@emotion/react';
 import {
   constants,
@@ -53,6 +54,8 @@ function useIsDark(theme: 'light' | 'dark' | 'system') {
   }, [theme, setIsDark]);
   return isDark;
 }
+
+export const useTablekitTheme = useTheme;
 
 export function ThemeProvider({
   isRtl = false,

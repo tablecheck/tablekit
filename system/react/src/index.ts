@@ -154,4 +154,7 @@ export { TableButtonCell } from './structuredComponents/TableButtonCell';
 export type { Props as TableButtonCellProps } from './structuredComponents/TableButtonCell';
 export { TextArea } from './structuredComponents/TextArea';
 export type { Props as TextAreaProps } from './structuredComponents/TextArea';
-export { ThemeProvider } from './structuredComponents/ThemeProvider';
+export {
+  useTablekitTheme,
+  ThemeProvider
+} from './structuredComponents/ThemeProvider';
