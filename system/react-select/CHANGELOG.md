@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-select@3.1.0...@tablecheck/tablekit-react-select@3.1.1) (2024-10-10)
+
+**Note:** Version bump only for package @tablecheck/tablekit-react-select
+
+
+
+
+
 # [3.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-select@3.0.12...@tablecheck/tablekit-react-select@3.1.0) (2024-08-07)
 
 **Note:** Version bump only for package @tablecheck/tablekit-react-select

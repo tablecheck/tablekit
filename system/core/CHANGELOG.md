@@ -1,19 +1,18 @@
-# v3.1.1 (Thu Oct 10 2024)
-
-#### 🐛 Bug Fix
-
-- fix: fix button group rtl styles [#239](https://github.com/tablecheck/tablekit/pull/239) ([@SashaShostyr](https://github.com/SashaShostyr))
-
-#### Authors: 1
-
-- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.1.0...@tablecheck/tablekit-core@3.1.1) (2024-10-10)
+
+
+### Bug Fixes
+
+* fix button group rtl styles ([7e24b3a](https://github.com/tablecheck/tablekit/commit/7e24b3a4d802360745b713bfdf3b2fb2c3afdec3))
+
+
+
+
 
 # [3.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.0.8...@tablecheck/tablekit-core@3.1.0) (2024-08-07)
 
