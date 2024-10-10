@@ -100,6 +100,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "donaldIvanTC",
+      "name": "donaldIvanTC",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141105163?v=4",
+      "profile": "https://github.com/donaldIvanTC",
+      "contributions": [
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 6,
