@@ -1,3 +1,15 @@
+# v3.1.1 (Thu Oct 10 2024)
+
+#### 🐛 Bug Fix
+
+- fix: fix button group rtl styles [#239](https://github.com/tablecheck/tablekit/pull/239) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

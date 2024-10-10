@@ -1,3 +1,25 @@
+# (Thu Oct 10 2024)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, null[@donaldIvanTC](https://github.com/donaldIvanTC), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@3.1.1`
+  - fix: fix button group rtl styles [#239](https://github.com/tablecheck/tablekit/pull/239) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### 📝 Documentation
+
+- feat: add checkbox indeterminate state [#237](https://github.com/tablecheck/tablekit/pull/237) ([@donaldIvanTC](https://github.com/donaldIvanTC))
+
+#### Authors: 2
+
+- [@donaldIvanTC](https://github.com/donaldIvanTC)
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # (Wed Aug 07 2024)
 
 #### 🚀 Enhancement
