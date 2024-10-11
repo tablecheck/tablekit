@@ -3,7 +3,7 @@
   "description": "Hook for providing tablekit styles to react-select package",
   "license": "MIT",
   "author": "TableCheck Inc.",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "keywords": [],
   "main": "./lib/es5/index.js",
   "module": "./lib/esm/index.js",
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@carbon/icons-react": "11.17.0",
-    "@tablecheck/tablekit-core": "^3.1.1",
-    "@tablecheck/tablekit-react": "^3.1.1",
+    "@tablecheck/tablekit-core": "^3.1.2",
+    "@tablecheck/tablekit-react": "^3.1.2",
     "react-select": "5.7.0"
   },
   "publishConfig": {

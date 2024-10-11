@@ -1,19 +1,18 @@
-# v3.1.2 (Fri Oct 11 2024)
-
-#### 🐛 Bug Fix
-
-- fix: rtl issues [#241](https://github.com/tablecheck/tablekit/pull/241) ([@SashaShostyr](https://github.com/SashaShostyr))
-
-#### Authors: 1
-
-- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [3.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.1.1...@tablecheck/tablekit-core@3.1.2) (2024-10-11)
+
+
+### Bug Fixes
+
+* rtl issues ([9a12c93](https://github.com/tablecheck/tablekit/commit/9a12c934f4591fd625d5bba0a7a85bc5f7cf8691))
+
+
+
+
 
 ## [3.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.1.0...@tablecheck/tablekit-core@3.1.1) (2024-10-10)
 
