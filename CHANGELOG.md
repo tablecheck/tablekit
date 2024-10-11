@@ -1,3 +1,16 @@
+# (Fri Oct 11 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@3.1.2`
+  - fix: rtl issues [#241](https://github.com/tablecheck/tablekit/pull/241) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # (Thu Oct 10 2024)
 
 :tada: This release contains work from a new contributor! :tada:
