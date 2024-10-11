@@ -41,7 +41,12 @@ export const Table = styled.table`
     border-bottom: 1px solid var(--border);
   }
   td {
-    padding: var(--spacing-l2) var(--spacing-l4) var(--spacing-l2) 0px;
+    padding-top: var(--spacing-l2);
+    padding-bottom: var(--spacing-l2);
+    padding-inline-start: 0;
+    -webkit-padding-start: 0;
+    padding-inline-end: var(--spacing-l4);
+    -webkit-padding-end: var(--spacing-l4);
     line-height: 1.5;
   }
 `;

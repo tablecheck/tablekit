@@ -90,9 +90,19 @@ export const fullStyles = css`
         var(--tk-input-icon-end-padding)
     );
     --tk-icon-button-padding: 8px !important;
-    margin: 0 -11px 0 -7px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-inline-start: -7px;
+    -webkit-margin-start: -7px;
+    margin-inline-end: -11px;
+    -webkit-margin-end: -11px;
   }
   &[data-size='small'] > [data-mode='input-append'] {
-    margin: 0 -11px 0 -3px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-inline-start: -3px;
+    -webkit-margin-start: -3px;
+    margin-inline-end: -11px;
+    -webkit-margin-end: -11px;
   }
 `;
