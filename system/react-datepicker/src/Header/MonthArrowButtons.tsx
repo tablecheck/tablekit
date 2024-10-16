@@ -1,8 +1,20 @@
 import { ChevronLeft, ChevronRight } from '@carbon/icons-react';
+import styled from '@emotion/styled';
 import { IconButton, getConfigDefault } from '@tablecheck/tablekit-react';
 import * as React from 'react';
 
 import { useDatePickerContext } from '../Root';
+
+const IconWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > svg {
+    [dir='rtl'] & {
+      transform: rotate(180deg);
+    }
+  }
+`;
 
 export const PreviousMonth = React.forwardRef<
   HTMLButtonElement,
@@ -17,7 +29,9 @@ export const PreviousMonth = React.forwardRef<
       type="button"
       ref={ref}
     >
-      <ChevronLeft size={getConfigDefault('iconSize')} />
+      <IconWrapper>
+        <ChevronLeft size={getConfigDefault('iconSize')} />
+      </IconWrapper>
     </IconButton>
   );
 });
@@ -34,7 +48,9 @@ export const NextMonth = React.forwardRef<
       type="button"
       ref={ref}
     >
-      <ChevronRight size={getConfigDefault('iconSize')} />
+      <IconWrapper>
+        <ChevronRight size={getConfigDefault('iconSize')} />
+      </IconWrapper>
     </IconButton>
   );
 });
