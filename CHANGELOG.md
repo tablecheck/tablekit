@@ -1,3 +1,16 @@
+# (Thu Oct 17 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-react-datepicker@3.1.3`
+  - fix(tablekit-react-datepicker): rtl issues [#242](https://github.com/tablecheck/tablekit/pull/242) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # (Fri Oct 11 2024)
 
 #### 🐛 Bug Fix
