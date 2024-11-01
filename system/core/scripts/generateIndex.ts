@@ -5,7 +5,7 @@ import fs from 'fs-extra';
 import _ from 'lodash';
 import ts from 'typescript';
 
-import { prettierWrite } from './prettierWrite.mjs';
+import { prettierWrite } from './prettierWrite';
 
 if (process.env.CI) process.exit(0);
 
@@ -23,7 +23,7 @@ const filenames = subDirectories
           .map((filepath) => path.join(folder, filepath)),
         []
       ),
-    []
+    [] as string[]
   )
   .filter(
     (filepath) =>
@@ -59,7 +59,7 @@ async function getExports(filename) {
   const sourceFile = ts.createSourceFile(
     filename,
     fs.readFileSync(filepath).toString(),
-    ts.ScriptTarget.ES6,
+    ts.ScriptTarget.ESNext,
     false
   );
   const reExports = sourceFile.statements.filter(
@@ -67,9 +67,12 @@ async function getExports(filename) {
   );
   const exportNodes = sourceFile.statements
     .filter(
-      (s) =>
-        s.modifiers &&
-        s.modifiers.find((m) => m.kind === ts.SyntaxKind.ExportKeyword)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (s): s is any =>
+        ts.canHaveModifiers(s) &&
+        !!ts
+          .getModifiers(s)
+          ?.find((m) => m.kind === ts.SyntaxKind.ExportKeyword)
     )
     .reduce((r, s) => {
       if (s.declarationList) {
@@ -78,7 +81,7 @@ async function getExports(filename) {
         );
       }
       return r.concat(s);
-    }, [])
+    }, [] as unknown[])
     .filter(
       (node) =>
         !(
@@ -102,7 +105,7 @@ function nodeIsType(node) {
   );
 }
 
-const defaults = {};
+const defaults: Record<string, string[]> = {};
 
 async function collectDefaults(exportName, exportNodes) {
   const configurableProps = exportNodes.find(
@@ -119,17 +122,19 @@ async function collectDefaults(exportName, exportNodes) {
   });
 }
 
-async function buildExport(filename) {
+async function buildExport(
+  filename: string
+): Promise<[exports: string, filepath: string]> {
   if (
     ['src/index.ts', 'src/config.tsx'].includes(filename) ||
     filename.includes('.gen.')
   )
-    return '';
+    return ['', ''];
   const parsedName = path.parse(filename);
   const importPath = `./${path.join(parsedName.dir, parsedName.name)}`;
   const exportPath = `'${importPath}'`;
   if (exportPath.match(/^'\.\/themeVariables\/(types|theme)'$/g)) {
-    return `export * from ${exportPath};`;
+    return ['*', exportPath];
   }
   const exportNodes = await getExports(filename);
   const exportNames = exportNodes
@@ -137,15 +142,21 @@ async function buildExport(filename) {
     .map((node) => node.name.escapedText);
   if (exportNames.length === 1 && exportNames[0] === parsedName.name) {
     collectDefaults(parsedName.name, exportNodes);
-    return `export { ${parsedName.name} } from ${exportPath};`;
+    return [`{ ${parsedName.name} }`, exportPath];
   }
   const exportName = _.camelCase(parsedName.name);
   collectDefaults(exportName, exportNodes);
-  return `export * as ${exportName} from ${exportPath};`;
+  return [`* as ${exportName}`, exportPath];
 }
 
 await Promise.all(filenames.map(buildExport)).then((exportLines) => {
-  const fileContent = exportLines.filter((s) => !!s.trim()).join('\n');
+  const fileContent = exportLines
+    .filter((s) => !!s[0].trim())
+    .sort(([, a], [, b]) => a.localeCompare(b))
+    .map(
+      ([exportLine, exportPath]) => `export ${exportLine} from ${exportPath};`
+    )
+    .join('\n');
 
   return prettierWrite(
     'index.ts',
@@ -170,7 +181,10 @@ await prettierWrite(
 
   export interface ConfigDefaults {
     ${Object.entries(defaults)
-      .map(([value, types]) => `${value}: NonNullable<${types.join(' & ')}>;`)
+      .map(
+        ([value, types]) =>
+          `${value}: NonNullable<${types.sort().join(' & ')}>;`
+      )
       .join('\n')}
   }
   `

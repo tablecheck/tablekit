@@ -12,7 +12,7 @@
     "classy/**/*.css"
   ],
   "scripts": {
-    "build": "ts-node-esm --transpileOnly src/build.ts && cp lib/*.css .",
+    "build": "bun src/build.ts && cp lib/*.css .",
     "build:netlify": "npm run setup-typescript && npm run build",
     "prepare": "npm run setup-typescript",
     "prepublishOnly": "npm run build && mv -f lib/* .",
@@ -32,7 +32,6 @@
     "pluralize": "8.0.0",
     "postcss": "8.4.38",
     "postcss-nesting": "12.1.5",
-    "ts-node": "10.9.2",
     "typescript": "4.9.5"
   },
   "publishConfig": {

@@ -151,7 +151,7 @@ export const coreStyles = css`
   text-decoration: none;
 
   font-weight: 400;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--brand-primary);
   border-radius: var(--border-radius-small);
 
   align-items: center;
