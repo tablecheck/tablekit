@@ -4,8 +4,15 @@ Next generation UI component library, view our docs at [tablekit.tablecheck.com]
 
 ## Installation
 
+Install [ASDF](https://asdf-vm.com/) and it's nodejs and bun plugins.
+
 ```shell
-nvm use
+asdf plugin add nodejs
+asdf plugin add bun
+```
+
+```shell
+asdf current
 npm ci
 npm start
 ```

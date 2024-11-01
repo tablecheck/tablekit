@@ -3,7 +3,10 @@ import path from 'path';
 import fs from 'fs-extra';
 import prettier from 'prettier';
 
-export async function prettierWrite(relativeOrAbsolutePath, fileContent) {
+export async function prettierWrite(
+  relativeOrAbsolutePath: string,
+  fileContent: string
+): Promise<void> {
   const filepath = relativeOrAbsolutePath.startsWith('/')
     ? relativeOrAbsolutePath
     : path.join(process.cwd(), 'src', relativeOrAbsolutePath);

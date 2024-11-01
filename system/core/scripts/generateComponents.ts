@@ -4,7 +4,7 @@ import path from 'path';
 
 import fs from 'fs-extra';
 
-import { prettierWrite } from './prettierWrite.mjs';
+import { prettierWrite } from './prettierWrite';
 
 if (process.env.CI) process.exit(0);
 
@@ -15,11 +15,27 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-class ComponentBuilder {
+abstract class ComponentBuilder {
   static headerComment = `/**
     * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
     * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
     */`;
+
+  protected importKey: string;
+
+  protected element: string;
+
+  protected filePath: string;
+
+  protected structuredFileNames: string[];
+
+  protected fixedProps: string[];
+
+  protected defaultProps: [string, string][];
+
+  protected configurableProps: [string, string][];
+
+  protected variantStyles?: object;
 
   get imports() {
     return [
@@ -28,8 +44,8 @@ class ComponentBuilder {
     ];
   }
 
-  get localImports() {
-    const imports = [];
+  get localImports(): string[] {
+    const imports = [] as string[];
     if (this.configurableProps.length) {
       imports.push(`import { getConfigDefault } from '../config';`);
     }
@@ -89,6 +105,8 @@ class ComponentBuilder {
     await prettierWrite(this.filePath, this.buildFileContent().join('\n'));
   }
 
+  abstract buildFileContent(): string[];
+
   initFileContent() {
     const content = [
       ComponentBuilder.headerComment,
@@ -140,10 +158,8 @@ class ComponentBuilder {
     fixedProps = this.fixedProps || []
   }) {
     return `export const ${varName} = ${this.writeForwardRefComponentFunction({
-      varName,
       elementName,
       omitVariants,
-      displayName,
       fixedProps
     })};
     ${varName}.displayName = \`${displayName || varName}\`;`;
@@ -185,6 +201,10 @@ class ComponentBuilder {
 }
 
 class CssComponentBuilder extends ComponentBuilder {
+  private className: string;
+
+  private selectors: string[];
+
   constructor(importedKey, importedValues) {
     super(cssOutputFolderPath, importedKey, importedValues);
     this.className =
@@ -240,10 +260,8 @@ class CssComponentBuilder extends ComponentBuilder {
         (result, [key, value]) => {
             result[\`\${key.charAt(0).toUpperCase()}\${key.slice(1).toLowerCase()}\`] = ${this.writeForwardRefComponentFunction(
               {
-                varName: 'Component',
                 elementName: this.element,
                 omitVariants: true,
-                displayName: `\`\${key.charAt(0).toUpperCase()}\${key.slice(1).toLowerCase()}\``,
                 fixedProps: [...this.fixedProps, `data-variant={key}`]
               }
             )};
@@ -261,6 +279,10 @@ class CssComponentBuilder extends ComponentBuilder {
 }
 
 class ReactComponentBuilder extends ComponentBuilder {
+  private fullStyles?: string;
+
+  private coreStyles?: string;
+
   get variantComponentsName() {
     return `${this.importKey}VariantComponents`;
   }
@@ -389,7 +411,7 @@ class ReactComponentBuilder extends ComponentBuilder {
   }
 
   buildStyledComponents() {
-    const elements = [];
+    const elements = [] as string[];
     if (this.coreStyles) {
       elements.push('Core');
     }
@@ -412,7 +434,7 @@ class ReactComponentBuilder extends ComponentBuilder {
     varName,
     elementName,
     omitVariants,
-    displayName,
+    displayName = '',
     fixedProps: fixedPropsArg = this.fixedProps || [],
     shouldExport = false
   }) {

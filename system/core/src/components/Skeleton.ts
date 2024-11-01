@@ -1,16 +1,8 @@
-import { css } from '../utils';
+import { css, themedCss } from '../utils';
 
 // This file is a replacement for https://github.com/dvtng/react-loading-skeleton
 
 export const className = 'skeleton';
-
-export const keyframes = css`
-  @keyframes tk-skeleton {
-    to {
-      background-position: -200% 0;
-    }
-  }
-`;
 
 export interface Props {
   width?: number | string;
@@ -19,52 +11,31 @@ export interface Props {
 }
 
 export interface SkeletonCSSProperties {
-  '--animation-delay': string;
-  '--skeleton-width': string;
-  '--skeleton-height': string;
-  '--skeleton-border-radius': string;
+  '--tk-skeleton-width': string;
+  '--tk-skeleton-height': string;
+  '--tk-skeleton-border-radius': string;
 }
 
 export const fullStyles = css`
-  --animation-duration: 2s;
-  --animation-direction: normal;
+  ${themedCss({
+    dark: css`
+      --tk-skeleton-background: var(--grey-800);
+    `,
+    light: css`
+      --tk-skeleton-background: var(--grey-300);
+    `,
+    selector: '&'
+  })}
 
-  background-color: var(--surface-low);
-  color: transparent;
+  color: transparent !important;
   &:empty {
     min-height: 1rem;
-    width: var(--skeleton-width);
+    width: var(--tk-skeleton-width);
   }
-  height: var(--skeleton-height);
-  border-radius: var(--skeleton-border-radius);
+  height: var(--tk-skeleton-height);
+  border-radius: var(--tk-skeleton-border-radius, var(--border-radius-micro));
   display: inline-flex;
   line-height: 1.2rem;
 
-  position: relative;
-  overflow: hidden;
-  z-index: 1; /* Necessary for overflow: hidden to work correctly in Safari */
-
-  &:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(
-          -75deg,
-          transparent 30%,
-          var(--surface-active) 40%,
-          transparent 50%
-        )
-        0 0 / 200% 100%,
-      var(--surface-raised);
-    background-attachment: fixed;
-    animation-name: tk-skeleton;
-    animation-direction: var(--animation-direction);
-    animation-duration: var(--animation-duration);
-    animation-delay: var(--animation-delay);
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+  background: var(--tk-skeleton-background);
 `;

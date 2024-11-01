@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { Meta, StoryFn } from '@storybook/react';
 import {
   lightColorsObject,
-  brandColorsObject,
   utilityColorsObject
 } from '@tablecheck/tablekit-core';
 import { getConfigDefault } from '@tablecheck/tablekit-react';
@@ -27,6 +26,7 @@ const PaletteWrapper = styled.button`
   border: 1px solid var(--border);
   border-radius: var(--border-radius-small);
   cursor: pointer;
+  color: var(--text);
   &:hover {
     background-color: var(--surface-hover);
     box-shadow: var(--elevation-medium);
@@ -44,13 +44,23 @@ const ColorPreview = styled.span`
   justify-content: center;
 `;
 
-const ColorPreviewLabel = styled.span`
+const TextGrid = styled.span`
+  display: grid;
+  grid-template: auto auto / auto 1fr;
+  align-items: center;
+  text-align: start;
+  gap: 0 var(--spacing-l2);
+  & > * {
+    white-space: nowrap;
+    display: inline-flex;
+  }
+`;
+
+const ColorPreviewLabel = styled.small`
   color: var(--info-text);
   font-weight: bold;
-  display: inline-block;
-  width: 80px;
   text-align: end;
-  padding-inline-end: var(--spacing-l2);
+  place-self: center end;
 `;
 
 function PaletteColor({
@@ -78,22 +88,18 @@ function PaletteColor({
       >
         Text
       </ColorPreview>
-      <span style={{ textAlign: 'start', whiteSpace: 'nowrap' }}>
-        {backgroundVar === colorVar ? null : (
-          <small>
-            <ColorPreviewLabel>Text:</ColorPreviewLabel>
-          </small>
-        )}
-        {colorVar}
-        {backgroundVar === colorVar ? null : (
-          <>
-            <br />
-            <small>
-              <ColorPreviewLabel>Background:</ColorPreviewLabel> {backgroundVar}
-            </small>
-          </>
-        )}
-      </span>
+      {backgroundVar === colorVar ? (
+        <span style={{ textAlign: 'start', whiteSpace: 'nowrap' }}>
+          {colorVar}
+        </span>
+      ) : (
+        <TextGrid>
+          <ColorPreviewLabel>Text:</ColorPreviewLabel>
+          <span>{colorVar}</span>
+          <ColorPreviewLabel>Background:</ColorPreviewLabel>
+          <span>{backgroundVar}</span>
+        </TextGrid>
+      )}
       <Copy size={getConfigDefault('iconSize')} />
     </PaletteWrapper>
   );
@@ -132,14 +138,6 @@ export const Palette: StoryFn = () => (
           />
         ))}
       </React.Fragment>
-    ))}
-    <h2>Brand Colors</h2>
-    {Object.keys(brandColorsObject).map((key, _, keys) => (
-      <PaletteColor
-        key={key}
-        color={key}
-        background={getBackground(keys, key)}
-      />
     ))}
     <h2>Utility Colors</h2>
     {Object.keys(utilityColorsObject).map((key, _, keys) => (

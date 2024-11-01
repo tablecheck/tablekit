@@ -3,17 +3,6 @@ import { css } from '../utils';
 
 export const constants = css`
   :root {
-    --border-radius-small: 4px;
-    --border-radius-large: 8px;
-    --border-radius-full: 9999px;
-    --spacing-l1: 4px;
-    --spacing-l2: 8px;
-    --spacing-l3: 12px;
-    --spacing-l4: 16px;
-    --spacing-l5: 24px;
-    --spacing-l6: 32px;
-    --spacing-l7: 40px;
-    --spacing-l8: 48px;
     --zindex-card: 100;
     --zindex-dialog: 200;
     --zindex-sidenav: 300;
