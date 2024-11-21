@@ -147,6 +147,7 @@ const Code = styled.pre`
   border: 1px solid var(--info);
   border-radius: var(--border-radius-small);
   background: var(--info-surface);
+  border: 1px solid var(--info-border);
   color: var(--info-text);
 `;
 

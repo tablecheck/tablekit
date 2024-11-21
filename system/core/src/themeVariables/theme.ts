@@ -29,33 +29,39 @@ export const lightColors = css`
   --brand-secondary-active: var(--purple-200);
   --brand-secondary-hover: var(--purple-200);
   --error: rgba(204, 0, 0, 1);
-  --error-surface: rgba(254, 223, 223, 1);
+  --error-border: var(--danger-200);
+  --error-surface: var(--danger-100);
   --error-surface-hover: rgba(254, 205, 205, 1);
-  --error-text: rgba(204, 0, 0, 1);
+  --error-text: var(--danger-700);
   --field: var(--white);
   --focus: rgba(0, 23, 231, 1);
   --info: rgba(0, 102, 204, 1);
-  --info-surface: rgba(223, 239, 254, 1);
+  --info-border: var(--info-300);
+  --info-surface: var(--info-100);
   --info-surface-hover: rgba(205, 229, 254, 1);
-  --info-text: rgba(0, 102, 204, 1);
+  --info-text: var(--info-700);
   --link: var(--purple-600);
   --link-disabled: var(--grey-500);
   --link-hover: var(--purple-500);
   --link-visited: rgba(200, 0, 204, 1);
   --neutral: var(--grey-800);
+  --neutral-border: var(--grey-400);
   --neutral-surface: var(--grey-200);
   --neutral-surface-hover: var(--grey-300);
   --neutral-text: var(--grey-800);
-  --orange-surface: rgba(255, 237, 202, 1);
+  --orange-border: var(--orange-300);
+  --orange-surface: var(--orange-100);
   --orange-surface-hover: rgba(252, 230, 187, 1);
-  --orange-text: rgba(175, 93, 0, 1);
-  --purple-surface: rgba(245, 216, 255, 1);
+  --orange-text: var(--orange-700);
+  --purple-border: var(--purple-200);
+  --purple-surface: var(--purple-100);
   --purple-surface-hover: rgba(240, 198, 254, 1);
-  --purple-text: rgba(113, 0, 153, 1);
+  --purple-text: var(--purple-700);
   --success: rgba(6, 121, 0, 1);
-  --success-surface: rgba(233, 254, 223, 1);
+  --success-border: var(--success-300);
+  --success-surface: var(--success-100);
   --success-surface-hover: rgba(220, 254, 205, 1);
-  --success-text: rgba(6, 121, 0, 1);
+  --success-text: var(--success-700);
   --surface: var(--white);
   --surface-active: var(--grey-200);
   --surface-disabled: var(--grey-150);
@@ -81,9 +87,10 @@ export const lightColors = css`
   --toggle-disabled: var(--grey-200);
   --toggle-inactive: var(--grey-500);
   --warning: rgba(232, 183, 47, 1);
-  --warning-surface: rgba(255, 250, 223, 1);
+  --warning-border: var(--warning-300);
+  --warning-surface: var(--warning-100);
   --warning-surface-hover: rgba(255, 248, 212, 1);
-  --warning-text: rgba(146, 107, 7, 1);
+  --warning-text: var(--warning-700);
 `;
 
 export const lightColorsObject = {
@@ -98,33 +105,39 @@ export const lightColorsObject = {
   'brand-secondary-active': 'var(--purple-200)',
   'brand-secondary-hover': 'var(--purple-200)',
   error: 'rgba(204, 0, 0, 1)',
-  'error-surface': 'rgba(254, 223, 223, 1)',
+  'error-border': 'var(--danger-200)',
+  'error-surface': 'var(--danger-100)',
   'error-surface-hover': 'rgba(254, 205, 205, 1)',
-  'error-text': 'rgba(204, 0, 0, 1)',
+  'error-text': 'var(--danger-700)',
   field: 'var(--white)',
   focus: 'rgba(0, 23, 231, 1)',
   info: 'rgba(0, 102, 204, 1)',
-  'info-surface': 'rgba(223, 239, 254, 1)',
+  'info-border': 'var(--info-300)',
+  'info-surface': 'var(--info-100)',
   'info-surface-hover': 'rgba(205, 229, 254, 1)',
-  'info-text': 'rgba(0, 102, 204, 1)',
+  'info-text': 'var(--info-700)',
   link: 'var(--purple-600)',
   'link-disabled': 'var(--grey-500)',
   'link-hover': 'var(--purple-500)',
   'link-visited': 'rgba(200, 0, 204, 1)',
   neutral: 'var(--grey-800)',
+  'neutral-border': 'var(--grey-400)',
   'neutral-surface': 'var(--grey-200)',
   'neutral-surface-hover': 'var(--grey-300)',
   'neutral-text': 'var(--grey-800)',
-  'orange-surface': 'rgba(255, 237, 202, 1)',
+  'orange-border': 'var(--orange-300)',
+  'orange-surface': 'var(--orange-100)',
   'orange-surface-hover': 'rgba(252, 230, 187, 1)',
-  'orange-text': 'rgba(175, 93, 0, 1)',
-  'purple-surface': 'rgba(245, 216, 255, 1)',
+  'orange-text': 'var(--orange-700)',
+  'purple-border': 'var(--purple-200)',
+  'purple-surface': 'var(--purple-100)',
   'purple-surface-hover': 'rgba(240, 198, 254, 1)',
-  'purple-text': 'rgba(113, 0, 153, 1)',
+  'purple-text': 'var(--purple-700)',
   success: 'rgba(6, 121, 0, 1)',
-  'success-surface': 'rgba(233, 254, 223, 1)',
+  'success-border': 'var(--success-300)',
+  'success-surface': 'var(--success-100)',
   'success-surface-hover': 'rgba(220, 254, 205, 1)',
-  'success-text': 'rgba(6, 121, 0, 1)',
+  'success-text': 'var(--success-700)',
   surface: 'var(--white)',
   'surface-active': 'var(--grey-200)',
   'surface-disabled': 'var(--grey-150)',
@@ -150,9 +163,10 @@ export const lightColorsObject = {
   'toggle-disabled': 'var(--grey-200)',
   'toggle-inactive': 'var(--grey-500)',
   warning: 'rgba(232, 183, 47, 1)',
-  'warning-surface': 'rgba(255, 250, 223, 1)',
+  'warning-border': 'var(--warning-300)',
+  'warning-surface': 'var(--warning-100)',
   'warning-surface-hover': 'rgba(255, 248, 212, 1)',
-  'warning-text': 'rgba(146, 107, 7, 1)'
+  'warning-text': 'var(--warning-700)'
 };
 
 export const darkColors = css`
@@ -167,33 +181,39 @@ export const darkColors = css`
   --brand-secondary-active: var(--purple-900);
   --brand-secondary-hover: var(--purple-900);
   --error: rgba(239, 72, 72, 1);
-  --error-surface: rgba(140, 0, 0, 1);
+  --error-border: var(--danger-900);
+  --error-surface: var(--danger-700);
   --error-surface-hover: rgba(159, 0, 0, 1);
-  --error-text: rgba(254, 223, 223, 1);
+  --error-text: var(--danger-100);
   --field: var(--grey-900);
   --focus: rgba(104, 119, 253, 1);
   --info: rgba(72, 155, 239, 1);
-  --info-surface: rgba(0, 70, 140, 1);
+  --info-border: var(--info-900);
+  --info-surface: var(--info-700);
   --info-surface-hover: rgba(0, 88, 175, 1);
-  --info-text: rgba(223, 239, 254, 1);
+  --info-text: var(--info-100);
   --link: var(--purple-300);
   --link-disabled: var(--grey-700);
   --link-hover: var(--purple-400);
   --link-visited: rgba(181, 11, 215, 1);
   --neutral: var(--grey-750);
+  --neutral-border: var(--grey-900);
   --neutral-surface: var(--grey-850);
   --neutral-surface-hover: var(--grey-900);
   --neutral-text: var(--grey-400);
-  --orange-surface: rgba(175, 93, 0, 1);
+  --orange-border: var(--orange-800);
+  --orange-surface: var(--orange-700);
   --orange-surface-hover: rgba(197, 109, 10, 1);
-  --orange-text: rgba(255, 237, 202, 1);
-  --purple-surface: rgba(113, 0, 153, 1);
+  --orange-text: var(--orange-100);
+  --purple-border: var(--purple-800);
+  --purple-surface: var(--purple-700);
   --purple-surface-hover: rgba(136, 8, 182, 1);
-  --purple-text: rgba(245, 216, 255, 1);
+  --purple-text: var(--purple-100);
   --success: rgba(20, 175, 0, 1);
-  --success-surface: rgba(3, 102, 0, 1);
+  --success-border: var(--success-900);
+  --success-surface: var(--success-700);
   --success-surface-hover: rgba(6, 121, 0, 1);
-  --success-text: rgba(233, 254, 223, 1);
+  --success-text: var(--success-100);
   --surface: var(--grey-950);
   --surface-active: var(--grey-900);
   --surface-disabled: var(--grey-800);
@@ -219,9 +239,10 @@ export const darkColors = css`
   --toggle-disabled: var(--grey-850);
   --toggle-inactive: var(--grey-750);
   --warning: rgba(239, 194, 72, 1);
-  --warning-surface: rgba(140, 103, 0, 1);
+  --warning-border: var(--warning-900);
+  --warning-surface: var(--warning-700);
   --warning-surface-hover: rgba(159, 116, 0, 1);
-  --warning-text: rgba(254, 246, 223, 1);
+  --warning-text: var(--warning-100);
 `;
 
 export const darkColorsObject = {
@@ -236,33 +257,39 @@ export const darkColorsObject = {
   'brand-secondary-active': 'var(--purple-900)',
   'brand-secondary-hover': 'var(--purple-900)',
   error: 'rgba(239, 72, 72, 1)',
-  'error-surface': 'rgba(140, 0, 0, 1)',
+  'error-border': 'var(--danger-900)',
+  'error-surface': 'var(--danger-700)',
   'error-surface-hover': 'rgba(159, 0, 0, 1)',
-  'error-text': 'rgba(254, 223, 223, 1)',
+  'error-text': 'var(--danger-100)',
   field: 'var(--grey-900)',
   focus: 'rgba(104, 119, 253, 1)',
   info: 'rgba(72, 155, 239, 1)',
-  'info-surface': 'rgba(0, 70, 140, 1)',
+  'info-border': 'var(--info-900)',
+  'info-surface': 'var(--info-700)',
   'info-surface-hover': 'rgba(0, 88, 175, 1)',
-  'info-text': 'rgba(223, 239, 254, 1)',
+  'info-text': 'var(--info-100)',
   link: 'var(--purple-300)',
   'link-disabled': 'var(--grey-700)',
   'link-hover': 'var(--purple-400)',
   'link-visited': 'rgba(181, 11, 215, 1)',
   neutral: 'var(--grey-750)',
+  'neutral-border': 'var(--grey-900)',
   'neutral-surface': 'var(--grey-850)',
   'neutral-surface-hover': 'var(--grey-900)',
   'neutral-text': 'var(--grey-400)',
-  'orange-surface': 'rgba(175, 93, 0, 1)',
+  'orange-border': 'var(--orange-800)',
+  'orange-surface': 'var(--orange-700)',
   'orange-surface-hover': 'rgba(197, 109, 10, 1)',
-  'orange-text': 'rgba(255, 237, 202, 1)',
-  'purple-surface': 'rgba(113, 0, 153, 1)',
+  'orange-text': 'var(--orange-100)',
+  'purple-border': 'var(--purple-800)',
+  'purple-surface': 'var(--purple-700)',
   'purple-surface-hover': 'rgba(136, 8, 182, 1)',
-  'purple-text': 'rgba(245, 216, 255, 1)',
+  'purple-text': 'var(--purple-100)',
   success: 'rgba(20, 175, 0, 1)',
-  'success-surface': 'rgba(3, 102, 0, 1)',
+  'success-border': 'var(--success-900)',
+  'success-surface': 'var(--success-700)',
   'success-surface-hover': 'rgba(6, 121, 0, 1)',
-  'success-text': 'rgba(233, 254, 223, 1)',
+  'success-text': 'var(--success-100)',
   surface: 'var(--grey-950)',
   'surface-active': 'var(--grey-900)',
   'surface-disabled': 'var(--grey-800)',
@@ -288,14 +315,23 @@ export const darkColorsObject = {
   'toggle-disabled': 'var(--grey-850)',
   'toggle-inactive': 'var(--grey-750)',
   warning: 'rgba(239, 194, 72, 1)',
-  'warning-surface': 'rgba(140, 103, 0, 1)',
+  'warning-border': 'var(--warning-900)',
+  'warning-surface': 'var(--warning-700)',
   'warning-surface-hover': 'rgba(159, 116, 0, 1)',
-  'warning-text': 'rgba(254, 246, 223, 1)'
+  'warning-text': 'var(--warning-100)'
 };
 
 export const utilityColors = css`
   --black: rgba(0, 0, 0, 1);
   --brand-static: rgba(121, 53, 210, 1);
+  --danger-100: rgba(254, 223, 223, 1);
+  --danger-200: rgba(245, 206, 206, 1);
+  --danger-300: rgba(238, 171, 171, 1);
+  --danger-500: rgba(226, 112, 112, 1);
+  --danger-600: rgba(218, 70, 70, 1);
+  --danger-700: rgba(204, 0, 0, 1);
+  --danger-800: rgba(175, 0, 0, 1);
+  --danger-900: rgba(136, 3, 3, 1);
   --grey: rgba(26, 26, 26, 1);
   --grey-100: rgba(249, 249, 249, 1);
   --grey-150: rgba(247, 247, 247, 1);
@@ -312,6 +348,22 @@ export const utilityColors = css`
   --grey-850: rgba(58, 58, 58, 1);
   --grey-900: rgba(41, 41, 41, 1);
   --grey-950: rgba(30, 30, 30, 1);
+  --info-100: rgba(223, 239, 254, 1);
+  --info-200: rgba(203, 227, 249, 1);
+  --info-300: rgba(182, 214, 245, 1);
+  --info-500: rgba(127, 180, 233, 1);
+  --info-600: rgba(55, 136, 216, 1);
+  --info-700: rgba(0, 102, 204, 1);
+  --info-800: rgba(0, 82, 163, 1);
+  --info-900: rgba(0, 61, 122, 1);
+  --orange-100: rgba(255, 237, 202, 1);
+  --orange-200: rgba(250, 222, 178, 1);
+  --orange-300: rgba(239, 208, 161, 1);
+  --orange-500: rgba(210, 146, 73, 1);
+  --orange-600: rgba(191, 125, 51, 1);
+  --orange-700: rgba(175, 93, 0, 1);
+  --orange-800: rgba(140, 74, 0, 1);
+  --orange-900: rgba(114, 60, 0, 1);
   --purple-100: rgba(241, 229, 255, 1);
   --purple-150: rgba(226, 204, 255, 1);
   --purple-200: rgba(220, 193, 255, 1);
@@ -324,12 +376,36 @@ export const utilityColors = css`
   --purple-800: rgba(84, 38, 142, 1);
   --purple-900: rgba(61, 31, 98, 1);
   --purple-950: rgba(49, 25, 78, 1);
+  --success-100: rgba(233, 254, 223, 1);
+  --success-200: rgba(221, 247, 211, 1);
+  --success-300: rgba(203, 236, 193, 1);
+  --success-500: rgba(105, 178, 97, 1);
+  --success-600: rgba(65, 155, 58, 1);
+  --success-700: rgba(6, 121, 0, 1);
+  --success-800: rgba(5, 103, 0, 1);
+  --success-900: rgba(4, 85, 0, 1);
+  --warning-100: rgba(255, 250, 229, 1);
+  --warning-200: rgba(247, 238, 204, 1);
+  --warning-300: rgba(239, 229, 191, 1);
+  --warning-500: rgba(231, 192, 92, 1);
+  --warning-600: rgba(197, 158, 59, 1);
+  --warning-700: rgba(146, 107, 7, 1);
+  --warning-800: rgba(129, 85, 0, 1);
+  --warning-900: rgba(115, 68, 0, 1);
   --white: rgba(255, 255, 255, 1);
 `;
 
 export const utilityColorsObject = {
   black: 'rgba(0, 0, 0, 1)',
   'brand-static': 'rgba(121, 53, 210, 1)',
+  'danger-100': 'rgba(254, 223, 223, 1)',
+  'danger-200': 'rgba(245, 206, 206, 1)',
+  'danger-300': 'rgba(238, 171, 171, 1)',
+  'danger-500': 'rgba(226, 112, 112, 1)',
+  'danger-600': 'rgba(218, 70, 70, 1)',
+  'danger-700': 'rgba(204, 0, 0, 1)',
+  'danger-800': 'rgba(175, 0, 0, 1)',
+  'danger-900': 'rgba(136, 3, 3, 1)',
   grey: 'rgba(26, 26, 26, 1)',
   'grey-100': 'rgba(249, 249, 249, 1)',
   'grey-150': 'rgba(247, 247, 247, 1)',
@@ -346,6 +422,22 @@ export const utilityColorsObject = {
   'grey-850': 'rgba(58, 58, 58, 1)',
   'grey-900': 'rgba(41, 41, 41, 1)',
   'grey-950': 'rgba(30, 30, 30, 1)',
+  'info-100': 'rgba(223, 239, 254, 1)',
+  'info-200': 'rgba(203, 227, 249, 1)',
+  'info-300': 'rgba(182, 214, 245, 1)',
+  'info-500': 'rgba(127, 180, 233, 1)',
+  'info-600': 'rgba(55, 136, 216, 1)',
+  'info-700': 'rgba(0, 102, 204, 1)',
+  'info-800': 'rgba(0, 82, 163, 1)',
+  'info-900': 'rgba(0, 61, 122, 1)',
+  'orange-100': 'rgba(255, 237, 202, 1)',
+  'orange-200': 'rgba(250, 222, 178, 1)',
+  'orange-300': 'rgba(239, 208, 161, 1)',
+  'orange-500': 'rgba(210, 146, 73, 1)',
+  'orange-600': 'rgba(191, 125, 51, 1)',
+  'orange-700': 'rgba(175, 93, 0, 1)',
+  'orange-800': 'rgba(140, 74, 0, 1)',
+  'orange-900': 'rgba(114, 60, 0, 1)',
   'purple-100': 'rgba(241, 229, 255, 1)',
   'purple-150': 'rgba(226, 204, 255, 1)',
   'purple-200': 'rgba(220, 193, 255, 1)',
@@ -358,6 +450,22 @@ export const utilityColorsObject = {
   'purple-800': 'rgba(84, 38, 142, 1)',
   'purple-900': 'rgba(61, 31, 98, 1)',
   'purple-950': 'rgba(49, 25, 78, 1)',
+  'success-100': 'rgba(233, 254, 223, 1)',
+  'success-200': 'rgba(221, 247, 211, 1)',
+  'success-300': 'rgba(203, 236, 193, 1)',
+  'success-500': 'rgba(105, 178, 97, 1)',
+  'success-600': 'rgba(65, 155, 58, 1)',
+  'success-700': 'rgba(6, 121, 0, 1)',
+  'success-800': 'rgba(5, 103, 0, 1)',
+  'success-900': 'rgba(4, 85, 0, 1)',
+  'warning-100': 'rgba(255, 250, 229, 1)',
+  'warning-200': 'rgba(247, 238, 204, 1)',
+  'warning-300': 'rgba(239, 229, 191, 1)',
+  'warning-500': 'rgba(231, 192, 92, 1)',
+  'warning-600': 'rgba(197, 158, 59, 1)',
+  'warning-700': 'rgba(146, 107, 7, 1)',
+  'warning-800': 'rgba(129, 85, 0, 1)',
+  'warning-900': 'rgba(115, 68, 0, 1)',
   white: 'rgba(255, 255, 255, 1)'
 };
 
@@ -384,16 +492,16 @@ export const spacingObject = {
 };
 
 export const borderRadius = css`
+  --border-radius-full: 999px;
   --border-radius-large: 8px;
   --border-radius-micro: 2px;
-  --border-radius-full: 999px;
   --border-radius-small: 4px;
 `;
 
 export const borderRadiusObject = {
+  'border-radius-full': 999,
   'border-radius-large': 8,
   'border-radius-micro': 2,
-  'border-radius-full': 999,
   'border-radius-small': 4
 };
 

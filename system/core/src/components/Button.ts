@@ -73,7 +73,7 @@ export const variantStyles = {
     }
   `,
   secondary: css`
-    --tk-button-color: var(--surface-secondary-text);
+    --tk-button-color: var(--text-secondary);
     --tk-button-background-color: var(--surface-secondary);
     --tk-button-border-color: var(--surface-secondary);
     &[data-pseudo='hover'],

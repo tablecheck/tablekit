@@ -123,7 +123,7 @@ export const Palette: StoryFn = () => (
         const [, rootKey] = key.match(/^(text|toggle)-?/) ?? [];
         if (rootKey) return rootKey;
         return key.replace(
-          /-(active|focus|text|transparent|hover|surface|disabled|visited)/gi,
+          /-(active|focus|text|transparent|hover|surface|disabled|visited|border)/gi,
           ''
         );
       })
@@ -140,12 +140,21 @@ export const Palette: StoryFn = () => (
       </React.Fragment>
     ))}
     <h2>Utility Colors</h2>
-    {Object.keys(utilityColorsObject).map((key, _, keys) => (
-      <PaletteColor
-        key={key}
-        color={key}
-        background={getBackground(keys, key)}
-      />
+    {Object.entries(
+      groupBy(Object.keys(utilityColorsObject), (key) =>
+        key.match(/-[0-9]+$/gi) ? key.replace(/-[0-9]+$/gi, '') : 'basic'
+      )
+    ).map(([groupKey, keys]) => (
+      <React.Fragment key={groupKey}>
+        {groupKey !== 'basic' ? <h4>{groupKey.replace(/-/gi, ' ')}</h4> : null}
+        {keys.map((key) => (
+          <PaletteColor
+            key={key}
+            color={key}
+            background={getBackground(keys, key)}
+          />
+        ))}
+      </React.Fragment>
     ))}
   </>
 );

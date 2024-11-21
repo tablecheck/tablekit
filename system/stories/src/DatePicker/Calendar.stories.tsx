@@ -130,6 +130,7 @@ const DemoRow = styled.div`
       padding: var(--spacing-l2);
       color: var(--info-text);
       background-color: var(--info-surface);
+      border: 1px solid var(--info-border);
       justify-self: flex-start;
       border-bottom: 1px solid var(--info);
       text-align: center;

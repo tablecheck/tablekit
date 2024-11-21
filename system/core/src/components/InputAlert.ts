@@ -43,16 +43,19 @@ export const fullStyles = css`
 
   &[data-variant='error'] {
     background: var(--error-surface);
+    border: 1px solid var(--error-border);
     color: var(--error-text);
   }
 
   &[data-variant='warning'] {
     background: var(--warning-surface);
+    border: 1px solid var(--warning-border);
     color: var(--warning-text);
   }
 
   &[data-variant='info'] {
     background: var(--info-surface);
+    border: 1px solid var(--info-border);
     color: var(--info-text);
   }
 `;
