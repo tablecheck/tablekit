@@ -9,16 +9,15 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.RELEASE_BOT_TOKEN }}
 
       - name: Prepare repository
         run: git fetch --unshallow --prune --tags
-
-      - name: Unset header
-        # checkout@v2 adds a header that makes branch protection report errors ):
-        run: git config --local --unset http.https://github.com/.extraheader
 
       - name: Read .nvmrc
         id: nvm

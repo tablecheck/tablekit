@@ -32,11 +32,11 @@
     "update:figma": "lerna run update:figma --"
   },
   "dependencies": {
-    "@auto-it/all-contributors": "11.1.6",
-    "@auto-it/first-time-contributor": "11.1.6",
-    "@auto-it/npm": "11.1.6",
-    "@auto-it/released": "11.1.6",
-    "@auto-it/slack": "11.1.6",
+    "@auto-it/all-contributors": "11.3.0",
+    "@auto-it/first-time-contributor": "11.3.0",
+    "@auto-it/npm": "11.3.0",
+    "@auto-it/released": "11.3.0",
+    "@auto-it/slack": "11.3.0",
     "@bissolli/storybook-css-properties": "0.0.14",
     "@brightlayer-ui/storybook-rtl-addon": "1.1.0",
     "@carbon/icons-react": "11.17.0",
@@ -56,7 +56,7 @@
     "@types/uuid": "8.3.4",
     "ast-types": "0.14.2",
     "auditjs": "4.0.45",
-    "auto": "11.1.6",
+    "auto": "11.3.0",
     "babel-eslint": "11.0.0-beta.2",
     "babel-preset-razzle": "4.2.18",
     "chokidar": "3.5.3",
@@ -74,7 +74,7 @@
   },
   "devDependencies": {
     "chalk": "5.2.0",
-    "chromatic": "11.4.1"
+    "chromatic": "11.18.1"
   },
   "workspaces": [
     "system/*"

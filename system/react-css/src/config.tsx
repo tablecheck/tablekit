@@ -46,7 +46,15 @@ export function configureDefaults(defaults: CoreConfigDefaults): void {
 }
 
 export function getSentimentIcon(
-  variant: 'success' | 'error' | 'neutral' | 'info' | 'warning' | 'default',
+  variant:
+    | 'success'
+    | 'error'
+    | 'neutral'
+    | 'info'
+    | 'warning'
+    | 'default'
+    | 'tertiary'
+    | 'ghost',
   size = getConfigDefault('iconSize')
 ): JSX.Element {
   switch (variant) {
@@ -59,6 +67,8 @@ export function getSentimentIcon(
     case 'neutral':
     case 'info':
     case 'default':
+    case 'tertiary':
+    case 'ghost':
       return <Information size={size} />;
   }
 }

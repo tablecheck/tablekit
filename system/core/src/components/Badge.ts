@@ -14,6 +14,7 @@ export const fullStyles = css`
   border-radius: var(--border-radius-small);
   color: var(--neutral-text);
   background-color: var(--neutral-surface);
+  border: 1px solid var(--neutral-border);
 
   &[data-size='x-small'] {
     padding: 2px 6px;
@@ -41,10 +42,12 @@ export interface Props {
 }
 
 const variants = [
+  'tertiary',
+  'ghost',
   'success',
-  'warning',
   'info',
   'error',
+  'warning',
   'neutral',
   'purple',
   'orange',
@@ -53,19 +56,36 @@ const variants = [
 
 export type BadgeVariant = (typeof variants)[number];
 
+function getVariantStyles(key: BadgeVariant): string {
+  if (key === 'disabled')
+    return css`
+      color: var(--text-disabled);
+      background-color: var(--surface-disabled);
+      border-color: transparent;
+    `;
+  if (key === 'tertiary')
+    return css`
+      color: var(--text);
+      background-color: var(--surface);
+      border-color: var(--border);
+    `;
+  if (key === 'ghost')
+    return css`
+      color: var(--text);
+      background-color: transparent;
+      border-color: var(--border);
+    `;
+  return css`
+    color: var(--${key}-text);
+    background-color: var(--${key}-surface);
+    border-color: var(--${key}-border);
+  `;
+}
+
 export const variantStyles = variants.reduce(
   (result, key) => ({
     ...result,
-    [key]:
-      key === 'disabled'
-        ? css`
-            color: var(--text-disabled);
-            background-color: var(--surface-disabled);
-          `
-        : css`
-            color: var(--${key}-text);
-            background-color: var(--${key}-surface);
-          `
+    [key]: getVariantStyles(key)
   }),
   {} as Record<BadgeVariant, string>
 );

@@ -5,6 +5,8 @@ import * as css from '@tablecheck/tablekit-react-css';
 import * as React from 'react';
 
 const contentVariants: emotion.AlertProps['data-variant'][] = [
+  'tertiary',
+  'ghost',
   'success',
   'info',
   'error',

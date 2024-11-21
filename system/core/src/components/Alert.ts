@@ -3,7 +3,15 @@ import { css } from '../utils';
 export const element = 'div';
 export const className = 'alert';
 
-const variants = ['success', 'info', 'error', 'warning', 'neutral'] as const;
+const variants = [
+  'tertiary',
+  'ghost',
+  'success',
+  'info',
+  'error',
+  'warning',
+  'neutral'
+] as const;
 
 export type AlertVariant = (typeof variants)[number];
 
@@ -25,6 +33,7 @@ export const fullStyles = css`
   gap: var(--spacing-l1) var(--spacing-l2);
   color: var(--neutral-text);
   background: var(--neutral-surface);
+  border: 1px solid var(--neutral-border);
   border-radius: var(--border-radius-small);
   padding: var(--spacing-l2) var(--spacing-l3);
   align-items: flex-start;
@@ -59,20 +68,34 @@ export const fullStyles = css`
     grid: 'description' 1fr / 1fr;
   }
 
+  &[data-variant='tertiary'] {
+    color: var(--text);
+    background: var(--surface);
+    border-color: var(--border);
+  }
+  &[data-variant='ghost'] {
+    color: var(--text);
+    background: transparent;
+    border-color: var(--border);
+  }
   &[data-variant='error'] {
     color: var(--error-text);
     background: var(--error-surface);
+    border-color: var(--error-border);
   }
   &[data-variant='warning'] {
     color: var(--warning-text);
     background: var(--warning-surface);
+    border-color: var(--warning-border);
   }
   &[data-variant='success'] {
     color: var(--success-text);
     background: var(--success-surface);
+    border-color: var(--success-border);
   }
   &[data-variant='info'] {
     color: var(--info-text);
     background: var(--info-surface);
+    border-color: var(--info-border);
   }
 `;

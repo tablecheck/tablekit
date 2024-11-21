@@ -14,3 +14,4 @@ website/src/static/css/fonts.css
 storybook-static
 tmp
 .@tablecheck
+.all-contributorsrc
