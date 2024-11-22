@@ -1,3 +1,21 @@
+# (Fri Nov 22 2024)
+
+#### 💥 Breaking Change
+
+- `@tablecheck/tablekit-core@4.0.0`, `@tablecheck/tablekit-css@4.0.0`, `@tablecheck/tablekit-react-css@4.0.0`, `@tablecheck/tablekit-react@4.0.0`
+  - feat: update base colors [#243](https://github.com/tablecheck/tablekit/pull/243) ([@SimeonC](https://github.com/SimeonC))
+
+#### ⚠️ Pushed to `main`
+
+- `@tablecheck/tablekit-core@4.0.0`, `@tablecheck/tablekit-react-css@4.0.0`, `@tablecheck/tablekit-react@4.0.0`
+  - feat: add sentiment borders to badge, alert, banner ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu Oct 17 2024)
 
 #### 🐛 Bug Fix

@@ -1,3 +1,15 @@
+# v4.0.0 (Fri Nov 22 2024)
+
+#### 💥 Breaking Change
+
+- feat: update base colors [#243](https://github.com/tablecheck/tablekit/pull/243) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
