@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-datepicker@3.1.3...@tablecheck/tablekit-react-datepicker@4.0.0) (2024-11-22)
+
+**Note:** Version bump only for package @tablecheck/tablekit-react-datepicker
+
+
+
+
+
 ## [3.1.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-datepicker@3.1.2...@tablecheck/tablekit-react-datepicker@3.1.3) (2024-10-17)
 
 

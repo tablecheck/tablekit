@@ -1,23 +1,24 @@
-# v4.0.0 (Fri Nov 22 2024)
-
-#### 💥 Breaking Change
-
-- feat: update base colors [#243](https://github.com/tablecheck/tablekit/pull/243) ([@SimeonC](https://github.com/SimeonC))
-
-#### ⚠️ Pushed to `main`
-
-- feat: add sentiment borders to badge, alert, banner ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [4.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.1.2...@tablecheck/tablekit-core@4.0.0) (2024-11-22)
+
+
+### Features
+
+* add sentiment borders to badge, alert, banner ([6854eef](https://github.com/tablecheck/tablekit/commit/6854eef0bc9f05a20e4fdd70cedde9587463f345))
+* update base colors ([662bd86](https://github.com/tablecheck/tablekit/commit/662bd86dd9a96c12bdb828296a1d5f077a797520))
+
+
+### BREAKING CHANGES
+
+* All `--primary` variables are now removed, if you needed the value for our logo use `--brand-static` in all other cases use `--brand-primary` which is a light/dark aware purple “primary” color.
+
+
+
+
 
 ## [3.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.1.1...@tablecheck/tablekit-core@3.1.2) (2024-10-11)
 
