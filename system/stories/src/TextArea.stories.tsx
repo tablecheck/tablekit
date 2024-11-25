@@ -20,7 +20,7 @@ const contentVariants = [
   { title: 'Stretch', 'data-stretch': true }
 ];
 
-export default {
+const meta: Meta = {
   title: 'Components/TextArea',
   component: emotion.TextArea,
   parameters: {
@@ -38,7 +38,9 @@ export default {
       textAreaWithSuffix.className
     ]
   }
-} as Meta;
+};
+
+export default meta;
 
 const getPropRows: (
   size: NonNullable<textAreaCore.Props['data-size']>
@@ -93,13 +95,13 @@ const Template: StoryFn<{
   </>
 );
 
-export const Emotion = Template.bind({});
+export const Emotion: typeof Template = Template.bind({});
 Emotion.args = {
   TextArea: emotion.TextArea
 };
 Emotion.parameters = { useEmotion: true };
 
-export const Class = Template.bind({});
+export const Class: typeof Template = Template.bind({});
 Class.args = {
   TextArea: css.TextArea
 };

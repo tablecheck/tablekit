@@ -11,14 +11,16 @@ const contentVariants = [
   'Visited'
 ] as const;
 
-export default {
+const meta: Meta = {
   title: 'Components/Anchor',
   component: emotion.Anchor,
   parameters: {
     ...anchor,
     variants: contentVariants
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Anchor, ButtonAnchor }) => (
   <>

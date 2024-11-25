@@ -10,5 +10,6 @@ export const fullStyles = css`
   .label-row {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
 `;

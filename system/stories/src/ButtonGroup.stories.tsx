@@ -14,7 +14,7 @@ const contentVariants = [
   'Active'
 ] as const;
 
-export default {
+const meta: Meta = {
   title: 'Components/ButtonGroup',
   component: emotion.ButtonGroup,
   parameters: {
@@ -22,7 +22,9 @@ export default {
     variants: contentVariants,
     chromatic: { viewports: [1500] }
   }
-} as Meta;
+};
+
+export default meta;
 
 const sizes = ['small', 'medium', 'large'] as const;
 

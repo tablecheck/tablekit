@@ -6,7 +6,7 @@ import {
   WeekHeader
 } from '@tablecheck/tablekit-react-datepicker';
 
-export default {
+const meta: Meta = {
   title: 'Components/DatePicker/WeekHeader',
   component: WeekHeader,
   parameters: {
@@ -17,7 +17,9 @@ export default {
       exclude: ['data-testid', 'description']
     }
   }
-} as Meta;
+};
+
+export default meta;
 
 const onDateSelected = action('onDateSelected');
 const displayDate = new Date('2021-06-21');

@@ -4,11 +4,13 @@ import { scrollShadow } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/ScrollShadow',
   component: emotion.ScrollShadow,
   parameters: { variants: ['Start', 'Center', 'End'], ...scrollShadow }
-} as Meta;
+};
+
+export default meta;
 
 const ScrollShadowWrapper = styled.div`
   & > div {
@@ -77,10 +79,10 @@ const Template: Story<{
   </>
 );
 
-export const Emotion = Template.bind({});
+export const Emotion: typeof Template = Template.bind({});
 Emotion.args = { ScrollShadow: emotion.ScrollShadow };
 Emotion.parameters = { useEmotion: true };
 
-export const Class = Template.bind({});
+export const Class: typeof Template = Template.bind({});
 Class.args = { ScrollShadow: css.ScrollShadow };
 Class.parameters = { useEmotion: false };

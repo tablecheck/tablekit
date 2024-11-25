@@ -7,7 +7,7 @@ import {
   Week
 } from '@tablecheck/tablekit-react-datepicker';
 
-export default {
+const meta: Meta = {
   title: 'Components/DatePicker/Week',
   component: Week,
   parameters: {
@@ -17,7 +17,9 @@ export default {
       exclude: ['data-testid', 'description']
     }
   }
-} as Meta;
+};
+
+export default meta;
 
 const Wrapper = styled.div`
   margin: 0 auto;

@@ -7,13 +7,15 @@ import * as css from '@tablecheck/tablekit-react-css';
 const bannerTypes = [undefined, 'single', 'dismissed', 'basic'] as const;
 const variants = Object.keys(banner.variantStyles);
 
-export default {
+const meta: Meta = {
   title: 'Components/Banner',
   component: emotion.Banner,
   parameters: {
     ...banner
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ components }) => (
   <>

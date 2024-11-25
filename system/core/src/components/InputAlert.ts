@@ -19,7 +19,6 @@ export const fullStyles = css`
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: var(--spacing-l2);
-  margin-top: var(--spacing-l2);
   color: var(--text);
   border-radius: var(--border-radius-small);
 

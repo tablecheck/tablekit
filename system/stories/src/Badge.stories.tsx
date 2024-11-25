@@ -7,11 +7,13 @@ import * as React from 'react';
 
 const variants = Object.keys(badge.variantStyles);
 
-export default {
+const meta: Meta = {
   title: 'Components/Badge',
   component: emotion.Badge,
   parameters: { ...badge, variants }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Badge }) => (
   <>

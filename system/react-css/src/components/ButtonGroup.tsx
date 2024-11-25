@@ -6,18 +6,18 @@ import { buttonGroup } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = buttonGroup.Props & React.HTMLAttributes<HTMLDivElement>;
 
-export const ButtonGroup = React.forwardRef<
+export const ButtonGroup = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} button-group`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-ButtonGroup.displayName = `ButtonGroup`;
+>({
+  tag: 'div',
+  displayName: 'ButtonGroup',
+  className: 'button-group',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

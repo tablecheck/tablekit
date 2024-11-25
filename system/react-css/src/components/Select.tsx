@@ -6,19 +6,19 @@ import { select } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = select.Props &
   React.SelectHTMLAttributes<HTMLSelectElement>;
 
-export const Select = React.forwardRef<
+export const Select = buildWithComponent<
   HTMLSelectElement,
   Props & React.SelectHTMLAttributes<HTMLSelectElement>
->((props, ref) => (
-  <select
-    {...props}
-    className={`${props.className ?? ''} select`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-Select.displayName = `Select`;
+>({
+  tag: 'select',
+  displayName: 'Select',
+  className: 'select',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

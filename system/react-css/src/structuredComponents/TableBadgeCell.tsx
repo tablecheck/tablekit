@@ -1,12 +1,20 @@
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = React.InputHTMLAttributes<HTMLTableCellElement>;
 
 /**
  * A utility component that attaches a `data-cell-type="badge"` attribute to a `td` element.
  */
-export const TableBadgeCell = React.forwardRef<
+export const TableBadgeCell = buildWithComponent<
   HTMLTableCellElement,
-  Props & React.HTMLAttributes<HTMLTableCellElement>
->((props, ref) => <td {...props} data-cell-type="badge" ref={ref} />);
-TableBadgeCell.displayName = 'TableBadgeCell';
+  React.HTMLAttributes<HTMLTableCellElement>
+>({
+  tag: 'td',
+  className: undefined,
+  displayName: 'TableBadgeCell',
+  additionalProps: {
+    'data-cell-type': 'badge'
+  }
+});

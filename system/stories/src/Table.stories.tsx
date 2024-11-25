@@ -6,14 +6,16 @@ import { getConfigDefault } from '@tablecheck/tablekit-react';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Table',
   component: emotion.Table,
   parameters: {
     ...table,
     auxiliaryComponents: [emotion.TableBadgeCell, emotion.TableButtonCell]
   }
-} as Meta;
+};
+
+export default meta;
 
 const tableData = [
   {
@@ -148,19 +150,21 @@ const SimpleTemplate: StoryFn<Pick<Options, 'Table' | 'isStriped'>> = ({
   </Table>
 );
 
-export const BasicEmotion = SimpleTemplate.bind({});
+export const BasicEmotion: typeof SimpleTemplate = SimpleTemplate.bind({});
 BasicEmotion.args = { Table: emotion.Table };
 BasicEmotion.parameters = { useEmotion: true };
 
-export const BasicStripedEmotion = SimpleTemplate.bind({});
+export const BasicStripedEmotion: typeof SimpleTemplate = SimpleTemplate.bind(
+  {}
+);
 BasicStripedEmotion.args = { Table: emotion.Table, isStriped: true };
 BasicStripedEmotion.parameters = { useEmotion: true };
 
-export const BasicClass = SimpleTemplate.bind({});
+export const BasicClass: typeof SimpleTemplate = SimpleTemplate.bind({});
 BasicClass.args = { Table: css.Table };
 BasicClass.parameters = { useEmotion: false };
 
-export const BasicStripedClass = SimpleTemplate.bind({});
+export const BasicStripedClass: typeof SimpleTemplate = SimpleTemplate.bind({});
 BasicStripedClass.args = { Table: css.Table, isStriped: true };
 BasicStripedClass.parameters = { useEmotion: false };
 
@@ -221,7 +225,8 @@ const WithControlsTemplate: StoryFn<Options> = ({
   </Table>
 );
 
-export const WithControlsEmotion = WithControlsTemplate.bind({});
+export const WithControlsEmotion: typeof WithControlsTemplate =
+  WithControlsTemplate.bind({});
 WithControlsEmotion.args = {
   Table: emotion.Table,
   Button: emotion.Button,
@@ -233,7 +238,8 @@ WithControlsEmotion.args = {
 
 WithControlsEmotion.parameters = { useEmotion: true };
 
-export const StripedControlsEmotion = WithControlsTemplate.bind({});
+export const StripedControlsEmotion: typeof WithControlsTemplate =
+  WithControlsTemplate.bind({});
 StripedControlsEmotion.args = {
   Table: emotion.Table,
   Button: emotion.Button,
@@ -245,7 +251,8 @@ StripedControlsEmotion.args = {
 };
 StripedControlsEmotion.parameters = { useEmotion: true };
 
-export const WithControlsClass = WithControlsTemplate.bind({});
+export const WithControlsClass: typeof WithControlsTemplate =
+  WithControlsTemplate.bind({});
 WithControlsClass.args = {
   Table: css.Table,
   Button: css.Button,
@@ -256,7 +263,8 @@ WithControlsClass.args = {
 };
 WithControlsClass.parameters = { useEmotion: false };
 
-export const StripedControlsClass = WithControlsTemplate.bind({});
+export const StripedControlsClass: typeof WithControlsTemplate =
+  WithControlsTemplate.bind({});
 StripedControlsClass.args = {
   Table: css.Table,
   Button: css.Button,

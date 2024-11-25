@@ -6,14 +6,16 @@ import * as React from 'react';
 
 const contentVariants = ['Default', 'Disabled', 'Focus'] as const;
 
-export default {
+const meta: Meta = {
   title: 'Components/Toggle',
   component: emotion.Toggle,
   parameters: {
     ...toggle,
     variants: contentVariants
   }
-} as Meta;
+};
+
+export default meta;
 
 const sizes = ['small', 'medium', 'large'] as const;
 const states = [false, true, 'indefinite'] as const;

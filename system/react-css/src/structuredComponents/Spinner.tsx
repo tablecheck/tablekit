@@ -1,9 +1,15 @@
 import type { spinner } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = spinner.Props;
 
-export const Spinner = React.forwardRef<
+export const Spinner = buildWithComponent<
   HTMLSpanElement,
-  Props & React.HTMLAttributes<HTMLSpanElement>
->((props, ref) => <span {...props} ref={ref} />);
+  React.HTMLAttributes<HTMLSpanElement>
+>({
+  tag: 'span',
+  displayName: 'Spinner',
+  className: undefined
+});

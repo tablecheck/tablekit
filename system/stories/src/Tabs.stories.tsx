@@ -5,7 +5,7 @@ import { tabs, tabButton, tabContent } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Tabs',
   component: emotion.Tabs,
   parameters: {
@@ -13,7 +13,9 @@ export default {
     auxiliaryClassNames: [tabContent.className, tabButton.className],
     auxiliaryComponents: [emotion.TabContent, emotion.TabButton]
   }
-} as Meta;
+};
+
+export default meta;
 
 const tabNames = ['one', 'two', 'three'];
 

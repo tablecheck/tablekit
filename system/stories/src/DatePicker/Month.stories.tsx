@@ -5,7 +5,7 @@ import { Root, Months } from '@tablecheck/tablekit-react-datepicker';
 import { addDays, isSameDay } from 'date-fns';
 import { Calendar } from 'dayzed';
 
-export default {
+const meta: Meta = {
   title: 'Components/DatePicker/Months',
   component: Months,
   parameters: {
@@ -23,7 +23,9 @@ export default {
       control: false
     }
   }
-} as Meta;
+};
+
+export default meta;
 
 const today = new Date('2023-03-14T16:47:18.502Z');
 

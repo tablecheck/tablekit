@@ -9,9 +9,8 @@ export interface Props extends inputAlert.Props {
   children: React.ReactNode;
 }
 
-export const InputAlertInner = styled(inputAlert.element)<Props>`
+const InputAlertInner = styled(inputAlert.element)<Props>`
   ${inputAlert.fullStyles}
-  margin-top: 0;
 `;
 
 const inputAlertIconMap: Record<
@@ -29,7 +28,12 @@ export const InputAlert = React.forwardRef<
   HTMLSpanElement,
   React.HTMLAttributes<HTMLSpanElement> & Props
 >(({ 'data-variant': type, children, ...props }, ref) => (
-  <InputAlertInner {...props} data-variant={type} ref={ref}>
+  <InputAlertInner
+    {...props}
+    className={`${props.className || ''} input-alert`}
+    data-variant={type}
+    ref={ref}
+  >
     {inputAlertIconMap[type]}
     <small>{children}</small>
   </InputAlertInner>

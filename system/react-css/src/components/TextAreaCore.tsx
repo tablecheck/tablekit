@@ -6,19 +6,19 @@ import { textAreaCore } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = textAreaCore.Props &
   React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-export const TextAreaCore = React.forwardRef<
+export const TextAreaCore = buildWithComponent<
   HTMLTextAreaElement,
   Props & React.TextareaHTMLAttributes<HTMLTextAreaElement>
->((props, ref) => (
-  <textarea
-    {...props}
-    className={`${props.className ?? ''} textarea`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-TextAreaCore.displayName = `TextAreaCore`;
+>({
+  tag: 'textarea',
+  displayName: 'TextAreaCore',
+  className: 'textarea',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

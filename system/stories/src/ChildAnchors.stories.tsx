@@ -4,13 +4,15 @@ import { childAnchors } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/ChildAnchors',
   component: emotion.ChildAnchors,
   parameters: {
     ...childAnchors
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ ChildAnchors }) => (
   <ChildAnchors>

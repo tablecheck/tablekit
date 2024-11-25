@@ -67,13 +67,15 @@ const contentVariants: emotion.InputStructureProps[] = [
   }
 ];
 
-export default {
+const meta: Meta = {
   title: 'Components/InputStructure',
   component: emotion.InputStructure,
   parameters: {
     ...inputStructure
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: StoryFn = ({ InputStructure }) => (
   <>

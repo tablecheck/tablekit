@@ -60,7 +60,7 @@ const layouts: ({
   }
 ];
 
-export default {
+const meta: Meta = {
   title: 'Components/Alert',
   component: emotion.Alert,
   parameters: {
@@ -74,7 +74,9 @@ export default {
       emotion.AlertIconWrapper
     ]
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: StoryFn = ({ Alert }) => (
   <>

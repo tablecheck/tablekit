@@ -15,11 +15,17 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+interface PropsType {
+  key: string;
+  value: string;
+  type: 'value' | 'string';
+}
+
 abstract class ComponentBuilder {
   static headerComment = `/**
-    * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
-    * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
-    */`;
+  * DO NOT EDIT: This file is generated in the post-build step of @tablecheck/tablekit-core
+  * If you need to provide more "structure" to this component move it to the 'structuredComponents' folder
+  */`;
 
   protected importKey: string;
 
@@ -29,7 +35,7 @@ abstract class ComponentBuilder {
 
   protected structuredFileNames: string[];
 
-  protected fixedProps: string[];
+  protected fixedProps: PropsType[];
 
   protected defaultProps: [string, string][];
 
@@ -82,6 +88,7 @@ abstract class ComponentBuilder {
     this.fixedProps = [];
     this.importKey = importedKey;
     this.element = importedValues.element || 'div';
+    this.variantStyles = importedValues.variantStyles;
     const defaultProps = importedValues.defaultProps
       ? { ...importedValues.defaultProps }
       : {};
@@ -130,10 +137,13 @@ abstract class ComponentBuilder {
   }
 
   hasVariants() {
-    return (
-      typeof this.variantStyles === 'object' &&
-      Object.keys(this.variantStyles).length
-    );
+    return !!this.getVariants().length;
+  }
+
+  getVariants() {
+    return typeof this.variantStyles === 'object'
+      ? Object.keys(this.variantStyles)
+      : [];
   }
 
   // eslint-disable-next-line class-methods-use-this
@@ -150,60 +160,76 @@ abstract class ComponentBuilder {
     } & ${this.reactHtmlAttributesType};`;
   }
 
-  writeForwardRefComponent({
+  abstract writeForwardRefComponent({
     varName,
     elementName,
     omitVariants,
     displayName,
     fixedProps = this.fixedProps || []
-  }) {
-    return `export const ${varName} = ${this.writeForwardRefComponentFunction({
-      elementName,
-      omitVariants,
-      fixedProps
-    })};
-    ${varName}.displayName = \`${displayName || varName}\`;`;
-  }
+  }): string;
 
   writeForwardRefComponentFunction({
     elementName,
     omitVariants,
     fixedProps: fixedPropsArg = this.fixedProps || []
   }) {
-    const fixedProps = [...fixedPropsArg];
+    const props = this.buildProps(fixedPropsArg)
+      .map(
+        ({ key, value, type }) =>
+          `${key}=${type === 'string' ? `"${value}"` : `{${value}}`}`
+      )
+      .join(' ');
+    const propsType = omitVariants ? 'Omit<Props, "data-variant">' : 'Props';
+    return `React.forwardRef<${this.elementType}, ${propsType} & ${this.reactHtmlAttributesType}>((props, ref) => <${elementName} {...props} ${props} ref={ref} />)`;
+  }
+
+  protected buildProps(fixedProps: PropsType[]): PropsType[] {
+    const props = [...fixedProps];
     this.defaultProps.forEach(([key]) => {
-      fixedProps.push(
-        `${key}={props${this.formatKey(key)} ?? (${
-          this.importKey
-        }.defaultProps${this.formatKey(key)} as never)}`
-      );
+      props.push({
+        key,
+        type: 'value',
+        value: this.formatDefaultProp(key)
+      });
     });
     if (
       this.element === 'button' &&
       !this.defaultProps.find(([key]) => key === 'type')
     ) {
-      fixedProps.push(`type="button" `);
+      props.push({ key: 'type', type: 'string', value: 'button' });
     }
     this.configurableProps.forEach(([propKey, configKey]) => {
-      fixedProps.push(
-        `${propKey}={props${this.formatKey(
-          propKey
-        )} ?? getConfigDefault('${configKey}')}`
-      );
+      props.push({
+        key: propKey,
+        type: 'value',
+        value: this.formatConfigurableProp(propKey, configKey)
+      });
     });
-    const propsType = omitVariants ? 'Omit<Props, "data-variant">' : 'Props';
-    return `React.forwardRef<${this.elementType}, ${propsType} & ${
-      this.reactHtmlAttributesType
-    }>((props, ref) => <${elementName} {...props} ${fixedProps.join(
-      ' '
-    )} ref={ref} />)`;
+    return props;
+  }
+
+  protected formatDefaultProp(key: string) {
+    return `props${this.formatKey(key)} ?? (${
+      this.importKey
+    }.defaultProps${this.formatKey(key)} as never)`;
+  }
+
+  protected formatConfigurableProp(key, configKey) {
+    return `props${this.formatKey(key)} ?? getConfigDefault('${configKey}')`;
   }
 }
 
 class CssComponentBuilder extends ComponentBuilder {
   private className: string;
 
-  private selectors: string[];
+  get localImports() {
+    return [
+      ...super.localImports,
+      this.hasVariants()
+        ? `import { buildVariantComponents, buildWithComponent } from '../utils';`
+        : `import { buildWithComponent } from '../utils';`
+    ];
+  }
 
   constructor(importedKey, importedValues) {
     super(cssOutputFolderPath, importedKey, importedValues);
@@ -211,9 +237,14 @@ class CssComponentBuilder extends ComponentBuilder {
       this.pascalImportKey === 'InputLikeButton'
         ? 'input'
         : importedValues.className || '';
-    this.selectors = importedValues.selectors;
     this.fixedProps = this.className
-      ? [`className={\`\${(props.className ?? '')} ${this.className}\`}`]
+      ? [
+          {
+            key: 'className',
+            type: 'string',
+            value: this.className
+          }
+        ]
       : [];
   }
 
@@ -247,34 +278,74 @@ class CssComponentBuilder extends ComponentBuilder {
       this.writeForwardRefComponent({
         varName: this.pascalImportKey,
         elementName: this.element,
-        omitVariants: false,
-        displayName: this.pascalImportKey
+        displayName: this.pascalImportKey,
+        shouldExport: true
       })
     );
 
     if (this.hasVariants()) {
       fileContent.push(
-        `export const Variant${this.pascalImportKey} = Object.entries(${
-          this.importKey
-        }.variantStyles).reduce(
-        (result, [key, value]) => {
-            result[\`\${key.charAt(0).toUpperCase()}\${key.slice(1).toLowerCase()}\`] = ${this.writeForwardRefComponentFunction(
-              {
-                elementName: this.element,
-                omitVariants: true,
-                fixedProps: [...this.fixedProps, `data-variant={key}`]
-              }
-            )};
-            return result;
-        },
-        {} as Record<Capitalize<${
-          this.pascalImportKey
-        }Variant>, React.ComponentType<${this.getBasePropsType()}>>
-        );`
+        `export const Variant${this.pascalImportKey} = buildVariantComponents<
+            ${this.getVariants()
+              .map((v) => `'${v}'`)
+              .join(' | ')},
+            Props,
+            '${this.element}'
+        >({
+          variants: ${JSON.stringify(this.getVariants())},
+          className: '${this.className}',
+          element: '${this.element}',
+          displayName: '${this.pascalImportKey}'
+        });`
       );
     }
 
     return fileContent;
+  }
+
+  writeForwardRefComponent({
+    varName,
+    elementName,
+    omitVariants = false,
+    displayName = '',
+    fixedProps: fixedPropsArg = this.fixedProps || [],
+    shouldExport = false
+  }) {
+    const propsType = omitVariants ? 'Omit<Props, "data-variant">' : 'Props';
+    const props = this.buildProps(fixedPropsArg);
+    const classNameProp = props.find(({ key }) => key === 'className');
+    const append: string[] = [
+      `className: ${classNameProp ? `'${classNameProp.value}'` : 'undefined'}`
+    ];
+    const additionalProps = props.filter(({ key }) => key !== 'className');
+    if (additionalProps.length) {
+      append.push(
+        `additionalProps: { ${additionalProps
+          .map(
+            ({ key, value, type }) =>
+              `'${key}': ${type === 'string' ? `'${value}'` : value}`
+          )
+          .join(', ')} }`
+      );
+    }
+    return `${
+      shouldExport ? 'export ' : ''
+    }const ${varName} = buildWithComponent<${
+      this.elementType
+    }, ${propsType} & ${
+      this.reactHtmlAttributesType
+    }>({ tag: '${elementName}', displayName: '${
+      displayName || varName
+    }', ${append.join(', ')}});`;
+  }
+
+  protected formatDefaultProp(key: string) {
+    return `(${this.importKey}.defaultProps${this.formatKey(key)} as never)`;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  protected formatConfigurableProp(key, configKey) {
+    return `{ toString: () => getConfigDefault('${configKey}') }`;
   }
 }
 
@@ -304,7 +375,6 @@ class ReactComponentBuilder extends ComponentBuilder {
 
   constructor(importedKey, importedValues) {
     super(reactOutputFolderPath, importedKey, importedValues);
-    this.variantStyles = importedValues.variantStyles;
     this.fullStyles = importedValues.fullStyles;
     this.coreStyles = importedValues.coreStyles;
   }

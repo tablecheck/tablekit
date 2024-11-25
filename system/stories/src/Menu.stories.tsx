@@ -6,7 +6,7 @@ import { getConfigDefault } from '@tablecheck/tablekit-react';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Menu',
   component: emotion.Menu,
   parameters: {
@@ -16,7 +16,9 @@ export default {
     auxiliaryComponents: [emotion.MenuItem, emotion.MenuList],
     variants: ['Menu', 'Menu Items', 'Selected']
   }
-} as Meta;
+};
+
+export default meta;
 
 function AllMenuItems({ components, isSelected }: any) {
   return (

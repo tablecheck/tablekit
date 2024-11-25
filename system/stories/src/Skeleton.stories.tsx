@@ -3,11 +3,13 @@ import { skeleton } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Skeleton',
   component: emotion.Skeleton,
   parameters: { chromatic: { disableSnapshot: true }, ...skeleton }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Skeleton }) => (
   <div>

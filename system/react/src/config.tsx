@@ -36,14 +36,16 @@ export function getCarbonIconSize<T extends 'small' | 'medium' | 'large'>(
  * An example of this is the data-size of inputs and buttons
  * @param defaults
  */
-export function configureDefaults(defaults: CoreConfigDefaults): void {
+export function configureDefaults(defaults: Partial<ConfigDefaults>): void {
   moduleVar.defaults = {
     ...defaults,
+    controlSize: defaults.controlSize ?? 'medium',
     controlHeight: inputCore.heightMap[defaults.controlSize ?? 'medium'],
     inputIconSize: 20,
     iconSize: getCarbonIconSize(defaults.controlSize ?? 'medium')
   };
 }
+configureDefaults({} as never);
 
 export function getSentimentIcon(
   variant:

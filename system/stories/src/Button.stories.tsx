@@ -7,11 +7,13 @@ import * as React from 'react';
 
 const variants = Object.keys(button.variantStyles);
 
-export default {
+const meta: Meta = {
   title: 'Components/Buttons',
   component: emotion.Button,
   parameters: { ...button, variants }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Button }) => (
   <>

@@ -107,7 +107,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(var(--variants), var(--variant-width, 1fr));
   gap: var(--spacing-l7) var(--spacing-l4);
   padding: var(--spacing-l4);
-  border: 1px dashed var(--primary);
+  border: 1px dashed var(--brand-primary);
   border-radius: var(--border-radius-small);
   align-items: flex-start;
   justify-items: flex-start;

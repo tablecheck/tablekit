@@ -5,16 +5,11 @@
 import { inputWithIcons } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = inputWithIcons.Props & React.HTMLAttributes<HTMLDivElement>;
 
-export const InputWithIcons = React.forwardRef<
+export const InputWithIcons = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} input-with-icons`}
-    ref={ref}
-  />
-));
-InputWithIcons.displayName = `InputWithIcons`;
+>({ tag: 'div', displayName: 'InputWithIcons', className: 'input-with-icons' });

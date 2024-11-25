@@ -5,12 +5,42 @@
 import { badge } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
-export type Props = badge.Props & React.HTMLAttributes<HTMLSpanElement>;
+import { buildVariantComponents, buildWithComponent } from '../utils';
 
-export const Badge = React.forwardRef<
+export type Props = badge.Props & React.HTMLAttributes<HTMLSpanElement>;
+export type BadgeVariant = badge.BadgeVariant;
+
+export const Badge = buildWithComponent<
   HTMLSpanElement,
   Props & React.HTMLAttributes<HTMLSpanElement>
->((props, ref) => (
-  <span {...props} className={`${props.className ?? ''} badge`} ref={ref} />
-));
-Badge.displayName = `Badge`;
+>({ tag: 'span', displayName: 'Badge', className: 'badge' });
+export const VariantBadge = buildVariantComponents<
+  | 'tertiary'
+  | 'ghost'
+  | 'success'
+  | 'info'
+  | 'error'
+  | 'warning'
+  | 'neutral'
+  | 'purple'
+  | 'orange'
+  | 'disabled',
+  Props,
+  'span'
+>({
+  variants: [
+    'tertiary',
+    'ghost',
+    'success',
+    'info',
+    'error',
+    'warning',
+    'neutral',
+    'purple',
+    'orange',
+    'disabled'
+  ],
+  className: 'badge',
+  element: 'span',
+  displayName: 'Badge'
+});

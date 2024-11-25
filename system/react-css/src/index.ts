@@ -3,14 +3,15 @@
  * The exports here are generated from all ts/tsx files at the root level
  */
 export * from './config';
+export type { WithComponentType } from './utils';
 export { Anchor } from './components/Anchor';
 export type { Props as AnchorProps } from './components/Anchor';
-export { Badge } from './components/Badge';
-export type { Props as BadgeProps } from './components/Badge';
-export { Banner } from './components/Banner';
-export type { Props as BannerProps } from './components/Banner';
-export { Button } from './components/Button';
-export type { Props as ButtonProps } from './components/Button';
+export { Badge, VariantBadge } from './components/Badge';
+export type { Props as BadgeProps, BadgeVariant } from './components/Badge';
+export { Banner, VariantBanner } from './components/Banner';
+export type { Props as BannerProps, BannerVariant } from './components/Banner';
+export { Button, VariantButton } from './components/Button';
+export type { Props as ButtonProps, ButtonVariant } from './components/Button';
 export { ButtonGroup } from './components/ButtonGroup';
 export type { Props as ButtonGroupProps } from './components/ButtonGroup';
 export { Checkbox } from './components/Checkbox';
@@ -19,8 +20,11 @@ export { ChildAnchors } from './components/ChildAnchors';
 export type { Props as ChildAnchorsProps } from './components/ChildAnchors';
 export { ChipRow } from './components/ChipRow';
 export type { Props as ChipRowProps } from './components/ChipRow';
-export { IconButton } from './components/IconButton';
-export type { Props as IconButtonProps } from './components/IconButton';
+export { IconButton, VariantIconButton } from './components/IconButton';
+export type {
+  Props as IconButtonProps,
+  IconButtonVariant
+} from './components/IconButton';
 export { InputCore } from './components/InputCore';
 export type { Props as InputCoreProps } from './components/InputCore';
 export { InputLikeButton } from './components/InputLikeButton';

@@ -3,70 +3,58 @@ import type { alert } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault, getSentimentIcon } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = alert.Props;
 
-export const AlertCore = React.forwardRef<
+export const AlertCore = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div {...props} ref={ref} className={`${props.className || ''} alert`} />
-));
+>({
+  tag: 'div',
+  className: 'alert',
+  displayName: 'AlertCore'
+});
 
-export const AlertTitle = React.forwardRef<
+export const AlertTitle = buildWithComponent<
   HTMLHeadingElement,
   React.HTMLAttributes<HTMLHeadingElement>
->((props, ref) => (
-  // eslint-disable-next-line jsx-a11y/heading-has-content
-  <h5
-    {...props}
-    ref={ref}
-    style={{ ...(props.style || {}), gridArea: 'title' }}
-  />
-));
-export const AlertDescription = React.forwardRef<
+>({
+  tag: 'h5',
+  displayName: 'AlertTitle',
+  className: undefined,
+  style: { gridArea: 'title' }
+});
+
+export const AlertDescription = buildWithComponent<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    ref={ref}
-    style={{
-      ...(props.style || {}),
-      gridArea: 'description',
-      font: 'var(--body-2)'
-    }}
-  />
-));
+>({
+  tag: 'div',
+  displayName: 'AlertDescription',
+  className: undefined,
+  style: { gridArea: 'description', font: 'var(--body-2)' }
+});
 
-export const AlertCloseButton = React.forwardRef<
+export const AlertCloseButton = buildWithComponent<
   HTMLButtonElement,
   React.HTMLAttributes<HTMLButtonElement>
->((props, ref) => (
-  <button
-    type="button"
-    {...props}
-    ref={ref}
-    style={{
-      cursor: 'pointer',
-      color: 'currentColor',
-      ...(props.style || {}),
-      gridArea: 'close'
-    }}
-  />
-));
+>({
+  tag: 'button',
+  displayName: 'AlertCloseButton',
+  className: undefined,
+  style: { cursor: 'pointer', color: 'currentColor', gridArea: 'close' }
+});
 
-export const AlertIconWrapper = React.forwardRef<
+export const AlertIconWrapper = buildWithComponent<
   HTMLSpanElement,
   React.HTMLAttributes<HTMLSpanElement>
->((props, ref) => (
-  <span
-    {...props}
-    ref={ref}
-    style={{ ...(props.style || {}), gridArea: 'icon' }}
-    className={`${props.className || ''} input-alert-icon`}
-  />
-));
+>({
+  tag: 'span',
+  className: 'alert-icon',
+  displayName: 'AlertIconWrapper',
+  style: { gridArea: 'icon' }
+});
 
 interface ComposedProps extends Omit<Props, 'data-layout' | 'children'> {
   /**

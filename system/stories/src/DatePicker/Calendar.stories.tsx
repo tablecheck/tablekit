@@ -12,7 +12,7 @@ import { addDays, addMonths, isSameDay } from 'date-fns';
 
 import { Table, InfoWrapper } from './storyStyles';
 
-export default {
+const meta: Meta = {
   title: 'Components/Date Picker',
   component: Root,
   parameters: {
@@ -23,7 +23,9 @@ export default {
       exclude: ['data-testid']
     }
   }
-} as Meta;
+};
+
+export default meta;
 
 const onDateSelected = action('onDateSelected');
 
@@ -98,7 +100,7 @@ const Template: Story = (args: any) => (
   </Root>
 );
 
-export const MonthRange2 = Template.bind({});
+export const MonthRange2: typeof Template = Template.bind({});
 MonthRange2.args = {
   monthsToDisplay: 2,
   selected: [tomorrow],
@@ -272,7 +274,9 @@ const InformationTemplate: Story<{
   );
 };
 
-export const Information = InformationTemplate.bind({});
+export const Information: typeof InformationTemplate = InformationTemplate.bind(
+  {}
+);
 Information.args = {
   selected: tomorrow,
   minDate: today,

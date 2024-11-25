@@ -36,14 +36,16 @@ export function getCarbonIconSize<T extends 'small' | 'medium' | 'large'>(
  * An example of this is the data-size of inputs and buttons
  * @param defaults
  */
-export function configureDefaults(defaults: CoreConfigDefaults): void {
+export function configureDefaults(defaults: Partial<ConfigDefaults>): void {
   moduleVar.defaults = {
     ...defaults,
+    controlSize: defaults.controlSize ?? 'medium',
     controlHeight: inputCore.heightMap[defaults.controlSize ?? 'medium'],
     inputIconSize: 20,
     iconSize: getCarbonIconSize(defaults.controlSize ?? 'medium')
   };
 }
+configureDefaults({} as never);
 
 export function getSentimentIcon(
   variant:
@@ -55,20 +57,21 @@ export function getSentimentIcon(
     | 'default'
     | 'tertiary'
     | 'ghost',
-  size = getConfigDefault('iconSize')
+  size?: number
 ): JSX.Element {
+  const sizeProp = size ?? getConfigDefault('iconSize');
   switch (variant) {
     case 'success':
-      return <CheckmarkFilled size={size} />;
+      return <CheckmarkFilled size={sizeProp} />;
     case 'error':
-      return <WarningAltFilled size={size} />;
+      return <WarningAltFilled size={sizeProp} />;
     case 'warning':
-      return <WarningAlt size={size} />;
+      return <WarningAlt size={sizeProp} />;
     case 'neutral':
     case 'info':
     case 'default':
     case 'tertiary':
     case 'ghost':
-      return <Information size={size} />;
+      return <Information size={sizeProp} />;
   }
 }

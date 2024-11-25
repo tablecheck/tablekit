@@ -16,12 +16,6 @@ const Wrapper = styled.div`
   ${inputStructure.fullStyles}
 `;
 
-const LabelRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-`;
-
 export function InputStructure({
   input,
   name,
@@ -33,10 +27,10 @@ export function InputStructure({
   return (
     <Wrapper>
       {label || labelAppend ? (
-        <LabelRow>
+        <div className="label-row">
           <label htmlFor={name}>{label}</label>
           <small>{labelAppend}</small>
-        </LabelRow>
+        </div>
       ) : null}
       {description ? <aside>{description}</aside> : null}
       {input}

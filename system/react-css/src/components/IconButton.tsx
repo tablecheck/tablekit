@@ -6,20 +6,47 @@ import { iconButton } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildVariantComponents, buildWithComponent } from '../utils';
 
 export type Props = iconButton.Props &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type IconButtonVariant = iconButton.IconButtonVariant;
 
-export const IconButton = React.forwardRef<
+export const IconButton = buildWithComponent<
   HTMLButtonElement,
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => (
-  <button
-    {...props}
-    className={`${props.className ?? ''} icon-button`}
-    type="button"
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-IconButton.displayName = `IconButton`;
+>({
+  tag: 'button',
+  displayName: 'IconButton',
+  className: 'icon-button',
+  additionalProps: {
+    type: 'button',
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});
+export const VariantIconButton = buildVariantComponents<
+  | 'primary'
+  | 'secondary-brand'
+  | 'secondary'
+  | 'tertiary'
+  | 'ghost'
+  | 'bare'
+  | 'danger'
+  | 'danger-bare',
+  Props,
+  'button'
+>({
+  variants: [
+    'primary',
+    'secondary-brand',
+    'secondary',
+    'tertiary',
+    'ghost',
+    'bare',
+    'danger',
+    'danger-bare'
+  ],
+  className: 'icon-button',
+  element: 'button',
+  displayName: 'IconButton'
+});

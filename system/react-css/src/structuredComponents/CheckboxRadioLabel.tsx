@@ -1,20 +1,24 @@
 import type { checkboxRadioLabel } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = checkboxRadioLabel.Props;
 
-export const CheckboxLabel = React.forwardRef<
+export const CheckboxLabel = buildWithComponent<
   HTMLLabelElement,
   Props & React.HTMLAttributes<HTMLLabelElement>
->((props, ref) => (
-  // eslint-disable-next-line jsx-a11y/label-has-associated-control
-  <label {...props} ref={ref} className={`${props.className || ''} checkbox`} />
-));
+>({
+  tag: 'label',
+  className: 'checkbox',
+  displayName: 'CheckboxLabel'
+});
 
-export const RadioLabel = React.forwardRef<
+export const RadioLabel = buildWithComponent<
   HTMLLabelElement,
   Props & React.HTMLAttributes<HTMLLabelElement>
->((props, ref) => (
-  // eslint-disable-next-line jsx-a11y/label-has-associated-control
-  <label {...props} ref={ref} className={`${props.className || ''} radio`} />
-));
+>({
+  tag: 'label',
+  className: 'radio',
+  displayName: 'RadioLabel'
+});

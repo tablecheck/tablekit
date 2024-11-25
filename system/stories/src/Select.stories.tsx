@@ -12,14 +12,16 @@ const contentVariants = [
   'Disabled'
 ] as const;
 
-export default {
+const meta: Meta = {
   title: 'Components/Select',
   component: emotion.Select,
   parameters: {
     variants: contentVariants,
     ...select
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Select }) => (
   <>
