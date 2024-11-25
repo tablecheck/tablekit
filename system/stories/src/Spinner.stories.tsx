@@ -3,13 +3,15 @@ import { spinner } from '@tablecheck/tablekit-core';
 import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 
-export default {
+const meta: Meta = {
   title: 'Components/Spinner',
   component: emotion.Spinner,
   parameters: {
     ...spinner
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Spinner }) => <Spinner aria-busy />;
 

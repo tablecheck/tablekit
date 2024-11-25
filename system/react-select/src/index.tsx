@@ -531,10 +531,11 @@ export function useReactSelectConfig<
       theme.isRtl,
       borderSides,
       isMulti,
+      useVerticalMultiValues,
       borderRadii,
+      size,
       icon,
-      hideSelectedOptions,
-      useVerticalMultiValues
+      hideSelectedOptions
     ]
   );
   return {

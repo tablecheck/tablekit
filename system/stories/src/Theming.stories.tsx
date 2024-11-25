@@ -9,12 +9,14 @@ import { getConfigDefault } from '@tablecheck/tablekit-react';
 import groupBy from 'lodash/groupBy';
 import * as React from 'react';
 
-export default {
+const meta: Meta = {
   title: 'Theming/Colors',
   parameters: {
     variants: [1, 2, 3, 4]
   }
-} as Meta;
+};
+
+export default meta;
 
 const PaletteWrapper = styled.button`
   display: grid;

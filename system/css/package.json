@@ -25,13 +25,13 @@
     "@tablecheck/tablekit-core": "^4.0.0",
     "@types/fs-extra": "11.0.1",
     "chalk": "5.2.0",
-    "cssnano": "5.1.15",
+    "cssnano": "7.0.6",
     "execa": "6.1.0",
     "fs-extra": "11.1.0",
     "lodash": "4.17.21",
     "pluralize": "8.0.0",
-    "postcss": "8.4.38",
-    "postcss-nesting": "12.1.5",
+    "postcss": "8.4.49",
+    "postcss-nesting": "13.0.1",
     "typescript": "4.9.5"
   },
   "publishConfig": {

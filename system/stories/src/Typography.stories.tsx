@@ -1,8 +1,10 @@
 import { Meta, Story } from '@storybook/react';
 
-export default {
+const meta: Meta = {
   title: 'Theming/Typography'
-} as Meta;
+};
+
+export default meta;
 
 function SimpleTemplate() {
   return (

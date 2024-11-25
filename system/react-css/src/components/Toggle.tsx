@@ -6,20 +6,20 @@ import { toggle } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = toggle.DefaultedProps &
   React.InputHTMLAttributes<HTMLInputElement>;
 
-export const Toggle = React.forwardRef<
+export const Toggle = buildWithComponent<
   HTMLInputElement,
   Props & React.InputHTMLAttributes<HTMLInputElement>
->((props, ref) => (
-  <input
-    {...props}
-    className={`${props.className ?? ''} toggle`}
-    type={props.type ?? (toggle.defaultProps.type as never)}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-Toggle.displayName = `Toggle`;
+>({
+  tag: 'input',
+  displayName: 'Toggle',
+  className: 'toggle',
+  additionalProps: {
+    type: toggle.defaultProps.type as never,
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

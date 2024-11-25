@@ -9,7 +9,7 @@ const labelSelector = checkboxRadioLabel.selectors.find((selector) =>
   selector.includes('radio')
 );
 
-export default {
+const meta: Meta = {
   title: 'Components/Radio',
   component: emotion.Radio,
   parameters: {
@@ -17,7 +17,9 @@ export default {
     variants: contentVariants,
     auxiliarySelectors: [labelSelector]
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Radio, LabelComponent }) => (
   <>

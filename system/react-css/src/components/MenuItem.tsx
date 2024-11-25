@@ -5,18 +5,17 @@
 import { menuItem } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = menuItem.Props &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const MenuItem = React.forwardRef<
+export const MenuItem = buildWithComponent<
   HTMLButtonElement,
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => (
-  <button
-    {...props}
-    className={`${props.className ?? ''} menu-item`}
-    type="button"
-    ref={ref}
-  />
-));
-MenuItem.displayName = `MenuItem`;
+>({
+  tag: 'button',
+  displayName: 'MenuItem',
+  className: 'menu-item',
+  additionalProps: { type: 'button' }
+});

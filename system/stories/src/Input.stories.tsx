@@ -25,7 +25,7 @@ const contentVariants = [
   { title: 'Stretch', 'data-stretch': true }
 ];
 
-export default {
+const meta: Meta = {
   title: 'Components/Input',
   component: emotion.Input,
   parameters: {
@@ -43,7 +43,9 @@ export default {
     ],
     ...inputCore
   }
-} as Meta;
+};
+
+export default meta;
 
 const getPropRows: (
   size: NonNullable<inputCore.Props['data-size']>
@@ -97,13 +99,13 @@ const Template: StoryFn<{
   </>
 );
 
-export const Emotion = Template.bind({});
+export const Emotion: typeof Template = Template.bind({});
 Emotion.args = {
   Input: emotion.Input
 };
 Emotion.parameters = { useEmotion: true };
 
-export const Class = Template.bind({});
+export const Class: typeof Template = Template.bind({});
 Class.args = {
   Input: css.Input
 };

@@ -5,19 +5,20 @@
 import { inputLikeButton } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = inputLikeButton.DefaultedProps &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const InputLikeButton = React.forwardRef<
+export const InputLikeButton = buildWithComponent<
   HTMLButtonElement,
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => (
-  <button
-    {...props}
-    className={`${props.className ?? ''} input`}
-    role={props.role ?? (inputLikeButton.defaultProps.role as never)}
-    type="button"
-    ref={ref}
-  />
-));
-InputLikeButton.displayName = `InputLikeButton`;
+>({
+  tag: 'button',
+  displayName: 'InputLikeButton',
+  className: 'input',
+  additionalProps: {
+    role: inputLikeButton.defaultProps.role as never,
+    type: 'button'
+  }
+});

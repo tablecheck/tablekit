@@ -13,7 +13,7 @@ const contentVariants = [
   'Active'
 ] as const;
 
-export default {
+const meta: Meta = {
   title: 'Components/Chip',
   component: emotion.Chip,
   parameters: {
@@ -23,7 +23,9 @@ export default {
     variants: contentVariants,
     chromatic: { viewports: [1500] }
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Chip, ChipRow }) => (
   <>

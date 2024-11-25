@@ -76,7 +76,7 @@ export function ThemeProvider({
           isRtl,
           isDark
         }),
-        [isRtl, theme]
+        [isDark, isRtl]
       )}
     >
       {useLocalCssVariables ? (

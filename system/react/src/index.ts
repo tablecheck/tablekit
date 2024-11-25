@@ -142,7 +142,7 @@ export { chipStyledComponents, Chip } from './structuredComponents/Chip';
 export type { Props as ChipProps } from './structuredComponents/Chip';
 export { Input } from './structuredComponents/Input';
 export type { Props as InputProps } from './structuredComponents/Input';
-export { InputAlertInner, InputAlert } from './structuredComponents/InputAlert';
+export { InputAlert } from './structuredComponents/InputAlert';
 export type { Props as InputAlertProps } from './structuredComponents/InputAlert';
 export { InputStructure } from './structuredComponents/InputStructure';
 export type { Props as InputStructureProps } from './structuredComponents/InputStructure';

@@ -5,17 +5,17 @@
 import { radio } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = radio.DefaultedProps &
   React.InputHTMLAttributes<HTMLInputElement>;
 
-export const Radio = React.forwardRef<
+export const Radio = buildWithComponent<
   HTMLInputElement,
   Props & React.InputHTMLAttributes<HTMLInputElement>
->((props, ref) => (
-  <input
-    {...props}
-    type={props.type ?? (radio.defaultProps.type as never)}
-    ref={ref}
-  />
-));
-Radio.displayName = `Radio`;
+>({
+  tag: 'input',
+  displayName: 'Radio',
+  className: undefined,
+  additionalProps: { type: radio.defaultProps.type as never }
+});

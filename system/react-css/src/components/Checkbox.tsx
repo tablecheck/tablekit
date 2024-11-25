@@ -5,17 +5,17 @@
 import { checkbox } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = checkbox.DefaultedProps &
   React.InputHTMLAttributes<HTMLInputElement>;
 
-export const Checkbox = React.forwardRef<
+export const Checkbox = buildWithComponent<
   HTMLInputElement,
   Props & React.InputHTMLAttributes<HTMLInputElement>
->((props, ref) => (
-  <input
-    {...props}
-    type={props.type ?? (checkbox.defaultProps.type as never)}
-    ref={ref}
-  />
-));
-Checkbox.displayName = `Checkbox`;
+>({
+  tag: 'input',
+  displayName: 'Checkbox',
+  className: undefined,
+  additionalProps: { type: checkbox.defaultProps.type as never }
+});

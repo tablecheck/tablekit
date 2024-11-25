@@ -5,18 +5,17 @@
 import { chipRow } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = chipRow.DefaultedProps &
   React.HTMLAttributes<HTMLDivElement>;
 
-export const ChipRow = React.forwardRef<
+export const ChipRow = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} chip-row`}
-    role={props.role ?? (chipRow.defaultProps.role as never)}
-    ref={ref}
-  />
-));
-ChipRow.displayName = `ChipRow`;
+>({
+  tag: 'div',
+  displayName: 'ChipRow',
+  className: 'chip-row',
+  additionalProps: { role: chipRow.defaultProps.role as never }
+});

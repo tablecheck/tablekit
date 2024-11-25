@@ -144,6 +144,7 @@ Promise.all(filenames.map(getExport)).then((exportLines) => {
         * The exports here are generated from all ts/tsx files at the root level
         */
        export * from './config';
+       export type { WithComponentType } from './utils';
        ${fileContent}`,
       { filepath, ...config }
     )

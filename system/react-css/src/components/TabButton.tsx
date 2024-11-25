@@ -5,19 +5,20 @@
 import { tabButton } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = tabButton.DefaultedProps &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const TabButton = React.forwardRef<
+export const TabButton = buildWithComponent<
   HTMLButtonElement,
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => (
-  <button
-    {...props}
-    className={`${props.className ?? ''} tab-button`}
-    role={props.role ?? (tabButton.defaultProps.role as never)}
-    type="button"
-    ref={ref}
-  />
-));
-TabButton.displayName = `TabButton`;
+>({
+  tag: 'button',
+  displayName: 'TabButton',
+  className: 'tab-button',
+  additionalProps: {
+    role: tabButton.defaultProps.role as never,
+    type: 'button'
+  }
+});

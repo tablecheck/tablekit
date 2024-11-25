@@ -42,14 +42,16 @@ const getContentVariants = (
   ] as const;
 };
 
-export default {
+const meta: Meta = {
   title: 'Components/useReactSelect hook',
   parameters: {
     variants: getContentVariants(1, 'small').map(({ title }) => title),
     importName: 'useReactSelectConfig',
     packageName: '@tablecheck/tablekit-react-select'
   }
-} as Meta;
+};
+
+export default meta;
 
 const Select = ({
   placeholder,

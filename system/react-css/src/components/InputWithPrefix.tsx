@@ -5,17 +5,16 @@
 import { inputWithPrefix } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = inputWithPrefix.Props &
   React.HTMLAttributes<HTMLDivElement>;
 
-export const InputWithPrefix = React.forwardRef<
+export const InputWithPrefix = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} input-with-prefix`}
-    ref={ref}
-  />
-));
-InputWithPrefix.displayName = `InputWithPrefix`;
+>({
+  tag: 'div',
+  displayName: 'InputWithPrefix',
+  className: 'input-with-prefix'
+});

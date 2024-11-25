@@ -6,19 +6,19 @@ import { textAreaWithPrefix } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = textAreaWithPrefix.Props &
   React.HTMLAttributes<HTMLDivElement>;
 
-export const TextAreaWithPrefix = React.forwardRef<
+export const TextAreaWithPrefix = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} textarea-with-prefix`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-TextAreaWithPrefix.displayName = `TextAreaWithPrefix`;
+>({
+  tag: 'div',
+  displayName: 'TextAreaWithPrefix',
+  className: 'textarea-with-prefix',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

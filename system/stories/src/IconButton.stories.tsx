@@ -10,11 +10,13 @@ const variants = [''].concat(Object.keys(iconButton.variantStyles)) as (
   | emotion.IconButtonVariant
 )[];
 
-export default {
+const meta: Meta = {
   title: 'Components/IconButtons',
   component: emotion.IconButton,
   parameters: { ...iconButton, variants }
-} as Meta;
+};
+
+export default meta;
 
 const contentVariants = [{}, { 'data-round': true }];
 const sizes = ['small', 'medium', 'large'] as const;
@@ -111,14 +113,14 @@ const Template: StoryFn<{
   </>
 );
 
-export const Emotion = Template.bind({});
+export const Emotion: typeof Template = Template.bind({});
 Emotion.args = {
   IconButton: emotion.IconButton,
   Input: emotion.Input,
   TextArea: emotion.TextArea
 };
 Emotion.parameters = { useEmotion: true };
-export const EmotionVariants = Template.bind({});
+export const EmotionVariants: typeof Template = Template.bind({});
 EmotionVariants.args = {
   Input: emotion.Input,
   TextArea: emotion.TextArea,
@@ -133,7 +135,7 @@ EmotionVariants.args = {
 };
 EmotionVariants.parameters = { useEmotion: true };
 
-export const Class = Template.bind({});
+export const Class: typeof Template = Template.bind({});
 Class.args = {
   IconButton: css.IconButton,
   Input: css.Input,

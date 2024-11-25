@@ -5,9 +5,11 @@ import * as emotion from '@tablecheck/tablekit-react';
 import * as css from '@tablecheck/tablekit-react-css';
 import * as React from 'react';
 
-export default {
+const meta: Meta = {
   title: 'Introduction/Configuration'
-} as Meta;
+};
+
+export default meta;
 
 interface Options {
   config: ConfigDefaults;
@@ -57,7 +59,7 @@ function ConfigThenRender({ config, components: componentsKey }: Options) {
 
 const Template: StoryFn<Options> = (props) => <ConfigThenRender {...props} />;
 
-export const EmotionSmall = Template.bind({});
+export const EmotionSmall: typeof Template = Template.bind({});
 EmotionSmall.args = {
   components: 'emotion',
   config: {
@@ -65,7 +67,7 @@ EmotionSmall.args = {
   }
 };
 EmotionSmall.parameters = { useEmotion: true };
-export const EmotionMedium = Template.bind({});
+export const EmotionMedium: typeof Template = Template.bind({});
 EmotionMedium.args = {
   components: 'emotion',
   config: {
@@ -73,7 +75,7 @@ EmotionMedium.args = {
   }
 };
 EmotionMedium.parameters = { useEmotion: true };
-export const EmotionLarge = Template.bind({});
+export const EmotionLarge: typeof Template = Template.bind({});
 EmotionLarge.args = {
   components: 'emotion',
   config: {
@@ -82,7 +84,7 @@ EmotionLarge.args = {
 };
 EmotionLarge.parameters = { useEmotion: true };
 
-export const ClassSmall = Template.bind({});
+export const ClassSmall: typeof Template = Template.bind({});
 ClassSmall.args = {
   components: 'css',
   config: {
@@ -91,7 +93,7 @@ ClassSmall.args = {
 };
 ClassSmall.parameters = { useEmotion: false };
 
-export const ClassMedium = Template.bind({});
+export const ClassMedium: typeof Template = Template.bind({});
 ClassMedium.args = {
   components: 'css',
   config: {
@@ -100,7 +102,7 @@ ClassMedium.args = {
 };
 ClassMedium.parameters = { useEmotion: false };
 
-export const ClassLarge = Template.bind({});
+export const ClassLarge: typeof Template = Template.bind({});
 ClassLarge.args = {
   components: 'css',
   config: {

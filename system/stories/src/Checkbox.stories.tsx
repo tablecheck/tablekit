@@ -17,7 +17,7 @@ const textEmoji = (state: boolean | string) => {
   return '-';
 };
 
-export default {
+const meta: Meta = {
   title: 'Components/Checkbox',
   component: emotion.Checkbox,
   parameters: {
@@ -25,7 +25,9 @@ export default {
     variants: contentVariants,
     auxiliarySelectors: [labelSelector]
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: Story = ({ Checkbox, LabelComponent }) => (
   <>

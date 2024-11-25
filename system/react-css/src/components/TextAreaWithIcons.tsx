@@ -6,19 +6,19 @@ import { textAreaWithIcons } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = textAreaWithIcons.Props &
   React.HTMLAttributes<HTMLDivElement>;
 
-export const TextAreaWithIcons = React.forwardRef<
+export const TextAreaWithIcons = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} textarea-with-icons`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-TextAreaWithIcons.displayName = `TextAreaWithIcons`;
+>({
+  tag: 'div',
+  displayName: 'TextAreaWithIcons',
+  className: 'textarea-with-icons',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

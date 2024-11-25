@@ -6,19 +6,19 @@ import { inputCore } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = inputCore.Props &
   React.InputHTMLAttributes<HTMLInputElement>;
 
-export const InputCore = React.forwardRef<
+export const InputCore = buildWithComponent<
   HTMLInputElement,
   Props & React.InputHTMLAttributes<HTMLInputElement>
->((props, ref) => (
-  <input
-    {...props}
-    className={`${props.className ?? ''} input`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-InputCore.displayName = `InputCore`;
+>({
+  tag: 'input',
+  displayName: 'InputCore',
+  className: 'input',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});

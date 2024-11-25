@@ -6,20 +6,45 @@ import { button } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildVariantComponents, buildWithComponent } from '../utils';
 
 export type Props = button.DefaultedProps &
   React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type ButtonVariant = button.ButtonVariant;
 
-export const Button = React.forwardRef<
+export const Button = buildWithComponent<
   HTMLButtonElement,
   Props & React.ButtonHTMLAttributes<HTMLButtonElement>
->((props, ref) => (
-  <button
-    {...props}
-    className={`${props.className ?? ''} btn`}
-    type={props.type ?? (button.defaultProps.type as never)}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-Button.displayName = `Button`;
+>({
+  tag: 'button',
+  displayName: 'Button',
+  className: 'btn',
+  additionalProps: {
+    type: button.defaultProps.type as never,
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});
+export const VariantButton = buildVariantComponents<
+  | 'primary'
+  | 'secondary-brand'
+  | 'secondary'
+  | 'tertiary'
+  | 'ghost'
+  | 'bare'
+  | 'danger',
+  Props,
+  'button'
+>({
+  variants: [
+    'primary',
+    'secondary-brand',
+    'secondary',
+    'tertiary',
+    'ghost',
+    'bare',
+    'danger'
+  ],
+  className: 'btn',
+  element: 'button',
+  displayName: 'Button'
+});

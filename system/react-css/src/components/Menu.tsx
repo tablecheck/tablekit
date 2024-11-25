@@ -5,12 +5,11 @@
 import { menu } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = menu.Props & React.HTMLAttributes<HTMLDivElement>;
 
-export const Menu = React.forwardRef<
+export const Menu = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div {...props} className={`${props.className ?? ''} menu`} ref={ref} />
-));
-Menu.displayName = `Menu`;
+>({ tag: 'div', displayName: 'Menu', className: 'menu' });

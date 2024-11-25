@@ -16,7 +16,7 @@ const contentVariants = [
   { name: 'Stretch', 'data-stretch': true }
 ];
 
-export default {
+const meta: Meta = {
   title: 'Components/InputLikeButton',
   component: emotion.InputLikeButton,
   parameters: {
@@ -24,7 +24,9 @@ export default {
     variantWidth: '280px',
     ...inputLikeButton
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: StoryFn<{
   InputLikeButton: typeof emotion.InputLikeButton | typeof css.InputLikeButton;
@@ -62,10 +64,10 @@ const Template: StoryFn<{
   </>
 );
 
-export const Emotion = Template.bind({});
+export const Emotion: typeof Template = Template.bind({});
 Emotion.args = { InputLikeButton: emotion.InputLikeButton };
 Emotion.parameters = { useEmotion: true };
 
-export const Class = Template.bind({});
+export const Class: typeof Template = Template.bind({});
 Class.args = { InputLikeButton: css.InputLikeButton };
 Class.parameters = { useEmotion: false };

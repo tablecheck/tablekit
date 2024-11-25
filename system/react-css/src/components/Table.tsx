@@ -5,12 +5,11 @@
 import { table } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = table.Props & React.TableHTMLAttributes<HTMLTableElement>;
 
-export const Table = React.forwardRef<
+export const Table = buildWithComponent<
   HTMLTableElement,
   Props & React.TableHTMLAttributes<HTMLTableElement>
->((props, ref) => (
-  <table {...props} className={`${props.className ?? ''} table`} ref={ref} />
-));
-Table.displayName = `Table`;
+>({ tag: 'table', displayName: 'Table', className: 'table' });

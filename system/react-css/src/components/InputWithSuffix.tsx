@@ -5,17 +5,16 @@
 import { inputWithSuffix } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = inputWithSuffix.Props &
   React.HTMLAttributes<HTMLDivElement>;
 
-export const InputWithSuffix = React.forwardRef<
+export const InputWithSuffix = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} input-with-suffix`}
-    ref={ref}
-  />
-));
-InputWithSuffix.displayName = `InputWithSuffix`;
+>({
+  tag: 'div',
+  displayName: 'InputWithSuffix',
+  className: 'input-with-suffix'
+});

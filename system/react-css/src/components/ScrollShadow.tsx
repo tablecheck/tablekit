@@ -5,16 +5,11 @@
 import { scrollShadow } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = scrollShadow.Props & React.HTMLAttributes<HTMLDivElement>;
 
-export const ScrollShadow = React.forwardRef<
+export const ScrollShadow = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} scroll-shadow`}
-    ref={ref}
-  />
-));
-ScrollShadow.displayName = `ScrollShadow`;
+>({ tag: 'div', displayName: 'ScrollShadow', className: 'scroll-shadow' });

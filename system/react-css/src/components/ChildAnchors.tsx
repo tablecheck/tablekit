@@ -5,16 +5,11 @@
 import { childAnchors } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = childAnchors.Props & React.HTMLAttributes<HTMLDivElement>;
 
-export const ChildAnchors = React.forwardRef<
+export const ChildAnchors = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} child-anchors`}
-    ref={ref}
-  />
-));
-ChildAnchors.displayName = `ChildAnchors`;
+>({ tag: 'div', displayName: 'ChildAnchors', className: 'child-anchors' });

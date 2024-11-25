@@ -5,17 +5,16 @@
 import { tabs } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
+import { buildWithComponent } from '../utils';
+
 export type Props = tabs.DefaultedProps & React.HTMLAttributes<HTMLDivElement>;
 
-export const Tabs = React.forwardRef<
+export const Tabs = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} tabs`}
-    role={props.role ?? (tabs.defaultProps.role as never)}
-    ref={ref}
-  />
-));
-Tabs.displayName = `Tabs`;
+>({
+  tag: 'div',
+  displayName: 'Tabs',
+  className: 'tabs',
+  additionalProps: { role: tabs.defaultProps.role as never }
+});

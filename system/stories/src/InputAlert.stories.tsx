@@ -16,14 +16,16 @@ const contentVariants: emotion.InputAlertProps[] = (
   children: `${props.children} - This very, very long text should correctly show if the columns and wrapping are working correctly`
 }));
 
-export default {
+const meta: Meta = {
   title: 'Components/InputAlert',
   component: emotion.InputAlert,
   parameters: {
     variants: contentVariants.map((props) => props['data-variant']),
     ...inputAlert
   }
-} as Meta;
+};
+
+export default meta;
 
 const Template: StoryFn = ({ InputAlert }) => (
   <>

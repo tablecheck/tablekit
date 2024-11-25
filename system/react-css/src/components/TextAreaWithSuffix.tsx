@@ -6,19 +6,19 @@ import { textAreaWithSuffix } from '@tablecheck/tablekit-core';
 import * as React from 'react';
 
 import { getConfigDefault } from '../config';
+import { buildWithComponent } from '../utils';
 
 export type Props = textAreaWithSuffix.Props &
   React.HTMLAttributes<HTMLDivElement>;
 
-export const TextAreaWithSuffix = React.forwardRef<
+export const TextAreaWithSuffix = buildWithComponent<
   HTMLDivElement,
   Props & React.HTMLAttributes<HTMLDivElement>
->((props, ref) => (
-  <div
-    {...props}
-    className={`${props.className ?? ''} textarea-with-suffix`}
-    data-size={props['data-size'] ?? getConfigDefault('controlSize')}
-    ref={ref}
-  />
-));
-TextAreaWithSuffix.displayName = `TextAreaWithSuffix`;
+>({
+  tag: 'div',
+  displayName: 'TextAreaWithSuffix',
+  className: 'textarea-with-suffix',
+  additionalProps: {
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
+});
