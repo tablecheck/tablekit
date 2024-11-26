@@ -1,3 +1,16 @@
+# (Tue Nov 26 2024)
+
+#### 🚀 Enhancement
+
+- `@tablecheck/tablekit-core@4.1.0`, `@tablecheck/tablekit-css@4.1.0`, `@tablecheck/tablekit-react-css@4.1.0`, `@tablecheck/tablekit-react-select@4.1.0`, `@tablecheck/tablekit-react@4.1.0`
+  - feat: support withComponent on all react-css components [#245](https://github.com/tablecheck/tablekit/pull/245) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Fri Nov 22 2024)
 
 #### 💥 Breaking Change
