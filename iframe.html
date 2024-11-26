@@ -18,14 +18,16 @@
     window.LOGLEVEL = 'info';
     window.FRAMEWORK_OPTIONS = {};
     window.CHANNEL_OPTIONS = {};
-    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"breakingChangesV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false};
+    window.FEATURES = {"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":true,"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":false};
     window.STORIES = [{"titlePrefix":"","directory":"./src","files":"**/*.stories.@(ts|tsx)","importPathMatcher":"^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(ts|tsx))$"},{"titlePrefix":"","directory":"./src","files":"*.stories.@(ts|tsx)","importPathMatcher":"^\\.[\\\\/](?:src\\/(?!\\.)(?=.)[^/]*?\\.stories\\.(ts|tsx))$"}];
     window.DOCS_OPTIONS = {"defaultName":"Docs","autodocs":"tag"};
-    window.SERVER_CHANNEL_URL = undefined;
+
+    
 
     // We do this so that "module && module.hot" etc. in Storybook source code
     // doesn't fail (it will simply be disabled)
     window.module = undefined;
+    window.global = window;
   </script>
   <base target="_parent" />
 
@@ -357,7 +359,7 @@
   }
 </script>
 
-  <script type="module" crossorigin src="./assets/iframe-124b5648.js"></script>
+  <script type="module" crossorigin src="./assets/iframe-07dd96d5.js"></script>
 </head>
 
 <body>
