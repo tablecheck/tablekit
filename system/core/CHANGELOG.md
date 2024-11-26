@@ -1,19 +1,18 @@
-# v4.1.0 (Tue Nov 26 2024)
-
-#### 🚀 Enhancement
-
-- feat: support withComponent on all react-css components [#245](https://github.com/tablecheck/tablekit/pull/245) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [4.1.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.0.0...@tablecheck/tablekit-core@4.1.0) (2024-11-26)
+
+
+### Features
+
+* support withComponent on all react-css components ([cf6aa43](https://github.com/tablecheck/tablekit/commit/cf6aa43e426341c8e0ec243ed3a7bc15c3d0d494))
+
+
+
+
 
 # [4.0.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@3.1.2...@tablecheck/tablekit-core@4.0.0) (2024-11-22)
 
