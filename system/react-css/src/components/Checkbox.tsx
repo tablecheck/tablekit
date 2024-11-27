@@ -16,6 +16,6 @@ export const Checkbox = buildWithComponent<
 >({
   tag: 'input',
   displayName: 'Checkbox',
-  className: undefined,
+  className: 'checkbox',
   additionalProps: { type: checkbox.defaultProps.type as never }
 });

@@ -44,7 +44,11 @@ export const VariantButton = buildVariantComponents<
     'bare',
     'danger'
   ],
+  tag: 'button',
+  displayName: 'Button',
   className: 'btn',
-  element: 'button',
-  displayName: 'Button'
+  additionalProps: {
+    type: button.defaultProps.type as never,
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
 });

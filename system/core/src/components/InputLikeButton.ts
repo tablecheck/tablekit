@@ -10,6 +10,7 @@ export type {
 
 export const element = 'button';
 export const selectors = ['button.input', 'a.input'];
+export const className = 'input-like-button';
 
 export const defaultProps = {
   role: 'button'

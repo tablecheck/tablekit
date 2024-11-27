@@ -8,6 +8,7 @@ export const element = 'span';
 export const selectors = [
   '[aria-busy="true"]:not(button):not(select):not(input):not(textarea)'
 ];
+export const className = 'spinner';
 
 export interface Props {
   'aria-busy': boolean;

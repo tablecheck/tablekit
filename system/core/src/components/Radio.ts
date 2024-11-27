@@ -2,6 +2,7 @@ import { OptionalKeys, css } from '../utils';
 
 export const element = 'input';
 export const selectors = ['input[type="radio"]:not(.toggle)'];
+export const className = 'radio';
 
 export interface Props {
   type: 'radio';

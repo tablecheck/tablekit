@@ -42,10 +42,16 @@ export const fullStyles = css`
 
     & tr:hover {
       --tk-table-row-background: var(--surface-raised-hover);
+      [data-variant='bare']:hover {
+        --tk-button-background-color: var(--surface-hover-transparent);
+      }
     }
 
     & tr[data-active='true'] {
       --tk-table-row-background: var(--surface-raised-active);
+      [data-variant='bare']:hover {
+        --tk-button-background-color: var(--surface-hover-transparent);
+      }
     }
   }
 

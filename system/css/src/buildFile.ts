@@ -118,6 +118,7 @@ export class ThemeVariablesBuilder extends CssFileBuilder {
 interface ComponentFileContent {
   element?: string;
   className?: string;
+  classNameSelector?: string;
   selectors?: string[];
   fullStyles: string;
   variantStyles?: Record<string, string>;
@@ -139,8 +140,19 @@ export class ComponentBuilder extends CssFileBuilder<ComponentFileContent> {
   }
 
   getClassySelectors() {
-    const { element, className, selectors = [] } = this.fileContent;
-    if (!className) return selectors;
+    const {
+      element,
+      className,
+      classNameSelector,
+      selectors = []
+    } = this.fileContent;
+    if (!className) {
+      throw new Error(
+        `className is missing in ${this.folderName}/${this.fileName}`
+      );
+      return selectors;
+    }
+    if (classNameSelector) return [classNameSelector];
     if (element === 'input') return [`input.${className}`];
     return [`.${className}`];
   }

@@ -47,6 +47,8 @@ export { ScrollShadow } from './components/ScrollShadow';
 export type { Props as ScrollShadowProps } from './components/ScrollShadow';
 export { Select } from './components/Select';
 export type { Props as SelectProps } from './components/Select';
+export { Spinner } from './components/Spinner';
+export type { Props as SpinnerProps } from './components/Spinner';
 export { TabButton } from './components/TabButton';
 export type { Props as TabButtonProps } from './components/TabButton';
 export { TabContent } from './components/TabContent';
@@ -88,8 +90,6 @@ export type { Props as InputAlertProps } from './structuredComponents/InputAlert
 export { InputStructure } from './structuredComponents/InputStructure';
 export { Skeleton } from './structuredComponents/Skeleton';
 export type { Props as SkeletonProps } from './structuredComponents/Skeleton';
-export { Spinner } from './structuredComponents/Spinner';
-export type { Props as SpinnerProps } from './structuredComponents/Spinner';
 export { TableBadgeCell } from './structuredComponents/TableBadgeCell';
 export type { Props as TableBadgeCellProps } from './structuredComponents/TableBadgeCell';
 export { TableButtonCell } from './structuredComponents/TableButtonCell';
