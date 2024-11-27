@@ -2,6 +2,8 @@ import { css } from '../utils';
 
 export const element = 'label';
 export const selectors = ['label.checkbox', 'label.radio'];
+export const className = 'radio';
+export const classNameSelector = 'label.checkbox, label.radio';
 
 export interface Props {
   htmlFor?: string;

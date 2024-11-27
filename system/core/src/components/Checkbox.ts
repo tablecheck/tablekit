@@ -2,6 +2,7 @@ import { OptionalKeys, css } from '../utils';
 
 export const element = 'input';
 export const selectors = ['input[type="checkbox"]:not(.toggle)'];
+export const className = 'checkbox';
 
 export interface Props {
   type: 'checkbox';

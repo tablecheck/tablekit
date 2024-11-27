@@ -20,7 +20,7 @@ export const VariantBanner = buildVariantComponents<
   'div'
 >({
   variants: ['tertiary', 'ghost', 'success', 'warning', 'info', 'neutral'],
-  className: 'banner',
-  element: 'div',
-  displayName: 'Banner'
+  tag: 'div',
+  displayName: 'Banner',
+  className: 'banner'
 });

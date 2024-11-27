@@ -6,6 +6,7 @@ import { css } from '../utils';
 
 export const element = 'span';
 export const selectors = ['[data-tooltip]'];
+export const className = 'tooltip';
 
 export interface Props {
   'data-tooltip': string;

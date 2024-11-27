@@ -29,7 +29,7 @@ abstract class ComponentBuilder {
 
   protected importKey: string;
 
-  protected element: string;
+  protected element: string | undefined;
 
   protected filePath: string;
 
@@ -70,8 +70,12 @@ abstract class ComponentBuilder {
     return `HTML${this.reactElementType}Element`;
   }
 
+  get safeElement() {
+    return this.element || 'div';
+  }
+
   get reactHtmlAttributesType() {
-    if (['span', 'div'].includes(this.element))
+    if (['span', 'div'].includes(this.safeElement))
       return `React.HTMLAttributes<${this.elementType}>`;
     return `React.${
       this.reactElementType === 'TextArea' ? 'Textarea' : this.reactElementType
@@ -79,15 +83,15 @@ abstract class ComponentBuilder {
   }
 
   get reactElementType() {
-    if (this.element === 'a') return 'Anchor';
-    if (this.element === 'textarea') return 'TextArea';
-    return capitalize(this.element);
+    if (this.safeElement === 'a') return 'Anchor';
+    if (this.safeElement === 'textarea') return 'TextArea';
+    return capitalize(this.safeElement);
   }
 
   constructor(outputFolderPath, importedKey, importedValues) {
     this.fixedProps = [];
     this.importKey = importedKey;
-    this.element = importedValues.element || 'div';
+    this.element = importedValues.element;
     this.variantStyles = importedValues.variantStyles;
     const defaultProps = importedValues.defaultProps
       ? { ...importedValues.defaultProps }
@@ -165,7 +169,7 @@ abstract class ComponentBuilder {
     elementName,
     omitVariants,
     displayName,
-    fixedProps = this.fixedProps || []
+    fixedProps
   }): string;
 
   writeForwardRefComponentFunction({
@@ -193,7 +197,7 @@ abstract class ComponentBuilder {
       });
     });
     if (
-      this.element === 'button' &&
+      this.safeElement === 'button' &&
       !this.defaultProps.find(([key]) => key === 'type')
     ) {
       props.push({ key: 'type', type: 'string', value: 'button' });
@@ -233,10 +237,7 @@ class CssComponentBuilder extends ComponentBuilder {
 
   constructor(importedKey, importedValues) {
     super(cssOutputFolderPath, importedKey, importedValues);
-    this.className =
-      this.pascalImportKey === 'InputLikeButton'
-        ? 'input'
-        : importedValues.className || '';
+    this.className = importedValues.className || '';
     this.fixedProps = this.className
       ? [
           {
@@ -249,9 +250,13 @@ class CssComponentBuilder extends ComponentBuilder {
   }
 
   isValidComponentImport() {
-    if (!this.hasValidSelectors()) {
+    const isValid = this.hasValidSelectors();
+    if (!isValid) {
+      throw new Error(`${this.importKey} does not have valid selectors`);
+    }
+    if (isValid === 'skip') {
       console.warn(
-        `Skipping ${this.importKey} as it does not have valid selectors`
+        `Skipping ${this.importKey} as it does not export 'element' or className`
       );
       return false;
     }
@@ -259,10 +264,8 @@ class CssComponentBuilder extends ComponentBuilder {
   }
 
   hasValidSelectors() {
-    if (this.pascalImportKey === 'Spinner') return true;
-    if (this.className) return true;
-    if (!this.element) return false;
-    return !!this.defaultProps.find(([key]) => key === 'type');
+    if (!this.element && !this.className) return 'skip';
+    return !!this.className;
   }
 
   buildFileContent() {
@@ -277,7 +280,7 @@ class CssComponentBuilder extends ComponentBuilder {
     fileContent.push(
       this.writeForwardRefComponent({
         varName: this.pascalImportKey,
-        elementName: this.element,
+        elementName: this.safeElement,
         displayName: this.pascalImportKey,
         shouldExport: true
       })
@@ -290,12 +293,13 @@ class CssComponentBuilder extends ComponentBuilder {
               .map((v) => `'${v}'`)
               .join(' | ')},
             Props,
-            '${this.element}'
+            '${this.safeElement}'
         >({
           variants: ${JSON.stringify(this.getVariants())},
-          className: '${this.className}',
-          element: '${this.element}',
-          displayName: '${this.pascalImportKey}'
+          ${this.buildWithComponentProps({
+            elementName: this.safeElement,
+            displayName: this.pascalImportKey
+          })},
         });`
       );
     }
@@ -306,17 +310,37 @@ class CssComponentBuilder extends ComponentBuilder {
   writeForwardRefComponent({
     varName,
     elementName,
-    omitVariants = false,
     displayName = '',
+    omitVariants = false,
     fixedProps: fixedPropsArg = this.fixedProps || [],
     shouldExport = false
   }) {
-    const propsType = omitVariants ? 'Omit<Props, "data-variant">' : 'Props';
+    const propsType = `${
+      omitVariants ? 'Omit<Props, "data-variant">' : 'Props'
+    } & ${this.reactHtmlAttributesType}`;
+    return `${
+      shouldExport ? 'export ' : ''
+    }const ${varName} = buildWithComponent<${
+      this.elementType
+    }, ${propsType}>({ ${this.buildWithComponentProps({
+      elementName,
+      displayName: displayName || varName,
+      fixedProps: fixedPropsArg
+    })}});`;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  private buildWithComponentProps({
+    elementName,
+    displayName = '',
+    fixedProps: fixedPropsArg = this.fixedProps || []
+  }) {
     const props = this.buildProps(fixedPropsArg);
     const classNameProp = props.find(({ key }) => key === 'className');
-    const append: string[] = [
-      `className: ${classNameProp ? `'${classNameProp.value}'` : 'undefined'}`
-    ];
+    if (!classNameProp) {
+      throw new Error(`Missing className prop for ${displayName}`);
+    }
+    const append: string[] = [`className: '${classNameProp.value}'`];
     const additionalProps = props.filter(({ key }) => key !== 'className');
     if (additionalProps.length) {
       append.push(
@@ -328,15 +352,9 @@ class CssComponentBuilder extends ComponentBuilder {
           .join(', ')} }`
       );
     }
-    return `${
-      shouldExport ? 'export ' : ''
-    }const ${varName} = buildWithComponent<${
-      this.elementType
-    }, ${propsType} & ${
-      this.reactHtmlAttributesType
-    }>({ tag: '${elementName}', displayName: '${
-      displayName || varName
-    }', ${append.join(', ')}});`;
+    return `tag: '${elementName}', displayName: '${displayName}', ${append.join(
+      ', '
+    )}`;
   }
 
   protected formatDefaultProp(key: string) {
@@ -399,15 +417,15 @@ class ReactComponentBuilder extends ComponentBuilder {
     }
     fileContent.push('');
     fileContent.push(
-      `const Base = styled.${this.element}<${this.getBasePropsType()}>\`\${${
-        this.importKey
-      }.fullStyles}\`;`
+      `const Base = styled.${
+        this.safeElement
+      }<${this.getBasePropsType()}>\`\${${this.importKey}.fullStyles}\`;`
     );
     if (this.coreStyles) {
       fileContent.push(
-        `const Core = styled.${this.element}<${this.getBasePropsType()}>\`\${${
-          this.importKey
-        }.coreStyles}\`;`
+        `const Core = styled.${
+          this.safeElement
+        }<${this.getBasePropsType()}>\`\${${this.importKey}.coreStyles}\`;`
       );
     }
 

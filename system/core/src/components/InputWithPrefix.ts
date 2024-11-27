@@ -85,10 +85,6 @@ export const fullStyles = css`
   & > [data-mode='input-append'] {
     grid-area: 1/4/1/5;
     height: calc(var(--tk-input-height) - var(--tk-input-border-width) * 2);
-    width: calc(
-      var(--tk-input-icon-size)+ var(--tk-input-icon-gap)+
-        var(--tk-input-icon-end-padding)
-    );
     --tk-icon-button-padding: 8px !important;
     margin-top: 0;
     margin-bottom: 0;

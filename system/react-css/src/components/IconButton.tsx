@@ -46,7 +46,11 @@ export const VariantIconButton = buildVariantComponents<
     'danger',
     'danger-bare'
   ],
+  tag: 'button',
+  displayName: 'IconButton',
   className: 'icon-button',
-  element: 'button',
-  displayName: 'IconButton'
+  additionalProps: {
+    type: 'button',
+    'data-size': { toString: () => getConfigDefault('controlSize') }
+  }
 });

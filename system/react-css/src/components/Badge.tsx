@@ -40,7 +40,7 @@ export const VariantBadge = buildVariantComponents<
     'orange',
     'disabled'
   ],
-  className: 'badge',
-  element: 'span',
-  displayName: 'Badge'
+  tag: 'span',
+  displayName: 'Badge',
+  className: 'badge'
 });

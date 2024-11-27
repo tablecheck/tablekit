@@ -16,7 +16,7 @@ export const InputLikeButton = buildWithComponent<
 >({
   tag: 'button',
   displayName: 'InputLikeButton',
-  className: 'input',
+  className: 'input-like-button',
   additionalProps: {
     role: inputLikeButton.defaultProps.role as never,
     type: 'button'

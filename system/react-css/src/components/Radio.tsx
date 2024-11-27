@@ -16,6 +16,6 @@ export const Radio = buildWithComponent<
 >({
   tag: 'input',
   displayName: 'Radio',
-  className: undefined,
+  className: 'radio',
   additionalProps: { type: radio.defaultProps.type as never }
 });

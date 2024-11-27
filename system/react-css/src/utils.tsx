@@ -140,14 +140,13 @@ export function buildVariantComponents<
 >({
   variants,
   className,
-  element,
-  displayName
+  tag,
+  displayName,
+  additionalProps,
+  style
 }: {
   variants: TVariant[];
-  className: string;
-  displayName: string;
-  element: TElement;
-}): Record<
+} & DecorateOptions): Record<
   Capitalize<TVariant>,
   React.ForwardRefExoticComponent<TProps> & WithComponentType<TProps>
 > {
@@ -161,10 +160,13 @@ export function buildVariantComponents<
         HTMLElementTagNameMap[TElement],
         Omit<TProps, 'data-variant'>
       >({
-        tag: element,
+        tag,
         className,
+        style,
         displayName: `${displayName}_${variantKey}`,
-        additionalProps: { 'data-variant': key }
+        additionalProps: additionalProps
+          ? { ...additionalProps, 'data-variant': key }
+          : { 'data-variant': key }
       })
     };
   }, {} as Record<Capitalize<TVariant>, React.ForwardRefExoticComponent<TProps> & WithComponentType<TProps>>);
