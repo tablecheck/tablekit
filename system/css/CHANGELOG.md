@@ -1,3 +1,15 @@
+# v4.1.1 (Mon Dec 02 2024)
+
+#### 🐛 Bug Fix
+
+- fix: correctly scope checkboxes and radios in classy to avoid conflicts [#246](https://github.com/tablecheck/tablekit/pull/246) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

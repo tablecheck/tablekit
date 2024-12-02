@@ -1,3 +1,16 @@
+# (Mon Dec 02 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@4.1.1`, `@tablecheck/tablekit-css@4.1.1`, `@tablecheck/tablekit-react-css@4.1.1`
+  - fix: correctly scope checkboxes and radios in classy to avoid conflicts [#246](https://github.com/tablecheck/tablekit/pull/246) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Tue Nov 26 2024)
 
 #### 🚀 Enhancement
