@@ -47,15 +47,17 @@ export type PropsOf<
 export interface WithComponentType<ComponentProps extends {}> {
   withComponent<C extends React.ComponentClass<React.ComponentProps<C>>>(
     component: C,
-    fixedProps?: Partial<ComponentProps>
+    fixedProps?: Partial<ComponentProps> & Partial<React.ComponentProps<C>>
   ): React.ForwardRefExoticComponent<ComponentProps & PropsOf<C>>;
+
   withComponent<C extends React.ComponentType<React.ComponentProps<C>>>(
     component: C,
-    fixedProps?: Partial<ComponentProps>
+    fixedProps?: Partial<ComponentProps> & Partial<React.ComponentProps<C>>
   ): React.ForwardRefExoticComponent<ComponentProps & PropsOf<C>>;
+
   withComponent<Tag extends keyof ReactJSXIntrinsicElements>(
     tag: Tag,
-    fixedProps?: Partial<ComponentProps>
+    fixedProps?: Partial<ComponentProps> & Partial<React.ComponentProps<Tag>>
   ): React.ForwardRefExoticComponent<
     ComponentProps & ReactJSXIntrinsicElements[Tag]
   >;
@@ -109,9 +111,13 @@ export function buildWithComponent<
   Component.withComponent = function withComponentImplementation<
     P extends { className: string },
     T extends React.ComponentType<P>
-  >(withComponent: T, extraProps: TProps) {
-    const wrappedClassName = [extraProps.className, className].join(' ').trim();
-    const mergedStyles = mergeStyles(style, extraProps.style);
+  >(withComponent: T, extraProps?: TProps) {
+    const wrappedClassName = extraProps?.className
+      ? [extraProps.className, className].join(' ').trim()
+      : className;
+    const mergedStyles = extraProps
+      ? mergeStyles(style, extraProps.style)
+      : style;
     const WrappedComponent = React.forwardRef<T, TProps>((props, ref) =>
       React.createElement(withComponent, {
         ...additionalProps,
