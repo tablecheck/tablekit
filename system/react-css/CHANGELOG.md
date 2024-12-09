@@ -1,19 +1,18 @@
-# v4.1.2 (Mon Dec 09 2024)
-
-#### 🐛 Bug Fix
-
-- fix: typescript definition of withComponent [#247](https://github.com/tablecheck/tablekit/pull/247) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@4.1.1...@tablecheck/tablekit-react-css@4.1.2) (2024-12-09)
+
+
+### Bug Fixes
+
+* typescript definition of withComponent ([acd7b00](https://github.com/tablecheck/tablekit/commit/acd7b00f2ac7f3e6a2bbce131ccddf7b691b141b))
+
+
+
+
 
 ## [4.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@4.1.0...@tablecheck/tablekit-react-css@4.1.1) (2024-12-02)
 
