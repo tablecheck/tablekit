@@ -1,0 +1,5 @@
+import{j as u}from"./emotion-react-jsx-runtime.browser.esm-3699e87e.js";import{ac as i,ad as d}from"./TextArea-7188b12b.js";import"./index-d8ade8ea.js";import{o as S}from"./Tooltip-a3537cc1.js";import"./emotion-use-insertion-effect-with-fallbacks.browser.esm-7e8b2c4e.js";import"./index-4d501b15.js";import"./_commonjsHelpers-042e6b4d.js";const C={title:"Components/Spinner",component:i,parameters:{...d}},m=({Spinner:c})=>u(c,{"aria-busy":!0}),r=m.bind({});r.args={Spinner:i};r.parameters={useEmotion:!0};const e=m.bind({});e.args={Spinner:S};e.parameters={useEmotion:!1};var s,a,o;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`({
+  Spinner
+}) => <Spinner aria-busy />`,...(o=(a=r.parameters)==null?void 0:a.docs)==null?void 0:o.source}}};var n,t,p;e.parameters={...e.parameters,docs:{...(n=e.parameters)==null?void 0:n.docs,source:{originalSource:`({
+  Spinner
+}) => <Spinner aria-busy />`,...(p=(t=e.parameters)==null?void 0:t.docs)==null?void 0:p.source}}};const j=["Emotion","Class"];export{e as Class,r as Emotion,j as __namedExportsOrder,C as default};
