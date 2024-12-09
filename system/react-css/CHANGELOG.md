@@ -1,3 +1,15 @@
+# v4.1.2 (Mon Dec 09 2024)
+
+#### 🐛 Bug Fix
+
+- fix: typescript definition of withComponent [#247](https://github.com/tablecheck/tablekit/pull/247) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

@@ -1,3 +1,16 @@
+# (Mon Dec 09 2024)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-react-css@4.1.2`
+  - fix: typescript definition of withComponent [#247](https://github.com/tablecheck/tablekit/pull/247) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Mon Dec 02 2024)
 
 #### 🐛 Bug Fix
