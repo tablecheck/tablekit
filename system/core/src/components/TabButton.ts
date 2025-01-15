@@ -62,6 +62,7 @@ export const fullStyles = css`
       transform: scale(0.97);
     }
   }
+  &.active,
   &[aria-selected='true'] {
     --tk-tab-button-color: var(--text);
     &:after {
