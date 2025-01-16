@@ -1,3 +1,16 @@
+# (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@4.1.2`
+  - fix: add .active selector to tabs [#248](https://github.com/tablecheck/tablekit/pull/248) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Mon Dec 09 2024)
 
 #### 🐛 Bug Fix

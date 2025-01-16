@@ -1,3 +1,15 @@
+# v4.1.2 (Thu Jan 16 2025)
+
+#### 🐛 Bug Fix
+
+- fix: add .active selector to tabs [#248](https://github.com/tablecheck/tablekit/pull/248) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
