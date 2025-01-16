@@ -1,19 +1,18 @@
-# v4.1.2 (Thu Jan 16 2025)
-
-#### 🐛 Bug Fix
-
-- fix: add .active selector to tabs [#248](https://github.com/tablecheck/tablekit/pull/248) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.1...@tablecheck/tablekit-core@4.1.2) (2025-01-16)
+
+
+### Bug Fixes
+
+* add .active selector to tabs ([09cc315](https://github.com/tablecheck/tablekit/commit/09cc315b244e824018c2914308832f6f175ff8b2))
+
+
+
+
 
 ## [4.1.1](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.0...@tablecheck/tablekit-core@4.1.1) (2024-12-02)
 
