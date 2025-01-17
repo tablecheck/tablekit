@@ -1,3 +1,15 @@
+# v4.1.3 (Fri Jan 17 2025)
+
+#### 🐛 Bug Fix
+
+- feat: add more CSS vars for typography [#249](https://github.com/tablecheck/tablekit/pull/249) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

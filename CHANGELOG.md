@@ -1,3 +1,16 @@
+# (Fri Jan 17 2025)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@4.1.3`
+  - feat: add more CSS vars for typography [#249](https://github.com/tablecheck/tablekit/pull/249) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu Jan 16 2025)
 
 #### 🐛 Bug Fix
