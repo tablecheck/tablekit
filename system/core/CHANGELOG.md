@@ -1,19 +1,18 @@
-# v4.1.3 (Fri Jan 17 2025)
-
-#### 🐛 Bug Fix
-
-- feat: add more CSS vars for typography [#249](https://github.com/tablecheck/tablekit/pull/249) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.1.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.2...@tablecheck/tablekit-core@4.1.3) (2025-01-17)
+
+
+### Features
+
+* add more CSS vars for typography ([52a8ca8](https://github.com/tablecheck/tablekit/commit/52a8ca8b2f802b1ba590d361b59b4b711a57a377))
+
+
+
+
 
 ## [4.1.2](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.1...@tablecheck/tablekit-core@4.1.2) (2025-01-16)
 
