@@ -95,7 +95,7 @@ export const fullStyles = css`
       var(--tk-input-check-color),
       var(--tk-input-check-color)
     );
-    background-attachment: center;
+    background-position: top;
     background-size: calc(100% - var(--tk-input-check-thickness) / 2)
       var(--tk-input-check-thickness);
     background-repeat: no-repeat;
