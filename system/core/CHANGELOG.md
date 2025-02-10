@@ -1,19 +1,18 @@
-# v4.1.4 (Mon Feb 10 2025)
-
-#### 🐛 Bug Fix
-
-- fix: checkbox indeterminate styling [#250](https://github.com/tablecheck/tablekit/pull/250) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [4.1.4](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.3...@tablecheck/tablekit-core@4.1.4) (2025-02-10)
+
+
+### Bug Fixes
+
+* checkbox indeterminate styling ([a7ec038](https://github.com/tablecheck/tablekit/commit/a7ec038d3716aaa266884a2638ca796e57be6ea5))
+
+
+
+
 
 ## [4.1.3](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.2...@tablecheck/tablekit-core@4.1.3) (2025-01-17)
 
