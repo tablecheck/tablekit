@@ -1,3 +1,16 @@
+# (Mon Feb 10 2025)
+
+#### 🐛 Bug Fix
+
+- `@tablecheck/tablekit-core@4.1.4`
+  - fix: checkbox indeterminate styling [#250](https://github.com/tablecheck/tablekit/pull/250) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Fri Jan 17 2025)
 
 #### 🐛 Bug Fix

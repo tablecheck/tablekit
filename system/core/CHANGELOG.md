@@ -1,3 +1,15 @@
+# v4.1.4 (Mon Feb 10 2025)
+
+#### 🐛 Bug Fix
+
+- fix: checkbox indeterminate styling [#250](https://github.com/tablecheck/tablekit/pull/250) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
