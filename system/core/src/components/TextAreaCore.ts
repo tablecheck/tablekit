@@ -32,6 +32,7 @@ export const textareaWrapperStyles = css`
     display: block;
     content: attr(data-content) ' ';
     white-space: pre-wrap;
+    word-break: break-word;
     visibility: hidden;
     pointer-events: none;
     align-self: stretch;

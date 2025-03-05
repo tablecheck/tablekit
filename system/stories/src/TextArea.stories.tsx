@@ -65,6 +65,25 @@ const getPropRows: (
     {
       prefix: <span>ZH-CN</span>,
       iconAfter
+    },
+    {
+      suffix: <span>.com</span>,
+      defaultValue: 'LongLongLongLongTextWithoutSpaces'
+    },
+    {
+      suffix: <span>@tablecheck.com</span>,
+      iconBefore,
+      'data-stretch': true,
+      defaultValue: 'LongLongLongLongTextWithoutSpaces'
+    },
+    {
+      prefix: <span>EN</span>,
+      defaultValue: 'LongLongLongLongTextWithoutSpaces'
+    },
+    {
+      prefix: <span>ZH-CN</span>,
+      iconAfter,
+      defaultValue: 'LongLongLongLongTextWithoutSpaces'
     }
   ];
 };
