@@ -1,3 +1,15 @@
+# v4.1.5 (Thu Mar 06 2025)
+
+#### 🐛 Bug Fix
+
+- fix: textarea overflow [#251](https://github.com/tablecheck/tablekit/pull/251) ([@SashaShostyr](https://github.com/SashaShostyr))
+
+#### Authors: 1
+
+- Alex ([@SashaShostyr](https://github.com/SashaShostyr))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
