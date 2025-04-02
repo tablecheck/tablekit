@@ -55,7 +55,7 @@ export const font = css`
   [data-country='th'] {
     &,
     &:root {
-      --font-family: ${PREFIX}, 'IBM Plex Sans Thai Looped',
+      --font-family: 'IBM Plex Sans Thai Looped', ${PREFIX},
         ${CHINESE_FONT_FAMILY}, ${SUFFIX};
     }
   }
@@ -74,6 +74,33 @@ export const font = css`
     &,
     &:root {
       --font-family: ${PREFIX}, ${JA_FONT_FAMILY}, ${SUFFIX};
+    }
+  }
+
+  :lang(he),
+  [data-country='il'] {
+    &,
+    &:root {
+      --font-family: 'IBM Plex Sans Hebrew', ${PREFIX}, ${CHINESE_FONT_FAMILY},
+        ${SUFFIX};
+    }
+  }
+
+  :lang(hi),
+  [data-country='in'] {
+    &,
+    &:root {
+      --font-family: 'IBM Plex Sans Devanagari', ${PREFIX},
+        ${CHINESE_FONT_FAMILY}, ${SUFFIX};
+    }
+  }
+
+  :lang(km),
+  [data-country='kh'] {
+    &,
+    &:root {
+      --font-family: 'Noto Sans Khmer', ${PREFIX}, ${CHINESE_FONT_FAMILY},
+        ${SUFFIX};
     }
   }
 `;
