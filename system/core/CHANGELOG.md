@@ -1,19 +1,18 @@
-# v4.2.0 (Wed Apr 02 2025)
-
-#### 🚀 Enhancement
-
-- feat: support new language fonts [#252](https://github.com/tablecheck/tablekit/pull/252) ([@SimeonC](https://github.com/SimeonC))
-
-#### Authors: 1
-
-- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
-
----
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [4.2.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.5...@tablecheck/tablekit-core@4.2.0) (2025-04-02)
+
+
+### Features
+
+* support new language fonts ([#252](https://github.com/tablecheck/tablekit/issues/252)) ([358b990](https://github.com/tablecheck/tablekit/commit/358b990ccecc85de78933858e0204f9769e70730))
+
+
+
+
 
 ## [4.1.5](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-core@4.1.4...@tablecheck/tablekit-core@4.1.5) (2025-03-06)
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@4.1.6...@tablecheck/tablekit-react-css@4.2.0) (2025-04-02)
+
+**Note:** Version bump only for package @tablecheck/tablekit-react-css
+
+
+
+
+
 ## [4.1.6](https://github.com/tablecheck/tablekit/compare/@tablecheck/tablekit-react-css@4.1.5...@tablecheck/tablekit-react-css@4.1.6) (2025-03-06)
 
 **Note:** Version bump only for package @tablecheck/tablekit-react-css
