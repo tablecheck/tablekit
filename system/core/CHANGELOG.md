@@ -1,3 +1,15 @@
+# v4.2.0 (Wed Apr 02 2025)
+
+#### 🚀 Enhancement
+
+- feat: support new language fonts [#252](https://github.com/tablecheck/tablekit/pull/252) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # Change Log
 
 All notable changes to this project will be documented in this file.

@@ -1,3 +1,16 @@
+# (Wed Apr 02 2025)
+
+#### 🚀 Enhancement
+
+- `@tablecheck/tablekit-core@4.2.0`
+  - feat: support new language fonts [#252](https://github.com/tablecheck/tablekit/pull/252) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # (Thu Mar 06 2025)
 
 #### 🐛 Bug Fix
