@@ -40,8 +40,6 @@
     "@bissolli/storybook-css-properties": "0.0.14",
     "@brightlayer-ui/storybook-rtl-addon": "1.1.0",
     "@carbon/icons-react": "11.17.0",
-    "@commitlint/cli": "19.3.0",
-    "@commitlint/config-lerna-scopes": "19.0.0",
     "@tablecheck/babel-preset": "1.1.0",
     "@tablecheck/eslint-config": "1.8.2",
     "@tablecheck/scripts": "2.3.9",

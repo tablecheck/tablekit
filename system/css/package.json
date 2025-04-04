@@ -12,7 +12,7 @@
     "classy/**/*.css"
   ],
   "scripts": {
-    "build": "bun src/build.ts && cp lib/*.css .",
+    "build": "rm -rf **/*.css *.css &&bun src/build.ts",
     "build:netlify": "npm run setup-typescript && npm run build",
     "prepare": "npm run setup-typescript",
     "prepublishOnly": "npm run build && mv -f lib/* .",

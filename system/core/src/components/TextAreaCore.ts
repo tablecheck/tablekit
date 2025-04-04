@@ -1,9 +1,18 @@
 import { css } from '../utils';
 
-import { fullStyles as inputStyles } from './InputCore';
+import {
+  fullStyles as inputStyles,
+  type Props as InputProps,
+  DefaultedProps as InputDefaultedProps
+} from './InputCore';
 
-export type { Props, DefaultedProps } from './InputCore';
 export { configurableDefaultProps } from './InputCore';
+
+export interface Props extends InputProps {
+  'data-font-style'?: 'normal' | 'code';
+}
+
+export type DefaultedProps = Props & InputDefaultedProps;
 
 export const element = 'textarea';
 export const selectors = ['textarea'];
@@ -95,5 +104,9 @@ export const fullStyles = css`
   & ::placeholder,
   .placeholder {
     color: var(--text-placeholder);
+  }
+
+  &[data-font-style='code'] {
+    font-family: var(--font-family-monospace);
   }
 `;
