@@ -3,7 +3,7 @@ import { css } from '../utils';
 const SUFFIX =
   '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,"Fira Sans","Droid Sans","Helvetica Neue","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji",sans-serif,system-ui';
 // this should be good for all latin based languages
-const PREFIX = '"IBM Plex Sans"';
+const DEFAULT = '"IBM Plex Sans"';
 const CHINESE_FONT_FAMILY =
   '"Microsoft YaHei UI","Microsoft YaHei New","Microsoft YaHei","微软雅黑","Hiragino Sans GB","冬青黑体简体中文","ヒラギノ角ゴ簡体中文",STXihei,"华文细黑",SimHei,"黑体"';
 const JA_FONT_FAMILY =
@@ -40,67 +40,74 @@ const AR_COUNTRIES = [
 ];
 
 export const font = css`
+  /* Default variables */
   :root {
-    --font-family: ${PREFIX}, ${CHINESE_FONT_FAMILY}, ${SUFFIX};
-  }
-  :lang(ar),
-  ${AR_COUNTRIES.map((code) => `[data-country="${code}"]`).join(', ')} {
-    &,
-    &:root {
-      --font-family: 'IBM Plex Sans Arabic', ${CHINESE_FONT_FAMILY}, ${SUFFIX};
-    }
-  }
-
-  :lang(th),
-  [data-country='th'] {
-    &,
-    &:root {
-      --font-family: 'IBM Plex Sans Thai Looped', ${PREFIX},
-        ${CHINESE_FONT_FAMILY}, ${SUFFIX};
-    }
+    --locale-font-family: ${DEFAULT};
+    --font-family: var(
+        --country-font-family,
+        var(--locale-font-family, ${DEFAULT})
+      ),
+      var(--locale-font-family, ${DEFAULT}), ${CHINESE_FONT_FAMILY}, ${SUFFIX};
+    --font-family-monospace: 'IBM Plex Mono', Menlo, Monaco, Consolas,
+      'Courier New', monospace;
   }
 
-  :lang(ko),
-  [data-country='kr'] {
-    &,
-    &:root {
-      --font-family: ${PREFIX}, ${KO_FONT_FAMILY}, ${CHINESE_FONT_FAMILY},
-        ${SUFFIX};
-    }
+  /* Language-specific font settings */
+  :root:lang(ar) {
+    --locale-font-family: 'IBM Plex Sans Arabic';
   }
 
-  :lang(ja),
-  [data-country='jp']:not(:lang(zh)) {
-    &,
-    &:root {
-      --font-family: ${PREFIX}, ${JA_FONT_FAMILY}, ${SUFFIX};
-    }
+  :root:lang(th) {
+    --locale-font-family: 'IBM Plex Sans Thai Looped';
   }
 
-  :lang(he),
-  [data-country='il'] {
-    &,
-    &:root {
-      --font-family: 'IBM Plex Sans Hebrew', ${PREFIX}, ${CHINESE_FONT_FAMILY},
-        ${SUFFIX};
-    }
+  :root:lang(he) {
+    --locale-font-family: 'IBM Plex Sans Hebrew';
   }
 
-  :lang(hi),
-  [data-country='in'] {
-    &,
-    &:root {
-      --font-family: 'IBM Plex Sans Devanagari', ${PREFIX},
-        ${CHINESE_FONT_FAMILY}, ${SUFFIX};
-    }
+  :root:lang(hi) {
+    --locale-font-family: 'IBM Plex Sans Devanagari';
   }
 
-  :lang(km),
-  [data-country='kh'] {
-    &,
-    &:root {
-      --font-family: 'Noto Sans Khmer', ${PREFIX}, ${CHINESE_FONT_FAMILY},
-        ${SUFFIX};
-    }
+  :root:lang(km) {
+    --locale-font-family: 'Noto Sans Khmer';
+  }
+
+  /* Country-specific font settings */
+  ${AR_COUNTRIES.map(
+    (code) =>
+      `:root[data-country="${code}"], :root[data-country="${code.toUpperCase()}"]`
+  ).join(', ')} {
+    --country-font-family: 'IBM Plex Sans Arabic';
+  }
+
+  :root[data-country='kr'],
+  :root[data-country='KR'] {
+    --country-font-family: ${KO_FONT_FAMILY};
+  }
+
+  :root[data-country='jp']:not(:lang(zh)),
+  :root[data-country='JP']:not(:lang(zh)) {
+    --country-font-family: ${JA_FONT_FAMILY};
+  }
+
+  :root[data-country='th'],
+  :root[data-country='TH'] {
+    --country-font-family: 'IBM Plex Sans Thai Looped';
+  }
+
+  :root[data-country='il'],
+  :root[data-country='IL'] {
+    --country-font-family: 'IBM Plex Sans Hebrew';
+  }
+
+  :root[data-country='in'],
+  :root[data-country='IN'] {
+    --country-font-family: 'IBM Plex Sans Devanagari';
+  }
+
+  :root[data-country='kh'],
+  :root[data-country='KH'] {
+    --country-font-family: 'Noto Sans Khmer';
   }
 `;

@@ -70,13 +70,19 @@ class CssBuilder {
     if (!this.processers) throw new Error('Run processFolders before output');
     const resetStyles = this.processers.utils.getClassyStyles();
     const variableStyles = this.processers.themeVariables.getClassyStyles();
+    const fontTypoStyles = this.processers.utils.getStylesByFileNames([
+      'font',
+      'typography'
+    ]);
+
     await Promise.all(
       (
         [
           [variableStyles, 'variables'],
           [resetStyles, 'reset'],
           [this.allClasslessStyles, 'classless'],
-          [this.allClassyStyles, 'classy']
+          [this.allClassyStyles, 'classy'],
+          [fontTypoStyles, 'typography']
         ] as const
       ).map(([aggregateStyles, postfix]) =>
         this.outputFile(

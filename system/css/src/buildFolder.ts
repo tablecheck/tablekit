@@ -23,7 +23,7 @@ export class FolderProcesser {
 
   protected fileNames?: string[];
 
-  protected styles?: FileStyles[];
+  protected styles = new Map<string, FileStyles>();
 
   protected get folderPath() {
     return path.join(coreSystemPath, this.folderName);
@@ -35,15 +35,20 @@ export class FolderProcesser {
 
   getClasslessStyles(): string[] {
     if (!this.styles) throw new Error('Need to load() and process() first');
-    return this.styles.reduce(
-      (r, map) => r.concat(map.classless),
-      [] as string[]
-    );
+    const result: string[] = [];
+    this.styles.forEach((fileStyle) => {
+      result.push(...fileStyle.classless);
+    });
+    return result;
   }
 
   getClassyStyles(): string[] {
     if (!this.styles) throw new Error('Need to load() and process() first');
-    return this.styles.reduce((r, map) => r.concat(map.classy), [] as string[]);
+    const result: string[] = [];
+    this.styles.forEach((fileStyle) => {
+      result.push(...fileStyle.classy);
+    });
+    return result;
   }
 
   async load() {
@@ -53,10 +58,14 @@ export class FolderProcesser {
   async process() {
     if (!this.fileNames)
       throw new Error('Call .load() first and wait for it to finish');
-    this.styles = await Promise.all(
+
+    this.styles = new Map();
+
+    await Promise.all(
       this.fileNames.map(async (fileName) => {
         const fileBuilder = await this.getFileBuilder(fileName);
-        return fileBuilder.build();
+        const fileStyles = await fileBuilder.build();
+        this.styles.set(fileName, fileStyles);
       })
     );
   }
@@ -95,6 +104,18 @@ export class UtilsFolderProcesser extends FolderProcesser {
 
   async process() {
     await super.process();
+  }
+
+  getStylesByFileNames(fileNames: string[]): string[] {
+    if (!this.styles) throw new Error('Need to load() and process() first');
+
+    const jsFileNames = fileNames.map((name) =>
+      name.endsWith('.js') ? name : `${name}.js`
+    );
+
+    return Array.from(this.styles.entries())
+      .filter(([key]) => jsFileNames.includes(key))
+      .flatMap(([, value]) => value.classy);
   }
 }
 
